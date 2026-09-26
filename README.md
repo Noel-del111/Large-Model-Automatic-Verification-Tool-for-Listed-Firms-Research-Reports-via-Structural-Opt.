@@ -202,3 +202,12 @@ run.cmd model-check --base-url https://<端点>/v1 --vision-model <视觉模型�
 2. **密钥不进仓库**：模型端点密钥一律用环境变量，配置模板见 `pdfparse/deploy/ov.conf.example`。
 3. **第三方成果如实登记**：新增依赖或模型时同步更新 `pdfparse/THIRD_PARTY.md`。
 4. **接口字段改动要同步 A**：字段表由 A 冻结，改动先在任务看板提出。
+5. **推送方式（重要）**：本机网络连不上 `github.com:443`，`git push` 会失败，改用
+   `py -3 tools/push_via_api.py`。它按本地 HEAD 重建远端分支，所以**新上传的内容会覆盖之前的**；
+   推送前请先确认队友的提交已经合并到本地，避免覆盖别人的工作。
+
+```bat
+git add -A
+git commit -m "说明这次改了什么"
+py -3 tools/push_via_api.py
+```
