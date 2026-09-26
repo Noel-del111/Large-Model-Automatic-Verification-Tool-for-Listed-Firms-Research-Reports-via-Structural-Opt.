@@ -12,6 +12,7 @@
 | RapidOCR | 3.9.2 | https://github.com/RapidAI/RapidOCR | Apache-2.0 | OCR 兜底：扫描件与位图图表文字 | 不提交，通过依赖安装 |
 | onnxruntime | 1.30.0 | https://github.com/microsoft/onnxruntime | MIT | OCR 推理运行时（CPU） | 不提交，通过依赖安装 |
 | PP-OCRv6 检测与识别模型、方向分类模型 | 随 RapidOCR 3.9.2 分发 | 安装包内 `rapidocr/models/` | 随上游模型许可 | OCR 文字检测与识别 | 不提交权重，随依赖安装，离线可用 |
+| Streamlit | 1.64.0 | https://github.com/streamlit/streamlit | Apache-2.0 | 本地可视化页面（上传与结果展示） | 不提交，通过依赖安装 |
 
 ## 2. 可选引擎（未启用时不构成依赖）
 

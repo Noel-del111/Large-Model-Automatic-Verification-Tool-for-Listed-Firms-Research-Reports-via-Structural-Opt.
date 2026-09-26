@@ -22,6 +22,8 @@ py -3 -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements-engines.txt
 :: 可选：安装 OCR 兜底，处理扫描件与位图图表
 .venv\Scripts\python.exe -m pip install rapidocr==3.9.2 onnxruntime==1.30.0
+:: 可选：安装可视化页面
+.venv\Scripts\python.exe -m pip install streamlit==1.64.0
 ```
 
 OCR 模型随 wheel 一起安装，位于 `site-packages/rapidocr/models/`，首次运行不会联网下载。
