@@ -74,21 +74,35 @@ def _tokens(text: str) -> List[str]:
     return tokens
 
 
-def bag_agreement(a: str, b: str) -> Optional[float]:
-    """顺序不敏感的一致度：词元多重集合的 Jaccard 系数。
+def _multiset_jaccard(ca: Counter, cb: Counter) -> float:
+    if not ca and not cb:
+        return 1.0
+    if not ca or not cb:
+        return 0.0
+    return round(sum((ca & cb).values()) / sum((ca | cb).values()), 4)
 
-    两栏排版下两套引擎的行序可能不同但内容一致，此时该指标仍然很高，
-    适合判断内容有没有漏抽，而不会被阅读顺序差异误伤。
+
+def bag_agreement(a: str, b: str) -> Optional[float]:
+    """顺序不敏感的内容一致度：字符多重集合的 Jaccard 系数。
+
+    用字符而不是词元，是因为两套引擎对同一段内容的空格处理不同
+    （例如 “2024 2025” 与 “20242025”、“2 0 2 4” 与 “2024”），
+    词元口径会把这些当成大量差异，把内容一致的两页判成不一致。
+    顺序差异由 engine_agreement（序列口径）单独反映，两者分工明确。
     """
+    ca = Counter(re.sub(r"\s", "", normalize_text(a)))
+    cb = Counter(re.sub(r"\s", "", normalize_text(b)))
+    if not ca and not cb:
+        return None
+    return round(_multiset_jaccard(ca, cb), 4)
+
+
+def token_agreement(a: str, b: str) -> Optional[float]:
+    """词元口径的一致度，仅作诊断指标，不参与状态判定。"""
     ta, tb = _tokens(a), _tokens(b)
     if not ta and not tb:
         return None
-    if not ta or not tb:
-        return 0.0
-    ca, cb = Counter(ta), Counter(tb)
-    inter = sum((ca & cb).values())
-    union = sum((ca | cb).values())
-    return round(inter / union, 4) if union else 0.0
+    return _multiset_jaccard(Counter(ta), Counter(tb))
 
 
 def page_text(page: Page) -> str:
@@ -108,8 +122,8 @@ def image_area_ratio(page: Page) -> float:
     return round(min(covered / page_area, 1.0), 4)
 
 
-def table_stats(page: Page) -> Tuple[bool, float]:
-    """返回（同一张表内列数是否不一致, 空单元格比例）。"""
+def table_stats(page: Page) -> Tuple[bool, float, int]:
+    """返回（同一张表内列数是否不一致, 空单元格比例, 单元格总数）。"""
     inconsistent = False
     total, empty = 0, 0
     for block in page.blocks:
@@ -124,7 +138,7 @@ def table_stats(page: Page) -> Tuple[bool, float]:
         if len({len(cols) for cols in rows.values()}) > 1:
             inconsistent = True
     ratio = round(empty / total, 4) if total else 0.0
-    return inconsistent, ratio
+    return inconsistent, ratio, total
 
 
 def compute_page_quality(page: Page, reference_text: Optional[str] = None,
@@ -132,7 +146,7 @@ def compute_page_quality(page: Page, reference_text: Optional[str] = None,
     text = page_text(page)
     area_k = (page.page_size[0] * page.page_size[1]) / 1000.0
     chars = len(re.sub(r"\s", "", text))
-    inconsistent, empty_ratio = table_stats(page)
+    inconsistent, empty_ratio, cell_total = table_stats(page)
     quality = PageQuality(
         char_count=chars,
         block_count=len(page.blocks),
@@ -143,6 +157,7 @@ def compute_page_quality(page: Page, reference_text: Optional[str] = None,
         garbled_ratio=round(garbled_ratio(text), 5),
         table_col_inconsistent=inconsistent,
         table_empty_cell_ratio=empty_ratio,
+        table_cell_count=cell_total,
         tables_filtered=tables_filtered,
         sentence_count=sum(len(b.sentences) for b in page.blocks),
         heading_count=sum(1 for b in page.blocks if b.type == "heading"),
@@ -150,6 +165,7 @@ def compute_page_quality(page: Page, reference_text: Optional[str] = None,
     if reference_text is not None:
         quality.engine_agreement = sequence_agreement(text, reference_text)
         quality.engine_agreement_bag = bag_agreement(text, reference_text)
+        quality.engine_agreement_token = token_agreement(text, reference_text)
         quality.reference_char_count = len(re.sub(r"\s", "", normalize_text(reference_text)))
     return quality
 
@@ -190,14 +206,29 @@ def decide_status(quality: PageQuality, violations: Sequence[str], thresholds: D
             status = "fail"
             reasons.append(f"no_text_layer:scanned_pdf:chars={quality.char_count}")
     elif quality.char_count < min_chars:
-        # 有少量文字：章节分隔页、版权页、单行注释页等，属于正常版面而非解析失败
-        status = _raise(status, "warn")
-        reasons.append(f"sparse_page:chars={quality.char_count}")
+        # 有少量文字：章节分隔页、版权页、单行注释页等，属于正常版面而非解析失败，
+        # 只作为信息记录，避免这类页面把整篇文档拖成“需人工复核”
+        reasons.append(f"info:sparse_page:chars={quality.char_count}")
     else:
+        # 文字密度只作记录，不单独升级为警告：
+        # 研报里图表页、标注页、分隔页天然字少，真正的抽取失败由双引擎比对来抓。
         coverage_warn = thresholds.get("text_coverage_warn", 0.8)
         if quality.text_coverage < coverage_warn:
-            status = _raise(status, "warn")
-            reasons.append(f"low_text_coverage={quality.text_coverage}")
+            blocks = max(quality.block_count, 1)
+            avg_chars = quality.char_count / blocks
+            if quality.image_area_ratio >= thresholds.get("chart_page_image_ratio", 0.3):
+                label = "chart_page"
+            elif (quality.block_count >= thresholds.get("chart_label_min_blocks", 12)
+                  and avg_chars <= thresholds.get("chart_label_max_avg_chars", 22)):
+                label = "chart_labels"
+            elif quality.char_count < 120:
+                label = "divider_page"
+            else:
+                label = "text_sparse"
+            reasons.append(
+                f"info:low_text_coverage={quality.text_coverage}"
+                f"(type={label},blocks={quality.block_count},avg_chars={round(avg_chars, 1)})"
+            )
 
     bag = quality.engine_agreement_bag
     if bag is not None:
@@ -208,9 +239,8 @@ def decide_status(quality: PageQuality, violations: Sequence[str], thresholds: D
         )
         if reference_short and bag < thresholds.get("engine_agreement_warn", 0.85):
             # 对照引擎自身抽到的内容明显更少，属于对照侧能力限制，不据此判失败
-            status = _raise(status, "warn")
             reasons.append(
-                f"reference_engine_incomplete:ref_chars={quality.reference_char_count}"
+                f"info:reference_engine_incomplete:ref_chars={quality.reference_char_count}"
                 f"/ours={quality.char_count},bag={bag}"
             )
         elif bag < thresholds.get("engine_agreement_fail", 0.6):
@@ -230,9 +260,15 @@ def decide_status(quality: PageQuality, violations: Sequence[str], thresholds: D
     if quality.table_col_inconsistent:
         status = _raise(status, "warn")
         reasons.append("table_column_inconsistent")
-    if quality.table_empty_cell_ratio > thresholds.get("table_empty_cell_warn", 0.6):
+    min_cells = thresholds.get("table_empty_cell_min_cells", 8)
+    if (quality.table_empty_cell_ratio > thresholds.get("table_empty_cell_warn", 0.75)
+            and quality.table_cell_count >= min_cells):
+        # 单元格太少的小表（合并单元格常见）不判为结构可疑，避免噪声
         status = _raise(status, "warn")
-        reasons.append(f"table_empty_cells={quality.table_empty_cell_ratio}")
+        reasons.append(
+            f"table_empty_cells={quality.table_empty_cell_ratio}"
+            f"（{quality.table_cell_count} 个单元格）"
+        )
 
     return status, reasons
 
@@ -243,9 +279,10 @@ def apply_page_quality(page: Page, reference_text: Optional[str], violations: Se
                        soft_notes: Sequence[str] = ()) -> Page:
     quality = compute_page_quality(page, reference_text, tables_filtered=tables_filtered)
     status, reasons = decide_status(quality, violations, thresholds, doc_context)
-    if soft_notes:
+    # 以 info: 开头的只是记录，不改变状态；其余软问题（如 OCR 兜底）需要人工留意
+    if any(not str(note).startswith("info:") for note in soft_notes):
         status = _raise(status, "warn")
-        reasons.extend(soft_notes)
+    reasons.extend(soft_notes)
     page.quality = quality
     page.status = status
     page.notes = reasons

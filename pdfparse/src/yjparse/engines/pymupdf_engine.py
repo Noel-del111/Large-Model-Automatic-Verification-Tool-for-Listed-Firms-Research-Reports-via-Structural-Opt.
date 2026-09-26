@@ -203,7 +203,7 @@ class PyMuPDFEngine(BaseEngine):
                         "cols": n_cols, "non_empty": non_empty, "strategy": strategy})
         return out
 
-    def _table_blocks(self, page, start_order: int, min_cells: int
+    def _table_blocks(self, page, start_order: int, min_cells: int, min_fill: float = 0.2
                       ) -> Tuple[List[Block], List[BBox], Dict[str, int]]:
         """双策略表格检测。
 
@@ -218,7 +218,8 @@ class PyMuPDFEngine(BaseEngine):
 
         def usable(item, min_rows):
             return (item["rows"] >= min_rows and item["cols"] >= 2
-                    and len(item["cells"]) >= min_cells and item["non_empty"] >= 4)
+                    and len(item["cells"]) >= min_cells and item["non_empty"] >= 4
+                    and item["non_empty"] / max(len(item["cells"]), 1) >= min_fill)
 
         def looks_like_financial_table(item):
             """无框财务表判据：行数多、列数适中、格子短且以数字为主。"""
@@ -272,6 +273,9 @@ class PyMuPDFEngine(BaseEngine):
             raise EngineUnavailable(self.install_hint)
         margin = float(self.params.get("furniture_margin_pt", 40.0))
         min_cells = int(self.params.get("table_min_cells", 4))
+        # 图表线条也会被线框检测当成表格：实测有 45×35 的网格只有 31 个非空单元格，
+        # 用填充率兜住这类伪表格；真实财务表的填充率通常在 0.3 以上。
+        min_fill = float(self.params.get("table_min_fill_ratio", 0.2))
         pages: List[Page] = []
         with fitz.open(str(path)) as doc:
             for page in doc:
@@ -281,7 +285,7 @@ class PyMuPDFEngine(BaseEngine):
                     if is_furniture(block, page_h, margin):
                         block.level = "furniture"
                 table_blocks, table_boxes, table_stats = self._table_blocks(
-                    page, start_order=1000, min_cells=min_cells)
+                    page, start_order=1000, min_cells=min_cells, min_fill=min_fill)
 
                 kept: List[Block] = [
                     b for b in text_blocks

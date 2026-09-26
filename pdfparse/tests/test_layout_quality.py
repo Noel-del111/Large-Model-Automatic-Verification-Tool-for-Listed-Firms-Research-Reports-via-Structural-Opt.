@@ -110,7 +110,8 @@ class TestQualityMetrics(unittest.TestCase):
         self.assertIsNotNone(value)
         self.assertLess(value, 0.9)
 
-    def test_low_coverage_threshold_matches_real_pages(self):
+    def test_low_coverage_is_informational_only(self):
+        """文字密度只记录、不判警告：研报里图表页天然字少，误报会淹没真正的问题页。"""
         page = Page(page=1, page_size=(595.0, 842.0),
                     blocks=[_block("b1", 60, 60, 540, 90, text="短句" * 20)])
         from yjparse.quality import compute_page_quality
@@ -120,8 +121,8 @@ class TestQualityMetrics(unittest.TestCase):
         self.assertLess(quality.text_coverage, 0.8)
         status, reasons = decide_status(
             quality, [], {"text_coverage_warn": 0.8, "min_text_layer_chars_per_page": 30})
-        self.assertEqual(status, "warn")
-        self.assertTrue(any("low_text_coverage" in r for r in reasons))
+        self.assertEqual(status, "ok")
+        self.assertTrue(any(r.startswith("info:low_text_coverage") for r in reasons))
 
     def test_image_only_page_is_warning_not_failure(self):
         from yjparse.quality import compute_page_quality

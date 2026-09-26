@@ -146,7 +146,7 @@ def _page_violations(page: Page, tol: float, clamp_ratio: float) -> Tuple[List[s
             else:
                 hard.append(f"{block.block_id}:bbox_out_of_page(overflow={ratio:.2f})")
     if clamped:
-        soft.append(f"bbox_clamped:{clamped}个块坐标溢出页面，已收拢")
+        soft.append(f"info:bbox_clamped:{clamped} 个块坐标溢出页面，已收拢到页内")
     return hard, soft
 
 

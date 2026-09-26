@@ -127,9 +127,11 @@ class PageQuality:
     garbled_ratio: float = 0.0
     engine_agreement: Optional[float] = None       # 顺序敏感的一致度，用于发现阅读顺序分歧
     engine_agreement_bag: Optional[float] = None   # 顺序不敏感的一致度，用于判定内容是否漏抽
+    engine_agreement_token: Optional[float] = None  # 词元口径（诊断用，受空格影响）
     reference_char_count: Optional[int] = None     # 对照引擎在该页抽到的字符数
     table_col_inconsistent: bool = False
     table_empty_cell_ratio: float = 0.0
+    table_cell_count: int = 0
     tables_filtered: int = 0
     sentence_count: int = 0
     heading_count: int = 0
