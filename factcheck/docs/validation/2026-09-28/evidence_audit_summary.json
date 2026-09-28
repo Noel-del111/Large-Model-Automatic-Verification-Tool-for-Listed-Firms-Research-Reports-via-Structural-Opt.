@@ -1,0 +1,14 @@
+{
+  "result_schemas_valid": 4,
+  "artifact_manifests_valid": 4,
+  "claim_quotes_checked": 28,
+  "source_evidence_checked": 847,
+  "failures": [],
+  "result_run_ids": [
+    "64d0331c9e3249fb9dd2233ae64dedcf",
+    "d45bbfe0a4a1463e83f4eb2530d1c30a",
+    "9dfc5cddb7344593a34a0497fbaec0f3",
+    "79471674a9c24eb2a0f82131542f4a16"
+  ],
+  "archive_note": "Counts and run identifiers copied from the local evidence audit; absolute paths removed."
+}
