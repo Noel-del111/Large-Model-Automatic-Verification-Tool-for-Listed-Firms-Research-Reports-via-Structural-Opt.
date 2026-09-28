@@ -113,6 +113,8 @@ def _pages_needing_ocr(pages: List[Page], mode: str, thresholds: Dict) -> List[P
 
 
 def resolve_reference(primary: str, reference: str) -> Optional[str]:
+    if reference and reference.lower() == "none":
+        return None
     available = {name: info["available"] for name, info in registry().items()}
     if reference and reference.lower() not in {"auto", "none", ""}:
         return reference.lower() if available.get(reference.lower()) else None
@@ -142,12 +144,55 @@ def _page_violations(page: Page, tol: float, clamp_ratio: float) -> Tuple[List[s
             fixed, changed, ratio = clamp_bbox(block.bbox, w, h)
             if changed and (ratio <= clamp_ratio or block.type == "image"):
                 block.bbox = fixed
+                issue = validate_bbox(fixed)
+                if issue:
+                    hard.append(f"{block.block_id}:{issue}_after_clamp")
+                    continue
                 clamped += 1
             else:
                 hard.append(f"{block.block_id}:bbox_out_of_page(overflow={ratio:.2f})")
     if clamped:
         soft.append(f"info:bbox_clamped:{clamped} 个块坐标溢出页面，已收拢到页内")
     return hard, soft
+
+
+def _pdf_page_sizes(path: Path, coordinate_engine: str = "pymupdf") -> List[Tuple[float, float]]:
+    """Read source metadata independently of any extractor's returned pages."""
+    if coordinate_engine == "pdfplumber":
+        # pdfplumber uses MediaBox coordinates; PyMuPDF uses the CropBox.
+        # A clipped PDF must not inherit dimensions from another coordinate system.
+        import pdfplumber
+        with pdfplumber.open(str(path)) as pdf:
+            return [(float(p.width), float(p.height)) for p in pdf.pages]
+    try:
+        import pymupdf
+    except ImportError:
+        import pdfplumber
+        with pdfplumber.open(str(path)) as pdf:
+            return [(float(p.width), float(p.height)) for p in pdf.pages]
+    with pymupdf.open(str(path)) as pdf:
+        return [(float(p.rect.width), float(p.rect.height)) for p in pdf]
+
+
+def _check_page_coverage(pages: List[Page], sizes: List[Tuple[float, float]]) -> None:
+    """Keep failures visible; never infer source page count from extractor output."""
+    counts: Dict[int, int] = {}
+    for page in pages:
+        counts[page.page] = counts.get(page.page, 0) + 1
+    for page in pages:
+        issues = []
+        if page.page < 1 or page.page > len(sizes):
+            issues.append("page_number_out_of_range")
+        else:
+            page.page_size = sizes[page.page - 1]
+        if counts[page.page] > 1:
+            issues.append("duplicate_page")
+        page.engine_stats["coverage_violations"] = issues
+    for number, size in enumerate(sizes, start=1):
+        if number not in counts:
+            pages.append(Page(page=number, page_size=size,
+                              engine_stats={"coverage_violations": ["missing_source_page"]}))
+    pages.sort(key=lambda page: page.page)
 
 
 def parse_document(pdf_path: Path, out_dir: Path, config: PipelineConfig,
@@ -161,9 +206,13 @@ def parse_document(pdf_path: Path, out_dir: Path, config: PipelineConfig,
     ledger = ledger or Ledger(log_dir or (out_dir / "logs" / run_id), run_id, repo_dir=project)
 
     digest = sha256_file(pdf_path)
+    doc_id = f"{safe_name(pdf_path.stem)}-{digest[:16]}"
     ledger.access("read", pdf_path, sha256=digest, actor="pipeline")
-
     primary_name = config.primary.lower()
+    source_sizes = _pdf_page_sizes(pdf_path, primary_name)
+    if not source_sizes:
+        raise ValueError("源 PDF 没有页面，不能建立可核查的解析结果")
+
     params = dict(config.engine_params.get(primary_name, {}))
     if primary_name == "mineru" and "output" not in params:
         # MinerU 适配器读取离线产物；未指定时退回到与输入同名的目录
@@ -174,7 +223,8 @@ def parse_document(pdf_path: Path, out_dir: Path, config: PipelineConfig,
     started = time.time()
     ledger.tool(f"{primary_name}.parse", version=engine.version(),
                 args={"path": str(pdf_path), **params})
-    pages = engine.parse(pdf_path, doc_id=safe_name(pdf_path.stem), ledger=ledger)
+    pages = engine.parse(pdf_path, doc_id=doc_id, ledger=ledger)
+    _check_page_coverage(pages, source_sizes)
     duration = time.time() - started
 
     reference_name = resolve_reference(primary_name, config.reference)
@@ -245,13 +295,15 @@ def parse_document(pdf_path: Path, out_dir: Path, config: PipelineConfig,
     doc_context = {
         "has_text_layer": text_pages >= max(1, int(len(pages) * 0.5)),
         "text_layer_pages": text_pages,
-        "total_pages": len(pages),
+        "total_pages": len(source_sizes),
     }
     ledger.compute(op="document_context", inputs={"min_chars": min_chars},
                    result=doc_context, decision="routed")
 
     for page in pages:
         violations, soft_notes = _page_violations(page, tol, clamp_ratio)
+        violations.extend(page.engine_stats.get("coverage_violations", []))
+        soft_notes.extend(page.notes)
         skipped = int(page.engine_stats.get("text_tables_skipped", 0))
         if skipped:
             soft_notes.append(
@@ -330,10 +382,10 @@ def parse_document(pdf_path: Path, out_dir: Path, config: PipelineConfig,
     result = ParseResult(
         run_id=run_id,
         doc=DocumentMeta(
-            doc_id=safe_name(pdf_path.stem),
+            doc_id=doc_id,
             source_path=str(pdf_path),
             sha256=digest,
-            total_pages=len(pages),
+            total_pages=len(source_sizes),
             bytes=pdf_path.stat().st_size,
         ),
         engine=EngineInfo(

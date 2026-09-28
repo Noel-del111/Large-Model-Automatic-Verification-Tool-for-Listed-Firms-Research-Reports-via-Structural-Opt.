@@ -3,7 +3,9 @@
 import sys
 import tempfile
 import unittest
+import json
 from pathlib import Path
+from types import SimpleNamespace
 
 BASE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE / "src"))
@@ -20,6 +22,60 @@ except Exception:  # pragma: no cover - 未安装 streamlit
 
 @unittest.skipUnless(_HAS_STREAMLIT, "未安装 streamlit，跳过可视化页面测试")
 class TestApp(unittest.TestCase):
+    def test_search_buttons_are_unique_across_documents(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            kb = Path(tmp)
+            rows = [{"doc_id": name, "run_id": "run", "block_id": "p1_t0", "page": 1,
+                     "type": "text", "bbox": [10, 10, 100, 30], "page_status": "ok",
+                     "text": "profit 100"} for name in ("company_a", "company_b")]
+            (kb / "kb_index.jsonl").write_text(
+                "\n".join(json.dumps(row) for row in rows), encoding="utf-8")
+            script = ("import sys\nfrom pathlib import Path\nimport streamlit as st\n"
+                      f"sys.path.insert(0, {str(BASE)!r})\nimport app as ui\n"
+                      f"ui.KB_DIR = Path({str(kb)!r})\n"
+                      "ui.search_panel(st.session_state['results'])\n")
+            app = AppTest.from_string(script, default_timeout=60)
+            app.session_state["results"] = [SimpleNamespace(
+                doc=SimpleNamespace(doc_id=name), run_id="run") for name in ("company_a", "company_b")]
+            app.run()
+            app.text_input[0].set_value("profit").run()
+            self.assertEqual(len(app.exception), 0, [str(e) for e in app.exception])
+            keys = [button.key for button in app.button]
+            self.assertEqual(len(keys), 2)
+            self.assertEqual(len(set(keys)), 2)
+
+    def test_evidence_cache_is_cleared_when_document_or_page_changes(self):
+        from PIL import Image
+        from yjparse.contract import Page
+
+        with tempfile.TemporaryDirectory() as tmp:
+            png = Path(tmp) / "page.png"
+            Image.new("RGB", (30, 30), "white").save(png)
+            script = ("import sys\nfrom pathlib import Path\nimport streamlit as st\n"
+                      f"sys.path.insert(0, {str(BASE)!r})\nimport app as ui\n"
+                      f"ui.render_preview = lambda *args, **kwargs: [Path({str(png)!r})]\n"
+                      "ui.evidence_panel(st.session_state['results'])\n")
+            app = AppTest.from_string(script, default_timeout=60)
+            app.session_state["results"] = [
+                SimpleNamespace(doc=SimpleNamespace(doc_id="a"), run_id="run_a",
+                                pages=[Page(1, (595, 842), status="warn"),
+                                       Page(2, (595, 842), status="warn")]),
+                SimpleNamespace(doc=SimpleNamespace(doc_id="b"), run_id="run_b",
+                                pages=[Page(1, (595, 842))]),
+            ]
+            app.run()
+            app.selectbox[1].select(2).run()
+            app.button[0].click().run()
+            self.assertEqual(app.session_state["evidence_image"], str(png))
+            app.selectbox[1].select(1).run()
+            self.assertEqual(app.session_state["evidence_image"], "")
+            app.selectbox[1].select(2).run()
+            app.button[0].click().run()
+            app.selectbox[0].select("b").run()
+            self.assertEqual(len(app.exception), 0, [str(e) for e in app.exception])
+            self.assertEqual(app.session_state["evidence_image"], "")
+            self.assertEqual(app.selectbox[1].value, 1)
+
     def test_app_runs_without_exception(self):
         app = AppTest.from_file(str(BASE / "app.py"), default_timeout=120)
         app.run()

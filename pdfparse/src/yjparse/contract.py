@@ -301,7 +301,9 @@ def validate_result(result: ParseResult, tol: float = 2.0) -> List[str]:
         violations.append("run_id_missing")
     if not result.engine.name:
         violations.append("engine_name_missing")
-    if result.doc.total_pages and len(result.pages) != result.doc.total_pages:
+    if result.doc.total_pages <= 0:
+        violations.append("source_page_count_invalid")
+    if len(result.pages) != result.doc.total_pages:
         violations.append(
             f"page_count_mismatch: parsed={len(result.pages)} pdf={result.doc.total_pages}"
         )
@@ -310,7 +312,7 @@ def validate_result(result: ParseResult, tol: float = 2.0) -> List[str]:
         if page.page in seen_pages:
             violations.append(f"p{page.page}: duplicate_page")
         seen_pages.add(page.page)
-        if page.page < 1:
+        if page.page < 1 or page.page > result.doc.total_pages:
             violations.append("page_number_invalid")
         w, h = page.page_size
         if w <= 0 or h <= 0:
@@ -323,4 +325,6 @@ def validate_result(result: ParseResult, tol: float = 2.0) -> List[str]:
                 violations.append(f"p{page.page}:{block.block_id}: bbox_out_of_page")
             if block.type not in BLOCK_TYPES:
                 violations.append(f"p{page.page}:{block.block_id}: unknown_type={block.type}")
+    for missing in sorted(set(range(1, result.doc.total_pages + 1)) - seen_pages):
+        violations.append(f"p{missing}: missing_page")
     return violations

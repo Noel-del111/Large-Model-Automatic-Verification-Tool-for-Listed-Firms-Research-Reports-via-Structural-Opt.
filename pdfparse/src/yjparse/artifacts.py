@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import shutil
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -18,7 +19,9 @@ CSV_COLUMNS = [
 
 
 def write_artifacts(result: ParseResult, out_dir: Path, ledger=None) -> Dict[str, Path]:
-    doc_dir = ensure_dir(Path(out_dir) / result.doc.doc_id)
+    current_dir = ensure_dir(Path(out_dir) / result.doc.doc_id)
+    doc_dir = current_dir / "runs" / result.run_id
+    doc_dir.mkdir(parents=True, exist_ok=False)
     written: Dict[str, Path] = {}
 
     written["parse_result"] = write_json(doc_dir / "parse_result.json", result.to_dict())
@@ -49,6 +52,13 @@ def write_artifacts(result: ParseResult, out_dir: Path, ledger=None) -> Dict[str
     written["quality_report"] = write_json(doc_dir / "quality_report.json",
                                            _quality_report_dict(result))
     written["quality_table"] = _write_quality_csv(result, doc_dir / "quality_table.csv")
+
+    # Stable top-level paths remain the current-version interface for CLI/UI.
+    # Ledgers only hash immutable run paths, so a reparse cannot invalidate history.
+    for path in written.values():
+        shutil.copy2(path, current_dir / path.name)
+    write_json(current_dir / "latest.json", {"run_id": result.run_id,
+               "parse_result": str(written["parse_result"]), "sha256": result.doc.sha256})
 
     if ledger is not None:
         for kind, path in written.items():
