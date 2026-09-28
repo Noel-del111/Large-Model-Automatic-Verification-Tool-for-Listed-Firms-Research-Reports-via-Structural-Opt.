@@ -85,22 +85,20 @@ class PdfPlumberEngine(BaseEngine):
             finder = page.find_tables()
         except Exception:
             return blocks
-        for idx, table in enumerate(getattr(finder, "tables", []) or []):
+        for idx, table in enumerate(finder or []):
             bbox = BBox.from_any(table.bbox)
             try:
                 matrix = table.extract()
             except Exception:
                 matrix = []
             cells: List[Cell] = []
-            flat = list(getattr(table, "cells", []) or [])
-            cols = max((len(row or []) for row in matrix), default=0)
-            pos = 0
+            table_rows = list(getattr(table, "rows", []) or [])
             for r_idx, row in enumerate(matrix or []):
                 for c_idx, value in enumerate(row or []):
                     cell_bbox = None
-                    if pos < len(flat) and flat[pos]:
-                        cell_bbox = BBox.from_any(flat[pos])
-                    pos += 1
+                    row_cells = table_rows[r_idx].cells if r_idx < len(table_rows) else []
+                    if c_idx < len(row_cells) and row_cells[c_idx]:
+                        cell_bbox = BBox.from_any(row_cells[c_idx])
                     cells.append(Cell(row=r_idx, col=c_idx, text=(value or "").strip(), bbox=cell_bbox))
             blocks.append(Block(
                 block_id=f"table{idx}",

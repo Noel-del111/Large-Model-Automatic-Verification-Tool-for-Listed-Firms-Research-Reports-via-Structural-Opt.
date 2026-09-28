@@ -56,7 +56,8 @@ def _trim_bbox(bbox: BBox, line_len: int, start: int, end: int) -> BBox:
 
 
 def build_sentences(lines: Sequence[Tuple[str, BBox]],
-                    max_sentences: int = 400) -> List[Sentence]:
+                    max_sentences: int = 400,
+                    line_separator: Optional[str] = None) -> List[Sentence]:
     """把若干行文本拼成段落并切句，返回句子文本、字符区间与近似坐标。"""
     if not lines:
         return []
@@ -65,9 +66,11 @@ def build_sentences(lines: Sequence[Tuple[str, BBox]],
     pos = 0
     for index, (text, bbox) in enumerate(lines):
         # 中文换行不补空格，英文换行补空格，否则中文句子会被拆出多余空白
-        if index and _needs_space(parts[-1][-1:], text[:1]):
-            parts.append(" ")
-            pos += 1
+        if index:
+            separator = line_separator if line_separator is not None else (
+                " " if _needs_space(parts[-1][-1:], text[:1]) else "")
+            parts.append(separator)
+            pos += len(separator)
         start = pos
         parts.append(text)
         pos += len(text)
@@ -75,7 +78,10 @@ def build_sentences(lines: Sequence[Tuple[str, BBox]],
     full = "".join(parts)
 
     sentences: List[Sentence] = []
-    for match in SENTENCE_PATTERN.finditer(full):
+    # Explicit separators make offsets address the exact Block.text, including
+    # line breaks. Default normalization is retained for standalone callers.
+    pattern = re.compile(r"[^。！？；!?;]+[。！？；!?;]?") if line_separator is not None else SENTENCE_PATTERN
+    for match in pattern.finditer(full):
         raw = match.group(0)
         stripped = raw.strip()
         if not stripped:
@@ -132,28 +138,35 @@ def attach_captions_and_sources(blocks: Iterable[Block],
         source = is_source_note(block.text)
         if not (caption or source):
             continue
-        best: Optional[Block] = None
-        best_distance = max_distance_pt
+        candidates = []
         for target in ordered:
             if target.type not in {"table", "image"} or target.bbox is None:
                 continue
             # 标题在表格上方、来源在表格下方，按对应方向计算间距
             distance = (target.bbox.y0 - block.bbox.y1) if caption else (block.bbox.y0 - target.bbox.y1)
-            if -8.0 <= distance <= best_distance:
-                best, best_distance = target, abs(distance)
-        if best is None:
+            overlap = min(target.bbox.x1, block.bbox.x1) - max(target.bbox.x0, block.bbox.x0)
+            overlap_ratio = max(0.0, overlap) / max(min(target.bbox.width, block.bbox.width), 1.0)
+            if -8.0 <= distance <= max_distance_pt and overlap_ratio >= 0.5:
+                candidates.append((abs(distance), -overlap_ratio, target))
+        candidates.sort(key=lambda item: item[:2])
+        if not candidates:
             continue
+        if len(candidates) > 1 and candidates[0][:2] == candidates[1][:2]:
+            continue  # Equidistant spanning text cannot safely be assigned to a column.
+        best = candidates[0][2]
         if caption:
-            if not best.caption:
-                best.caption = block.text.strip()
+            if best.caption and best.caption != block.text.strip():
+                continue
+            best.caption = block.text.strip()
             block.type = "caption"
         else:
             # 同一来源在块内可能重复出现，按行去重后再挂接
-            seen = {line.strip() for line in best.source_note.splitlines() if line.strip()}
+            existing = list(dict.fromkeys(line.strip() for line in best.source_note.splitlines() if line.strip()))
+            seen = set(existing)
             unique = [line.strip() for line in block.text.splitlines()
                       if line.strip() and line.strip() not in seen]
             if unique:
-                merged = "\n".join(list(seen) + unique)
+                merged = "\n".join(existing + unique)
                 best.source_note = merged[:300]
             block.type = "caption"
         attached += 1

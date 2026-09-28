@@ -5,6 +5,14 @@
 本仓库用于 2026 年北京市金融人工智能比赛的参赛作品开发，五人并行推进，各模块独立可跑、
 按统一字段对接。当前进度以 `docs/` 下的记录与实际代码为准。
 
+## C 核查模块（2026-09-28）
+
+已新增 `factcheck/`，支持研报/财报事实抽取、数值/单位/期间/口径/引用比对、修改建议和可追溯结果。
+可读取 PDF、DOCX 研报及 B 解析 JSON；输出 JSON、CSV 和 Markdown。使用、D 接口、测试及边界见
+[`factcheck/README.md`](factcheck/README.md)，本轮实测见 [`factcheck/docs/acceptance.md`](factcheck/docs/acceptance.md)。
+同时修复了此前 B→C 接入审查的问题，说明见 [`pdfparse/docs/C_HANDOFF_FIXES.md`](pdfparse/docs/C_HANDOFF_FIXES.md)。
+团队接手顺序、交付清单和复现前提见 [`C 模块交接说明`](factcheck/docs/handoff.md)。
+
 ## 最小可交付范围
 
 输入研报草稿 PDF 与对应财报 PDF，输出：
@@ -184,7 +192,9 @@ run.cmd model-check --base-url https://<端点>/v1 --vision-model <视觉模型�
 表格额外含 `cells`（行列号 + 单元格坐标），文本块含 `sentences`（句级坐标），
 图片与表格块含 `caption` 与 `source_note`（图表标题与资料来源）。
 
-## 当前交付状态
+## B 初次交付记录（历史）
+
+以下保留 B 初次交付的实跑记录；最新 B/C 合计 155 项测试结果见 [C 模块验收记录](factcheck/docs/acceptance.md)。
 
 已在本机用四份公开研报（合计 195 页，含 134 页图表密集的宏观策略报告）实跑：
 

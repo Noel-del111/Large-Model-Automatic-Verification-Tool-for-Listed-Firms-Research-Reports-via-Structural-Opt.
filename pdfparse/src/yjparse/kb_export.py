@@ -59,7 +59,11 @@ def parse_result_to_markdown(result: Dict[str, Any]) -> str:
     ]
     for page in result["pages"]:
         lines.append(f"<!-- Page {page['page']} -->")
+        lines.append(f"<!-- page_status:{page.get('status', 'unknown')} -->")
         lines.append("")
+        if page.get("status") == "fail":
+            lines.append("<!-- rejected: failed page excluded from evidence -->")
+            continue
         for block in page["blocks"]:
             kind = block["type"]
             text = (block.get("text") or "").strip()
@@ -100,6 +104,8 @@ def export_document(parse_result_path: Path, kb_dir: Path) -> Dict[str, Any]:
 
     rows = []
     for page in payload["pages"]:
+        if page.get("status") == "fail":
+            continue
         for block in page["blocks"]:
             rows.append({
                 "doc_id": doc_id,

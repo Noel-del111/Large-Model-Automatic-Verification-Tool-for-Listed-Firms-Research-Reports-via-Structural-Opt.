@@ -120,14 +120,14 @@ def render_page_image(pdf_path, page_no: int, dpi: int = 200,
 def lines_to_blocks(lines: Sequence[OcrLine], page_no: int, start_order: int = 5000,
                     source: str = "ocr:rapidocr", page_w: float = 0.0,
                     page_h: float = 0.0) -> List[Block]:
-    """把 OCR 行转成契约块，并按行合并成段落（连续且间距小的行合并）。"""
+    """Preserve OCR line boundaries and only group vertically aligned lines."""
     blocks: List[Block] = []
     current: List[OcrLine] = []
 
     def flush() -> None:
         if not current:
             return
-        text = "".join(line.text for line in current)
+        text = "\n".join(line.text for line in current)
         bbox = BBox(min(l.bbox.x0 for l in current), min(l.bbox.y0 for l in current),
                     max(l.bbox.x1 for l in current), max(l.bbox.y1 for l in current))
         score = sum(l.score for l in current) / len(current)
@@ -143,11 +143,14 @@ def lines_to_blocks(lines: Sequence[OcrLine], page_no: int, start_order: int = 5
         ))
         current.clear()
 
-    for line in lines:
+    for line in sorted(lines, key=lambda item: (item.bbox.y0, item.bbox.x0)):
         if current:
             gap = line.bbox.y0 - current[-1].bbox.y1
             height = max(current[-1].bbox.height, 1.0)
-            if gap > height * 0.8:
+            previous = current[-1].bbox
+            overlap = min(previous.x1, line.bbox.x1) - max(previous.x0, line.bbox.x0)
+            aligned = overlap / max(min(previous.width, line.bbox.width), 1.0) >= 0.5
+            if gap < -height * 0.2 or gap > height * 0.8 or not aligned:
                 flush()
         current.append(line)
     flush()

@@ -51,7 +51,7 @@ def _row_text(row: Dict[str, Any]) -> str:
 
 class Bm25Index:
     def __init__(self, rows: Sequence[Dict[str, Any]], k1: float = 1.5, b: float = 0.75):
-        self.rows = list(rows)
+        self.rows = [row for row in rows if row.get("page_status") != "fail"]
         self.k1, self.b = k1, b
         self.doc_tokens: List[Counter] = []
         self.doc_len: List[int] = []

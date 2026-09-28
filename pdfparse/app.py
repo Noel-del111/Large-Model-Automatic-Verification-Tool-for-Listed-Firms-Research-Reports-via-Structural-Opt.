@@ -12,6 +12,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import sys
 from pathlib import Path
 
@@ -148,7 +149,12 @@ def evidence_panel(results: list) -> None:
     result = next(r for r in results if r.doc.doc_id == doc_name)
     issue_pages = [p.page for p in result.pages if p.status != "ok"] or \
                   [p.page for p in result.pages][:1]
-    page_no = st.selectbox("选择页面（默认列出有问题的页）", issue_pages, key="evidence_page")
+    page_no = st.selectbox("选择页面（默认列出有问题的页）", issue_pages,
+                           key=f"evidence_page_{result.doc.doc_id}_{result.run_id}")
+    context = (result.doc.doc_id, result.run_id, page_no)
+    if st.session_state.get("evidence_context") != context:
+        st.session_state["evidence_image"] = ""
+        st.session_state["evidence_context"] = context
     render = st.button("生成证据高亮图", type="primary")
     if render:
         paths = render_preview(OUT_DIR / result.doc.doc_id / "parse_result.json",
@@ -157,7 +163,9 @@ def evidence_panel(results: list) -> None:
         st.session_state["evidence_page_info"] = page_no
     image_path = st.session_state.get("evidence_image")
     if image_path and Path(image_path).exists():
-        page = next(p for p in result.pages if p.page == st.session_state["evidence_page_info"])
+        page = next((p for p in result.pages if p.page == st.session_state.get("evidence_page_info")), None)
+        if page is None:
+            return
         st.caption(f"第 {page.page} 页　状态：{STATUS_TEXT.get(page.status, page.status)}　"
                    f"原因：{'；'.join(page.notes) or '无'}")
         st.caption("红框=文本块　蓝框=表格与单元格　灰框=图片　橙框=页眉页脚")
@@ -177,6 +185,10 @@ def search_panel(results: list) -> None:
     top = st.slider("返回条数", 1, 10, 5)
     if not query:
         return
+    context = (query, mode, tuple((r.doc.doc_id, r.run_id) for r in results))
+    if st.session_state.get("search_context") != context:
+        st.session_state["search_image"] = ""
+        st.session_state["search_context"] = context
     index = Bm25Index(rows)
     if mode == "单文档检索":
         hits = index.search(query, top_k=top)
@@ -194,7 +206,7 @@ def search_panel(results: list) -> None:
                     f"`{hit['block_id']}`　[{hit['type']}]　"
                     f"状态 {STATUS_TEXT.get(hit['page_status'], hit['page_status'])}")
         st.caption(f"bbox=[{bbox}]　{hit['text'][:160]}")
-        if st.button("定位到这一页", key=f"locate_{hit['block_id']}"):
+        if st.button("定位到这一页", key=f"locate_{hit['doc_id']}_{hit['page']}_{hit['block_id']}"):
             parse_result = OUT_DIR / hit["doc_id"] / "parse_result.json"
             if parse_result.exists():
                 paths = render_preview(parse_result, pages=[hit["page"]], dpi=110,
@@ -247,9 +259,12 @@ def main() -> None:
     if uploads:
         UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
         for item in uploads:
-            target = UPLOAD_DIR / item.name
-            target.write_bytes(item.getbuffer())
-            pdf_paths.append(target)
+            contents = item.getbuffer()
+            target = UPLOAD_DIR / hashlib.sha256(contents).hexdigest() / Path(item.name).name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(contents)
+            if target not in pdf_paths:
+                pdf_paths.append(target)
     if st.session_state.get("sample_path"):
         pdf_paths.append(Path(st.session_state["sample_path"]))
 

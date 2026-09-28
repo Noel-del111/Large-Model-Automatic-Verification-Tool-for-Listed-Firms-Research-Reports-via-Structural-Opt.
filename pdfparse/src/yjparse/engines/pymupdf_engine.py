@@ -156,7 +156,8 @@ class PyMuPDFEngine(BaseEngine):
                 order=0,
                 text=text,
                 level=level,
-                sentences=build_sentences([(line[0], line[1]) for line in lines]),
+                sentences=build_sentences([(line[0], line[1]) for line in lines],
+                                          line_separator="\n"),
             ))
         blocks.extend(images)
         return blocks
