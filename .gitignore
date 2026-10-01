@@ -2,6 +2,11 @@
 data/
 models/
 logs/
+evals/reports/
+
+# 公开评测集与论文原件（体积大、许可未明，只放本地）
+Are Large Language Models Reliable Reviewers A Benchmark for Error Detection in Financial Documents/
+测评集/
 
 # 运行环境
 .venv/

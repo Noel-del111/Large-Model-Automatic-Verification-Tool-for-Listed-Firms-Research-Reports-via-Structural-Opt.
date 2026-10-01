@@ -107,7 +107,15 @@ if remote_sha == head:
     raise SystemExit('远端已经是这个提交，无需推送')
 ancestor = subprocess.run(['git', '-C', REPO_DIR, 'merge-base', '--is-ancestor', remote_sha, head])
 if ancestor.returncode != 0:
-    raise SystemExit('远端提交不是本地 HEAD 的祖先，先人工确认，避免覆盖别人的提交')
+    # 常见情形：队友用 GitHub 网页合并产生了 merge 提交，本地因为 github.com:443 不通
+    # 没能 fetch 到该对象，导致祖先判断失败。此时比较内容的 tree：
+    # 若远端提交的 tree 已经出现在本地历史里，说明内容已包含，可以安全推送。
+    remote_tree = call('GET', f'{API}/git/commits/{remote_sha}')['tree']['sha']
+    local_trees = set(git('log', '--all', '--format=%T').split())
+    if remote_tree not in local_trees:
+        raise SystemExit('远端提交不是本地 HEAD 的祖先，先人工确认，避免覆盖别人的提交')
+    print(f'提示：远端提交对象本地缺失，但其内容 tree {remote_tree[:8]} 已在本地历史中，'
+          f'判定为可安全推送')
 
 # 收集 HEAD 的全部 blob。
 # 必须用 -z：默认输出会对含非 ASCII 的路径做 C 风格引号转义（如 "docs/PDF\350...docx"），
