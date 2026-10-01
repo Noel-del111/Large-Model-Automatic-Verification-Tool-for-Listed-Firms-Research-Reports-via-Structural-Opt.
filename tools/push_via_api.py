@@ -111,7 +111,17 @@ if ancestor.returncode != 0:
     # 没能 fetch 到该对象，导致祖先判断失败。此时比较内容的 tree：
     # 若远端提交的 tree 已经出现在本地历史里，说明内容已包含，可以安全推送。
     remote_tree = call('GET', f'{API}/git/commits/{remote_sha}')['tree']['sha']
-    local_trees = set(git('log', '--all', '--format=%T').split())
+    # 注意：不能用 git log ——历史里可能引用了本地缺失的远端对象（见上），
+    # 遍历父提交会直接报错。这里逐个尝试最近几级的 tree，取到即用。
+    local_trees = set()
+    for depth in range(5):
+        for expr in (f'HEAD~{depth}^{{tree}}', 'HEAD^{tree}'):
+            probe = subprocess.run(['git', '-C', REPO_DIR, 'rev-parse', '--verify', expr],
+                                   capture_output=True, text=True, encoding='utf-8',
+                                   errors='replace')
+            if probe.returncode == 0:
+                local_trees.add(probe.stdout.strip())
+                break
     if remote_tree not in local_trees:
         raise SystemExit('远端提交不是本地 HEAD 的祖先，先人工确认，避免覆盖别人的提交')
     print(f'提示：远端提交对象本地缺失，但其内容 tree {remote_tree[:8]} 已在本地历史中，'
