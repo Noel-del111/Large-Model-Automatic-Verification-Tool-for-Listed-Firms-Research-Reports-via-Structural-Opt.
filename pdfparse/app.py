@@ -34,130 +34,7 @@ UPLOAD_DIR = BASE / "data" / "web_upload"
 KB_DIR = BASE / "data" / "web_kb"
 STATUS_TEXT = {"ok": "正常", "warn": "警告", "fail": "失败"}
 
-# ---------------------------------------------------------------------------
-# 设计系统：颜色、字阶、间距、圆角、阴影统一在这里定义，页面各处只引用变量
-# ---------------------------------------------------------------------------
-DESIGN = {
-    "paper": "#FBF9F6",       # 纸张底色，避免纯白刺眼
-    "surface": "#FFFFFF",
-    "ink": "#1A1A1A",         # 正文主色
-    "ink_soft": "#5A5A57",    # 次要文字
-    "line": "#E4DED5",        # 细分隔线
-    "accent": "#8C1D18",      # 印章红，用于强调与品牌
-    "accent_soft": "#F3E4E2",
-    "ok": "#2F6B4F",
-    "warn": "#8A5D10",
-    "fail": "#A32A24",
-    "radius": "14px",
-    "space": "8px",
-    "shadow": "0 1px 2px rgba(26,26,26,.04), 0 8px 24px rgba(26,26,26,.06)",
-}
-
 st.set_page_config(page_title="研报解析质检台", page_icon="📄", layout="wide")
-
-
-def inject_css() -> None:
-    """注入设计系统样式：字阶、留白、层级、微交互、响应式与无障碍。"""
-    d = DESIGN
-    st.markdown(f"""
-    <style>
-    :root {{
-      --paper:{d['paper']}; --surface:{d['surface']}; --ink:{d['ink']};
-      --ink-soft:{d['ink_soft']}; --line:{d['line']}; --accent:{d['accent']};
-      --accent-soft:{d['accent_soft']}; --ok:{d['ok']}; --warn:{d['warn']};
-      --fail:{d['fail']}; --radius:{d['radius']}; --space:{d['space']};
-      --shadow:{d['shadow']};
-      --font-display:"Source Han Serif SC","Noto Serif SC","Songti SC",Georgia,serif;
-      --font-ui:"Inter","Source Han Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
-      --font-mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
-      --step-0:.875rem; --step-1:1rem; --step-2:1.25rem; --step-3:1.6rem; --step-4:2.4rem;
-    }}
-    .stApp {{ background:var(--paper); color:var(--ink); font-family:var(--font-ui); }}
-    .block-container {{ max-width:1180px; padding:3.5rem 2.5rem 6rem; }}
-
-    /* 标题层级：衬线大字 + 细水平线，营造审阅文档的质感 */
-    h1, h2, h3 {{ font-family:var(--font-display); color:var(--ink); letter-spacing:.01em; }}
-    h1 {{ font-size:var(--step-4); line-height:1.15; margin:0 0 .5rem; font-weight:600; }}
-    h2 {{ font-size:var(--step-3); margin:2.5rem 0 1rem; font-weight:600; }}
-    h3 {{ font-size:var(--step-2); margin:2rem 0 .75rem; font-weight:600; }}
-    p, li {{ font-size:var(--step-1); line-height:1.85; color:var(--ink); }}
-    .hero-sub {{ color:var(--ink-soft); font-size:var(--step-2); line-height:1.7; margin:0 0 1.5rem; }}
-    .hero-rule {{ height:1px; background:var(--line); margin:2rem 0 2.5rem; border:0; }}
-
-    /* 状态徽标：小、克制、可扫读 */
-    .chip {{ display:inline-flex; align-items:center; gap:.4rem; padding:.25rem .7rem;
-             border-radius:999px; font-size:var(--step-0); font-weight:600;
-             border:1px solid var(--line); background:var(--surface); }}
-    .chip-ok {{ color:var(--ok); border-color:color-mix(in srgb, var(--ok) 30%, var(--line)); }}
-    .chip-warn {{ color:var(--warn); border-color:color-mix(in srgb, var(--warn) 30%, var(--line)); }}
-    .chip-fail {{ color:var(--fail); border-color:color-mix(in srgb, var(--fail) 30%, var(--line)); }}
-
-    /* 指标卡：留白充分，数字用等宽字体便于对齐比较 */
-    .metrics {{ display:grid; gap:calc(var(--space) * 2);
-                grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); margin:0 0 2rem; }}
-    .metric {{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-               padding:1.25rem 1.35rem; box-shadow:var(--shadow);
-               transition:transform .18s ease, box-shadow .18s ease; }}
-    .metric:hover {{ transform:translateY(-2px); box-shadow:0 2px 4px rgba(26,26,26,.06), 0 12px 32px rgba(26,26,26,.10); }}
-    .metric .label {{ font-size:var(--step-0); color:var(--ink-soft); letter-spacing:.06em; text-transform:uppercase; }}
-    .metric .value {{ font-family:var(--font-mono); font-size:var(--step-3);
-                      font-weight:600; margin-top:.35rem; }}
-    .metric .hint {{ font-size:var(--step-0); color:var(--ink-soft); margin-top:.25rem; }}
-
-    /* 证据行：左侧竖线像批注栏，页码与坐标用等宽字体，方便核对 */
-    .evidence {{ border-left:2px solid var(--accent); padding:.6rem 0 .6rem 1rem; margin:.6rem 0; }}
-    .evidence .meta {{ font-family:var(--font-mono); font-size:var(--step-0); color:var(--ink-soft); }}
-    .evidence .snippet {{ margin-top:.25rem; }}
-
-    /* 区块卡片与表格 */
-    div[data-testid="stDataFrame"] {{ border:1px solid var(--line); border-radius:var(--radius);
-                                      overflow:hidden; background:var(--surface); }}
-    .stTabs [data-baseweb="tab-list"] {{ gap:1.5rem; border-bottom:1px solid var(--line); }}
-    .stTabs [data-baseweb="tab"] {{ font-size:var(--step-1); padding:.6rem 0; }}
-    .stTabs [aria-selected="true"] {{ color:var(--accent) !important; }}
-
-    /* 微交互：按钮悬浮、按下、键盘焦点环，全部走同一套缓动 */
-    .stButton > button {{ border-radius:999px; padding:.55rem 1.4rem; font-weight:600;
-                          border:1px solid var(--line); background:var(--surface);
-                          transition:transform .12s ease, box-shadow .18s ease, background .18s ease; }}
-    .stButton > button:hover {{ transform:translateY(-1px); box-shadow:var(--shadow); }}
-    .stButton > button:active {{ transform:translateY(0) scale(.99); }}
-    .stButton > button:focus-visible {{ outline:2px solid var(--accent); outline-offset:2px; }}
-    .stDownloadButton > button {{ border-radius:999px; }}
-    [data-testid="stFileUploaderDropzone"] {{ border:1px dashed var(--line); border-radius:var(--radius);
-                                              background:var(--surface); padding:1.5rem; }}
-
-    /* 无障碍：尊重系统的减少动效设置 */
-    @media (prefers-reduced-motion: reduce) {{
-      * {{ transition:none !important; animation:none !important; }}
-    }}
-    /* 响应式：窄屏单列、缩小字阶与留白 */
-    @media (max-width: 900px) {{
-      .block-container {{ padding:2rem 1.1rem 4rem; }}
-      :root {{ --step-3:1.35rem; --step-4:1.9rem; }}
-      .metrics {{ grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); }}
-    }}
-    </style>
-    """, unsafe_allow_html=True)
-
-
-def hero(chips: list) -> None:
-    st.markdown(
-        '<h1>研报解析质检台</h1>'
-        '<p class="hero-sub">上传研报 PDF，抽取文本与表格，保留页码与坐标，'
-        '判定解析质量，并把每条结论回链到原文位置。</p>'
-        + " ".join(chips) + '<hr class="hero-rule"/>',
-        unsafe_allow_html=True)
-
-
-def metric_cards(items: list) -> None:
-    """items: [(标签, 数值, 说明)]"""
-    cards = "".join(
-        f'<div class="metric"><div class="label">{label}</div>'
-        f'<div class="value">{value}</div>'
-        f'<div class="hint">{hint}</div></div>'
-        for label, value, hint in items)
-    st.markdown(f'<div class="metrics">{cards}</div>', unsafe_allow_html=True)
 
 
 def settings_panel() -> dict:
@@ -209,14 +86,13 @@ def metrics_row(results: list) -> None:
     warned = sum(len(r.quality_report.warned_pages) for r in results)
     tables = sum(r.quality_report.summary.get("tables", 0) for r in results)
     sentences = sum(r.quality_report.summary.get("sentences", 0) for r in results)
-    metric_cards([
-        ("文档", len(results), "本次解析的研报数"),
-        ("页数", pages, "全部页面"),
-        ("正常页", pages - failed - warned, "可直接引用"),
-        ("警告页", warned, "需人工看一眼"),
-        ("失败页", failed, "不进入自动结论"),
-        ("表格", tables, f"句子 {sentences} 条"),
-    ])
+    cols = st.columns(6)
+    cols[0].metric("文档", len(results))
+    cols[1].metric("页数", pages)
+    cols[2].metric("正常页", pages - failed - warned)
+    cols[3].metric("警告页", warned)
+    cols[4].metric("失败页", failed, delta=None)
+    cols[5].metric("表格 / 句子", f"{tables} / {sentences}")
 
 
 def docs_table(results: list) -> None:
@@ -326,13 +202,10 @@ def search_panel(results: list) -> None:
         return
     for hit in hits:
         bbox = ",".join(f"{v:.0f}" for v in (hit["bbox"] or []))
-        st.markdown(
-            f'<div class="evidence">'
-            f'<div class="meta">第 {hit["page"]} 页 · {hit["block_id"]} · '
-            f'bbox=[{bbox}] · 相关度 {hit["score"]:.2f} · '
-            f'{STATUS_TEXT.get(hit["page_status"], hit["page_status"])}</div>'
-            f'<div class="snippet">{hit["text"][:160]}</div></div>',
-            unsafe_allow_html=True)
+        st.markdown(f"**{hit['score']:.2f}**　{hit['doc_id']}　第 {hit['page']} 页　"
+                    f"`{hit['block_id']}`　[{hit['type']}]　"
+                    f"状态 {STATUS_TEXT.get(hit['page_status'], hit['page_status'])}")
+        st.caption(f"bbox=[{bbox}]　{hit['text'][:160]}")
         if st.button("定位到这一页", key=f"locate_{hit['doc_id']}_{hit['page']}_{hit['block_id']}"):
             parse_result = OUT_DIR / hit["doc_id"] / "parse_result.json"
             if parse_result.exists():
@@ -375,10 +248,8 @@ def sample_button() -> None:
 
 
 def main() -> None:
-    inject_css()
-    hero(['<span class="chip chip-ok">页码与坐标可回溯</span>',
-          '<span class="chip chip-warn">解析失败自动识别</span>',
-          '<span class="chip">检索命中即可高亮</span>'])
+    st.title("研报解析质检台")
+    st.caption("上传研报 PDF → 抽取文本与表格、保留页码与坐标、判定解析质量、回链到原文位置")
     options = settings_panel()
 
     uploads = st.file_uploader("上传研报 PDF（可多选，支持批量对比）", type=["pdf"],

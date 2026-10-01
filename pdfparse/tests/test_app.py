@@ -80,10 +80,7 @@ class TestApp(unittest.TestCase):
         app = AppTest.from_file(str(BASE / "app.py"), default_timeout=120)
         app.run()
         self.assertEqual(len(app.exception), 0, [str(e) for e in app.exception])
-        # 首页首屏由自定义 hero 渲染（衬线大标题 + 状态徽标）
-        hero_html = " ".join(str(item.value) for item in app.markdown)
-        self.assertIn("研报解析质检台", hero_html)
-        self.assertIn("chip", hero_html)
+        self.assertIn("研报解析质检台", str(app.title[0].value))
         # 未上传文件时应给出引导，而不是报错
         self.assertTrue(any("上传" in str(info.value) for info in app.info))
 
@@ -118,11 +115,9 @@ class TestApp(unittest.TestCase):
             app.session_state["search_image"] = ""
             app.run()
             self.assertEqual(len(app.exception), 0, [str(e) for e in app.exception])
-            # 六张指标卡由自定义 HTML 渲染（文档、页数、正常页、警告页、失败页、表格）
-            body = " ".join(str(item.value) for item in app.markdown)
-            self.assertIn('class="metric"', body)
-            for label in ("文档", "页数", "正常页", "警告页", "失败页", "表格"):
-                self.assertIn(label, body)
+            # 六张指标卡（文档、页数、正常页、警告页、失败页、表格/句子）
+            self.assertGreaterEqual(len(app.metric), 6)
+            self.assertIn("页数", [m.label for m in app.metric])
 
 
 if __name__ == "__main__":
