@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-09-28T12:03:43.090559+00:00",
+  "evaluation_kind": "development_regression_not_blind_test",
+  "methodology": [
+    "run_check only receives report and source PDF paths; workbooks are read afterwards",
+    "match original rows by metric, displayed value, unit and explicit adjustment basis",
+    "semantic status, error type, source PDF page and duplicates are scored separately",
+    "unmatched, ambiguous and unannotated predictions are not treated as passing",
+    "original expected rows remain unchanged; classification differences need adjudication"
+  ],
+  "summary": {
+    "cases": 4,
+    "original_rows": 20,
+    "unique_expected_claims": 19,
+    "duplicates": 1,
+    "declared_error_rows": 9,
+    "semantic_original_rows": {
+      "matched": 20,
+      "disagreed": 0,
+      "unverified": 0,
+      "total": 20
+    },
+    "semantic_unique_claims": {
+      "matched": 19,
+      "disagreed": 0,
+      "unverified": 0,
+      "total": 19
+    },
+    "error_type_original_rows": {
+      "matched": 16,
+      "disagreed": 4,
+      "unverified": 0,
+      "total": 20
+    },
+    "error_type_error_rows": {
+      "matched": 5,
+      "disagreed": 4,
+      "unverified": 0,
+      "total": 9
+    },
+    "source_page_original_rows": {
+      "matched": 18,
+      "disagreed": 2,
+      "unverified": 0,
+      "total": 20
+    },
+    "additional_unannotated_predictions": 9,
+    "checker_statuses": {
+      "confirmed_error": 9,
+      "no_issue": 11
+    },
+    "all_original_dimensions_agree": false
+  },
+  "archive_note": "Aggregate fields copied from local evaluation.json; original documents and case-level local paths are not included."
+}

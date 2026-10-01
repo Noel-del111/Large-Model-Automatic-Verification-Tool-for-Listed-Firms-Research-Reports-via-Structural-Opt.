@@ -1,0 +1,7 @@
+-r requirements.txt
+reportlab==4.4.9
+jsonschema==4.26.0
+# 完整验收还实际运行 B 的界面与 OCR 测试，不将跳过视为通过。
+streamlit==1.64.0
+rapidocr==3.9.2
+onnxruntime==1.30.0

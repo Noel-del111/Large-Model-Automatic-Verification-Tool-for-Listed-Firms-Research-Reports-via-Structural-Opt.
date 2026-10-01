@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.1.0",
+  "text_coverage_warn": 0.8,
+  "chart_page_image_ratio": 0.3,
+  "chart_label_min_blocks": 12,
+  "chart_label_max_avg_chars": 22,
+  "min_text_layer_chars_per_page": 30,
+  "garbled_ratio_fail": 0.01,
+  "engine_agreement_warn": 0.85,
+  "engine_agreement_fail": 0.6,
+  "sequence_agreement_warn": 0.75,
+  "reading_order_divergence_is_warning": false,
+  "table_min_cells": 4,
+  "table_empty_cell_warn": 0.75,
+  "table_empty_cell_min_cells": 8,
+  "image_only_page_min_area_ratio": 0.3,
+  "ocr_image_area_ratio": 0.45,
+  "bbox_out_of_page_tolerance_pt": 3.0,
+  "bbox_clamp_max_overflow_ratio": 0.25,
+  "furniture_margin_pt": 40.0,
+  "vlm_sample_ratio": 0.1
+}

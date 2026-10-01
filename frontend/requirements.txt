@@ -1,0 +1,7 @@
+# D 展示层依赖：与 B/C 共用解析与高亮栈，外加 Streamlit 页面
+# 版本随本机 Python 环境适配；仓库内 B/C 原模块另见 repo/pdfparse/requirements*.txt
+streamlit
+pdfplumber
+pypdf
+PyMuPDF
+Pillow

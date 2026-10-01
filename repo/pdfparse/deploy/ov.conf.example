@@ -1,0 +1,27 @@
+{
+  "storage": {
+    "workspace": "D:/openviking-data",
+    "vectordb": {
+      "name": "context",
+      "backend": "local"
+    },
+    "agfs": {
+      "backend": "local"
+    }
+  },
+  "embedding": {
+    "dense": {
+      "api_base": "http://127.0.0.1:11434/v1",
+      "api_key": "ollama",
+      "provider": "openai",
+      "dimension": 1024,
+      "model": "bge-m3"
+    }
+  },
+  "vlm": {
+    "api_base": "http://127.0.0.1:11434/v1",
+    "api_key": "ollama",
+    "provider": "openai",
+    "model": "qwen2.5vl:7b"
+  }
+}

@@ -1,0 +1,14 @@
+# 可选引擎（按需安装，未在本机验证的项已标注）
+pdfplumber==0.11.7          # MIT，轻量文本与表格抽取，可作主引擎或对照引擎
+
+# OCR 兜底：处理扫描件与位图图表里的文字（纯 CPU，模型随包安装，可离线运行）
+rapidocr==3.9.2             # Apache-2.0，RapidOCR 推理框架
+onnxruntime==1.30.0         # MIT，ONNX 推理运行时
+
+# 可视化页面（上传研报看结果）
+streamlit==1.64.0           # Apache-2.0，本地可视化界面
+
+# 以下引擎体量较大，需要单独评估算力与离线权重，未纳入核心依赖：
+# docling==2.5.0            # MIT，版面与阅读顺序质量高，CPU 可跑但依赖 torch，首次运行需下载模型
+# mineru                    # Apache-2.0 附加条款，官方以 PyPI/源码安装，建议 GPU；本模块采用“读取其离线输出”的接入方式
+# paddleocr / paddlepaddle  # Apache-2.0，表格单元格与扫描件增强

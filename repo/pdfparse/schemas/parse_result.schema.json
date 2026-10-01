@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "yjparse parse result",
+  "description": "研报 PDF 解析结果契约。page 与 bbox 为必填字段，缺失即视为解析失败。",
+  "type": "object",
+  "required": ["schema_version", "run_id", "doc", "engine", "pages", "quality_report"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "run_id": {"type": "string"},
+    "doc": {
+      "type": "object",
+      "required": ["doc_id", "source_path", "sha256", "total_pages"],
+      "properties": {
+        "doc_id": {"type": "string"},
+        "source_path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "total_pages": {"type": "integer", "minimum": 0},
+        "bytes": {"type": "integer", "minimum": 0},
+        "title": {"type": "string"}
+      }
+    },
+    "engine": {
+      "type": "object",
+      "required": ["name", "version", "params", "started_at", "duration_s"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "strategy": {"type": "string"},
+        "model": {"type": "string"},
+        "model_sha256": {"type": "string"},
+        "params": {"type": "object"},
+        "started_at": {"type": "string"},
+        "duration_s": {"type": "number", "minimum": 0}
+      }
+    },
+    "reference_engine": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "params": {"type": "object"}
+      }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["page", "page_size", "status", "blocks"],
+        "properties": {
+          "page": {"type": "integer", "minimum": 1},
+          "page_size": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {"type": "number", "exclusiveMinimum": 0}
+          },
+          "status": {"enum": ["ok", "warn", "fail"]},
+          "quality": {"type": "object"},
+          "notes": {"type": "array", "items": {"type": "string"}},
+          "blocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["block_id", "type", "bbox", "order"],
+              "properties": {
+                "block_id": {"type": "string"},
+                "type": {"enum": ["text", "heading", "table", "image", "formula", "caption", "other"]},
+                "bbox": {
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "items": {"type": "number"}
+                },
+                "order": {"type": "integer", "minimum": 0},
+                "text": {"type": "string"},
+                "level": {"type": "string"},
+                "caption": {"type": "string"},
+                "source_note": {"type": "string"},
+                "confidence": {"type": ["number", "null"]},
+                "cells": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["row", "col", "text"],
+                    "properties": {
+                      "row": {"type": "integer", "minimum": 0},
+                      "col": {"type": "integer", "minimum": 0},
+                      "text": {"type": "string"},
+                      "bbox": {
+                        "type": ["array", "null"],
+                        "minItems": 4,
+                        "maxItems": 4,
+                        "items": {"type": "number"}
+                      },
+                      "row_span": {"type": "integer", "minimum": 1},
+                      "col_span": {"type": "integer", "minimum": 1}
+                    }
+                  }
+                },
+                "sentences": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["text"],
+                    "properties": {
+                      "text": {"type": "string"},
+                      "bbox": {
+                        "type": ["array", "null"],
+                        "minItems": 4,
+                        "maxItems": 4,
+                        "items": {"type": "number"}
+                      },
+                      "char_start": {"type": "integer", "minimum": 0},
+                      "char_end": {"type": "integer", "minimum": 0}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "quality_report": {
+      "type": "object",
+      "required": ["status", "page_status", "failed_pages", "warned_pages", "reasons", "summary"],
+      "properties": {
+        "status": {"enum": ["ok", "warn", "fail"]},
+        "page_status": {"type": "object"},
+        "failed_pages": {"type": "array", "items": {"type": "integer"}},
+        "warned_pages": {"type": "array", "items": {"type": "integer"}},
+        "reasons": {"type": "object"},
+        "summary": {"type": "object"},
+        "violations": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

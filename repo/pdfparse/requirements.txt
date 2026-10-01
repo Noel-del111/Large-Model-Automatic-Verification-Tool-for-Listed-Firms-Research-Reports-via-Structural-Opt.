@@ -1,0 +1,8 @@
+# 核心依赖（离线可安装，已验证版本）
+PyMuPDF==1.27.2.3
+Pillow>=10.0,<13.0
+
+# 说明：
+# 1. 核心抽取依赖 PyMuPDF，预览依赖 Pillow，可在无网络、无 GPU 环境下运行。
+# 2. PyMuPDF 采用 AGPL-3.0 双许可，见 THIRD_PARTY.md 中的合规说明。
+# 3. 如需更宽松的许可证，可改用 requirements-engines.txt 中的 pdfplumber 作为主引擎。
