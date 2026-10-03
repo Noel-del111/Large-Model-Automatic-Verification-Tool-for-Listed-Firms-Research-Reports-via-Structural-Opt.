@@ -30,6 +30,10 @@ class ProgressSnapshotTests(unittest.TestCase):
         self.assertEqual(snapshot["detectors"]["hybrid"]["all_review_hints_detection"]["false_positive"], 2)
         self.assertEqual(snapshot["runtime_at_launch"]["budget_cny"], "50")
         self.assertEqual(snapshot["budget_at_finalization"]["limit_cny"], 100)
+        self.assertFalse(snapshot["claims"]["model_weight_training_performed"])
+        self.assertFalse(snapshot["claims"]["final_independent_test_performed"])
+        self.assertTrue(snapshot["claims"]["model_inference_and_scoring_performed"])
+        self.assertEqual(snapshot["claims"]["historical_split_id"], "eval_oct05")
 
     def test_incomplete_scope_or_changed_score_cannot_be_published_as_complete(self):
         with self.assertRaises(ValueError):

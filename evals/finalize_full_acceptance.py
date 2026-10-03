@@ -55,8 +55,8 @@ def collect(data, out, scope="full"):
               "call_status_counts": budget["call_status_counts"], "cost_basis": "configured_rate_upper_bound"}
     ledger_path = data / ("ledger-eval200-final.json" if scope == "eval200" else "ledger-full-final.json")
     write_json(ledger_path, ledger)
-    labels = {"eval_oct05": "冻结评测200篇", "dev": "开发扩展598篇"}
-    scopes = {"eval_oct05": "frozen_eval", "dev": "dev_expansion"}
+    labels = {"eval_oct05": "开发阶段200篇", "dev": "开发扩展598篇"}
+    scopes = {"eval_oct05": "development_stage", "dev": "dev_expansion"}
     runs = load_runs([labels[s] + "=" + str(data / ("full-" + s)) for s in splits],
                      [labels[s] + "=" + scopes[s] for s in splits])
     content = render(runs, out, ledger_path, [run["label"] for run in runs])
@@ -65,12 +65,18 @@ def collect(data, out, scope="full"):
     count = 200 if scope == "eval200" else 798
     result_line = (f"{count} 篇的三组执行及评分完整性检查通过。" if complete else
                    f"评分保留了全部 {count} 篇计划分母，但存在未完成的执行，验收尚未通过；失败明细见审计文件。")
-    title = "# 第二版 200 篇评测与交接报告" if scope == "eval200" else "# 第二版全量模型评测报告"
+    title = "# 第二版 200 篇开发阶段实验与交接报告" if scope == "eval200" else "# 第二版全量模型评测报告"
     scope_line = ("用户最新指令为完成当前 200 篇后停止并提交进度 PR。598 篇开发扩展未执行，等待进一步指令，不计作完成。"
                   if scope == "eval200" else "本轮范围为 200 篇冻结评测与 598 篇开发扩展，分别报告，不混合为独立测试分数。")
     introduction = (title + "\n\n" + result_line + "\n\n" + scope_line +
                     "199 篇 10 月 7 日保留集继续封存。用户已确认先完成模型全量评测；"
                     "正常文本人审、语义证据支持及真人复核效率留待后续，仍列为未测量。")
+    introduction += ("\n\n**范围说明：本次 200 篇属于开发阶段实验与阶段性验证，最终独立测试尚未进行。** "
+                     "已实际完成模型推理和评分，没有训练或微调模型权重；不能表述成没有任何测试。"
+                     "历史划分 ID `eval_oct05` 及运行时冻结的参数保持原样，当前交接不将该批结果作为最终测试成绩。"
+                     "如果据此继续修改提示或规则，该批只用于验证和回归。"
+                     "598 篇开发池此前已有小样本和离线实验，尚未完成该池真实模型全量扩跑。"
+                     "当前 200 篇也不是项目累计使用过的全部样本。工程单元测试不等于最终模型能力测试。")
     if result.get("budget_amendment"):
         introduction += ("\n\n运行期间用户将累计上限由 50 元提高至 100 元，历史费用保留。"
                          "本批仍使用启动时冻结的模型、提示及源码；原运行配置中 50 元是启动快照，"
@@ -78,6 +84,7 @@ def collect(data, out, scope="full"):
     content = content.replace("# 第二版真实模型阶段报告", introduction, 1)
     content += "\n业务配对结果见 " + link("独立配对回归报告", ROOT / "docs/V2_PAIRED_RESULTS.md", out) + "。\n"
     content += "完整性证据见 " + link("执行范围及完整性审计", data / "full-acceptance-audit.json", out) + "。\n"
+    content += "数据、版本、交付和未完成项见 " + link("本次更新的范围与边界", ROOT / "docs/V2_SCOPE_AND_HANDOFF.md", out) + "。\n"
     out.parent.mkdir(parents=True, exist_ok=True)
     temporary = out.with_suffix(out.suffix + ".tmp")
     temporary.write_text(content, encoding="utf-8")

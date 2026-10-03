@@ -14,7 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCOPES = {"dev_tuning": "开发集调参", "dev_validation": "新开发样本验证",
-          "dev_expansion": "开发集扩展测试", "frozen_eval": "冻结评测"}
+          "dev_expansion": "开发集扩展测试", "frozen_eval": "冻结评测",
+          "development_stage": "开发阶段验证（非最终测试）"}
 ARMS = {"legacy_rules": "冻结旧版规则", "model_direct": "模型直接检测", "hybrid": "组合流程"}
 
 

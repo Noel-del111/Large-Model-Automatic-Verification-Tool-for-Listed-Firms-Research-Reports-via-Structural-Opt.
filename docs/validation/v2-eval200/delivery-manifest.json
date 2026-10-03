@@ -1,0 +1,794 @@
+{
+  "schema_version": "stage-handoff-delivery/1.0",
+  "created_at": "2026-10-03T16:32:38.999542+00:00",
+  "first_delivery_commit": "ace8948b8b615279ab17030da63b3214a2e1f14a",
+  "baseline_commit": "d71f8c752138da3898208f82bb6c525a82f7d325",
+  "first_delivery_changed_files": 151,
+  "files_at_first_delivery": [
+    {
+      "path": "DESIGN.md",
+      "git_blob": "5e2b043499d36d5593ffda1ee65b5d70d1ec968b",
+      "mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "1d9d9462864bc409a3051f6f4005fdcc80f84439",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/V2_EVAL200_RESULTS.md",
+      "git_blob": "42c733e4387da540f86a57a91610117ef55dde4f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/V2_IMPLEMENTATION.md",
+      "git_blob": "f0cba8be4db89ad6627820ae72c2e15ed1a288cf",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/V2_MODEL_RESULTS.md",
+      "git_blob": "4f64e8bf9ca032dc360cf36e177923c47aaa7824",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/V2_PAIRED_RESULTS.md",
+      "git_blob": "5c12251316f68a23563c7f6753526fbe92d4fd7a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/V2_RESULTS.md",
+      "git_blob": "a613c272b7dab608b51b1a8b7a12dc16d4d2b6e5",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/validation/v2-eval200/README.md",
+      "git_blob": "d4f38e67ec2dc706808ec64cfe8051d1ac39da57",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/validation/v2-eval200/aggregate.json",
+      "git_blob": "55dd0e2cdb55f1a7da2f9ebe48916a570fb40841",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/validation/v2-eval200/engineering-tests.json",
+      "git_blob": "a8cca9eb95e52609ef243f291d93f7df41532552",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/validation/v2-eval200/evaluation-tests.json",
+      "git_blob": "5ea0d9589f2ad0927451a88a0124145bd9292ee4",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/validation/v2-eval200/execution-audit.json",
+      "git_blob": "899788adfdde68f656000cbcd3c71cfa029f7ae3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/validation/v2-eval200/frontend-integration.json",
+      "git_blob": "3a6b5d7405ef36920c74f301db49b48711e96174",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/README.md",
+      "git_blob": "cfdb0a86f0304b970e62a41c24b31ba8f6cbb0a1",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/audit_full_acceptance.py",
+      "git_blob": "5aa9559300a3dd13edaf30438d223dc30909f9da",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/authorize_budget.py",
+      "git_blob": "816e66f1e48100b87bb188f5c9bd73dafaaf03fe",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/baseline.py",
+      "git_blob": "2f88f80c5ff1266a7a14c1c1cbdba37aa6ae2ced",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/build_model_report.py",
+      "git_blob": "56ba11ccff00ffd8d0d8acc7deebd107a173d414",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/build_paired_report.py",
+      "git_blob": "779b4d4415abb34f542ae0b943c8aca52938d68f",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/build_v2_report.py",
+      "git_blob": "3395cbcdb2cfd9b62b146c7a8a00151a0ab0b410",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/curate_dev_examples.py",
+      "git_blob": "fd359526e07b6126223d10a4a9798f028a082569",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/dataset_prepare.py",
+      "git_blob": "8319d19b67e10efc3d71af97631e143f7b9bd7f1",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/datasets.md",
+      "git_blob": "5f38dd57b41d9628835e2d7bd6709c1c05fe4349",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/deepseek_balance.py",
+      "git_blob": "510845c491f243e28b78656354c8d73dc3efa4cf",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/dev_example_reason_patch.v2.json",
+      "git_blob": "fb26e2268a4e37e3e2464d4e29601cd145e0bdb0",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/export_progress_snapshot.py",
+      "git_blob": "e853c11520254bf0b52eb61cf1aeeded5ff5ba09",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/finalize_full_acceptance.py",
+      "git_blob": "8361fe5bf2464f7100cb89be2272f660a7c450eb",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/fined_bench_eval.py",
+      "git_blob": "6a44914c05146719b9b06e29c66bc5e800449dc5",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/model_config.example.json",
+      "git_blob": "fbbabb845c48820bab82d349513b4445c659b66a",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/operation_eval.py",
+      "git_blob": "ce44ebf9fd6baee57f627d13b0ace2870800c176",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/prepare_review_pack.py",
+      "git_blob": "53e39e272a6f680019006a5398c3a2e37929f27f",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/run_v2.py",
+      "git_blob": "9e1aa966187f530c8b43eef948611b58d1dfcc4d",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_acceptance_audit.py",
+      "git_blob": "5d05822a549f34ef29bdfd08bcf764c4688d7bce",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_curate_dev_examples.py",
+      "git_blob": "bf4479ef18a2586dcb15927054432fdd629e1379",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_dataset_prepare.py",
+      "git_blob": "5dc77f97223f9e5f7f4e556a8df62888bc0dc31b",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_full_finalization.py",
+      "git_blob": "581a951c54274a8625b4d4550887180838d7db28",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_model_report.py",
+      "git_blob": "194237b175de222e1d4cbef093d38ed4f42cf32d",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_progress_snapshot.py",
+      "git_blob": "9bb888880e9fc38d110c42be8e2a3cd00bb3d177",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_response_reuse.py",
+      "git_blob": "f150bfbc1b761bca13fe9b0884795fa97a619176",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_review_pack.py",
+      "git_blob": "8944e324091ba486ca6bbd4342a4d28e3ebeb6a5",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_run_v2.py",
+      "git_blob": "12586507aaf016fcbf33862f677c7fc1d7bc2924",
+      "mode": "100644"
+    },
+    {
+      "path": "evals/tests/test_scoring.py",
+      "git_blob": "d480409b37d572703d18d2eaae2a861994e60d5d",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/schemas/check_result.schema.json",
+      "git_blob": "60029997bee4a52809327d48c3ff7ebd31697ea2",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/__main__.py",
+      "git_blob": "e31e7c12b756ea3e4c4567c2782946a3f9e6f8e2",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/adapters.py",
+      "git_blob": "5653ad91afa29b2f2bc2cca080985f8425c181e1",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/claim_extract.py",
+      "git_blob": "20b6248a3e78a1bfae163a92b8302062fc2f9ff2",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/error_types.py",
+      "git_blob": "1b712f2f013fcb17e7760e62d9fd5c9e913257a4",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/intrinsic.py",
+      "git_blob": "794898c2bc235bbd5e31799f469c99f115945c30",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/json_recovery.py",
+      "git_blob": "07e1ae4f422f591edc54eadc3af026e0b05d4783",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/metric_catalog.py",
+      "git_blob": "7dc0e25f2928d98a67b2782e1be0134bb5fd8151",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/model.py",
+      "git_blob": "f69ffb39195fe2c2bb092c7ab8fa1b2da79f9f41",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/model_runtime.py",
+      "git_blob": "0c437ca74249950ce16e4779cdae305ace17549c",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/model_settings.py",
+      "git_blob": "c8be25c4824aec39abc02b7722fc9b4330587686",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/models.py",
+      "git_blob": "c80ad18c521bc32c2d0a149ff4322ccaa24a689f",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/pipeline.py",
+      "git_blob": "d4b2de7e0b0f58e82853b82fbb8692b885975398",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/review_hints.py",
+      "git_blob": "eb4797870253898888637aa6432730f97dab173c",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/rules.py",
+      "git_blob": "0f4587aa85ecd3e4f44481a611a2b5790d08c487",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/source_extract.py",
+      "git_blob": "6abe0ef1b14c19605c9c64397774342f1485d79c",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/text_context.py",
+      "git_blob": "06328c5f9746bbdca0231a9be33a72f858e7ce9d",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/text_review.py",
+      "git_blob": "78cb0ad0ec936a6a497623825c0a0e221bbfed38",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/src/yjcheck/text_taxonomy.py",
+      "git_blob": "4a458ecb62963370a5014758d00986b5c351a5db",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_evaluate_samples.py",
+      "git_blob": "8c112348721d17478b1276f31381937eebaa0fa7",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_generic_metrics.py",
+      "git_blob": "135e1a6d3285d7bda28d238303b5f73754d2a6be",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_intrinsic.py",
+      "git_blob": "36581feccf413e7f3f5dd33e763bc3256bbf1a5c",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_json_recovery.py",
+      "git_blob": "9980f7c2e0ea0a805519ef9a83f7eaf61dcd3494",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_model_claim_alignment.py",
+      "git_blob": "8ca737ef948bb71f7c6aef2b8ac36a35bda4a369",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_model_runtime.py",
+      "git_blob": "ed7291a6f6015c947ab30127bc7792bc2174b0a1",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_model_settings.py",
+      "git_blob": "2580bb66324ef30b47d6dca846dbaaf9399d020f",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_output_contract.py",
+      "git_blob": "f5a759dbb5398696a27b8bc0ef9b31ba950d3e75",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_source_extract.py",
+      "git_blob": "9c50b5bc58ea3d2c6a808a2f6e20f6f7a142a0a1",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tests/test_text_review.py",
+      "git_blob": "ac210079aaf82f828fe654fa2a2a6068f91af5d5",
+      "mode": "100644"
+    },
+    {
+      "path": "factcheck/tools/evaluate_samples.py",
+      "git_blob": "a0b21a22952369b4d132d195825e3c4511a8171a",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/app.py",
+      "git_blob": "dcfb0510e198866f4f67f86979e1853bc5efe6d9",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/assistant.py",
+      "git_blob": "db7125c94cb2a7bb7c86ea20efaf02f82a8d3ac2",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/review_store.py",
+      "git_blob": "fc8274d8e2af36fc1aca892fdadf170f735a0e73",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tests/test_paired_metrics.py",
+      "git_blob": "09d2e9caa5b98a1ef944e72768e73e5f4c0b0ab0",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tests/test_v2_frontend.py",
+      "git_blob": "8745ebae706ff2c5a19d29328d1fddf96f5c85db",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/text_review_view.py",
+      "git_blob": "de809f0e039f35d98db3f67c2a306c2a6ea9e41d",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tools/diag2.py",
+      "git_blob": "a6b4fabe43bc93946c16a9848c7425b57bdbf3d8",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tools/diag3.py",
+      "git_blob": "dbd1206ee1023aabe4cdae5aa398249484bb5308",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tools/metrics.py",
+      "git_blob": "2ce19fb3090d267f367ceff74ac0908263cadd1d",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tools/parse_diag.py",
+      "git_blob": "06f7f8c2f757562022e5ed5900a485a9a750c3b3",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tools/smoke_assistant.py",
+      "git_blob": "a36c6dccbdeeaa8092219c648dd85eb72cce45f5",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tools/smoke_check.py",
+      "git_blob": "6f68a0d9f434f1d2c1b55c1fe773f6faa812df7c",
+      "mode": "100644"
+    },
+    {
+      "path": "frontend/tools/test_deepseek.py",
+      "git_blob": "f1877d69a36c6df7990de2bcf93f60761fe8f717",
+      "mode": "100644"
+    },
+    {
+      "path": "pdfparse/src/yjparse/engines/pdfplumber_engine.py",
+      "git_blob": "4eb9362d6b0c73879cc0d227f81735924640f1ab",
+      "mode": "100644"
+    },
+    {
+      "path": "pdfparse/src/yjparse/ocr.py",
+      "git_blob": "e1bbb6e592445c89fc6860425c6f8ac1144a102d",
+      "mode": "100644"
+    },
+    {
+      "path": "pdfparse/src/yjparse/pipeline.py",
+      "git_blob": "87e4ad3a5b4d4fb8f4fba112eb478fa0b6c4576d",
+      "mode": "100644"
+    },
+    {
+      "path": "pdfparse/tests/test_handoff_regressions.py",
+      "git_blob": "e4ddf1d0ddec58c9bcb4f0a78d16101b8b26820f",
+      "mode": "100644"
+    },
+    {
+      "path": "project-map.html",
+      "git_blob": "244e1bc0f2df2284ab028150b564b14c87a0e733",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/run.py",
+      "git_blob": "4e3f61b7a2d899f4bfb323d592baa3f0eeca777d",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/schemas/check_result.schema.json",
+      "git_blob": "a53b0debb50700429763a9ed99927e17c5344b90",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/__init__.py",
+      "git_blob": "c00255c390da1d4cff574522976bfbbec17b1b39",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/__main__.py",
+      "git_blob": "eca1c168a8d00f75bba3e84968c89d3e554db67d",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/adapters.py",
+      "git_blob": "4bb6bdcbdba69e0771f8df2074a794ce2cf1cbb6",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/claim_extract.py",
+      "git_blob": "bc76741f12ccd3556fe44ad01e13d7bbacaee723",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/error_types.py",
+      "git_blob": "8b3ca012aa0a2558ac14d216d312446f5a1afaec",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/intrinsic.py",
+      "git_blob": "d9e28aa80c25203630c8baaf46b13c11952876bc",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/model.py",
+      "git_blob": "b3a4794ddd136ec5b5cae338976f754f7113c4a5",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/models.py",
+      "git_blob": "a7b7ec5562935fbe6741c238c9dbaab10ec0c6d0",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/pipeline.py",
+      "git_blob": "08dcc32944fdee2b55d61f5799f275937503670a",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/rules.py",
+      "git_blob": "6305692a1000b462dcefae7324b26830e85dd309",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/src/yjcheck/source_extract.py",
+      "git_blob": "ce98424f0720e6bfb701d028fd65590da293cda6",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/tests/test_boundaries.py",
+      "git_blob": "ed7e745fe8a873286d78272de86ffc159554acd2",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/tests/test_claim_extract.py",
+      "git_blob": "dadbf1fbb0ed5dcd5b644e201c3f7cab380ff5c4",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/tests/test_intrinsic.py",
+      "git_blob": "aba51710377741d2486be2a9ae4a91c18167d757",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/tests/test_output_contract.py",
+      "git_blob": "ab2770e98fdb95935b0b6ebfa19e76906daf9d55",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/tests/test_rules.py",
+      "git_blob": "0804cce98c67ab8686795619499a9257fde53250",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/tests/test_source_extract.py",
+      "git_blob": "3944c6c526b70fe3d90dace546f49db103fb9155",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/tools/evaluate_samples.py",
+      "git_blob": "32546ea1fc690f3428cbe83a284ec78ac3825421",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/factcheck/tools/run_all_tests.py",
+      "git_blob": "db9ae07225131cb93a7ce046d3dc8faf76cab242",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/app.py",
+      "git_blob": "fef8309f0c4182b8a44fc42ff73d680e97ca7fab",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/run.cmd",
+      "git_blob": "dc8558d036b498bc3167a13c53702264c6f9d6fd",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/run_app.cmd",
+      "git_blob": "f3bad555ba8ba784df5273a4a46ec7e8b9a8fbf1",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/schemas/parse_result.schema.json",
+      "git_blob": "4b6b3069c915fe04a5419289fc5197a237597aa0",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/__init__.py",
+      "git_blob": "0888c7e95f86e9eb524870e1bb7e6dd40423d6e5",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/__main__.py",
+      "git_blob": "c0210da4818d582a8112b45ee9b113a01b7944b8",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/artifacts.py",
+      "git_blob": "dc7e67bd5f47a8fdd301092c42595667729fb6c8",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/cli.py",
+      "git_blob": "e7e0c639aa3aaf6c658361c704763b814f48a61e",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/config.py",
+      "git_blob": "5c9a16a08a9a6baa5881ca1621989d0c58834198",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/contract.py",
+      "git_blob": "bcdb549f9d7257cbd7e4dc6f110ecce41caea0a8",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/engines/__init__.py",
+      "git_blob": "8921e16738ebd3e41211fe09ccfd55341be50ccf",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/engines/base.py",
+      "git_blob": "196dceb9ddb8133eb8f24b6c0f20e9005e7e2e95",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/engines/docling_engine.py",
+      "git_blob": "5a1ef74f7861d6519db25ad46aa34b8b093cf724",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/engines/mineru_engine.py",
+      "git_blob": "8ec212f850af5aafeb1cfad9ad7fee4a9069d934",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/engines/pdfplumber_engine.py",
+      "git_blob": "f34c979e35988a88aa0bb7b61c4b11ab5568e20e",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/engines/pymupdf_engine.py",
+      "git_blob": "d7566d48c3afb2467aba6ddacea53f007950f89e",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/kb_export.py",
+      "git_blob": "548815ba5773d296067d6d397c81d9a049b820a2",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/layout.py",
+      "git_blob": "ac22d780150550386750923d4ae001efecaef20b",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/ledger.py",
+      "git_blob": "9472f7f285c8e148edc66b56d85474cc96543559",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/model_check.py",
+      "git_blob": "125083e362d032f15148fe641d2ef1472c9954f6",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/ocr.py",
+      "git_blob": "8d63457233ad0af1050396bcef6cdf5be039ec4d",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/pipeline.py",
+      "git_blob": "a0557341e8d316d7fdd9623a3c977205af9d025c",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/preview.py",
+      "git_blob": "b72d1e0b72615dee2fdbe114134d3d6042d16894",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/quality.py",
+      "git_blob": "e9496883fa39d9a79befa8ac94a61ed652eb09bf",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/report.py",
+      "git_blob": "443534ae843b5a55b454dcfeed18269dee845c03",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/retrieval.py",
+      "git_blob": "cbcdb8c079a4473eb468291c7c28339d4184dd06",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/textstruct.py",
+      "git_blob": "c78d200d40802e1031133b9c2370fe2032b3150b",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/utils.py",
+      "git_blob": "321b91c1e5ee8c9958c31115b6aabd30bec34fe5",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/src/yjparse/vlm_check.py",
+      "git_blob": "a6d394a5956554bd8718e68afd66842e864c66c8",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tests/sample_pdfs.py",
+      "git_blob": "ebe4e914d100768c9b1ae974925ceceff27dc80b",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tests/test_app.py",
+      "git_blob": "1e1d8cb37a113e9c9fd89c0837cb3455e8da4638",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tests/test_contract.py",
+      "git_blob": "7d4cff186974456d65ea095756801c66396c9bcb",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tests/test_handoff_regressions.py",
+      "git_blob": "7a09d64599f1dd84112b268a97cd7af74e98ff55",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tests/test_kb.py",
+      "git_blob": "f9c2046719ca1f3d2be373e938131c6e25c24163",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tests/test_layout_quality.py",
+      "git_blob": "832631eaddcb9a80eb89b054f6731a8d7a357e5d",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tests/test_pipeline.py",
+      "git_blob": "197b193656808571dddaa7c85b67a0d35816fa1f",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tests/test_vlm.py",
+      "git_blob": "392f073e955a185b164ed79663c4f23f8a6d984f",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tools/eval_reading_order.py",
+      "git_blob": "c7481461c6e958556717c9ee32c1d6b5f1bcd38e",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tools/fetch_models.py",
+      "git_blob": "5f28ff7642faf84f20c46921c72f1cbc58000b7a",
+      "mode": "100644"
+    },
+    {
+      "path": "repo/pdfparse/tools/mock_model_server.py",
+      "git_blob": "00747ec63d2fd094ccf0add8c200470018a2e306",
+      "mode": "100644"
+    }
+  ],
+  "boundary_update_scope": "Documentation and derived report metadata; original inference, scoring algorithms and data are unchanged.",
+  "protected_raw_artifact_hashes": {
+    "data/v2/full-eval_oct05/score.json": "3041202b646c80e6930c7838754ad8b0a73e533c709039f9bc16841a3d9581e1",
+    "data/v2/full-eval_oct05/run_config.json": "559ca41bd8eb8dc08aa70752dff7ef195cf7f8904feb6f398a9ed206ea436765",
+    "data/v2/full-eval_oct05/queue.json": "9d6beb9e08d776e3a27492ebc470dd0915b6e7e47d0fac155c21782e16eac703",
+    "data/v2/dataset/manifest.json": "f4e9c1ae2408cfdc829627cc7aac06ba40005e2ad028965b38888c702bf76f33",
+    "data/v2/release/freeze_manifest.json": "dc120581597cb1f771500632b205a86a00f7ba1eae54884a966b9d5e0a2cc480"
+  },
+  "all_primary_metrics_unchanged": true,
+  "new_model_calls_this_update": 0,
+  "cumulative_calls": 284,
+  "cumulative_accounted_cny": 13.571324,
+  "final_independent_test_performed": false,
+  "model_weight_training_performed": false,
+  "integration": {
+    "pull_request": 2,
+    "draft": true,
+    "upstream_commit_checked": "7035ac2319a1ca56a836cb34d0c32b921626603e",
+    "merge_conflicts_resolved": false,
+    "merged_to_main": false,
+    "merged_version_tested": false
+  },
+  "excluded_from_github": [
+    "API credentials",
+    "source documents and gold",
+    "per-document predictions and model responses",
+    "shared budget ledger",
+    "local frozen archives"
+  ],
+  "completeness_claim": "The initial 151-file change is preserved by its Git commit and this inventory. This is complete stage-work delivery, not completion of the full project or reproduction without local materials."
+}

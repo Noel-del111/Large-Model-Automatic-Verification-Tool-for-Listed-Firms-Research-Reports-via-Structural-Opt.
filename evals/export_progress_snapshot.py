@@ -58,7 +58,12 @@ def build_snapshot(score, source_sha256, finalization):
                     if key in {"context_tokens", "max_output_tokens", "input_cny_per_mtok", "output_cny_per_mtok",
                                "price_date", "price_source", "price_valid_until", "budget_cny", "max_retries"}}
     return {"schema_version": "eval200-public-aggregate/1.0", "created_at": datetime.now(timezone.utc).isoformat(),
-            "scope": "200 frozen-evaluation documents; 598 development expansion and 199 final holdout deferred by user",
+            "scope": "200 development-stage validation documents; not a final independent test; historical split eval_oct05 retained",
+            "claims": {"model_weight_training_performed": False, "model_inference_and_scoring_performed": True,
+                       "final_independent_test_performed": False, "final_holdout_documents": 199,
+                       "historical_split_id": "eval_oct05", "current_use": "development_validation_and_regression",
+                       "development_pool_documents": 598, "development_pool_full_model_run_performed": False,
+                       "prior_pilot_and_offline_experiments_exist": True},
             "requested_documents": 200, "all_groups_attempted_documents": 200,
             "all_groups_completed_documents": completed, "failed_or_missing_documents": 200 - completed,
             "scope_execution_and_scoring_complete": successful, "state": expected_state,

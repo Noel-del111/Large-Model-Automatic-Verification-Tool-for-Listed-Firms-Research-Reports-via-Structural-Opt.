@@ -2,7 +2,7 @@
   "suite": "evals/tests",
   "total": 89,
   "passed": true,
-  "duration_seconds": 0.963,
-  "source_log_sha256": "df7f18d8a932e954d581ebc65fbe0b54015ac4f1ef72ae030662fa323385c1c2",
-  "scope": "Offline regression; no paid model calls; not model quality evidence."
+  "duration_seconds": 1.052,
+  "source_log_sha256": "3e1e29872a8e527dbfca72e0ee602610fa2214985c0ed4e6f610568d3a4dc104",
+  "scope": "Offline regression including final-test/training boundary assertions; no paid model calls; not model quality evidence."
 }

@@ -24,8 +24,22 @@
     "basis": "configured upper rates, not provider invoice"
   },
   "source_score_sha256": "3041202b646c80e6930c7838754ad8b0a73e533c709039f9bc16841a3d9581e1",
-  "generated_report_sha256": "88c4c56d750929c47244a66597775eaf637cb7ef1b09699addc9db5ced644385",
+  "generated_report_sha256": "b08d774af35c1106cd59d7a4d34dec42fab7dda28920a90e5dbfb98f3720b670",
   "inference_stopped": true,
   "followup_batch_blocked_before_model_client": true,
-  "note": "200 attempted, not 200 successes. The worker exited after the development batch was rejected by the user stop control. No failure retry was made."
+  "note": "200 attempted, not 200 successes. The worker exited after the development batch was rejected by the user stop control. No failure retry was made.",
+  "original_generated_report_sha256": "88c4c56d750929c47244a66597775eaf637cb7ef1b09699addc9db5ced644385",
+  "scope_clarified_at": "2026-10-03T16:17:35.670587+00:00",
+  "claims": {
+    "model_weight_training_performed": false,
+    "model_inference_and_scoring_performed": true,
+    "final_independent_test_performed": false,
+    "final_holdout_documents": 199,
+    "historical_split_id": "eval_oct05",
+    "current_use": "development_validation_and_regression",
+    "development_pool_documents": 598,
+    "development_pool_full_model_run_performed": false,
+    "prior_pilot_and_offline_experiments_exist": true
+  },
+  "raw_scoring_unchanged": true
 }

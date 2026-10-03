@@ -1,7 +1,18 @@
 {
   "schema_version": "eval200-public-aggregate/1.0",
-  "created_at": "2026-10-03T16:03:55.060588+00:00",
-  "scope": "200 frozen-evaluation documents; 598 development expansion and 199 final holdout deferred by user",
+  "created_at": "2026-10-03T16:17:35.469840+00:00",
+  "scope": "200 development-stage validation documents; not a final independent test; historical split eval_oct05 retained",
+  "claims": {
+    "model_weight_training_performed": false,
+    "model_inference_and_scoring_performed": true,
+    "final_independent_test_performed": false,
+    "final_holdout_documents": 199,
+    "historical_split_id": "eval_oct05",
+    "current_use": "development_validation_and_regression",
+    "development_pool_documents": 598,
+    "development_pool_full_model_run_performed": false,
+    "prior_pilot_and_offline_experiments_exist": true
+  },
   "requested_documents": 200,
   "all_groups_attempted_documents": 200,
   "all_groups_completed_documents": 199,

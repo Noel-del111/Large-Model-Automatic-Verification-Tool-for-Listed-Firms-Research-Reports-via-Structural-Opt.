@@ -82,6 +82,10 @@ class FullFinalizationTests(unittest.TestCase):
         self.assertFalse(state["full_model_execution_and_scoring_complete"])
         self.assertEqual(set(state["scoring_sha256"]), {"eval_oct05"})
         self.assertIn("598 篇开发扩展未执行", self.out.read_text(encoding="utf-8"))
+        report = self.out.read_text(encoding="utf-8")
+        self.assertIn("最终独立测试尚未进行", report)
+        self.assertIn("没有训练或微调模型权重", report)
+        self.assertIn("历史划分 ID `eval_oct05`", report)
         self.assertTrue((self.data / "eval200-finalization-status.json").is_file())
 
     def test_terminal_worker_without_scores_stops_instead_of_waiting_forever(self):
