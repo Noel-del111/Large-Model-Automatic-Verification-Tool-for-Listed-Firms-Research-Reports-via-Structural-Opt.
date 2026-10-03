@@ -41,6 +41,41 @@ class ReviewTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 store.set("bad", "confirmed", duration_seconds=float("nan"))
 
+    def test_timing_report_aggregates_per_reviewer_and_flags_unmeasured(self):
+        with tempfile.TemporaryDirectory() as directory:
+            Path(directory, "text_review.json").write_text('{"errors": []}', encoding="utf-8")
+            store = ReviewStore(directory)
+            store.set("text:one", "dismissed", "太模糊", "甲", duration_seconds=6)
+            store.set("text:one", "confirmed", "", "甲", duration_seconds=4)
+            store.set("text:two", "confirmed", "", "乙", duration_seconds=2)
+            store.set("text:three", "confirmed", "", "乙")  # 未计时
+            report = store.timing_report()
+            self.assertEqual(report["total_records"], 3)
+            self.assertEqual(report["measured_items"], 2)
+            self.assertEqual(report["unmeasured_items"], 1)
+            self.assertEqual(report["total_seconds"], 12.0)
+            self.assertEqual(report["by_reviewer"]["甲"]["seconds"], 10.0)
+            self.assertEqual(report["by_reviewer"]["甲"]["items"], 1)
+            self.assertEqual(report["by_reviewer"]["乙"]["items"], 1)
+            self.assertEqual(report["by_reviewer"]["乙"]["seconds"], 2.0)
+            self.assertEqual(report["by_status"]["confirmed"]["count"], 3)
+            self.assertEqual(report["by_status"]["dismissed"]["count"], 0)
+            self.assertTrue(report["timing_note"])
+
+    def test_export_rows_are_flat_and_stable_for_csv(self):
+        with tempfile.TemporaryDirectory() as directory:
+            Path(directory, "text_review.json").write_text('{"errors": []}', encoding="utf-8")
+            store = ReviewStore(directory)
+            store.set("text:one", "confirmed", "依据", "甲", duration_seconds=1.25)
+            rows = store.export_rows()
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(rows[0]["finding_id"], "text:one")
+            self.assertEqual(rows[0]["total_duration_seconds"], 1.25)
+            self.assertEqual(rows[0]["timing_method"], "explicit_start_to_save_wall_clock")
+            keys = list(rows[0].keys())
+            self.assertEqual(keys, ["finding_id", "status", "reviewer", "note", "duration_seconds",
+                                    "total_duration_seconds", "timing_method", "updated_at"])
+
 
 class PageTests(unittest.TestCase):
     def test_rejected_hint_is_reviewable_and_raw_quote_is_plain_text(self):

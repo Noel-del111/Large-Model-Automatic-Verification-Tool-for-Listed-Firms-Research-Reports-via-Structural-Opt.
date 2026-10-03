@@ -84,3 +84,57 @@ class ReviewStore:
             counts[status] = counts.get(status, 0) + 1
         counts["total"] = sum(counts.values())
         return counts
+
+    def timing_report(self) -> dict:
+        """按复核人聚合实测耗时；未计时条目明确统计，不当作 0 秒。"""
+        records = self.load()
+        reviewers: dict[str, dict[str, float]] = {}
+        total_seconds = 0.0
+        measured = unmeasured = 0
+        by_status = {status: {"count": 0, "seconds": 0.0} for status in REVIEW_STATUSES}
+        for entry in records.values():
+            status = entry.get("status", "unreviewed")
+            by_status[status]["count"] += 1
+            timed = entry.get("timing_method") == "explicit_start_to_save_wall_clock"
+            duration = entry.get("total_duration_seconds")
+            if timed and isinstance(duration, (int, float)) and math.isfinite(duration):
+                measured += 1
+                total_seconds += duration
+                by_status[status]["seconds"] += duration
+                reviewer = (entry.get("reviewer") or "").strip() or "未署名"
+                bucket = reviewers.setdefault(reviewer, {"items": 0, "seconds": 0.0, "last_updated": ""})
+                bucket["items"] += 1
+                bucket["seconds"] += duration
+                if entry.get("updated_at", "") > bucket["last_updated"]:
+                    bucket["last_updated"] = entry["updated_at"]
+            else:
+                unmeasured += 1
+        return {
+            "total_records": len(records),
+            "measured_items": measured,
+            "unmeasured_items": unmeasured,
+            "total_seconds": round(total_seconds, 3),
+            "by_reviewer": {name: {**bucket, "seconds": round(bucket["seconds"], 3),
+                                   "avg_seconds": round(bucket["seconds"] / max(bucket["items"], 1), 3)}
+                            for name, bucket in sorted(reviewers.items())},
+            "by_status": {status: {"count": value["count"],
+                                   "seconds": round(value["seconds"], 3)}
+                          for status, value in by_status.items()},
+            "timing_note": "未计时条目单独统计，不视为 0 秒；total_seconds 只累计已计时记录。",
+        }
+
+    def export_rows(self) -> list[dict]:
+        """复核记录扁平化，供 CSV 导出。"""
+        rows = []
+        for identity, entry in sorted(self.load().items()):
+            rows.append({
+                "finding_id": identity,
+                "status": entry.get("status", "unreviewed"),
+                "reviewer": entry.get("reviewer", ""),
+                "note": entry.get("note", ""),
+                "duration_seconds": entry.get("duration_seconds"),
+                "total_duration_seconds": entry.get("total_duration_seconds"),
+                "timing_method": entry.get("timing_method", "not_measured"),
+                "updated_at": entry.get("updated_at", ""),
+            })
+        return rows

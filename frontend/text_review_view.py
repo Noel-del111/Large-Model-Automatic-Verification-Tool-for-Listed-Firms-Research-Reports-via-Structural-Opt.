@@ -1,6 +1,8 @@
 """Single-document text review; raw text locations are not PDF page numbers."""
 from __future__ import annotations
+import csv
 import hashlib
+import io
 import json
 import time
 import uuid
@@ -29,6 +31,10 @@ def _review_controls(store, document_id, identity, key_suffix=""):
         st.success("复核意见已单独保存，原始检测结果保持不变。")
 
 
+PRIORITY_LABELS = {"confirmed": "已确认", "high": "高优先", "low": "低优先"}
+PRIORITY_ORDER = {"confirmed": 0, "high": 1, "low": 2}
+
+
 def show_text_report(report, check_dir=None):
     errors = report.get("errors", [])
     hints = all_review_hints(report)["errors"]
@@ -49,11 +55,17 @@ def show_text_report(report, check_dir=None):
         st.caption("本次未运行模型，仅展示离线规则能力。")
     if not errors:
         st.info("本次未输出已定位的错误候选；这不代表全文内容已经证实正确。")
-    for error in errors:
+    ordered = sorted(errors, key=lambda e: (PRIORITY_ORDER.get(e.get("review_priority"), 3),
+                                            -(e.get("spans") or [{}])[0].get("start") if e.get("spans") else 0))
+    for error in ordered:
         if error.get("invalid_anchor"):
             continue
         label = "已确认错误" if error.get("status") == "confirmed_error" else "待人工确认"
-        with st.expander(f"{label} · {error.get('error_type', '')}"):
+        priority = PRIORITY_LABELS.get(error.get("review_priority"))
+        caption = f"{label} · {error.get('error_type', '')}"
+        if priority and error.get("status") != "confirmed_error":
+            caption += f" · 复核优先级：{priority}"
+        with st.expander(caption):
             for span in error.get("spans", []):
                 st.text(span.get("text", ""))
                 st.caption(f"原文字符区间 [{span.get('start')}, {span.get('end')})")
@@ -74,6 +86,17 @@ def show_text_report(report, check_dir=None):
                 identity = "text:" + (hint.get("id") or "rejected:" + hashlib.sha256(
                     json.dumps([index, hint], ensure_ascii=False, sort_keys=True).encode()).hexdigest())
                 _review_controls(store, report["document_id"], identity, "_rejected")
+    if store is not None:
+        with st.expander("人工复核统计（按复核人计时）"):
+            st.json(store.timing_report())
+            buffer = io.StringIO()
+            fields = ["finding_id", "status", "reviewer", "note", "duration_seconds",
+                      "total_duration_seconds", "timing_method", "updated_at"]
+            writer = csv.DictWriter(buffer, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows([{key: row.get(key, "") for key in fields} for row in store.export_rows()])
+            st.download_button("下载复核记录 CSV", "\ufeff" + buffer.getvalue(),
+                               file_name="review_records.csv", mime="text/csv", key="download_review_csv")
     with st.expander("处理范围与运行记录"):
         st.json(coverage)
         st.json(report.get("traces", []), expanded=False)

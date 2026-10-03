@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import unittest
 
-from yjcheck.text_context import estimated_input_tokens, missing_ranges, text_windows
+from yjcheck.text_context import estimated_input_tokens, missing_ranges, text_windows, text_windows_token_budget
 from yjcheck.text_review import detect_text, _messages
 from yjcheck.text_taxonomy import FINED_ERROR_TYPES, canonical_error_type
 
@@ -499,9 +499,15 @@ class ContextAndBudgetTests(unittest.TestCase):
         self.assertIn("global_link_group_exceeds_context_budget", result["coverage"]["truncation_reasons"])
         self.assertTrue(all(estimated_input_tokens(messages) <= budget for messages, _ in chat.calls))
 
-    def test_estimator_matches_transport_envelope_rule(self):
+    def test_estimator_matches_char_weighted_transport_rule(self):
         messages = [{"role": "user", "content": '中文\\"\n\x01'}]
-        self.assertEqual(estimated_input_tokens(messages), len(json.dumps(messages, ensure_ascii=False).encode("utf-8")) + 256)
+        serialized = json.dumps(messages, ensure_ascii=False)
+        cjk = sum(1 for ch in serialized if ord(ch) >= 0x2E80)
+        self.assertEqual(estimated_input_tokens(messages), 256 + round(1.1 * (cjk + (len(serialized) - cjk) / 4)))
+
+    def test_estimator_charges_cjk_less_than_utf8_bytes(self):
+        messages = [{"role": "user", "content": "营业收入利润增长比率连续多年持续提升"}]
+        self.assertLess(estimated_input_tokens(messages), len(json.dumps(messages, ensure_ascii=False).encode("utf-8")) + 256)
 
 
 class GoldIsolationTests(unittest.TestCase):
@@ -547,6 +553,55 @@ class GoldIsolationTests(unittest.TestCase):
         detect_text("目标原文", document_id="test", chat=chat, examples=[example])
         shown = json.loads(chat.calls[0][0][2]["content"])
         self.assertEqual(len(shown["errors"]), 2)
+
+
+class ContainmentAndTriageTests(unittest.TestCase):
+    def test_contained_single_span_candidate_inherits_deterministic_confirmation(self):
+        source = "公司于2023年2月30日发布年报。"
+        chat = MockChat(lambda payload, purpose: [error_at("公司于2023年2月30日发布年报", source, "时间信息非法")])
+        result = detect_text(source, document_id="contained", chat=chat)
+        findings = [e for e in result["errors"] if e["error_type"] == "时间信息非法"]
+        self.assertEqual(len(findings), 1, result["errors"])
+        self.assertEqual(findings[0]["status"], "confirmed_error")
+        self.assertEqual(findings[0]["validation"], "deterministic")
+        self.assertEqual(findings[0]["review_priority"], "confirmed")
+        self.assertIn("verified.calendar", findings[0].get("detector_ids", []))
+
+    def test_narrower_or_multi_span_candidates_stay_for_review(self):
+        source = "公司于2023年2月30日发布年报。"
+        narrower = MockChat(lambda payload, purpose: [error_at("2023年2月30", source, "时间信息非法")])
+        result = detect_text(source, document_id="narrower", chat=narrower)
+        pending = [e for e in result["errors"] if e.get("review_priority") in ("high", "low")]
+        self.assertTrue(any(e["status"] == "needs_review" and e["detector_id"] == "hybrid.model" for e in pending))
+
+    def test_review_priority_tiers_for_deterministic_and_model_candidates(self):
+        source = "甲公司、乙公司分别为1%、2%、3%。"
+        chat = MockChat(lambda payload, purpose: [
+            error_at("分别为", source, "模糊语言"),
+            error_at("1%", source, "数值不一致错误")])
+        result = detect_text(source, document_id="tiers", chat=chat)
+        tiers = {(e["detector_id"], e["error_type"]): e.get("review_priority") for e in result["errors"]}
+        self.assertEqual(tiers[("legacy.C.INTRINSIC.001", "数值不一致错误")], "high")
+        self.assertEqual(tiers[("hybrid.model", "模糊语言")], "low")
+        self.assertEqual(tiers[("hybrid.model", "数值不一致错误")], "high")
+
+    def test_token_budget_windows_are_lossless_and_larger_than_byte_windows(self):
+        source = "这是一段用于覆盖检查的文字。\n" * 60
+        byte_windows = text_windows(source, 150)
+        token_windows = text_windows_token_budget(source, 150)
+        self.assertLess(len(token_windows), len(byte_windows))
+        self.assertEqual(missing_ranges(len(source), [(w.start, w.end) for w in token_windows]), [])
+        for window in token_windows:
+            self.assertEqual(window.text, source[window.start:window.end])
+
+    def test_example_or_hypothetical_context_never_auto_confirms(self):
+        for source in ("参考示例：2023年2月30日并非可用日期。",
+                       "假设结算日为2023年2月30日。",
+                       "毛利率不得填写为5万元。",
+                       "练习：3+2=6。若按此填写将出错。"):
+            with self.subTest(source=source):
+                result = detect_text(source, document_id="context-guard", chat=MockChat())
+                self.assertTrue(all(e["status"] == "needs_review" for e in result["errors"]), source)
 
 
 if __name__ == "__main__":
