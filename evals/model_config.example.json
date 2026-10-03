@@ -1,0 +1,17 @@
+{
+  "YJCHECK_BASE_URL": "https://api.deepseek.com",
+  "YJCHECK_MODEL": "deepseek-flash",
+  "YJCHECK_THINKING": "enabled",
+  "YJCHECK_TIMEOUT": 480,
+  "YJCHECK_INPUT_CNY_PER_MTOK": "1",
+  "YJCHECK_OUTPUT_CNY_PER_MTOK": "4",
+  "YJCHECK_PRICE_SOURCE": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+  "YJCHECK_PRICE_DATE": "2026-10-03",
+  "YJCHECK_CONTEXT_TOKENS": "1000000",
+  "YJCHECK_MAX_OUTPUT_TOKENS": 65536,
+  "YJCHECK_MAX_RETRIES": "0",
+  "YJCHECK_REASONING_EFFORT": "low",
+  "YJCHECK_PRICE_VALID_UNTIL": "2026-10-04T16:00:00Z",
+  "YJCHECK_API_KEY": "",
+  "YJCHECK_BUDGET_CNY": "20"
+}

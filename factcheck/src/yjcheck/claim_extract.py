@@ -5,25 +5,9 @@ import re
 from dataclasses import replace
 from .models import Block, Document, Fact
 
-METRICS = {
-    "归属于母公司股东的净利润": "net_profit_parent",
-    "归属于母公司所有者的净利润": "net_profit_parent",
-    "归属于母公司的净利润": "net_profit_parent",
-    "归母净利润": "net_profit_parent", "归母利润": "net_profit_parent",
-    "扣非归母净利润": "net_profit_parent_excl", "扣非净利润": "net_profit_parent_excl",
-    "营业总收入": "revenue_total", "营业收入": "revenue", "营收": "revenue",
-    "净利润": "net_profit", "基本每股收益": "eps_basic", "每股收益": "eps_basic",
-    "货币资金": "cash", "存货": "inventory", "未分配利润": "retained_earnings",
-    "归属于母公司所有者权益合计": "equity_parent",
-    "归属于母公司所有者权益": "equity_parent", "归母所有者权益": "equity_parent",
-    "资产总计": "total_assets", "总资产": "total_assets", "资本公积": "capital_reserve",
-    "经营活动产生的现金流量净额": "operating_cashflow",
-    "经营现金流净额": "operating_cashflow", "股价": "price", "市盈率": "pe", "PE": "pe",
-    "毛利率": "gross_margin",
-}
-METRIC_RE = re.compile("|".join(re.escape(s) for s in sorted(METRICS, key=len, reverse=True)))
+from .metric_catalog import METRICS, METRIC_RE, STOCK
+
 NUMBER_RE = re.compile(r"(?P<value>[+\-−－]?(?:\d{1,3}(?:[,，]\d{3})+|\d+)(?:\.\d+)?|[（(][\d,，]+(?:\.\d+)?[）)])\s*(?P<unit>(?:亿|万|千)?(?:美元|港元|欧元)|千万元|百万元|亿元|万元|千元|元/股|元／股|元|个百分点|百分点|%|％|倍)")
-STOCK = {"cash", "inventory", "retained_earnings", "equity_parent", "total_assets", "capital_reserve"}
 
 
 def period_in(text: str, default: str = "") -> str:
@@ -56,7 +40,7 @@ def _period(text: str, metric: str, default: str) -> str:
             y, m, d = date[-1].groups()
             return f"{y}-{int(m):02d}-{int(d):02d}"
         if period:
-            return period[:4] + ("-06-30" if period.endswith("H1") else "-12-31")
+            return period[:4] + {"H1":"-06-30", "Q1":"-03-31", "Q2":"-06-30", "Q3":"-09-30", "9M":"-09-30"}.get(period[4:], "-12-31")
     return period
 
 
@@ -113,10 +97,15 @@ def _extract_native_claims(doc: Document) -> list[Fact]:
                         continue
                     scope_hits=list(re.finditer(r"母公司口径|母公司报表|合并口径|合并报表",context))
                     scope = "parent" if scope_hits and scope_hits[-1].group().startswith("母公司") else "consolidated"
+                    prefix_start = max(0, metric_match.start() - 3)
+                    if (compact[prefix_start:metric_match.start()] == "母公司"
+                            and metric not in {"net_profit_parent", "net_profit_parent_excl", "equity_parent"}):
+                        scope = "parent"
                     start = metric_match.end()+num.start()
                     end = metric_match.end()+num.end()
                     attrs = {"value_start": mapping[start], "value_end":mapping[end-1]+1,
-                             "metric_label":metric_match.group(), "extraction":"rules-v1"}
+                             "metric_label":text[mapping[metric_match.start()]:mapping[metric_match.end()-1]+1],
+                             "extraction":"rules-v2"}
                     cite = re.search(r"(?:财报|来源|引用|见|报告)[^。；]{0,15}?(?:第\s*(\d+)\s*页|[Pp](\d+))", compact[metric_match.start():stop])
                     if cite:
                         attrs["citation_page"] = int(cite.group(1) or cite.group(2))
@@ -124,6 +113,14 @@ def _extract_native_claims(doc: Document) -> list[Fact]:
                     if current_metric.endswith(("_yoy","_qoq")) and re.search(r"下降|减少|下滑",between) and not value.startswith("-"):
                         value="-"+value.lstrip("+")
                     warnings = []
+                    # A known word can be the prefix of a different concept,
+                    # e.g. 存货跌价准备 is not 存货. Preserve the candidate for
+                    # review, but do not grant it the base metric's semantics.
+                    suffix = segment.lstrip("：:，,（(")
+                    if (re.match(r"[\u4e00-\u9fffA-Za-z]", suffix)
+                            and not re.match(r"(?:为|是|约为|约|达到|分别|同比|环比|(?:由|的)?(?:调整前|调整后|重述前|重述后)|(?:的)?影响(?:金额)?|录得|合并口径|母公司口径)", suffix)):
+                        warnings.append("unverified_metric_modifier")
+                        attrs["metric_context"] = metric_match.group() + segment
                     if "预测" in context or "预计" in context or "目标" in context:
                         warnings.append("forecast_not_historical_fact")
                     if metric=="gross_margin" and len(list(NUMBER_RE.finditer(segment)))>1:

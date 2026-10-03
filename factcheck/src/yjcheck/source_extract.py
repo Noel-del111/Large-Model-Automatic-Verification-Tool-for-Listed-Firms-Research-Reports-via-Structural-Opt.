@@ -7,7 +7,7 @@ The text path also works when a PDF table detector only finds the middle columns
 from __future__ import annotations
 
 from collections import Counter, defaultdict
-from dataclasses import dataclass, field, replace
+from dataclasses import asdict, dataclass, field, replace
 from decimal import Decimal, InvalidOperation
 import re
 
@@ -18,24 +18,8 @@ _NUMBER = re.compile(r"(?<![\d.])(?:[（(]\s*)?[-−﹣]?\d[\d,，]*(?:\.\d+)?(?
 _BASIS = re.compile(r"(?:追溯)?调整前|(?:追溯)?调整后|重述前(?:金额)?|重述后(?:金额)?|(?:累积|累计)?影响金额|(?:追溯)?调整金额")
 _DATE = re.compile(r"((?:19|20)\d{2})年(\d{1,2})月(\d{1,2})日")
 _FLOW_PERIOD = re.compile(r"((?:19|20)\d{2})(?:年)?(半年度|上半年|1[-—～至]6月|年度|度|年)")
-_METRICS = (
-    ("net_profit_parent_excl", r"(?:扣除非经常性损益后归属[于於]?(?:母公司|上市公司)(?:股东|所有者)?(?:的)?净利润|扣非归母净利润|扣非净利润)"),
-    ("net_profit_parent", r"(?:归属[于於]?母公司(?:股东|所有者)?(?:的)?净利润|归母净利润)"),
-    ("equity_parent", r"归属[于於]?母公司(?:股东|所有者)?(?:的)?权益(?:合计|总计)"),
-    ("revenue_total", r"营业总收入"),
-    ("revenue", r"营业收入"),
-    ("operating_cashflow", r"经营活动产生的现金流量净额"),
-    ("eps_basic", r"基本每股收益"),
-    ("price", r"股价|每股市价|股票价格"),
-    ("gross_margin", r"毛利率"),
-    ("cash", r"货币资金"),
-    ("inventory", r"存货"),
-    ("retained_earnings", r"未分配利润"),
-    ("total_assets", r"资产总计|资产总额"),
-    ("capital_reserve", r"资本公积"),
-    ("net_profit", r"净利润"),
-)
-_BALANCE_METRICS = {"cash", "inventory", "retained_earnings", "equity_parent", "total_assets", "capital_reserve"}
+from .metric_catalog import SOURCE_PATTERNS as _METRICS, STOCK as _BALANCE_METRICS, metric_label
+
 
 
 def _compact(text: str) -> str:
@@ -55,6 +39,12 @@ def _metric(text: str) -> tuple[str, int] | None:
             if name == "capital_reserve" and tail.startswith(("转", "弥补")):
                 return None
             if tail.startswith(("为", "的", "同比", "增长", "减少", "增加", "情况")):
+                return None
+            # A longer unregistered concept cannot inherit a prefix metric.
+            # Numeric columns and punctuation/footnotes remain row syntax.
+            if re.match(r"[\u4e00-\u9fffA-Za-z]", tail):
+                return None
+            if re.match(r"[（(](?:跌价|减值|周转|占比|比重|增量|增长率|增加额|减少额)", tail):
                 return None
             return name, compact.find(match.group()) + len(match.group())
     return None
@@ -335,11 +325,22 @@ def _publication_fact(doc: Document) -> Fact | None:
     year = Counter(y for y, _ in candidates).most_common(1)[0][0]
     blocks = [b for y, b in candidates if y == year]
     warnings = ["conflicting_publication_years"] if len({y for y, _ in candidates}) > 1 else []
+    evidence = list({(b.page, b.block_id): b.evidence(doc) for b in blocks}.values())
+    # Repeated title text on an OCR page is corroboration, not a prerequisite
+    # for a fully located native-text title of the same year. Retain the less
+    # reliable copies for audit without making them primary value locations.
+    # If every copy requires review, keep that evidence as primary so the
+    # ordinary evidence gate still rejects automatic confirmation. Cross-year
+    # disagreement always keeps the warning above, regardless of quality.
+    reliable = [e for e in evidence if e.quality == "ok"]
+    primary = reliable or evidence
+    all_evidence = list({(b.page, b.block_id): b.evidence(doc) for _, b in candidates}.values())
+    alternative = [asdict(e) for e in all_evidence if e not in primary]
     return Fact("publication_year", year, "年", "publication", doc.company,
-                basis="reported", text=blocks[0].text,
-                evidence=list({(b.page, b.block_id): b.evidence(doc) for b in blocks}.values()),
+                basis="reported", text=primary[0].text, evidence=primary,
                 warnings=warnings, attributes={"meaning": "report_title_fiscal_year",
-                                               "value_locations": _value_locations([b.evidence(doc) for b in blocks])})
+                                               "value_locations": _value_locations(primary),
+                                               "alternative_evidence": alternative})
 
 
 def extract_source_facts(doc: Document) -> list[Fact]:
@@ -406,6 +407,11 @@ def extract_source_facts(doc: Document) -> list[Fact]:
                 values = list(zip(slots, (v for _, v in values)))
             elif columns[-1] != "change":
                 warnings.append("ambiguous_missing_column")
+        if not indexed and len(values) == 3 and set(columns) == {"before", "change", "after"}:
+            # Arithmetic exposes ambiguity; it never authorizes an OCR reorder.
+            amounts = {columns[col]: Decimal(value) for col, value in values}
+            if amounts["after"] != amounts["before"] + amounts["change"]:
+                warnings.append("restatement_arithmetic_inconsistent")
         if len(values) > len(columns):
             warnings.append("column_count_mismatch")
         row_facts = []
@@ -428,6 +434,7 @@ def extract_source_facts(doc: Document) -> list[Fact]:
             evidence = row_evidence + ctx.heading_evidence + ctx.period_evidence + ctx.column_evidence + ctx.unit_evidence
             unique = list({(e.doc_id, e.block_id, e.text): e for e in evidence}.values())
             attrs = {"source_column": col, "statement": ctx.kind,
+                     "metric_label": metric_label(line.text, metric), "extraction": "rules-v2",
                      "value_locations": _value_locations(row_evidence)}
             if line.cells:
                 attrs["cell"] = {"row": line.row, "col": col+1}

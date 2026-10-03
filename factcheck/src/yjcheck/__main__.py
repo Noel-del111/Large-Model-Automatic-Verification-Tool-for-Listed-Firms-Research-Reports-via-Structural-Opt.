@@ -17,6 +17,7 @@ def main(argv=None):
     check.add_argument("--company")
     check.add_argument("--engine",choices=["pdfplumber","pymupdf"],default="pdfplumber")
     check.add_argument("--model",action="store_true",help="使用 YJCHECK_* 环境变量配置的模型辅助抽取")
+    check.add_argument("--review-text", action="store_true", help="同时运行模型文本检测，费用计入共享预算")
     verify=commands.add_parser("verify")
     verify.add_argument("directory")
     args=parser.parse_args(argv)
@@ -26,9 +27,10 @@ def main(argv=None):
             print("verified" if passed else "verification_failed")
             return 0 if passed else 1
         config=None
-        if args.model:
+        if args.model or args.review_text:
             from .model import ModelConfig
             config=ModelConfig.from_env()
+            config.review_text = args.review_text
         result,path=run_check(args.report,args.source,args.out,args.company,args.engine,config)
         print(json.dumps({"output":str(path.resolve()),"summary":result["summary"]},ensure_ascii=False))
         return 0  # 业务发现错误也是成功执行；调用方看 summary，不以退出码推断研报正确。

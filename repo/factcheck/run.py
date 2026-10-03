@@ -1,9 +1,11 @@
-"""零安装入口：python factcheck/run.py check --report ... --source ..."""
-import sys
+"""Compatibility launcher for the project-root implementation."""
 from pathlib import Path
-root=Path(__file__).resolve().parent
-sys.path[:0]=[str(root/"src"),str(root.parent/"pdfparse"/"src")]
-from yjcheck.__main__ import main
-
-if __name__=="__main__":
-    raise SystemExit(main())
+import runpy
+import sys
+_root = Path(__file__).resolve().parents[2]
+_target = _root / 'factcheck/run.py'
+sys.path[:0] = [str(_target.parent), str(_root / "factcheck/src"), str(_root / "pdfparse/src")]
+if __name__ == "__main__":
+    runpy.run_path(str(_target), run_name="__main__")
+else:
+    globals().update(runpy.run_path(str(_target)))

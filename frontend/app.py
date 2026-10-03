@@ -21,7 +21,7 @@ import streamlit as st
 
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parent
-REPO = ROOT / "repo"
+REPO = ROOT
 for extra in (REPO / "factcheck" / "src", REPO / "pdfparse" / "src"):
     sys.path.insert(0, str(extra))
 
@@ -34,6 +34,7 @@ from exports import (ERROR_TYPE_LABELS, REVIEW_LABELS, STATUS_LABELS,  # noqa: E
                      findings_csv_bytes, full_json_bytes, report_md, report_pdf_bytes)
 from highlight import CLAIM_COLOR, SOURCE_COLOR, render_location_image  # noqa: E402
 from review_store import REVIEW_STATUSES, ReviewStore  # noqa: E402
+from text_review_view import text_review_page, show_text_report  # noqa: E402
 
 DATA_DIR = BASE / "data"
 UPLOAD_DIR = DATA_DIR / "uploads"
@@ -88,6 +89,7 @@ def execute_check(report_path: Path, source_paths: list[Path], company: str,
         if not config.base_url or not config.model:
             st.warning("已勾选大模型辅助抽取，但未配置 YJCHECK_BASE_URL / YJCHECK_MODEL，本次按离线规则运行。")
         else:
+            config.review_text = True
             model_config = config
     progress = st.progress(0.0, text="解析与核查中…")
     result, out_dir = run_check(str(report_path), [str(path) for path in source_paths],
@@ -123,6 +125,18 @@ def overview_view(result: dict, check_dir: Path) -> None:
     cols[3].metric("提取声明", summary.get("claims", 0))
     cols[4].metric("来源事实", summary.get("source_facts", 0))
     cols[5].metric("输入问题", summary.get("input_issues", 0))
+    automatic = summary.get("automatic_claims", summary.get("confirmed_error", 0) + summary.get("no_issue", 0))
+    st.caption(f"自动判断声明 {automatic} 项；待复核声明 {summary.get('review_claims', summary.get('needs_review', 0))} 项。"
+               "全文应核查项尚需独立标注，不能由提取数量推算全文覆盖率。")
+    if result.get("text_review"):
+        st.caption(f"文本补充检查待复核提示 {summary.get('text_review_total_hints', summary.get('text_needs_review', 0))} 条，"
+                   f"其中未通过定位或格式校验 {summary.get('text_rejected_hints', 0)} 条；提示数量包含重复核验工作，不代表独立错误数。")
+    reasons = summary.get("needs_review_by_rule") or {}
+    if reasons:
+        with st.expander("待复核原因"):
+            st.dataframe([{"原因": key, "数量": value} for key, value in reasons.items()], hide_index=True)
+    if result.get("runtime"):
+        st.caption(f"完整处理耗时：{result['runtime'].get('total_seconds', '—')} 秒")
     complete = summary.get("complete")
     meaning = "通过" if complete else "未通过"
     st.caption(
@@ -339,7 +353,7 @@ def review_view(result: dict, check_dir: Path) -> None:
     if not findings:
         st.info("没有需要复核的发现。")
         return
-    stats = store.stats()
+    stats = store.stats({f.get("id") for f in findings})
     reviewed = sum(stats.get(s, 0) for s in ("confirmed", "dismissed", "contested"))
     st.caption(f"复核进度：{reviewed}/{len(findings)}。复核结论写入 {check_dir.name}/review.json，"
                "不改写 check_result.json 等核查产物。")
@@ -360,8 +374,16 @@ def review_view(result: dict, check_dir: Path) -> None:
                                    key=f"rev_note_{finding.get('id', '')}",
                                    label_visibility="collapsed",
                                    placeholder="可选：复核依据或处理说明")
+            timer_key = "review_timer_" + finding.get("id", "")
+            if st.button("开始计时复核", key="start_" + timer_key):
+                import time
+                st.session_state[timer_key] = time.monotonic()
+                st.toast("已开始计时；保存时记录本次复核耗时。")
             if st.button("保存复核", key=f"rev_save_{finding.get('id', '')}"):
-                entry = store.set(finding.get("id", ""), status, note, reviewer or "未署名")
+                import time
+                started = st.session_state.pop(timer_key, None)
+                elapsed = time.monotonic() - started if started is not None else None
+                entry = store.set(finding.get("id", ""), status, note, reviewer or "未署名", duration_seconds=elapsed)
                 st.toast("已保存复核结论：%s" % REVIEW_LABELS.get(entry["status"], entry["status"]))
                 st.rerun()
             history = current.get("history", [])
@@ -378,7 +400,7 @@ def export_view(result: dict, check_dir: Path) -> None:
     store = ReviewStore(check_dir)
     reviews = store.load()
     run_id = result.get("run_id", "run")
-    stats = store.stats()
+    stats = store.stats({f.get("id") for f in result.get("findings", [])})
     reviewed = sum(stats.get(s, 0) for s in ("confirmed", "dismissed", "contested"))
     st.caption(f"复核进度：{reviewed}/{stats.get('total', 0)}。导出的 CSV / Markdown / JSON 均并入复核状态；"
                "PDF 报告需要 PyMuPDF（内置 CJK 字体无需联网）。")
@@ -491,6 +513,10 @@ def assistant_view(result: dict, check_dir: Path) -> None:
 
 def main() -> None:
     st.title("研报纠错助手 · 核查台")
+    mode = st.sidebar.radio("核查方式", ["研报与财报对照", "单份文本检查"], key="review_mode")
+    if mode == "单份文本检查":
+        text_review_page()
+        return
     st.caption("上传研报草稿与对应财报 → 输出错误位置、错误类型、原文、依据与修改建议；证据可回链原文。")
     options = settings_panel()
 
@@ -525,7 +551,7 @@ def main() -> None:
                 "D 不修改原文件；未覆盖范围（扫描件全核查、自由引用、复杂估值等）不进入自动判定。")
         return
 
-    tabs = st.tabs(["概览", "结果列表", "证据对照", "人工复核", "导出", "助手问答"])
+    tabs = st.tabs(["概览", "结果列表", "证据对照", "人工复核", "导出", "助手问答", "文本补充检查"])
     with tabs[0]:
         overview_view(result, Path(check_dir))
     with tabs[1]:
@@ -538,6 +564,11 @@ def main() -> None:
         export_view(result, Path(check_dir))
     with tabs[5]:
         assistant_view(result, Path(check_dir))
+    with tabs[6]:
+        if result.get("text_review"):
+            show_text_report(result["text_review"], Path(check_dir))
+        else:
+            st.info("这份历史结果未包含文本补充检查，重新运行后可查看。")
 
 
 if __name__ == "__main__":

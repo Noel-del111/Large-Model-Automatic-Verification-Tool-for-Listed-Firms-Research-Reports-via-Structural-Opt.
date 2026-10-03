@@ -1,0 +1,35 @@
+{
+  "documents": [
+    {
+      "example_sha256_without_reasons": "6cf11740093d5441c1a748463a8329dfbecd618ef91ff91e2b461fba70566de5",
+      "reasons": [
+        "同一风险清单两次列出“市场竞争加剧风险”，没有新增含义。",
+        "“每股”应连接单股分红金额，却接成“全年分红1次”，混淆每股金额与分红频次。",
+        "本段营业总收入数值缺失，“扣”后的指标名称不完整，“加权”后的财务指标和数值也缺失。"
+      ],
+      "source_id": "fined:eval_data:5ffe80ef7c529d19:000368"
+    },
+    {
+      "example_sha256_without_reasons": "bfeba68bb365fcb8407811563049c4c545dffbeaf25baaab0d51f12ce592c3ad",
+      "reasons": [
+        "同一当周、同一固定收益类产品发行数量，前文435只与后文480只矛盾。",
+        "2603除以14914约为17.45%，与原文的27.45%不符。",
+        "“共发行理财产品”后直接接单位“只”，缺少应报告的数量。"
+      ],
+      "source_id": "fined:eval_data:5ffe80ef7c529d19:000221"
+    },
+    {
+      "example_sha256_without_reasons": "5f63f4e21d1e28d96b1cdc256ae2ec5d7afc5ffe6e258b2d2b30e690ad92ad4e",
+      "reasons": [
+        "一共31个行业，名次却为第41位，超出总数允许范围。",
+        "销量用车辆数量表示时写成88.3辆，数量与单位表达不合理，需核实是否漏写数量级。",
+        "同一时间区间写成3月27日至3月26日，终点早于起点。"
+      ],
+      "source_id": "fined:eval_data:5ffe80ef7c529d19:000229"
+    }
+  ],
+  "reviewer_kind": "AI-assisted development prompt authoring, not human gold approval",
+  "revision": "dev_reasons_v2_20261003",
+  "schema_version": "1.0.0",
+  "source_split": "dev"
+}

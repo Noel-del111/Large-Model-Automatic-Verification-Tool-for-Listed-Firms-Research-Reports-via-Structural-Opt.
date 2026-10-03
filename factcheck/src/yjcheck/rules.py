@@ -27,16 +27,8 @@ _UNITS = {
     "万股": ("shares", "10000"), "亿股": ("shares", "100000000"),
     "年": ("year", "1"), "1": ("number", "1"),
 }
-_METRIC_ALIASES = {
-    "营业收入": "revenue", "营收": "revenue", "营业总收入": "revenue_total",
-    "净利润": "net_profit", "归母净利润": "net_profit_parent",
-    "归属于母公司股东的净利润": "net_profit_parent", "货币资金": "cash",
-    "存货": "inventory", "未分配利润": "retained_earnings",
-    "归母权益": "equity_parent", "资产总计": "total_assets", "总资产": "total_assets",
-    "资本公积": "capital_reserve", "基本每股收益": "eps_basic",
-    "经营活动产生的现金流量净额": "operating_cashflow", "市盈率": "pe", "PE": "pe",
-    "股价": "price", "文档所属年度": "publication_year",
-}
+from .metric_catalog import METRICS as _METRIC_ALIASES, normalize_metric
+
 _KNOWN_BASES = {"before", "after", "change", "reported"}
 _KNOWN_SCOPES = {"consolidated", "parent"}
 _UNKNOWN = {"", "unknown", "none", "null", "未知", "不明", "待定", "n/a"}
@@ -93,7 +85,7 @@ def normalize(value: str, unit: str) -> Decimal:
 
 
 def _metric(fact: Fact) -> str:
-    return _METRIC_ALIASES.get(fact.metric.strip(), fact.metric.strip())
+    return normalize_metric(fact.metric)
 
 
 def _period_valid(period: str, metric: str) -> bool:
@@ -110,7 +102,11 @@ def _period_valid(period: str, metric: str) -> bool:
 def _evidence_issues(evidence: Evidence) -> list[str]:
     issues = []
     if evidence.quality != "ok":
-        issues.append(f"证据质量为 {evidence.quality or 'unknown'}")
+        # Only informational warnings are non-blocking; OCR still needs review.
+        info_only = evidence.quality == "warn" and bool(evidence.notes) and all(
+            str(note).startswith("info:") for note in evidence.notes)
+        if not info_only:
+            issues.append(f"证据质量为 {evidence.quality or 'unknown'}")
     if not evidence.doc_id or not evidence.block_id:
         issues.append("缺少文档或区块标识")
     if not re.fullmatch(r"[0-9a-fA-F]{64}", evidence.sha256 or ""):
@@ -277,7 +273,8 @@ def _derived(claim: Fact, sources: list[Fact]) -> tuple[list[Fact], Finding | No
         prior = _prior_period(claim.period)
         if prior is None:
             return [], _review(claim, "同比期间无法确定上年同期。", rule="C.YOY.001")
-        requirements = [(metric[:-4], claim.period), (metric[:-4], prior)]
+        base = normalize_metric(metric[:-4])
+        requirements = [(base, claim.period), (base, prior)]
         formula = "(current - prior) / prior * 100"
     selected: list[Fact] = []
     for required_metric, required_period in requirements:

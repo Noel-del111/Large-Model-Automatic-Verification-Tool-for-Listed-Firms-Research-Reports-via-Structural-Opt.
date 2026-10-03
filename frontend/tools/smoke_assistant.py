@@ -14,8 +14,8 @@ BASE = Path(__file__).resolve().parent          # frontend/tools
 FRONTEND = BASE.parent
 ROOT = FRONTEND.parent
 sys.path.insert(0, str(FRONTEND))
-sys.path.insert(0, str(ROOT / "repo" / "factcheck" / "src"))
-sys.path.insert(0, str(ROOT / "repo" / "pdfparse" / "src"))
+sys.path.insert(0, str(ROOT / "factcheck" / "src"))
+sys.path.insert(0, str(ROOT / "pdfparse" / "src"))
 
 PORT = 8899
 os.environ["YJCHECK_BASE_URL"] = f"http://127.0.0.1:{PORT}/v1"

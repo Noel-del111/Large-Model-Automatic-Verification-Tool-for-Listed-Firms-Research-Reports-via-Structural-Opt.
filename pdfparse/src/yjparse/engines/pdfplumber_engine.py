@@ -129,6 +129,9 @@ class PdfPlumberEngine(BaseEngine):
                     engine_stats={
                         "columns": column_count(merged, float(page.width)),
                         "rotation": getattr(page, "rotation", 0) or 0,
+                        "image_area": sum(max(0.0, min(float(page.width), float(image.get("x1", 0))) - max(0.0, float(image.get("x0", 0))))
+                                          * max(0.0, min(float(page.height), float(image.get("bottom", 0))) - max(0.0, float(image.get("top", 0))))
+                                          for image in page.images),
                     },
                 ))
                 if ledger is not None:

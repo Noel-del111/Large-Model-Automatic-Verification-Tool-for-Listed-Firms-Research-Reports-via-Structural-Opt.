@@ -21,6 +21,7 @@ from urllib.parse import urlparse
 
 from exports import ERROR_TYPE_LABELS, STATUS_LABELS
 from yjcheck.model import ModelConfig
+from yjcheck.model_runtime import BudgetedChatClient
 
 # ---------------------------------------------------------------- 规则解释卡（离线降级）
 
@@ -78,20 +79,13 @@ def _validate_base_url(config: ModelConfig) -> str:
 
 
 def _chat(config: ModelConfig, system: str, user: str, timeout: float = 60) -> str:
-    url = _validate_base_url(config)
-    payload = {"model": config.model, "temperature": 0,
-               "messages": [{"role": "system", "content": system},
-                            {"role": "user", "content": user}]}
-    headers = {"Content-Type": "application/json"}
-    if config.api_key:
-        headers["Authorization"] = "Bearer " + config.api_key
-    request = urllib.request.Request(url, json.dumps(payload, ensure_ascii=False).encode("utf-8"),
-                                    headers=headers, method="POST")
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        raw = response.read(2_000_001)
-    if len(raw) > 2_000_000:
-        raise ValueError("模型回答过大")
-    return json.loads(raw)["choices"][0]["message"]["content"]
+    return _chat_result(config, system, user, timeout)["content"]
+
+
+def _chat_result(config: ModelConfig, system: str, user: str, timeout: float = 60) -> dict:
+    from dataclasses import replace
+    client = BudgetedChatClient(replace(config, timeout=timeout), opener=urllib.request.urlopen)
+    return client([{"role": "system", "content": system}, {"role": "user", "content": user}], purpose="assistant-explanation-v2")
 
 
 # ---------------------------------------------------------------- 定位与数值白名单
@@ -195,10 +189,11 @@ def _ask(model_config: ModelConfig | None, system: str, user: str,
          trace: TraceLog | None, kind: str) -> dict[str, Any]:
     if model_config is None:
         return {"mode": "offline", "answer": "", "warnings": []}
-    answer = _chat(model_config, system, user)
+    response = _chat_result(model_config, system, user)
+    answer = response["content"]
     if trace:
         trace.add({"kind": kind, "model": model_config.model,
-                   "question_chars": len(user), "answer": answer})
+                   "question_chars": len(user), "answer": answer, "runtime": response["trace"]})
     return {"mode": "model", "answer": answer, "warnings": []}
 
 

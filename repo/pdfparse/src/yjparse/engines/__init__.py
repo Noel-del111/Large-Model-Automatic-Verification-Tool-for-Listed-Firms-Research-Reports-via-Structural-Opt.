@@ -1,7 +1,11 @@
-"""解析引擎适配层。
-
-每个引擎实现统一接口，输出带页码与坐标的 Page 列表；
-引擎是否可用由 available() 判定，缺失时给出安装提示而不是直接崩溃。
-"""
-
-from .base import BaseEngine, EngineCapabilities, EngineUnavailable, build_engine, registry  # noqa: F401
+"""Compatibility reference to the canonical yjparse.engines.__init__ module."""
+from importlib import import_module as _import_module
+from pathlib import Path as _Path
+import sys as _sys
+_root = next(parent for parent in _Path(__file__).resolve().parents if (parent / "repo").is_dir())
+_sys.path[:0] = [str(_root / "factcheck" / "src"), str(_root / "pdfparse" / "src")]
+if __name__ == "__main__":
+    from runpy import run_module as _run_module
+    _run_module("yjparse.engines.__init__", run_name="__main__")
+else:
+    globals().update(_import_module("yjparse.engines.__init__").__dict__)

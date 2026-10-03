@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-10-03T16:06:08.093448+00:00",
+  "scope": "eval200",
+  "queue_processed_documents": 200,
+  "all_groups_completed_documents": 199,
+  "execution_failed_documents": 1,
+  "failure_reason_counts": {
+    "transport_timeout": 1
+  },
+  "execution_success_rate": 0.995,
+  "integrity_problems": [],
+  "arm_integrity_problems": [],
+  "development_expansion_state": "not_started",
+  "holdout_execution_queues": 0,
+  "reserved_calls": 0,
+  "budget": {
+    "limit_cny": 100.0,
+    "accounted_including_reserved_cny": 13.571324,
+    "calls": 284,
+    "call_status_counts": {
+      "error": 6,
+      "ok": 278
+    },
+    "basis": "configured upper rates, not provider invoice"
+  },
+  "source_score_sha256": "3041202b646c80e6930c7838754ad8b0a73e533c709039f9bc16841a3d9581e1",
+  "generated_report_sha256": "88c4c56d750929c47244a66597775eaf637cb7ef1b09699addc9db5ced644385",
+  "inference_stopped": true,
+  "followup_batch_blocked_before_model_client": true,
+  "note": "200 attempted, not 200 successes. The worker exited after the development batch was rejected by the user stop control. No failure retry was made."
+}

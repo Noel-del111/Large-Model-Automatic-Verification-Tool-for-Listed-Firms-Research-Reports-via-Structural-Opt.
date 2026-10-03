@@ -98,6 +98,10 @@ def _pages_needing_ocr(pages: List[Page], mode: str, thresholds: Dict) -> List[P
     image_ratio = float(thresholds.get("ocr_image_area_ratio", 0.45))
     selected = []
     for page in pages:
+        # Missing extractor pages must be recovered by an alternate parser;
+        # OCR cannot turn a coverage failure into trustworthy page evidence.
+        if page.engine_stats.get("coverage_violations"):
+            continue
         text = ""
         for block in page.blocks:
             if block.text:
@@ -105,9 +109,12 @@ def _pages_needing_ocr(pages: List[Page], mode: str, thresholds: Dict) -> List[P
             elif block.cells:
                 text += " ".join(c.text for c in block.cells)
         chars = len(text.replace(" ", ""))
-        covered = sum(b.bbox.area for b in page.blocks if b.type == "image" and b.bbox)
+        covered = max(sum(b.bbox.area for b in page.blocks if b.type == "image" and b.bbox),
+                      float(page.engine_stats.get("image_area", 0)))
         page_area = max(page.page_size[0] * page.page_size[1], 1.0)
-        if chars < min_chars or (covered / page_area >= image_ratio and chars < 300):
+        # A short text or blank page alone is not evidence of a scanned page.
+        # This avoids loading OCR for ordinary covers, clipped or empty pages.
+        if (covered > 0 and chars < min_chars) or (covered / page_area >= image_ratio and chars < 300):
             selected.append(page)
     return selected
 
@@ -162,8 +169,15 @@ def _pdf_page_sizes(path: Path, coordinate_engine: str = "pymupdf") -> List[Tupl
         # pdfplumber uses MediaBox coordinates; PyMuPDF uses the CropBox.
         # A clipped PDF must not inherit dimensions from another coordinate system.
         import pdfplumber
-        with pdfplumber.open(str(path)) as pdf:
-            return [(float(p.width), float(p.height)) for p in pdf.pages]
+        try:
+            with pdfplumber.open(str(path)) as pdf:
+                sizes = [(float(p.width), float(p.height)) for p in pdf.pages]
+        except Exception:
+            sizes = []
+        if sizes:
+            return sizes
+        # pdfminer 对部分 xref 损坏的 PDF 可能读不出页面：退回 pymupdf 读取页数，
+        # 引擎是否可用由上游 fallback 逻辑决定，这里只保证页元数据不再丢失。
     try:
         import pymupdf
     except ImportError:

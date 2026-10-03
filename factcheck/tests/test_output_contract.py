@@ -11,6 +11,26 @@ from yjcheck.pipeline import check_documents
 
 
 class OutputContractTests(unittest.TestCase):
+    def test_text_review_uses_global_offsets_without_fabricated_pages(self):
+        report=Document("report","a"*64,"r-run","report.docx","report",blocks=[
+            Block("heading","报告标题",paragraph=1),Block("p","落款2025年2月30日。",paragraph=2)])
+        result=check_documents(report,[])
+        error=result["text_review"]["errors"][0]
+        self.assertEqual(error["status"],"confirmed_error")
+        for span in error["spans"]:
+            self.assertEqual(report.text[span["start"]:span["end"]],span["text"])
+        self.assertEqual(error["source_locations"][0]["block_id"],"p")
+        self.assertIsNone(error["source_locations"][0]["page"])
+
+    def test_low_quality_parse_never_auto_confirms_text_error(self):
+        for issues,quality in ((["document:incomplete"],"ok"),([],"needs_review")):
+            report=Document("report","a"*64,"r-run","report.pdf","report",
+                            blocks=[Block("p","日期2025年2月30日。",page=3,status=quality)],issues=issues)
+            result=check_documents(report,[])
+            error=result["text_review"]["errors"][0]
+            self.assertEqual(error["status"],"needs_review")
+            self.assertEqual(error["validation"],"input_quality_requires_review")
+
     def test_three_statuses_validate_for_public_consumer(self):
         schema=json.loads((ROOT/"factcheck/schemas/check_result.schema.json").read_text(encoding="utf-8"))
         Draft202012Validator.check_schema(schema)

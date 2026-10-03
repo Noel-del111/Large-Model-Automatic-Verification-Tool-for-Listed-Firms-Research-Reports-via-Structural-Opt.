@@ -4,7 +4,10 @@ import unittest
 from pathlib import Path
 import tempfile
 
-from yjcheck.models import Block, Document
+from dataclasses import asdict
+
+from yjcheck.models import Block, Document, Evidence, Fact
+from yjcheck.rules import check_facts
 from yjcheck.source_extract import extract_source_facts
 
 
@@ -132,6 +135,55 @@ class SourceExtractionTests(unittest.TestCase):
         self.assertEqual(fact.value, "2025")
         self.assertEqual(fact.unit, "年")
         self.assertEqual(fact.attributes["meaning"], "report_title_fiscal_year")
+
+    def publication_claim(self):
+        return Fact("publication_year", "2023", "年", "publication", "测试公司", basis="reported",
+                    evidence=[Evidence(doc_id="claim", sha256="b" * 64, block_id="p1", paragraph=1,
+                                       text="2023年度披露的追溯调整")])
+
+    def test_repeated_ocr_title_does_not_downgrade_reliable_same_year(self):
+        title = "2025年度对以前年度报告披露的财务报表数据追溯调整专项报告"
+        for warn_first in (False, True):
+            with self.subTest(warn_first=warn_first):
+                doc = document([[title], [title]])
+                warning = doc.blocks[0 if warn_first else 1]
+                warning.status = "warn"
+                warning.notes = ["ocr_used:blocks=1:avg_score=0.98"]
+                fact = select(extract_source_facts(doc), "publication_year", "reported", "publication")[0]
+                self.assertEqual(len(fact.evidence), 1)
+                self.assertTrue(all(e.quality == "ok" for e in fact.evidence))
+                self.assertEqual({location["block_id"] for location in fact.attributes["value_locations"]},
+                                 {fact.evidence[0].block_id})
+                self.assertEqual(fact.attributes["alternative_evidence"], [asdict(warning.evidence(doc))])
+                self.assertEqual(fact.text, fact.evidence[0].text)
+                finding = check_facts([self.publication_claim()], [fact])[0]
+                self.assertEqual((finding.status, finding.error_type, finding.suggested_value),
+                                 ("confirmed_error", "period", "2025"))
+
+    def test_only_ocr_title_still_requires_review(self):
+        doc = document([["2025年度对以前年度报告披露的财务报表数据追溯调整专项报告"]])
+        doc.blocks[0].status = "warn"
+        doc.blocks[0].notes = ["ocr_used:blocks=1:avg_score=0.98"]
+        fact = select(extract_source_facts(doc), "publication_year", "reported", "publication")[0]
+        self.assertEqual(fact.evidence[0].quality, "warn")
+        self.assertEqual(fact.attributes["alternative_evidence"], [])
+        self.assertEqual(check_facts([self.publication_claim()], [fact])[0].status, "needs_review")
+
+    def test_conflicting_title_year_survives_quality_selection(self):
+        doc = document([["2025年度对以前年度报告披露的财务报表数据"],
+                        ["2025年度对以前年度报告披露的财务报表数据"],
+                        ["2024年度对以前年度报告披露的财务报表数据"]])
+        doc.blocks[1].status = "warn"
+        doc.blocks[1].notes = ["ocr_used:blocks=1:avg_score=0.98"]
+        doc.blocks[2].status = "warn"
+        doc.blocks[2].notes = ["ocr_used:blocks=1:avg_score=0.98"]
+        fact = select(extract_source_facts(doc), "publication_year", "reported", "publication")[0]
+        self.assertEqual(fact.value, "2025")
+        self.assertIn("conflicting_publication_years", fact.warnings)
+        self.assertTrue(all(e.quality == "ok" for e in fact.evidence))
+        self.assertEqual(fact.attributes["alternative_evidence"],
+                         [asdict(b.evidence(doc)) for b in doc.blocks[1:]])
+        self.assertEqual(check_facts([self.publication_claim()], [fact])[0].status, "needs_review")
 
 
 class LocalPdfRegressionTests(unittest.TestCase):

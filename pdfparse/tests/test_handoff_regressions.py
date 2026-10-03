@@ -17,7 +17,7 @@ from yjparse.engines.pdfplumber_engine import PdfPlumberEngine
 from yjparse.engines.pymupdf_engine import PyMuPDFEngine
 from yjparse.kb_export import export_kb, parse_result_to_markdown
 from yjparse.ocr import OcrLine, lines_to_blocks
-from yjparse.pipeline import PipelineConfig, _page_violations, parse_document, resolve_reference
+from yjparse.pipeline import PipelineConfig, _page_violations, _pages_needing_ocr, parse_document, resolve_reference
 from yjparse.report import summarize
 from yjparse.retrieval import Bm25Index
 from yjparse.textstruct import attach_captions_and_sources
@@ -34,6 +34,15 @@ def pdf(path, texts):
 
 
 class TestHandoffRegressions(unittest.TestCase):
+    def test_auto_ocr_requires_image_evidence_and_preserves_coverage_failures(self):
+        blank = Page(page=1, page_size=(100, 100))
+        short = Page(page=2, page_size=(100, 100),
+                     blocks=[Block(block_id="short", type="text", bbox=BBox(0, 0, 90, 20), text="Cover", order=0)])
+        scan = Page(page=3, page_size=(100, 100), engine_stats={"image_area": 10000})
+        missing = Page(page=4, page_size=(100, 100), engine_stats={"image_area": 10000, "coverage_violations": ["missing_source_page"]})
+        self.assertEqual([p.page for p in _pages_needing_ocr([blank, short, scan, missing], "auto", {})], [3])
+        self.assertEqual(_pages_needing_ocr([blank], "always", {}), [blank])
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)

@@ -9,10 +9,15 @@
 from __future__ import annotations
 
 import logging
+import os
+from threading import RLock
 from dataclasses import dataclass
 from typing import Any, List, Optional, Sequence, Tuple
 
 from .contract import BBox, Block
+
+_OCR_ENGINE = None
+_OCR_LOCK = RLock()
 
 
 class OcrUnavailable(RuntimeError):
@@ -52,6 +57,7 @@ class OcrRunner:
         self._engine: Any = None
 
     def _ensure(self):
+        global _OCR_ENGINE
         if self._engine is None:
             try:
                 from rapidocr import RapidOCR
@@ -61,7 +67,16 @@ class OcrRunner:
                 ) from exc
             # RapidOCR 默认把加载信息打到 stdout，会污染命令行输出，这里压到只报错误
             logging.getLogger("RapidOCR").setLevel(logging.ERROR)
-            self._engine = RapidOCR()
+            # Reuse model sessions across documents and limit nested ONNX
+            # thread pools; default all-core pools can overwhelm local runs.
+            with _OCR_LOCK:
+                if _OCR_ENGINE is None:
+                    _OCR_ENGINE = RapidOCR(params={
+                        "Global.log_level": "error",
+                        "EngineConfig.onnxruntime.intra_op_num_threads": min(4, os.cpu_count() or 1),
+                        "EngineConfig.onnxruntime.inter_op_num_threads": 1,
+                    })
+                self._engine = _OCR_ENGINE
         return self._engine
 
     def recognize_image(self, image, origin: Tuple[float, float] = (0.0, 0.0),
@@ -74,7 +89,8 @@ class OcrRunner:
         import numpy as np
 
         engine = self._ensure()
-        result = engine(np.asarray(image))
+        with _OCR_LOCK:
+            result = engine(np.asarray(image))
         boxes = getattr(result, "boxes", None)
         texts = getattr(result, "txts", None) or ()
         scores = getattr(result, "scores", None) or ()

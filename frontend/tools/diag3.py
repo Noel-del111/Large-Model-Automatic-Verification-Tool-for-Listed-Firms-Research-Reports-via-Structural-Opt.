@@ -5,8 +5,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "repo" / "factcheck" / "src"))
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "repo" / "pdfparse" / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "factcheck" / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "pdfparse" / "src"))
 
 from yjcheck.adapters import load_document  # noqa: E402
 from yjcheck.pipeline import run_check  # noqa: E402

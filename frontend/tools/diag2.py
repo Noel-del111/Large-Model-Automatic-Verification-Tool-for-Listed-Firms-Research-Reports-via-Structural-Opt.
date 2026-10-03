@@ -8,8 +8,8 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE.parent))
-sys.path.insert(0, str(BASE.parent.parent / "repo" / "factcheck" / "src"))
-sys.path.insert(0, str(BASE.parent.parent / "repo" / "pdfparse" / "src"))
+sys.path.insert(0, str(BASE.parent.parent / "factcheck" / "src"))
+sys.path.insert(0, str(BASE.parent.parent / "pdfparse" / "src"))
 
 from yjcheck.pipeline import run_check  # noqa: E402
 

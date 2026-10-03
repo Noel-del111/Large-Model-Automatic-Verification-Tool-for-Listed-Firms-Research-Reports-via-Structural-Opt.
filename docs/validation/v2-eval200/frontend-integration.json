@@ -1,0 +1,117 @@
+{
+  "created_at": "2026-10-03T14:38:36.642250+00:00",
+  "kind": "cached_real_paired_results_frontend_integration",
+  "cases": [
+    {
+      "case": "佛然能源",
+      "tabs": [
+        "概览",
+        "结果列表",
+        "证据对照",
+        "人工复核",
+        "导出",
+        "助手问答",
+        "文本补充检查"
+      ],
+      "metrics": {
+        "已确认错误": "2",
+        "待人工确认": "0",
+        "未发现问题": "4",
+        "提取声明": "6",
+        "来源事实": "49",
+        "输入问题": "0",
+        "检测候选": "2",
+        "经规则确认": "0",
+        "待复核提示（含未定位）": "2",
+        "未通过定位或格式校验": "0"
+      },
+      "artifact_verification_passed": true,
+      "source_result_sha256": "754666d8546a896da19899064b7c5a50ee8fa1fce2f1500d7f4ca704f457f07a",
+      "model_clients_created": 0
+    },
+    {
+      "case": "兰石重装",
+      "tabs": [
+        "概览",
+        "结果列表",
+        "证据对照",
+        "人工复核",
+        "导出",
+        "助手问答",
+        "文本补充检查"
+      ],
+      "metrics": {
+        "已确认错误": "3",
+        "待人工确认": "0",
+        "未发现问题": "3",
+        "提取声明": "6",
+        "来源事实": "91",
+        "输入问题": "1",
+        "检测候选": "1",
+        "经规则确认": "0",
+        "待复核提示（含未定位）": "1",
+        "未通过定位或格式校验": "0"
+      },
+      "artifact_verification_passed": true,
+      "source_result_sha256": "e6858a815558b971a0527550b8cea4c11d29ee431c94ffb6e480be2fe3ce8a34",
+      "model_clients_created": 0
+    },
+    {
+      "case": "大地海洋",
+      "tabs": [
+        "概览",
+        "结果列表",
+        "证据对照",
+        "人工复核",
+        "导出",
+        "助手问答",
+        "文本补充检查"
+      ],
+      "metrics": {
+        "已确认错误": "3",
+        "待人工确认": "1",
+        "未发现问题": "5",
+        "提取声明": "9",
+        "来源事实": "52",
+        "输入问题": "0",
+        "检测候选": "0",
+        "经规则确认": "0",
+        "待复核提示（含未定位）": "0",
+        "未通过定位或格式校验": "0"
+      },
+      "artifact_verification_passed": true,
+      "source_result_sha256": "1427a4068b48e5d44d1e2ee76f8f93f5e759eb252d64c130f8a30b227659cc05",
+      "model_clients_created": 0
+    },
+    {
+      "case": "群兴玩具",
+      "tabs": [
+        "概览",
+        "结果列表",
+        "证据对照",
+        "人工复核",
+        "导出",
+        "助手问答",
+        "文本补充检查"
+      ],
+      "metrics": {
+        "已确认错误": "1",
+        "待人工确认": "0",
+        "未发现问题": "7",
+        "提取声明": "8",
+        "来源事实": "60",
+        "输入问题": "0",
+        "检测候选": "0",
+        "经规则确认": "0",
+        "待复核提示（含未定位）": "0",
+        "未通过定位或格式校验": "0"
+      },
+      "artifact_verification_passed": true,
+      "source_result_sha256": "3697705b7431023720dd95819de49e21167203c4e2783bc0a8782b7866a2584c",
+      "model_clients_created": 0
+    }
+  ],
+  "passed": true,
+  "new_model_calls": 0,
+  "scope": "Render existing real-model replay outputs in all seven frontend views, verify artifacts, assert no paid client is created. No human review saved and no claim of actual human review efficiency."
+}

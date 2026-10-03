@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-10-03T14:54:58.465783+00:00",
+  "passed": true,
+  "total": 294,
+  "duration_seconds": 32.11,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies": {
+    "PyMuPDF": "1.27.2.3",
+    "pdfplumber": "0.11.9",
+    "pypdf": "6.10.0",
+    "Pillow": "12.3.0",
+    "streamlit": "1.64.0",
+    "rapidocr": "3.9.2",
+    "onnxruntime": "1.30.0",
+    "reportlab": "4.4.9",
+    "jsonschema": "4.26.0"
+  },
+  "suites": [
+    {
+      "module": "pdfparse",
+      "total": 54,
+      "passed": 54,
+      "failures": [],
+      "errors": [],
+      "skipped": []
+    },
+    {
+      "module": "factcheck",
+      "total": 240,
+      "passed": 240,
+      "failures": [],
+      "errors": [],
+      "skipped": []
+    }
+  ]
+}
