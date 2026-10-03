@@ -1,0 +1,492 @@
+{
+  "docs": 442,
+  "gold_errors": 1792,
+  "totals": {
+    "claims": 3436,
+    "source_facts": 0,
+    "confirmed_error": 0,
+    "needs_review": 3667,
+    "no_issue": 0,
+    "findings": 3667,
+    "determined": 0
+  },
+  "automatic_score": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 1792,
+    "predicted": 0,
+    "gold": 1792,
+    "precision_percent": null,
+    "recall_percent": 0.0,
+    "f1_percent": 0.0,
+    "false_discovery_percent": null,
+    "by_type": {
+      "数值不一致错误": {
+        "gold": 100,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "冗余语句": {
+        "gold": 192,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "数值缺失": {
+        "gold": 199,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "术语误用": {
+        "gold": 166,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "语义逻辑矛盾": {
+        "gold": 146,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "金融要素缺失": {
+        "gold": 144,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "时间矛盾": {
+        "gold": 139,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "计算错误": {
+        "gold": 96,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "数值单位错误": {
+        "gold": 246,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "时间信息非法": {
+        "gold": 170,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "属性值缺失错误": {
+        "gold": 127,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "格式错误": {
+        "gold": 67,
+        "hit": 0,
+        "recall_percent": 0.0
+      }
+    }
+  },
+  "candidate_score": {
+    "tp": 53,
+    "fp": 2,
+    "fn": 1739,
+    "predicted": 55,
+    "gold": 1792,
+    "precision_percent": 96.3636,
+    "recall_percent": 2.9576,
+    "f1_percent": 5.739,
+    "false_discovery_percent": 3.6364,
+    "by_type": {
+      "数值不一致错误": {
+        "gold": 100,
+        "hit": 2,
+        "recall_percent": 2.0
+      },
+      "冗余语句": {
+        "gold": 192,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "数值缺失": {
+        "gold": 199,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "术语误用": {
+        "gold": 166,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "语义逻辑矛盾": {
+        "gold": 146,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "金融要素缺失": {
+        "gold": 144,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "时间矛盾": {
+        "gold": 139,
+        "hit": 51,
+        "recall_percent": 36.6906
+      },
+      "计算错误": {
+        "gold": 96,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "数值单位错误": {
+        "gold": 246,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "时间信息非法": {
+        "gold": 170,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "属性值缺失错误": {
+        "gold": 127,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "格式错误": {
+        "gold": 67,
+        "hit": 0,
+        "recall_percent": 0.0
+      }
+    }
+  },
+  "loose_score": {
+    "tp": 53,
+    "fp": 2,
+    "fn": 1739,
+    "predicted": 55,
+    "gold": 1792,
+    "precision_percent": 96.3636,
+    "recall_percent": 2.9576,
+    "f1_percent": 5.739,
+    "false_discovery_percent": 3.6364,
+    "by_type": {
+      "数值不一致错误": {
+        "gold": 100,
+        "hit": 5,
+        "recall_percent": 5.0
+      },
+      "冗余语句": {
+        "gold": 192,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "数值缺失": {
+        "gold": 199,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "术语误用": {
+        "gold": 166,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "语义逻辑矛盾": {
+        "gold": 146,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "金融要素缺失": {
+        "gold": 144,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "时间矛盾": {
+        "gold": 139,
+        "hit": 46,
+        "recall_percent": 33.0935
+      },
+      "计算错误": {
+        "gold": 96,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "数值单位错误": {
+        "gold": 246,
+        "hit": 2,
+        "recall_percent": 0.813
+      },
+      "时间信息非法": {
+        "gold": 170,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "属性值缺失错误": {
+        "gold": 127,
+        "hit": 0,
+        "recall_percent": 0.0
+      },
+      "格式错误": {
+        "gold": 67,
+        "hit": 0,
+        "recall_percent": 0.0
+      }
+    }
+  },
+  "readme_metrics": [
+    {
+      "label": "判错精确率（自动确认）",
+      "numerator": 0,
+      "denominator": 0,
+      "percent": null,
+      "target_percent": 90,
+      "sign": ">=",
+      "qualified": null,
+      "note": "没有自动报错时分母为零，不记为100%"
+    },
+    {
+      "label": "错误召回率（自动确认）",
+      "numerator": 0,
+      "denominator": 1792,
+      "percent": 0.0,
+      "target_percent": 80,
+      "sign": ">=",
+      "qualified": false,
+      "note": "全量标注错误为分母；待人工确认不算自动命中"
+    },
+    {
+      "label": "正确内容误报率",
+      "numerator": null,
+      "denominator": null,
+      "percent": null,
+      "target_percent": 10,
+      "sign": "<=",
+      "qualified": null,
+      "note": "主测试集无完整正确断言标注；未标错内容不能直接当负样本"
+    },
+    {
+      "label": "证据定位准确率",
+      "numerator": null,
+      "denominator": null,
+      "percent": null,
+      "target_percent": 90,
+      "sign": ">=",
+      "qualified": null,
+      "note": "缺少原始PDF、来源财报与页码真值；字符匹配不能代替来源页码定位"
+    },
+    {
+      "label": "建议完整性",
+      "numerator": 0,
+      "denominator": 0,
+      "percent": null,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "无自动确认错误；README未给百分比合格线"
+    },
+    {
+      "label": "整体判定正确率",
+      "numerator": null,
+      "denominator": null,
+      "percent": null,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "缺少完整负样本与人工复核定论，不能以自身状态充当正确答案"
+    },
+    {
+      "label": "研报断言覆盖率",
+      "numerator": null,
+      "denominator": null,
+      "percent": null,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "缺少支持范围内断言总数的人工标注"
+    },
+    {
+      "label": "过度转人工率",
+      "numerator": null,
+      "denominator": null,
+      "percent": null,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "缺少人工标注的本可自动判定项，不能把100%转人工直接当过度转人工率"
+    },
+    {
+      "label": "建议带证据比例",
+      "numerator": 0,
+      "denominator": 0,
+      "percent": null,
+      "target_percent": 100,
+      "sign": ">=",
+      "qualified": null,
+      "note": "零确认错误，不记为100%"
+    },
+    {
+      "label": "转人工占比",
+      "numerator": 3667,
+      "denominator": 3667,
+      "percent": 100.0,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "真实全流程findings；包含输入异常与覆盖提示"
+    },
+    {
+      "label": "确定判断占比",
+      "numerator": 0,
+      "denominator": 3667,
+      "percent": 0.0,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": ""
+    },
+    {
+      "label": "程序运行失败率",
+      "numerator": 0,
+      "denominator": 442,
+      "percent": 0.0,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "Python异常；不等同于财务结论正确或解析失败页比例"
+    },
+    {
+      "label": "全量执行完成率",
+      "numerator": 442,
+      "denominator": 442,
+      "percent": 100.0,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": ""
+    },
+    {
+      "label": "产物哈希校验通过率",
+      "numerator": 442,
+      "denominator": 442,
+      "percent": 100.0,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": ""
+    },
+    {
+      "label": "有输入质量问题的研报比例",
+      "numerator": 441,
+      "denominator": 442,
+      "percent": 99.7738,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": ""
+    },
+    {
+      "label": "有抽取声明的研报比例",
+      "numerator": 266,
+      "denominator": 442,
+      "percent": 60.181,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "按文档统计，不能代替断言覆盖率"
+    },
+    {
+      "label": "解析失败页比例",
+      "numerator": null,
+      "denominator": null,
+      "percent": null,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "输入只有文本，未运行PDF解析，无真实页面分母"
+    },
+    {
+      "label": "复核定位具备页码与坐标比例",
+      "numerator": null,
+      "denominator": null,
+      "percent": null,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "纯文本不提供页码坐标；不能捏造一页PDF计为通过"
+    }
+  ],
+  "candidate_metrics": [
+    {
+      "label": "疑点检测精确率",
+      "numerator": 53,
+      "denominator": 55,
+      "percent": 96.3636,
+      "target_percent": 90,
+      "sign": ">=",
+      "qualified": true,
+      "note": "严格类型与区间匹配；仅疑点，不是自动确认"
+    },
+    {
+      "label": "疑点检测召回率",
+      "numerator": 53,
+      "denominator": 1792,
+      "percent": 2.9576,
+      "target_percent": 80,
+      "sign": ">=",
+      "qualified": false,
+      "note": ""
+    },
+    {
+      "label": "疑点检测F1",
+      "numerator": 106,
+      "denominator": 1847,
+      "percent": 5.739,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": ""
+    },
+    {
+      "label": "误报占告警比例",
+      "numerator": 2,
+      "denominator": 55,
+      "percent": 3.6364,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "FP/(TP+FP)，不是README正确内容误报率"
+    },
+    {
+      "label": "只看定位的疑点精确率",
+      "numerator": 53,
+      "denominator": 55,
+      "percent": 96.3636,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": "字符区间，不评价来源页码"
+    },
+    {
+      "label": "只看定位的疑点召回率",
+      "numerator": 53,
+      "denominator": 1792,
+      "percent": 2.9576,
+      "target_percent": null,
+      "sign": null,
+      "qualified": null,
+      "note": ""
+    }
+  ],
+  "clean_supplement": {
+    "count": 10,
+    "automatic_false_positive_percent": 0.0,
+    "candidate_false_positive_percent": 0.0
+  },
+  "gold_alignment": {
+    "original": 1746,
+    "unresolved": 45,
+    "whitespace_reanchored": 7
+  },
+  "timing": {
+    "total_seconds": 13.565582599374466,
+    "mean_seconds": 0.030691363347001052,
+    "p95_seconds": 0.03766530001303181
+  },
+  "model_calls": 0
+}

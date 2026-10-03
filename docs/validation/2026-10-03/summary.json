@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-10-03T07:50:39.718539+00:00",
+  "passed": false,
+  "total": 172,
+  "duration_seconds": 30.389,
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies": {
+    "PyMuPDF": "1.28.2",
+    "pdfplumber": "0.11.10",
+    "pypdf": "6.19.0",
+    "Pillow": "12.3.0",
+    "streamlit": "1.64.0",
+    "rapidocr": "3.9.2",
+    "onnxruntime": "1.30.0",
+    "reportlab": "5.0.1",
+    "jsonschema": "4.26.0"
+  },
+  "suites": [
+    {
+      "module": "pdfparse",
+      "total": 53,
+      "passed": 53,
+      "failures": [],
+      "errors": [],
+      "skipped": []
+    },
+    {
+      "module": "factcheck",
+      "total": 119,
+      "passed": 117,
+      "failures": [
+        {
+          "test": "test_claim_extract.LocalESampleClaimTests.test_all_four_delivered_docx_have_expected_extraction_coverage",
+          "trace": "Traceback (most recent call last):\n  File \"C:\\Users\\xiaoliu\\Desktop\\project2\\repo\\factcheck\\tests\\test_claim_extract.py\", line 254, in test_all_four_delivered_docx_have_expected_extraction_coverage\n    self.assertTrue(fixture_root.is_dir(), \"E 的本地验收样本目录缺失，不能声称此项通过\")\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : E 的本地验收样本目录缺失，不能声称此项通过\n"
+        }
+      ],
+      "errors": [],
+      "skipped": [
+        {
+          "test": "setUpClass (test_source_extract.LocalPdfRegressionTests)",
+          "reason": "Local public PDF fixtures are not distributed with the code"
+        }
+      ]
+    }
+  ]
+}

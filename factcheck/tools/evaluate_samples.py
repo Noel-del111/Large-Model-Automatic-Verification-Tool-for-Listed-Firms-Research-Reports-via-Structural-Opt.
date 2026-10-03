@@ -24,7 +24,38 @@ from yjcheck.claim_extract import METRICS, NUMBER_RE
 from yjcheck.pipeline import run_check
 
 _NS = {"s": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
-_ERROR_TYPES = {"正确": "", "数值": "number", "数值错误": "number", "口径错误": "basis", "单位错误": "unit", "期间错误": "period", "引用错误": "citation"}
+_ERROR_TYPES = {"正确": "", "数值": "number", "数值错误": "number", "计算错误/逻辑错误": "number",
+                "逻辑错误": "number", "口径错误": ("basis", "scope"), "单位错误": "unit",
+                "期间错误": "period", "引用错误": "citation",
+                # FinED-Bench 十五类错误类型名称（答案表可复用其标注口径）
+                "计算错误": "number", "数值单位错误": "unit", "时间矛盾": "time_conflict",
+                "数值不一致错误": "numeric_inconsistency", "术语误用": "term_misuse",
+                "语义逻辑矛盾": "semantic_contradiction", "数值缺失": "numeric_missing",
+                "冗余语句": "redundant_statement", "时间信息非法": "invalid_time",
+                "金融要素缺失": "financial_element_missing", "属性值缺失": "attribute_missing",
+                "属性值缺失错误": "attribute_missing", "格式错误": "format_error",
+                "法规引用错误": "citation"}
+# 答案表各版本的表头列名（检测到表头行时按列名自动对齐，其余版本回退行列号约定）
+_ANSWER_HEADERS = {"location": ("位置", "行列"), "error_type": ("错误类型",),
+                   "text": ("研报原文", "原文"), "suggestion": ("建议修改", "建议"),
+                   "source": ("来源页码", "来源"), "reason": ("依据", "原因")}
+
+
+def _detect_columns(row_cells: dict[str, str]) -> dict[str, str]:
+    """有表头行时按列名对齐；旧版无表头时维持 B/C/D/E/F/G 的行列号约定。"""
+    by_text = {str(text).strip(): col for col, text in row_cells.items()}
+    mapping: dict[str, str] = {}
+    matched = 0
+    for key, names in _ANSWER_HEADERS.items():
+        for name in names:
+            if name in by_text:
+                mapping[key] = by_text[name]
+                matched += 1
+                break
+    if matched >= 3:
+        return mapping
+    return {"location": "B", "error_type": "C", "text": "D",
+            "suggestion": "E", "source": "F", "reason": "G"}
 
 
 def read_answer_rows(path: Path) -> list[dict]:
@@ -41,21 +72,27 @@ def read_answer_rows(path: Path) -> list[dict]:
             rid = sheet.attrib["{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"]
             target = targets[rid]
             target = target.lstrip("/") if target.startswith("/") else "xl/" + target
-            for row in ET.fromstring(archive.read(target)).findall("s:sheetData/s:row", _NS):
+            sheet_rows = ET.fromstring(archive.read(target)).findall("s:sheetData/s:row", _NS)
+            columns: dict[str, str] | None = None
+            for row in sheet_rows:
                 values = {}
                 for cell in row.findall("s:c", _NS):
                     col = re.sub(r"\d", "", cell.attrib["r"])
                     value = cell.find("s:v", _NS)
                     text = value.text if value is not None else "".join(cell.find("s:is", _NS).itertext()) if cell.find("s:is", _NS) is not None else ""
                     values[col] = shared[int(text)] if cell.attrib.get("t") == "s" and text else text
-                if not values.get("D") or values.get("C", "").strip() not in _ERROR_TYPES:
+                if columns is None:
+                    columns = _detect_columns(values)
+                text = values.get(columns["text"], "").strip()
+                error_type = values.get(columns["error_type"], "").strip()
+                if not text or error_type not in _ERROR_TYPES:
                     continue
                 no = int(row.attrib["r"])
                 output.append({"workbook": str(path.resolve()), "sheet": sheet.attrib["name"], "row": no,
-                               "range": f"B{no}:G{no}", "raw_cells": values,
-                               "location": values.get("B", ""), "error_type": values.get("C", "").strip(),
-                               "text": values.get("D", ""), "suggestion": values.get("E", ""),
-                               "source": values.get("F", ""), "reason": values.get("G", "")})
+                               "range": f"{columns['text']}{no}:{columns['reason']}{no}", "raw_cells": values,
+                               "location": values.get(columns["location"], ""), "error_type": error_type,
+                               "text": text, "suggestion": values.get(columns["suggestion"], ""),
+                               "source": values.get(columns["source"], ""), "reason": values.get(columns["reason"], "")})
     return output
 
 
@@ -75,12 +112,25 @@ def _description(row: dict) -> dict:
     else:
         match = NUMBER_RE.search(text)
         amount, unit = (match["value"], match["unit"]) if match else (None, None)
+    # 同比/环比行：研报写的是百分比变化，与系统 *_yoy/_qoq 复算口径对齐。
+    if metric and re.search(r"同比|环比", text) and amount is not None and unit not in {"%", "％"}:
+        pct = next((m for m in NUMBER_RE.finditer(text) if m["unit"] in {"%", "％", "百分比"}), None)
+        if pct is not None:
+            sign = "-" if re.search(r"下降|减少|下滑", text) else ""
+            amount, unit = sign + pct["value"], pct["unit"]
+            metric = metric + ("_yoy" if "同比" in text else "_qoq")
     if unit == "元" and metric in {"eps_basic", "price"}:
         unit = "元/股"
     basis_match = re.search(r"调整前|重述前|调整后|重述后|影响(?:金额)?", text)
     basis = ("before" if basis_match.group().endswith("前") else "after" if basis_match.group().endswith("后") else "change") if basis_match else None
+    # 归一到核查侧口径：营业总收入/营业收入同属 revenue；“母公司 xx”为母公司报表口径。
+    if metric == "revenue_total":
+        metric = "revenue"
+    scope = None
+    if text.startswith("母公司") and metric not in {"net_profit_parent", "net_profit_parent_excl", "equity_parent"}:
+        scope = "parent"
     expected_page = re.search(r"[Pp]\s*(\d+)|第\s*(\d+)\s*页", row["source"])
-    return {"metric": metric, "value": amount, "unit": unit, "basis": basis,
+    return {"metric": metric, "value": amount, "unit": unit, "basis": basis, "scope": scope,
             "source_page": int(expected_page[1] or expected_page[2]) if expected_page else None}
 
 
@@ -99,7 +149,10 @@ def _match(row: dict, findings: list[dict]) -> list[dict]:
     candidates = []
     for finding in findings:
         claim = finding["claim"]
-        if expected["metric"] and claim["metric"] != expected["metric"]:
+        claim_metric = "revenue" if claim.get("metric") == "revenue_total" else claim.get("metric")
+        if expected["metric"] and claim_metric != expected["metric"]:
+            continue
+        if expected.get("scope") and claim.get("scope") != expected["scope"]:
             continue
         if expected["value"] is None or _value(claim["value"]) != _value(expected["value"]):
             continue
@@ -143,7 +196,10 @@ def evaluate(samples: Path, out: Path) -> dict:
                     first_row_for_id[claim_id] = row["row"]
                 expected_status = "no_issue" if row["error_type"] == "正确" else "confirmed_error"
                 comparison["semantic_match"] = finding["status"] == expected_status
-                comparison["error_type_match"] = finding["error_type"] == _ERROR_TYPES[row["error_type"]]
+                expected_type = _ERROR_TYPES[row["error_type"]]
+                comparison["error_type_match"] = (finding["error_type"] == expected_type
+                                                  if isinstance(expected_type, str)
+                                                  else finding["error_type"] in expected_type)
                 primary_pages = sorted({location["page"] for fact in finding["evidence"]
                                         for location in fact.get("attributes", {}).get("value_locations", [])
                                         if location.get("page") is not None})

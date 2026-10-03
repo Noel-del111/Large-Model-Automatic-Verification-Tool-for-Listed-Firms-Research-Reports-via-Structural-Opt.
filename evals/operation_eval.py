@@ -59,23 +59,37 @@ def evidence_request_alignment(predicted: Iterable[Dict[str, Any]],
 
 def evaluate(predictions: Sequence[Dict[str, Any]],
              golds: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
-    gold_by_id = {item["item_id"]: item for item in golds}
+    def index_unique(items, label):
+        result = {}
+        for item in items:
+            key = item.get("item_id")
+            if not isinstance(key, str) or not key or key in result:
+                raise ValueError(f"{label} item_id 必须为非空且唯一的字符串：{key!r}")
+            action_key = "recorded_action" if label == "gold" else "decision"
+            if item.get(action_key, "proceed") not in {"ask", "proceed"}:
+                raise ValueError(f"{label} {key} 的 {action_key} 必须为 ask 或 proceed")
+            result[key] = item
+        return result
+
+    gold_by_id = index_unique(golds, "gold")
+    pred_by_id = index_unique(predictions, "prediction")
     per_operation: Dict[str, Dict[str, Any]] = {
         item.key: {"items": 0, "detection": None, "ask_pairs": [],
                    "era": [], "cra": []} for item in OPERATIONS}
-    unmatched = 0
-    for pred in predictions:
-        gold = gold_by_id.get(pred["item_id"])
-        if gold is None:
-            unmatched += 1
-            continue
+    unmatched = len(pred_by_id.keys() - gold_by_id.keys())
+    missing = len(gold_by_id.keys() - pred_by_id.keys())
+    for item_id, gold in gold_by_id.items():
+        pred = pred_by_id.get(item_id, {})
         operation = gold.get("operation") or "value_consistency"
         bucket = per_operation.setdefault(operation, {"items": 0, "detection": None,
                                                       "ask_pairs": [], "era": [], "cra": []})
         bucket["items"] += 1
-        bucket.setdefault("pred_findings", []).extend(pred.get("findings", []))
-        bucket.setdefault("gold_findings", []).extend(gold.get("findings", []))
-        predicted_action = pred.get("decision", "proceed")
+        # 不允许不同评测条目中碰巧相同的 doc_id / 偏移互相匹配。
+        def scoped(items):
+            return [dict(f, doc_id=f"{item_id}\0{f['doc_id']}") for f in items]
+        bucket.setdefault("pred_findings", []).extend(scoped(pred.get("findings", [])))
+        bucket.setdefault("gold_findings", []).extend(scoped(gold.get("findings", [])))
+        predicted_action = pred.get("decision", "proceed") if item_id in pred_by_id else "missing"
         actual_action = gold.get("recorded_action", "proceed")
         bucket["ask_pairs"].append((predicted_action, actual_action))
         era = evidence_request_alignment(pred.get("evidence_request", []),
@@ -84,7 +98,8 @@ def evaluate(predictions: Sequence[Dict[str, Any]],
         if actual_action == "ask":
             bucket["cra"].append(era)
 
-    summary: Dict[str, Any] = {"operations": {}, "unmatched_predictions": unmatched}
+    summary: Dict[str, Any] = {"operations": {}, "unmatched_predictions": unmatched,
+                               "missing_predictions": missing, "gold_items": len(gold_by_id)}
     for key, bucket in per_operation.items():
         if not bucket["items"]:
             continue

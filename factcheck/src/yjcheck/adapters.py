@@ -22,6 +22,22 @@ def file_hash(path: Path) -> str:
     return h.hexdigest()
 
 
+def _lcs_len(left: str, right: str) -> int:
+    """最长公共子串长度（动态规划）。"""
+    if not left or not right:
+        return 0
+    previous = [0] * len(right)
+    best = 0
+    for char in left:
+        current = [0] * len(right)
+        for index, other in enumerate(right):
+            if char == other:
+                current[index] = previous[index - 1] + 1 if index else 1
+                best = max(best, current[index])
+        previous = current
+    return best
+
+
 def valid_bbox(value, size=None) -> bool:
     if not isinstance(value, (list, tuple)) or len(value) != 4:
         return False
@@ -152,7 +168,35 @@ def load_document(path: str | Path, role: str, work_dir: str | Path,
         from yjparse.pipeline import PipelineConfig, parse_document
         digest = file_hash(path)
         out = Path(work_dir) / "parse" / digest
-        result = parse_document(path, out, PipelineConfig(primary=engine, reference="none", ocr="off"))
+        # 扫描件走 OCR 兜底；选定的引擎读不出内容（xref 损坏的 0 页解析、
+        # 扫描全文无文本）时自动退回 pymupdf 重试，不把解析层故障放大成业务结论。
+        engines = [engine, "pymupdf"] if engine != "pymupdf" else [engine]
+        result = None
+        last_error = None
+        for name in engines:
+            try:
+                parsed = parse_document(path, out,
+                                        PipelineConfig(primary=name, reference="none", ocr="auto"))
+            except ValueError as exc:
+                last_error = exc
+                if "没有页面" in str(exc) and name != engines[-1]:
+                    continue
+                raise
+            text_chars = sum(len(str(b.get("text", "") or "").replace(" ", ""))
+                             for page in parsed.to_dict().get("pages", [])
+                             for b in page.get("blocks", []))
+            pages = parsed.to_dict().get("pages", [])
+            failed = sum(1 for page in pages if page.get("status") == "fail")
+            usable_ratio = (len(pages) - failed) / max(len(pages), 1)
+            result = parsed
+            # 有可读文本且失败页占比不过半才视为可用；占位补齐页即使被 OCR
+            # 补上文字也仍是解析失败，必须换引擎而不是当作证据来源。
+            if text_chars > 0 and usable_ratio >= 0.5:
+                break
+        if result is None:
+            if last_error is not None:
+                raise last_error
+            raise ValueError(f"解析失败，未获得可读页面：{path}")
         doc = from_parse_result(result.to_dict(), role, path)
     elif suffix == ".docx":
         digest = file_hash(path)
@@ -194,8 +238,15 @@ def bind_company(report: Document, sources: list[Document], company: str | None 
     for doc in [report, *sources]:
         content = re.sub(r"\s+", "", doc.text)
         first_page=next((b.page for b in doc.blocks if b.page is not None),None)
-        title_blocks=[b.text for b in doc.blocks if b.page==first_page] if first_page is not None else [b.text for b in doc.blocks[:1]]
+        if first_page is not None:
+            # OCR 扫描件首页标题可能残损：法定名称核对放宽到前 3 页。
+            title_blocks=[b.text for b in doc.blocks
+                          if b.page is not None and first_page <= b.page <= first_page + 2]
+        else:
+            title_blocks=[b.text for b in doc.blocks[:1]]
         title_text="\n".join(re.sub(r"\s+","",s) for s in title_blocks)
+        # OCR 扫描件的公司全称可能跨块/跨行：整页紧凑拼接后也要能匹配到。
+        title_text += "\n" + re.sub(r"\s+", "", "".join(title_blocks))
         legal_names=[]
         for line in title_text.splitlines():
             legal_names.extend(re.findall(r"([\u4e00-\u9fffA-Za-z]{2,60}(?:股份有限公司|有限责任公司|有限公司))",line))
@@ -205,6 +256,13 @@ def bind_company(report: Document, sources: list[Document], company: str | None 
             for legal in legal_names:
                 if re.search(re.escape(legal)+r"[（(]以下简称[:：]?[‘“\"']"+re.escape(identity)+r"[’”\"']",content):
                     verified=True
+                    break
+        # OCR 扫描件可能个别字识别缺失/出错（如封面“燕塘乳业”被识别成“…塘乳业”）：
+        # 对 3 字及以上的简称，允许与法定名称的最长公共子串只差一个字符。
+        if identity and not verified and len(identity) >= 3:
+            for legal in legal_names:
+                if _lcs_len(identity, legal) >= len(identity) - 1:
+                    verified = True
                     break
         # 简称为标题开头并紧随股票代码、年度或报告类型，同样属于显式标题。
         if identity and re.match(re.escape(identity)+r"(?:[（(]\d{6}[）)]|20\d{2}|年度|研报|财务)",title_text):

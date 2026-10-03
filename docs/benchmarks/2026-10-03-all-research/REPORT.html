@@ -1,0 +1,72 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全量研报实测</title><style>body{max-width:1250px;margin:40px auto;padding:0 24px;font:15px/1.8 system-ui,"Microsoft YaHei";color:#20324c;background:#f7f9fc}h1,h2{color:#183c73}h2{margin-top:36px}.table{overflow:auto;background:white;border:1px solid #dce4ee;border-radius:10px}table{border-collapse:collapse;width:100%;min-width:750px}td{padding:12px;border-bottom:1px solid #e0e6ef}tr:first-child{font-weight:700;background:#eaf0fb}p{margin:9px 0}</style><body><h1>全量研究报告实测结果</h1>
+<p>运行目录：2026-10-03-all-research</p>
+<p>范围：442 篇（行业研报 242、个股研报 200）；共 1792 个标注错误。</p>
+<p>模式：当前离线规则，未配置模型；全量运行，无抽样，未调整检测规则。</p>
+<p>输入为基准正文文本，无配对财报/PDF。调用真实核查流水线并单列内部一致性候选检测；不能把待人工确认当成自动判错。</p>
+<h2>README 竞赛与工程指标</h2>
+<div class="table"><table>
+<tr><td> 指标 </td><td> 实测 </td><td> 合格线 </td><td> 结果 </td><td> 口径与限制 </td></tr>
+<tr><td>判错精确率（自动确认）</td><td>无法计算（0/0）</td><td>&gt;= 90%</td><td>无法判定</td><td>没有自动报错时分母为零，不记为100%</td></tr>
+<tr><td>错误召回率（自动确认）</td><td>0.00%（0/1792）</td><td>&gt;= 80%</td><td>不合格</td><td>全量标注错误为分母；待人工确认不算自动命中</td></tr>
+<tr><td>正确内容误报率</td><td>无法计算</td><td>&lt;= 10%</td><td>无法判定</td><td>主测试集无完整正确断言标注；未标错内容不能直接当负样本</td></tr>
+<tr><td>证据定位准确率</td><td>无法计算</td><td>&gt;= 90%</td><td>无法判定</td><td>缺少原始PDF、来源财报与页码真值；字符匹配不能代替来源页码定位</td></tr>
+<tr><td>建议完整性</td><td>无法计算（0/0）</td><td>—</td><td>无合格线</td><td>无自动确认错误；README未给百分比合格线</td></tr>
+<tr><td>整体判定正确率</td><td>无法计算</td><td>—</td><td>无合格线</td><td>缺少完整负样本与人工复核定论，不能以自身状态充当正确答案</td></tr>
+<tr><td>研报断言覆盖率</td><td>无法计算</td><td>—</td><td>无合格线</td><td>缺少支持范围内断言总数的人工标注</td></tr>
+<tr><td>过度转人工率</td><td>无法计算</td><td>—</td><td>无合格线</td><td>缺少人工标注的本可自动判定项，不能把100%转人工直接当过度转人工率</td></tr>
+<tr><td>建议带证据比例</td><td>无法计算（0/0）</td><td>&gt;= 100%</td><td>无法判定</td><td>零确认错误，不记为100%</td></tr>
+<tr><td>转人工占比</td><td>100.00%（3667/3667）</td><td>—</td><td>无合格线</td><td>真实全流程findings；包含输入异常与覆盖提示</td></tr>
+<tr><td>确定判断占比</td><td>0.00%（0/3667）</td><td>—</td><td>无合格线</td></tr>
+<tr><td>程序运行失败率</td><td>0.00%（0/442）</td><td>—</td><td>无合格线</td><td>Python异常；不等同于财务结论正确或解析失败页比例</td></tr>
+<tr><td>全量执行完成率</td><td>100.00%（442/442）</td><td>—</td><td>无合格线</td></tr>
+<tr><td>产物哈希校验通过率</td><td>100.00%（442/442）</td><td>—</td><td>无合格线</td></tr>
+<tr><td>有输入质量问题的研报比例</td><td>99.77%（441/442）</td><td>—</td><td>无合格线</td></tr>
+<tr><td>有抽取声明的研报比例</td><td>60.18%（266/442）</td><td>—</td><td>无合格线</td><td>按文档统计，不能代替断言覆盖率</td></tr>
+<tr><td>解析失败页比例</td><td>无法计算</td><td>—</td><td>无合格线</td><td>输入只有文本，未运行PDF解析，无真实页面分母</td></tr>
+<tr><td>复核定位具备页码与坐标比例</td><td>无法计算</td><td>—</td><td>无合格线</td><td>纯文本不提供页码坐标；不能捏造一页PDF计为通过</td></tr>
+</table></div>
+<h2>内部一致性疑点检测（全部是待人工确认）</h2>
+<p>此表把明确指出错误类型的疑点作为检测候选，按原文字符区间重叠且类型完全相同一对一匹配。阈值仅作 README 目标对照，不代替自动判错验收。</p>
+<div class="table"><table>
+<tr><td> 指标 </td><td> 实测 </td><td> 目标对照 </td><td> 结果 </td><td> 说明 </td></tr>
+<tr><td>疑点检测精确率</td><td>96.36%（53/55）</td><td>&gt;= 90%</td><td>合格</td><td>严格类型与区间匹配；仅疑点，不是自动确认</td></tr>
+<tr><td>疑点检测召回率</td><td>2.96%（53/1792）</td><td>&gt;= 80%</td><td>不合格</td></tr>
+<tr><td>疑点检测F1</td><td>5.74%（106/1847）</td><td>—</td><td>无合格线</td></tr>
+<tr><td>误报占告警比例</td><td>3.64%（2/55）</td><td>—</td><td>无合格线</td><td>FP/(TP+FP)，不是README正确内容误报率</td></tr>
+<tr><td>只看定位的疑点精确率</td><td>96.36%（53/55）</td><td>—</td><td>无合格线</td><td>字符区间，不评价来源页码</td></tr>
+<tr><td>只看定位的疑点召回率</td><td>2.96%（53/1792）</td><td>—</td><td>无合格线</td></tr>
+</table></div>
+<h3>按错误类型统计召回率</h3>
+<div class="table"><table>
+<tr><td> 错误类型 </td><td> 命中/标注 </td><td> 召回率 </td></tr>
+<tr><td>数值不一致错误</td><td>2/100</td><td>2.00%</td></tr>
+<tr><td>冗余语句</td><td>0/192</td><td>0.00%</td></tr>
+<tr><td>数值缺失</td><td>0/199</td><td>0.00%</td></tr>
+<tr><td>术语误用</td><td>0/166</td><td>0.00%</td></tr>
+<tr><td>语义逻辑矛盾</td><td>0/146</td><td>0.00%</td></tr>
+<tr><td>金融要素缺失</td><td>0/144</td><td>0.00%</td></tr>
+<tr><td>时间矛盾</td><td>51/139</td><td>36.69%</td></tr>
+<tr><td>计算错误</td><td>0/96</td><td>0.00%</td></tr>
+<tr><td>数值单位错误</td><td>0/246</td><td>0.00%</td></tr>
+<tr><td>时间信息非法</td><td>0/170</td><td>0.00%</td></tr>
+<tr><td>属性值缺失错误</td><td>0/127</td><td>0.00%</td></tr>
+<tr><td>格式错误</td><td>0/67</td><td>0.00%</td></tr>
+</table></div>
+<h2>补充正确片段（微调样例，不混入测试集）</h2>
+<p>按文档名称与 442 篇研报精确对应，选取并去重 10 个 origin_text 正确片段。训练样例不能作为独立测试验收。</p>
+<p>自动确认错误的片段比例：0.0%；疑点提示片段比例：0.0%。</p>
+<h2>数量、耗时与成本</h2>
+<p>- 抽取声明：3436；来源事实：0。</p>
+<p>- 全部 findings：3667；确定结论：0；待人工确认：3667。</p>
+<p>- 内部一致性疑点：55；严格匹配 TP/FP/FN：53/2/1739。</p>
+<p>- 442 篇总处理耗时：13.566 秒；平均 0.0307 秒/篇；P95 0.0377 秒。包含两条核查路径、落盘与哈希校验，不含不存在的 PDF 解析。</p>
+<p>- 外部模型调用 0 次，API 费用 0 元；本机电费和硬件成本未计量。数量、时间、费用不是百分比指标，保留实际单位。</p>
+<h2>标注与可复现性</h2>
+<p>- 所有错误标注均在预测完成后才进入评分；模型和规则没有读取标准答案。</p>
+<p>- 一个标注含多段原文时，命中任一段算命中一次；一个候选最多匹配一个标注。</p>
+<p>- 偏移失配使用完整原文精确或去空白匹配重新定位（重复文本选最靠近原偏移的位置），不使用局部模糊片段充当金标。无法定位的错误仍计入全量召回分母。</p>
+<p>- 标注定位统计：{&quot;original&quot;: 1746, &quot;unresolved&quot;: 45, &quot;whitespace_reanchored&quot;: 7}。</p>
+<p>- 未提供完整的正确断言集合、支持范围内全部断言标注、来源页码/坐标真值或人工复核决策，所以对应指标不能伪造为 0% 或 100%。</p>
+<p>- full_results.json 保存逐文档候选、金标、匹配与耗时；runs/ 保存 check_result.json、CSV、Markdown 和 manifest；source_manifest.json 保存数据与代码哈希。</p>
+<p>- 旧 frontend/tools/fined_eval.py 的 false_positive_rate_pct 使用 FP/(TP+FP)，实际是误报占告警比例；本报告不把它当作 README 的 FP/(FP+TN)。</p>
+<p>- 本项目规则已参考过该公开集，结果属于公开开发基准复测，不是未见数据的独立盲测。</p></body></html>

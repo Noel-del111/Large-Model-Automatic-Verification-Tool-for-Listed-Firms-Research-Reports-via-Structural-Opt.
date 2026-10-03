@@ -22,8 +22,7 @@ _METRICS = (
     ("net_profit_parent_excl", r"(?:扣除非经常性损益后归属[于於]?(?:母公司|上市公司)(?:股东|所有者)?(?:的)?净利润|扣非归母净利润|扣非净利润)"),
     ("net_profit_parent", r"(?:归属[于於]?母公司(?:股东|所有者)?(?:的)?净利润|归母净利润)"),
     ("equity_parent", r"归属[于於]?母公司(?:股东|所有者)?(?:的)?权益(?:合计|总计)"),
-    ("revenue_total", r"营业总收入"),
-    ("revenue", r"营业收入"),
+    ("revenue", r"(?:营业总收入|营业收入|营业总收(?!入)|营收)"),
     ("operating_cashflow", r"经营活动产生的现金流量净额"),
     ("eps_basic", r"基本每股收益"),
     ("price", r"股价|每股市价|股票价格"),
@@ -406,6 +405,21 @@ def extract_source_facts(doc: Document) -> list[Fact]:
                 values = list(zip(slots, (v for _, v in values)))
             elif columns[-1] != "change":
                 warnings.append("ambiguous_missing_column")
+        if not indexed and len(values) == 3 and "change" in columns:
+            # OCR 行可能把“调整前/影响金额/调整后”识别成别的列顺序：
+            # 用 后值 ≈ 前值 + 影响值 的等式拟合真实列对齐。
+            import itertools
+            amounts = [Decimal(v) for _, v in values]
+            best = None
+            for order in itertools.permutations(range(3)):
+                before, change, after = (amounts[i] for i in order)
+                error = abs(after - (before + change))
+                score = error / max(Decimal(1), abs(before))
+                if best is None or score < best[0]:
+                    best = (score, order)
+            if best and best[0] <= Decimal("0.005"):
+                values = [(0, amounts[best[1][0]]), (1, amounts[best[1][1]]), (2, amounts[best[1][2]])]
+                columns = ["before", "change", "after"]
         if len(values) > len(columns):
             warnings.append("column_count_mismatch")
         row_facts = []

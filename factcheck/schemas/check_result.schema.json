@@ -18,7 +18,8 @@
         "source_facts": {"type": "integer", "minimum": 0},
         "input_issues": {"type": "integer", "minimum": 0},
         "coverage": {"const": "supported_claims_only"},
-        "complete": {"type": "boolean"}
+        "complete": {"type": "boolean"},
+        "evidence_requests": {"type": "integer", "minimum": 0, "description": "需要补证或澄清的发现数"}
       }
     },
     "documents": {"type": "array", "minItems": 1},
@@ -28,6 +29,18 @@
     "findings": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/finding"}}
   },
   "$defs": {
+    "evidence_request": {
+      "type": "object",
+      "required": ["doc_role", "field", "period", "company", "basis", "scope", "file", "request_type", "reason"],
+      "properties": {
+        "doc_role": {"enum": ["report", "source"]},
+        "field": {"type": "string"}, "period": {"type": "string"},
+        "company": {"type": "string"}, "basis": {"type": "string"},
+        "scope": {"type": "string"}, "file": {"type": "string"},
+        "request_type": {"enum": ["provide_source", "repair_input", "clarify_context", "resolve_conflict"]},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
     "evidence": {
       "type": "object",
       "required": ["doc_id", "run_id", "sha256", "file", "block_id", "page", "bbox", "paragraph", "text", "char_start", "char_end", "quality"],
@@ -66,12 +79,18 @@
         "message": {"type": "string", "minLength": 1}, "suggestion": {"type": "string"},
         "suggested_value": {"type": ["string", "null"]},
         "evidence": {"type": "array", "items": {"$ref": "#/$defs/fact"}},
-        "calculation": {"type": "object"}, "review_status": {"const": "unreviewed"}
+        "calculation": {"type": "object"}, "review_status": {"const": "unreviewed"},
+        "decision": {"enum": ["ask", "proceed"]},
+        "evidence_request": {"type": "array", "items": {"$ref": "#/$defs/evidence_request"}}
       },
       "allOf": [{"if": {"properties": {"status": {"enum": ["confirmed_error", "no_issue"]}}},
                  "then": {"properties": {"evidence": {"minItems": 1}}}},
                 {"if": {"properties": {"status": {"const": "confirmed_error"}}},
-                 "then": {"properties": {"suggestion": {"minLength": 1}, "error_type": {"minLength": 1}}}}]
+                 "then": {"properties": {"suggestion": {"minLength": 1}, "error_type": {"minLength": 1}}}},
+                {"if": {"required": ["decision"], "properties": {"decision": {"const": "ask"}}},
+                 "then": {"required": ["evidence_request"], "properties": {"status": {"const": "needs_review"}, "evidence_request": {"minItems": 1}, "suggested_value": {"type": "null"}}}},
+                {"if": {"required": ["decision"], "properties": {"decision": {"const": "proceed"}}},
+                 "then": {"required": ["evidence_request"], "properties": {"status": {"enum": ["confirmed_error", "no_issue"]}, "evidence_request": {"maxItems": 0}}}}]
     }
   }
 }

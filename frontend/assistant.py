@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
-from exports import ERROR_TYPE_LABELS, STATUS_LABELS
+from exports import ERROR_TYPE_LABELS, STATUS_LABELS, evidence_request_text
 from yjcheck.model import ModelConfig
 
 # ---------------------------------------------------------------- 规则解释卡（离线降级）
@@ -187,6 +187,8 @@ def rule_explanation(finding: dict) -> str:
         lines += [f"- 修改建议：{suggest}"]
     locations = _location_lines(finding.get("evidence", []))
     lines += ["", "- 依据位置：" + ("；".join(locations) if locations else "无定位证据")]
+    if finding.get("evidence_request"):
+        lines += ["", "- 需要补充：" + evidence_request_text(finding)]
     lines += ["", "以上为离线规则解释卡；满足证据条件时请由人工复核确认。"]
     return "\n".join(lines)
 
@@ -231,6 +233,7 @@ def ask_finding_question(result: dict, finding: dict, question: str,
         "计算过程": finding.get("calculation", {}),
         "修改建议": finding.get("suggestion", ""),
         "建议值": finding.get("suggested_value"),
+        "补充证据清单": finding.get("evidence_request", []),
         "用户问题": question,
     }
     user = json.dumps(context, ensure_ascii=False, indent=1)[:12000]
@@ -305,6 +308,8 @@ def ask_report_question(result: dict, question: str,
                          f"｜{claim.get('company', '')} {claim.get('metric', '')} "
                          f"{claim.get('value', '')}{claim.get('unit', '')}"
                          f"　{payload.get('suggestion', '')[:60]}")
+            if payload.get("evidence_request"):
+                lines.append("  需要补充：" + evidence_request_text(payload))
         return {"mode": "offline", "answer": "\n".join(lines), "warnings": [], "hits": hits}
     hit_lines = []
     for hit in hits:
@@ -316,6 +321,8 @@ def ask_report_question(result: dict, question: str,
             f"{claim.get('value', '')}{claim.get('unit', '')} {claim.get('period', '')}："
             f"{payload.get('message', '')[:80]}　建议：{payload.get('suggestion', '')[:60]}"
             + (f"　{hit['locations']}" if hit.get("locations") else ""))
+        if payload.get("evidence_request"):
+            hit_lines.append("  需要补充：" + evidence_request_text(payload))
     context = (
         f"本次核查摘要：已确认错误 {summary.get('confirmed_error', 0)}，"
         f"待人工确认 {summary.get('needs_review', 0)}，未发现问题 {summary.get('no_issue', 0)}，"

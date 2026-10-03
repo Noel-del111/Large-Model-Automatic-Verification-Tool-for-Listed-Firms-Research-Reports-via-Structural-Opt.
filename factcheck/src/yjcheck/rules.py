@@ -28,7 +28,7 @@ _UNITS = {
     "年": ("year", "1"), "1": ("number", "1"),
 }
 _METRIC_ALIASES = {
-    "营业收入": "revenue", "营收": "revenue", "营业总收入": "revenue_total",
+    "营业收入": "revenue", "营收": "revenue", "营业总收入": "revenue", "revenue_total": "revenue",
     "净利润": "net_profit", "归母净利润": "net_profit_parent",
     "归属于母公司股东的净利润": "net_profit_parent", "货币资金": "cash",
     "存货": "inventory", "未分配利润": "retained_earnings",
@@ -110,7 +110,11 @@ def _period_valid(period: str, metric: str) -> bool:
 def _evidence_issues(evidence: Evidence) -> list[str]:
     issues = []
     if evidence.quality != "ok":
-        issues.append(f"证据质量为 {evidence.quality or 'unknown'}")
+        notes = list(evidence.notes or [])
+        explainable = bool(notes) and all(
+            re.match(r"^(?:info:|ocr_used:)", str(n)) is not None for n in notes)
+        if not explainable:
+            issues.append(f"证据质量为 {evidence.quality or 'unknown'}")
     if not evidence.doc_id or not evidence.block_id:
         issues.append("缺少文档或区块标识")
     if not re.fullmatch(r"[0-9a-fA-F]{64}", evidence.sha256 or ""):
@@ -277,7 +281,8 @@ def _derived(claim: Fact, sources: list[Fact]) -> tuple[list[Fact], Finding | No
         prior = _prior_period(claim.period)
         if prior is None:
             return [], _review(claim, "同比期间无法确定上年同期。", rule="C.YOY.001")
-        requirements = [(metric[:-4], claim.period), (metric[:-4], prior)]
+        base = _METRIC_ALIASES.get(metric[:-4], metric[:-4])
+        requirements = [(base, claim.period), (base, prior)]
         formula = "(current - prior) / prior * 100"
     selected: list[Fact] = []
     for required_metric, required_period in requirements:
@@ -291,7 +296,13 @@ def _derived(claim: Fact, sources: list[Fact]) -> tuple[list[Fact], Finding | No
         if not valid:
             # A published growth rate is useful only as a direct quotation. It
             # does not substitute for missing calculation inputs; require both.
-            return [], _review(claim, f"缺少可核验的 {required_period} {required_metric}，无法复算。", options, "C.DERIVED.001")
+            missing = [{"metric": m, "period": p} for m, p in requirements
+                       if not any(s.company == claim.company and _metric(s) == m
+                                  and s.period == p and s.scope == claim.scope
+                                  and s.basis == claim.basis and s.currency == claim.currency
+                                  and not _issues(s) for s in sources)]
+            return [], _review(claim, f"缺少可核验的 {required_period} {required_metric}，无法复算。",
+                               options, "C.DERIVED.001", {"required_inputs": missing})
         if _identity_conflict(valid) or _values_conflict(valid):
             return [], _review(claim, "复算输入存在冲突，不能选择性采用其中一项。", valid, "C.MATCH.002")
         selected.append(valid[0])

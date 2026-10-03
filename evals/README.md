@@ -1,3 +1,20 @@
+# 本地集成补充（2026-10-03）
+
+本目录来自上游 `d71f8c752138da3898208f82bb6c525a82f7d325` 的 `evals/`。下方研究记录保留上游原文，其中统计、能力描述和建议不等于本地实测结论。
+
+本地已将 `decision=ask/proceed` 与结构化 `evidence_request` 接入核查流水线。Ask 表示需要补证或人工澄清，系统三类状态保持兼容；它不单独代表缺少文件。清单包含 `doc_role`（report/source）、`field`（指标或待澄清字段）、`period`、company、basis、scope、file、request_type、reason。
+
+```powershell
+.venv/Scripts/python.exe -X utf8 evals/check_result_adapter.py --result <运行目录>/check_result.json --out evals/reports/predictions.json
+.venv/Scripts/python.exe -X utf8 evals/operation_eval.py --predictions evals/reports/predictions.json --gold <人工金标准.json> --out evals/reports/decision_score.json
+```
+
+人工金标准使用相同 `item_id`，设置 `operation: "evidence_request"`、`recorded_action: "ask"` 或 `"proceed"`；如需补证，在 `required_evidence` 独立标注 doc_role、field、period。不能将系统输出复制为金标准来声称准确率达标。适配器只输出证据决策，不把 PDF 块内字符偏移当成公开集全文偏移。
+
+本地修复评分边界：缺失预测计入决策错误与检出漏报；重复 ID、非法动作拒绝评分；不同 item 的同名文档不能互相匹配。没有对应金标准的预测在 `unmatched_predictions` 单独计数。ERA/CRA 沿用上游的必需证据覆盖率定义，不惩罚过量取证；单分支样本的 balanced_accuracy 只有该分支召回率，应结合 counts 解读。
+
+---
+
 # 公开评测集接入与模型评价标准
 
 ## 一、先分清两个东西

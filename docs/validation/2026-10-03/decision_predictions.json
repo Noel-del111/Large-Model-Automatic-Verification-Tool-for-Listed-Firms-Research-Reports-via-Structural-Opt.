@@ -1,0 +1,35 @@
+[
+  {
+    "item_id": "e43141f5c5ac49cdb8d1d5ccb0b66849:0:359c70c520b4cfe1cfd8",
+    "operation": "evidence_request",
+    "decision": "proceed",
+    "evidence_request": [],
+    "findings": []
+  },
+  {
+    "item_id": "e43141f5c5ac49cdb8d1d5ccb0b66849:1:7f0fbd6d61b2e915fc8f",
+    "operation": "evidence_request",
+    "decision": "proceed",
+    "evidence_request": [],
+    "findings": []
+  },
+  {
+    "item_id": "e43141f5c5ac49cdb8d1d5ccb0b66849:2:57024d9c226df5ae1b16",
+    "operation": "evidence_request",
+    "decision": "ask",
+    "evidence_request": [
+      {
+        "doc_role": "source",
+        "field": "inventory",
+        "period": "2025-06-30",
+        "company": "示例公司",
+        "basis": "reported",
+        "scope": "consolidated",
+        "file": "",
+        "request_type": "provide_source",
+        "reason": "补充该公司、期间和口径下的财报/公告数值行及表头，保留页码与坐标。"
+      }
+    ],
+    "findings": []
+  }
+]

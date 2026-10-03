@@ -18,6 +18,7 @@ METRICS = {
     "归属于母公司所有者权益": "equity_parent", "归母所有者权益": "equity_parent",
     "资产总计": "total_assets", "总资产": "total_assets", "资本公积": "capital_reserve",
     "经营活动产生的现金流量净额": "operating_cashflow",
+    "经营活动现金流量净额": "operating_cashflow",
     "经营现金流净额": "operating_cashflow", "股价": "price", "市盈率": "pe", "PE": "pe",
     "毛利率": "gross_margin",
 }
@@ -113,6 +114,11 @@ def _extract_native_claims(doc: Document) -> list[Fact]:
                         continue
                     scope_hits=list(re.finditer(r"母公司口径|母公司报表|合并口径|合并报表",context))
                     scope = "parent" if scope_hits and scope_hits[-1].group().startswith("母公司") else "consolidated"
+                    # “母公司营业收入”这类直接前缀也声明了母公司口径（不影响“归属于母公司…”等归母指标）。
+                    prefix_start = max(0, metric_match.start() - 3)
+                    if (compact[prefix_start:metric_match.start()] == "母公司"
+                            and metric not in {"net_profit_parent", "net_profit_parent_excl", "equity_parent"}):
+                        scope = "parent"
                     start = metric_match.end()+num.start()
                     end = metric_match.end()+num.end()
                     attrs = {"value_start": mapping[start], "value_end":mapping[end-1]+1,

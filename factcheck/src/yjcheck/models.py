@@ -24,6 +24,7 @@ class Evidence:
     char_start: int | None = None
     char_end: int | None = None
     quality: str = "ok"
+    notes: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -43,7 +44,8 @@ class Block:
                  start: int | None = None, end: int | None = None) -> Evidence:
         return Evidence(doc.doc_id, doc.run_id, doc.sha256, doc.path, self.block_id,
                         self.page, self.bbox, self.paragraph,
-                        self.text if text is None else text, start, end, self.status)
+                        self.text if text is None else text, start, end, self.status,
+                        list(self.notes))
 
 
 @dataclass

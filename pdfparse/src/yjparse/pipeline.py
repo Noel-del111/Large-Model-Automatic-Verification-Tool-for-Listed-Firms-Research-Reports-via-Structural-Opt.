@@ -162,8 +162,15 @@ def _pdf_page_sizes(path: Path, coordinate_engine: str = "pymupdf") -> List[Tupl
         # pdfplumber uses MediaBox coordinates; PyMuPDF uses the CropBox.
         # A clipped PDF must not inherit dimensions from another coordinate system.
         import pdfplumber
-        with pdfplumber.open(str(path)) as pdf:
-            return [(float(p.width), float(p.height)) for p in pdf.pages]
+        try:
+            with pdfplumber.open(str(path)) as pdf:
+                sizes = [(float(p.width), float(p.height)) for p in pdf.pages]
+        except Exception:
+            sizes = []
+        if sizes:
+            return sizes
+        # pdfminer 对部分 xref 损坏的 PDF 可能读不出页面：退回 pymupdf 读取页数，
+        # 引擎是否可用由上游 fallback 逻辑决定，这里只保证页元数据不再丢失。
     try:
         import pymupdf
     except ImportError:

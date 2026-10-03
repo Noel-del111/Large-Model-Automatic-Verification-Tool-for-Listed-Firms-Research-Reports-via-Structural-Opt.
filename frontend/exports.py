@@ -26,7 +26,31 @@ ERROR_TYPE_LABELS = {
 }
 REVIEW_LABELS = {"unreviewed": "未复核", "confirmed": "确认", "dismissed": "驳回（误报）", "contested": "存疑"}
 
-_HEADER = ["状态", "错误类型", "公司", "指标", "研报原文", "声明值", "期间", "建议值", "建议", "依据位置", "规则", "复核状态", "复核人", "复核备注"]
+_HEADER = ["状态", "错误类型", "公司", "指标", "研报原文", "声明值", "期间", "建议值", "建议", "依据位置", "规则", "复核状态", "复核人", "复核备注", "补充证据清单"]
+
+
+def request_field_label(field: str) -> str:
+    labels = {"revenue": "营业收入", "net_profit": "净利润", "net_profit_parent": "归母净利润",
+              "net_profit_parent_excl": "扣非归母净利润", "operating_cashflow": "经营现金流净额",
+              "inventory": "存货", "cash": "货币资金", "total_assets": "总资产",
+              "equity_parent": "归母所有者权益", "capital_reserve": "资本公积",
+              "eps_basic": "基本每股收益", "price": "股价", "pe": "市盈率", "gross_margin": "毛利率",
+              "company": "公司身份", "metric": "指标定义", "period": "数据期间", "basis": "调整前后口径",
+              "scope": "合并/母公司范围", "currency": "币种", "unit": "计量单位",
+              "exchange_rate": "汇率及换算日期", "document_integrity": "文件身份与完整性",
+              "supported_claims": "可核查的原文", **ERROR_TYPE_LABELS}
+    if field.endswith("_yoy"):
+        return labels.get(field[:-4], field[:-4]) + "同比"
+    return labels.get(field, field)
+
+
+def evidence_request_text(finding: dict) -> str:
+    roles = {"report": "研报", "source": "财报/公告"}
+    return "；".join(
+        f"{roles.get(r.get('doc_role'), '材料')} / {request_field_label(r.get('field', ''))} / "
+        f"{r.get('period') or '期间待确认'}：{r.get('reason', '')}"
+        + (f"（文件：{Path(r['file']).name}）" if r.get("file") else "")
+        for r in finding.get("evidence_request", []))
 
 
 def _guard(value: str) -> str:
@@ -75,6 +99,7 @@ def findings_rows(result: dict, reviews: dict[str, dict]) -> list[list[str]]:
             REVIEW_LABELS.get(review.get("status", "unreviewed"), "未复核"),
             review.get("reviewer", ""),
             review.get("note", ""),
+            evidence_request_text(finding),
         ])
     return rows
 
@@ -102,7 +127,7 @@ def report_md(result: dict, reviews: dict[str, dict]) -> str:
         "|" + "---|" * len(_HEADER),
     ]
     for row in findings_rows(result, reviews):
-        lines.append("| " + " | ".join(_guard(str(cell)).replace("\n", " ") for cell in row) + " |")
+        lines.append("| " + " | ".join(_guard(str(cell)).replace("|", "\\|").replace("\r", " ").replace("\n", " ") for cell in row) + " |")
     reviewed = sum(1 for entry in reviews.values() if entry.get("status") != "unreviewed")
     lines += ["", f"复核进度：{reviewed}/{len(reviews)}（复核状态由 D 维护，写入 review.json，不改写核查产物）"]
     if result.get("input_issues"):
@@ -129,6 +154,8 @@ def _pdf_lines(result: dict, reviews: dict[str, dict]) -> list[str]:
         if row[7]:
             lines.append(f"  建议值：{row[7]}　规则：{row[10]}")
         lines.append(f"  依据：{row[9][:100]}　复核：{row[11]}")
+        if row[14]:
+            lines.append(f"  补充证据：{row[14]}")
         lines.append("")
     lines.append(f"复核进度：{sum(1 for e in reviews.values() if e.get('status') != 'unreviewed')}/{len(reviews)}")
     lines.append("声明：仅覆盖已提取的受支持事实，不表示已审查文章全部论断。")

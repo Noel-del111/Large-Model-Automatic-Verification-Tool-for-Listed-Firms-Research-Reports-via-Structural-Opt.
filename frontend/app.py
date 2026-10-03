@@ -30,7 +30,7 @@ from yjcheck.pipeline import run_check, verify_artifacts  # noqa: E402
 
 from assistant import (TraceLog, ask_finding_question,  # noqa: E402
                        ask_report_question, rule_explanation)
-from exports import (ERROR_TYPE_LABELS, REVIEW_LABELS, STATUS_LABELS,  # noqa: E402
+from exports import (ERROR_TYPE_LABELS, REVIEW_LABELS, STATUS_LABELS, evidence_request_text, request_field_label,  # noqa: E402
                      findings_csv_bytes, full_json_bytes, report_md, report_pdf_bytes)
 from highlight import CLAIM_COLOR, SOURCE_COLOR, render_location_image  # noqa: E402
 from review_store import REVIEW_STATUSES, ReviewStore  # noqa: E402
@@ -147,6 +147,14 @@ def overview_view(result: dict, check_dir: Path) -> None:
                 st.markdown(f"**{Path(str(item.get('file', ''))).name}**")
                 for issue in item.get("issues", []):
                     st.caption(f"- {issue}")
+    requests = [f for f in result.get("findings", []) if f.get("evidence_request")]
+    if requests:
+        st.warning(f"有 {len(requests)} 条发现需要补充证据或澄清上下文；补齐材料后重新核查。")
+        with st.expander("查看补充证据清单", expanded=False):
+            st.dataframe([{"指标": f["claim"].get("metric", ""),
+                           "期间": f["claim"].get("period", ""),
+                           "需要补充": evidence_request_text(f)} for f in requests],
+                         width="stretch", hide_index=True)
     if st.button("校验运行产物完整性", key="verify_artifacts"):
         ok = verify_artifacts(str(check_dir))
         if ok:
@@ -198,6 +206,7 @@ def list_view(result: dict) -> None:
             "建议值": finding.get("suggested_value") or "",
             "依据位置": location_text(finding.get("evidence", [])),
             "规则": finding.get("rule_id", ""),
+            "补充证据": evidence_request_text(finding),
         })
     st.dataframe(rows, width="stretch", hide_index=True, height=420,
                  on_select="rerun", selection_mode="single-row", key="findings_table")
@@ -291,6 +300,13 @@ def evidence_view(result: dict) -> None:
                f"声明值 {value_text}　期间 {claim.get('period', '')}　"
                f"口径 {claim.get('basis', '')}/{claim.get('scope', '')}　币种 {claim.get('currency', '')}")
     st.markdown(f"> {claim.get('text', '')}")
+    if finding.get("evidence_request"):
+        st.warning("此项需要补证或澄清后再核查。")
+        for request in finding["evidence_request"]:
+            role = {"report": "研报", "source": "财报/公告"}.get(request["doc_role"], "材料")
+            st.markdown(f"- **{role} · {request_field_label(request['field'])} · {request['period'] or '期间待确认'}**：{request['reason']}")
+            if request.get("file"):
+                st.caption(f"待核对文件：{Path(request['file']).name}")
     if finding.get("suggestion"):
         suggest = finding.get("suggestion", "")
         if finding.get("suggested_value") is not None:

@@ -14,6 +14,7 @@ from .intrinsic import check_intrinsic_consistency
 from .models import Fact, Finding, SCHEMA_VERSION
 from .rules import check_facts
 from .source_extract import extract_source_facts
+from .evidence_requests import attach_evidence_requests, request_text
 
 
 def check_documents(report, sources, model_config=None) -> dict:
@@ -55,11 +56,14 @@ def check_documents(report, sources, model_config=None) -> dict:
     summary.update({"claims":len(claims),"source_facts":len(source_facts),
                     "input_issues":len(input_issues), "coverage":"supported_claims_only",
                     "complete":bool(claims) and not input_issues and not summary["needs_review"] and not any(t["status"]!="ok" for t in model_traces)})
+    document_context = [{"role": d.role, "path": d.path, "issues": d.issues} for d in [report, *sources]]
+    serialized = [attach_evidence_requests(f.to_dict(), document_context) for f in findings]
+    summary["evidence_requests"] = sum(f["decision"] == "ask" for f in serialized)
     return {"schema_version":SCHEMA_VERSION,"run_id":uuid.uuid4().hex,
             "created_at":datetime.now(timezone.utc).isoformat(),"summary":summary,
             "documents":[{"role":d.role,"doc_id":d.doc_id,"sha256":d.sha256,"run_id":d.run_id,
                           "path":d.path,"company":d.company,"metadata":d.metadata} for d in [report,*sources]],
-            "input_issues":input_issues,"findings":[f.to_dict() for f in findings],
+            "input_issues":input_issues,"findings":serialized,
             "source_facts":[f.to_dict() for f in source_facts],"model_traces":model_traces}
 
 
@@ -90,8 +94,8 @@ def write_result(result: dict, out: Path) -> Path:
                 loc=f"第{e['page']}页" if e["page"] is not None else f"第{e['paragraph']}段"
                 locations.append(f"{Path(e['file']).name} {loc}")
         rows.append([f["status_label"],f["error_type"],claim["text"],f["suggestion"],f["message"],
-                     "; ".join(dict.fromkeys(locations)),f["rule_id"],f["review_status"]])
-    header=["状态","错误类型","研报原文","修改建议","依据说明","来源位置","规则","人工复核状态"]
+                     "; ".join(dict.fromkeys(locations)),f["rule_id"],f["review_status"],request_text(f)])
+    header=["状态","错误类型","研报原文","修改建议","依据说明","来源位置","规则","人工复核状态","补充证据清单"]
     with (dest/"findings.csv").open("w",encoding="utf-8-sig",newline="") as stream:
         writer=csv.writer(stream)
         # 防止在 Excel 中将研报中的 =/+/−/@ 字段当作公式执行。

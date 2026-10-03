@@ -296,7 +296,13 @@ def _derived(claim: Fact, sources: list[Fact]) -> tuple[list[Fact], Finding | No
         if not valid:
             # A published growth rate is useful only as a direct quotation. It
             # does not substitute for missing calculation inputs; require both.
-            return [], _review(claim, f"缺少可核验的 {required_period} {required_metric}，无法复算。", options, "C.DERIVED.001")
+            missing = [{"metric": m, "period": p} for m, p in requirements
+                       if not any(s.company == claim.company and _metric(s) == m
+                                  and s.period == p and s.scope == claim.scope
+                                  and s.basis == claim.basis and s.currency == claim.currency
+                                  and not _issues(s) for s in sources)]
+            return [], _review(claim, f"缺少可核验的 {required_period} {required_metric}，无法复算。",
+                               options, "C.DERIVED.001", {"required_inputs": missing})
         if _identity_conflict(valid) or _values_conflict(valid):
             return [], _review(claim, "复算输入存在冲突，不能选择性采用其中一项。", valid, "C.MATCH.002")
         selected.append(valid[0])
