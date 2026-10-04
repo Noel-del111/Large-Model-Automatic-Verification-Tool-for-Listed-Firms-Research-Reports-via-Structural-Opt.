@@ -41,8 +41,34 @@ MODEL_DIRECT_PR = {
     "金融要素缺失": (77.78, 5.04),
     "法规引用错误": (0.0, 0.0),
     "模糊语言": (0.0, 0.0),
-    "不一致条款": None,  # PDF 第六节缺该类行，不参与归因
+    "不一致条款": None,  # 原报告未提供，必须保留缺失状态，不能补造 P/R
 }
+
+
+def estimate_type(kind: str, gold: int, total_gold: int, pr) -> dict:
+    """保留全部类型；零召回/零精确率不能用于反推出 FP 数量。"""
+    row = {"error_type": kind, "gold": gold,
+           "gold_share_pct": round(gold / total_gold * 100, 2) if total_gold else None,
+           "tp": None, "fp": None, "fn": None,
+           "pdf_p": pr[0] if pr is not None else None,
+           "pdf_r": pr[1] if pr is not None else None,
+           "fp_density": None, "fp_share_of_610": None}
+    if pr is None:
+        row.update(status="missing_source_metrics", reason="PDF 未提供该类指标，需原批次逐篇预测或分类型计数。")
+        if gold == 0:
+            row.update(tp=0, fn=0)
+        return row
+    p, r = pr
+    tp = round(r / 100 * gold)
+    row.update(tp=tp, fn=gold - tp)
+    if gold == 0 or p <= 0:
+        row.update(status="fp_not_identifiable", reason="零金标或零精确率不能确定预测数量；FP 待原始产物核实。")
+        return row
+    fp = round(tp * (1 - p / 100) / (p / 100))
+    row.update(fp=fp, fp_density=round(fp / gold, 3),
+               fp_share_of_610=round(fp / 610 * 100, 2),
+               status="estimated_from_rounded_metrics", reason="由报告舍入后的 P/R 反推，并非逐条预测复算。")
+    return row
 
 
 def main() -> int:
@@ -88,24 +114,13 @@ def main() -> int:
     rows = []
     tp_sum = fp_sum = fn_sum = 0
     for t, pr in MODEL_DIRECT_PR.items():
-        if pr is None:
-            continue  # 不一致条款在 PDF 第六节无行
-        p, r = pr
         g = gold_by_type.get(t, 0)
-        if g == 0:
-            continue  # 法规引用错误/模糊语言: 研报金标为 0, P/R 无从反解
-        tp = round(r / 100 * g)
-        fp = round(tp * (1 - p / 100) / (p / 100)) if p > 0 else 0
-        fn = g - tp
-        tp_sum += tp
-        fp_sum += fp
-        fn_sum += fn
-        rows.append({"error_type": t, "gold": g, "gold_share_pct": round(g / total_gold * 100, 2),
-                     "tp": tp, "fp": fp, "fn": fn,
-                     "pdf_p": p, "pdf_r": r,
-                     "fp_density": round(fp / g, 3),  # 单位金标对应的误报数
-                     "fp_share_of_610": round(fp / 610 * 100, 2)})
-    rows.sort(key=lambda row: -row["fp"])
+        row = estimate_type(t, g, total_gold, pr)
+        tp_sum += row["tp"] or 0
+        fp_sum += row["fp"] or 0
+        fn_sum += row["fn"] or 0
+        rows.append(row)
+    rows.sort(key=lambda row: (row["fp"] is None, -(row["fp"] or 0)))
     empty_types = [t for t, pr in MODEL_DIRECT_PR.items() if pr is not None and gold_by_type.get(t, 0) == 0]
     report = {
         "scope_note": ("442 篇研报(开发265+评测89+保留88)重建金标 × PDF 分类型 P/R 反解；"
@@ -118,7 +133,9 @@ def main() -> int:
                        "tp_deviation": tp_sum - 1181, "fp_deviation": fp_sum - 610,
                        "fn_deviation": fn_sum - 566,
                        "gold_empty_types": empty_types,
-                       "fp_attributed_to_empty_types": 610 - fp_sum},
+                       "unattributed_fp_residual": 610 - fp_sum,
+                       "residual_note": "总 FP 减可反推 FP 的差额；可能涉及缺失类型、零金标类型及舍入，不能归给特定类型。",
+                       "incomplete_types": [row["error_type"] for row in rows if row["fp"] is None]},
         "per_type": rows,
     }
     OUT.mkdir(parents=True, exist_ok=True)
