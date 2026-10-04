@@ -158,11 +158,19 @@ class RunnerTests(unittest.TestCase):
     def test_non_dev_examples_and_duplicate_input_ids_are_rejected(self):
         examples = self.root / "examples.json"
         examples.write_text(json.dumps([{"source_split": "holdout_oct07"}]), encoding="utf-8")
-        with self.assertRaisesRegex(ValueError, "dev-only"):
+        with self.assertRaisesRegex(ValueError, "dev/sft-negative"):
             self.execute(self.args(examples=str(examples)))
         self.write_inputs([input_document(), input_document()])
         with self.assertRaisesRegex(ValueError, "duplicate input"):
             self.execute()
+
+    def test_detector_subset_runs_and_offline_model_direct_is_rejected(self):
+        with patch.object(text_review, "detect_text", side_effect=complete_report) as detector:
+            with self.assertRaisesRegex(ValueError, "offline 模式无法运行 model_direct"):
+                self.execute(self.args(detectors="model_direct"))
+            self.execute(self.args(detectors="hybrid"))
+        self.assertEqual([c.kwargs["detector"] for c in detector.call_args_list], ["hybrid"])
+        self.assertFalse((self.out / "predictions" / "legacy_rules").exists())
 
     def test_completed_cache_is_reused_and_bound_to_input_fingerprint(self):
         with patch.object(text_review, "detect_text", side_effect=complete_report) as detector:

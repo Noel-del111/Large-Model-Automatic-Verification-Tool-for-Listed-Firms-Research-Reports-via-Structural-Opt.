@@ -58,6 +58,12 @@ def _count_objects(segment: str) -> int:
     # Introductory time/context clauses are not members of an object list.
     segment = re.sub(r"^(?:报告期(?:内|各期末|各期)?|本报告期内|其中|截至[^，,]+|当期)[，,]", "", segment)
     parts = [p for p in re.split(r"[、,，/／]", segment) if p.strip()]
+    # Chinese lists commonly join only the last two members with 和/及/与.
+    # Do not split category names such as “摩托车及其他” in a middle position.
+    if len(parts) >= 2 and not re.search(r"(?:和|及|与)其他$", parts[-1].strip()):
+        tail = [p for p in re.split(r"(?<=[\u4e00-\u9fff])(?:和|及|与)(?=[\u4e00-\u9fff])",
+                                    parts[-1]) if p.strip()]
+        parts = parts[:-1] + tail
     if len(parts) < 2:
         return 0
     # A prose comma alone also separates time/context from a single subject.
@@ -72,6 +78,26 @@ def _count_objects(segment: str) -> int:
                 or re.search(r"报告期|各期末|各期|上述|构成|主要由|包括|其中|占比|比例|截至|为主|实现|近年来|近年|上半年|下半年|本期|当期|上年|去年|今年|本季度|前三季度", part)):
             return 0
     return len(parts)
+
+
+def _local_object_list(segment: str) -> str:
+    """Drop introductory comma clauses before the list governed by ``分别``.
+
+    A comma-only entity list such as ``甲公司，乙公司`` remains intact. When
+    the final clause contains an explicit list separator, earlier prose such as
+    ``分领域看，`` or ``以旧换新带动下，`` cannot become phantom members.
+    """
+    clauses = [part for part in re.split(r"[，,]", segment) if part]
+    if len(clauses) < 2:
+        return segment
+    last = clauses[-1]
+    if re.search(r"[、/／]", last):
+        return last
+    if all(re.search(
+            r"(?:公司|集团|银行|基金|证券|行业|业务|产品|项目|地区|国有行|农商行|城商行)$",
+            part) for part in clauses):
+        return segment
+    return last
 
 
 def _flat_value_count(tail: str) -> int | None:
@@ -129,7 +155,7 @@ def check_enumerations(doc: Document) -> list[Finding]:
             # Both “A、B分别为...” and “A、B分别上涨...” put their
             # compared objects before 分别. Restrict amounts to its tail so
             # earlier context values cannot inflate the enumeration count.
-            objects = _count_objects(cleaned[:marker])
+            objects = _count_objects(_local_object_list(cleaned[:marker]))
             if objects < 2 or objects >= 20:
                 continue
             value_count = _flat_value_count(cleaned[marker+len("分别"):])

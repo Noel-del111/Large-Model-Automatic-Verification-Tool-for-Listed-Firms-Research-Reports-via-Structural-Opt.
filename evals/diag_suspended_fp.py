@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""诊断悬空标点规则的 FP：区分 span 匹配失败 vs 真误报。"""
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(ROOT / "evals"), str(ROOT / "factcheck/src")]
+from fined_bench_eval import _contains_error, _valid_span
+from yjcheck.text_review import _suspended_punctuation_rules
+
+GOLD = ROOT / "data/v2/dataset/gold.dev.jsonl"
+INPUTS = ROOT / "data/v2/dataset/inputs.dev.jsonl"
+
+
+def main() -> int:
+    gold = {}
+    for line in GOLD.read_text(encoding="utf-8").splitlines():
+        g = json.loads(line)
+        gold[g["document_id"]] = g["errors"]
+    rows = [json.loads(l) for l in INPUTS.read_text(encoding="utf-8").splitlines()]
+    by_id = {r["doc_id"]: r for r in rows}
+
+    for suffix in ("000160", "000260", "000368"):
+        did = next(d for d in by_id if d.endswith(suffix))
+        content = by_id[did]["content"]
+        preds = _suspended_punctuation_rules(content)
+        golds = [e for e in gold[did] if e.get("scorable", True) and e.get("type") == "金融要素缺失"]
+        print(f"=== {suffix} | preds={len(preds)} golds={len(golds)}")
+        for e in golds:
+            print("  GOLD:", [(s["start"], s["end"], s["text"][:50]) for s in e.get("spans") or []])
+        for e in preds:
+            print("  PRED:", [(s["start"], s["end"], s["text"][:50]) for s in e["spans"]])
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

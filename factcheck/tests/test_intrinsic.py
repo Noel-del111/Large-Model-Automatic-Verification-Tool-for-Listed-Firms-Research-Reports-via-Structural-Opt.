@@ -65,6 +65,25 @@ class EnumerationTests(unittest.TestCase):
         findings = check_enumerations(make_doc("家用电器、基础化工分别上涨8.5%、4.5%。"))
         self.assertEqual(findings, [])
 
+    def test_introductory_clauses_do_not_become_list_members(self):
+        normal = (
+            "分领域看，军工信息化、光模块光器件、卫星互联网表现较好，涨幅分别为11.2%、10.6%、8.1%。",
+            "商品消费方面，各地以旧换新活动带动之下，重点零售企业家电/汽车/家具销售额分别同比增长7.9%/4.8%/4.6%；",
+            "资本开支方面，阿里、腾讯分别为246.12亿元、274.76亿元。",
+        )
+        for text in normal:
+            with self.subTest(text=text):
+                self.assertEqual(check_enumerations(make_doc(text)), [])
+
+    def test_final_conjunction_separates_the_last_two_members(self):
+        text = "具体来看，中证全债、中证国债和中证信用债分别上涨0.07%、0.01%和0.13%。"
+        self.assertEqual(check_enumerations(make_doc(text)), [])
+
+    def test_category_name_with_and_other_is_one_member(self):
+        text = ("商用载客车、商用载货车、汽车零部件、摩托车及其他、乘用车"
+                "分别下跌0.48%、0.52%、1.79%、2.66%、5.59%。")
+        self.assertEqual(check_enumerations(make_doc(text)), [])
+
     def test_range_and_ordinal_are_not_counted(self):
         findings = check_enumerations(make_doc("第1名、第2名分别上涨1-3%、4%。"))
         self.assertEqual(findings, [])

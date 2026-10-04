@@ -339,14 +339,24 @@ def run(args):
     if len(ids) != len(set(ids)):
         raise ValueError("duplicate input document IDs")
     examples = json.loads(Path(args.examples).read_text(encoding="utf-8")) if args.examples else []
-    if not isinstance(examples, list) or any(e.get("source_split") != "dev" for e in examples):
-        raise ValueError("few-shot examples must be an explicit dev-only list")
+    if not isinstance(examples, list) or any(e.get("source_split") not in ("dev", "sft_negative") for e in examples):
+        raise ValueError("few-shot examples must be an explicit dev/sft-negative list")
     selected = fixed_queue(rows)[:args.max_documents] if args.max_documents else fixed_queue(rows)
     client = BudgetedChatClient(ModelConfig.from_env()) if args.mode == "model" else None
-    detectors = DETECTORS if client else ("legacy_rules", "hybrid")
+    requested = getattr(args, "detectors", "") or ""
+    if requested:
+        chosen = tuple(part.strip() for part in requested.split(",") if part.strip())
+        unknown = set(chosen) - set(DETECTORS)
+        if unknown or not chosen:
+            raise ValueError(f"不支持的检测器：{sorted(unknown) or '空列表'}")
+        if client is None and "model_direct" in chosen:
+            raise ValueError("offline 模式无法运行 model_direct，请使用 --mode model")
+        detectors = chosen if client else tuple(d for d in chosen if d != "model_direct")
+    else:
+        detectors = DETECTORS if client else ("legacy_rules", "hybrid")
     code_files = sorted((ROOT / "factcheck/src/yjcheck").glob("*.py")) + [Path(__file__)]
     baseline_archive = getattr(args, "baseline_archive", None)
-    if baseline_archive and not Path(baseline_archive).is_file():
+    if "legacy_rules" in detectors and baseline_archive and not Path(baseline_archive).is_file():
         raise ValueError("冻结基线归档不存在，请先按文档保存基线")
     code_files.append(ROOT / "evals/baseline.py")
     spec = {"inputs_sha256": digest_file(args.inputs), "mode": args.mode, "detectors": list(detectors),
@@ -359,7 +369,8 @@ def run(args):
             "endpoint_hash": hashlib.sha256(client.config.base_url.encode()).hexdigest() if client else None,
             "runtime": {k: str(v) for k, v in vars(client.settings).items()} if client else None,
             "examples_sha256": digest_file(args.examples) if args.examples else None,
-            "baseline_archive_sha256": digest_file(baseline_archive) if baseline_archive else None,
+            "baseline_archive_sha256": digest_file(baseline_archive)
+            if baseline_archive and "legacy_rules" in detectors else None,
             "max_input_tokens": client.settings.context_tokens - client.settings.max_output_tokens if client else 16000}
     out = Path(args.out)
     reuse_manifests, reusable_records = prepare_response_reuse(getattr(args, "reuse_model_responses_from", []) or [], spec, out)
@@ -498,17 +509,18 @@ def score(args):
                  "seconds_p95": latency["measured_arm_wall_seconds"]["p95"],
                  "seconds_field_basis": "measured_arm_wall_including_cache_replay; not comparable end-to-end model latency",
                  "latency": latency,
-                 "by_scene": {}, "by_length": {}, "by_type": {}}
+                 "by_scene": {}, "by_length": {}, "by_type": {},
+                 "stratification_scope": "by_scene/by_length/by_type use all_review_hints (total hint burden) as the primary view; candidate and confirmed-only views are in candidate_detection and verified_detection"}
         for group_name, classifier in (("by_scene", lambda row: row.get("scene", "")),
                                         ("by_length", lambda row: "<2k" if len(row["content"]) < 2000 else "2k-8k" if len(row["content"]) < 8000 else "8k-32k" if len(row["content"]) < 32000 else ">=32k")):
             for key in sorted({classifier(by_id[i]) for i in selected}):
                 subset = {i for i in selected if classifier(by_id[i]) == key}
-                entry[group_name][key] = score_paper_detection([r for r in reports if doc_id(r) in subset], [g for g in relevant_gold if doc_id(g) in subset])
+                entry[group_name][key] = score_paper_detection([r for r in hint_reports if doc_id(r) in subset], [g for g in relevant_gold if doc_id(g) in subset])
         types = sorted({str(e.get("type") or e.get("error_type") or "unknown")
                         for g in relevant_gold for e in g.get("errors", [])}
-                       | {str(e.get("error_type") or "unknown") for r in reports for e in r.get("errors", [])})
+                       | {str(e.get("error_type") or "unknown") for r in hint_reports for e in r.get("errors", [])})
         for error_type in types:
-            filtered_preds = [{**r, "errors": [e for e in r.get("errors", []) if e.get("error_type") == error_type]} for r in reports]
+            filtered_preds = [{**r, "errors": [e for e in r.get("errors", []) if e.get("error_type") == error_type]} for r in hint_reports]
             filtered_gold = [{**g, "errors": [e for e in g.get("errors", []) if (e.get("type") or e.get("error_type")) == error_type]} for g in relevant_gold]
             entry["by_type"][error_type] = score_paper_detection(filtered_preds, filtered_gold)
         result["detectors"][detector] = entry
@@ -557,6 +569,8 @@ def main(argv=None):
     run_parser.add_argument("--mode", choices=("offline", "model"), default="offline")
     run_parser.add_argument("--baseline-archive", default=str(ROOT / "data/v2/baseline/source-d71f8c7.zip"))
     run_parser.add_argument("--max-documents", type=int, default=10, help="0 means all; default pilot=10")
+    run_parser.add_argument("--detectors", default="",
+                            help="逗号分隔的检测器子集(legacy_rules/model_direct/hybrid)，默认沿用各模式内置集合")
     run_parser.add_argument("--reuse-model-responses-from", action="append", default=[], metavar="RUN_DIR",
                             help="Import successful exact-request model responses from a compatible run; repeat for multiple sources; never reuse predictions")
     scoring = sub.add_parser("score")

@@ -96,6 +96,31 @@ class ScoringTests(unittest.TestCase):
         other = result["combined"]["per_type"]["计算错误"]
         self.assertEqual(other["per_doc"], [])
 
+    def test_focus_misses_separate_wrong_type_partial_and_absent_predictions(self):
+        gold = {"doc1": {"document_id": "doc1", "errors": [
+            {"error_type": "金融要素缺失", "spans": [span("甲乙丙", 0)], "scorable": True},
+            {"error_type": "术语误用", "spans": [span("丁戊己", 10)], "scorable": True},
+            {"error_type": "冗余语句", "spans": [span("庚辛壬", 20)], "scorable": True},
+        ]}}
+        preds = {"doc1": {"document_id": "doc1", "errors": [
+            {"error_type": "数值缺失", "spans": [span("甲乙丙", 0)]},
+            {"error_type": "术语误用", "spans": [span("丁戊", 10)]},
+        ]}}
+        audit = ap.focus_miss_audit(preds, gold)
+        self.assertEqual(audit["total"], 3)
+        categories = {case["error_type"]: case["category"] for case in audit["cases"]}
+        self.assertEqual(categories, {"金融要素缺失": "定位包含但类型不同",
+                                      "术语误用": "同类型定位不完整",
+                                      "冗余语句": "无重叠提示"})
+
+    def test_focus_miss_does_not_call_same_type_matching_competition_wrong_type(self):
+        item = {"error_type": "冗余语句", "spans": [span("重复", 0)], "scorable": True}
+        gold = {"doc1": {"document_id": "doc1", "errors": [item, dict(item)]}}
+        preds = {"doc1": {"document_id": "doc1", "errors": [
+            {"error_type": "冗余语句", "spans": [span("重复", 0)]}]}}
+        audit = ap.focus_miss_audit(preds, gold)
+        self.assertEqual(audit["cases"][0]["category"], "同类型一对一匹配竞争")
+
 
 class AuditAndDeltaTests(unittest.TestCase):
     def test_auto_confirm_audit_lists_tp_and_fp_origins(self):

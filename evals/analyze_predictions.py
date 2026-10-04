@@ -28,13 +28,15 @@ from pathlib import Path
 from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path[:0] = [str(ROOT / "evals")]
+sys.path[:0] = [str(ROOT / "evals"), str(ROOT / "factcheck/src")]
 
 from fined_bench_eval import _contains_error, _maximum_matching, _valid_span
+from yjcheck.review_hints import all_review_hints
 
 FINED_TYPES = ("时间信息非法", "冗余语句", "格式错误", "数值缺失", "属性值缺失错误",
                "术语误用", "法规引用错误", "模糊语言", "数值单位错误", "金融要素缺失",
                "语义逻辑矛盾", "时间矛盾", "数值不一致错误", "计算错误", "不一致条款")
+FOCUS_TYPES = ("金融要素缺失", "术语误用", "冗余语句")
 
 
 def _records_from(path: str) -> list[dict]:
@@ -84,9 +86,17 @@ def load_gold_docs(path: str) -> dict[str, dict]:
     return docs
 
 
-def load_prediction_docs(path: str) -> dict[str, dict]:
+def load_prediction_docs(path: str, *, use_all_hints: bool = False) -> dict[str, dict]:
+    """Load prediction reports.
+
+    ``use_all_hints=True`` applies the unified ``all_review_hints`` transform so
+    rejected candidates in ``rejected_candidates`` (hybrid) are represented as
+    unmatched review hints, symmetric with direct-model anchor-rejected errors.
+    """
     docs: dict[str, dict] = {}
     for report in _records_from(path):
+        if use_all_hints:
+            report = all_review_hints(report)
         doc_id = report.get("document_id")
         if not isinstance(doc_id, str) or not doc_id:
             raise ValueError("预测报告缺少 document_id")
@@ -181,6 +191,50 @@ def review_burden(pred_docs: dict[str, dict]) -> dict:
     return {"pending_total": sum(by_type.values()), "by_type": by_type, "by_priority": by_priority}
 
 
+def _overlap(left: dict, right: dict) -> bool:
+    return any(a["start"] < b["end"] and b["start"] < a["end"]
+               for a in left.get("spans", []) for b in right.get("spans", []))
+
+
+def focus_miss_audit(pred_docs: dict[str, dict], gold_docs: dict[str, dict]) -> dict:
+    """Expose every unmatched priority-type annotation without relabeling it.
+
+    Buckets describe span/type relationships only. They are routing signals for
+    human error analysis, not semantic verdicts or permission to alter gold.
+    """
+    cases = []
+    for document_id, gold_doc in gold_docs.items():
+        predictions = pred_docs.get(document_id, {}).get("errors", [])
+        targets = [error for error in gold_doc.get("errors", []) if error.get("scorable", True)]
+        _, _, misses = match_errors(predictions, targets)
+        for gold in misses:
+            if gold["error_type"] not in FOCUS_TYPES:
+                continue
+            containing = [p for p in predictions if _contains_error(p, gold)]
+            same_type_containing = [p for p in containing if p["error_type"] == gold["error_type"]]
+            overlapping = [p for p in predictions if _overlap(p, gold)]
+            same_type_overlap = [p for p in overlapping if p["error_type"] == gold["error_type"]]
+            category = ("同类型一对一匹配竞争" if same_type_containing else
+                        "定位包含但类型不同" if containing else
+                        "同类型定位不完整" if same_type_overlap else
+                        "存在其他重叠提示" if overlapping else "无重叠提示")
+            related = same_type_containing or containing or same_type_overlap or overlapping
+            cases.append({"document_id": document_id, "error_type": gold["error_type"],
+                          "category": category, "gold_spans": gold.get("spans", []),
+                          "related_predictions": [{"error_type": p["error_type"],
+                                                   "spans": p.get("spans", []),
+                                                   "detector_id": p.get("detector_id", "")}
+                                                  for p in related]})
+    by_type = {kind: {"total": 0, "by_category": {}} for kind in FOCUS_TYPES}
+    for case in cases:
+        row = by_type[case["error_type"]]
+        row["total"] += 1
+        row["by_category"][case["category"]] = row["by_category"].get(case["category"], 0) + 1
+    return {"types": list(FOCUS_TYPES), "total": len(cases), "by_type": by_type,
+            "cases": cases,
+            "scope_note": "关系桶不是人工语义裁决；不自动修改标注。"}
+
+
 def analyze(gold_docs: dict[str, dict], direct: dict[str, dict] | None,
             combined: dict[str, dict] | None) -> dict:
     result: dict[str, Any] = {}
@@ -189,7 +243,8 @@ def analyze(gold_docs: dict[str, dict], direct: dict[str, dict] | None,
             continue
         result[name] = {"overall": score_docs(preds, gold_docs),
                         "per_type": {t: score_docs(preds, gold_docs, type_filter=t) for t in FINED_TYPES},
-                        "review_burden": review_burden(preds)}
+                        "review_burden": review_burden(preds),
+                        "focus_misses": focus_miss_audit(preds, gold_docs)}
     if combined is not None:
         result["combined"]["auto_confirm"] = auto_confirm_audit(combined, gold_docs)
     if direct is not None and combined is not None:
@@ -258,8 +313,8 @@ def main() -> int:
     gold_docs = load_gold_docs(args.answers)
     if not gold_docs:
         raise SystemExit("答案文件没有可评分的记录")
-    direct = load_prediction_docs(args.direct) if args.direct else None
-    combined = load_prediction_docs(args.combined) if args.combined else None
+    direct = load_prediction_docs(args.direct, use_all_hints=True) if args.direct else None
+    combined = load_prediction_docs(args.combined, use_all_hints=True) if args.combined else None
     result = analyze(gold_docs, direct, combined)
     emit(result, Path(args.out))
     top = result.get("combined") or result.get("direct")

@@ -76,10 +76,19 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(report["decided"], 3)
         self.assertEqual(report["dismissed"], 2)
         self.assertEqual(report["undecided"], 1)
-        self.assertAlmostEqual(report["overall_false_positive_rate"], 2 / 3, places=4)
+        self.assertAlmostEqual(report["review_dismissal_rate"], 2 / 3, places=4)
+        self.assertEqual(report["status"], "measured")
         self.assertEqual(report["by_document"]["n1"]["dismissed"], 1)
         self.assertEqual(report["by_type"]["术语误用"]["decided"], 1)
         self.assertEqual(report["untimed_dismissed_items"], ["d"])
+
+    def test_no_decided_items_yields_not_measured_null_rate(self):
+        queue = [{"candidate_id": "a", "document_id": "n1", "error_type": "模糊语言",
+                  "decision": None, "timing_method": "not_measured"}]
+        report = nr.false_positive_report(queue)
+        self.assertEqual(report["decided"], 0)
+        self.assertIsNone(report["review_dismissal_rate"])
+        self.assertEqual(report["status"], "not_measured")
 
 
 if __name__ == "__main__":

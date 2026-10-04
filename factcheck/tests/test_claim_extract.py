@@ -114,6 +114,24 @@ class ClaimTextRegressionTests(unittest.TestCase, LocatorAssertions):
         self.assertEqual(len(claims), 3)
         self.assertTrue(all("rate_transition_requires_explicit_periods" in f.warnings for f in claims))
 
+    def test_rate_and_pe_do_not_borrow_amounts_from_later_clauses(self):
+        samples = (
+            "2024年分子砌块收入9.36亿元，毛利率为42%，其中杂环化合物收入4.75亿元。",
+            "公司毛利率37.56%，减值损失1.15亿元。",
+            "给予2025年PE20倍，目标价格54.31元，对应市值77.4亿元。",
+            "预计公司毛利率保持稳定，减值损失约28亿元。",
+        )
+        for text in samples:
+            with self.subTest(text=text):
+                claims = extract_claims(make_document(text))
+                rate_claims = [fact for fact in claims if fact.metric in {"gross_margin", "pe"}]
+                self.assertFalse(any("亿" in fact.unit or "万" in fact.unit for fact in rate_claims), rate_claims)
+
+    def test_immediate_wrong_rate_unit_is_still_extracted_for_guardrail(self):
+        claims = extract_claims(make_document("公司毛利率为28亿元。"))
+        self.assertEqual([(fact.metric, fact.value, fact.unit) for fact in claims],
+                         [("gross_margin", "28", "亿元")])
+
     def test_evidence_file_hash_participates_in_fact_identity(self):
         first = Fact("revenue", "100", "万元", "2024FY", "测试股份", basis="reported",
                      evidence=[Evidence(doc_id="same", sha256="a" * 64, run_id="run", block_id="b1", paragraph=1, text="same")])

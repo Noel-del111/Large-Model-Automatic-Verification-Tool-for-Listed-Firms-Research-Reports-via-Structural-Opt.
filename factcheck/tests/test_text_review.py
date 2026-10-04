@@ -28,6 +28,13 @@ def error_at(text, source, kind="模糊语言", start=None):
 
 
 class TextContractTests(unittest.TestCase):
+    def test_priority_miss_types_have_explicit_contrastive_boundaries(self):
+        messages = _messages([], "focus-guidance", "", [])
+        prompt = messages[0]["content"]
+        for phrase in ("金融要素缺失只在", "若只是明确数值空槽", "术语误用必须指出",
+                       "冗余语句必须能定位", "同一重复问题用一个error和多个span"):
+            self.assertIn(phrase, prompt)
+
     def test_markdown_table_amounts_are_not_bound_to_a_ratio_heading(self):
         source = "毛利及毛利率分析\n\n单位：万元、%\n\n| 项目 | 金额 | 占比 |\n| --- | --- | --- |\n| 主营业务 | 100 | 90 |\n\n经营情况平稳。"
         result = detect_text(source, document_id="table-boundary", chat=MockChat())
@@ -159,6 +166,16 @@ class DeterministicTests(unittest.TestCase):
         for span in dates[0]["spans"] + dates[0]["verification_spans"]:
             self.assertEqual(text[span["start"]:span["end"]], span["text"])
 
+    def test_invalid_month_and_day_ranges_are_confirmed(self):
+        text = "截至2024年13月成立；截至1月41日；6月40日公告。"
+        invalid = [e for e in detect_text(text, document_id="tm")["errors"]
+                   if e["error_type"] == "时间信息非法"]
+        self.assertEqual(len(invalid), 3)
+        self.assertTrue(all(e["status"] == "confirmed_error" for e in invalid))
+        # 合法边界不报
+        ok = detect_text("2024年12月31日；1月31日。", document_id="tm-ok")["errors"]
+        self.assertFalse(any(e["error_type"] == "时间信息非法" for e in ok))
+
     def test_decimal_equations_normalize_units_and_rounding(self):
         text = "1亿元+2000万元=1.2亿元；20%-10%=10%；1/3=0.33；-2+1=-1；10万元+20万元=40万元。"
         calculations = [e for e in detect_text(text, document_id="math")["errors"] if e["error_type"] == "计算错误"]
@@ -188,6 +205,73 @@ class DeterministicTests(unittest.TestCase):
         eps = [e for e in result["errors"] if "600" in str(e["spans"])]
         self.assertTrue(eps)
         self.assertTrue(all(e["status"] == "needs_review" for e in eps))
+
+    def test_redundant_literal_duplicates_are_confirmed(self):
+        cases = [
+            "风险提示：食品安全风险，食品安全风险，市场竞争加剧。",
+            "产品销量快速增长，经营业绩显著改善。产品销量快速增长，经营业绩显著改善。",
+            "新增省级新产品试制计划15只，累计288只，累计288只。",
+        ]
+        for text in cases:
+            with self.subTest(text=text):
+                redundant = [e for e in detect_text(text, document_id="dup")["errors"]
+                             if e["error_type"] == "冗余语句"]
+                self.assertEqual(len(redundant), 1)
+                self.assertEqual(redundant[0]["status"], "confirmed_error")
+                self.assertTrue(redundant[0]["detector_id"].startswith("verified.redundant"))
+
+    def test_redundant_distinct_periods_or_lists_are_not_flagged(self):
+        text = ("公司营收同比增长15.3%，净利润同比增长12.5%。"
+                "甲、乙、丙三家公司分别上涨1%、2%、3%。"
+                "2024年营收100万元，2025年营收200万元。")
+        self.assertFalse(any(e["error_type"] == "冗余语句"
+                             for e in detect_text(text, document_id="no-dup")["errors"]))
+
+    def test_empty_placeholder_is_confirmed_attribute_missing(self):
+        text = "翔楼新材()发布公告；公司发布“”多模态方案；《》纳入年检范围。"
+        missing = [e for e in detect_text(text, document_id="ph")["errors"]
+                   if e["error_type"] == "属性值缺失错误"]
+        self.assertEqual(len(missing), 3)
+        self.assertTrue(all(e["status"] == "confirmed_error" for e in missing))
+        self.assertTrue(all(e["detector_id"] == "verified.empty_placeholder" for e in missing))
+
+    def test_suspended_punctuation_is_confirmed_factor_missing(self):
+        text = "东北亚LNG到岸价格为10.81美元/百万英热，。"
+        missing = [e for e in detect_text(text, document_id="sp")["errors"]
+                   if e["error_type"] == "金融要素缺失"]
+        self.assertEqual(len(missing), 1)
+        self.assertEqual(missing[0]["status"], "confirmed_error")
+        self.assertEqual(missing[0]["detector_id"], "verified.suspended_punctuation")
+
+    def test_percent_gap_is_confirmed_numeric_missing(self):
+        text = "销售额同比增长 %，核心一级资本充足率%。"
+        missing = [e for e in detect_text(text, document_id="pg")["errors"]
+                   if e["error_type"] == "数值缺失"]
+        self.assertEqual(len(missing), 2)
+        self.assertTrue(all(e["status"] == "confirmed_error" for e in missing))
+        # 合法百分数不得误报
+        ok = detect_text("营收同比增长10%，占比5%。", document_id="pg-ok")["errors"]
+        self.assertFalse(any(e["error_type"] == "数值缺失" for e in ok))
+
+    def test_stock_code_gap_is_confirmed_format_error(self):
+        text = "雪峰科技(603)、隆基绿能(601)。"
+        fmt = [e for e in detect_text(text, document_id="sc")["errors"]
+               if e["error_type"] == "格式错误"]
+        self.assertEqual(len(fmt), 2)
+        self.assertTrue(all(e["status"] == "confirmed_error" for e in fmt))
+        # 6 位合法代码与年份不报
+        ok = detect_text("贵州茅台(600519)。报告期（2024年）。", document_id="sc-ok")["errors"]
+        self.assertFalse(any(e["error_type"] == "格式错误" for e in ok))
+
+    def test_unit_gap_is_confirmed_numeric_missing(self):
+        text = "1-4月累计销售重卡约辆，全国各类型银行共发行理财产品 只。"
+        missing = [e for e in detect_text(text, document_id="ug")["errors"]
+                   if e["error_type"] == "数值缺失"]
+        self.assertEqual(len(missing), 2)
+        self.assertTrue(all(e["status"] == "confirmed_error" for e in missing))
+        # 约N单位 / 数字+单位 不误报
+        ok = detect_text("销售重卡约10辆，发行理财产品100只。", document_id="ug-ok")["errors"]
+        self.assertFalse(any(e["error_type"] == "数值缺失" for e in ok))
 
     def test_same_name_different_period_company_and_basis_are_not_conflicts(self):
         text = ("甲公司2024年营业收入100万元。甲公司2025年营业收入200万元。"
@@ -378,6 +462,28 @@ class CandidateValidationTests(unittest.TestCase):
         self.assertEqual(finding["verification_spans"][0]["text"], token)
         self.assertIn("hybrid.model", finding["detector_ids"])
 
+    def test_model_reason_naming_calendar_proof_merges_despite_other_dates(self):
+        source = "2025年5月26日晚间，公司股票自2025年4月31日至2025年5月26日期间交易。"
+        raw = {**error_at(source, source, "时间信息非法"),
+               "reason": "2025年4月31日不存在，4月只有30天。"}
+        result = detect_text(source, document_id="calendar-same-proof",
+                             chat=MockChat(lambda payload, purpose: [raw]))
+        self.assertEqual(len(result["errors"]), 1)
+        self.assertEqual(result["errors"][0]["status"], "confirmed_error")
+        self.assertEqual(set(result["errors"][0]["detector_ids"]),
+                         {"hybrid.model", "verified.calendar"})
+
+    def test_backward_range_rule_and_model_hint_merge_on_exact_proof_token(self):
+        source = "供给端预计2023-2021年间均保持10%以上。"
+        snippet = "2023-2021年间均保持10%以上"
+        raw = {**error_at(snippet, source, "时间矛盾"),
+               "reason": "年份区间起始年晚于结束年。"}
+        result = detect_text(source, document_id="range-same-proof",
+                             chat=MockChat(lambda payload, purpose: [raw]))
+        self.assertEqual(len(result["errors"]), 1)
+        self.assertEqual(set(result["errors"][0]["detector_ids"]),
+                         {"hybrid.model", "legacy.C.INTRINSIC.002"})
+
     def test_duplicate_candidates_collapse_but_types_have_distinct_ids(self):
         text = "这句话有歧义。"
         raw = error_at(text, text)
@@ -553,6 +659,27 @@ class GoldIsolationTests(unittest.TestCase):
         detect_text("目标原文", document_id="test", chat=chat, examples=[example])
         shown = json.loads(chat.calls[0][0][2]["content"])
         self.assertEqual(len(shown["errors"]), 2)
+
+    def test_sft_negative_example_demonstrates_empty_result(self):
+        example = {"source_split": "sft_negative", "source_id": "sftneg-1",
+                   "document_id": "sftneg-1", "content": "免税销售金额1.15亿元。",
+                   "scene": "unknown", "complete_annotation": True, "errors": []}
+        chat = MockChat()
+        result = detect_text("目标原文", document_id="test", chat=chat, examples=[example])
+        self.assertEqual([m["role"] for m in chat.calls[0][0]],
+                         ["system", "user", "assistant", "user"])
+        shown = json.loads(chat.calls[0][0][2]["content"])
+        self.assertEqual(shown["errors"], [])
+        self.assertTrue(result["coverage"]["complete"])
+
+    def test_sft_negative_example_with_error_labels_is_rejected(self):
+        source = "2025年2月30日。"
+        example = {"source_split": "sft_negative", "source_id": "sftneg-2",
+                   "document_id": "sftneg-2", "content": source,
+                   "complete_annotation": True,
+                   "errors": [error_at("2025年2月30日", source, "时间信息非法")]}
+        with self.assertRaisesRegex(ValueError, "sft_negative"):
+            detect_text("目标原文", document_id="test", examples=[example])
 
 
 class ContainmentAndTriageTests(unittest.TestCase):

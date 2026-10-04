@@ -10,6 +10,24 @@ from .metric_catalog import METRICS, METRIC_RE, STOCK
 NUMBER_RE = re.compile(r"(?P<value>[+\-−－]?(?:\d{1,3}(?:[,，]\d{3})+|\d+)(?:\.\d+)?|[（(][\d,，]+(?:\.\d+)?[）)])\s*(?P<unit>(?:亿|万|千)?(?:美元|港元|欧元)|千万元|百万元|亿元|万元|千元|元/股|元／股|元|个百分点|百分点|%|％|倍)")
 
 
+def _local_metric_clause(segment: str) -> str:
+    """Return the metric's own top-level clause, preserving numeric commas."""
+    depth = 0
+    for index, char in enumerate(segment):
+        if char in "（(":
+            depth += 1
+        elif char in "）)" and depth:
+            depth -= 1
+        elif depth == 0 and char in "，,":
+            previous = segment[index - 1:index]
+            following = segment[index + 1:index + 2]
+            if not (char == "," and previous.isdigit() and following.isdigit()):
+                if re.match(r"(?:同比|环比|增加|提升|下降|减少|上升|变动)", segment[index + 1:]):
+                    continue
+                return segment[:index]
+    return segment
+
+
 def period_in(text: str, default: str = "") -> str:
     compact = re.sub(r"\s+", "", text)
     compact = re.sub(r"20\d{2}年度披露", "年度披露", compact)
@@ -69,10 +87,13 @@ def _extract_native_claims(doc: Document) -> list[Fact]:
                 metric = METRICS[metric_match.group()]
                 stop = metrics[i+1].start() if i+1 < len(metrics) else len(compact)
                 segment = compact[metric_match.end():stop]
+                metric_segment = (_local_metric_clause(segment)
+                                  if metric in {"gross_margin", "net_margin", "debt_ratio", "pe"}
+                                  else segment)
                 prefix = compact[:metric_match.start()]
                 # 声明仅取指标之后的数值。其他指标出现即停止，避免串取邻项。
-                for num in NUMBER_RE.finditer(segment):
-                    between = segment[:num.start()]
+                for num in NUMBER_RE.finditer(metric_segment):
+                    between = metric_segment[:num.start()]
                     if "同比" in between or "环比" in between:
                         current_metric = metric + ("_yoy" if "同比" in between else "_qoq")
                         basis = _basis(prefix, default_basis)
@@ -116,14 +137,14 @@ def _extract_native_claims(doc: Document) -> list[Fact]:
                     # A known word can be the prefix of a different concept,
                     # e.g. 存货跌价准备 is not 存货. Preserve the candidate for
                     # review, but do not grant it the base metric's semantics.
-                    suffix = segment.lstrip("：:，,（(")
+                    suffix = metric_segment.lstrip("：:，,（(")
                     if (re.match(r"[\u4e00-\u9fffA-Za-z]", suffix)
                             and not re.match(r"(?:为|是|约为|约|达到|分别|同比|环比|(?:由|的)?(?:调整前|调整后|重述前|重述后)|(?:的)?影响(?:金额)?|录得|合并口径|母公司口径)", suffix)):
                         warnings.append("unverified_metric_modifier")
-                        attrs["metric_context"] = metric_match.group() + segment
+                        attrs["metric_context"] = metric_match.group() + metric_segment
                     if "预测" in context or "预计" in context or "目标" in context:
                         warnings.append("forecast_not_historical_fact")
-                    if metric=="gross_margin" and len(list(NUMBER_RE.finditer(segment)))>1:
+                    if metric=="gross_margin" and len(list(NUMBER_RE.finditer(metric_segment)))>1:
                         warnings.append("rate_transition_requires_explicit_periods")
                     claims.append(Fact(current_metric, value, unit, period, doc.company,
                                        basis=basis, scope=scope, currency=currency, text=raw, evidence=[loc],

@@ -12,7 +12,7 @@
 usage:
     python evals/normal_review.py queue --normal data/v2/normals.json --predictions data/v2/predictions/hybrid --out data/v2/normal-review
     python evals/normal_review.py signoff --queue data/v2/normal-review/review_queue.json --decisions decisions.jsonl --out data/v2/normal-review
-    python evals/normal_review.py report --normal data/v2/normals.json --predictions data/v2/predictions/hybrid --signoffs data/v2/normal-review/signoffs.json --out data/v2/normal-review
+    python evals/normal_review.py report --queue data/v2/normal-review/signed_queue.json --out data/v2/normal-review
 """
 from __future__ import annotations
 
@@ -33,12 +33,19 @@ def candidate_id(document_id: str, error: dict) -> str:
     return sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:24]
 
 
-def build_queue(normal_docs: list[dict], pred_docs: dict[str, dict]) -> list[dict]:
+def build_queue(normal_docs: list[dict], pred_docs: dict[str, dict], *, include_confirmed: bool = False) -> list[dict]:
+    """Build the human review queue.
+
+    Daily review queues may omit auto-confirmed findings, but normal-text
+    false-positive auditing must cover confirmed_error output too, so pass
+    ``include_confirmed=True`` for that audit. Confirmed findings are potential
+    false positives just like any other hint.
+    """
     known = {doc.get("document_id") for doc in normal_docs if isinstance(doc.get("document_id"), str)}
     queue = []
     for doc_id in sorted(set(known) & set(pred_docs)):
         for error in pred_docs[doc_id]["errors"]:
-            if error.get("status") == "confirmed_error":
+            if error.get("status") == "confirmed_error" and not include_confirmed:
                 continue
             queue.append({"candidate_id": candidate_id(doc_id, error),
                           "document_id": doc_id, "error_type": error.get("error_type", ""),
@@ -79,6 +86,12 @@ def merge_signoffs(queue: list[dict], decisions: list[dict]) -> list[dict]:
 
 
 def false_positive_report(queue: list[dict]) -> dict:
+    """统计"已审核提示驳回比例"(review dismissal rate)，不是正确内容误报率。
+
+    正确内容误报率需要正确文本样本（断言/片段/文档级负类）与人工签核，
+    本函数只衡量"人工已审核提示中被驳回的比例"，绝不用于 README 的 FPR 验收。
+    没有已审核条目时 rate 为 null 且 status=not_measured。
+    """
     decided = [item for item in queue if item["decision"] in {"confirmed", "dismissed"}]
     dismissed = [item for item in decided if item["decision"] == "dismissed"]
     untimed_dismissed = [item for item in dismissed if item["timing_method"] == "not_measured"]
@@ -90,16 +103,25 @@ def false_positive_report(queue: list[dict]) -> dict:
             bucket["decided"] += 1
             if item["decision"] == "dismissed":
                 bucket["dismissed"] += 1
+
     def with_rate(bucket):
-        rate = bucket["dismissed"] / max(bucket["decided"], 1)
-        return {**bucket, "false_positive_rate": round(rate, 4)}
+        rate = bucket["dismissed"] / bucket["decided"] if bucket["decided"] else None
+        return {**bucket, "review_dismissal_rate": round(rate, 4) if rate is not None else None}
+
+    if not decided:
+        return {"queue_total": len(queue), "decided": 0, "dismissed": 0,
+                "review_dismissal_rate": None, "status": "not_measured",
+                "reason": "没有已审核条目，无法计算驳回比例；未审核项不算已通过",
+                "by_document": {}, "by_type": {},
+                "undecided": len(queue),
+                "untimed_dismissed_items": [], "timing_note": "未计时条目单独统计。"}
     return {"queue_total": len(queue), "decided": len(decided), "dismissed": len(dismissed),
-            "overall_false_positive_rate": round(len(dismissed) / max(len(decided), 1), 4),
+            "review_dismissal_rate": round(len(dismissed) / len(decided), 4), "status": "measured",
             "by_document": {key: with_rate(value) for key, value in sorted(by_doc.items())},
             "by_type": {key: with_rate(value) for key, value in sorted(by_type.items())},
             "undecided": len(queue) - len(decided),
             "untimed_dismissed_items": [item["candidate_id"] for item in untimed_dismissed],
-            "timing_note": "未计时条目单独统计；false_positive_rate 只按已决策候选计算，未决策不计入。"}
+            "timing_note": "未计时条目单独统计；review_dismissal_rate 只按已审核提示计算，是驳回比例，不是正确内容误报率(FPR)。"}
 
 
 def _load_normal_docs(path: str) -> list[dict]:
@@ -122,6 +144,8 @@ def main() -> int:
     queue_parser = sub.add_parser("queue")
     queue_parser.add_argument("--normal", required=True, help="正常文档清单 JSON（document_id/content）")
     queue_parser.add_argument("--predictions", required=True, help="检测报告目录或 JSON 文件")
+    queue_parser.add_argument("--include-confirmed", action="store_true",
+                              help="正常文本误报审计须覆盖 confirmed_error 输出")
     queue_parser.add_argument("--out", required=True, help="输出目录")
     signoff_parser = sub.add_parser("signoff")
     signoff_parser.add_argument("--queue", required=True, help="review_queue.json 路径")
@@ -138,7 +162,8 @@ def main() -> int:
         normal_docs = _load_normal_docs(args.normal)
         if not any(isinstance(doc.get("document_id"), str) for doc in normal_docs):
             raise SystemExit("正常文档清单缺少 document_id")
-        queue = build_queue(normal_docs, load_prediction_docs(args.predictions))
+        queue = build_queue(normal_docs, load_prediction_docs(args.predictions),
+                            include_confirmed=getattr(args, "include_confirmed", False))
         (out_dir / "review_queue.json").write_text(json.dumps(queue, ensure_ascii=False, indent=2), encoding="utf-8")
         print(json.dumps({"queued_candidates": len(queue)}, ensure_ascii=False))
     elif args.command == "signoff":
@@ -152,7 +177,8 @@ def main() -> int:
         (out_dir / "fp_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         print(json.dumps({
             "decided": report["decided"], "dismissed": report["dismissed"],
-            "overall_false_positive_rate": report["overall_false_positive_rate"],
+            "review_dismissal_rate": report["review_dismissal_rate"],
+            "status": report["status"],
             "undecided": report["undecided"],
             "untimed_dismissed": len(report["untimed_dismissed_items"]),
         }, ensure_ascii=False))

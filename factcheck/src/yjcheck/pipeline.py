@@ -174,11 +174,18 @@ def check_documents(report, sources, model_config=None) -> dict:
                           "model": round(modeled_at - extracted_at, 6),
                           "verification": round(time.monotonic() - modeled_at, 6)},
     })
+    # 结构化补证请求：needs_review 才产出 ask 与所需材料；confirmed_error/no_issue 为 proceed。
+    from .evidence_requests import attach_evidence_requests
+    evidence_docs = [{"role": d.role, "issues": d.issues, "path": d.path} for d in [report, *sources]]
+    finding_dicts = [attach_evidence_requests(f.to_dict(), evidence_docs) for f in findings]
+    ask_findings = [fd for fd in finding_dicts if fd["decision"] == "ask"]
+    summary["evidence_requests"] = len(ask_findings)
+    summary["evidence_request_items"] = sum(len(fd["evidence_request"]) for fd in ask_findings)
     result = {"schema_version":SCHEMA_VERSION,"run_id":uuid.uuid4().hex,
             "created_at":datetime.now(timezone.utc).isoformat(),"summary":summary,
             "documents":[{"role":d.role,"doc_id":d.doc_id,"sha256":d.sha256,"run_id":d.run_id,
                           "path":d.path,"company":d.company,"metadata":d.metadata} for d in [report,*sources]],
-            "input_issues":input_issues,"findings":[f.to_dict() for f in findings],
+            "input_issues":input_issues,"findings":finding_dicts,
             "source_facts":[f.to_dict() for f in source_facts],"model_traces":model_traces}
     # Text-only findings have their own contract; do not forge financial Facts
     # or external evidence to squeeze them into the paired check schema.
@@ -234,6 +241,7 @@ def write_result(result: dict, out: Path) -> Path:
     dest=Path(out)/result["run_id"]
     dest.mkdir(parents=True,exist_ok=False)
     (dest/"check_result.json").write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
+    from .evidence_requests import request_text
     rows=[]
     for f in result["findings"]:
         claim=f["claim"]
@@ -243,8 +251,9 @@ def write_result(result: dict, out: Path) -> Path:
                 loc=f"第{e['page']}页" if e["page"] is not None else f"第{e['paragraph']}段"
                 locations.append(f"{Path(e['file']).name} {loc}")
         rows.append([f["status_label"],f["error_type"],claim["text"],f["suggestion"],f["message"],
-                     "; ".join(dict.fromkeys(locations)),f["rule_id"],f["review_status"]])
-    header=["状态","错误类型","研报原文","修改建议","依据说明","来源位置","规则","人工复核状态"]
+                     "; ".join(dict.fromkeys(locations)),f["rule_id"],f["review_status"],
+                     request_text(f)])
+    header=["状态","错误类型","研报原文","修改建议","依据说明","来源位置","规则","人工复核状态","补充证据清单"]
     with (dest/"findings.csv").open("w",encoding="utf-8-sig",newline="") as stream:
         writer=csv.writer(stream)
         # 防止在 Excel 中将研报中的 =/+/−/@ 字段当作公式执行。
