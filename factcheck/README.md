@@ -5,6 +5,7 @@ C 接收研报和对应原始财务材料，识别数值、单位、期间、口
 ## 本次交付
 
 - `docs/handoff.md`：团队交接入口，说明 B/D/E 如何接手、运行前提和剩余工作。
+- `docs/R09_C_DELIVERY.md`：R09 补证契约本次交付及 468 项回归记录；D 待接入内容另见 `docs/R09_D_INTEGRATION.md`。
 - `src/yjcheck/`：输入准入、正文/表格事实抽取、Decimal 比对、可选大模型候选抽取、结果输出。
 - `schemas/check_result.schema.json`：D 使用的版本化结果契约。
 - `tests/`、`tools/run_all_tests.py`：规则、输入边界、真实 PDF、模型协议、CLI、B 接入回归；完整验收不允许跳过。
@@ -58,7 +59,7 @@ for finding in result["findings"]:
     print(finding["status_label"], finding["message"])
 ```
 
-`schema_version=1.0.0`。每个 finding 包含：
+新配对结果使用 `schema_version=1.1.0`，补证信息成为明确的输出契约；[JSON Schema](schemas/check_result.schema.json) 同时接受历史 `1.0.0`。单文本的 `text-review/1.0` 独立契约不变。每个 finding 包含：
 
 | 字段 | 含义 |
 | --- | --- |
@@ -69,6 +70,14 @@ for finding in result["findings"]:
 | `evidence` | 支撑判断的来源事实；内部的 evidence 同时保留数值行和表头上下文 |
 | `suggestion` / `suggested_value` | 修改建议和建议数值；不能确定时不编造数值 |
 | `review_status` | 初始固定 `unreviewed`，由 D 的人工复核流程管理后续状态 |
+| `decision` | `ask` 需要补材料或人工澄清；`proceed` 无额外补证请求，不表示“原文正确”，也不代表已执行检索 |
+| `evidence_request` | 补证请求数组，含材料角色、字段、公司、期间、口径、请求类型、原因和已有文件标识 |
+
+`1.1.0` 中，`needs_review` 必须对应 `ask` 和非空请求数组；`confirmed_error` / `no_issue` 必须对应 `proceed` 和空数组。`summary.evidence_requests` 是需要补证的 finding 数，`summary.evidence_request_items` 是请求项数：一条结论要补两期材料，分别计 1 和 2。JSON Schema 校验字段类型与状态关系；汇总与实际数组的数量一致性由生成流程及契约测试验证。
+
+旧 `1.0.0` 可能完全没有这组字段，也可能已有请求、只有 `summary.evidence_requests` 而没有请求项总数。消费者须保留旧原始结果，不补写为 `proceed`，不把缺失计数当零；页面可显示“旧版未提供补证信息”。旧 finding 若提供补证字段，则 `decision` 与 `evidence_request` 必须成对且满足状态关系。
+
+九个请求字段、四种请求类型、合成联调样例及 D 的页面/复核导出待办，见 [R09 补证契约与 D 接入说明](docs/R09_D_INTEGRATION.md)。C 生成的 JSON、CSV、Markdown 已包含补证内容；D 的含人工复核导出需要单独接入该契约。
 
 金额 `value` 是十进制字符串，不能先转二进制浮点再做金额比对。期间格式为 `2024FY`、`2025H1`、`2025Q1` 或资产时点 `2024-12-31`；`publication_year` 特指专项报告冠名年度，期间为 `publication`，不是签署/实际发布年份。`basis` 为 `before/after/change/reported/unknown`，`scope` 为 `consolidated/parent/unknown`。
 
