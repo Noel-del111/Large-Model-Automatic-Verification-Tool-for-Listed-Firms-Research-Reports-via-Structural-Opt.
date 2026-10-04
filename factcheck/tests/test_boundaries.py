@@ -218,6 +218,16 @@ class InputBoundaryTests(unittest.TestCase):
 
 class ModelBoundaryTests(unittest.TestCase):
     def setUp(self):
+        # These tests mock urlopen; real provider settings and persisted budget
+        # state must not affect whether their response-boundary assertions run.
+        runtime_directory = tempfile.TemporaryDirectory()
+        self.addCleanup(runtime_directory.cleanup)
+        for patcher in (
+            patch("yjcheck.model_runtime.load_model_settings", return_value={}),
+            patch("yjcheck.model_runtime.DEFAULT_LEDGER", Path(runtime_directory.name) / "usage.sqlite3"),
+        ):
+            self.addCleanup(patcher.stop)
+            patcher.start()
         self.config = ModelConfig("http://127.0.0.1:9/v1", "unit-test-model", "DO_NOT_LOG_THIS_KEY")
 
     def test_model_quote_block_metric_value_unit_and_dimension_forgery_are_rejected(self):

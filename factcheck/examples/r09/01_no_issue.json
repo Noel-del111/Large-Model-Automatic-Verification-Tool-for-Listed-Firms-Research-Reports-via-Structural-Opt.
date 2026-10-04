@@ -1,0 +1,576 @@
+{
+  "schema_version": "1.1.0",
+  "run_id": "fixture-r09-01_no_issue",
+  "created_at": "2026-10-05T00:00:00+08:00",
+  "summary": {
+    "confirmed_error": 0,
+    "needs_review": 0,
+    "no_issue": 1,
+    "claims": 1,
+    "source_facts": 2,
+    "input_issues": 0,
+    "coverage": "supported_claims_only",
+    "complete": true,
+    "automatic_claims": 1,
+    "review_claims": 0,
+    "intrinsic_candidates": 0,
+    "model_candidates_aligned": 0,
+    "needs_review_by_rule": {},
+    "evidence_requests": 0,
+    "evidence_request_items": 0,
+    "text_candidates": 0,
+    "text_confirmed": 0,
+    "text_needs_review": 0,
+    "text_rejected_hints": 0,
+    "text_review_total_hints": 0
+  },
+  "documents": [
+    {
+      "role": "report",
+      "doc_id": "fixture-report",
+      "sha256": "b08bc06d347c292a77cab3e9b5843e399f7f3c16d3f9c0e8377cdaaed514320c",
+      "run_id": "fixture-report-parse",
+      "path": "synthetic-report.docx",
+      "company": "联调示例公司",
+      "metadata": {
+        "synthetic": true,
+        "original_file_exists": false
+      }
+    },
+    {
+      "role": "source",
+      "doc_id": "fixture-source",
+      "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+      "run_id": "fixture-source-parse",
+      "path": "synthetic-source.docx",
+      "company": "联调示例公司",
+      "metadata": {
+        "synthetic": true,
+        "original_file_exists": false
+      }
+    }
+  ],
+  "input_issues": [],
+  "findings": [
+    {
+      "claim": {
+        "metric": "revenue",
+        "value": "100",
+        "unit": "万元",
+        "period": "2024FY",
+        "company": "联调示例公司",
+        "basis": "reported",
+        "scope": "consolidated",
+        "currency": "CNY",
+        "text": "2024年营业收入100万元。",
+        "evidence": [
+          {
+            "doc_id": "fixture-report",
+            "run_id": "fixture-report-parse",
+            "sha256": "b08bc06d347c292a77cab3e9b5843e399f7f3c16d3f9c0e8377cdaaed514320c",
+            "file": "synthetic-report.docx",
+            "block_id": "report-1",
+            "page": null,
+            "bbox": null,
+            "paragraph": 1,
+            "text": "2024年营业收入100万元。",
+            "char_start": 0,
+            "char_end": 15,
+            "quality": "ok",
+            "notes": []
+          }
+        ],
+        "warnings": [],
+        "attributes": {
+          "value_start": 9,
+          "value_end": 14,
+          "metric_label": "营业收入",
+          "extraction": "rules-v2"
+        },
+        "fact_id": "961166b83fa968e62c42"
+      },
+      "status": "no_issue",
+      "error_type": "",
+      "rule_id": "C.VALUE.001",
+      "message": "在公司、期间、口径和币种一致的前提下，数值与来源在研报显示精度内一致。",
+      "suggestion": "",
+      "suggested_value": null,
+      "evidence": [
+        {
+          "metric": "revenue",
+          "value": "100",
+          "unit": "万元",
+          "period": "2024FY",
+          "company": "联调示例公司",
+          "basis": "reported",
+          "scope": "consolidated",
+          "currency": "CNY",
+          "text": "营业收入 100 90",
+          "evidence": [
+            {
+              "doc_id": "fixture-source",
+              "run_id": "fixture-source-parse",
+              "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+              "file": "synthetic-source.docx",
+              "block_id": "source-4",
+              "page": null,
+              "bbox": null,
+              "paragraph": 4,
+              "text": "营业收入 100 90",
+              "char_start": null,
+              "char_end": null,
+              "quality": "ok",
+              "notes": []
+            },
+            {
+              "doc_id": "fixture-source",
+              "run_id": "fixture-source-parse",
+              "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+              "file": "synthetic-source.docx",
+              "block_id": "source-1",
+              "page": null,
+              "bbox": null,
+              "paragraph": 1,
+              "text": "2024年度合并利润表",
+              "char_start": null,
+              "char_end": null,
+              "quality": "ok",
+              "notes": []
+            },
+            {
+              "doc_id": "fixture-source",
+              "run_id": "fixture-source-parse",
+              "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+              "file": "synthetic-source.docx",
+              "block_id": "source-3",
+              "page": null,
+              "bbox": null,
+              "paragraph": 3,
+              "text": "项目 2024年度 2023年度",
+              "char_start": null,
+              "char_end": null,
+              "quality": "ok",
+              "notes": []
+            },
+            {
+              "doc_id": "fixture-source",
+              "run_id": "fixture-source-parse",
+              "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+              "file": "synthetic-source.docx",
+              "block_id": "source-2",
+              "page": null,
+              "bbox": null,
+              "paragraph": 2,
+              "text": "单位：万元",
+              "char_start": null,
+              "char_end": null,
+              "quality": "ok",
+              "notes": []
+            }
+          ],
+          "warnings": [],
+          "attributes": {
+            "source_column": 0,
+            "statement": "income",
+            "metric_label": "营业收入",
+            "extraction": "rules-v2",
+            "value_locations": [
+              {
+                "doc_id": "fixture-source",
+                "page": null,
+                "paragraph": 4,
+                "block_id": "source-4"
+              }
+            ]
+          },
+          "fact_id": "6c18f5c5316baebe077b"
+        }
+      ],
+      "calculation": {
+        "rule_id": "C.VALUE.001",
+        "claim": {
+          "fact_id": "961166b83fa968e62c42",
+          "company": "联调示例公司",
+          "metric": "revenue",
+          "value": "100",
+          "unit": "万元",
+          "period": "2024FY",
+          "basis": "reported",
+          "scope": "consolidated",
+          "currency": "CNY",
+          "normalized_value": "1000000",
+          "evidence": [
+            {
+              "doc_id": "fixture-report",
+              "sha256": "b08bc06d347c292a77cab3e9b5843e399f7f3c16d3f9c0e8377cdaaed514320c",
+              "run_id": "fixture-report-parse",
+              "block_id": "report-1",
+              "page": null,
+              "paragraph": 1,
+              "bbox": null,
+              "quality": "ok"
+            }
+          ],
+          "value_locations": [
+            {
+              "doc_id": "fixture-report",
+              "page": null,
+              "paragraph": 1,
+              "block_id": "report-1"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "fact_id": "6c18f5c5316baebe077b",
+            "company": "联调示例公司",
+            "metric": "revenue",
+            "value": "100",
+            "unit": "万元",
+            "period": "2024FY",
+            "basis": "reported",
+            "scope": "consolidated",
+            "currency": "CNY",
+            "normalized_value": "1000000",
+            "evidence": [
+              {
+                "doc_id": "fixture-source",
+                "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+                "run_id": "fixture-source-parse",
+                "block_id": "source-4",
+                "page": null,
+                "paragraph": 4,
+                "bbox": null,
+                "quality": "ok"
+              },
+              {
+                "doc_id": "fixture-source",
+                "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+                "run_id": "fixture-source-parse",
+                "block_id": "source-1",
+                "page": null,
+                "paragraph": 1,
+                "bbox": null,
+                "quality": "ok"
+              },
+              {
+                "doc_id": "fixture-source",
+                "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+                "run_id": "fixture-source-parse",
+                "block_id": "source-3",
+                "page": null,
+                "paragraph": 3,
+                "bbox": null,
+                "quality": "ok"
+              },
+              {
+                "doc_id": "fixture-source",
+                "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+                "run_id": "fixture-source-parse",
+                "block_id": "source-2",
+                "page": null,
+                "paragraph": 2,
+                "bbox": null,
+                "quality": "ok"
+              }
+            ],
+            "value_locations": [
+              {
+                "doc_id": "fixture-source",
+                "page": null,
+                "paragraph": 4,
+                "block_id": "source-4"
+              }
+            ]
+          }
+        ],
+        "rounding": "ROUND_HALF_UP at claim displayed precision",
+        "expected_in_claim_unit": "100"
+      },
+      "review_status": "unreviewed",
+      "id": "961166b83fa968e62c42",
+      "status_label": "未发现问题",
+      "decision": "proceed",
+      "evidence_request": []
+    }
+  ],
+  "source_facts": [
+    {
+      "metric": "revenue",
+      "value": "100",
+      "unit": "万元",
+      "period": "2024FY",
+      "company": "联调示例公司",
+      "basis": "reported",
+      "scope": "consolidated",
+      "currency": "CNY",
+      "text": "营业收入 100 90",
+      "evidence": [
+        {
+          "doc_id": "fixture-source",
+          "run_id": "fixture-source-parse",
+          "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+          "file": "synthetic-source.docx",
+          "block_id": "source-4",
+          "page": null,
+          "bbox": null,
+          "paragraph": 4,
+          "text": "营业收入 100 90",
+          "char_start": null,
+          "char_end": null,
+          "quality": "ok",
+          "notes": []
+        },
+        {
+          "doc_id": "fixture-source",
+          "run_id": "fixture-source-parse",
+          "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+          "file": "synthetic-source.docx",
+          "block_id": "source-1",
+          "page": null,
+          "bbox": null,
+          "paragraph": 1,
+          "text": "2024年度合并利润表",
+          "char_start": null,
+          "char_end": null,
+          "quality": "ok",
+          "notes": []
+        },
+        {
+          "doc_id": "fixture-source",
+          "run_id": "fixture-source-parse",
+          "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+          "file": "synthetic-source.docx",
+          "block_id": "source-3",
+          "page": null,
+          "bbox": null,
+          "paragraph": 3,
+          "text": "项目 2024年度 2023年度",
+          "char_start": null,
+          "char_end": null,
+          "quality": "ok",
+          "notes": []
+        },
+        {
+          "doc_id": "fixture-source",
+          "run_id": "fixture-source-parse",
+          "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+          "file": "synthetic-source.docx",
+          "block_id": "source-2",
+          "page": null,
+          "bbox": null,
+          "paragraph": 2,
+          "text": "单位：万元",
+          "char_start": null,
+          "char_end": null,
+          "quality": "ok",
+          "notes": []
+        }
+      ],
+      "warnings": [],
+      "attributes": {
+        "source_column": 0,
+        "statement": "income",
+        "metric_label": "营业收入",
+        "extraction": "rules-v2",
+        "value_locations": [
+          {
+            "doc_id": "fixture-source",
+            "page": null,
+            "paragraph": 4,
+            "block_id": "source-4"
+          }
+        ]
+      },
+      "fact_id": "6c18f5c5316baebe077b"
+    },
+    {
+      "metric": "revenue",
+      "value": "90",
+      "unit": "万元",
+      "period": "2023FY",
+      "company": "联调示例公司",
+      "basis": "reported",
+      "scope": "consolidated",
+      "currency": "CNY",
+      "text": "营业收入 100 90",
+      "evidence": [
+        {
+          "doc_id": "fixture-source",
+          "run_id": "fixture-source-parse",
+          "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+          "file": "synthetic-source.docx",
+          "block_id": "source-4",
+          "page": null,
+          "bbox": null,
+          "paragraph": 4,
+          "text": "营业收入 100 90",
+          "char_start": null,
+          "char_end": null,
+          "quality": "ok",
+          "notes": []
+        },
+        {
+          "doc_id": "fixture-source",
+          "run_id": "fixture-source-parse",
+          "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+          "file": "synthetic-source.docx",
+          "block_id": "source-1",
+          "page": null,
+          "bbox": null,
+          "paragraph": 1,
+          "text": "2024年度合并利润表",
+          "char_start": null,
+          "char_end": null,
+          "quality": "ok",
+          "notes": []
+        },
+        {
+          "doc_id": "fixture-source",
+          "run_id": "fixture-source-parse",
+          "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+          "file": "synthetic-source.docx",
+          "block_id": "source-3",
+          "page": null,
+          "bbox": null,
+          "paragraph": 3,
+          "text": "项目 2024年度 2023年度",
+          "char_start": null,
+          "char_end": null,
+          "quality": "ok",
+          "notes": []
+        },
+        {
+          "doc_id": "fixture-source",
+          "run_id": "fixture-source-parse",
+          "sha256": "2ccb45ee21438f3207fd7ddca0d93f2da7fa28a8020ab7a1b1f61b5987530279",
+          "file": "synthetic-source.docx",
+          "block_id": "source-2",
+          "page": null,
+          "bbox": null,
+          "paragraph": 2,
+          "text": "单位：万元",
+          "char_start": null,
+          "char_end": null,
+          "quality": "ok",
+          "notes": []
+        }
+      ],
+      "warnings": [],
+      "attributes": {
+        "source_column": 1,
+        "statement": "income",
+        "metric_label": "营业收入",
+        "extraction": "rules-v2",
+        "value_locations": [
+          {
+            "doc_id": "fixture-source",
+            "page": null,
+            "paragraph": 4,
+            "block_id": "source-4"
+          }
+        ]
+      },
+      "fact_id": "c2ea9b4b165ae3525ca2"
+    }
+  ],
+  "model_traces": [],
+  "text_review": {
+    "schema_version": "text-review/1.0",
+    "document_id": "fixture-report",
+    "scene": "研报",
+    "detector": "hybrid",
+    "errors": [],
+    "traces": [],
+    "raw_candidates": [],
+    "rejected_candidates": [],
+    "numeric_index": [
+      {
+        "metric": "revenue",
+        "metric_text": "营业收入",
+        "start": 0,
+        "end": 15,
+        "text": "2024年营业收入100万元。",
+        "quantities": [
+          {
+            "value": "100",
+            "unit": "万元",
+            "start": 9,
+            "end": 14
+          }
+        ],
+        "periods": [
+          "2024年"
+        ],
+        "entity_mentions": []
+      }
+    ],
+    "coverage": {
+      "complete": false,
+      "total_chars": 15,
+      "execution_complete": false,
+      "candidate_quality_complete": true,
+      "processed_chars": 0,
+      "processed_ranges": [],
+      "unprocessed_ranges": [
+        [
+          0,
+          15
+        ]
+      ],
+      "context_mode": "whole",
+      "model_ran": false,
+      "requested_model": true,
+      "model_complete": false,
+      "rules_complete": true,
+      "rules_processed_chars": 15,
+      "global_linking_complete": true,
+      "truncation_reasons": [
+        "model_unavailable_offline_rules_only"
+      ],
+      "global_link_strategy": "repeated_known_metric_with_original_sentences",
+      "indexed_metric_mentions": 1,
+      "planned_model_calls": 0,
+      "finished_model_calls": 0,
+      "supported_error_types": [
+        "时间信息非法",
+        "冗余语句",
+        "格式错误",
+        "数值缺失",
+        "属性值缺失错误",
+        "术语误用",
+        "法规引用错误",
+        "模糊语言",
+        "数值单位错误",
+        "金融要素缺失",
+        "语义逻辑矛盾",
+        "时间矛盾",
+        "数值不一致错误",
+        "计算错误",
+        "不一致条款"
+      ],
+      "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+      "external_source_documents_used": false,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+    },
+    "source_locations": [
+      {
+        "start": 0,
+        "end": 15,
+        "block_id": "report-1",
+        "page": null,
+        "bbox": null,
+        "quality": "ok"
+      }
+    ]
+  },
+  "fixture": {
+    "synthetic": true,
+    "purpose": "R09 interface integration, not an accuracy evaluation",
+    "original_files_exist": false,
+    "created_at_is_fixed_fixture_metadata": true,
+    "generation": "check_documents with in-memory Document objects; no model calls",
+    "legacy_shape_conversion": false
+  }
+}

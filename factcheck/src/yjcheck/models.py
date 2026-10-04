@@ -5,7 +5,8 @@ from dataclasses import asdict, dataclass, field
 from hashlib import sha256
 from typing import Any
 
-SCHEMA_VERSION = "1.0.0"
+# Paired check_result contract. The independent text-review schema is unchanged.
+SCHEMA_VERSION = "1.1.0"
 STATUSES = ("confirmed_error", "needs_review", "no_issue")
 STATUS_LABELS = dict(zip(STATUSES, ("已确认错误", "待人工确认", "未发现问题")))
 

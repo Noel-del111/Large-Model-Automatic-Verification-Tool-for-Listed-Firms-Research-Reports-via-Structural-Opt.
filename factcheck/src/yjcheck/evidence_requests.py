@@ -91,9 +91,22 @@ def _prior_period(period: str) -> str | None:
 
 
 def request_text(finding: dict) -> str:
-    """Plain text representation for backend CSV and Markdown exports."""
+    """Render requests without losing company or accounting dimensions.
+
+    A legacy finding with no request fields stays blank: absence is not proof
+    that no additional evidence is needed. Consumers display that legacy state
+    separately; this formatter never invents requests or changes a verdict.
+    """
     roles = {"report": "研报", "source": "财报/公告"}
+    kinds = {"provide_source": "补充来源", "repair_input": "修复材料",
+             "clarify_context": "澄清上下文", "resolve_conflict": "澄清冲突"}
+    bases = {"before": "调整前", "after": "调整后", "change": "调整变动",
+             "reported": "披露口径", "unknown": "调整口径待确认"}
+    scopes = {"consolidated": "合并口径", "parent": "母公司口径", "unknown": "报表范围待确认"}
     return "；".join(
-        f"{roles.get(r['doc_role'], r['doc_role'])} / {r['field']} / {r['period'] or '期间待确认'}：{r['reason']}"
+        f"{kinds[r['request_type']]} / {roles[r['doc_role']]} / {r['company'] or '公司待确认'}"
+        f" / {r['field']} / {r['period'] or '期间待确认'}"
+        f" / {bases.get(r['basis']) or '调整口径待确认'}"
+        f" / {scopes.get(r['scope']) or '报表范围待确认'}：{r['reason']}"
         + (f"（文件：{Path(r['file']).name}）" if r.get("file") else "")
         for r in finding.get("evidence_request", []))
