@@ -1,0 +1,83 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000247",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/03550a302231189a8a4988b5.json",
+  "all_hints_index": null,
+  "gold_index": 1,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000247:error:0002",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 760,
+        "original_start": 719,
+        "original_text": "但由于成本端铁水缓慢上升叠加焦煤持续提价，对钢价仍有一定支撑，短期或维持稳定运行。",
+        "start": 719,
+        "text": "但由于成本端铁水缓慢上升叠加焦煤持续提价，对钢价仍有一定支撑，短期或维持稳定运行。"
+      }
+    ],
+    "type": "术语误用"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C032",
+  "error_type": "术语误用",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000247.json",
+  "related_predictions": [],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000247:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 760,
+            "original_start": 719,
+            "original_text": "但由于成本端铁水缓慢上升叠加焦煤持续提价，对钢价仍有一定支撑，短期或维持稳定运行。",
+            "start": 719,
+            "text": "但由于成本端铁水缓慢上升叠加焦煤持续提价，对钢价仍有一定支撑，短期或维持稳定运行。"
+          }
+        ],
+        "type": "术语误用"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

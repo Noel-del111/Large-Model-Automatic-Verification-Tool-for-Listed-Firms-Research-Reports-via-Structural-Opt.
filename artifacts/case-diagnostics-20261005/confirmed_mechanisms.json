@@ -1,0 +1,48 @@
+{
+  "scope": "research442-rerun-20261005 hybrid, 全量该类TP",
+  "finance_missing_matched_candidates": [
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000420",
+      "prediction_file": "run/predictions/hybrid/82f25a3f964d5cb088077900.json",
+      "all_hints_index": 2,
+      "status": "needs_review"
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000349",
+      "prediction_file": "run/predictions/hybrid/a84bc67cf3409962c21e8fef.json",
+      "all_hints_index": 4,
+      "status": "needs_review"
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000495",
+      "prediction_file": "run/predictions/hybrid/c30c6075a0624b239dc68112.json",
+      "all_hints_index": 0,
+      "status": "needs_review"
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000334",
+      "prediction_file": "run/predictions/hybrid/c34c9362e7caec2b722992c5.json",
+      "all_hints_index": 3,
+      "status": "needs_review"
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000329",
+      "prediction_file": "run/predictions/hybrid/cebbfba6cca19b2b1f980d4e.json",
+      "all_hints_index": 1,
+      "status": "needs_review"
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000557",
+      "prediction_file": "run/predictions/hybrid/dda3e78698207424a75c57bf.json",
+      "all_hints_index": 1,
+      "status": "needs_review"
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000517",
+      "prediction_file": "run/predictions/hybrid/fd6c5811d25e0021834773e7.json",
+      "all_hints_index": 2,
+      "status": "needs_review"
+    }
+  ],
+  "interpretation": "7个匹配金标候选仍待审；不能断言7个都符合业务自动确认条件。"
+}

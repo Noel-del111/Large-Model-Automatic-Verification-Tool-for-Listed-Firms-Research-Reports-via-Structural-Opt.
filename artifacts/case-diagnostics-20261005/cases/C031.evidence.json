@@ -1,0 +1,92 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000406",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/6a33641c296125421747a6f8.json",
+  "all_hints_index": null,
+  "gold_index": 3,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000406:error:0004",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 539,
+        "original_start": 496,
+        "original_text": "公司加强采购及库存管理，以及产能增加导致应收账款周转加快，采购原材料现金支出减少所致。",
+        "start": 496,
+        "text": "公司加强采购及库存管理，以及产能增加导致应收账款周转加快，采购原材料现金支出减少所致。"
+      }
+    ],
+    "type": "术语误用"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C031",
+  "error_type": "术语误用",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000406.json",
+  "related_predictions": [],
+  "related_golds": [
+    {
+      "gold_index": 3,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000406:error:0004",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 539,
+            "original_start": 496,
+            "original_text": "公司加强采购及库存管理，以及产能增加导致应收账款周转加快，采购原材料现金支出减少所致。",
+            "start": 496,
+            "text": "公司加强采购及库存管理，以及产能增加导致应收账款周转加快，采购原材料现金支出减少所致。"
+          }
+        ],
+        "type": "术语误用"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

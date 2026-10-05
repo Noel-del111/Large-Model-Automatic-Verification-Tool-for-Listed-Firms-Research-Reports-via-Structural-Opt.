@@ -1,0 +1,191 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000691",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/a6f046b9a41461b9c16ef212.json",
+  "all_hints_index": 3,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "语义逻辑矛盾",
+    "reason": "从高到低排列，但+4.17%与+2.17%之间用“＜”，与高到低排序矛盾。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 249,
+        "end": 369,
+        "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 249,
+        "end": 369,
+        "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "386bdecf7f8e3c87b5ceedfb",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C042",
+  "error_type": "语义逻辑矛盾",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000691.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "reason": "称6个三级子板块整体上涨，但列表中SW通信工程及服务(-0.55%)和SW通信应用增值服务(-1.06%)为下跌。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 216,
+            "end": 369,
+            "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨，涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨，涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 216,
+            "end": 369,
+            "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨，涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "80ba899e3b2786324e3182b6",
+        "review_priority": "low"
+      }
+    },
+    {
+      "all_hints_index": 3,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "reason": "从高到低排列，但+4.17%与+2.17%之间用“＜”，与高到低排序矛盾。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 249,
+            "end": 369,
+            "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 249,
+            "end": 369,
+            "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "386bdecf7f8e3c87b5ceedfb",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000691:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 293,
+            "original_start": 249,
+            "original_text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）",
+            "start": 249,
+            "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）"
+          }
+        ],
+        "type": "语义逻辑矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

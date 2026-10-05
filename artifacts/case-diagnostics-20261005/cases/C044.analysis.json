@@ -1,0 +1,56 @@
+{
+  "case_id": "C044",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "金标语义矛盾[173,197)是R125价格4.55万元/吨较上周下跌；后面核心观点概括“主要制冷剂品种的价格和毛利均出现上涨”。",
+  "observed": "raw仅输出25时25分和事故/通报日期倒置2项，没有价格方向候选；均被保留。R125、R134a、R32的价格段与总括句都在同一819字符上下文。R125价格下跌而毛利上涨本身不矛盾，关键应核对“均”是否含R125。",
+  "evidence": [
+    {
+      "source": "documents/000669.json#/input/content",
+      "fact": "R125价格下跌；同段R134a/R32价格上涨500元/吨。核心观点另称主要品种价格和毛利均上涨。"
+    },
+    {
+      "source": "documents/000669.json#/gold/errors/0",
+      "fact": "金标仅圈R125下跌句，未提供总括句作为第二span。"
+    },
+    {
+      "source": "documents/000669.json#/responses/0/content",
+      "fact": "raw两个候选都为时间问题。"
+    },
+    {
+      "source": "documents/000669.json#/report/rejected_candidates",
+      "fact": "空列表；未有价格方向候选进入后处理。"
+    },
+    {
+      "source": "requests/000669.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；819字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不能以毛利上涨推出价格必涨，成本变化可使两者相反。",
+    "目标与总结句同时可见，不支持本例缺少多文件检索。",
+    "没有证据表明候选定位失败导致FN。"
+  ],
+  "conclusion": "可核实为R125方向相关候选未生成。最合理的待验证检查点是具体品种与“均上涨”的概括是否同范围，而不是金融数据库中真实R125价格。人工仍须裁定“主要品种”是否明确包括R125。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "原文“主要品种”是否容许排除R125；标题价格上涨也不必然表示每个品种上涨。",
+    "金标未给解释，不能仅凭一个下跌词恢复全部意图。"
+  ],
+  "minimal_validation": {
+    "change": "人工把概括范围和具体品种绑定，判断是否存在全称与反例冲突；确认后再设计仅比较同口径总结与明细的最小检查。",
+    "control": "加入“部分/总体价格上涨”而单项下跌的正常对照；保留原金标。",
+    "success_criterion": "必须引用具体下跌项与明确全称结论，正常总体上涨不产生误报。",
+    "regression_check": "回归价格下跌但毛利上升等正常成本变化，避免关系简化。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "总结与明细量词一致性命中率",
+    "definition": "人工确认全称总结包含某明细反例的实例中，系统正确绑定范围并发现冲突的比例。",
+    "why_this_case": "本例的关键中间判断是“均”的范围，不是实时价格查询。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

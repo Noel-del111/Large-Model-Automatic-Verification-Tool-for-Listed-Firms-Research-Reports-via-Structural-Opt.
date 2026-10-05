@@ -1,0 +1,182 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000368",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/dead84e9f34fede796b202d1.json",
+  "all_hints_index": 11,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "金融要素缺失",
+    "reason": "“投资评级”标题下未给出具体评级结果，缺失必要要素。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 397,
+        "end": 424,
+        "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 397,
+        "end": 424,
+        "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "6ea3ca7331d7bbd6fa7a57e7",
+    "review_priority": "high"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C046",
+  "error_type": "金融要素缺失",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000368.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "reason": "基本每股收益后应列加权平均净资产收益率，此处缺失且无后续数值。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 116,
+            "end": 130,
+            "text": "基本每股收益1.16元，加权"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "基本每股收益1.16元，加权"
+          }
+        ],
+        "spans": [
+          {
+            "start": 116,
+            "end": 130,
+            "text": "基本每股收益1.16元，加权"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "942b30674564cb61f38dd6ce",
+        "review_priority": "high"
+      }
+    },
+    {
+      "all_hints_index": 11,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "reason": "“投资评级”标题下未给出具体评级结果，缺失必要要素。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 397,
+            "end": 424,
+            "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 397,
+            "end": 424,
+            "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "6ea3ca7331d7bbd6fa7a57e7",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 2,
+      "same_type": true,
+      "overlap": false,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000368:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 130,
+            "original_start": 60,
+            "original_text": "本报告期内，实现营业总收入亿，同比增+19.67%；归母净利40.12亿，；扣38.44亿，同比增+6.64%；基本每股收益1.16元，加权",
+            "start": 60,
+            "text": "本报告期内，实现营业总收入亿，同比增+19.67%；归母净利40.12亿，；扣38.44亿，同比增+6.64%；基本每股收益1.16元，加权"
+          }
+        ],
+        "type": "金融要素缺失"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 11,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 11,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 11,
+      "gold_index": 2,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

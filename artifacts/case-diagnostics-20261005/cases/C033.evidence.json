@@ -1,0 +1,131 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000335",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/aa31c6ca9c0681c63a5f8407.json",
+  "all_hints_index": 4,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "格式错误",
+    "reason": "左括号后连续两个逗号且未见右括号闭合，标点格式损坏。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 385,
+        "end": 452,
+        "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 385,
+        "end": 452,
+        "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "c37a06167f2eb338c8f6bf38",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C033",
+  "error_type": "格式错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000335.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 4,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "格式错误",
+        "reason": "左括号后连续两个逗号且未见右括号闭合，标点格式损坏。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 385,
+            "end": 452,
+            "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 385,
+            "end": 452,
+            "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "c37a06167f2eb338c8f6bf38",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [],
+  "scoring_checks": [
+    {
+      "all_hints_index": 4,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": false,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000351",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/9717c40ad6b7ee7b5ac98967.json",
+  "all_hints_index": 0,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "时间信息非法",
+    "reason": "预测年份区间写成“2027~2025年”，起点晚于终点，且与后续净利润递增顺序矛盾。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 925,
+        "end": 1091,
+        "text": "我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 925,
+        "end": 1091,
+        "text": "我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "32fffbfb911fc241f02032c9",
+    "review_priority": "high"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C022",
+  "error_type": "时间信息非法",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000351.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "时间信息非法",
+        "reason": "预测年份区间写成“2027~2025年”，起点晚于终点，且与后续净利润递增顺序矛盾。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 925,
+            "end": 1091,
+            "text": "我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 925,
+            "end": 1091,
+            "text": "我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "32fffbfb911fc241f02032c9",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000351:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1045,
+            "original_start": 965,
+            "original_text": "业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元",
+            "start": 965,
+            "text": "业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元"
+          }
+        ],
+        "type": "时间矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

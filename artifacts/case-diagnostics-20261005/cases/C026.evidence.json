@@ -1,0 +1,197 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000174",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/44b04cb0a44455d4073a3013.json",
+  "all_hints_index": 0,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "时间矛盾",
+    "reason": "五一档应为5月1日至5月5日，却写成6月1日至6月5日，且截至5月5日与档期起点6月1日冲突。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 50,
+        "end": 101,
+        "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 50,
+        "end": 101,
+        "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "2c3303135e80a34dd737f753",
+    "review_priority": "high"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C026",
+  "error_type": "时间矛盾",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000174.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "时间矛盾",
+        "reason": "五一档应为5月1日至5月5日，却写成6月1日至6月5日，且截至5月5日与档期起点6月1日冲突。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 50,
+            "end": 101,
+            "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 50,
+            "end": 101,
+            "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "2c3303135e80a34dd737f753",
+        "review_priority": "high"
+      }
+    },
+    {
+      "all_hints_index": 4,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "计算错误",
+        "reason": "按档期票房15.2亿元除以观影人次3543.9万，平均票价约42.89元，与40.40元不符。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 199,
+            "end": 256,
+            "text": "2024年五一档档期观影人次3543.9万人，同比下降5.97%，档期平均票价为40.40元，同比上升0.07%。"
+          },
+          {
+            "kind": "source_text",
+            "start": 50,
+            "end": 101,
+            "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2024年五一档档期观影人次3543.9万人，同比下降5.97%，档期平均票价为40.40元，同比上升0.07%。"
+          },
+          {
+            "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 199,
+            "end": 256,
+            "text": "2024年五一档档期观影人次3543.9万人，同比下降5.97%，档期平均票价为40.40元，同比上升0.07%。"
+          },
+          {
+            "start": 50,
+            "end": 101,
+            "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text",
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "da418e0286697f36878ec7be",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000174:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 65,
+            "original_start": 50,
+            "original_text": "今年五一档从6月1日至6月5日",
+            "start": 50,
+            "text": "今年五一档从6月1日至6月5日"
+          }
+        ],
+        "type": "语义逻辑矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

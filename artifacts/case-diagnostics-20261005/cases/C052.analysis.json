@@ -1,0 +1,60 @@
+{
+  "case_id": "C052",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审法规引用FP为香港立法会三读通过《》的空文件名；金标同处[896,914)为属性值缺失错误。",
+  "observed": "raw_candidates[1]发现书名号内法律文件名为空，最终同类[891,989)覆盖目标金标；后处理保留needs_review。模型并未声称具体法条内容违法或填入某法律名，只是把空名称分类为法规引用错误。",
+  "evidence": [
+    {
+      "source": "documents/000654.json#/input/content",
+      "fact": "原句“5月21日香港立法会正式三读通过《》”，书名号为空可从文本直接确认。"
+    },
+    {
+      "source": "documents/000654.json#/gold/errors/0",
+      "fact": "金标类型属性值缺失错误，跨度[896,914)。"
+    },
+    {
+      "source": "documents/000654.json#/responses/0/content",
+      "fact": "raw_candidates[1]以“法律文件引用不完整”解释空名称。"
+    },
+    {
+      "source": "documents/000654.json#/all_hints/1",
+      "fact": "法规引用错误[891,989)；覆盖充分而类别不同。"
+    },
+    {
+      "source": "documents/000654.json#/matched_pairs",
+      "fact": "本条未配对，其余部分类型可匹配。"
+    },
+    {
+      "source": "requests/000654.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1512字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是模型没有发现空名称。",
+    "不是需要先查清法律全文才能判断当前名称字段为空。",
+    "不能把法规类别零正例解释为模型所有法规候选都凭空捏造。"
+  ],
+  "conclusion": "这是清晰的空属性与领域类别边界失配：同一空法规名称在金标是属性缺失、模型是法规引用。应先统一“空名称优先属性缺失”的标注约定，再讨论自动确认；不应为命中评分而猜法律名补全。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "该类是否按错误形式优先或领域对象优先，需要一致规则。",
+    "从书名号空缺能判断问题，不代表有足够证据自动填写正确法律名。"
+  ],
+  "minimal_validation": {
+    "change": "人工确认空非数值属性的分类优先级，离线仅改该候选类型重放评分，不修改引用和理由。",
+    "control": "保留原文与金标；用非空但引用错条款、普通空公司属性作对照。",
+    "success_criterion": "类型单改后匹配，同时区分空名称与引用实质错误。",
+    "regression_check": "防止把所有法规问题都映射为属性缺失，保留需外部核验的实质错引。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "空字段分类一致率",
+    "definition": "原文明确为空的非数值字段中，模型与统一标注规则对属性缺失的分类一致比例，并分法规/评级等领域统计。",
+    "why_this_case": "这个FP优先是类别映射，而非专业知识或检索召回问题。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

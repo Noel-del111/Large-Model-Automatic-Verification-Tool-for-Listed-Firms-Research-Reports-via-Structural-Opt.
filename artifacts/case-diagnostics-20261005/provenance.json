@@ -1,0 +1,18 @@
+{
+  "package": "research442-rerun-20261005",
+  "package_manifest_sha256": "9836059fa58107d88ae6cffc680c1409aa48dc0bc874ebad8a28cb7a4f2640e6",
+  "verified_source_files": 1880,
+  "batch": "research442-rerun-20261005",
+  "old_pdf_batch_reproduced": false,
+  "score_protocol": "all-hints typed full-span containment + deterministic one-to-one maximum matching",
+  "hybrid_case_replay_exact_match": true,
+  "hybrid_totals": {
+    "TP": 1235,
+    "FP": 625,
+    "FN": 512
+  },
+  "sample_count": 71,
+  "sample_documents": 66,
+  "new_api_calls": 0,
+  "human_finalized_cases": 0
+}

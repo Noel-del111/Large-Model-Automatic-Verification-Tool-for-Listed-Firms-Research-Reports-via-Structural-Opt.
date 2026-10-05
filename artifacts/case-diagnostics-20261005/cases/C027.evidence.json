@@ -1,0 +1,176 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000239",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/bae081f62daa74f0ad1aafae.json",
+  "all_hints_index": null,
+  "gold_index": 0,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000239:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 141,
+        "original_start": 101,
+        "original_text": "五一假期国内出行“量”平稳增长，高基数下出游韧性凸显。根据央视网，5月5日-1日",
+        "start": 101,
+        "text": "五一假期国内出行“量”平稳增长，高基数下出游韧性凸显。根据央视网，5月5日-1日"
+      }
+    ],
+    "type": "时间矛盾"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C027",
+  "error_type": "时间矛盾",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000239.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "时间矛盾",
+        "reason": "日期区间写成5月5日-1日，起点晚于终点，时间关系冲突。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 128,
+            "end": 201,
+            "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 128,
+            "end": 201,
+            "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "87134b92caf9f9fa32435f1e",
+        "review_priority": "high"
+      }
+    },
+    {
+      "all_hints_index": 1,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值缺失",
+        "reason": "“流动量约人次”处缺少具体数值，只有单位人次。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 128,
+            "end": 201,
+            "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 128,
+            "end": 201,
+            "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "aa5da72aef49bb112e12af1e",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000239:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 141,
+            "original_start": 101,
+            "original_text": "五一假期国内出行“量”平稳增长，高基数下出游韧性凸显。根据央视网，5月5日-1日",
+            "start": 101,
+            "text": "五一假期国内出行“量”平稳增长，高基数下出游韧性凸显。根据央视网，5月5日-1日"
+          }
+        ],
+        "type": "时间矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

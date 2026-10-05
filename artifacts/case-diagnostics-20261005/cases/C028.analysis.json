@@ -1,0 +1,55 @@
+{
+  "case_id": "C028",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "金标把“2025年4-1月…180.7亿美元”[234,267)定义为时间矛盾，核心是区间次序倒置。",
+  "observed": "raw_candidates[0]指出4-1月月份顺序倒置，却标为时间信息非法；最终[234,278)完整覆盖金标，保留needs_review，类别不一致导致FN并伴随一个未匹配预测。",
+  "evidence": [
+    {
+      "source": "documents/000664.json#/gold/errors/1",
+      "fact": "目标金标类型时间矛盾，范围[234,267)。"
+    },
+    {
+      "source": "documents/000664.json#/responses/0/content",
+      "fact": "raw_candidates[0]类型时间信息非法，理由为“月份顺序倒置”。"
+    },
+    {
+      "source": "documents/000664.json#/all_hints/0",
+      "fact": "最终同raw类别，范围[234,278)包含整个金标。"
+    },
+    {
+      "source": "documents/000664.json#/matched_pairs",
+      "fact": "其余三个问题匹配，本条未匹配。"
+    },
+    {
+      "source": "requests/000664.json#/requests/0",
+      "fact": "冻结请求重建与历史cache/trace哈希均一致；当前文档833字符在whole上下文中覆盖，1次调用成功。只能证明留存指纹对应的请求构造，未留存原始HTTP报文，不能扩展为网络报文逐字取证。"
+    }
+  ],
+  "excluded_explanations": [
+    "本例不是没有识别出倒序月份；raw已明确描述。",
+    "不是引用范围不足：预测覆盖全部金标。",
+    "无后处理改类或丢弃该候选的证据。"
+  ],
+  "conclusion": "本例证据支持分类边界失配：同一个倒序时间关系被模型归入时间非法，而金标归入时间矛盾。尚不说明所有时间非法输出都需要统一改类。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "人工是否接受金标类别；“4-1月”是否应按关系冲突而非格式损坏处理需统一标注规则。"
+  ],
+  "minimal_validation": {
+    "change": "人工仅裁定该倒序期间的类别；在离线副本只将该条类型改为裁定类别并重放评分。",
+    "control": "固定原文、引用和理由，不改金标、不扩大span。",
+    "success_criterion": "仅改类型即可匹配，同时人工确认未改变业务判断。",
+    "regression_check": "使用合法日期表达差异、2月30日和跨年期间作为对照，避免时间关系与时间本身非法混淆。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "已识别问题的类别一致率",
+    "definition": "人工认定同一业务问题且跨度充分的候选中，与经裁定金标类别一致的比例。",
+    "why_this_case": "这条FN来自类型，而非知识检索或输入覆盖。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

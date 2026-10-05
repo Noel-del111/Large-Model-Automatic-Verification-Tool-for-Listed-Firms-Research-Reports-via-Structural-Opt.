@@ -1,0 +1,276 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000176",
+  "result": "TP",
+  "prediction_file": "run/predictions/hybrid/8fd06c5b92b31fef6133df22.json",
+  "all_hints_index": 3,
+  "gold_index": 1,
+  "prediction": {
+    "error_type": "语义逻辑矛盾",
+    "reason": "宝安栋数占比38.2%高于龙岗30.5%，龙岗不可能栋数占比最高、宝安第二。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 522,
+        "end": 593,
+        "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 522,
+        "end": 593,
+        "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "5a667bf0762240dd46a0d908",
+    "review_priority": "low"
+  },
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000176:error:0002",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 541,
+        "original_start": 525,
+        "original_text": "龙岗栋数占比最高，为30.5%，",
+        "start": 525,
+        "text": "龙岗栋数占比最高，为30.5%，"
+      },
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 592,
+        "original_start": 577,
+        "original_text": "栋数占比位居第二，为38.2%",
+        "start": 577,
+        "text": "栋数占比位居第二，为38.2%"
+      }
+    ],
+    "type": "语义逻辑矛盾"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C063",
+  "error_type": "语义逻辑矛盾",
+  "cohort": "control",
+  "document_ref": "documents/000176.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 2,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "reason": "龙岗、宝安、龙华栋数占比30.5%+38.2%+11.5%=80.2%，与前述栋数合计占比70.3%不符。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 474,
+            "end": 522,
+            "text": "辖区建面和栋数前三甲为龙岗、宝安、龙华三区，栋数合计占比70.3%，建筑面积合计占比74.9%。"
+          },
+          {
+            "kind": "source_text",
+            "start": 522,
+            "end": 618,
+            "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。龙华栋数占比为11.5%，建筑面积占比15.4%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "辖区建面和栋数前三甲为龙岗、宝安、龙华三区，栋数合计占比70.3%，建筑面积合计占比74.9%。"
+          },
+          {
+            "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。龙华栋数占比为11.5%，建筑面积占比15.4%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 474,
+            "end": 522,
+            "text": "辖区建面和栋数前三甲为龙岗、宝安、龙华三区，栋数合计占比70.3%，建筑面积合计占比74.9%。"
+          },
+          {
+            "start": 522,
+            "end": 618,
+            "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。龙华栋数占比为11.5%，建筑面积占比15.4%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text",
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "2676f04d5109678fcb972990",
+        "review_priority": "high"
+      }
+    },
+    {
+      "all_hints_index": 3,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "reason": "宝安栋数占比38.2%高于龙岗30.5%，龙岗不可能栋数占比最高、宝安第二。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 522,
+            "end": 593,
+            "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 522,
+            "end": 593,
+            "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "5a667bf0762240dd46a0d908",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000176:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 541,
+            "original_start": 525,
+            "original_text": "龙岗栋数占比最高，为30.5%，",
+            "start": 525,
+            "text": "龙岗栋数占比最高，为30.5%，"
+          },
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 592,
+            "original_start": 577,
+            "original_text": "栋数占比位居第二，为38.2%",
+            "start": 577,
+            "text": "栋数占比位居第二，为38.2%"
+          }
+        ],
+        "type": "语义逻辑矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": true
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

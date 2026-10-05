@@ -1,0 +1,1886 @@
+{
+  "schema_version": 1,
+  "scope": "hybrid frozen error instances; diagnostic coverage, not statistical representativeness",
+  "population": {
+    "documents": 442,
+    "failures": {
+      "full": 1137,
+      "baseline": 52,
+      "expanded": 59
+    },
+    "results": {
+      "full": {
+        "FP": 625,
+        "FN": 512
+      },
+      "baseline": {
+        "FP": 28,
+        "FN": 24
+      },
+      "expanded": {
+        "FP": 28,
+        "FN": 31
+      }
+    },
+    "tp_controls": 12,
+    "supplemental_failures": 7,
+    "all_selected_documents_including_controls": 66
+  },
+  "category_result_distribution": [
+    {
+      "error_type": "不一致条款",
+      "result": "FP",
+      "full": 0,
+      "full_share": 0.0,
+      "baseline": 0,
+      "baseline_share": 0.0,
+      "expanded": 0,
+      "expanded_share": 0.0,
+      "baseline_minus_full_percentage_points": 0.0,
+      "expanded_minus_full_percentage_points": 0.0
+    },
+    {
+      "error_type": "不一致条款",
+      "result": "FN",
+      "full": 0,
+      "full_share": 0.0,
+      "baseline": 0,
+      "baseline_share": 0.0,
+      "expanded": 0,
+      "expanded_share": 0.0,
+      "baseline_minus_full_percentage_points": 0.0,
+      "expanded_minus_full_percentage_points": 0.0
+    },
+    {
+      "error_type": "冗余语句",
+      "result": "FP",
+      "full": 156,
+      "full_share": 0.13720316622691292,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": -9.874162776537446,
+      "expanded_minus_full_percentage_points": -10.330486114216717
+    },
+    {
+      "error_type": "冗余语句",
+      "result": "FN",
+      "full": 83,
+      "full_share": 0.07299912049252419,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 3,
+      "expanded_share": 0.05084745762711865,
+      "baseline_minus_full_percentage_points": -3.4537582030985723,
+      "expanded_minus_full_percentage_points": -2.215166286540554
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "result": "FP",
+      "full": 19,
+      "full_share": 0.016710642040457344,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 2.175089642108112,
+      "expanded_minus_full_percentage_points": 1.718766304428842
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "result": "FN",
+      "full": 18,
+      "full_share": 0.0158311345646438,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 2.263040389689466,
+      "expanded_minus_full_percentage_points": 1.8067170520101963
+    },
+    {
+      "error_type": "数值不一致错误",
+      "result": "FP",
+      "full": 47,
+      "full_share": 0.04133685136323659,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": -0.2875312901698124,
+      "expanded_minus_full_percentage_points": -0.7438546278490825
+    },
+    {
+      "error_type": "数值不一致错误",
+      "result": "FN",
+      "full": 21,
+      "full_share": 0.018469656992084433,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 3,
+      "expanded_share": 0.05084745762711865,
+      "baseline_minus_full_percentage_points": 1.9991881469454031,
+      "expanded_minus_full_percentage_points": 3.237780063503422
+    },
+    {
+      "error_type": "数值单位错误",
+      "result": "FP",
+      "full": 34,
+      "full_share": 0.02990325417766051,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 0.8558284283877955,
+      "expanded_minus_full_percentage_points": 0.3995050907085254
+    },
+    {
+      "error_type": "数值单位错误",
+      "result": "FN",
+      "full": 10,
+      "full_share": 0.008795074758135445,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 3,
+      "expanded_share": 0.05084745762711865,
+      "baseline_minus_full_percentage_points": 2.966646370340302,
+      "expanded_minus_full_percentage_points": 4.205238286898321
+    },
+    {
+      "error_type": "数值缺失",
+      "result": "FP",
+      "full": 46,
+      "full_share": 0.040457343887423045,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": -0.1995805425884581,
+      "expanded_minus_full_percentage_points": -0.6559038802677282
+    },
+    {
+      "error_type": "数值缺失",
+      "result": "FN",
+      "full": 16,
+      "full_share": 0.014072119613016711,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 2.4389418848521753,
+      "expanded_minus_full_percentage_points": 1.9826185471729052
+    },
+    {
+      "error_type": "时间信息非法",
+      "result": "FP",
+      "full": 62,
+      "full_share": 0.05452946350043975,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": -1.606792503890129,
+      "expanded_minus_full_percentage_points": -2.063115841569399
+    },
+    {
+      "error_type": "时间信息非法",
+      "result": "FN",
+      "full": 12,
+      "full_share": 0.010554089709762533,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 2.790744875177593,
+      "expanded_minus_full_percentage_points": 2.334421537498323
+    },
+    {
+      "error_type": "时间矛盾",
+      "result": "FP",
+      "full": 34,
+      "full_share": 0.02990325417766051,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 0.8558284283877955,
+      "expanded_minus_full_percentage_points": 0.3995050907085254
+    },
+    {
+      "error_type": "时间矛盾",
+      "result": "FN",
+      "full": 30,
+      "full_share": 0.026385224274406333,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 3,
+      "expanded_share": 0.05084745762711865,
+      "baseline_minus_full_percentage_points": 1.2076314187132131,
+      "expanded_minus_full_percentage_points": 2.4462233352712315
+    },
+    {
+      "error_type": "术语误用",
+      "result": "FP",
+      "full": 56,
+      "full_share": 0.04925241864555849,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": -1.0790880184020024,
+      "expanded_minus_full_percentage_points": -1.5354113560812725
+    },
+    {
+      "error_type": "术语误用",
+      "result": "FN",
+      "full": 93,
+      "full_share": 0.08179419525065963,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 3,
+      "expanded_share": 0.05084745762711865,
+      "baseline_minus_full_percentage_points": -4.333265678912117,
+      "expanded_minus_full_percentage_points": -3.0946737623540983
+    },
+    {
+      "error_type": "格式错误",
+      "result": "FP",
+      "full": 21,
+      "full_share": 0.018469656992084433,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 1.9991881469454031,
+      "expanded_minus_full_percentage_points": 1.542864809266133
+    },
+    {
+      "error_type": "格式错误",
+      "result": "FN",
+      "full": 34,
+      "full_share": 0.02990325417766051,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 0.8558284283877955,
+      "expanded_minus_full_percentage_points": 0.3995050907085254
+    },
+    {
+      "error_type": "模糊语言",
+      "result": "FP",
+      "full": 6,
+      "full_share": 0.005277044854881266,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 3.3184493606657197,
+      "expanded_minus_full_percentage_points": 2.86212602298645
+    },
+    {
+      "error_type": "模糊语言",
+      "result": "FN",
+      "full": 0,
+      "full_share": 0.0,
+      "baseline": 0,
+      "baseline_share": 0.0,
+      "expanded": 0,
+      "expanded_share": 0.0,
+      "baseline_minus_full_percentage_points": 0.0,
+      "expanded_minus_full_percentage_points": 0.0
+    },
+    {
+      "error_type": "法规引用错误",
+      "result": "FP",
+      "full": 7,
+      "full_share": 0.006156552330694811,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 3.230498613084365,
+      "expanded_minus_full_percentage_points": 2.7741752754050952
+    },
+    {
+      "error_type": "法规引用错误",
+      "result": "FN",
+      "full": 0,
+      "full_share": 0.0,
+      "baseline": 0,
+      "baseline_share": 0.0,
+      "expanded": 0,
+      "expanded_share": 0.0,
+      "baseline_minus_full_percentage_points": 0.0,
+      "expanded_minus_full_percentage_points": 0.0
+    },
+    {
+      "error_type": "计算错误",
+      "result": "FP",
+      "full": 62,
+      "full_share": 0.05452946350043975,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": -1.606792503890129,
+      "expanded_minus_full_percentage_points": -2.063115841569399
+    },
+    {
+      "error_type": "计算错误",
+      "result": "FN",
+      "full": 26,
+      "full_share": 0.022867194371152155,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 3,
+      "expanded_share": 0.05084745762711865,
+      "baseline_minus_full_percentage_points": 1.559434409038631,
+      "expanded_minus_full_percentage_points": 2.7980263255966493
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "result": "FP",
+      "full": 69,
+      "full_share": 0.06068601583113457,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": -2.2224477369596105,
+      "expanded_minus_full_percentage_points": -2.67877107463888
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "result": "FN",
+      "full": 37,
+      "full_share": 0.032541776605101144,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 0.591976185643732,
+      "expanded_minus_full_percentage_points": 0.13565284796446184
+    },
+    {
+      "error_type": "金融要素缺失",
+      "result": "FP",
+      "full": 6,
+      "full_share": 0.005277044854881266,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 2,
+      "expanded_share": 0.03389830508474576,
+      "baseline_minus_full_percentage_points": 3.3184493606657197,
+      "expanded_minus_full_percentage_points": 2.86212602298645
+    },
+    {
+      "error_type": "金融要素缺失",
+      "result": "FN",
+      "full": 132,
+      "full_share": 0.11609498680738786,
+      "baseline": 2,
+      "baseline_share": 0.038461538461538464,
+      "expanded": 3,
+      "expanded_share": 0.05084745762711865,
+      "baseline_minus_full_percentage_points": -7.76334483458494,
+      "expanded_minus_full_percentage_points": -6.5247529180269215
+    }
+  ],
+  "category_result_total_variation": {
+    "baseline": 0.32426764089033216,
+    "expanded": 0.3190525170311405
+  },
+  "document_concentration": {
+    "full": {
+      "instances": 1137,
+      "unique_documents": 392,
+      "max_instances_per_document": 13,
+      "top5_instance_share": 0.040457,
+      "hhi": 0.003429,
+      "top_documents": [
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000368",
+          "instances": 13
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000696",
+          "instances": 9
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000154",
+          "instances": 8
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000360",
+          "instances": 8
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000589",
+          "instances": 8
+        }
+      ]
+    },
+    "baseline": {
+      "instances": 52,
+      "unique_documents": 48,
+      "max_instances_per_document": 3,
+      "top5_instance_share": 0.173077,
+      "hhi": 0.022929,
+      "top_documents": [
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000368",
+          "instances": 3
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000360",
+          "instances": 2
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000662",
+          "instances": 2
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000174",
+          "instances": 1
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000202",
+          "instances": 1
+        }
+      ]
+    },
+    "expanded": {
+      "instances": 59,
+      "unique_documents": 55,
+      "max_instances_per_document": 3,
+      "top5_instance_share": 0.152542,
+      "hhi": 0.019822,
+      "top_documents": [
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000368",
+          "instances": 3
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000360",
+          "instances": 2
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000662",
+          "instances": 2
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000160",
+          "instances": 1
+        },
+        {
+          "document_id": "fined:eval_data:5ffe80ef7c529d19:000174",
+          "instances": 1
+        }
+      ]
+    }
+  },
+  "distributions": {
+    "scene": [
+      {
+        "bucket": "个股研报",
+        "all_documents": 200,
+        "full_failures": 510,
+        "full_failure_share": 0.44854881266490765,
+        "full_documents": 181,
+        "baseline_failures": 18,
+        "baseline_failure_share": 0.34615384615384615,
+        "baseline_documents": 15,
+        "expanded_failures": 20,
+        "expanded_failure_share": 0.3389830508474576,
+        "expanded_documents": 17
+      },
+      {
+        "bucket": "行业研报",
+        "all_documents": 242,
+        "full_failures": 627,
+        "full_failure_share": 0.5514511873350924,
+        "full_documents": 211,
+        "baseline_failures": 34,
+        "baseline_failure_share": 0.6538461538461539,
+        "baseline_documents": 33,
+        "expanded_failures": 39,
+        "expanded_failure_share": 0.6610169491525424,
+        "expanded_documents": 38
+      }
+    ],
+    "length": [
+      {
+        "bucket": "<2000",
+        "all_documents": 391,
+        "full_failures": 984,
+        "full_failure_share": 0.8654353562005277,
+        "full_documents": 348,
+        "baseline_failures": 47,
+        "baseline_failure_share": 0.9038461538461539,
+        "baseline_documents": 43,
+        "expanded_failures": 51,
+        "expanded_failure_share": 0.864406779661017,
+        "expanded_documents": 47
+      },
+      {
+        "bucket": "2000–3999",
+        "all_documents": 42,
+        "full_failures": 119,
+        "full_failure_share": 0.10466138962181179,
+        "full_documents": 36,
+        "baseline_failures": 5,
+        "baseline_failure_share": 0.09615384615384616,
+        "baseline_documents": 5,
+        "expanded_failures": 6,
+        "expanded_failure_share": 0.1016949152542373,
+        "expanded_documents": 6
+      },
+      {
+        "bucket": "4000–7999",
+        "all_documents": 9,
+        "full_failures": 34,
+        "full_failure_share": 0.02990325417766051,
+        "full_documents": 8,
+        "baseline_failures": 0,
+        "baseline_failure_share": 0.0,
+        "baseline_documents": 0,
+        "expanded_failures": 2,
+        "expanded_failure_share": 0.03389830508474576,
+        "expanded_documents": 2
+      },
+      {
+        "bucket": ">=8000",
+        "all_documents": 0,
+        "full_failures": 0,
+        "full_failure_share": 0.0,
+        "full_documents": 0,
+        "baseline_failures": 0,
+        "baseline_failure_share": 0.0,
+        "baseline_documents": 0,
+        "expanded_failures": 0,
+        "expanded_failure_share": 0.0,
+        "expanded_documents": 0
+      }
+    ],
+    "document_f1": [
+      {
+        "bucket": "(0,0.4]",
+        "all_documents": 57,
+        "full_failures": 285,
+        "full_failure_share": 0.25065963060686014,
+        "full_documents": 57,
+        "baseline_failures": 16,
+        "baseline_failure_share": 0.3076923076923077,
+        "baseline_documents": 13,
+        "expanded_failures": 19,
+        "expanded_failure_share": 0.3220338983050847,
+        "expanded_documents": 16
+      },
+      {
+        "bucket": "(0.4,0.6]",
+        "all_documents": 97,
+        "full_failures": 394,
+        "full_failure_share": 0.3465259454705365,
+        "full_documents": 97,
+        "baseline_failures": 18,
+        "baseline_failure_share": 0.34615384615384615,
+        "baseline_documents": 18,
+        "expanded_failures": 18,
+        "expanded_failure_share": 0.3050847457627119,
+        "expanded_documents": 18
+      },
+      {
+        "bucket": "(0.6,0.8]",
+        "all_documents": 155,
+        "full_failures": 345,
+        "full_failure_share": 0.3034300791556728,
+        "full_documents": 155,
+        "baseline_failures": 13,
+        "baseline_failure_share": 0.25,
+        "baseline_documents": 12,
+        "expanded_failures": 13,
+        "expanded_failure_share": 0.22033898305084745,
+        "expanded_documents": 12
+      },
+      {
+        "bucket": "(0.8,1]",
+        "all_documents": 128,
+        "full_failures": 86,
+        "full_failure_share": 0.07563764291996482,
+        "full_documents": 78,
+        "baseline_failures": 4,
+        "baseline_failure_share": 0.07692307692307693,
+        "baseline_documents": 4,
+        "expanded_failures": 4,
+        "expanded_failure_share": 0.06779661016949153,
+        "expanded_documents": 4
+      },
+      {
+        "bucket": "0",
+        "all_documents": 5,
+        "full_failures": 27,
+        "full_failure_share": 0.023746701846965697,
+        "full_documents": 5,
+        "baseline_failures": 1,
+        "baseline_failure_share": 0.019230769230769232,
+        "baseline_documents": 1,
+        "expanded_failures": 5,
+        "expanded_failure_share": 0.0847457627118644,
+        "expanded_documents": 5
+      }
+    ]
+  },
+  "mechanical_labels": [
+    {
+      "label": "invalid_anchor",
+      "definition": "FP的最终提示明确标记invalid_anchor；不是所有FP，也不推断OCR失败。",
+      "core": true,
+      "eligible_results": [
+        "FP"
+      ],
+      "full": 46,
+      "full_eligible": 625,
+      "full_by_result": {
+        "FP": 46
+      },
+      "baseline": 6,
+      "baseline_eligible": 28,
+      "baseline_by_result": {
+        "FP": 6
+      },
+      "expanded": 6,
+      "expanded_eligible": 28,
+      "expanded_by_result": {
+        "FP": 6
+      }
+    },
+    {
+      "label": "same_type_partial_overlap",
+      "definition": "存在同类型预测/gold空间重叠，但该预测不能严格完整包含该gold全部span。",
+      "core": true,
+      "eligible_results": [
+        "FN",
+        "FP"
+      ],
+      "full": 194,
+      "full_eligible": 1137,
+      "full_by_result": {
+        "FP": 97,
+        "FN": 97
+      },
+      "baseline": 8,
+      "baseline_eligible": 52,
+      "baseline_by_result": {
+        "FN": 8
+      },
+      "expanded": 8,
+      "expanded_eligible": 59,
+      "expanded_by_result": {
+        "FN": 8
+      }
+    },
+    {
+      "label": "other_type_full_containment",
+      "definition": "存在不同类型预测/gold，预测严格完整包含gold；不证明reason识别了同一个异常。",
+      "core": true,
+      "eligible_results": [
+        "FN",
+        "FP"
+      ],
+      "full": 372,
+      "full_eligible": 1137,
+      "full_by_result": {
+        "FN": 155,
+        "FP": 217
+      },
+      "baseline": 17,
+      "baseline_eligible": 52,
+      "baseline_by_result": {
+        "FP": 10,
+        "FN": 7
+      },
+      "expanded": 18,
+      "expanded_eligible": 59,
+      "expanded_by_result": {
+        "FP": 10,
+        "FN": 8
+      }
+    },
+    {
+      "label": "one_to_one_competition",
+      "definition": "存在同类型完整包含的兼容边，但该边另一端已被确定性一对一匹配分配给其他实例。",
+      "core": true,
+      "eligible_results": [
+        "FN",
+        "FP"
+      ],
+      "full": 16,
+      "full_eligible": 1137,
+      "full_by_result": {
+        "FP": 15,
+        "FN": 1
+      },
+      "baseline": 3,
+      "baseline_eligible": 52,
+      "baseline_by_result": {
+        "FP": 2,
+        "FN": 1
+      },
+      "expanded": 3,
+      "expanded_eligible": 59,
+      "expanded_by_result": {
+        "FP": 2,
+        "FN": 1
+      }
+    },
+    {
+      "label": "no_anchored_overlap",
+      "definition": "FN与所有最终有效提示均无空间重叠；FP须自身有有效span且与所有可评gold均无重叠。",
+      "core": true,
+      "eligible_results": [
+        "FN",
+        "FP"
+      ],
+      "full": 487,
+      "full_eligible": 1137,
+      "full_by_result": {
+        "FP": 240,
+        "FN": 247
+      },
+      "baseline": 16,
+      "baseline_eligible": 52,
+      "baseline_by_result": {
+        "FP": 8,
+        "FN": 8
+      },
+      "expanded": 21,
+      "expanded_eligible": 59,
+      "expanded_by_result": {
+        "FP": 8,
+        "FN": 13
+      }
+    },
+    {
+      "label": "other_type_partial_overlap",
+      "definition": "不同类型仅部分空间重叠，不满足完整包含；只作几何关系描述。",
+      "core": false,
+      "eligible_results": [
+        "FN",
+        "FP"
+      ],
+      "full": 37,
+      "full_eligible": 1137,
+      "full_by_result": {
+        "FP": 16,
+        "FN": 21
+      },
+      "baseline": 4,
+      "baseline_eligible": 52,
+      "baseline_by_result": {
+        "FN": 2,
+        "FP": 2
+      },
+      "expanded": 5,
+      "expanded_eligible": 59,
+      "expanded_by_result": {
+        "FN": 3,
+        "FP": 2
+      }
+    },
+    {
+      "label": "fn_raw_candidates_empty",
+      "definition": "FN所在整篇report.raw_candidates为空；需另看执行状态，不等于已证实的生成根因。",
+      "core": false,
+      "eligible_results": [
+        "FN"
+      ],
+      "full": 3,
+      "full_eligible": 512,
+      "full_by_result": {
+        "FN": 3
+      },
+      "baseline": 0,
+      "baseline_eligible": 24,
+      "baseline_by_result": {},
+      "expanded": 1,
+      "expanded_eligible": 31,
+      "expanded_by_result": {
+        "FN": 1
+      }
+    },
+    {
+      "label": "fn_raw_present_no_exact_quote_overlap",
+      "definition": "整篇raw候选非空，但其所有引文在原文的精确出现位置均不与该FN重叠；改写引文可能造成零命中。",
+      "core": false,
+      "eligible_results": [
+        "FN"
+      ],
+      "full": 211,
+      "full_eligible": 512,
+      "full_by_result": {
+        "FN": 211
+      },
+      "baseline": 8,
+      "baseline_eligible": 24,
+      "baseline_by_result": {
+        "FN": 8
+      },
+      "expanded": 11,
+      "expanded_eligible": 31,
+      "expanded_by_result": {
+        "FN": 11
+      }
+    },
+    {
+      "label": "fn_raw_quote_overlap_without_final_overlap",
+      "definition": "FN无最终提示重叠，但至少一个raw引文的某个精确出现位置重叠；不说明其reason识别该错误。",
+      "core": false,
+      "eligible_results": [
+        "FN"
+      ],
+      "full": 33,
+      "full_eligible": 512,
+      "full_by_result": {
+        "FN": 33
+      },
+      "baseline": 0,
+      "baseline_eligible": 24,
+      "baseline_by_result": {},
+      "expanded": 1,
+      "expanded_eligible": 31,
+      "expanded_by_result": {
+        "FN": 1
+      }
+    },
+    {
+      "label": "fn_no_raw_candidate_of_gold_type",
+      "definition": "整篇raw候选中没有gold类型；可能与分类差异重叠，不称该类型没被检查。",
+      "core": false,
+      "eligible_results": [
+        "FN"
+      ],
+      "full": 347,
+      "full_eligible": 512,
+      "full_by_result": {
+        "FN": 347
+      },
+      "baseline": 14,
+      "baseline_eligible": 24,
+      "baseline_by_result": {
+        "FN": 14
+      },
+      "expanded": 19,
+      "expanded_eligible": 31,
+      "expanded_by_result": {
+        "FN": 19
+      }
+    },
+    {
+      "label": "invalid_anchor_exact_quote_absent",
+      "definition": "invalid_anchor FP至少有一个原始引文在原文精确零命中；不做空白或标点模糊恢复。",
+      "core": false,
+      "eligible_results": [
+        "FP"
+      ],
+      "full": 4,
+      "full_eligible": 625,
+      "full_by_result": {
+        "FP": 4
+      },
+      "baseline": 3,
+      "baseline_eligible": 28,
+      "baseline_by_result": {
+        "FP": 3
+      },
+      "expanded": 3,
+      "expanded_eligible": 28,
+      "expanded_by_result": {
+        "FP": 3
+      }
+    },
+    {
+      "label": "invalid_anchor_exact_quote_ambiguous",
+      "definition": "invalid_anchor FP至少有一个原始引文有多个精确出现位置；标签可与零命中并存。",
+      "core": false,
+      "eligible_results": [
+        "FP"
+      ],
+      "full": 42,
+      "full_eligible": 625,
+      "full_by_result": {
+        "FP": 42
+      },
+      "baseline": 3,
+      "baseline_eligible": 28,
+      "baseline_by_result": {
+        "FP": 3
+      },
+      "expanded": 3,
+      "expanded_eligible": 28,
+      "expanded_by_result": {
+        "FP": 3
+      }
+    }
+  ],
+  "zero_f1_documents": [
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000160",
+      "length_chars": 1092,
+      "scene": "行业研报",
+      "counts": {
+        "FN": 3
+      },
+      "raw_candidates": 0,
+      "execution_complete": true,
+      "baseline_case_ids": [],
+      "expanded_case_ids": [
+        "C065"
+      ]
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000411",
+      "length_chars": 1768,
+      "scene": "个股研报",
+      "counts": {
+        "FP": 3,
+        "FN": 3
+      },
+      "raw_candidates": 3,
+      "execution_complete": true,
+      "baseline_case_ids": [],
+      "expanded_case_ids": [
+        "C066"
+      ]
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000595",
+      "length_chars": 1493,
+      "scene": "行业研报",
+      "counts": {
+        "FP": 2,
+        "FN": 3
+      },
+      "raw_candidates": 2,
+      "execution_complete": true,
+      "baseline_case_ids": [],
+      "expanded_case_ids": [
+        "C067"
+      ]
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000696",
+      "length_chars": 1396,
+      "scene": "行业研报",
+      "counts": {
+        "FP": 5,
+        "FN": 4
+      },
+      "raw_candidates": 5,
+      "execution_complete": true,
+      "baseline_case_ids": [],
+      "expanded_case_ids": [
+        "C068"
+      ]
+    },
+    {
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000705",
+      "length_chars": 811,
+      "scene": "行业研报",
+      "counts": {
+        "FP": 1,
+        "FN": 3
+      },
+      "raw_candidates": 1,
+      "execution_complete": true,
+      "baseline_case_ids": [
+        "C007"
+      ],
+      "expanded_case_ids": [
+        "C007"
+      ]
+    }
+  ],
+  "coverage_gaps": {
+    "baseline": [
+      "length_scene:4000–7999:个股研报",
+      "length_scene:4000–7999:行业研报",
+      "mechanical:fn_raw_candidates_empty",
+      "mechanical:fn_raw_quote_overlap_without_final_overlap",
+      "zero_f1_document:fined:eval_data:5ffe80ef7c529d19:000160",
+      "zero_f1_document:fined:eval_data:5ffe80ef7c529d19:000411",
+      "zero_f1_document:fined:eval_data:5ffe80ef7c529d19:000595",
+      "zero_f1_document:fined:eval_data:5ffe80ef7c529d19:000696"
+    ],
+    "expanded": []
+  },
+  "supplement_recommendations": [
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000160",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C065",
+      "error_type": "金融要素缺失",
+      "covers": [
+        "mechanical:fn_raw_candidates_empty",
+        "zero_f1_document:fined:eval_data:5ffe80ef7c529d19:000160"
+      ],
+      "applied": true
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000411",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C066",
+      "error_type": "数值不一致错误",
+      "covers": [
+        "zero_f1_document:fined:eval_data:5ffe80ef7c529d19:000411"
+      ],
+      "applied": true
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000595",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C067",
+      "error_type": "计算错误",
+      "covers": [
+        "zero_f1_document:fined:eval_data:5ffe80ef7c529d19:000595"
+      ],
+      "applied": true
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000696",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C068",
+      "error_type": "数值单位错误",
+      "covers": [
+        "zero_f1_document:fined:eval_data:5ffe80ef7c529d19:000696"
+      ],
+      "applied": true
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000646",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C069",
+      "error_type": "时间矛盾",
+      "covers": [
+        "length_scene:4000–7999:行业研报"
+      ],
+      "applied": true
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000381",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C070",
+      "error_type": "术语误用",
+      "covers": [
+        "length_scene:4000–7999:个股研报"
+      ],
+      "applied": true
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000589",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C071",
+      "error_type": "冗余语句",
+      "covers": [
+        "mechanical:fn_raw_quote_overlap_without_final_overlap"
+      ],
+      "applied": true
+    }
+  ],
+  "remaining_after_recommendations": [],
+  "compact_case_labels": [
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000636",
+        "FP",
+        2,
+        null
+      ],
+      "case_id": "C001",
+      "mechanical_labels": [
+        "invalid_anchor",
+        "invalid_anchor_exact_quote_ambiguous"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000542",
+        "FP",
+        3,
+        null
+      ],
+      "case_id": "C002",
+      "mechanical_labels": [
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000543",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C003",
+      "mechanical_labels": [
+        "same_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000497",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C004",
+      "mechanical_labels": [
+        "same_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000527",
+        "FP",
+        3,
+        null
+      ],
+      "case_id": "C005",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000346",
+        "FP",
+        2,
+        null
+      ],
+      "case_id": "C006",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000705",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C007",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000437",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C008",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000618",
+        "FP",
+        3,
+        null
+      ],
+      "case_id": "C009",
+      "mechanical_labels": [
+        "invalid_anchor",
+        "invalid_anchor_exact_quote_absent"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000600",
+        "FP",
+        0,
+        null
+      ],
+      "case_id": "C010",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000585",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C011",
+      "mechanical_labels": [
+        "same_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000510",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C012",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000549",
+        "FP",
+        3,
+        null
+      ],
+      "case_id": "C013",
+      "mechanical_labels": [
+        "invalid_anchor",
+        "invalid_anchor_exact_quote_ambiguous"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000706",
+        "FP",
+        4,
+        null
+      ],
+      "case_id": "C014",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000218",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C015",
+      "mechanical_labels": [
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000250",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C016",
+      "mechanical_labels": [
+        "same_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000501",
+        "FP",
+        1,
+        null
+      ],
+      "case_id": "C017",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000374",
+        "FP",
+        2,
+        null
+      ],
+      "case_id": "C018",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000536",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C019",
+      "mechanical_labels": [
+        "same_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000519",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C020",
+      "mechanical_labels": [
+        "same_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000562",
+        "FP",
+        0,
+        null
+      ],
+      "case_id": "C021",
+      "mechanical_labels": [
+        "one_to_one_competition"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000351",
+        "FP",
+        0,
+        null
+      ],
+      "case_id": "C022",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000242",
+        "FN",
+        null,
+        3
+      ],
+      "case_id": "C023",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000619",
+        "FN",
+        null,
+        5
+      ],
+      "case_id": "C024",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000524",
+        "FP",
+        5,
+        null
+      ],
+      "case_id": "C025",
+      "mechanical_labels": [
+        "invalid_anchor",
+        "invalid_anchor_exact_quote_ambiguous"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000174",
+        "FP",
+        0,
+        null
+      ],
+      "case_id": "C026",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000239",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C027",
+      "mechanical_labels": [
+        "other_type_partial_overlap",
+        "same_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000664",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C028",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000662",
+        "FP",
+        4,
+        null
+      ],
+      "case_id": "C029",
+      "mechanical_labels": [
+        "invalid_anchor",
+        "invalid_anchor_exact_quote_absent"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000224",
+        "FP",
+        3,
+        null
+      ],
+      "case_id": "C030",
+      "mechanical_labels": [
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000406",
+        "FN",
+        null,
+        3
+      ],
+      "case_id": "C031",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000247",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C032",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000335",
+        "FP",
+        4,
+        null
+      ],
+      "case_id": "C033",
+      "mechanical_labels": [
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000439",
+        "FP",
+        0,
+        null
+      ],
+      "case_id": "C034",
+      "mechanical_labels": [
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000659",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C035",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000353",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C036",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000405",
+        "FP",
+        2,
+        null
+      ],
+      "case_id": "C037",
+      "mechanical_labels": [
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000455",
+        "FP",
+        2,
+        null
+      ],
+      "case_id": "C038",
+      "mechanical_labels": [
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000522",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C039",
+      "mechanical_labels": [
+        "one_to_one_competition"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000675",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C040",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000662",
+        "FP",
+        5,
+        null
+      ],
+      "case_id": "C041",
+      "mechanical_labels": [
+        "invalid_anchor",
+        "invalid_anchor_exact_quote_absent"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000691",
+        "FP",
+        3,
+        null
+      ],
+      "case_id": "C042",
+      "mechanical_labels": [
+        "one_to_one_competition"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000550",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C043",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000669",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C044",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000360",
+        "FP",
+        5,
+        null
+      ],
+      "case_id": "C045",
+      "mechanical_labels": [
+        "other_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000368",
+        "FP",
+        11,
+        null
+      ],
+      "case_id": "C046",
+      "mechanical_labels": [
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000368",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C047",
+      "mechanical_labels": [
+        "other_type_partial_overlap",
+        "same_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000516",
+        "FN",
+        null,
+        4
+      ],
+      "case_id": "C048",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000360",
+        "FP",
+        4,
+        null
+      ],
+      "case_id": "C049",
+      "mechanical_labels": [
+        "other_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000368",
+        "FP",
+        8,
+        null
+      ],
+      "case_id": "C050",
+      "mechanical_labels": [
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000202",
+        "FP",
+        1,
+        null
+      ],
+      "case_id": "C051",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000654",
+        "FP",
+        1,
+        null
+      ],
+      "case_id": "C052",
+      "mechanical_labels": [
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000160",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C065",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_candidates_empty",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000411",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C066",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_full_containment"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000595",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C067",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000696",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C068",
+      "mechanical_labels": [
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000646",
+        "FN",
+        null,
+        2
+      ],
+      "case_id": "C069",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "other_type_partial_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000381",
+        "FN",
+        null,
+        1
+      ],
+      "case_id": "C070",
+      "mechanical_labels": [
+        "fn_no_raw_candidate_of_gold_type",
+        "fn_raw_present_no_exact_quote_overlap",
+        "no_anchored_overlap"
+      ]
+    },
+    {
+      "identity": [
+        "fined:eval_data:5ffe80ef7c529d19:000589",
+        "FN",
+        null,
+        0
+      ],
+      "case_id": "C071",
+      "mechanical_labels": [
+        "fn_raw_quote_overlap_without_final_overlap",
+        "no_anchored_overlap"
+      ]
+    }
+  ],
+  "limitations": [
+    "目的性诊断样本；类别配额、锚点优先和尾部补样改变入选概率，不能估计总体根因频率或总体业务准确率。",
+    "机械标签允许重叠，同一业务问题也可能同时产生一个FP和一个FN；各标签计数不能相加当作独立根因。",
+    "覆盖计数只统计每份case的焦点实例，不将其related_predictions/related_golds附带讨论算作另一个已选实例。因此焦点FN切片为0不表示既有FP分析从未涉及相似链路。",
+    "原文包含、引文重叠和提示中列出某类型不等于模型实际检查或理解了该异常；需逐case人工签核。",
+    "本批是文本研报，不能评价PDF/OCR、跨文件检索、无错误真阴性或竞赛端到端能力；全量最长仍不足8000字。",
+    "全量指research442-rerun-20261005的hybrid冻结批次，不与截图旧批或当前源码重跑成绩混合。",
+    "本地manifest提供文件一致性检查，不是独立签名的来源保证；审计不改冻结输入、评分或人工结论。"
+  ],
+  "new_api_calls": 0,
+  "provenance": {
+    "package_manifest_sha256": "9836059fa58107d88ae6cffc680c1409aa48dc0bc874ebad8a28cb7a4f2640e6",
+    "verification_manifest_sha256": "9fc8017e256e70585bc3af0e2e3702357427cc790e4816d56d5a1e4bfaee633a",
+    "selection_sha256": "694f09fc2036a17551e8d0ae83edcdf5c47b2a29d4c3042062975d63e93f0ba5",
+    "frozen_case_replay_exact": true
+  }
+}

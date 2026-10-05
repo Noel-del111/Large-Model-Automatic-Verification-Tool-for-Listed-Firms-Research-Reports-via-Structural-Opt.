@@ -1,0 +1,64 @@
+{
+  "case_id": "C041",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审FP声称亚马逊/计算机报告的投资建议却推荐贵金属、小金属。真实当前报告投资建议讨论AI与云计算，不包含该贵金属段。",
+  "observed": "raw_candidates[5]同时引用真实亚马逊标题和“贵金属领域建议关注紫金矿业…锡业股份。”；后一句不在当前contexts，却逐字出现在请求messages[5]的user示例中。锚定拒绝，全部提示口径all_hints第5项空spans计FP。",
+  "evidence": [
+    {
+      "source": "documents/000662.json#/input/content",
+      "fact": "当前亚马逊报告的投资建议为“把握AI与云计算协同机遇”，没有紫金矿业、锡业股份推荐句。"
+    },
+    {
+      "source": "documents/000662.json#/responses/0/content",
+      "fact": "raw_candidates[5]引用贵金属推荐整句并据此称主题冲突。"
+    },
+    {
+      "source": "documents/000662.json#/report/rejected_candidates/1",
+      "fact": "因source text absent or ambiguous拒绝该候选。"
+    },
+    {
+      "source": "documents/000662.json#/all_hints/5",
+      "fact": "anchor_rejected、spans=[]；不是已有效定位的业务提示。"
+    },
+    {
+      "source": "requests/000662.json#/requests/0/messages/5",
+      "fact": "user示例逐字含“贵金属领域建议关注紫金矿业、银泰黄金、中金黄金、湖南黄金；小金属领域建议关注锡业股份。”。"
+    },
+    {
+      "source": "requests/000662.json#/requests/0/messages/7",
+      "fact": "最后一条user消息为亚马逊当前contexts，不含该贵金属整句；system已要求只审查最后contexts。"
+    },
+    {
+      "source": "requests/000662.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1452字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是用户当前文档真实包含两行业建议。",
+    "当前标题确实存在，但不足以支撑另外一个不属于当前文档的证据。",
+    "后处理拒绝本项有原文依据，不应宽松定位将示例当当前证据。"
+  ],
+  "conclusion": "证据支持当前输出串入了示例文本：请求中有且仅示例承载该整句，模型却把它与当前标题组合。可以确认输出的证据来源越界，尚不能仅凭共现确定内部注意机制或哪一项prompt设计导致。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "去掉或替换示例是否稳定消除此错误，可能有随机性。",
+    "示例边界、内容相似性与模型泛化之间的因果贡献未测量。"
+  ],
+  "minimal_validation": {
+    "change": "先离线核对quote来源归属；如后续允许模型实验，在相同当前文档与参数下只替换该示例内容或去掉该示例，多次配对比较。",
+    "control": "保留原示例与原prompt的回放，正常跨段主题冲突另设对照；不得为本轮验证新增调用。",
+    "success_criterion": "当前contexts之外的quote消失且当前文档真实问题保留；每次报告样本数，不能凭一次成功称修复。",
+    "regression_check": "验证需要多句证据的真实矛盾，以及C029可恢复的引用改写，不混淆不存在引用与轻微quote变形。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "证据来源越界率",
+    "definition": "raw候选的引用span中，仅出现在few-shot/其他文档而不在当前contexts的比例，并统计因此形成的独立告警数。",
+    "why_this_case": "该指标直接定位示例串入，避免误把幻觉归为金融知识不足。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

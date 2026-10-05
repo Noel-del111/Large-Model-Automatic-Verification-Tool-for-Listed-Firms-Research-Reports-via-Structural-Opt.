@@ -1,0 +1,286 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000322",
+  "result": "TP",
+  "prediction_file": "run/predictions/hybrid/1e1716481e79d39717f05c70.json",
+  "all_hints_index": 0,
+  "gold_index": 3,
+  "prediction": {
+    "error_type": "时间信息非法",
+    "spans": [
+      {
+        "start": 435,
+        "end": 509,
+        "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+      }
+    ],
+    "reason": "该年月日不是有效公历日期。",
+    "status": "confirmed_error",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 437,
+        "end": 448,
+        "text": "2024年12月32日"
+      },
+      {
+        "kind": "deterministic",
+        "check": "calendar_date",
+        "year": 2024,
+        "month": 12,
+        "day": 32
+      }
+    ],
+    "detector_id": "verified.calendar",
+    "validation": "deterministic",
+    "verification_spans": [
+      {
+        "start": 437,
+        "end": 448,
+        "text": "2024年12月32日"
+      }
+    ],
+    "id": "f5e7f8af6590721f9110fef3",
+    "detector_ids": [
+      "hybrid.model",
+      "verified.calendar"
+    ],
+    "original_spans": [
+      {
+        "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+      }
+    ],
+    "review_priority": "confirmed"
+  },
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000322:error:0004",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 467,
+        "original_start": 435,
+        "original_text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元",
+        "start": 435,
+        "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元"
+      }
+    ],
+    "type": "时间信息非法"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C058",
+  "error_type": "时间信息非法",
+  "cohort": "control",
+  "document_ref": "documents/000322.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "start": 435,
+            "end": 509,
+            "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+          }
+        ],
+        "reason": "该年月日不是有效公历日期。",
+        "status": "confirmed_error",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 437,
+            "end": 448,
+            "text": "2024年12月32日"
+          },
+          {
+            "kind": "deterministic",
+            "check": "calendar_date",
+            "year": 2024,
+            "month": 12,
+            "day": 32
+          }
+        ],
+        "detector_id": "verified.calendar",
+        "validation": "deterministic",
+        "verification_spans": [
+          {
+            "start": 437,
+            "end": 448,
+            "text": "2024年12月32日"
+          }
+        ],
+        "id": "f5e7f8af6590721f9110fef3",
+        "detector_ids": [
+          "hybrid.model",
+          "verified.calendar"
+        ],
+        "original_spans": [
+          {
+            "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+          }
+        ],
+        "review_priority": "confirmed"
+      }
+    },
+    {
+      "all_hints_index": 1,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值单位错误",
+        "reason": "净资产4.69元与资产总额7.47亿元量纲不一致，应为亿元级单位。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 435,
+            "end": 509,
+            "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 435,
+            "end": 509,
+            "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "f34b90885d59ea2f80312989",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000322:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 477,
+            "original_start": 468,
+            "original_text": "净资产为4.69元",
+            "start": 468,
+            "text": "净资产为4.69元"
+          }
+        ],
+        "type": "数值单位错误"
+      }
+    },
+    {
+      "gold_index": 3,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000322:error:0004",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 467,
+            "original_start": 435,
+            "original_text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元",
+            "start": 435,
+            "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元"
+          }
+        ],
+        "type": "时间信息非法"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 3,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": true
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

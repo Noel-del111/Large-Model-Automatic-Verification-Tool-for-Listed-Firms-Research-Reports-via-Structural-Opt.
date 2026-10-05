@@ -1,0 +1,82 @@
+{
+  "case_id": "C004",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "gold用[97,189)包含GAAP经营利润、两次经调整经营利润和中间GAAP净利润的整段标注冗余。",
+  "observed": "原返回给出两处“经调整经营利润为1.39亿美元，同比增长195%；”及准确偏移[119,144)、[164,189)，指出重复。两处都通过定位并保留；单个预测span均未包含gold[97,189)，因而FN。",
+  "evidence": [
+    {
+      "source": "documents/000497.json#/input/content",
+      "fact": "本例文档输入共1551字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=f67271fb845c0ece0316229677c06cc9f77becf19a8081474efe032fa0c8b563。"
+    },
+    {
+      "source": "requests/000497.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=110b006ae2efc9e6120c821bc11b311e28edc4b562363b5eb564546a6d4f8b25，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000497.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1551，total_chars=1551，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000497.json#/gold/errors/0",
+      "fact": "gold[0]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000497:error:0001\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":189,\"original_start\":97,\"original_text\":\"GAAP经营利润为1110万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；GAAP净利润为127万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；\",\"start\":97,\"text\":\"GAAP经营利润为1110万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；GAAP净利润为127万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；\"}],\"type\":\"冗余语句\"}"
+    },
+    {
+      "source": "documents/000497.json#/report/raw_candidates/0",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"经调整经营利润为1.39亿美元，同比增长195%；\",\"start\":119,\"end\":144},{\"text\":\"经调整经营利润为1.39亿美元，同比增长195%；\",\"start\":164,\"end\":189}],\"reason\":\"同一经调整经营利润数据在事件段中重复出现，属不必要重复。\"}"
+    },
+    {
+      "source": "documents/000497.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000497.json#/all_hints/0",
+      "fact": "最终评分提示[0]：{\"error_type\":\"冗余语句\",\"reason\":\"同一经调整经营利润数据在事件段中重复出现，属不必要重复。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":119,\"end\":144,\"text\":\"经调整经营利润为1.39亿美元，同比增长195%；\"},{\"kind\":\"source_text\",\"start\":164,\"end\":189,\"text\":\"经调整经营利润为1.39亿美元，同比增长195%；\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"经调整经营利润为1.39亿美元，同比增长195%；\",\"start\":119,\"end\":144},{\"text\":\"经调整经营利润为1.39亿美元，同比增长195%；\",\"start\":164,\"end\":189}],\"spans\":[{\"start\":119,\"end\":144,\"text\":\"经调整经营利润为1.39亿美元，同比增长195%；\"},{\"start\":164,\"end\":189,\"text\":\"经调整经营利润为1.39亿美元，同比增长195%；\"}],\"warnings\":[],\"id\":\"eb42246a6909a294d4e8a88c\",\"review_priority\":\"low\"}"
+    },
+    {
+      "source": "documents/000497.json#/report/raw_candidates/0",
+      "fact": "此例模型自己给出了正确start/end，和无偏移重复引文被拒绝的C001不同。"
+    },
+    {
+      "source": "documents/000497.json#/input/content",
+      "fact": "两次重复之间有不同指标GAAP净利润127万美元；gold还向前包含GAAP经营利润1110万美元。"
+    },
+    {
+      "source": "documents/000497.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FN；全篇已分配对=[[1,1]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":0,\"gold_index\":0,\"prediction_type\":\"冗余语句\",\"gold_type\":\"冗余语句\",\"same_type\":true,\"gold_scorable\":true,\"contains_all_gold_spans\":false,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "raw已找到两处相同经营利润表述，不能用此FN证明模型没发现重复；日志不足以判断模型是否理解全部GAAP会计口径。",
+    "不是唯一定位多解拒绝；显式偏移已获接收。"
+  ],
+  "conclusion": "评分未命中的直接原因是错误实例范围不一致；预测精准标出重复子句，gold覆盖的整段更宽。需人审确认任务要求是重复片段、所在完整句还是整段。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "业务认可的最小冗余证据范围尚需统一，不能靠扩宽所有输出提高分数。"
+  ],
+  "minimal_validation": {
+    "change": "将这条分别以两处子句、119:189包络、97:189原段做只读式离线评分对照，并由人工标出必要证据。",
+    "control": "保持类型与理由不变；两处内容相似但指标/口径不同的子句作不应合并对照。",
+    "success_criterion": "显示三种范围与严格评分的差别，人工给出一条可复用的范围约定。",
+    "regression_check": "不得因相同金额和增速而合并GAAP与调整后口径不同的项目。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "冗余证据范围一致率",
+    "definition": "人工确认同一冗余问题后，预测证据范围满足既定标注范围约定的实例数/该类已审实例数。",
+    "why_this_case": "本例检测结果已存在，剩余问题在证据范围和标注协议。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

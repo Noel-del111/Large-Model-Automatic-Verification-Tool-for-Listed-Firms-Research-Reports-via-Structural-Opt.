@@ -1,0 +1,80 @@
+{
+  "case_id": "C017",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应定位建筑与基建板块“同比+8.97%，，同比+4.55pct”之间缺失的财务字段，并区分缺字段名称、缺数值与整项缺失。",
+  "observed": "raw[2]引用827:873完整句，以其他板块披露方式推测此处缺毛利率具体值，标签数值缺失。gold同一完整句标签金融要素缺失；候选有效保留needs_review但严格FP。",
+  "evidence": [
+    {
+      "source": "documents/000501.json#/input/content",
+      "fact": "本例文档输入共1762字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=37b20bddbae2a68908e73601f5f014c1215c87adf9763110ddfbd1fb489457aa。"
+    },
+    {
+      "source": "requests/000501.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=affe3afa7a7cdc1da756516f41d90481d5038729452eda548b5b521b671b7bd6，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000501.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1762，total_chars=1762，execution_complete=true，candidate_quality_complete=false。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000501.json#/gold/errors/1",
+      "fact": "gold[1]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000501:error:0002\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":873,\"original_start\":827,\"original_text\":\"建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。\",\"start\":827,\"text\":\"建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。\"}],\"type\":\"金融要素缺失\"}"
+    },
+    {
+      "source": "documents/000501.json#/report/raw_candidates/2",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。\"}],\"reason\":\"其他板块均列出毛利率具体数值，本句只有同比变动，缺少对应的毛利率数值。\"}"
+    },
+    {
+      "source": "documents/000501.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000501.json#/all_hints/1",
+      "fact": "最终评分提示[1]：{\"error_type\":\"数值缺失\",\"reason\":\"其他板块均列出毛利率具体数值，本句只有同比变动，缺少对应的毛利率数值。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":827,\"end\":873,\"text\":\"建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。\"}],\"spans\":[{\"start\":827,\"end\":873,\"text\":\"建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"39071ebf3f09723672f3c358\",\"review_priority\":\"high\"}"
+    },
+    {
+      "source": "documents/000501.json#/input/content",
+      "fact": "本句有收入10.53亿元、收入同比+8.97%，随后双逗号，再有同比+4.55pct；该后续同比没有明示其指标名称和本期值。模型指定“毛利率”来自对照段落，不是本句已有字段。"
+    },
+    {
+      "source": "documents/000501.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[0,2]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":1,\"gold_index\":1,\"prediction_type\":\"数值缺失\",\"gold_type\":\"金融要素缺失\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "缺口已经进入raw候选并完整锚定，不是金融要素相关文本未进入输入。",
+    "空缺既可能包括名称也包括数值；不能仅因存在pct断言只丢一个数字。",
+    "gold标签不能反向证明所缺字段一定为毛利率。"
+  ],
+  "conclusion": "可确认是同一缺口的分类与缺失槽位解释分歧；模型把未明示字段补推为毛利率后归为数值缺失。人工应先确定应填哪些槽位，再签核类别，不能据此直接归因缺乏金融知识。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "缺失字段的实际名称与数值均未由原始报告恢复。",
+    "是否允许利用同文并列板块结构推定必要披露项，需要人工界定。"
+  ],
+  "minimal_validation": {
+    "change": "人工逐槽位填写本句已知收入/增速、未知指标名称/本期值，再根据签核槽位映射类别；离线保留原候选，仅比较类别裁定。",
+    "control": "同时复核同文并列板块正常披露句，不能把常见模板当作所有公司强制字段。",
+    "success_criterion": "人工给出缺失范围及必要性依据，能说明为什么是数值缺失或金融要素缺失，评分差异可复现。",
+    "regression_check": "加入只缺数值、只缺指标名称、整项缺失和可选披露四种对照，避免靠双逗号硬分类。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "缺失槽位识别完整率",
+    "definition": "分母为人工确认有必要信息缺失的实例；分子为模型正确指出所有必要缺失槽位（名称、数值、单位、时点等）的实例，另计类别一致率。",
+    "why_this_case": "本例同一空缺已被发现，但模型只解释为毛利率数值缺失，需先核清缺什么。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

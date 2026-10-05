@@ -1,0 +1,50 @@
+{
+  "case_id": "C064",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "“毛利率9.97%，同比+1.67pct，，同比+0.68pct”第二个同比值缺对应指标。",
+  "observed": "模型原始回复明确指出第二个同比+0.68pct没有指标，最终[236,280)与金标完全一致，anchored_needs_review；请求协议没有决策字段。",
+  "evidence": [
+    {
+      "source": "documents/000334.json#/input/content",
+      "fact": "“毛利率9.97%，同比+1.67pct，，同比+0.68pct”第二个同比值缺对应指标。"
+    },
+    {
+      "source": "documents/000334.json#/all_hints/3",
+      "fact": "模型原始回复明确指出第二个同比+0.68pct没有指标，最终[236,280)与金标完全一致，anchored_needs_review；请求协议没有决策字段。"
+    },
+    {
+      "source": "cases/C064.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000334.json#/report/raw_candidates/2",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "该case检测成功但仍需人工的直接原因是宿主默认needs_review且没有适用的确定性升级规则。它支持优先检查确认机制，但没有证明整个金融要素缺失类别的低召回都由此导致。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "第二个同比能否通过全文找到省略的指标、是否足以无人工确认，需要真人裁定；不能自动补成净利率。"
+  ],
+  "minimal_validation": {
+    "change": "人工先裁定是否满足明确的“数值无指标”条件，再以冻结候选比较原策略和仅覆盖该条件的策略。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；包含合法共享指标、标题中给出指标、表格承接或同指标多基期的正确案例；不能仅用这一个TP设确认阈值。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "包含合法共享指标、标题中给出指标、表格承接或同指标多基期的正确案例；不能仅用这一个TP设确认阈值。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "正确候选的确认覆盖率",
+    "definition": "在人工认定可自动判断的正确候选中，实际自动确认的数量 / 该可自动判断集合；同时记录错误自动确认数。",
+    "why_this_case": "该case检测成功但仍需人工的直接原因是宿主默认needs_review且没有适用的确定性升级规则。它支持优先检查确认机制，但没有证明整个金融要素缺失类别的低召回都由此导致。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

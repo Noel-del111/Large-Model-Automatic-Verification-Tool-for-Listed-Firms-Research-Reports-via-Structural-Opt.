@@ -1,0 +1,90 @@
+{
+  "case_id": "C001",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "按冻结gold，原文[704,808)的连续两次“麦角硫因凭借……”是一个冗余错误，应由同类型且覆盖整段的预测匹配。",
+  "observed": "原始回复已指出“同一句话连续出现两次”，但给出两个完全相同、不带偏移的52字span。两段引文分别都在704和756出现；定位器因多解拒绝候选，最终全提示spans=[]，计FP，同时gold未命中。",
+  "evidence": [
+    {
+      "source": "documents/000636.json#/input/content",
+      "fact": "本例文档输入共1440字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=1dc857d8290d85d885484656b29f0cf5d056389d073df433ddf6cc5cb144ed24。"
+    },
+    {
+      "source": "requests/000636.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=afd04fe9430a01cf132fb7922a65627c7b437cb7dc524ad1d6c1dfa89f585df8，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000636.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1440，total_chars=1440，execution_complete=true，candidate_quality_complete=false。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000636.json#/gold/errors/0",
+      "fact": "gold[0]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000636:error:0001\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":808,\"original_start\":704,\"original_text\":\"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\",\"start\":704,\"text\":\"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\"}],\"type\":\"冗余语句\"}"
+    },
+    {
+      "source": "documents/000636.json#/report/raw_candidates/1",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\"},{\"text\":\"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\"}],\"reason\":\"同一句话连续出现两次，信息重复，没有新增内容。\"}"
+    },
+    {
+      "source": "documents/000636.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000636.json#/input/content",
+      "fact": "原始引用精确字符探查：[{\"quote\":\"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\",\"exact_occurrence_offsets\":[704,756]},{\"quote\":\"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\",\"exact_occurrence_offsets\":[704,756]}]。零命中与多命中分别记录，不统一归为OCR问题。"
+    },
+    {
+      "source": "documents/000636.json#/all_hints/2",
+      "fact": "最终评分提示[2]：{\"error_type\":\"冗余语句\",\"spans\":[],\"original_spans\":[{\"text\":\"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\"},{\"text\":\"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\"}],\"reason\":\"同一句话连续出现两次，信息重复，没有新增内容。\",\"status\":\"needs_review\",\"invalid_anchor\":true,\"validation\":\"anchor_rejected\",\"rejection_reason\":\"source text is absent or ambiguous in the model-visible context\",\"review_hint_only\":true}"
+    },
+    {
+      "source": "documents/000636.json#/input/content",
+      "fact": "两次引文紧邻：704+52=756，756+52=808；不是原文没有这句话。"
+    },
+    {
+      "source": "documents/000636.json#/report/rejected_candidates/0",
+      "fact": "拒绝原因把absent与ambiguous合并，此例由字符查找明确为ambiguous。"
+    },
+    {
+      "source": "documents/000636.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[1,2],[0,4]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":2,\"gold_index\":0,\"prediction_type\":\"冗余语句\",\"gold_type\":\"冗余语句\",\"same_type\":true,\"gold_scorable\":true,\"contains_all_gold_spans\":false,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:375",
+      "fact": "_anchor先验证偏移或精确引文唯一出现；精确零命中时才尝试空白规范化，不做标点替换。任一span不存在或歧义可拒绝整条候选；拒绝仍通过review hints进入评估，不能丢弃FP。"
+    }
+  ],
+  "excluded_explanations": [
+    "不能解释为模型未发现重复：原返回已经点出两次出现。",
+    "不是OCR评估或上下文截断证据；输入为1440字全文，运行覆盖记录完整。"
+  ],
+  "conclusion": "本候选的可验证失败链是重复引文多位置→唯一锚定失败→全提示空span→严格FP。还需真人确认业务重复是否应报错；不能直接将这个FP当作语义误报。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "恢复两个位置后，两个分离span仍未必包含单个gold整段；定位恢复与评分单元必须分开检查。"
+  ],
+  "minimal_validation": {
+    "change": "在离线诊断副本中让审核者选定两次出现的704:756与756:808，并另比较覆盖704:808的连续引用；不改冻结gold或生产定位器。",
+    "control": "保留原始双引文输出，另用只出现一次和同句在不同主题段出现两次的文本作定位对照。",
+    "success_criterion": "能够显示两个真实位置与连续跨度的不同评分结果；人审确认同一重复问题后才记录改善。",
+    "regression_check": "多解不自动取首个位置；跨主题重复或否定示例不得被强制合并。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "重复引文可消歧率",
+    "definition": "已人工核验且能唯一绑定每次出现的重复引文候选数/已审存在多个精确位置的候选数；另报绑定后严格gold匹配率。",
+    "why_this_case": "是否识别到了重复关系、是否构成应报业务错误、能否唯一定位是不同判断，本例直接暴露后者。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

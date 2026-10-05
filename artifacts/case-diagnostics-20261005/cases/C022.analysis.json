@@ -1,0 +1,79 @@
+{
+  "case_id": "C022",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应识别预测年份区间“2027~2025年”倒序，并按约定区分合法年份之间的先后矛盾与日期值本身非法。",
+  "observed": "raw[0]明确指出起点晚于终点，预测925:1091有效且覆盖gold965:1045。预测时间信息非法，gold时间矛盾，故严格FP。理由另将后续利润递增作为矛盾，后者并非区间倒序的必要证明。",
+  "evidence": [
+    {
+      "source": "documents/000351.json#/input/content",
+      "fact": "本例文档输入共1142字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=fc9db8e96ef27e5108916c59d05b74db4bf28a883bf77844d2ecaab3a37198d4。"
+    },
+    {
+      "source": "requests/000351.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=05757ec3844064059ea85813ae3cb7a8328d866d8423cdcb9d1d71be54992c6b，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000351.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1142，total_chars=1142，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000351.json#/gold/errors/0",
+      "fact": "gold[0]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000351:error:0001\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":1045,\"original_start\":965,\"original_text\":\"业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元\",\"start\":965,\"text\":\"业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元\"}],\"type\":\"时间矛盾\"}"
+    },
+    {
+      "source": "documents/000351.json#/report/raw_candidates/0",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。\"}],\"reason\":\"预测年份区间写成“2027~2025年”，起点晚于终点，且与后续净利润递增顺序矛盾。\"}"
+    },
+    {
+      "source": "documents/000351.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000351.json#/all_hints/0",
+      "fact": "最终评分提示[0]：{\"error_type\":\"时间信息非法\",\"reason\":\"预测年份区间写成“2027~2025年”，起点晚于终点，且与后续净利润递增顺序矛盾。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":925,\"end\":1091,\"text\":\"我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。\"}],\"spans\":[{\"start\":925,\"end\":1091,\"text\":\"我们看好公司德州本部及荆州恒升“一体两翼”“双航母”发展,未来随着产能逐步释放，业绩有望进一步增厚预计公司 2027~2025 年归母净利润为 38.87/44.62/50.45亿元折合 EPS 分别为 1.83， 2.10， 2.38 元，目前股价对应 PE 估值分别为 11.32/9.86/8.72 倍，维持“买入”投资评级。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"32fffbfb911fc241f02032c9\",\"review_priority\":\"high\"}"
+    },
+    {
+      "source": "documents/000351.json#/input/content",
+      "fact": "2027和2025各自是合法年份，但在表达连续未来预测区间时起点晚于终点。38.87/44.62/50.45亿元的递增次序不能单独决定各年应如何排序。"
+    },
+    {
+      "source": "documents/000351.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[1,1]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":0,\"gold_index\":0,\"prediction_type\":\"时间信息非法\",\"gold_type\":\"时间矛盾\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "原文区间已被明确检测，不能归因没有时间推理。",
+    "锚定和范围通过，纯锚点优化无法修复类型失配。",
+    "无需假设利润必然随年份递增来证明区间表述存在疑点。"
+  ],
+  "conclusion": "失分主要发生于时间类别边界：区间顺序异常被贴成日期非法。人工签核应给“合法日期的关系矛盾”和“单个日期值非法”建立可解释边界，并修剪非必要理由。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "正确预测年份顺序仍应由原报告确认，不可只把2027和2025对调当作已证实修正。"
+  ],
+  "minimal_validation": {
+    "change": "人审先独立判断异常对象是日期值还是日期关系，再以该判例离线重分类；理由只保留可证明的起止关系。",
+    "control": "比较13月、倒序年份区间、正常年份区间但利润下降三个例子。",
+    "success_criterion": "类别判定得到人工一致解释，重分类严格匹配且无额外业务假设。",
+    "regression_check": "历史回溯叙述允许倒序列举，不能把所有较大年份在前均判错。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "日期值/日期关系分类一致率",
+    "definition": "分母为模型已识别且人审确认的时间异常；分子为模型正确区分单点非法与关系矛盾的实例，另列时间两类互混数。",
+    "why_this_case": "该例时间检测已发生，类型混淆使其同时形成FP和FN。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

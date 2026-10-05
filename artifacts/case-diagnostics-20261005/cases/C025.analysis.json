@@ -1,0 +1,84 @@
+{
+  "case_id": "C025",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "若认为GB300“本季末”与“下半年”量产冲突，应先确定两表述的基准日期及自然季/财季，并定位重复引文的具体出现位置。",
+  "observed": "raw[5]比较两段量产时间；第一引文54处唯一，第二引文在281和304连续出现两次，未给偏移，整候选被锚定拒绝为空span，严格FP。日志并没有为本季末提供明确季度日历解释。",
+  "evidence": [
+    {
+      "source": "documents/000524.json#/input/content",
+      "fact": "本例文档输入共884字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=1c084109d6161f0161c9f594243a0df5acf609af4e02292c3a3d2b86b5f7fcbf。"
+    },
+    {
+      "source": "requests/000524.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=c7d9e525c42975c08b90102a2fdf5a62334fadafa133b78e8c3eaf5e89854d43，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000524.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=884，total_chars=884，execution_complete=true，candidate_quality_complete=false。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000524.json#/report/raw_candidates/5",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"供需端担忧已基本改善，GB300本季末量产可期。\"},{\"text\":\"GB300开始对云厂商送样，有望于下半年量产。\"}],\"reason\":\"前文称GB300本季末量产可期，后文又称有望下半年量产，时间冲突。\"}"
+    },
+    {
+      "source": "documents/000524.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000524.json#/input/content",
+      "fact": "原始引用精确字符探查：[{\"quote\":\"供需端担忧已基本改善，GB300本季末量产可期。\",\"exact_occurrence_offsets\":[54]},{\"quote\":\"GB300开始对云厂商送样，有望于下半年量产。\",\"exact_occurrence_offsets\":[281,304]}]。零命中与多命中分别记录，不统一归为OCR问题。"
+    },
+    {
+      "source": "documents/000524.json#/all_hints/5",
+      "fact": "最终评分提示[5]：{\"error_type\":\"时间矛盾\",\"spans\":[],\"original_spans\":[{\"text\":\"供需端担忧已基本改善，GB300本季末量产可期。\"},{\"text\":\"GB300开始对云厂商送样，有望于下半年量产。\"}],\"reason\":\"前文称GB300本季末量产可期，后文又称有望下半年量产，时间冲突。\",\"status\":\"needs_review\",\"invalid_anchor\":true,\"validation\":\"anchor_rejected\",\"rejection_reason\":\"source text is absent or ambiguous in the model-visible context\",\"review_hint_only\":true}"
+    },
+    {
+      "source": "documents/000524.json#/input/content",
+      "fact": "输入同时含FY26Q1、本季末、下半年和“5月32日”不合法披露日。第二引文“GB300开始对云厂商送样，有望于下半年量产。”重复两遍；运行日期不能代替报告日期解释“本季”。"
+    },
+    {
+      "source": "documents/000524.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[1,0],[3,1],[2,2],[0,3]]；围绕本例相关候选/gold的独立机械核对=[]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:375",
+      "fact": "_anchor先验证偏移或精确引文唯一出现；精确零命中时才尝试空白规范化，不做标点替换。任一span不存在或歧义可拒绝整条候选；拒绝仍通过review hints进入评估，不能丢弃FP。"
+    }
+  ],
+  "excluded_explanations": [
+    "两段量产信息都进入原始候选，不是信息缺失。",
+    "本例引文完全存在，拒绝来自重复位置歧义，不是句末标点改写。",
+    "本季末和下半年未必互斥；未确认基准日期与季度口径前不得自动判错。"
+  ],
+  "conclusion": "机械FP由重复引文锚定失败造成；业务层面的冲突依赖未建立的相对时间基准。人审须分别核验出现位置和时间归一化，不能锚定成功后直接提升为自动确认。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "“本季”是自然季、财季还是报告叙事范围未知。",
+    "两个量产表述是否同一阶段、修订后的预期或同一消息口径，需要原报告上下文确认。"
+  ],
+  "minimal_validation": {
+    "change": "离线先补充两处重复引文中对应位置验证锚定；人工另填报告日期、季度类型、事件阶段和绝对时间区间。",
+    "control": "对照本季末确在下半年内、自然季与财季错位、上下半年明显分离三种情形。",
+    "success_criterion": "位置消歧成功；仅当同一事件同一口径的时间区间确实不相容时才确认冲突。",
+    "regression_check": "禁止拿运行时间解释历史报告的本季、明年或近日，也禁止忽略财年区别。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "相对时间可归一化率",
+    "definition": "分母为模型提出含相对时间的冲突候选；分子为两侧基准日期、季度/财年口径及事件阶段有证据且能转为可比较区间者。",
+    "why_this_case": "本例自动决策需要补时间证据，不能仅以引文已覆盖视为可确认。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

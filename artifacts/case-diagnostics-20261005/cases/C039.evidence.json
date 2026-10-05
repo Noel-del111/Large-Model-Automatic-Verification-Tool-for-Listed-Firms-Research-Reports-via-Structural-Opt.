@@ -1,0 +1,163 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000522",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/611b2d513cf9ceb9f4f46578.json",
+  "all_hints_index": null,
+  "gold_index": 2,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000522:error:0003",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 951,
+        "original_start": 898,
+        "original_text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；",
+        "start": 898,
+        "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；"
+      }
+    ],
+    "type": "计算错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C039",
+  "error_type": "计算错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000522.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "计算错误",
+        "reason": "按2021-2024年三年复合增速计算，全球约28.6%、中国约31.6%，与原文38.66%、56.58%不符。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 898,
+            "end": 1002,
+            "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%，增速快于全球市场。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%，增速快于全球市场。",
+            "start": 796,
+            "end": 996
+          }
+        ],
+        "spans": [
+          {
+            "start": 898,
+            "end": 1002,
+            "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%，增速快于全球市场。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "ae208899d552b8ef0e1eab12",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": false,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000522:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 992,
+            "original_start": 951,
+            "original_text": "中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%",
+            "start": 951,
+            "text": "中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%"
+          }
+        ],
+        "type": "计算错误"
+      }
+    },
+    {
+      "gold_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000522:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 951,
+            "original_start": 898,
+            "original_text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；",
+            "start": 898,
+            "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；"
+          }
+        ],
+        "type": "计算错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 2,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

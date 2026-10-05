@@ -1,0 +1,133 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000662",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/e73661ffaed62389942e2096.json",
+  "all_hints_index": 4,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "术语误用",
+    "spans": [],
+    "original_spans": [
+      {
+        "text": "风险提示：全球宏观经济复苏不及预期；行业竞争加剧或导致企业债权空间收窄；政策监管趋严及技术落地不及预期；未来 AI 研发进展不及预期",
+        "start": 0,
+        "end": 0
+      }
+    ],
+    "reason": "“债权空间收窄”表述不当，行业竞争通常影响盈利或信用空间。",
+    "status": "needs_review",
+    "invalid_anchor": true,
+    "validation": "anchor_rejected",
+    "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+    "review_hint_only": true
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C029",
+  "error_type": "术语误用",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000662.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 4,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [],
+        "original_spans": [
+          {
+            "text": "风险提示：全球宏观经济复苏不及预期；行业竞争加剧或导致企业债权空间收窄；政策监管趋严及技术落地不及预期；未来 AI 研发进展不及预期",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“债权空间收窄”表述不当，行业竞争通常影响盈利或信用空间。",
+        "status": "needs_review",
+        "invalid_anchor": true,
+        "validation": "anchor_rejected",
+        "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+        "review_hint_only": true
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 4,
+      "same_type": true,
+      "overlap": false,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000662:error:0005",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1422,
+            "original_start": 1404,
+            "original_text": "行业竞争加剧或导致企业债权空间收窄；",
+            "start": 1404,
+            "text": "行业竞争加剧或导致企业债权空间收窄；"
+          }
+        ],
+        "type": "术语误用"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 4,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 4,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

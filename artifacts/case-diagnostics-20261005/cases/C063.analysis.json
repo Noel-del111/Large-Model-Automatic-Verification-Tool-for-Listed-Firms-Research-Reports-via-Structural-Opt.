@@ -1,0 +1,50 @@
+{
+  "case_id": "C063",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "同一段比较栋数占比：宝安38.2%大于龙岗30.5%，却称龙岗最高、宝安第二。应保留同指标两方证据。",
+  "observed": "模型引用[522,593)完整段，同时包含金标两个span[525,541)、[577,592)，未混入建筑面积的排名；类型TP、needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000176.json#/input/content",
+      "fact": "同一段比较栋数占比：宝安38.2%大于龙岗30.5%，却称龙岗最高、宝安第二。应保留同指标两方证据。"
+    },
+    {
+      "source": "documents/000176.json#/all_hints/3",
+      "fact": "模型引用[522,593)完整段，同时包含金标两个span[525,541)、[577,592)，未混入建筑面积的排名；类型TP、needs_review。"
+    },
+    {
+      "source": "cases/C063.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000176.json#/report/raw_candidates/3",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "多span关系可以被一条包含完整证据的预测正确命中，不能把所有多span漏检都归为评分器不支持关系。本例属于关系判断正确、自动确认不足的对照。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "数据值哪个才是原始正确值未知；排名冲突判断成立不等于可自动更改占比。"
+  ],
+  "minimal_validation": {
+    "change": "试验带指标名称约束的排名比较，固定候选并保留栋数与建筑面积两个口径。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；加入栋数最高而面积第二的正常材料及不同区域/时点数据，检验跨指标误比较。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "加入栋数最高而面积第二的正常材料及不同区域/时点数据，检验跨指标误比较。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "多证据同指标绑定正确率",
+    "definition": "人工认可同一指标及同一比较范围的关系对数 / 全部提取的关系对数，另列完整证据跨度覆盖率。",
+    "why_this_case": "多span关系可以被一条包含完整证据的预测正确命中，不能把所有多span漏检都归为评分器不支持关系。本例属于关系判断正确、自动确认不足的对照。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

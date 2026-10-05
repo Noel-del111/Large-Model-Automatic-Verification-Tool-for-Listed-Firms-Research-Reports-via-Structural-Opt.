@@ -1,0 +1,61 @@
+{
+  "case_id": "C047",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "目标金融要素缺失FN为原财务段[60,130)，同时含“营业总收入亿”“归母净利40.12亿，；”“扣38.44亿”“基本每股收益1.16元，加权”等多处残缺。",
+  "observed": "raw_candidates[1]已经指出“基本每股收益1.16元，加权”缺加权平均净资产收益率，最终同类[116,130)完整保留；另有数值缺失候选覆盖[60,86)。严格评分要求一个同类候选包含整条金标，故仍FN。",
+  "evidence": [
+    {
+      "source": "documents/000368.json#/gold/errors/2",
+      "fact": "金标把70字符财务段合成一个金融要素缺失实例。"
+    },
+    {
+      "source": "documents/000368.json#/responses/0/content",
+      "fact": "raw_candidates[1]金融缺失理由指向“加权”未完，raw_candidates[0]另报营业总收入数值缺失。"
+    },
+    {
+      "source": "documents/000368.json#/all_hints/1",
+      "fact": "金融缺失候选[116,130)，和raw保持一致，needs_review。"
+    },
+    {
+      "source": "documents/000368.json#/all_hints/0",
+      "fact": "数值缺失[60,86)，不能与第1项跨类型合并冒充整条金标命中。"
+    },
+    {
+      "source": "documents/000368.json#/matched_pairs",
+      "fact": "仅风险重复金标匹配，金融缺失未配对。"
+    },
+    {
+      "source": "requests/000368.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；526字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不能解释为模型完全没有识别金融要素缺失。",
+    "该局部候选未被后处理过滤或改类。",
+    "请求重建完整覆盖全部526字符，不能把目标段漏传当成本例既定根因。"
+  ],
+  "conclusion": "可以确认候选已发现局部缺失而因金标粒度/跨度未匹配。仍需人工判断模型是否只找到了多缺陷金标的一部分；不得直接说全是评分错误或只要扩span就业务完整。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "这条金标究竟代表一个整体财务说明缺失，还是多个可分开的错误。",
+    "“加权”是否必然指加权平均净资产收益率，模型补全语义需要人工确认。",
+    "同一段未解释的“扣”与空分号是否构成另外缺失。"
+  ],
+  "minimal_validation": {
+    "change": "人工逐处标出该70字符中的独立缺陷与必要信息；离线分别检查现有候选覆盖的业务子问题及只扩span后的形式评分。",
+    "control": "保持原金标主评分；拆分金标只能存在诊断副本且说明人工裁定。",
+    "success_criterion": "同时报告业务子问题实际覆盖和形式匹配变化，不能把扩边界带来的TP当新增推理能力。",
+    "regression_check": "测试合法简写、字段有后文补充及多缺陷复合金标，防止扩大引用掩盖遗漏。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "复合金标的业务子问题覆盖率",
+    "definition": "经人工拆解的复合金标中，raw理由实际识别出的独立缺陷数/人工确认缺陷数；另列严格span匹配率。",
+    "why_this_case": "该例正说明召回5%可能混合未发现与部分发现，必须逐案拆开。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

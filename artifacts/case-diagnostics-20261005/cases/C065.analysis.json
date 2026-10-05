@@ -1,0 +1,39 @@
+{
+  "case_id": "C065",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "金标[360,402)将“第三阵营（30-50亿）企业30家，销售额均值38.4亿元。第四阵营企业为13家，。”标为金融要素缺失。第四阵营句在逗号后直接结束；需人工判定缺失的是销售额均值、区间说明还是其他应有信息，而非仅凭前三阵营的惯例补造内容。",
+  "observed": "1092字符全文在重建当前contexts中完整出现，消息指纹匹配历史缓存及trace；一次调用status=ok、finish_reason=stop。留存回复为合法JSON {\"errors\":[]}，raw_candidates、rejected_candidates、最终all_hints全部为空。该文3条可评分金标均未匹配，本例没有进入任何候选定位、分类或确认步骤。",
+  "evidence": [
+    {"source":"documents/000160.json#/gold/errors/2","fact":"目标金标包括第四阵营“13家，。”的断句和前一阵营的对照信息。"},
+    {"source":"documents/000160.json#/input/content","fact":"前3阵营分别描述企业数量与销售额均值；后续全文转入经营策略，没有继续给出第四阵营销售额信息。"},
+    {"source":"requests/000160.json#/requests/0","fact":"完整重建messages与cache及trace指纹相符，当前正文未被截断；这不是原始HTTP录制。"},
+    {"source":"documents/000160.json#/responses/0/content","fact":"原始回复精确为{\"errors\":[]}，不是调用失败后由程序临时构造的空输出。"},
+    {"source":"documents/000160.json#/responses/0/trace","fact":"留存调用成功，finish_reason=stop；没有输出长度耗尽标记。"},
+    {"source":"documents/000160.json#/report","fact":"raw_candidates及rejected_candidates均为空，coverage显示whole、1092/1092；没有证据支持后处理删除了已生成的候选。"}
+  ],
+  "excluded_explanations": [
+    "不是本例引用错位、类型冲突或一对一竞争：原始回复根本没有候选。",
+    "记录中没有模型超时或JSON解析失败，不能把零分自动当成执行失败。",
+    "与C024不同：C024原文所在句被其他问题候选引用，本例整篇没有任何候选。",
+    "仅能排除冻结请求构造缺正文；不能声称获取了缺失的原始HTTP字节或证明模型关注到每一句。"
+  ],
+  "conclusion": "该例补齐了成功执行但整篇空候选的失效路径。差异发生在候选生成阶段，不能由定位修复或降低自动确认门槛解决；prompt边界、对缺失必要性的判断或模型偶发遗漏目前均是待验证假设。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "金标没有提供缺失字段的完整解释，需人工先确定第四阵营必须包含哪些要素。",
+    "同文另外两条金标的冗余与术语是否符合业务要求须分别评审，不把本例结论外推至全部3条。",
+    "单次空回复不能区分稳定的prompt抑制和随机遗漏，暂不承诺重试即可修复。"
+  ],
+  "minimal_validation": {
+    "change": "先由人工明确该段必需字段；如确认确有缺失，后续试验只针对“已出现引导结构但内容中断”增加一条检查要求。",
+    "control": "固定完整原文、模型参数和其余prompt，保留原始空回复；另设结构完整的第四阵营描述及允许简述的合法报告为对照。模型复跑需纳入独立试验，本轮仅离线分析。",
+    "success_criterion": "对照试验能稳定产生指向人工认可缺口的候选，并保留可定位原句；同时测正常文档的多报情况，不能仅统计空回复减少。",
+    "regression_check": "防止把每个缺常见指标的段落都报金融要素缺失，也不能强制每篇至少输出一条错误。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "成功执行的空候选文档漏检率",
+    "definition": "分开统计成功执行且原始errors为空的文档数量，以及这些文档中有人工确认错误的数量；计算人工确认错误实例召回，不能把非空输出率当质量目标。",
+    "why_this_case": "该例执行覆盖100%但原始候选为空，覆盖指标与问题识别能力明显不同。"
+  },
+  "human_review": {"analyst":null,"reviewer":null,"status":"pending","conclusion":null}
+}

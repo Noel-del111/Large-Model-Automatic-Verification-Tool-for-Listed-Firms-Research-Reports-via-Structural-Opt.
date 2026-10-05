@@ -1,0 +1,56 @@
+{
+  "case_id": "C051",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审法规引用FP为“其中规定…未经用户同意可擅自使用智能快件箱等”；金标gold1以两段span[327,331)、[364,381)将其归为语义逻辑矛盾。",
+  "observed": "raw_candidates[1]明确认为法规应是不得擅自而非可擅自，引用[327,382)覆盖两个金标span，后处理保留needs_review。类型法规引用错误与金标语义逻辑矛盾不同，所以未匹配。raw引用的外部法条真实性未在该次运行中查证。",
+  "evidence": [
+    {
+      "source": "documents/000202.json#/input/content",
+      "fact": "文本指名《快递市场管理办法》，随后出现“未经用户同意可擅自使用智能快件箱”等字样。"
+    },
+    {
+      "source": "documents/000202.json#/gold/errors/1",
+      "fact": "金标为语义逻辑矛盾，两个span分别含“其中规定”和“未经用户同意可擅自…”。"
+    },
+    {
+      "source": "documents/000202.json#/responses/0/content",
+      "fact": "raw_candidates[1]声称法规原义是不得，并据此分类法规引用错误；没有提供外部来源。"
+    },
+    {
+      "source": "documents/000202.json#/all_hints/1",
+      "fact": "有效跨度[327,382)覆盖全部gold span，唯一形式阻碍为类别。"
+    },
+    {
+      "source": "requests/000202.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1786字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是模型没注意到“可擅自”，理由正针对这一点。",
+    "不是范围不足：一个长span包含两个金标span。",
+    "文本写“未经同意可擅自”并非纯形式自相矛盾即可推出法律真义，不能把模型记忆当法条核验。"
+  ],
+  "conclusion": "基准失分可确认来自类型差异；模型已发现与金标关联的措辞。业务判定仍需要查看适用版本的权威条款，才能判断反转引用。该例可以提出“有依据核验法规”的候选需求，但单例不证明应搭建完整RAG。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "法律适用版本、条款及原义均未由这份模型缓存验证。",
+    "同一个法规含义反转应按法规引用还是语义矛盾计，须统一分类规则。"
+  ],
+  "minimal_validation": {
+    "change": "人工先依据该研报时点的官方条文核实可/不得，再离线仅改类型重放，分开证明法律判断和评分形式。",
+    "control": "保留原模型引用、全部金标和适用时间；对照正确“不得”与适用条件不同的条文。",
+    "success_criterion": "获得权威出处及版本后确定业务结论，类型单改能否匹配则独立报告。",
+    "regression_check": "防止只看到法规关键词就用外部记忆判错，检查不同时期和附条件许可。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "外部规范指控的证据覆盖率",
+    "definition": "声称法规引用错误的候选中，具有适用版本、条款原文、来源及逐项对应证据的比例。",
+    "why_this_case": "这例业务判断需要证据，而分类失分无需等建设大型金融知识库。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

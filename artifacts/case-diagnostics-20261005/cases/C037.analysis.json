@@ -1,0 +1,56 @@
+{
+  "case_id": "C037",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审计算FP指出22.99元股价与1.58元EPS对应PE应约14.55倍，而文中给14.59倍；该文没有计算金标。",
+  "observed": "raw_candidates[4]提出除法差异，最终为all_hints第2项[1662,1770)needs_review。独立计算22.99/1.58=14.5506329；但14.59隐含EPS=1.5757368，四舍五入仍显示1.58，故差异不充分证明业务错误。",
+  "evidence": [
+    {
+      "source": "documents/000405.json#/input/content",
+      "fact": "预测EPS按2位小数展示为1.58/1.71/1.91，PE也为2位小数；没有说明计算只使用展示值。"
+    },
+    {
+      "source": "documents/000405.json#/responses/0/content",
+      "fact": "raw理由只用显示EPS做点值除法，未讨论精度。"
+    },
+    {
+      "source": "documents/000405.json#/all_hints/2",
+      "fact": "计算候选被保留，非锚定拒绝；不满足已有金标。"
+    },
+    {
+      "source": "documents/000405.json#/gold/errors",
+      "fact": "4条金标不包含此PE计算。"
+    },
+    {
+      "source": "requests/000405.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1829字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "已排除点值算错：22.99/1.58确约14.55。",
+    "不能据点值不等直接排除底层EPS舍入解释。",
+    "模型并未实际取得底层未四舍五入EPS。"
+  ],
+  "conclusion": "AI初判为显示精度未被充分考虑的候选。保持股价22.99固定，只允许EPS在[1.575,1.585)内，PE范围约(14.5047,14.5968]，包含14.59；所以原输出“有误”证据不足，最终由人工查精确EPS或计算约定裁定。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "底层真实EPS未知；可行舍入解释只是存在性证明，不是原报告计算过程的事实。",
+    "是否采用摊薄股本、不同股价日等口径也未完整披露，不能自行补值。"
+  ],
+  "minimal_validation": {
+    "change": "先对这条候选做离线显示精度区间检查，并人工查原始精确EPS；对照加入明确足以超过区间的PE。",
+    "control": "固定原模型回复和股价，不新增推测精确数值作为金标。",
+    "success_criterion": "若原值可由允许舍入解释，则降为证据不足；明显超出区间的错误仍被捕获。",
+    "regression_check": "检验真除法错误、不同股价时点、显示精度不同三类，不一概放宽容差。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "计算告警舍入可解释率",
+    "definition": "有明确算式的计算候选中，报告值与显示输入的合理舍入区间存在交集的比例；另列未给精度约定。",
+    "why_this_case": "这条人工负担可能来自计算判错过于精确，不能靠鼓励确认直接解决。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

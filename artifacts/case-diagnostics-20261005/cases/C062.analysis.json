@@ -1,0 +1,54 @@
+{
+  "case_id": "C062",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "2020至2024营业收入由8.67亿元增至21.03亿元，按4年CAGR应约24.7973%，与35%不一致。",
+  "observed": "模型原始回复给出(21.03/8.67)^(1/4)-1约24.8%，最终[224,294)包含金标[224,266)，类型命中，needs_review；本轮独立算术复算为24.7972581471%。",
+  "evidence": [
+    {
+      "source": "documents/000416.json#/input/content",
+      "fact": "2020至2024营业收入由8.67亿元增至21.03亿元，按4年CAGR应约24.7973%，与35%不一致。"
+    },
+    {
+      "source": "documents/000416.json#/all_hints/2",
+      "fact": "模型原始回复给出(21.03/8.67)^(1/4)-1约24.8%，最终[224,294)包含金标[224,266)，类型命中，needs_review；本轮独立算术复算为24.7972581471%。"
+    },
+    {
+      "source": "cases/C062.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000416.json#/report/raw_candidates/2",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    },
+    {
+      "source": "calculation:(21.03/8.67)**(1/4)-1",
+      "fact": "Python独立计算=0.2479725814707594，与模型24.8%相符。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "该例计算推理正确且未受定位影响，仍转人工；宿主现有简单算术验证未覆盖此CAGR表达。可用于检验扩展计算验证是否带来真实免审收益。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "真实财务数值是否准确不由文内算术证明；确认CAGR不一致时不应宣称8.67或21.03是真实财报值。"
+  ],
+  "minimal_validation": {
+    "change": "单独把起值、终值、年份间隔绑定为可复算CAGR表达式，保持模型候选不变。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；对照同比、累计增长、非年度频率、负基数与四舍五入情况，避免混用年数与观测点数量。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "对照同比、累计增长、非年度频率、负基数与四舍五入情况，避免混用年数与观测点数量。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "计算表达式绑定及复算通过率",
+    "definition": "分开统计正确提取起终值和期数的比例、在这些正确输入上得到正确计算判断的比例。",
+    "why_this_case": "该例计算推理正确且未受定位影响，仍转人工；宿主现有简单算术验证未覆盖此CAGR表达。可用于检验扩展计算验证是否带来真实免审收益。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

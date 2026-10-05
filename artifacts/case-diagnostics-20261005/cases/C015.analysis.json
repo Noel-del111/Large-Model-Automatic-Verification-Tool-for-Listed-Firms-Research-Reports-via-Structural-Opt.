@@ -1,0 +1,87 @@
+{
+  "case_id": "C015",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应保留“广州港澳洲煤(Q5500)库提价971.30万元/吨…”的原文连续片段供单位核验，不把相隔文字拼成引用。",
+  "observed": "raw[0]发现万元/吨与同段元/吨量级差异，但在澳洲煤子句前拼入“截至5月10日，”。原文该日期后先描述印尼煤，随后分号才到澳洲煤；拼接整句在输入中不存在。锚定拒绝留下空span，gold数值单位错误FN。",
+  "evidence": [
+    {
+      "source": "documents/000218.json#/input/content",
+      "fact": "本例文档输入共2591字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=04fcd29fcc1d2507daa9920da21b76ba64fb32605c96e143930dce045768d439。"
+    },
+    {
+      "source": "requests/000218.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=5c6459a4cc2e3ac5f106c185c07afd27764fd6da9bae2c0ece3e8ed3afec1ca9，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000218.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=2591，total_chars=2591，execution_complete=true，candidate_quality_complete=false。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000218.json#/gold/errors/0",
+      "fact": "gold[0]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000218:error:0001\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":280,\"original_start\":239,\"original_text\":\"广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。\",\"start\":239,\"text\":\"广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。\"}],\"type\":\"数值单位错误\"}"
+    },
+    {
+      "source": "documents/000218.json#/report/raw_candidates/0",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"截至5月10日，广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。\"}],\"reason\":\"澳洲煤库提价单位写成“万元/吨”，与同段印尼煤的“元/吨”及周环比涨幅量级矛盾，应为“元/吨”。\"}"
+    },
+    {
+      "source": "documents/000218.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000218.json#/input/content",
+      "fact": "原始引用精确字符探查：[{\"quote\":\"截至5月10日，广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。\",\"exact_occurrence_offsets\":[]}]。零命中与多命中分别记录，不统一归为OCR问题。"
+    },
+    {
+      "source": "documents/000218.json#/all_hints/1",
+      "fact": "最终评分提示[1]：{\"error_type\":\"数值单位错误\",\"spans\":[],\"original_spans\":[{\"text\":\"截至5月10日，广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。\"}],\"reason\":\"澳洲煤库提价单位写成“万元/吨”，与同段印尼煤的“元/吨”及周环比涨幅量级矛盾，应为“元/吨”。\",\"status\":\"needs_review\",\"invalid_anchor\":true,\"validation\":\"anchor_rejected\",\"rejection_reason\":\"source text is absent or ambiguous in the model-visible context\",\"review_hint_only\":true}"
+    },
+    {
+      "source": "documents/000218.json#/input/content",
+      "fact": "原文顺序为“截至5月10日，广州港印尼煤(Q5500)库提价976.66元/吨，周环比上涨13.04元/吨；广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。” gold239:280恰为澳洲煤原始连续子句。"
+    },
+    {
+      "source": "documents/000218.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FN；全篇已分配对=[[0,3]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":1,\"gold_index\":0,\"prediction_type\":\"数值单位错误\",\"gold_type\":\"数值单位错误\",\"same_type\":true,\"gold_scorable\":true,\"contains_all_gold_spans\":false,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:375",
+      "fact": "_anchor先验证偏移或精确引文唯一出现；精确零命中时才尝试空白规范化，不做标点替换。任一span不存在或歧义可拒绝整条候选；拒绝仍通过review hints进入评估，不能丢弃FP。"
+    }
+  ],
+  "excluded_explanations": [
+    "raw已识别目标单位，不能归为未发现单位异常或缺少外部知识。",
+    "原文目标子句完整存在，不是OCR把澳洲煤价格丢了。",
+    "万元与元相差10000倍，但实际应修何值仍需原始报价，不能仅从量级自动确认。"
+  ],
+  "conclusion": "此例的直接失败链为跨子句拼接引文→原文不存在→候选被拒绝→FN。修复精确引文生成/原文定位比增加检索更直接，业务正确性仍应由人审确认。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "正确币值或单位需要原始数据来源，当前只能确认模型识别到了gold指向的疑点。"
+  ],
+  "minimal_validation": {
+    "change": "离线副本仅去掉拼接日期前缀，使用输入中239:280的实际子句重新锚定和评分；保留原始成绩。",
+    "control": "候选类型、理由、输入均保持原样，不改数值或单位。",
+    "success_criterion": "唯一定位成功且严格匹配gold[0]，说明此FN来自证据引用失真而非候选识别遗漏。",
+    "regression_check": "核查带共同日期的并列商品报价，确保不把跨段共享上下文拼成连续原文，也不丢必要时点证据。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "原文连续引用合格率",
+    "definition": "分母为raw候选的引用span；分子为其文字是实际输入连续子串且位置唯一或偏移正确的span。将跨子句拼接单列原因。",
+    "why_this_case": "本例信息存在、候选存在，只因复制引用变形导致全部评分损失。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

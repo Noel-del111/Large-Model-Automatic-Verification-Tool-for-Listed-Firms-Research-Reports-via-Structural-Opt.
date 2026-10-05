@@ -1,0 +1,148 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000549",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/009c8b6a3f3241321d7f5110.json",
+  "all_hints_index": 3,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "数值单位错误",
+    "spans": [],
+    "original_spans": [
+      {
+        "text": "10年期国债YTM为1.67%，周环比-4.96pct；"
+      }
+    ],
+    "reason": "国债收益率周环比变动通常以bp计，1.67%的收益率不可能一周下降4.96个百分点，单位“pct”疑为“bp”。",
+    "status": "needs_review",
+    "invalid_anchor": true,
+    "validation": "anchor_rejected",
+    "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+    "review_hint_only": true
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C013",
+  "error_type": "数值单位错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000549.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 2,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "数值单位错误",
+        "reason": "贷款、存款余额的单位应为“万亿元”，原文写成“万亿秒”，量纲错误。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 1016,
+            "end": 1068,
+            "text": "4月末中资银行贷款、存款余额分别为258.36、293.94万亿秒，同比分别+7.73%、+7.99%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "4月末中资银行贷款、存款余额分别为258.36、293.94万亿秒，同比分别+7.73%、+7.99%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 1016,
+            "end": 1068,
+            "text": "4月末中资银行贷款、存款余额分别为258.36、293.94万亿秒，同比分别+7.73%、+7.99%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "39c7fdf2b5caee52f404b3b7",
+        "review_priority": "high"
+      }
+    },
+    {
+      "all_hints_index": 3,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [],
+        "original_spans": [
+          {
+            "text": "10年期国债YTM为1.67%，周环比-4.96pct；"
+          }
+        ],
+        "reason": "国债收益率周环比变动通常以bp计，1.67%的收益率不可能一周下降4.96个百分点，单位“pct”疑为“bp”。",
+        "status": "needs_review",
+        "invalid_anchor": true,
+        "validation": "anchor_rejected",
+        "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+        "review_hint_only": true
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": false,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000549:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1049,
+            "original_start": 1019,
+            "original_text": "中资银行贷款、存款余额分别为258.36、293.94万亿秒",
+            "start": 1019,
+            "text": "中资银行贷款、存款余额分别为258.36、293.94万亿秒"
+          }
+        ],
+        "type": "数值单位错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

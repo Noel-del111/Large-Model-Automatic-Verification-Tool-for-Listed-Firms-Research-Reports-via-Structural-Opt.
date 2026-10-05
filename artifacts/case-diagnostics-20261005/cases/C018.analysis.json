@@ -1,0 +1,79 @@
+{
+  "case_id": "C018",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应指出费用率列表末尾“研发费用率。”缺少何种必要信息，按统一类别输出。",
+  "observed": "raw[2]明确说研发费用率后无百分比，预测451:558覆盖gold486:558，锚定成功。模型数值缺失，gold金融要素缺失，类型门槛造成严格FP及对应FN。",
+  "evidence": [
+    {
+      "source": "documents/000374.json#/input/content",
+      "fact": "本例文档输入共1127字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=8e53e5bcbc54c574ab0e831144ccef635ad06f93f7f8beac27a19e032906ded3。"
+    },
+    {
+      "source": "requests/000374.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=cadb18bd9855bb3620ce1748df50d5cce614d366028cb84dd485ed2ac280dfc0，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000374.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1127，total_chars=1127，execution_complete=true，candidate_quality_complete=false。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000374.json#/gold/errors/2",
+      "fact": "gold[2]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000374:error:0003\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":558,\"original_start\":486,\"original_text\":\"其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。\",\"start\":486,\"text\":\"其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。\"}],\"type\":\"金融要素缺失\"}"
+    },
+    {
+      "source": "documents/000374.json#/report/raw_candidates/2",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。\"}],\"reason\":\"研发费用率后缺少具体数值。\"}"
+    },
+    {
+      "source": "documents/000374.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000374.json#/all_hints/2",
+      "fact": "最终评分提示[2]：{\"error_type\":\"数值缺失\",\"reason\":\"研发费用率后缺少具体数值。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":451,\"end\":558,\"text\":\"费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。\"}],\"spans\":[{\"start\":451,\"end\":558,\"text\":\"费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"81b8a52b13feb9189ae9e2bd\",\"review_priority\":\"high\"}"
+    },
+    {
+      "source": "documents/000374.json#/input/content",
+      "fact": "销售、管理、财务费用率分别7.18%、3.92%、-0.64%，末尾仅“研发费用率。”。同文另有产品收入“60.72、亿元”的纯数值缺失被同类候选命中，可用作类别边界对照。"
+    },
+    {
+      "source": "documents/000374.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[1,1],[0,3]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":2,\"gold_index\":2,\"prediction_type\":\"数值缺失\",\"gold_type\":\"金融要素缺失\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "研发费用率文字与缺口在输入、raw和最终证据中都存在。",
+    "范围包含gold，扩span或改锚点对该类型失配无效。",
+    "不能从指标属于财务概念推导所有缺数值都应改成金融要素缺失。"
+  ],
+  "conclusion": "本条是位置识别成功后的标签分歧，须人工说明为何这里的研发费用率缺百分比划作金融要素缺失，而同文产品收入缺数字划为数值缺失。没有这条边界，直接改prompt可能只转移FP/FN。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "gold没有说明研发费用率字段已在但值缺失时采用金融要素缺失的理由。"
+  ],
+  "minimal_validation": {
+    "change": "并排展示本句和同文产品收入缺数字句，请人工独立判类型、给区分规则；离线复算规则对本例的影响。",
+    "control": "不向人审显示模型/gold标签来源，只显示原文与必要上下文。",
+    "success_criterion": "两例得到可解释的一致规则；模型已识别缺口的事实单独保留，类别修正不冒充输入质量改善。",
+    "regression_check": "核查其他比率字段的空值和整项不存在，避免把金融领域的一切空数值都压入同一类。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "金融字段空值分类一致率",
+    "definition": "分母为人工确认字段名已存在但数值缺失且模型识别到缺口的实例；分子为与人工签核类别一致者，并呈现数值缺失↔金融要素缺失混淆矩阵。",
+    "why_this_case": "这条金融要素FN由相同位置的数值缺失FP产生，单类召回会掩盖已有检测。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

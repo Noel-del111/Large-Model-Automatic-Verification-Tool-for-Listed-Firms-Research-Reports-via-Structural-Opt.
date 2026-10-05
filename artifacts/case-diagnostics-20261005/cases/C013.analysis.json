@@ -1,0 +1,88 @@
+{
+  "case_id": "C013",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "若判定国债YTM周环比单位有误，应给出可核验的单位依据并能定位具体出现位置。",
+  "observed": "raw[2]引用“10年期国债YTM为1.67%，周环比-4.96pct；”，在重复两段中分别出现704与850，未给位置，因歧义被拒绝；模型还声称1.67%收益率不可能一周下降4.96个百分点，但原文无前值支持这一不可能判断。",
+  "evidence": [
+    {
+      "source": "documents/000549.json#/input/content",
+      "fact": "本例文档输入共1255字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=e3c0b19cbd124b9af0c858af7b84eb1bbe63d1f83e6ead49e7857b9bb8c11296。"
+    },
+    {
+      "source": "requests/000549.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=e7114da08bfc1988088641cecb9ee0827be759b433a92408471a6cbf5a6fb4c5，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000549.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1255，total_chars=1255，execution_complete=true，candidate_quality_complete=false。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000549.json#/gold/errors/1",
+      "fact": "gold[1]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000549:error:0002\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":1049,\"original_start\":1019,\"original_text\":\"中资银行贷款、存款余额分别为258.36、293.94万亿秒\",\"start\":1019,\"text\":\"中资银行贷款、存款余额分别为258.36、293.94万亿秒\"}],\"type\":\"数值单位错误\"}"
+    },
+    {
+      "source": "documents/000549.json#/report/raw_candidates/2",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"10年期国债YTM为1.67%，周环比-4.96pct；\"}],\"reason\":\"国债收益率周环比变动通常以bp计，1.67%的收益率不可能一周下降4.96个百分点，单位“pct”疑为“bp”。\"}"
+    },
+    {
+      "source": "documents/000549.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000549.json#/input/content",
+      "fact": "原始引用精确字符探查：[{\"quote\":\"10年期国债YTM为1.67%，周环比-4.96pct；\",\"exact_occurrence_offsets\":[704,850]}]。零命中与多命中分别记录，不统一归为OCR问题。"
+    },
+    {
+      "source": "documents/000549.json#/all_hints/3",
+      "fact": "最终评分提示[3]：{\"error_type\":\"数值单位错误\",\"spans\":[],\"original_spans\":[{\"text\":\"10年期国债YTM为1.67%，周环比-4.96pct；\"}],\"reason\":\"国债收益率周环比变动通常以bp计，1.67%的收益率不可能一周下降4.96个百分点，单位“pct”疑为“bp”。\",\"status\":\"needs_review\",\"invalid_anchor\":true,\"validation\":\"anchor_rejected\",\"rejection_reason\":\"source text is absent or ambiguous in the model-visible context\",\"review_hint_only\":true}"
+    },
+    {
+      "source": "documents/000549.json#/input/content",
+      "fact": "同一引文在3）和4）利率及信用利差段落各出现一次；本条原始引文完全存在但不唯一。若下降4.96个百分点，则前值可为1.67+4.96=6.63%，算术上并非不可能。"
+    },
+    {
+      "source": "documents/000549.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[2,1],[0,2]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":3,\"gold_index\":1,\"prediction_type\":\"数值单位错误\",\"gold_type\":\"数值单位错误\",\"same_type\":true,\"gold_scorable\":true,\"contains_all_gold_spans\":false,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:375",
+      "fact": "_anchor先验证偏移或精确引文唯一出现；精确零命中时才尝试空白规范化，不做标点替换。任一span不存在或歧义可拒绝整条候选；拒绝仍通过review hints进入评估，不能丢弃FP。"
+    }
+  ],
+  "excluded_explanations": [
+    "该拒绝不是引文拼写变化，而是两次精确命中。",
+    "常用bp不能单独证明pct错误；不能把经验上罕见当作算术不成立。",
+    "gold中的“万亿秒”是另一个单位错误，不能作为本条单位判定的业务证明。"
+  ],
+  "conclusion": "可确认重复文本导致锚定拒绝；“pct应为bp”的业务结论仍缺前值或来源证据。应同时审查定位歧义和模型以常识替代核验的风险。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "实际周度收益率变动及正确单位需外部原始报价由人工核对，本轮未查询。",
+    "重复段落应如何作为一个或多个单位候选呈现需制定规则。"
+  ],
+  "minimal_validation": {
+    "change": "离线增加原始出现位置消除歧义，仅验证锚定；人工另行记录当周与前周收益率及来源，再判断单位。",
+    "control": "保留原单位和原数值，不因频繁使用bp自动更正。",
+    "success_criterion": "两处出现位置可准确定位；只有算式与来源都支持时才给单位误用结论。",
+    "regression_check": "加入单位确为pct的收益率变动、重复同句和只有一次出现的对照。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "单位修正可验证率",
+    "definition": "分母为模型提出单位替换的候选；分子为量纲或同口径数值关系能直接证明原单位不成立、并支持拟改单位的候选；不可验证保留为单独状态。",
+    "why_this_case": "本例锚定成功与单位结论正确不是同一件事，不能仅优化前者。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

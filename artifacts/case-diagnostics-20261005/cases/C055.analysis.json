@@ -1,0 +1,50 @@
+{
+  "case_id": "C055",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "三个标签BCI/BPI/BSI对应四个环比值+6.8%/-9.3%/-2.3%/+2.2%，应指出“分别”对应数量不一致。",
+  "observed": "原始回复给出的start=1729,end=1777错误，但引用文本在原文唯一；宿主重定位到[1679,1723)，命中同跨度金标，仍needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000528.json#/input/content",
+      "fact": "三个标签BCI/BPI/BSI对应四个环比值+6.8%/-9.3%/-2.3%/+2.2%，应指出“分别”对应数量不一致。"
+    },
+    {
+      "source": "documents/000528.json#/all_hints/3",
+      "fact": "原始回复给出的start=1729,end=1777错误，但引用文本在原文唯一；宿主重定位到[1679,1723)，命中同跨度金标，仍needs_review。"
+    },
+    {
+      "source": "cases/C055.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000528.json#/report/raw_candidates/3",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "本例说明字符坐标不准可以被原句定位修复，不应把初始偏移错一律解释为模型没有发现问题。标签—数值配对正确性与定位正确性应分开衡量。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "尚不知道多余值属于漏写的第四指数还是误加的数值；不可凭候选自动删除+2.2%。"
+  ],
+  "minimal_validation": {
+    "change": "保留现有唯一原句定位；仅在明确“分别”结构中试验标签与值个数检查。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；加入含合计值、区间和共享单位的正确枚举作为对照，确认不会按斜杠数量机械误判。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "加入含合计值、区间和共享单位的正确枚举作为对照，确认不会按斜杠数量机械误判。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "原句定位修复成功率",
+    "definition": "错误原始offset但具有唯一精确原句的候选中，恢复正确位置的数量 / 该类候选总数；另列歧义原句。",
+    "why_this_case": "本例说明字符坐标不准可以被原句定位修复，不应把初始偏移错一律解释为模型没有发现问题。标签—数值配对正确性与定位正确性应分开衡量。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

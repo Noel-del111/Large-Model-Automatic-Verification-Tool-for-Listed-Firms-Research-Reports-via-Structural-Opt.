@@ -1,0 +1,130 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000437",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/6838f9c275977b7e27c0d6bf.json",
+  "all_hints_index": null,
+  "gold_index": 1,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000437:error:0002",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 457,
+        "original_start": 442,
+        "original_text": "实现归母净利润35.1亿元（）",
+        "start": 442,
+        "text": "实现归母净利润35.1亿元（）"
+      }
+    ],
+    "type": "属性值缺失错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C008",
+  "error_type": "属性值缺失错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000437.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值缺失",
+        "reason": "归母净利润35.1亿元后的括号为空，缺少应披露的同比增速数值。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 406,
+            "end": 458,
+            "text": "2024年公司收入419.1亿元，（同比+3.2%，以下均为同比口径）；实现归母净利润35.1亿元（）。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2024年公司收入419.1亿元，（同比+3.2%，以下均为同比口径）；实现归母净利润35.1亿元（）。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 406,
+            "end": 458,
+            "text": "2024年公司收入419.1亿元，（同比+3.2%，以下均为同比口径）；实现归母净利润35.1亿元（）。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "68e6739d076dcfa59bb09f2b",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000437:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 457,
+            "original_start": 442,
+            "original_text": "实现归母净利润35.1亿元（）",
+            "start": 442,
+            "text": "实现归母净利润35.1亿元（）"
+          }
+        ],
+        "type": "属性值缺失错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

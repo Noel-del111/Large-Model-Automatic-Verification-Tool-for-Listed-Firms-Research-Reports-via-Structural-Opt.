@@ -1,0 +1,213 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000374",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/948fbdb49cd1a91757270d9c.json",
+  "all_hints_index": 2,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "数值缺失",
+    "reason": "研发费用率后缺少具体数值。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 451,
+        "end": 558,
+        "text": "费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 451,
+        "end": 558,
+        "text": "费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "81b8a52b13feb9189ae9e2bd",
+    "review_priority": "high"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C018",
+  "error_type": "数值缺失",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000374.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "数值缺失",
+        "reason": "铸件及锻件对应的收入数值缺失，仅写“60.72、亿元”。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 271,
+            "end": 324,
+            "text": "分产品来看，阀门及零件、铸件及锻件分别实现收入60.72、亿元，同比增速分别为13.69%、-8.34%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "分产品来看，阀门及零件、铸件及锻件分别实现收入60.72、亿元，同比增速分别为13.69%、-8.34%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 271,
+            "end": 324,
+            "text": "分产品来看，阀门及零件、铸件及锻件分别实现收入60.72、亿元，同比增速分别为13.69%、-8.34%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "a107f5952a564ce856e5d83a",
+        "review_priority": "high"
+      }
+    },
+    {
+      "all_hints_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值缺失",
+        "reason": "研发费用率后缺少具体数值。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 451,
+            "end": 558,
+            "text": "费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 451,
+            "end": 558,
+            "text": "费用率方面，2024年公司期间费用率同减0.69pct至13.14%，其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "81b8a52b13feb9189ae9e2bd",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": false,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000374:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 323,
+            "original_start": 271,
+            "original_text": "分产品来看，阀门及零件、铸件及锻件分别实现收入60.72、亿元，同比增速分别为13.69%、-8.34%",
+            "start": 271,
+            "text": "分产品来看，阀门及零件、铸件及锻件分别实现收入60.72、亿元，同比增速分别为13.69%、-8.34%"
+          }
+        ],
+        "type": "数值缺失"
+      }
+    },
+    {
+      "gold_index": 2,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000374:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 558,
+            "original_start": 486,
+            "original_text": "其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。",
+            "start": 486,
+            "text": "其中销售费用率同减0.63pct至7.18%；管理费用率同增0.51pct至3.92%；财务费用率同增0.11pct至-0.64%；研发费用率。"
+          }
+        ],
+        "type": "金融要素缺失"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 1,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

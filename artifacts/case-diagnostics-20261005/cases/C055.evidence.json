@@ -1,0 +1,219 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000528",
+  "result": "TP",
+  "prediction_file": "run/predictions/hybrid/41b9e192256fc4910ecbf469.json",
+  "all_hints_index": 3,
+  "gold_index": 0,
+  "prediction": {
+    "error_type": "数值不一致错误",
+    "reason": "BCI/BPI/BSI三个指数却对应四个环比变化值，数量不匹配。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 1679,
+        "end": 1723,
+        "text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。",
+        "start": 1729,
+        "end": 1777
+      }
+    ],
+    "spans": [
+      {
+        "start": 1679,
+        "end": 1723,
+        "text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "19c187069aaa3afff676dd0e",
+    "review_priority": "high"
+  },
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000528:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 1723,
+        "original_start": 1679,
+        "original_text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。",
+        "start": 1679,
+        "text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。"
+      }
+    ],
+    "type": "数值不一致错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C055",
+  "error_type": "数值不一致错误",
+  "cohort": "control",
+  "document_ref": "documents/000528.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 3,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "reason": "BCI/BPI/BSI三个指数却对应四个环比变化值，数量不匹配。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 1679,
+            "end": 1723,
+            "text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。",
+            "start": 1729,
+            "end": 1777
+          }
+        ],
+        "spans": [
+          {
+            "start": 1679,
+            "end": 1723,
+            "text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "19c187069aaa3afff676dd0e",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000528:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1723,
+            "original_start": 1679,
+            "original_text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。",
+            "start": 1679,
+            "text": "其中，BCI/BPI/BSI分别环比变化+6.8%/-9.3%/-2.3%/+2.2%。"
+          }
+        ],
+        "type": "数值不一致错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": true
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 5,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000536",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/ea347e7170af2a167f56e586.json",
+  "all_hints_index": null,
+  "gold_index": 2,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000536:error:0003",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 692,
+        "original_start": 636,
+        "original_text": "据校外培训监管平台数据统计，2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。",
+        "start": 636,
+        "text": "据校外培训监管平台数据统计，2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。"
+      }
+    ],
+    "type": "数值缺失"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C019",
+  "error_type": "数值缺失",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000536.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值缺失",
+        "reason": "“仅新增家”缺少具体数值，未说明2025年前5月新增机构数量。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 650,
+            "end": 692,
+            "text": "2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 650,
+            "end": 692,
+            "text": "2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "20313127aa82e60c75f8b6d5",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000536:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 692,
+            "original_start": 636,
+            "original_text": "据校外培训监管平台数据统计，2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。",
+            "start": 636,
+            "text": "据校外培训监管平台数据统计，2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。"
+          }
+        ],
+        "type": "数值缺失"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 2,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

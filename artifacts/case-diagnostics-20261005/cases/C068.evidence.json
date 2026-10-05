@@ -1,0 +1,148 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000696",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/136b1f0ef5cd8f2385a1a2e5.json",
+  "all_hints_index": null,
+  "gold_index": 1,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000696:error:0002",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 264,
+        "original_start": 255,
+        "original_text": "实现净利润39万元",
+        "start": 255,
+        "text": "实现净利润39万元"
+      }
+    ],
+    "type": "数值单位错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C068",
+  "error_type": "数值单位错误",
+  "cohort": "supplemental",
+  "document_ref": "documents/000696.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 4,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "数值单位错误",
+        "reason": "复兴号动车组招标时速通常为350公里，“50公里”单位及数值不成立。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 791,
+            "end": 838,
+            "text": "2024年，国铁集团分别于5月、11月进行50公里复兴号动车组招标，分别招标165组和80组；"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2024年，国铁集团分别于5月、11月进行50公里复兴号动车组招标，分别招标165组和80组；"
+          }
+        ],
+        "spans": [
+          {
+            "start": 791,
+            "end": 838,
+            "text": "2024年，国铁集团分别于5月、11月进行50公里复兴号动车组招标，分别招标165组和80组；"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "483dad38a18e20fb45140af2",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000696:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 264,
+            "original_start": 255,
+            "original_text": "实现净利润39万元",
+            "start": 255,
+            "text": "实现净利润39万元"
+          }
+        ],
+        "type": "数值单位错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 1,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

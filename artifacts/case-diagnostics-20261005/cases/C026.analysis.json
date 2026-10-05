@@ -1,0 +1,80 @@
+{
+  "case_id": "C026",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应识别“五一档从6月1日至6月5日”与报告截至5月5日统计语境的异常，并按签核类别输出。",
+  "observed": "raw[0]明确说五一档应为5月且6月起点晚于截至5月5日，预测50:101完整锚定，覆盖gold50:65；模型时间矛盾、gold语义逻辑矛盾，严格FP。",
+  "evidence": [
+    {
+      "source": "documents/000174.json#/input/content",
+      "fact": "本例文档输入共1430字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=77c590e9caa643bea46e2a0f5791a35faa59b32bb4d87357719b00fda8e34759。"
+    },
+    {
+      "source": "requests/000174.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=de72b01c1193be38199bf7ac82416a31dca69549570e8750b5d8a53d1c01cd95，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000174.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1430，total_chars=1430，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000174.json#/gold/errors/1",
+      "fact": "gold[1]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000174:error:0002\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":65,\"original_start\":50,\"original_text\":\"今年五一档从6月1日至6月5日\",\"start\":50,\"text\":\"今年五一档从6月1日至6月5日\"}],\"type\":\"语义逻辑矛盾\"}"
+    },
+    {
+      "source": "documents/000174.json#/report/raw_candidates/0",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。\"}],\"reason\":\"五一档应为5月1日至5月5日，却写成6月1日至6月5日，且截至5月5日与档期起点6月1日冲突。\"}"
+    },
+    {
+      "source": "documents/000174.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000174.json#/all_hints/0",
+      "fact": "最终评分提示[0]：{\"error_type\":\"时间矛盾\",\"reason\":\"五一档应为5月1日至5月5日，却写成6月1日至6月5日，且截至5月5日与档期起点6月1日冲突。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":50,\"end\":101,\"text\":\"今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。\"}],\"spans\":[{\"start\":50,\"end\":101,\"text\":\"今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"2c3303135e80a34dd737f753\",\"review_priority\":\"high\"}"
+    },
+    {
+      "source": "documents/000174.json#/input/content",
+      "fact": "原句“今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。” 同一句含档期定义和统计截至时间。gold只圈定“今年五一档从6月1日至6月5日”。"
+    },
+    {
+      "source": "documents/000174.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[2,0],[5,2]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":0,\"gold_index\":1,\"prediction_type\":\"时间矛盾\",\"gold_type\":\"语义逻辑矛盾\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "模型已针对gold圈定的日期表达提出理由，不是未识别节假日时间异常。",
+    "类别不一致而非锚定失败；更宽的预测已包含gold。",
+    "不能把同文其他票房占比计算候选的业务正确性拿来替本条作结论。"
+  ],
+  "conclusion": "本条是同一日期表达疑点的时间矛盾/语义逻辑类型失配。人工需决定节假日名称与日期不相容的主类，并核实具体修复，而不是把严格FP解读为全无价值的误报。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "实际应更正为5月1日至5月5日仍需原始报告或签核依据；本轮不自动修改业务事实。",
+    "已实现票房与预售/预测口径在完整业务语境中需人审确认，不能只用截至时间推断所有未来日期表述都错。"
+  ],
+  "minimal_validation": {
+    "change": "让人工对节假日名称、日期区间、统计截至时间分别标注关系，再裁定主类；离线仅重分类复算。",
+    "control": "保留未来档期预售/预测的合法例子和单个日期值非法例子，避免“截至日期早于事件日期”一律判错。",
+    "success_criterion": "人工签核该例异常关系及类别；同一有效候选在固定边界下匹配变化可复现。",
+    "regression_check": "确认节假日命名异常、时间顺序冲突与单点日期非法不被简单合并，且预测性叙述不误杀。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "节假日时间异常类型一致率",
+    "definition": "分母为人工确认模型已识别节假日名称与日期关系异常的候选；分子为与签核主类一致者，另单列修复值有来源支持比例。",
+    "why_this_case": "此例识别与证据都存在，严格FP来自关系类别标签。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

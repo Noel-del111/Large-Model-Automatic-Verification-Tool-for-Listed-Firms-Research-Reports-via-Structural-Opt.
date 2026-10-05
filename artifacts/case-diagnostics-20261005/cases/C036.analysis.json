@@ -1,0 +1,55 @@
+{
+  "case_id": "C036",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "金标格式错误[850,892)为“同下游客户达成紧密合作关系，构建起产品护城河，构建起产品护城河，具备稳定的盈利能力。”",
+  "observed": "raw_candidates[2]完整引用同一段，正确指出“构建起产品护城河”重复两次，但标为冗余语句；最终跨度与金标完全相同、needs_review。类型门槛阻断匹配。",
+  "evidence": [
+    {
+      "source": "documents/000353.json#/gold/errors/0",
+      "fact": "类型格式错误，[850,892)。"
+    },
+    {
+      "source": "documents/000353.json#/responses/0/content",
+      "fact": "第2项类型冗余语句，理由明确为连续重复。"
+    },
+    {
+      "source": "documents/000353.json#/all_hints/2",
+      "fact": "引用与金标逐字相同、同一跨度，原类别保留。"
+    },
+    {
+      "source": "documents/000353.json#/matched_pairs",
+      "fact": "只匹配数值缺失和语义矛盾，重复文本未匹配。"
+    },
+    {
+      "source": "requests/000353.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1192字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是未发现重复文本。",
+    "不是跨度或后处理损失。",
+    "该问题不需要外部金融事实，不能据此要求RAG。"
+  ],
+  "conclusion": "可核实为重复短语的类别失配。冻结分类定义中“同一信息不必要重复”也更接近模型类别，但最终应由人工统一标注规范，不能为了得分直接把重复都叫格式错误。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "金标是否标错类别，或其格式定义有未见的额外规则。"
+  ],
+  "minimal_validation": {
+    "change": "人工盲判重复短语的类型；在评分副本仅调整本候选类别，验证形式失分原因；主基准不改。",
+    "control": "保持跨度、理由和其他预测不变。",
+    "success_criterion": "仅改类型即可匹配，人工说明应采用哪一类及理由。",
+    "regression_check": "对正常并列反复强调与真实重复、纯格式损坏分别检查。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "同跨度不同类别失配数",
+    "definition": "候选完整覆盖金标且人工认为同一错误，唯一未匹配条件为类型的数量。",
+    "why_this_case": "这例是清晰的检测存在而分类失分，不能计成纯漏发现。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

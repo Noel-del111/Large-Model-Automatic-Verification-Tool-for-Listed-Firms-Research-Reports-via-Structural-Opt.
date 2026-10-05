@@ -1,0 +1,163 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000202",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/3f59d642b8b1a6f063bd6067.json",
+  "all_hints_index": 1,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "法规引用错误",
+    "reason": "法规规定未经用户同意不得擅自使用智能快件箱，原文误作“可擅自”，引用条款含义相反。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 327,
+        "end": 382,
+        "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 327,
+        "end": 382,
+        "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "bf97b958f781d1d122a1aaba",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C051",
+  "error_type": "法规引用错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000202.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "法规引用错误",
+        "reason": "法规规定未经用户同意不得擅自使用智能快件箱，原文误作“可擅自”，引用条款含义相反。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 327,
+            "end": 382,
+            "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 327,
+            "end": 382,
+            "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "bf97b958f781d1d122a1aaba",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000202:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 331,
+            "original_start": 327,
+            "original_text": "其中规定",
+            "start": 327,
+            "text": "其中规定"
+          },
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 381,
+            "original_start": 364,
+            "original_text": "未经用户同意可擅自使用智能快件箱等",
+            "start": 364,
+            "text": "未经用户同意可擅自使用智能快件箱等"
+          }
+        ],
+        "type": "语义逻辑矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000501",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/e5f6f37d2f605092c1aaa96a.json",
+  "all_hints_index": 1,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "数值缺失",
+    "reason": "其他板块均列出毛利率具体数值，本句只有同比变动，缺少对应的毛利率数值。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 827,
+        "end": 873,
+        "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 827,
+        "end": 873,
+        "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "39071ebf3f09723672f3c358",
+    "review_priority": "high"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C017",
+  "error_type": "数值缺失",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000501.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值缺失",
+        "reason": "其他板块均列出毛利率具体数值，本句只有同比变动，缺少对应的毛利率数值。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 827,
+            "end": 873,
+            "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 827,
+            "end": 873,
+            "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "39071ebf3f09723672f3c358",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000501:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 873,
+            "original_start": 827,
+            "original_text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。",
+            "start": 827,
+            "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+          }
+        ],
+        "type": "金融要素缺失"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

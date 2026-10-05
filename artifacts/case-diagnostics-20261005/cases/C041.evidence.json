@@ -1,0 +1,182 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000662",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/e73661ffaed62389942e2096.json",
+  "all_hints_index": 5,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "语义逻辑矛盾",
+    "spans": [],
+    "original_spans": [
+      {
+        "text": "计算机行业点评报告：亚马逊（AMZN.O）：电商筑基云智跃迁：全域AI驱动生态扩容与资本优配",
+        "start": 0,
+        "end": 0
+      },
+      {
+        "text": "贵金属领域建议关注紫金矿业、银泰黄金、中金黄金、湖南黄金；小金属领域建议关注锡业股份。",
+        "start": 0,
+        "end": 0
+      }
+    ],
+    "reason": "报告标题和事件主体为计算机行业/亚马逊，投资建议却推荐贵金属、小金属，与主题冲突。",
+    "status": "needs_review",
+    "invalid_anchor": true,
+    "validation": "anchor_rejected",
+    "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+    "review_hint_only": true
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C041",
+  "error_type": "语义逻辑矛盾",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000662.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 2,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "reason": "1,556.7亿美元高于1,551.6亿美元，不是“略低于”。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 348,
+            "end": 421,
+            "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元，营收增长放缓至两年最低。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元，营收增长放缓至两年最低。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "spans": [
+          {
+            "start": 348,
+            "end": 421,
+            "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元，营收增长放缓至两年最低。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "24b6b098706e6c9884741f19",
+        "review_priority": "low"
+      }
+    },
+    {
+      "all_hints_index": 5,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [],
+        "original_spans": [
+          {
+            "text": "计算机行业点评报告：亚马逊（AMZN.O）：电商筑基云智跃迁：全域AI驱动生态扩容与资本优配",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "text": "贵金属领域建议关注紫金矿业、银泰黄金、中金黄金、湖南黄金；小金属领域建议关注锡业股份。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "报告标题和事件主体为计算机行业/亚马逊，投资建议却推荐贵金属、小金属，与主题冲突。",
+        "status": "needs_review",
+        "invalid_anchor": true,
+        "validation": "anchor_rejected",
+        "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+        "review_hint_only": true
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 2,
+      "same_type": true,
+      "overlap": false,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000662:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 408,
+            "original_start": 348,
+            "original_text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元",
+            "start": 348,
+            "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元"
+          }
+        ],
+        "type": "语义逻辑矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 5,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 2,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "case_id": "C040",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "金标计算错误[280,317)是上涨373只占70.9%、下跌97只占20.3%，两组比例隐含同一股票池总数不一致。",
+  "observed": "raw_candidates[2]明确算出总数约526和478，却把类型写成数值不一致错误；最终[278,318)覆盖金标、needs_review。独立复算373/0.709=526.0931、97/0.203=477.8325，类型不同使FN。",
+  "evidence": [
+    {
+      "source": "documents/000675.json#/gold/errors/1",
+      "fact": "目标类别计算错误，[280,317)。"
+    },
+    {
+      "source": "documents/000675.json#/responses/0/content",
+      "fact": "raw_candidates[2]已指出由两组只数/占比反算总数冲突。"
+    },
+    {
+      "source": "documents/000675.json#/all_hints/2",
+      "fact": "最终类别数值不一致错误，跨度含完整金标。"
+    },
+    {
+      "source": "documents/000675.json#/matched_pairs",
+      "fact": "只匹配单位和非法年份，本候选没有分配。"
+    },
+    {
+      "source": "requests/000675.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；994字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是模型完全未发现计数比例冲突。",
+    "不是后处理改类、丢弃或span不足。",
+    "不能把373+97=470当作必须的总体，原文可能还有平盘股票；正确检查应为共同分母一致性。"
+  ],
+  "conclusion": "本例的可验证失分点是类别边界；模型已生成相关比例推导。人工需确认统一分母假设及计算错误/数值不一致的分类规范，不能为提升得分把所有比例冲突硬改类。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "上涨和下跌比例是否确用同一总体；原文同段暗示是，但未给明确定义。",
+    "正常显示精度能否解释需检验：一位百分比舍入对应总数区间仍明显分离。"
+  ],
+  "minimal_validation": {
+    "change": "先人工确认同一股票池，再离线仅改类别重放；另外用显示精度区间检验共同分母是否可行。",
+    "control": "原跨度、理由、金标固定；增加包含平盘的正常股票池作为对照。",
+    "success_criterion": "类型单改可命中，同时不误判正常上涨/下跌/平盘比例。",
+    "regression_check": "禁止把非穷尽的涨跌列表直接要求加总100%，检查不同样本口径。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "比例检查的共同分母与类别准确率",
+    "definition": "人工裁定同一总体的计数占比问题中，正确发现分母不一致且映射到约定类别的比例。",
+    "why_this_case": "这条FN已经有计算推导，优先解决分类与证据定义。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000341",
+  "result": "TP",
+  "prediction_file": "run/predictions/hybrid/fa82a476b7445ea8105820ad.json",
+  "all_hints_index": 1,
+  "gold_index": 0,
+  "prediction": {
+    "error_type": "格式错误",
+    "reason": "平均价格“1963-35元/头”数字格式异常，连字符位置疑似应为小数点。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 463,
+        "end": 519,
+        "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 463,
+        "end": 519,
+        "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "c95d4f7ee80254ab93af621c",
+    "review_priority": "low"
+  },
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000341:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 490,
+        "original_start": 469,
+        "original_text": "对外出售生猪平均价格为1963-35元/头",
+        "start": 469,
+        "text": "对外出售生猪平均价格为1963-35元/头"
+      }
+    ],
+    "type": "格式错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C061",
+  "error_type": "格式错误",
+  "cohort": "control",
+  "document_ref": "documents/000341.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "格式错误",
+        "reason": "平均价格“1963-35元/头”数字格式异常，连字符位置疑似应为小数点。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 463,
+            "end": 519,
+            "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 463,
+            "end": 519,
+            "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "c95d4f7ee80254ab93af621c",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000341:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 490,
+            "original_start": 469,
+            "original_text": "对外出售生猪平均价格为1963-35元/头",
+            "start": 469,
+            "text": "对外出售生猪平均价格为1963-35元/头"
+          }
+        ],
+        "type": "格式错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": true
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "C039",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "目标FN为全球CAGR金标[898,951)：331.6至706.3亿美元，2021-2024三年，报告38.66%；同文另一个中国CAGR金标是gold1。",
+  "observed": "raw_candidates[2]将全球与中国两个计算问题放在一个候选，理由同时给全球约28.6%、中国约31.6%；最终[898,1002)覆盖两个金标且类型计算错误。one-to-one匹配把此候选分给gold1，gold2全球CAGR仍FN。",
+  "evidence": [
+    {
+      "source": "documents/000522.json#/gold/errors/2",
+      "fact": "目标全球CAGR金标[898,951)。"
+    },
+    {
+      "source": "documents/000522.json#/gold/errors/1",
+      "fact": "中国CAGR金标[951,992)，是另一条独立错误。"
+    },
+    {
+      "source": "documents/000522.json#/responses/0/content",
+      "fact": "raw_candidates[2]同一理由含两个CAGR计算，不是只发现中国。"
+    },
+    {
+      "source": "documents/000522.json#/all_hints/2",
+      "fact": "单个候选[898,1002)同类且同时包含两个金标。"
+    },
+    {
+      "source": "documents/000522.json#/matched_pairs",
+      "fact": "[2,1]表示此候选已经分配给中国金标，一对一不能再给全球。"
+    },
+    {
+      "source": "requests/000522.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1063字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不能解释为模型没计算全球CAGR：raw已有全球结果。",
+    "不是引用范围不足或类型不同；两条件均满足。",
+    "不能把一个候选直接重复计为两个TP而不明确错误粒度规则。"
+  ],
+  "conclusion": "可核实为候选错误粒度与一对一评分失配。独立计算全球CAGR=(706.3/331.6)^(1/3)-1=28.6643493%，中国=31.5755148%，核心算式已被模型发现；但raw约28.6也较粗，应按标准精度复算。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "两个独立市场的错算应否强制输出两条；候选含两个结论是否符合业务交付粒度，需人工约定。",
+    "目前一例不能外推大量计算FN均为合并问题。"
+  ],
+  "minimal_validation": {
+    "change": "离线仅将此候选拆成全球和中国两条，各自保留原文、算式和理由并重放评分；主结果不更改。",
+    "control": "其他候选、金标、匹配算法完全固定。",
+    "success_criterion": "拆分后两条分别匹配，证明这条全球FN由一对一粒度产生；额外计算值需保持正确。",
+    "regression_check": "测试一个错误需要多个证据跨度的场景，避免机械按span拆成重复告警。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "已识别独立错误被合并的损失数",
+    "definition": "人工确认raw一个候选包含多项独立错误，但一对一评分只能匹配其中一项的未匹配金标数。",
+    "why_this_case": "本例提示中间指标应区分发现的事实问题数量与输出候选数量。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

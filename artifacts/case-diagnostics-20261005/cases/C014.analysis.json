@@ -1,0 +1,79 @@
+{
+  "case_id": "C014",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应对“将在129年抵达火星”中的时间表达作出有证据的解释，再按时间或单位异常分类。",
+  "observed": "预测695:715准确锚定，覆盖时间信息非法gold；raw把“在129年”解释为旅程长达129年，判数值单位错误。原文是到达年份句式，模型理由的时长解释未由字面证据确定。类型不一致导致严格FP。",
+  "evidence": [
+    {
+      "source": "documents/000706.json#/input/content",
+      "fact": "本例文档输入共2064字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=313d0352026b9004fa61beb4ebdf5979f3461ede3e0df2d3d636c3f033504f82。"
+    },
+    {
+      "source": "requests/000706.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=53c76461ae97a8b98737d8501599ae84c604f655185412e29400d9f04d1bf541，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000706.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=2064，total_chars=2064，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000706.json#/gold/errors/3",
+      "fact": "gold[3]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000706:error:0004\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":715,\"original_start\":695,\"original_text\":\"按照轨道周期计算，将在129年抵达火星。\",\"start\":695,\"text\":\"按照轨道周期计算，将在129年抵达火星。\"}],\"type\":\"时间信息非法\"}"
+    },
+    {
+      "source": "documents/000706.json#/report/raw_candidates/4",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"按照轨道周期计算，将在129年抵达火星。\"}],\"reason\":\"火星旅行抵达时间不可能长达129年，单位“年”量纲明显异常。\"}"
+    },
+    {
+      "source": "documents/000706.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000706.json#/all_hints/4",
+      "fact": "最终评分提示[4]：{\"error_type\":\"数值单位错误\",\"reason\":\"火星旅行抵达时间不可能长达129年，单位“年”量纲明显异常。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":695,\"end\":715,\"text\":\"按照轨道周期计算，将在129年抵达火星。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"按照轨道周期计算，将在129年抵达火星。\"}],\"spans\":[{\"start\":695,\"end\":715,\"text\":\"按照轨道周期计算，将在129年抵达火星。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"3c8cf47110ed16feb3bab830\",\"review_priority\":\"high\"}"
+    },
+    {
+      "source": "documents/000706.json#/input/content",
+      "fact": "原文“按照轨道周期计算，将在129年抵达火星。”用“在…年”表示到达时间；前文另有发射年份与“明年年底”的时点描述。不能直接改写成耗时129年。"
+    },
+    {
+      "source": "documents/000706.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[1,0],[2,1],[0,2]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":4,\"gold_index\":3,\"prediction_type\":\"数值单位错误\",\"gold_type\":\"时间信息非法\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "引文和范围无丢失，本条不靠OCR修复解决。",
+    "无需先引入航天知识才能发现时间表达异常，但单凭语感也不能确定应改成哪一年。"
+  ],
+  "conclusion": "本例同时存在可证实的分类失配和待人工裁定的年份/时长语义读法；raw理由较gold任务把年份误读为持续时间的可能性高，但不能替人工确定正确日期。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "“129年”正确值及其来源未知。",
+    "人工是否接受时间信息非法为唯一主类尚待签核。"
+  ],
+  "minimal_validation": {
+    "change": "先让人审在不看候选标签时标注该表达的语义槽位（到达年份/持续时长/无法确定），再验证相应类型规则。",
+    "control": "比较“在某年抵达”和“耗时若干年抵达”两个明确句式，不提供正确年份提示。",
+    "success_criterion": "槽位解释得到人工一致裁定，模型理由和标签均与裁定相符，原文锚点保留。",
+    "regression_check": "保证真正的持续时间单位错误不会被一律转成非法年份。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "时间表达槽位判定一致率",
+    "definition": "分母为人工标注可确定槽位的年份/持续时间候选；分子为模型理由采用相同槽位的候选；再分层计类型准确率。",
+    "why_this_case": "此例先误读表达角色，再发生类型失配，仅看标签混淆会漏掉理由问题。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

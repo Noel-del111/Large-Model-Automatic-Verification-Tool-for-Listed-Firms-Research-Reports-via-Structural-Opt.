@@ -1,0 +1,154 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000360",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/6b1553121a4808c9485b4ae4.json",
+  "all_hints_index": 4,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "模糊语言",
+    "reason": "“提高约5%”可解释为相对提高5%或提高5个百分点，关键含义不明确。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 913,
+        "end": 949,
+        "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 913,
+        "end": 949,
+        "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "4d35ec0b66bf9f7f41706b38",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C049",
+  "error_type": "模糊语言",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000360.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 4,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "模糊语言",
+        "reason": "“提高约5%”可解释为相对提高5%或提高5个百分点，关键含义不明确。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 913,
+            "end": 949,
+            "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 913,
+            "end": 949,
+            "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "4d35ec0b66bf9f7f41706b38",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 2,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000360:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 981,
+            "original_start": 913,
+            "original_text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。产品结构持续向低端化、高附加值方向优化，促进公司利润率水平提升。",
+            "start": 913,
+            "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。产品结构持续向低端化、高附加值方向优化，促进公司利润率水平提升。"
+          }
+        ],
+        "type": "语义逻辑矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 4,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

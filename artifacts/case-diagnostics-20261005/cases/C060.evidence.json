@@ -1,0 +1,188 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000343",
+  "result": "TP",
+  "prediction_file": "run/predictions/hybrid/9d878ebb57cbb6935a07dcb1.json",
+  "all_hints_index": 2,
+  "gold_index": 2,
+  "prediction": {
+    "error_type": "术语误用",
+    "reason": "“融资法国Implanet”中“融资”指筹集资金，对外并购参股应用“收购/控股”等表述，术语使用不当。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 638,
+        "end": 706,
+        "text": "公司除了在传统的骨科植入耗材领域内加强研发创新外，积极拓宽JAZZ系列产品线，融资法国Implanet作为海外高端脊柱品牌的国际化中心；"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "公司除了在传统的骨科植入耗材领域内加强研发创新外，积极拓宽JAZZ系列产品线，融资法国Implanet作为海外高端脊柱品牌的国际化中心；"
+      }
+    ],
+    "spans": [
+      {
+        "start": 638,
+        "end": 706,
+        "text": "公司除了在传统的骨科植入耗材领域内加强研发创新外，积极拓宽JAZZ系列产品线，融资法国Implanet作为海外高端脊柱品牌的国际化中心；"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "6fbd625402390e8637dc9efe",
+    "review_priority": "low"
+  },
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000343:error:0003",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 705,
+        "original_start": 677,
+        "original_text": "融资法国Implanet作为海外高端脊柱品牌的国际化中心",
+        "start": 677,
+        "text": "融资法国Implanet作为海外高端脊柱品牌的国际化中心"
+      }
+    ],
+    "type": "术语误用"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C060",
+  "error_type": "术语误用",
+  "cohort": "control",
+  "document_ref": "documents/000343.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "术语误用",
+        "reason": "“融资法国Implanet”中“融资”指筹集资金，对外并购参股应用“收购/控股”等表述，术语使用不当。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 638,
+            "end": 706,
+            "text": "公司除了在传统的骨科植入耗材领域内加强研发创新外，积极拓宽JAZZ系列产品线，融资法国Implanet作为海外高端脊柱品牌的国际化中心；"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "公司除了在传统的骨科植入耗材领域内加强研发创新外，积极拓宽JAZZ系列产品线，融资法国Implanet作为海外高端脊柱品牌的国际化中心；"
+          }
+        ],
+        "spans": [
+          {
+            "start": 638,
+            "end": 706,
+            "text": "公司除了在传统的骨科植入耗材领域内加强研发创新外，积极拓宽JAZZ系列产品线，融资法国Implanet作为海外高端脊柱品牌的国际化中心；"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "6fbd625402390e8637dc9efe",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000343:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 705,
+            "original_start": 677,
+            "original_text": "融资法国Implanet作为海外高端脊柱品牌的国际化中心",
+            "start": 677,
+            "text": "融资法国Implanet作为海外高端脊柱品牌的国际化中心"
+          }
+        ],
+        "type": "术语误用"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 2,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": true
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

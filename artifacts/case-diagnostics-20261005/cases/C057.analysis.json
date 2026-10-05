@@ -1,0 +1,50 @@
+{
+  "case_id": "C057",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "“馏分油库存较前一周减少桶”有变化方向和单位，却没有变化数值，应指出数值缺失。",
+  "observed": "原始回复start=end=0但原句完全正确，宿主唯一原句定位修复为[776,800)，与金标一致；最终needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000305.json#/input/content",
+      "fact": "“馏分油库存较前一周减少桶”有变化方向和单位，却没有变化数值，应指出数值缺失。"
+    },
+    {
+      "source": "documents/000305.json#/all_hints/2",
+      "fact": "原始回复start=end=0但原句完全正确，宿主唯一原句定位修复为[776,800)，与金标一致；最终needs_review。"
+    },
+    {
+      "source": "cases/C057.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000305.json#/report/raw_candidates/2",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "该例是候选生成、引用修复、检测评分全部成功，而尚无自动确认。不能通过要求模型精确数汉字来替代已有有效定位机制。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "缺失数值的正确值无法从此文确定；承认缺失不等于允许自动补数。"
+  ],
+  "minimal_validation": {
+    "change": "在不改变请求的条件下，用固定“变化动词+空数值+单位”的验证器回放此候选。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；比较“减少桶装产品”等非数值表达与正常“减少0桶”，检查空值解析和语义边界。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "比较“减少桶装产品”等非数值表达与正常“减少0桶”，检查空值解析和语义边界。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "显式数值空槽检测覆盖率",
+    "definition": "被正确识别的人工标注显式数值空槽数 / 所有显式数值空槽数；原始offset错误率单列。",
+    "why_this_case": "该例是候选生成、引用修复、检测评分全部成功，而尚无自动确认。不能通过要求模型精确数汉字来替代已有有效定位机制。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}
