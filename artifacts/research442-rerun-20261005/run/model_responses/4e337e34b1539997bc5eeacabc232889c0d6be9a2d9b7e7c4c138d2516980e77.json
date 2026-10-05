@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"22025年5月中旬，总日均发电量同比增速+3.32%，其中火电日均发电量同比增速-0.27%，降幅环比大幅扩大，后期有望实现2025年2月下旬以来首次同比转正，而水电同比增速-14.37%，后续虽进入来水旺季，但考虑去年同期基数较高，增速或持续为负。\"}], \"reason\": \"年份“22025年”不成立，应为2025年，日期本身非法。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。\"}], \"reason\": \"“2025年13月”中13月不是合法月份，时间表述不成立。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"4）煤电一体成长型标的，建议关注新集能源。5）煤电一体成长型标的，建议关注新集能源。\"}], \"reason\": \"投资建议第4条和第5条内容完全重复，属于不必要的冗余表述。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。\"}], \"reason\": \"煤炭进口量通常以万吨计量，743万公斤仅为0.743万吨，单位量纲与全国进口规模明显不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:13:16.222683+00:00",
+    "request_sha256": "2e2b13a28b553c9945394b5c710f9ec5c2b024d8d75f221b8ed6d5113555f2ef",
+    "input_token_estimate": 15471,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277615",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "63b3c076c77f4fbe98e71a61ce033206",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3644,
+    "output_tokens": 5534,
+    "usage_source": "provider",
+    "duration_seconds": 23.343166,
+    "cost_cny": "0.02578"
+  },
+  "cache_request": {
+    "key": "4e337e34b1539997bc5eeacabc232889c0d6be9a2d9b7e7c4c138d2516980e77",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2e2b13a28b553c9945394b5c710f9ec5c2b024d8d75f221b8ed6d5113555f2ef"
+  }
+}

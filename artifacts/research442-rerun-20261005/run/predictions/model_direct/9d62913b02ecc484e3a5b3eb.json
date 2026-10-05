@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000548",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“上涨个股数量”后缺少具体家数，仅有单位“家”，数值信息缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 354,
+          "end": 372,
+          "text": "本周上涨个股数量家，下跌个股102家"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周上涨个股数量家，下跌个股102家"
+        }
+      ],
+      "spans": [
+        {
+          "start": 354,
+          "end": 372,
+          "text": "本周上涨个股数量家，下跌个股102家"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "926ac6feb3efc18eebd21155",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "2024年中国药企License-out总交易金额通常以亿美元计，519美元缺少“亿”字，单位量级错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 645,
+          "end": 656,
+          "text": "总交易金额达519美元"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "总交易金额达519美元"
+        }
+      ],
+      "spans": [
+        {
+          "start": 645,
+          "end": 656,
+          "text": "总交易金额达519美元"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b2637ffb8f102fae3ade632a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "药品数量“704a款”中混入字母a，不符合数字格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 837,
+          "end": 848,
+          "text": "原研药品共有704a款"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "原研药品共有704a款"
+        }
+      ],
+      "spans": [
+        {
+          "start": 837,
+          "end": 848,
+          "text": "原研药品共有704a款"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4e419c264258ee080e64ab36",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1584
+        ]
+      ],
+      "estimated_input_tokens": 6180,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:13:26.035241+00:00",
+        "request_sha256": "a1c092c201d4774a96c1513ba3f70e2c70ca5eb35e1016c116421a59d2695a82",
+        "input_token_estimate": 17163,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279307",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "78b061ef80974ac6aec30762b7408775",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4043,
+        "output_tokens": 3542,
+        "usage_source": "provider",
+        "duration_seconds": 15.704404,
+        "cost_cny": "0.018211"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "本周上涨个股数量家，下跌个股102家"
+          }
+        ],
+        "reason": "“上涨个股数量”后缺少具体家数，仅有单位“家”，数值信息缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "总交易金额达519美元"
+          }
+        ],
+        "reason": "2024年中国药企License-out总交易金额通常以亿美元计，519美元缺少“亿”字，单位量级错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "原研药品共有704a款"
+          }
+        ],
+        "reason": "药品数量“704a款”中混入字母a，不符合数字格式。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1584,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1584,
+    "processed_ranges": [
+      [
+        0,
+        1584
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 15.728362,
+  "source_content_sha256": "550d8f898a904f3a0a20b6d3ce277711982042f6fb4d41633a2d3104a6b045f8"
+}

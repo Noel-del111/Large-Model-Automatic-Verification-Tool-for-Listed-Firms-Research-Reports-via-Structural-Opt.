@@ -1,0 +1,258 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000648",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一对象同一期间，前文称同比锐减0.04%，后文称同比增长0.04%，数值矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 137,
+          "end": 230,
+          "text": "央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比锐减0.04%，增速比2024年年末高0.2个百分点，一季度增加6197亿元。"
+        },
+        {
+          "kind": "source_text",
+          "start": 532,
+          "end": 624,
+          "text": "央行：央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比增长0.04%，增速比上年末高0.2个百分点，一季度增加6197亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比锐减0.04%，增速比2024年年末高0.2个百分点，一季度增加6197亿元。"
+        },
+        {
+          "text": "央行：央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比增长0.04%，增速比上年末高0.2个百分点，一季度增加6197亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 137,
+          "end": 230,
+          "text": "央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比锐减0.04%，增速比2024年年末高0.2个百分点，一季度增加6197亿元。"
+        },
+        {
+          "start": 532,
+          "end": 624,
+          "text": "央行：央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比增长0.04%，增速比上年末高0.2个百分点，一季度增加6197亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e0881e5db22dfe5969d39821",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "成交楼面价单位写成“元/mm”，应为元/平方米，后文同一数据使用“元/㎡”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 230,
+          "end": 325,
+          "text": "杭州迎来1宗拱墅区康桥单元住宅用地出让，用地性质为住宅用地，土地出让面积26351m2，规划建筑面积57972.2m2，总价13.74亿元，成交楼面价23707元/mm，溢价率40.33%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "杭州迎来1宗拱墅区康桥单元住宅用地出让，用地性质为住宅用地，土地出让面积26351m2，规划建筑面积57972.2m2，总价13.74亿元，成交楼面价23707元/mm，溢价率40.33%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 230,
+          "end": 325,
+          "text": "杭州迎来1宗拱墅区康桥单元住宅用地出让，用地性质为住宅用地，土地出让面积26351m2，规划建筑面积57972.2m2，总价13.74亿元，成交楼面价23707元/mm，溢价率40.33%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ced3bfd7fd56725232d9ab61",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一信息“杭州土拍市场火热”连续重复两次，没有新增内容。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 775,
+          "end": 793,
+          "text": "杭州土拍市场火热。杭州土拍市场火热。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "杭州土拍市场火热。杭州土拍市场火热。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 775,
+          "end": 793,
+          "text": "杭州土拍市场火热。杭州土拍市场火热。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9f151cb500d94247d7ecab6b",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1289
+        ]
+      ],
+      "estimated_input_tokens": 5828,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:33:19.551561+00:00",
+        "request_sha256": "5d68db03ea10ef902bd83de489be3502eafa5dcb0f69b2ee50165d313b206990",
+        "input_token_estimate": 16222,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278366",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "8aff6c790704416398a5d143d388baf9",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3771,
+        "output_tokens": 8274,
+        "usage_source": "provider",
+        "duration_seconds": 33.739565,
+        "cost_cny": "0.036867"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比锐减0.04%，增速比2024年年末高0.2个百分点，一季度增加6197亿元。"
+          },
+          {
+            "text": "央行：央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比增长0.04%，增速比上年末高0.2个百分点，一季度增加6197亿元。"
+          }
+        ],
+        "reason": "同一对象同一期间，前文称同比锐减0.04%，后文称同比增长0.04%，数值矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "杭州迎来1宗拱墅区康桥单元住宅用地出让，用地性质为住宅用地，土地出让面积26351m2，规划建筑面积57972.2m2，总价13.74亿元，成交楼面价23707元/mm，溢价率40.33%。"
+          }
+        ],
+        "reason": "成交楼面价单位写成“元/mm”，应为元/平方米，后文同一数据使用“元/㎡”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "杭州土拍市场火热。杭州土拍市场火热。"
+          }
+        ],
+        "reason": "同一信息“杭州土拍市场火热”连续重复两次，没有新增内容。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1289,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1289,
+    "processed_ranges": [
+      [
+        0,
+        1289
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 33.767357,
+  "source_content_sha256": "3f21b444daf3fe00c6669f0a93820dfad0cc7e2d79f7926f93fdd9a559bb64ab"
+}

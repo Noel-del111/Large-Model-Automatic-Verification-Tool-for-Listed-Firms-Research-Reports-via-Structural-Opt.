@@ -1,0 +1,836 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000329",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "同比下滑20.11%后出现两个百分号“%%”，百分比格式不合法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 45,
+          "end": 113,
+          "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；，同比下滑29.15%；扣非净利润1.50亿元，同比下滑20.05%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；，同比下滑29.15%；扣非净利润1.50亿元，同比下滑20.05%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 45,
+          "end": 113,
+          "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；，同比下滑29.15%；扣非净利润1.50亿元，同比下滑20.05%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2bb815c34000cdd34bb5f008",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "“同比下滑29.15%”前缺少归母净利润金额，事件描述中该必备要素缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 45,
+          "end": 113,
+          "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；，同比下滑29.15%；扣非净利润1.50亿元，同比下滑20.05%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；，同比下滑29.15%；扣非净利润1.50亿元，同比下滑20.05%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 45,
+          "end": 113,
+          "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；，同比下滑29.15%；扣非净利润1.50亿元，同比下滑20.05%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a0bba24194151cb997025918",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "营业收入单位写成“亿两”，人民币金额单位应为“亿元”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 155,
+          "end": 231,
+          "text": "2025年Q1实现营业收入3.60亿两，同比增长7.98%；归母净利润0.38亿元，同比增长25.94%；扣非净利润0.32亿元，同比增长11.28%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年Q1实现营业收入3.60亿两，同比增长7.98%；归母净利润0.38亿元，同比增长25.94%；扣非净利润0.32亿元，同比增长11.28%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 155,
+          "end": 231,
+          "text": "2025年Q1实现营业收入3.60亿两，同比增长7.98%；归母净利润0.38亿元，同比增长25.94%；扣非净利润0.32亿元，同比增长11.28%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9e96d938e72f5b58f61811ea",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "一年只有四个季度，“五季度末”不是合法的时间表述。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 748,
+          "end": 777,
+          "text": "制剂目前正在进行准入、入院相关工作，预计五季度末上市销售。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "制剂目前正在进行准入、入院相关工作，预计五季度末上市销售。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 748,
+          "end": 777,
+          "text": "制剂目前正在进行准入、入院相关工作，预计五季度末上市销售。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8bf1a7e38024bbbe7fdf7671",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“对应人群数量约”后没有给出具体数值，数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 777,
+          "end": 816,
+          "text": "目前我国儿童和青少年ADHD患病率约6.4%，对应人群数量约，就诊率约10%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前我国儿童和青少年ADHD患病率约6.4%，对应人群数量约，就诊率约10%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 777,
+          "end": 816,
+          "text": "目前我国儿童和青少年ADHD患病率约6.4%，对应人群数量约，就诊率约10%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c9819774019f7972d5912ef8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "预测期间写为“2027~2025年”，起始年份晚于结束年份，时间关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1388,
+          "end": 1507,
+          "text": "预计公司2027~2025年公司营收分别为19.19亿元、24.04亿元、29.88亿元，归母净利润分别为2.12亿元、2.81亿元、3.70亿元，EPS分别为1.11、1.47、1.94元，对应PE分别为21.7、16.4、12.4倍。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司2027~2025年公司营收分别为19.19亿元、24.04亿元、29.88亿元，归母净利润分别为2.12亿元、2.81亿元、3.70亿元，EPS分别为1.11、1.47、1.94元，对应PE分别为21.7、16.4、12.4倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1388,
+          "end": 1507,
+          "text": "预计公司2027~2025年公司营收分别为19.19亿元、24.04亿元、29.88亿元，归母净利润分别为2.12亿元、2.81亿元、3.70亿元，EPS分别为1.11、1.47、1.94元，对应PE分别为21.7、16.4、12.4倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "14c909015706cad70c8f188a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一段中两次出现“国内为数不多的第一类精神药品和麻醉药品定点生产企业”，信息重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 872,
+          "end": 921,
+          "text": "以渗透泵控释技术为核心，公司产业化优势明显，是国内为数不多的第一类精神药品和麻醉药品定点生产企业。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1194,
+          "end": 1246,
+          "text": "公司是国内为数不多的第一类精神药品和麻醉药品定点生产企业，另有部分精麻药品立项获批，并开展前期研究工作。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "以渗透泵控释技术为核心，公司产业化优势明显，是国内为数不多的第一类精神药品和麻醉药品定点生产企业。",
+          "start": 1036,
+          "end": 1090
+        },
+        {
+          "text": "公司是国内为数不多的第一类精神药品和麻醉药品定点生产企业，另有部分精麻药品立项获批，并开展前期研究工作。",
+          "start": 1258,
+          "end": 1301
+        }
+      ],
+      "spans": [
+        {
+          "start": 872,
+          "end": 921,
+          "text": "以渗透泵控释技术为核心，公司产业化优势明显，是国内为数不多的第一类精神药品和麻醉药品定点生产企业。"
+        },
+        {
+          "start": 1194,
+          "end": 1246,
+          "text": "公司是国内为数不多的第一类精神药品和麻醉药品定点生产企业，另有部分精麻药品立项获批，并开展前期研究工作。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0439d51daf32796f06bb8fb5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "药品制剂应称缓释片/控释片，写成“三层芯片”属于术语误用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 0,
+          "end": 23,
+          "text": "集采出清，哌甲酯三层芯片获批，业绩有望迎来反转"
+        },
+        {
+          "kind": "source_text",
+          "start": 696,
+          "end": 722,
+          "text": "独家首仿精1类药物哌甲酯三层芯片获批，市场空间巨大。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "集采出清，哌甲酯三层芯片获批，业绩有望迎来反转"
+        },
+        {
+          "text": "独家首仿精1类药物哌甲酯三层芯片获批，市场空间巨大。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 0,
+          "end": 23,
+          "text": "集采出清，哌甲酯三层芯片获批，业绩有望迎来反转"
+        },
+        {
+          "start": 696,
+          "end": 722,
+          "text": "独家首仿精1类药物哌甲酯三层芯片获批，市场空间巨大。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "eb2937e75c42065a33c6fe8e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1618
+        ]
+      ],
+      "estimated_input_tokens": 6168,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:04:52.079886+00:00",
+        "request_sha256": "5f6ab2a0eac17833fa47c09a97b0abb27e27d4581d60a60201e2428f2e7831aa",
+        "input_token_estimate": 17157,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279301",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "cabbdc916f374f528632ef8e63c40256",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4072,
+        "output_tokens": 9893,
+        "usage_source": "provider",
+        "duration_seconds": 38.128095,
+        "cost_cny": "0.043644"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；，同比下滑29.15%；扣非净利润1.50亿元，同比下滑20.05%。"
+          }
+        ],
+        "reason": "同比下滑20.11%后出现两个百分号“%%”，百分比格式不合法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；，同比下滑29.15%；扣非净利润1.50亿元，同比下滑20.05%。"
+          }
+        ],
+        "reason": "“同比下滑29.15%”前缺少归母净利润金额，事件描述中该必备要素缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2025年Q1实现营业收入3.60亿两，同比增长7.98%；归母净利润0.38亿元，同比增长25.94%；扣非净利润0.32亿元，同比增长11.28%。"
+          }
+        ],
+        "reason": "营业收入单位写成“亿两”，人民币金额单位应为“亿元”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "制剂目前正在进行准入、入院相关工作，预计五季度末上市销售。"
+          }
+        ],
+        "reason": "一年只有四个季度，“五季度末”不是合法的时间表述。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "目前我国儿童和青少年ADHD患病率约6.4%，对应人群数量约，就诊率约10%。"
+          }
+        ],
+        "reason": "“对应人群数量约”后没有给出具体数值，数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "预计公司2027~2025年公司营收分别为19.19亿元、24.04亿元、29.88亿元，归母净利润分别为2.12亿元、2.81亿元、3.70亿元，EPS分别为1.11、1.47、1.94元，对应PE分别为21.7、16.4、12.4倍。"
+          }
+        ],
+        "reason": "预测期间写为“2027~2025年”，起始年份晚于结束年份，时间关系矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "以渗透泵控释技术为核心，公司产业化优势明显，是国内为数不多的第一类精神药品和麻醉药品定点生产企业。",
+            "start": 1036,
+            "end": 1090
+          },
+          {
+            "text": "公司是国内为数不多的第一类精神药品和麻醉药品定点生产企业，另有部分精麻药品立项获批，并开展前期研究工作。",
+            "start": 1258,
+            "end": 1301
+          }
+        ],
+        "reason": "同一段中两次出现“国内为数不多的第一类精神药品和麻醉药品定点生产企业”，信息重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "集采出清，哌甲酯三层芯片获批，业绩有望迎来反转"
+          },
+          {
+            "text": "独家首仿精1类药物哌甲酯三层芯片获批，市场空间巨大。"
+          }
+        ],
+        "reason": "药品制剂应称缓释片/控释片，写成“三层芯片”属于术语误用。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 45,
+      "end": 78,
+      "text": "公司2024年实现营业收入15.18亿元，同比下滑20.11%%；",
+      "quantities": [
+        {
+          "value": "15.18",
+          "unit": "亿元",
+          "start": 58,
+          "end": 65
+        },
+        {
+          "value": "20.11",
+          "unit": "%",
+          "start": 70,
+          "end": 76
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 90,
+      "end": 113,
+      "text": "扣非净利润1.50亿元，同比下滑20.05%。",
+      "quantities": [
+        {
+          "value": "1.50",
+          "unit": "亿元",
+          "start": 95,
+          "end": 101
+        },
+        {
+          "value": "20.05",
+          "unit": "%",
+          "start": 106,
+          "end": 112
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 113,
+      "end": 155,
+      "text": "毛利率69.16%，同比增长17.68个百分点，扣非净利率9.87%，同比基本持平。",
+      "quantities": [
+        {
+          "value": "69.16",
+          "unit": "%",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "9.87",
+          "unit": "%",
+          "start": 142,
+          "end": 147
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 113,
+      "end": 155,
+      "text": "毛利率69.16%，同比增长17.68个百分点，扣非净利率9.87%，同比基本持平。",
+      "quantities": [
+        {
+          "value": "69.16",
+          "unit": "%",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "9.87",
+          "unit": "%",
+          "start": 142,
+          "end": 147
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 155,
+      "end": 185,
+      "text": "2025年Q1实现营业收入3.60亿两，同比增长7.98%；",
+      "quantities": [
+        {
+          "value": "7.98",
+          "unit": "%",
+          "start": 179,
+          "end": 184
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 185,
+      "end": 208,
+      "text": "归母净利润0.38亿元，同比增长25.94%；",
+      "quantities": [
+        {
+          "value": "0.38",
+          "unit": "亿元",
+          "start": 190,
+          "end": 196
+        },
+        {
+          "value": "25.94",
+          "unit": "%",
+          "start": 201,
+          "end": 207
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 208,
+      "end": 231,
+      "text": "扣非净利润0.32亿元，同比增长11.28%。",
+      "quantities": [
+        {
+          "value": "0.32",
+          "unit": "亿元",
+          "start": 213,
+          "end": 219
+        },
+        {
+          "value": "11.28",
+          "unit": "%",
+          "start": 224,
+          "end": 230
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 390,
+      "end": 430,
+      "text": "原商业业务子公司立方药业自2023年5月起出表，导致24年营收下降20.11%。",
+      "quantities": [
+        {
+          "value": "20.11",
+          "unit": "%",
+          "start": 423,
+          "end": 429
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": [
+        "原商业业务子公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 430,
+      "end": 459,
+      "text": "工业业务实现营业收入13.77亿元，同比增长18.92%。",
+      "quantities": [
+        {
+          "value": "13.77",
+          "unit": "亿元",
+          "start": 440,
+          "end": 447
+        },
+        {
+          "value": "18.92",
+          "unit": "%",
+          "start": 452,
+          "end": 458
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1388,
+      "end": 1507,
+      "text": "预计公司2027~2025年公司营收分别为19.19亿元、24.04亿元、29.88亿元，归母净利润分别为2.12亿元、2.81亿元、3.70亿元，EPS分别为1.11、1.47、1.94元，对应PE分别为21.7、16.4、12.4倍。",
+      "quantities": [
+        {
+          "value": "19.19",
+          "unit": "亿元",
+          "start": 1409,
+          "end": 1416
+        },
+        {
+          "value": "24.04",
+          "unit": "亿元",
+          "start": 1417,
+          "end": 1424
+        },
+        {
+          "value": "29.88",
+          "unit": "亿元",
+          "start": 1425,
+          "end": 1432
+        },
+        {
+          "value": "2.12",
+          "unit": "亿元",
+          "start": 1441,
+          "end": 1447
+        },
+        {
+          "value": "2.81",
+          "unit": "亿元",
+          "start": 1448,
+          "end": 1454
+        },
+        {
+          "value": "3.70",
+          "unit": "亿元",
+          "start": 1455,
+          "end": 1461
+        },
+        {
+          "value": "1.94",
+          "unit": "元",
+          "start": 1478,
+          "end": 1483
+        },
+        {
+          "value": "12.4",
+          "unit": "倍",
+          "start": 1501,
+          "end": 1506
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "预计公司",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1388,
+      "end": 1507,
+      "text": "预计公司2027~2025年公司营收分别为19.19亿元、24.04亿元、29.88亿元，归母净利润分别为2.12亿元、2.81亿元、3.70亿元，EPS分别为1.11、1.47、1.94元，对应PE分别为21.7、16.4、12.4倍。",
+      "quantities": [
+        {
+          "value": "19.19",
+          "unit": "亿元",
+          "start": 1409,
+          "end": 1416
+        },
+        {
+          "value": "24.04",
+          "unit": "亿元",
+          "start": 1417,
+          "end": 1424
+        },
+        {
+          "value": "29.88",
+          "unit": "亿元",
+          "start": 1425,
+          "end": 1432
+        },
+        {
+          "value": "2.12",
+          "unit": "亿元",
+          "start": 1441,
+          "end": 1447
+        },
+        {
+          "value": "2.81",
+          "unit": "亿元",
+          "start": 1448,
+          "end": 1454
+        },
+        {
+          "value": "3.70",
+          "unit": "亿元",
+          "start": 1455,
+          "end": 1461
+        },
+        {
+          "value": "1.94",
+          "unit": "元",
+          "start": 1478,
+          "end": 1483
+        },
+        {
+          "value": "12.4",
+          "unit": "倍",
+          "start": 1501,
+          "end": 1506
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "预计公司",
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1618,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1618,
+    "processed_ranges": [
+      [
+        0,
+        1618
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 38.159443,
+  "source_content_sha256": "9f41a2016514c02de40f8dfddb83861a38bd4031bfccbca1c397f5a93bad1810"
+}

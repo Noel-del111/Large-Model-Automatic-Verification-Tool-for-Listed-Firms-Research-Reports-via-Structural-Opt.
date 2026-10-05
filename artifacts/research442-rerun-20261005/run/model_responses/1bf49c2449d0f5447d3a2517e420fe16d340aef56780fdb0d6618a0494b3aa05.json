@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"2024年实现营收56.77亿元，同比-11.88%；归母净利润1.03亿元，同比+122.17%；\"},{\"text\":\"公司归母净利润扭亏为盈，盈利能力逐渐改善。\"}],\"reason\":\"归母净利润同比增长122.17%表明上年同期为盈利，与“扭亏为盈”矛盾。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。\"}],\"reason\":\"验证项目总数为6个，API项目却为8个，部分超过整体。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2024年公司依托海外基地将产品推入商业化生产阶段，同时马来西亚基地正在按计划建设。同时马来西亚基地正在按计划建设。\"}],\"reason\":\"同一信息“马来西亚基地正在按计划建设”连续重复，无新增内容。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:03:37.983880+00:00",
+    "request_sha256": "2c9db2e52e259fd2b6e532d4658f5a128f1c47aef45cdc964a80f7354f91cea4",
+    "input_token_estimate": 17391,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279535",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "cea99cf014eb485484b6f62a52e9c957",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4181,
+    "output_tokens": 11521,
+    "usage_source": "provider",
+    "duration_seconds": 44.87616,
+    "cost_cny": "0.050265"
+  },
+  "cache_request": {
+    "key": "1bf49c2449d0f5447d3a2517e420fe16d340aef56780fdb0d6618a0494b3aa05",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2c9db2e52e259fd2b6e532d4658f5a128f1c47aef45cdc964a80f7354f91cea4"
+  }
+}

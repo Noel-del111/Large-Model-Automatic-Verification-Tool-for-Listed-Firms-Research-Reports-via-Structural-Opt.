@@ -1,0 +1,2 @@
+# Evidence hashes must survive Git checkout on Windows and Unix unchanged.
+artifacts/research442-rerun-20261005/** -text

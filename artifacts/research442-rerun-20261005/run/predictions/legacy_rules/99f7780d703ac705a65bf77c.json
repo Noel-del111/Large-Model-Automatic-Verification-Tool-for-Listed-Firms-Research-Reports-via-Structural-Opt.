@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000471",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "d46bdf563f9cd26ce83d5dd9",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 309,
+          "end": 350,
+          "text": "Prismark预计2028年至2024年全球PCB产值复合增速预计为5.40%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1160,
+    "total_chars": 1160,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001036,
+  "source_content_sha256": "a94609adb43cd922ad4b25b274fbcd11cd02cf0faea5fba539776e07d9f86a8c"
+}

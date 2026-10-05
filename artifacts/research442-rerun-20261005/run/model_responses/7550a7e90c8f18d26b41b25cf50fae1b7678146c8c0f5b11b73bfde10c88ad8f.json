@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"5月27日，九识智能发布A系列无人物流车平台，首款车型E6售价19800亿元。\"}],\"reason\":\"售价19800亿元数量级明显错误，应为元或万元等合理单位。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"224年我国快递业务量达到1745亿件、快递业务收入1.4万亿元，同比分别增长21%、13%，而快递人员的成本较高，配送安全性低，人员管理规范度低。\"}],\"reason\":\"年份“224年”不完整，结合上下文应为2024年，时间信息非法。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"2024年6月，十三部委联合发文支持新能源无人配送车规模化应用；交通运输部《》已完成征求意见工作，将加快出台。\"}],\"reason\":\"交通运输部《》中法规名称缺失，书名号内为空。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"推荐小鹏汽车-W、长安汽车、比亚迪、长城汽车、德赛西威、经纬恒润-W、均胜电子、华阳集团、沪光股份、美格智能、华测导航、阿尔特；受益标的：等。\"}],\"reason\":\"受益标的冒号后直接写“等”，缺少具体标的名称。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:14:09.624675+00:00",
+    "request_sha256": "3dad94ba3a8dd7c2999efb4acf7051104e68d71723384350f6b4f7df2db5b77c",
+    "input_token_estimate": 16148,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278292",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "42e66ddd88234cd9b66bc439a1475555",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3756,
+    "output_tokens": 7225,
+    "usage_source": "provider",
+    "duration_seconds": 30.213357,
+    "cost_cny": "0.032656"
+  },
+  "cache_request": {
+    "key": "7550a7e90c8f18d26b41b25cf50fae1b7678146c8c0f5b11b73bfde10c88ad8f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "3dad94ba3a8dd7c2999efb4acf7051104e68d71723384350f6b4f7df2db5b77c"
+  }
+}

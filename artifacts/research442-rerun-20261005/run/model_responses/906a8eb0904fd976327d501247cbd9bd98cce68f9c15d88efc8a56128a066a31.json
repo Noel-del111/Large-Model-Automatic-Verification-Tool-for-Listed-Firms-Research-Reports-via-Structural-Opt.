@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"2024年，公司整体门店达到5486家，其中24年公司自建门店314家，收购门店122家，因发展规划及经营策略调整关闭门店66家，净增门店家，门店数量稳定增长。\", \"start\": 448, \"end\": 534}], \"reason\": \"“净增门店家”前缺少应填的净增数量，明确数值位置为空。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"连锁率57.81%，较商务部提出的2025年70%的目标差距14.19%\", \"start\": 646, \"end\": 679}], \"reason\": \"70%减57.81%应为12.19个百分点，原文写14.19%不成立。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"药品零售百强企业销售额2423亿元，占全国零售市场总额的37.8%，较65%的目标差距37.20%\", \"start\": 682, \"end\": 727}], \"reason\": \"65%减37.8%应为27.20个百分点，原文写37.20%不成立。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"公司虽然短期受到医保调整及税费等问题的影响，但我们认为行业仍然存在集中度提高的空间，且公司门店数量依然稳定增长已构建的会员体系、线上业务具备一定优势，我们看好公司未来的发展情况，维持买入评级。\", \"start\": 1188, \"end\": 1273}], \"reason\": \"该段与开头第一段核心内容几乎逐字重复，属于不必要重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:50:15.937400+00:00",
+    "request_sha256": "c2f397843fd70836746427b21a52049f657a0536bf5d868ef8dab8453dfafc05",
+    "input_token_estimate": 16415,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278559",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "11d292369527449b8f1c506d4958fc5d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3854,
+    "output_tokens": 7504,
+    "usage_source": "provider",
+    "duration_seconds": 30.265945,
+    "cost_cny": "0.03387"
+  },
+  "cache_request": {
+    "key": "906a8eb0904fd976327d501247cbd9bd98cce68f9c15d88efc8a56128a066a31",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c2f397843fd70836746427b21a52049f657a0536bf5d868ef8dab8453dfafc05"
+  }
+}

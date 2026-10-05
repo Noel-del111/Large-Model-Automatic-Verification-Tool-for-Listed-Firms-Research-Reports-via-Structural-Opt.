@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"5月咖啡C期货下跌%，目前主要咖啡豆生产国巴西采收进展顺利，关注咖啡价格下跌带来的瑞幸下半年成本压力缓解可能。\"}], \"reason\": \"“下跌%”前缺少具体跌幅数值，关键百分比数值为空。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"地产交易：2025年5月，上海/北京/深圳/杭州/成都二手房成交分别为21400/14277/4830/6487/19215/20套；环比分别-8%/-8%/-18%/-18%/-20%；同比分别+14%/+5%/+9%/-9%/-1%。\"}], \"reason\": \"列示上海、北京、深圳、杭州、成都5个城市，却给出6个成交数值，城市数与成交数值数不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:52:42.307005+00:00",
+    "request_sha256": "ebcdf9b1cbf13d7679f0ff94eadc35280d11eb5eb6be6a50a06a282756df12bb",
+    "input_token_estimate": 16903,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279047",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "44d99685ec3749eb86b0d286676d54b1",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3927,
+    "output_tokens": 4999,
+    "usage_source": "provider",
+    "duration_seconds": 21.650027,
+    "cost_cny": "0.023923"
+  },
+  "cache_request": {
+    "key": "9c2f141951af074150703b3519cab7c1d509a3c092fab41a5548fa924e18e1de",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ebcdf9b1cbf13d7679f0ff94eadc35280d11eb5eb6be6a50a06a282756df12bb"
+  }
+}

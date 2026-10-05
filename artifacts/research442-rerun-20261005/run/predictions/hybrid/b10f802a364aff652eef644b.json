@@ -1,0 +1,285 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000286",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "4月只有30天，不存在4月31日。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 60,
+          "end": 123,
+          "text": "4月31日，中央政治局会议提出统筹研究消化存量房产和优化增量住房的政策措施，具备方向性意义，令人联想到2014年的“去库存”。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月31日，中央政治局会议提出统筹研究消化存量房产和优化增量住房的政策措施，具备方向性意义，令人联想到2014年的“去库存”。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 60,
+          "end": 123,
+          "text": "4月31日，中央政治局会议提出统筹研究消化存量房产和优化增量住房的政策措施，具备方向性意义，令人联想到2014年的“去库存”。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "969c786e5a8125d0b27ece24",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间起点5月5日晚于终点4月29日，起止倒置。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 383,
+          "end": 448,
+          "text": "2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 383,
+          "end": 448,
+          "text": "2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "491c8c311a17920381dc9f0b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "91+18+1=110只，1只持平占比约0.9%，非5%；且83%+16%+5%超过100%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 383,
+          "end": 448,
+          "text": "2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 383,
+          "end": 448,
+          "text": "2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4cbc21951e62ceab6b714f1b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "推荐个股列表中华润置地重复出现，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 333,
+          "end": 372,
+          "text": "个股端推荐贝壳W、华润置地、龙湖集团、滨江集团、华发股份、华润置地、保利发展。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "个股端推荐贝壳W、华润置地、龙湖集团、滨江集团、华发股份、华润置地、保利发展。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 333,
+          "end": 372,
+          "text": "个股端推荐贝壳W、华润置地、龙湖集团、滨江集团、华发股份、华润置地、保利发展。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "08cd122d602750c62b68c06e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1189
+        ]
+      ],
+      "estimated_input_tokens": 5743,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:41:19.956251+00:00",
+        "request_sha256": "b644117d743d7abd939f53b26b1a22ef40e44fb2f43beb2932684e7e9e8ad2c2",
+        "input_token_estimate": 16008,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278152",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ab62e71b2d514a648aa59f2c8fbe9e95",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3755,
+        "output_tokens": 4233,
+        "usage_source": "provider",
+        "duration_seconds": 16.670161,
+        "cost_cny": "0.020687",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "4月31日，中央政治局会议提出统筹研究消化存量房产和优化增量住房的政策措施，具备方向性意义，令人联想到2014年的“去库存”。"
+          }
+        ],
+        "reason": "4月只有30天，不存在4月31日。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。"
+          }
+        ],
+        "reason": "时间区间起点5月5日晚于终点4月29日，起止倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。"
+          }
+        ],
+        "reason": "91+18+1=110只，1只持平占比约0.9%，非5%；且83%+16%+5%超过100%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "个股端推荐贝壳W、华润置地、龙湖集团、滨江集团、华发股份、华润置地、保利发展。"
+          }
+        ],
+        "reason": "推荐个股列表中华润置地重复出现，无新增信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1189,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1189,
+    "processed_ranges": [
+      [
+        0,
+        1189
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1189,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001469,
+  "source_content_sha256": "1489588333b959fa401d55185e2821040886dada4ee9e73b795f87ea4019127b"
+}

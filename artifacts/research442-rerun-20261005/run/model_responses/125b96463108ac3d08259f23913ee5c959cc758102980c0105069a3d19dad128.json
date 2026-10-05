@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"慧图科技是公司四大业务子集团之一，自129年公司完成对慧图科技的收购后，慧图科技的营业收入和净利润持续增长。\"}],\"reason\":\"“129年”作为年份不成立，时间信息非法。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"2024年，我国水利建设投资创历史新高，实施水利工程项目4.7万个，完成水利建设投资1.4万亿元，同比下降12.8%。\"},{\"text\":\"2024年，我国水利建设投资创历史新高，实施水利工程项目46967个，完成水利建设投资13529亿元，同比增长12.8%，未来水利投资或将继续增长，行业发展向好。\"}],\"reason\":\"同一2024年水利建设投资同比变化，前文称下降12.8%，后文称增长12.8%，方向矛盾。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"我们给予公司2025年31倍PE，对应目标价为5.89亿分，首次覆盖，给予“买入”评级。\"}],\"reason\":\"目标价单位应为元，此处写成“亿分”，单位错误。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"预计公司2025-2027年归母净利润分别为1.6/2.2/2.7亿元，对应PE为25//16倍。\"}],\"reason\":\"2025-2027三年对应PE，仅见25和16两个数值，中间缺失一个。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:12:09.972907+00:00",
+    "request_sha256": "cb4bb1b76e1eec7a94d75e43c52fb59c7f4dca4ee2a6d6095820f41e9288e4f9",
+    "input_token_estimate": 15538,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277682",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "547800812ac7421f9cb7af0a48e277a7",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3619,
+    "output_tokens": 6981,
+    "usage_source": "provider",
+    "duration_seconds": 28.526481,
+    "cost_cny": "0.031543"
+  },
+  "cache_request": {
+    "key": "125b96463108ac3d08259f23913ee5c959cc758102980c0105069a3d19dad128",
+    "purpose": "text_review.detect",
+    "messages_sha256": "cb4bb1b76e1eec7a94d75e43c52fb59c7f4dca4ee2a6d6095820f41e9288e4f9"
+  }
+}

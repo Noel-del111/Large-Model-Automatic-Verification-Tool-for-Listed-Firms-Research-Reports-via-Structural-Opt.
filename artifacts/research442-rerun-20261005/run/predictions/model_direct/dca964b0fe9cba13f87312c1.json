@@ -1,0 +1,579 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000376",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "销售毛利率的具体数值为空，同比下滑的百分点也缺失，导致关键财务指标无法读取。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 108,
+          "end": 147,
+          "text": "全年销售毛利率为 %，下滑 pcts；净利率为25.9%，下滑1.1pcts。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "全年销售毛利率为 %，下滑 pcts；净利率为25.9%，下滑1.1pcts。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 108,
+          "end": 147,
+          "text": "全年销售毛利率为 %，下滑 pcts；净利率为25.9%，下滑1.1pcts。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1f0c105cc466dadcade89aae",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "预计年份写成“125年”，与上下文中的2024年、2025年明显不符，应为2025年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 874,
+          "end": 909,
+          "text": "公司预计125年至期光子实现营业收入1.5亿元左右，同比继续翻倍增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司预计125年至期光子实现营业收入1.5亿元左右，同比继续翻倍增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 874,
+          "end": 909,
+          "text": "公司预计125年至期光子实现营业收入1.5亿元左右，同比继续翻倍增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2d5b53ad782f1c7667452730",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "中科院物构所及公司主业为晶体、光学材料，并非高分子材料，使用“高分子材料”表述错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 712,
+          "end": 788,
+          "text": "公司凭借大股东中科院物构所深耕高分子材料多年积累的经验，沿着“材料—元件—组件—器件”的产业路径，不断培育业务新兴增长点，平滑了单一行业周期波动的风险。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司凭借大股东中科院物构所深耕高分子材料多年积累的经验，沿着“材料—元件—组件—器件”的产业路径，不断培育业务新兴增长点，平滑了单一行业周期波动的风险。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 712,
+          "end": 788,
+          "text": "公司凭借大股东中科院物构所深耕高分子材料多年积累的经验，沿着“材料—元件—组件—器件”的产业路径，不断培育业务新兴增长点，平滑了单一行业周期波动的风险。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "39cbd3e4faeaa6354d6b51aa",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1259
+        ]
+      ],
+      "estimated_input_tokens": 5762,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:07:28.655200+00:00",
+        "request_sha256": "de6771eb6b2a41232454a0f3be06c61300a6ab25e379bef8ccbea4b7c9a0690a",
+        "input_token_estimate": 16068,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278212",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "bc1b7817525e4e1cae9e095beb570424",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3823,
+        "output_tokens": 7442,
+        "usage_source": "provider",
+        "duration_seconds": 30.657203,
+        "cost_cny": "0.033591"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "全年销售毛利率为 %，下滑 pcts；净利率为25.9%，下滑1.1pcts。"
+          }
+        ],
+        "reason": "销售毛利率的具体数值为空，同比下滑的百分点也缺失，导致关键财务指标无法读取。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "公司预计125年至期光子实现营业收入1.5亿元左右，同比继续翻倍增长。"
+          }
+        ],
+        "reason": "预计年份写成“125年”，与上下文中的2024年、2025年明显不符，应为2025年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司凭借大股东中科院物构所深耕高分子材料多年积累的经验，沿着“材料—元件—组件—器件”的产业路径，不断培育业务新兴增长点，平滑了单一行业周期波动的风险。"
+          }
+        ],
+        "reason": "中科院物构所及公司主业为晶体、光学材料，并非高分子材料，使用“高分子材料”表述错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 59,
+      "end": 88,
+      "text": "2024年公司实现营业收入8.76亿元，同比+12.0%；",
+      "quantities": [
+        {
+          "value": "8.76",
+          "unit": "亿元",
+          "start": 72,
+          "end": 78
+        },
+        {
+          "value": "+12.0",
+          "unit": "%",
+          "start": 81,
+          "end": 87
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 88,
+      "end": 108,
+      "text": "归母净利润2.19亿元，同比+4.6%。",
+      "quantities": [
+        {
+          "value": "2.19",
+          "unit": "亿元",
+          "start": 93,
+          "end": 99
+        },
+        {
+          "value": "+4.6",
+          "unit": "%",
+          "start": 102,
+          "end": 107
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 127,
+      "end": 147,
+      "text": "净利率为25.9%，下滑1.1pcts。",
+      "quantities": [
+        {
+          "value": "25.9",
+          "unit": "%",
+          "start": 131,
+          "end": 136
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 252,
+      "end": 283,
+      "text": "2025Q1公司单季度营业收入2.39亿元，同比+15.2%；",
+      "quantities": [
+        {
+          "value": "2.39",
+          "unit": "亿元",
+          "start": 267,
+          "end": 273
+        },
+        {
+          "value": "+15.2",
+          "unit": "%",
+          "start": 276,
+          "end": 282
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 283,
+      "end": 337,
+      "text": "归母净利润0.50亿元，同比+3.4%，25Q1毛利率、净利率分别为49.8%、22.1%，同比均略有下滑。",
+      "quantities": [
+        {
+          "value": "0.50",
+          "unit": "亿元",
+          "start": 288,
+          "end": 294
+        },
+        {
+          "value": "+3.4",
+          "unit": "%",
+          "start": 297,
+          "end": 302
+        },
+        {
+          "value": "49.8",
+          "unit": "%",
+          "start": 317,
+          "end": 322
+        },
+        {
+          "value": "22.1",
+          "unit": "%",
+          "start": 323,
+          "end": 328
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 283,
+      "end": 337,
+      "text": "归母净利润0.50亿元，同比+3.4%，25Q1毛利率、净利率分别为49.8%、22.1%，同比均略有下滑。",
+      "quantities": [
+        {
+          "value": "0.50",
+          "unit": "亿元",
+          "start": 288,
+          "end": 294
+        },
+        {
+          "value": "+3.4",
+          "unit": "%",
+          "start": 297,
+          "end": 302
+        },
+        {
+          "value": "49.8",
+          "unit": "%",
+          "start": 317,
+          "end": 322
+        },
+        {
+          "value": "22.1",
+          "unit": "%",
+          "start": 323,
+          "end": 328
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 283,
+      "end": 337,
+      "text": "归母净利润0.50亿元，同比+3.4%，25Q1毛利率、净利率分别为49.8%、22.1%，同比均略有下滑。",
+      "quantities": [
+        {
+          "value": "0.50",
+          "unit": "亿元",
+          "start": 288,
+          "end": 294
+        },
+        {
+          "value": "+3.4",
+          "unit": "%",
+          "start": 297,
+          "end": 302
+        },
+        {
+          "value": "49.8",
+          "unit": "%",
+          "start": 317,
+          "end": 322
+        },
+        {
+          "value": "22.1",
+          "unit": "%",
+          "start": 323,
+          "end": 328
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 810,
+      "end": 850,
+      "text": "2024年控股子公司至期光子实现营业收入7609.60万元，同比+180.1%；",
+      "quantities": [
+        {
+          "value": "7609.60",
+          "unit": "万元",
+          "start": 830,
+          "end": 839
+        },
+        {
+          "value": "+180.1",
+          "unit": "%",
+          "start": 842,
+          "end": 849
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年控股子公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 850,
+      "end": 874,
+      "text": "净利润为-1198.61万元，亏损额较上年收窄。",
+      "quantities": [
+        {
+          "value": "-1198.61",
+          "unit": "万元",
+          "start": 854,
+          "end": 864
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 874,
+      "end": 909,
+      "text": "公司预计125年至期光子实现营业收入1.5亿元左右，同比继续翻倍增长。",
+      "quantities": [
+        {
+          "value": "1.5",
+          "unit": "亿元",
+          "start": 892,
+          "end": 897
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1038,
+      "end": 1120,
+      "text": "出于对下游激光行业疲软的担忧，我们谨慎预计公司2025-2027年实现营业收入为10.10/11.86/14.28亿元，同比增长15.3%/17.5%/20.4%；",
+      "quantities": [
+        {
+          "value": "14.28",
+          "unit": "亿元",
+          "start": 1090,
+          "end": 1097
+        },
+        {
+          "value": "15.3",
+          "unit": "%",
+          "start": 1102,
+          "end": 1107
+        },
+        {
+          "value": "17.5",
+          "unit": "%",
+          "start": 1108,
+          "end": 1113
+        },
+        {
+          "value": "20.4",
+          "unit": "%",
+          "start": 1114,
+          "end": 1119
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们谨慎预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1120,
+      "end": 1209,
+      "text": "归母净利润为2.62/3.15/3.89亿元，同比增长20.0%/19.9%/23.5%，对应当前（2025年5月28日）收盘价的PE分别为57/47/38倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "3.89",
+          "unit": "亿元",
+          "start": 1136,
+          "end": 1142
+        },
+        {
+          "value": "20.0",
+          "unit": "%",
+          "start": 1147,
+          "end": 1152
+        },
+        {
+          "value": "19.9",
+          "unit": "%",
+          "start": 1153,
+          "end": 1158
+        },
+        {
+          "value": "23.5",
+          "unit": "%",
+          "start": 1159,
+          "end": 1164
+        },
+        {
+          "value": "38",
+          "unit": "倍",
+          "start": 1196,
+          "end": 1199
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1259,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1259,
+    "processed_ranges": [
+      [
+        0,
+        1259
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 30.681653,
+  "source_content_sha256": "01b05a84c25ce66c6cf7b43328446029ebf9113b544a1787edd3bcea8e8e44c0"
+}

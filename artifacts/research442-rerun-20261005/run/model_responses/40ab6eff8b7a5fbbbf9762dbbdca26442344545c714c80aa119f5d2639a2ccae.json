@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。\"}],\"reason\":\"药品销售规模应以金额单位计量，原文却用“万吨”作量纲，单位明显错误。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。\"}],\"reason\":\"“同比增长达%”百分号前无数值，应报的同比增幅数值缺失。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"当中处方药同比增长7.6%，而非处方药及双跨产品分别同比下滑-1.7%与-5.0%\"},{\"text\":\"MAT25Q1，OTC药物市场规模超过1,968亿元人民币，同比下滑-1.7%。\"},{\"text\":\"实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名\"}],\"reason\":\"“下滑”与负数连用形成双重否定，字面等于增长，与下滑语义相反。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主\"}],\"reason\":\"同一句两次列出中成药、西药市场份额63.9%和36.1%，并两次表述二者同比下降，信息重复。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主\"}],\"reason\":\"前文明确两类产品同比下滑，却称“中成药的涨幅波动更为明显”，下跌语境误用“涨幅”。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主\"},{\"text\":\"实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名\"}],\"reason\":\"前文称中成药和西药同比均下降，后文称西药较上一年度小幅增长，同一对象同比方向前后矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:15:16.385234+00:00",
+    "request_sha256": "f28241a5c6776ddd8543bfc7c052b02e072484aca9a48629c9277235feaec355",
+    "input_token_estimate": 14606,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27675",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "23fd1a97d5284379bf78f4a109d3855e",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3479,
+    "output_tokens": 12126,
+    "usage_source": "provider",
+    "duration_seconds": 51.548983,
+    "cost_cny": "0.051983"
+  },
+  "cache_request": {
+    "key": "40ab6eff8b7a5fbbbf9762dbbdca26442344545c714c80aa119f5d2639a2ccae",
+    "purpose": "text_review.detect",
+    "messages_sha256": "f28241a5c6776ddd8543bfc7c052b02e072484aca9a48629c9277235feaec355"
+  }
+}

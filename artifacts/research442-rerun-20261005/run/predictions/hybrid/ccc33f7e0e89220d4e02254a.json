@@ -1,0 +1,659 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000412",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收金额写为“22.49元”，缺少“亿”字，与后文亿元口径及公司规模明显不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 65,
+          "end": 90,
+          "text": "2024年实现营收22.49元，同增38.29%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年实现营收22.49元，同增38.29%；",
+          "start": 74,
+          "end": 109
+        }
+      ],
+      "spans": [
+        {
+          "start": 65,
+          "end": 90,
+          "text": "2024年实现营收22.49元，同增38.29%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c0ab45bed8be29dbfc391343",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "扣非归母净利润的同比增速仅写“同增%”，明确数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 187,
+          "end": 207,
+          "text": "实现扣非归母净利润0.58亿元，同增%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "实现扣非归母净利润0.58亿元，同增%。",
+          "start": 176,
+          "end": 201
+        }
+      ],
+      "spans": [
+        {
+          "start": 187,
+          "end": 207,
+          "text": "实现扣非归母净利润0.58亿元，同增%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c5c67fe80b278b3f143b8be6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "公司产品为“高压清洗机”，此处误写为“高压清洗剂”，产品类别表述错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 382,
+          "end": 439,
+          "text": "其中通用动力机械产品毛利率同减5.47pct至13.00%，高压清洗剂产品毛利率同减3.92pct至20.62%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中通用动力机械产品毛利率同减5.47pct至13.00%，高压清洗剂产品毛利率同减3.92pct至20.62%。",
+          "start": 337,
+          "end": 397
+        }
+      ],
+      "spans": [
+        {
+          "start": 382,
+          "end": 439,
+          "text": "其中通用动力机械产品毛利率同减5.47pct至13.00%，高压清洗剂产品毛利率同减3.92pct至20.62%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "018cb1f810dba89b94a52aa4",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "收入列举三项（通用、高压清洗机、配件），同比增速却列四项，收入项与增速项数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 234,
+          "end": 337,
+          "text": "分产品来看，2024年公司通用动力机械、高压清洗机、配件分别实现收入10.02、10.85、0.72亿元，同比增速分别为14.20%、70.07%、56.93%、23.12%，储能产品实现收入0.07亿元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分产品来看，2024年公司通用动力机械、高压清洗机、配件分别实现收入10.02、10.85、0.72亿元，同比增速分别为14.20%、70.07%、56.93%、23.12%，储能产品实现收入0.07亿元。",
+          "start": 217,
+          "end": 325
+        }
+      ],
+      "spans": [
+        {
+          "start": 234,
+          "end": 337,
+          "text": "分产品来看，2024年公司通用动力机械、高压清洗机、配件分别实现收入10.02、10.85、0.72亿元，同比增速分别为14.20%、70.07%、56.93%、23.12%，储能产品实现收入0.07亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d71c73d267ecef16d4a00c07",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "报告已发布2024年报和2025一季报，仍称2024年下半年为“预计”完成，时间关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 643,
+          "end": 699,
+          "text": "公司新建年产140万台通用动力机械产品工程建设项目预计于2024年下半年完成主体工程建设，并逐步、分批释放产能。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司新建年产140万台通用动力机械产品工程建设项目预计于2024年下半年完成主体工程建设，并逐步、分批释放产能。",
+          "start": 664,
+          "end": 736
+        }
+      ],
+      "spans": [
+        {
+          "start": 643,
+          "end": 699,
+          "text": "公司新建年产140万台通用动力机械产品工程建设项目预计于2024年下半年完成主体工程建设，并逐步、分批释放产能。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7acdc00afe74f263fcebe1fd",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1273
+        ]
+      ],
+      "estimated_input_tokens": 5716,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:38:24.168493+00:00",
+        "request_sha256": "33e94f09cb7f2c5e1d2a194eb7c0a5f72020af25ddeab9c76098085330d3d437",
+        "input_token_estimate": 15946,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27809",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "368c676edc5e460381cd55022d4ed00c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3806,
+        "output_tokens": 11417,
+        "usage_source": "provider",
+        "duration_seconds": 46.00479,
+        "cost_cny": "0.049474",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年实现营收22.49元，同增38.29%；",
+            "start": 74,
+            "end": 109
+          }
+        ],
+        "reason": "营收金额写为“22.49元”，缺少“亿”字，与后文亿元口径及公司规模明显不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "实现扣非归母净利润0.58亿元，同增%。",
+            "start": 176,
+            "end": 201
+          }
+        ],
+        "reason": "扣非归母净利润的同比增速仅写“同增%”，明确数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "其中通用动力机械产品毛利率同减5.47pct至13.00%，高压清洗剂产品毛利率同减3.92pct至20.62%。",
+            "start": 337,
+            "end": 397
+          }
+        ],
+        "reason": "公司产品为“高压清洗机”，此处误写为“高压清洗剂”，产品类别表述错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "分产品来看，2024年公司通用动力机械、高压清洗机、配件分别实现收入10.02、10.85、0.72亿元，同比增速分别为14.20%、70.07%、56.93%、23.12%，储能产品实现收入0.07亿元。",
+            "start": 217,
+            "end": 325
+          }
+        ],
+        "reason": "收入列举三项（通用、高压清洗机、配件），同比增速却列四项，收入项与增速项数量不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "公司新建年产140万台通用动力机械产品工程建设项目预计于2024年下半年完成主体工程建设，并逐步、分批释放产能。",
+            "start": 664,
+            "end": 736
+          }
+        ],
+        "reason": "报告已发布2024年报和2025一季报，仍称2024年下半年为“预计”完成，时间关系冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 42,
+      "end": 90,
+      "text": "公司发布2024年年度报告与2025年一季报，2024年实现营收22.49元，同增38.29%；",
+      "quantities": [
+        {
+          "value": "22.49",
+          "unit": "元",
+          "start": 74,
+          "end": 80
+        },
+        {
+          "value": "38.29",
+          "unit": "%",
+          "start": 83,
+          "end": 89
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 90,
+      "end": 112,
+      "text": "实现归母净利润1.86亿元，同增3.44%；",
+      "quantities": [
+        {
+          "value": "1.86",
+          "unit": "亿元",
+          "start": 97,
+          "end": 103
+        },
+        {
+          "value": "3.44",
+          "unit": "%",
+          "start": 106,
+          "end": 111
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 112,
+      "end": 136,
+      "text": "实现扣非归母净利润1.93亿元，同增0.90%。",
+      "quantities": [
+        {
+          "value": "1.93",
+          "unit": "亿元",
+          "start": 121,
+          "end": 127
+        },
+        {
+          "value": "0.90",
+          "unit": "%",
+          "start": 130,
+          "end": 135
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 136,
+      "end": 164,
+      "text": "2025Q1公司实现营收6.39亿元，同增50.11%；",
+      "quantities": [
+        {
+          "value": "6.39",
+          "unit": "亿元",
+          "start": 148,
+          "end": 154
+        },
+        {
+          "value": "50.11",
+          "unit": "%",
+          "start": 157,
+          "end": 163
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 164,
+      "end": 187,
+      "text": "实现归母净利润0.57亿元，同增56.34%；",
+      "quantities": [
+        {
+          "value": "0.57",
+          "unit": "亿元",
+          "start": 171,
+          "end": 177
+        },
+        {
+          "value": "56.34",
+          "unit": "%",
+          "start": 180,
+          "end": 186
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 187,
+      "end": 207,
+      "text": "实现扣非归母净利润0.58亿元，同增%。",
+      "quantities": [
+        {
+          "value": "0.58",
+          "unit": "亿元",
+          "start": 196,
+          "end": 202
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 355,
+      "end": 439,
+      "text": "2024年公司毛利率同减3.96pct至18.05%，其中通用动力机械产品毛利率同减5.47pct至13.00%，高压清洗剂产品毛利率同减3.92pct至20.62%。",
+      "quantities": [
+        {
+          "value": "18.05",
+          "unit": "%",
+          "start": 375,
+          "end": 381
+        },
+        {
+          "value": "13.00",
+          "unit": "%",
+          "start": 405,
+          "end": 411
+        },
+        {
+          "value": "20.62",
+          "unit": "%",
+          "start": 432,
+          "end": 438
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 355,
+      "end": 439,
+      "text": "2024年公司毛利率同减3.96pct至18.05%，其中通用动力机械产品毛利率同减5.47pct至13.00%，高压清洗剂产品毛利率同减3.92pct至20.62%。",
+      "quantities": [
+        {
+          "value": "18.05",
+          "unit": "%",
+          "start": 375,
+          "end": 381
+        },
+        {
+          "value": "13.00",
+          "unit": "%",
+          "start": 405,
+          "end": 411
+        },
+        {
+          "value": "20.62",
+          "unit": "%",
+          "start": 432,
+          "end": 438
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 355,
+      "end": 439,
+      "text": "2024年公司毛利率同减3.96pct至18.05%，其中通用动力机械产品毛利率同减5.47pct至13.00%，高压清洗剂产品毛利率同减3.92pct至20.62%。",
+      "quantities": [
+        {
+          "value": "18.05",
+          "unit": "%",
+          "start": 375,
+          "end": 381
+        },
+        {
+          "value": "13.00",
+          "unit": "%",
+          "start": 405,
+          "end": 411
+        },
+        {
+          "value": "20.62",
+          "unit": "%",
+          "start": 432,
+          "end": 438
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1053,
+      "end": 1120,
+      "text": "预计公司2025-2027年营收分别为27.95、34.63、42.66亿元，同比增速分别为24.24%、23.91%、23.21%；",
+      "quantities": [
+        {
+          "value": "42.66",
+          "unit": "亿元",
+          "start": 1084,
+          "end": 1091
+        },
+        {
+          "value": "24.24",
+          "unit": "%",
+          "start": 1099,
+          "end": 1105
+        },
+        {
+          "value": "23.91",
+          "unit": "%",
+          "start": 1106,
+          "end": 1112
+        },
+        {
+          "value": "23.21",
+          "unit": "%",
+          "start": 1113,
+          "end": 1119
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1120,
+      "end": 1173,
+      "text": "归母净利润分别为2.51、3.22、4.12亿元，同比增速分别为34.63%、28.41%、28.16%。",
+      "quantities": [
+        {
+          "value": "4.12",
+          "unit": "亿元",
+          "start": 1138,
+          "end": 1144
+        },
+        {
+          "value": "34.63",
+          "unit": "%",
+          "start": 1152,
+          "end": 1158
+        },
+        {
+          "value": "28.41",
+          "unit": "%",
+          "start": 1159,
+          "end": 1165
+        },
+        {
+          "value": "28.16",
+          "unit": "%",
+          "start": 1166,
+          "end": 1172
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1273,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1273,
+    "processed_ranges": [
+      [
+        0,
+        1273
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1273,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002541,
+  "source_content_sha256": "5f0f4cf0b52a2a90bd8eb4461ccc3065affedd938d01b302fe26f668b14827ed"
+}

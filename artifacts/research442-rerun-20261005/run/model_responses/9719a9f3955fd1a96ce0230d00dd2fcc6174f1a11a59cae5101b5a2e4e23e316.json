@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2024年尼龙切片实现收入71.67亿元，同比增长19.17%；毛利率8.07%，同比提升1.37pct；产量57.65万吨，同比增长22.17%；销量56.50万吨，同比增长18.24%；销售均价12685元/平方米，同比增长0.78%。\"}], \"reason\": \"尼龙切片销售均价单位应为元/吨，原文写成元/平方米，单位错误。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"从几大基地来看，2024年杭州、滕州、常德基地分别贡献了52%、35%、18%的产量。\"}], \"reason\": \"52%加35%加18%等于105%，产量占比合计超过100%，计算不成立。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"从产品类别看，尼龙纤维级高端产品切片仍然是最重要收入组成部分，2024年实现收入47.54亿元，占比66.34%；工程塑料紧随其后，2024年实现收入23.16亿元，占比22.32%；膜级产品稳态发展，2024年实现收入0.76亿元，占比1.06%。\"}], \"reason\": \"工程塑料收入23.16亿元除以尼龙切片收入71.67亿元约为32.32%，原文占比22.32%不符。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"根据华瑞信息数据显示，2024年我国PA6表观消费量达到了634万吨，同比下降24%，主因下游膜级包材、工程塑料、民用纺丝等不同业态及应用场景的PA6的需求仍保持稳步增长。\"}], \"reason\": \"2023年表观消费量为467万吨，2024年634万吨应同比增长，却写同比下降24%，数值与方向矛盾。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"截至2024年末，全球PA6总产能约1099.5万吨，其中中国PA6产能增长迅猛，达到772.6万吨，占全球比重由2020年的62.1%提升至2024年的80.3%。\"}], \"reason\": \"772.6万吨除以1099.5万吨约70.3%，并非80.3%，占比计算不成立。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"销售均价10942元/吨，同比变动% ，环比变动-4.35%；\"}], \"reason\": \"同比变动后百分号前无具体数值，缺少同比变动幅度。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:18:59.393122+00:00",
+    "request_sha256": "6529236651b29b8d56ab3c79b52ce4505ee6887261603342701ee230ca880f4e",
+    "input_token_estimate": 17940,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280084",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ae4f2f8daa8a410cb031ce6763c9ac0a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4324,
+    "output_tokens": 9282,
+    "usage_source": "provider",
+    "duration_seconds": 34.524164,
+    "cost_cny": "0.041452"
+  },
+  "cache_request": {
+    "key": "9719a9f3955fd1a96ce0230d00dd2fcc6174f1a11a59cae5101b5a2e4e23e316",
+    "purpose": "text_review.detect",
+    "messages_sha256": "6529236651b29b8d56ab3c79b52ce4505ee6887261603342701ee230ca880f4e"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"此次募投项目钙钛矿叠层太阳能电池装备产业化项目总投资21.38分，拟发行可转债募资19.7亿元。\"}],\"reason\":\"项目总投资金额使用“分”作单位，写成21.38分不合逻辑，应为亿元等大额货币单位。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"项目建设周期为年，项目建成达产后可实现年产钙钛矿叠层太阳能电池制造设备20套，年收入40亿元（不含税），年净利润6亿元。\"}],\"reason\":\"“项目建设周期为年”缺少具体年数，应给出项目建设周期的数值。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"224年以来中国石油、中国中核、明阳智能、宁德时代、比亚迪和京东方等多家行业龙头企业跨界布局钙钛矿，正在加速启动中试线及更高规模的产线建设。\"}],\"reason\":\"“224年”与上下文企业近年布局不符，应为2024年，年份信息错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:16:26.498222+00:00",
+    "request_sha256": "2155986b2768ff089df9c4b3d29b6e5fd45d82997b1c0ac8443d73c2f453b3aa",
+    "input_token_estimate": 15293,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277437",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ed6a0739617d4b7ebcb6a229050528e4",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3637,
+    "output_tokens": 4814,
+    "usage_source": "provider",
+    "duration_seconds": 20.413333,
+    "cost_cny": "0.022893"
+  },
+  "cache_request": {
+    "key": "55d2a405f15d7fc234aebeb5a2fbd555c3e4e70d96f2c5c08d96cb11b4cc4fa4",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2155986b2768ff089df9c4b3d29b6e5fd45d82997b1c0ac8443d73c2f453b3aa"
+  }
+}

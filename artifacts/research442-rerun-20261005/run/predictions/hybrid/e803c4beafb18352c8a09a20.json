@@ -1,0 +1,534 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000224",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "标题称计算机/交通数字化，正文却全篇分析白酒并称食饮投资策略，主题互斥。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 0,
+          "end": 24,
+          "text": "计算机：交通数字化升级政策出台，带来千亿增量市场"
+        },
+        {
+          "kind": "source_text",
+          "start": 1269,
+          "end": 1354,
+          "text": "投资建议：我们认为，完整的2024食饮投资策略的主线是低估值优质确定性成长+高股息率标的，辅线是经营改善标的，需动态根据底层要素变化对确定性成长或高股息策略权重进行修正。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "计算机：交通数字化升级政策出台，带来千亿增量市场"
+        },
+        {
+          "text": "投资建议：我们认为，完整的2024食饮投资策略的主线是低估值优质确定性成长+高股息率标的，辅线是经营改善标的，需动态根据底层要素变化对确定性成长或高股息策略权重进行修正。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 0,
+          "end": 24,
+          "text": "计算机：交通数字化升级政策出台，带来千亿增量市场"
+        },
+        {
+          "start": 1269,
+          "end": 1354,
+          "text": "投资建议：我们认为，完整的2024食饮投资策略的主线是低估值优质确定性成长+高股息率标的，辅线是经营改善标的，需动态根据底层要素变化对确定性成长或高股息策略权重进行修正。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e2d3d94225bc64a43473173d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "前文已表述看好茅台稳价护盘，末句又单独重复同一判断。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 305,
+          "end": 388,
+          "text": "虽然普飞批价波动放大需求担忧，我们认为伴随茅台酒批价泡沫挤出带来合理温和回调，消费步入强真实支撑区间，看好后续茅台稳价护盘，以及在茅五汾价格领衔下，行业批价保持稳定。"
+        },
+        {
+          "kind": "source_text",
+          "start": 388,
+          "end": 399,
+          "text": "看好后续茅台稳价护盘。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "虽然普飞批价波动放大需求担忧，我们认为伴随茅台酒批价泡沫挤出带来合理温和回调，消费步入强真实支撑区间，看好后续茅台稳价护盘，以及在茅五汾价格领衔下，行业批价保持稳定。"
+        },
+        {
+          "text": "看好后续茅台稳价护盘。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 305,
+          "end": 388,
+          "text": "虽然普飞批价波动放大需求担忧，我们认为伴随茅台酒批价泡沫挤出带来合理温和回调，消费步入强真实支撑区间，看好后续茅台稳价护盘，以及在茅五汾价格领衔下，行业批价保持稳定。"
+        },
+        {
+          "start": 388,
+          "end": 399,
+          "text": "看好后续茅台稳价护盘。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d51987fcd36c36fa252e5c3b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“分别”后列三项，但区域酒企收入同比增速为空，直接接下一分句。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 484,
+          "end": 553,
+          "text": "其中高端、次高端、区域酒企收入同比增速分别16.5%、14.15%、，区域市场调节空间更大、动销去库更良性的头部酒企，业绩稳定性更为突出。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中高端、次高端、区域酒企收入同比增速分别16.5%、14.15%、，区域市场调节空间更大、动销去库更良性的头部酒企，业绩稳定性更为突出。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 484,
+          "end": 553,
+          "text": "其中高端、次高端、区域酒企收入同比增速分别16.5%、14.15%、，区域市场调节空间更大、动销去库更良性的头部酒企，业绩稳定性更为突出。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "94d87163d6615cbaed3b2947",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "用“收入分别为”接百分数，实指收入同比增速，漏“增速”致指标含义错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 553,
+          "end": 626,
+          "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 553,
+          "end": 626,
+          "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ad180a23a000b6f96e387eda",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "24Q1高端15.21%大于地产酒13.87%，文中却写高端＜地产酒，比较方向与数值相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1130,
+          "end": 1214,
+          "text": "利润增速方面，23年高端（18.46%）＞地产酒（18.05%）＞次高端（16.44%），24Q1次高端（20.93%）＞高端（15.21%）＜地产酒（13.87%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "利润增速方面，23年高端（18.46%）＞地产酒（18.05%）＞次高端（16.44%），24Q1次高端（20.93%）＞高端（15.21%）＜地产酒（13.87%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1130,
+          "end": 1214,
+          "text": "利润增速方面，23年高端（18.46%）＞地产酒（18.05%）＞次高端（16.44%），24Q1次高端（20.93%）＞高端（15.21%）＜地产酒（13.87%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e8c69e0bc5d21d4fe94ca7eb",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "存货周转率单位为次/率，不是百分点；将其变动写为pct属于单位误用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1018,
+          "end": 1130,
+          "text": "费率方面，2023年/24Q1白酒企业销售费用率分别提升0.17pct/0.15pct，存货周转率分别下滑0.49pct/0.53pct，多数酒企加强C端营销投入及数字化营销手段应用，同时酒企亦加强费用管控，向管理端要效益。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "费率方面，2023年/24Q1白酒企业销售费用率分别提升0.17pct/0.15pct，存货周转率分别下滑0.49pct/0.53pct，多数酒企加强C端营销投入及数字化营销手段应用，同时酒企亦加强费用管控，向管理端要效益。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1018,
+          "end": 1130,
+          "text": "费率方面，2023年/24Q1白酒企业销售费用率分别提升0.17pct/0.15pct，存货周转率分别下滑0.49pct/0.53pct，多数酒企加强C端营销投入及数字化营销手段应用，同时酒企亦加强费用管控，向管理端要效益。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "da6e2b791691377bec02396d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1569
+        ]
+      ],
+      "estimated_input_tokens": 6106,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:14:19.757559+00:00",
+        "request_sha256": "d5751e1d1c843938a278f8c58c23335c8fdf44b13279617389a4300ee3bfaa1e",
+        "input_token_estimate": 16976,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27912",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e448bb3d42bf4c678266d9c8b485a4e5",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4088,
+        "output_tokens": 10732,
+        "usage_source": "provider",
+        "duration_seconds": 45.630166,
+        "cost_cny": "0.047016",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "计算机：交通数字化升级政策出台，带来千亿增量市场"
+          },
+          {
+            "text": "投资建议：我们认为，完整的2024食饮投资策略的主线是低估值优质确定性成长+高股息率标的，辅线是经营改善标的，需动态根据底层要素变化对确定性成长或高股息策略权重进行修正。"
+          }
+        ],
+        "reason": "标题称计算机/交通数字化，正文却全篇分析白酒并称食饮投资策略，主题互斥。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "虽然普飞批价波动放大需求担忧，我们认为伴随茅台酒批价泡沫挤出带来合理温和回调，消费步入强真实支撑区间，看好后续茅台稳价护盘，以及在茅五汾价格领衔下，行业批价保持稳定。"
+          },
+          {
+            "text": "看好后续茅台稳价护盘。"
+          }
+        ],
+        "reason": "前文已表述看好茅台稳价护盘，末句又单独重复同一判断。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "其中高端、次高端、区域酒企收入同比增速分别16.5%、14.15%、，区域市场调节空间更大、动销去库更良性的头部酒企，业绩稳定性更为突出。"
+          }
+        ],
+        "reason": "“分别”后列三项，但区域酒企收入同比增速为空，直接接下一分句。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+          }
+        ],
+        "reason": "用“收入分别为”接百分数，实指收入同比增速，漏“增速”致指标含义错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "利润增速方面，23年高端（18.46%）＞地产酒（18.05%）＞次高端（16.44%），24Q1次高端（20.93%）＞高端（15.21%）＜地产酒（13.87%）。"
+          }
+        ],
+        "reason": "24Q1高端15.21%大于地产酒13.87%，文中却写高端＜地产酒，比较方向与数值相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "费率方面，2023年/24Q1白酒企业销售费用率分别提升0.17pct/0.15pct，存货周转率分别下滑0.49pct/0.53pct，多数酒企加强C端营销投入及数字化营销手段应用，同时酒企亦加强费用管控，向管理端要效益。"
+          }
+        ],
+        "reason": "存货周转率单位为次/率，不是百分点；将其变动写为pct属于单位误用。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 57,
+      "end": 92,
+      "text": "2023年白酒板块总营收、归母净利分别同增16.39%、18.48%；",
+      "quantities": [
+        {
+          "value": "16.39",
+          "unit": "%",
+          "start": 78,
+          "end": 84
+        },
+        {
+          "value": "18.48",
+          "unit": "%",
+          "start": 85,
+          "end": 91
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 92,
+      "end": 122,
+      "text": "24Q1总营收、归母净利分别同增15.43%、15.72%。",
+      "quantities": [
+        {
+          "value": "15.43",
+          "unit": "%",
+          "start": 108,
+          "end": 114
+        },
+        {
+          "value": "15.72",
+          "unit": "%",
+          "start": 115,
+          "end": 121
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 423,
+      "end": 484,
+      "text": "2023年白酒板块总营业收入同比增长16.39%，增速较2022年的16.83%仅小幅回落，显示上市酒企经营节奏仍然稳健；",
+      "quantities": [
+        {
+          "value": "16.39",
+          "unit": "%",
+          "start": 441,
+          "end": 447
+        },
+        {
+          "value": "16.83",
+          "unit": "%",
+          "start": 457,
+          "end": 463
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2022年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 925,
+      "end": 1018,
+      "text": "毛利率方面，2023年/24Q1白酒企业毛利率为82.52%、82.52%，同比+0.48pct、+0.28pct，区域酒23年吨价增幅最为强势，主系区域大本营市场大众消费升级趋势延续。",
+      "quantities": [
+        {
+          "value": "82.52",
+          "unit": "%",
+          "start": 949,
+          "end": 955
+        },
+        {
+          "value": "82.52",
+          "unit": "%",
+          "start": 956,
+          "end": 962
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 925,
+      "end": 1018,
+      "text": "毛利率方面，2023年/24Q1白酒企业毛利率为82.52%、82.52%，同比+0.48pct、+0.28pct，区域酒23年吨价增幅最为强势，主系区域大本营市场大众消费升级趋势延续。",
+      "quantities": [
+        {
+          "value": "82.52",
+          "unit": "%",
+          "start": 949,
+          "end": 955
+        },
+        {
+          "value": "82.52",
+          "unit": "%",
+          "start": 956,
+          "end": 962
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1569,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1569,
+    "processed_ranges": [
+      [
+        0,
+        1569
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1569,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002285,
+  "source_content_sha256": "a30d4bed57db250662e029bd13e8ad5e1bb4f783342b15fde25b6a91762ec757"
+}

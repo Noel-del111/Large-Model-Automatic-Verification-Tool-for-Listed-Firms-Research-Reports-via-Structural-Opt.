@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"截至5月30日当周，布伦特原油周均价为64.47美元/升，环比变化-1.07%。\"}], \"reason\": \"布伦特原油周均价单位应为美元/桶，原文写作美元/升，量纲错误。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"国外重点大炼化项目价差为1088.33元/吨，环比变化+17.94元/吨（+4.73%）。\"}], \"reason\": \"上期价差约1070.39元/吨，17.94元/吨对应的环比涨幅约1.68%，不为4.73%。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"聚烯烃方面，上周聚乙烯、聚丙烯成本支撑窄幅走弱，产品价格、价差震荡下行。\"}, {\"text\": \"聚烯烃方面，上周聚乙烯、聚丙烯成本支撑窄幅走弱，产品价格、价差震荡下行。\"}], \"reason\": \"同一聚烯烃行情描述连续重复出现两次，未提供新增信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:05:10.035391+00:00",
+    "request_sha256": "18c1d14c252ac8946a2f11b249177d6af9e269016d12bd9cd46fb7c581d5209c",
+    "input_token_estimate": 15904,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278048",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7df5bff2d5b74f6e931725f65e007825",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3849,
+    "output_tokens": 12355,
+    "usage_source": "provider",
+    "duration_seconds": 46.974086,
+    "cost_cny": "0.053269"
+  },
+  "cache_request": {
+    "key": "be9726f1e51364a076dbe5bc3a34b54d3c2326f90e657de819d8cae6234510b7",
+    "purpose": "text_review.detect",
+    "messages_sha256": "18c1d14c252ac8946a2f11b249177d6af9e269016d12bd9cd46fb7c581d5209c"
+  }
+}

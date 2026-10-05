@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000237",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "新凤鸣后未给出近一周股价涨跌幅数值，其他五家公司均有数据。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 32,
+          "end": 143,
+          "text": "截至2024年05月03日，6家民营大炼化公司近一周股价涨跌幅：恒逸石化（环比+6.39%）、新凤鸣、桐昆股份（环比+2.91%）、恒力石化（环比+0.65%）、荣盛石化（环比+0.54%）、东方盛虹（环比+0.30%）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年05月03日，6家民营大炼化公司近一周股价涨跌幅：恒逸石化（环比+6.39%）、新凤鸣、桐昆股份（环比+2.91%）、恒力石化（环比+0.65%）、荣盛石化（环比+0.54%）、东方盛虹（环比+0.30%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 32,
+          "end": 143,
+          "text": "截至2024年05月03日，6家民营大炼化公司近一周股价涨跌幅：恒逸石化（环比+6.39%）、新凤鸣、桐昆股份（环比+2.91%）、恒力石化（环比+0.65%）、荣盛石化（环比+0.54%）、东方盛虹（环比+0.30%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d2bff5552499835cd96cf4dd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "本周布伦特原油周均价“86.16/桶”缺少货币单位“美元”，与后文“美元/桶”不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 351,
+          "end": 392,
+          "text": "本周布伦特原油周均价为86.16/桶，环比-1.83美元/桶（环比-2.08%）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周布伦特原油周均价为86.16/桶，环比-1.83美元/桶（环比-2.08%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 351,
+          "end": 392,
+          "text": "本周布伦特原油周均价为86.16/桶，环比-1.83美元/桶（环比-2.08%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0d03cc20f3ea5fed5b8dd22a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一价差上升列表中“均聚聚丙烯”重复出现，属于不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 893,
+          "end": 973,
+          "text": "价差方面，本周MMA/丙烯腈/LLDPE/LDPE/HDPE/抗冲聚丙烯/均聚聚丙烯/无规聚丙烯/均聚聚丙烯/PC/纯苯价差上升，光伏级EVA/苯乙烯价差缩窄。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "价差方面，本周MMA/丙烯腈/LLDPE/LDPE/HDPE/抗冲聚丙烯/均聚聚丙烯/无规聚丙烯/均聚聚丙烯/PC/纯苯价差上升，光伏级EVA/苯乙烯价差缩窄。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 893,
+          "end": 973,
+          "text": "价差方面，本周MMA/丙烯腈/LLDPE/LDPE/HDPE/抗冲聚丙烯/均聚聚丙烯/无规聚丙烯/均聚聚丙烯/PC/纯苯价差上升，光伏级EVA/苯乙烯价差缩窄。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1be7c62889b0f9286810a7d1",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1066
+        ]
+      ],
+      "estimated_input_tokens": 5594,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:23:36.716508+00:00",
+        "request_sha256": "fb98d49a35f6eef36d14097dae9672e19d0ce80351537b5a6bfb3da79fff13ad",
+        "input_token_estimate": 15571,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277715",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "8c244827de644e6cae93b0e8f0f8bfd2",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3780,
+        "output_tokens": 4483,
+        "usage_source": "provider",
+        "duration_seconds": 18.077902,
+        "cost_cny": "0.021712"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "截至2024年05月03日，6家民营大炼化公司近一周股价涨跌幅：恒逸石化（环比+6.39%）、新凤鸣、桐昆股份（环比+2.91%）、恒力石化（环比+0.65%）、荣盛石化（环比+0.54%）、东方盛虹（环比+0.30%）。"
+          }
+        ],
+        "reason": "新凤鸣后未给出近一周股价涨跌幅数值，其他五家公司均有数据。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本周布伦特原油周均价为86.16/桶，环比-1.83美元/桶（环比-2.08%）。"
+          }
+        ],
+        "reason": "本周布伦特原油周均价“86.16/桶”缺少货币单位“美元”，与后文“美元/桶”不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "价差方面，本周MMA/丙烯腈/LLDPE/LDPE/HDPE/抗冲聚丙烯/均聚聚丙烯/无规聚丙烯/均聚聚丙烯/PC/纯苯价差上升，光伏级EVA/苯乙烯价差缩窄。"
+          }
+        ],
+        "reason": "同一价差上升列表中“均聚聚丙烯”重复出现，属于不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1066,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1066,
+    "processed_ranges": [
+      [
+        0,
+        1066
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 18.10149,
+  "source_content_sha256": "53b0484f232d3fe29d2223f44c421d533bab9ceb73237aff84830b4edc756e81"
+}

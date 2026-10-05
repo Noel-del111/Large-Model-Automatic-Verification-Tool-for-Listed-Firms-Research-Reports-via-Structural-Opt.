@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"万达电影()\"}], \"reason\": \"股票代码位置为空，缺少公司证券代码。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"30家“时光里”艺术品商店落地，SKU超 个，吸引年轻客群。\"}], \"reason\": \"SKU数量位置为空，缺少具体数值。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"电视剧方面，2024年公司主投的《追风者》（央视收视破2.5%）、《我的阿勒泰》（豆瓣8.9分）、《我的阿勒泰》（豆瓣8.9分）获口碑与奖项双丰收，展现了精品剧集制作能力。\"}], \"reason\": \"《我的阿勒泰》（豆瓣8.9分）连续重复两次，信息冗余。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"子公司互爱互动海外收入占比提升至62%，《》国内公测超预期，新增《JOJO的奇幻冒险》等IP储备，营收同比增长超50%。\"}], \"reason\": \"书名号内游戏名称缺失，无法识别具体公测游戏。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"我们预测公司2025-2027年营业收入分别为150.81/162.88/171.02/151.02亿元（25/26前值为182.44/201.71亿元），同比增速分别为22%/8%/5%，归母净利润分别为11.23/13.48/14.41亿元（25/26前值为17.46/20.92亿元），25-27年PE分别为21/18/17倍，维持“买入”评级。\"}], \"reason\": \"2025-2027三个年份却给出四个营收数值，且同比增速仅三个，数值与年份不对应。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"2025年5月12日万达电影发布公告，披露全资子公司影时光将与关联方儒意星辰共同投资52TOYS（北京乐自天成文化发展股份有限公司），影时光以6,898.97万元收购乐自天成3.69%股份，儒意星辰以5,174.23万元收购2.77%股份；双方另分别增资1,329.60万元（0.31%股权）、997.20万元（0.23%股权），本次股权转让和增资完成后，万达电影通过影时光、儒意星辰合计持有乐自天成7%的股权。\"}], \"reason\": \"儒意星辰被称关联方而非子公司，但后文称万达电影通过其合计持股，持股主体归属矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:58:21.015106+00:00",
+    "request_sha256": "4ed94370a4e1cd442cb8d27c071d230534edaa0d2ad4347e3d56fa566cbb7997",
+    "input_token_estimate": 17286,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27943",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b9454ef5a00f4d309a9eb9f7b246daba",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4133,
+    "output_tokens": 7951,
+    "usage_source": "provider",
+    "duration_seconds": 30.980357,
+    "cost_cny": "0.035937"
+  },
+  "cache_request": {
+    "key": "2c29d745f610de2ab3478e3da76e51050d0e959f67133e5ae6f57e8ce26b4c48",
+    "purpose": "text_review.detect",
+    "messages_sha256": "4ed94370a4e1cd442cb8d27c071d230534edaa0d2ad4347e3d56fa566cbb7997"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"持续推进产品结构优化升级，以产品带动品牌发展。持续推进产品结构优化升级，以产品带动品牌发展。\",\n          \"start\": 147,\n          \"end\": 189\n        }\n      ],\n      \"reason\": \"同一句话连续重复两次，信息完全相同，构成不必要的冗余。\"\n    },\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"另一方面积极探索多元发展，129年3月重组整合青岛饮料集团，5月全资收购山东老牌黄酒企业即墨黄酒，积极稳妥发展黄酒、威士忌等相关业务，探索培育新的增长点。\",\n          \"start\": 472,\n          \"end\": 551\n        }\n      ],\n      \"reason\": \"年份“129年”与2024年股东会、2025年展望的时间背景明显冲突，时间表述不成立。\"\n    },\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"我们预计公司2025-2027年营收分别为334.67亿元、367.99亿元、347.92亿元、360.99亿元，增速分别为4.14%、3.96%、3.76%\",\n          \"start\": 758,\n          \"end\": 837\n        }\n      ],\n      \"reason\": \"2025-2027仅三年，却列出四个营收数值；且所列增速与相邻年度营收增长不匹配。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:09:18.428864+00:00",
+    "request_sha256": "21b17f10214c55202d3ff2172325bea60ebb1374f8b22547da4ebf80064c10f8",
+    "input_token_estimate": 15723,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277867",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f8de415a621540bca723e8a62ecc32d3",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3681,
+    "output_tokens": 5184,
+    "usage_source": "provider",
+    "duration_seconds": 22.159086,
+    "cost_cny": "0.024417"
+  },
+  "cache_request": {
+    "key": "d4e0ff30a91d2566d318db2eb4a1b234d6bda2acf99c34e71775b3841a48f5fc",
+    "purpose": "text_review.detect",
+    "messages_sha256": "21b17f10214c55202d3ff2172325bea60ebb1374f8b22547da4ebf80064c10f8"
+  }
+}

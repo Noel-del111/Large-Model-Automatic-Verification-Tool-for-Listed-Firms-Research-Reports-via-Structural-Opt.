@@ -1,0 +1,1104 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000403",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一段落两次出现“尽管培训业务毛利率同比-5.24pct至9.87%”，信息重复，后一次无新增内容。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 690,
+          "end": 744,
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。"
+        },
+        {
+          "kind": "source_text",
+          "start": 744,
+          "end": 869,
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但②费率方面，24年公司三费率为28.05%/同比-10.77pct，其中销售/管理/财务费用率分别1.72%/14.83%/11.50%，同比-0.94pct/-4.56pct/-5.27pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+          "start": 893,
+          "end": 958
+        },
+        {
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但②费率方面，24年公司三费率为28.05%/同比-10.77pct，其中销售/管理/财务费用率分别1.72%/14.83%/11.50%，同比-0.94pct/-4.56pct/-5.27pct。",
+          "start": 959,
+          "end": 1082
+        }
+      ],
+      "spans": [
+        {
+          "start": 690,
+          "end": 744,
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。"
+        },
+        {
+          "start": 744,
+          "end": 869,
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但②费率方面，24年公司三费率为28.05%/同比-10.77pct，其中销售/管理/财务费用率分别1.72%/14.83%/11.50%，同比-0.94pct/-4.56pct/-5.27pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2eed69b9ae9afd1ea59330a1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“套利”在金融中通常指无风险获利，此处用于描述成本波动被抵消，术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 690,
+          "end": 744,
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+          "start": 893,
+          "end": 958
+        }
+      ],
+      "spans": [
+        {
+          "start": 690,
+          "end": 744,
+          "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c910203a70cfd06b6293b5fc",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前称已正式进入盈利新阶段，后又称2025年有望出现盈利拐点，同一条件下命题冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 906,
+          "end": 931,
+          "text": "2025Q1业绩实现重要拐点，正式进入盈利新阶段。"
+        },
+        {
+          "kind": "source_text",
+          "start": 991,
+          "end": 1034,
+          "text": "扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1业绩实现重要拐点，正式进入盈利新阶段。",
+          "start": 1266,
+          "end": 1288
+        },
+        {
+          "text": "扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。",
+          "start": 1392,
+          "end": 1453
+        }
+      ],
+      "spans": [
+        {
+          "start": 906,
+          "end": 931,
+          "text": "2025Q1业绩实现重要拐点，正式进入盈利新阶段。"
+        },
+        {
+          "start": 991,
+          "end": 1034,
+          "text": "扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2414ea7a78c4d2d71c687644",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "归母净利润46.84万元除以营收0.91亿元约为0.51%，与原文净利率0.60%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 931,
+          "end": 1109,
+          "text": "25Q1实现营收0.91亿元/同比+17.68%，归母净利润46.84万元，去年同期为-353.82万元，实现同比扭亏；扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。25Q1毛利率32.40%/同比+5.68pct，三费率22.83%/同比-7.04pct，费用结构持续优化，净利率同比+5.20pct至0.60%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1实现营收0.91亿元/同比+17.68%，归母净利润46.84万元，去年同期为-353.82万元，实现同比扭亏；扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。25Q1毛利率32.40%/同比+5.68pct，三费率22.83%/同比-7.04pct，费用结构持续优化，净利率同比+5.20pct至0.60%。",
+          "start": 1289,
+          "end": 1516
+        }
+      ],
+      "spans": [
+        {
+          "start": 931,
+          "end": 1109,
+          "text": "25Q1实现营收0.91亿元/同比+17.68%，归母净利润46.84万元，去年同期为-353.82万元，实现同比扭亏；扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。25Q1毛利率32.40%/同比+5.68pct，三费率22.83%/同比-7.04pct，费用结构持续优化，净利率同比+5.20pct至0.60%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d9fa19dff2cd5bc59afb12a4",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2250
+        ]
+      ],
+      "estimated_input_tokens": 6507,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:59:29.617066+00:00",
+        "request_sha256": "bb37a1d05d9affa9dfc0c68cb39705ca0453159ba07d85b28ff0d9d060d287a2",
+        "input_token_estimate": 18197,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280341",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4bfc0a94c76b42eba777bade13a2dad6",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4406,
+        "output_tokens": 12679,
+        "usage_source": "provider",
+        "duration_seconds": 43.888259,
+        "cost_cny": "0.055122",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+            "start": 893,
+            "end": 958
+          },
+          {
+            "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但②费率方面，24年公司三费率为28.05%/同比-10.77pct，其中销售/管理/财务费用率分别1.72%/14.83%/11.50%，同比-0.94pct/-4.56pct/-5.27pct。",
+            "start": 959,
+            "end": 1082
+          }
+        ],
+        "reason": "同一段落两次出现“尽管培训业务毛利率同比-5.24pct至9.87%”，信息重复，后一次无新增内容。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+            "start": 893,
+            "end": 958
+          }
+        ],
+        "reason": "“套利”在金融中通常指无风险获利，此处用于描述成本波动被抵消，术语使用不当。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025Q1业绩实现重要拐点，正式进入盈利新阶段。",
+            "start": 1266,
+            "end": 1288
+          },
+          {
+            "text": "扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。",
+            "start": 1392,
+            "end": 1453
+          }
+        ],
+        "reason": "前称已正式进入盈利新阶段，后又称2025年有望出现盈利拐点，同一条件下命题冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "25Q1实现营收0.91亿元/同比+17.68%，归母净利润46.84万元，去年同期为-353.82万元，实现同比扭亏；扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。25Q1毛利率32.40%/同比+5.68pct，三费率22.83%/同比-7.04pct，费用结构持续优化，净利率同比+5.20pct至0.60%。",
+            "start": 1289,
+            "end": 1516
+          }
+        ],
+        "reason": "归母净利润46.84万元除以营收0.91亿元约为0.51%，与原文净利率0.60%不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 34,
+      "end": 79,
+      "text": "事件：公司发布2024年年报，2024年公司实现营业收入3.20亿元，同比+25.92%；",
+      "quantities": [
+        {
+          "value": "3.20",
+          "unit": "亿元",
+          "start": 62,
+          "end": 68
+        },
+        {
+          "value": "+25.92",
+          "unit": "%",
+          "start": 71,
+          "end": 78
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 79,
+      "end": 102,
+      "text": "归母净利润-0.37亿元，同比+25.66%；",
+      "quantities": [
+        {
+          "value": "-0.37",
+          "unit": "亿元",
+          "start": 84,
+          "end": 91
+        },
+        {
+          "value": "+25.66",
+          "unit": "%",
+          "start": 94,
+          "end": 101
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 102,
+      "end": 128,
+      "text": "扣非后归母净利润-0.38亿元，同比+26.67%。",
+      "quantities": [
+        {
+          "value": "-0.38",
+          "unit": "亿元",
+          "start": 110,
+          "end": 117
+        },
+        {
+          "value": "+26.67",
+          "unit": "%",
+          "start": 120,
+          "end": 127
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 128,
+      "end": 149,
+      "text": "毛利率27.45%，同比+3.31pct；",
+      "quantities": [
+        {
+          "value": "27.45",
+          "unit": "%",
+          "start": 131,
+          "end": 137
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 149,
+      "end": 171,
+      "text": "净利率-10.87%，同比+8.22pct。",
+      "quantities": [
+        {
+          "value": "-10.87",
+          "unit": "%",
+          "start": 152,
+          "end": 159
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 173,
+      "end": 206,
+      "text": "单季度来看，24Q4公司实现营收0.94亿元，同比+50.08%；",
+      "quantities": [
+        {
+          "value": "0.94",
+          "unit": "亿元",
+          "start": 189,
+          "end": 195
+        },
+        {
+          "value": "+50.08",
+          "unit": "%",
+          "start": 198,
+          "end": 205
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 206,
+      "end": 229,
+      "text": "归母净利润-0.15亿元，同比+38.66%；",
+      "quantities": [
+        {
+          "value": "-0.15",
+          "unit": "亿元",
+          "start": 211,
+          "end": 218
+        },
+        {
+          "value": "+38.66",
+          "unit": "%",
+          "start": 221,
+          "end": 228
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 229,
+      "end": 262,
+      "text": "毛利率22.32%，同比-0.90pct，环比-11.13pct；",
+      "quantities": [
+        {
+          "value": "22.32",
+          "unit": "%",
+          "start": 232,
+          "end": 238
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 262,
+      "end": 296,
+      "text": "净利率-15.03%，同比+21.80pct，环比+2.17pct。",
+      "quantities": [
+        {
+          "value": "-15.03",
+          "unit": "%",
+          "start": 265,
+          "end": 272
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 388,
+      "end": 429,
+      "text": "分季度看，Q1~Q4公司分别实现营收0.77/0.75/0.73/0.94亿元，；",
+      "quantities": [
+        {
+          "value": "0.94",
+          "unit": "亿元",
+          "start": 421,
+          "end": 427
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 429,
+      "end": 498,
+      "text": "归母净利润分别为-0.04/-0.06/-0.12/-0.15亿元，同比+66.66%/+33.58%/-125.04%/+38.66%；",
+      "quantities": [
+        {
+          "value": "-0.15",
+          "unit": "亿元",
+          "start": 455,
+          "end": 462
+        },
+        {
+          "value": "+66.66",
+          "unit": "%",
+          "start": 465,
+          "end": 472
+        },
+        {
+          "value": "+33.58",
+          "unit": "%",
+          "start": 473,
+          "end": 480
+        },
+        {
+          "value": "-125.04",
+          "unit": "%",
+          "start": 481,
+          "end": 489
+        },
+        {
+          "value": "+38.66",
+          "unit": "%",
+          "start": 490,
+          "end": 497
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 498,
+      "end": 529,
+      "text": "Q4营收同比稳增、亏损收窄，预计公司盈利拐点逻辑正在逐步确认。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 529,
+      "end": 561,
+      "text": "分业务看，教育服务全年实现营收2.60亿元/同比+41.86%；",
+      "quantities": [
+        {
+          "value": "2.60",
+          "unit": "亿元",
+          "start": 544,
+          "end": 550
+        },
+        {
+          "value": "+41.86",
+          "unit": "%",
+          "start": 553,
+          "end": 560
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 561,
+      "end": 586,
+      "text": "培训业务实现营收0.55亿元/同比-16.90%；",
+      "quantities": [
+        {
+          "value": "0.55",
+          "unit": "亿元",
+          "start": 569,
+          "end": 575
+        },
+        {
+          "value": "-16.90",
+          "unit": "%",
+          "start": 578,
+          "end": 585
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 611,
+      "end": 744,
+      "text": "盈利能力方面，①毛利率方面，24年公司整体毛利率为27.45%/同比+3.31pct，主要得益于教育服务毛利率显著提升（32.73%，同比+3.91pct），尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+      "quantities": [
+        {
+          "value": "27.45",
+          "unit": "%",
+          "start": 636,
+          "end": 642
+        },
+        {
+          "value": "32.73",
+          "unit": "%",
+          "start": 671,
+          "end": 677
+        },
+        {
+          "value": "9.87",
+          "unit": "%",
+          "start": 710,
+          "end": 715
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司",
+        "支撑公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 611,
+      "end": 744,
+      "text": "盈利能力方面，①毛利率方面，24年公司整体毛利率为27.45%/同比+3.31pct，主要得益于教育服务毛利率显著提升（32.73%，同比+3.91pct），尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+      "quantities": [
+        {
+          "value": "27.45",
+          "unit": "%",
+          "start": 636,
+          "end": 642
+        },
+        {
+          "value": "32.73",
+          "unit": "%",
+          "start": 671,
+          "end": 677
+        },
+        {
+          "value": "9.87",
+          "unit": "%",
+          "start": 710,
+          "end": 715
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司",
+        "支撑公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 611,
+      "end": 744,
+      "text": "盈利能力方面，①毛利率方面，24年公司整体毛利率为27.45%/同比+3.31pct，主要得益于教育服务毛利率显著提升（32.73%，同比+3.91pct），尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+      "quantities": [
+        {
+          "value": "27.45",
+          "unit": "%",
+          "start": 636,
+          "end": 642
+        },
+        {
+          "value": "32.73",
+          "unit": "%",
+          "start": 671,
+          "end": 677
+        },
+        {
+          "value": "9.87",
+          "unit": "%",
+          "start": 710,
+          "end": 715
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司",
+        "支撑公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 611,
+      "end": 744,
+      "text": "盈利能力方面，①毛利率方面，24年公司整体毛利率为27.45%/同比+3.31pct，主要得益于教育服务毛利率显著提升（32.73%，同比+3.91pct），尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+      "quantities": [
+        {
+          "value": "27.45",
+          "unit": "%",
+          "start": 636,
+          "end": 642
+        },
+        {
+          "value": "32.73",
+          "unit": "%",
+          "start": 671,
+          "end": 677
+        },
+        {
+          "value": "9.87",
+          "unit": "%",
+          "start": 710,
+          "end": 715
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司",
+        "支撑公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 611,
+      "end": 744,
+      "text": "盈利能力方面，①毛利率方面，24年公司整体毛利率为27.45%/同比+3.31pct，主要得益于教育服务毛利率显著提升（32.73%，同比+3.91pct），尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。",
+      "quantities": [
+        {
+          "value": "27.45",
+          "unit": "%",
+          "start": 636,
+          "end": 642
+        },
+        {
+          "value": "32.73",
+          "unit": "%",
+          "start": 671,
+          "end": 677
+        },
+        {
+          "value": "9.87",
+          "unit": "%",
+          "start": 710,
+          "end": 715
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司",
+        "支撑公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 744,
+      "end": 869,
+      "text": "尽管培训业务毛利率同比-5.24pct至9.87%，但②费率方面，24年公司三费率为28.05%/同比-10.77pct，其中销售/管理/财务费用率分别1.72%/14.83%/11.50%，同比-0.94pct/-4.56pct/-5.27pct。",
+      "quantities": [
+        {
+          "value": "9.87",
+          "unit": "%",
+          "start": 764,
+          "end": 769
+        },
+        {
+          "value": "28.05",
+          "unit": "%",
+          "start": 786,
+          "end": 792
+        },
+        {
+          "value": "1.72",
+          "unit": "%",
+          "start": 820,
+          "end": 825
+        },
+        {
+          "value": "14.83",
+          "unit": "%",
+          "start": 826,
+          "end": 832
+        },
+        {
+          "value": "11.50",
+          "unit": "%",
+          "start": 833,
+          "end": 839
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 869,
+      "end": 904,
+      "text": "③净利率方面，24年公司净利率为-10.87%/同比+8.22pct。",
+      "quantities": [
+        {
+          "value": "-10.87",
+          "unit": "%",
+          "start": 885,
+          "end": 892
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 869,
+      "end": 904,
+      "text": "③净利率方面，24年公司净利率为-10.87%/同比+8.22pct。",
+      "quantities": [
+        {
+          "value": "-10.87",
+          "unit": "%",
+          "start": 885,
+          "end": 892
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 931,
+      "end": 991,
+      "text": "25Q1实现营收0.91亿元/同比+17.68%，归母净利润46.84万元，去年同期为-353.82万元，实现同比扭亏；",
+      "quantities": [
+        {
+          "value": "0.91",
+          "unit": "亿元",
+          "start": 939,
+          "end": 945
+        },
+        {
+          "value": "+17.68",
+          "unit": "%",
+          "start": 948,
+          "end": 955
+        },
+        {
+          "value": "46.84",
+          "unit": "万元",
+          "start": 961,
+          "end": 968
+        },
+        {
+          "value": "-353.82",
+          "unit": "万元",
+          "start": 974,
+          "end": 983
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 931,
+      "end": 991,
+      "text": "25Q1实现营收0.91亿元/同比+17.68%，归母净利润46.84万元，去年同期为-353.82万元，实现同比扭亏；",
+      "quantities": [
+        {
+          "value": "0.91",
+          "unit": "亿元",
+          "start": 939,
+          "end": 945
+        },
+        {
+          "value": "+17.68",
+          "unit": "%",
+          "start": 948,
+          "end": 955
+        },
+        {
+          "value": "46.84",
+          "unit": "万元",
+          "start": 961,
+          "end": 968
+        },
+        {
+          "value": "-353.82",
+          "unit": "万元",
+          "start": 974,
+          "end": 983
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 991,
+      "end": 1034,
+      "text": "扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。",
+      "quantities": [
+        {
+          "value": "6.32",
+          "unit": "万元",
+          "start": 998,
+          "end": 1004
+        },
+        {
+          "value": "-433.82",
+          "unit": "万元",
+          "start": 1010,
+          "end": 1019
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1034,
+      "end": 1109,
+      "text": "25Q1毛利率32.40%/同比+5.68pct，三费率22.83%/同比-7.04pct，费用结构持续优化，净利率同比+5.20pct至0.60%。",
+      "quantities": [
+        {
+          "value": "32.40",
+          "unit": "%",
+          "start": 1041,
+          "end": 1047
+        },
+        {
+          "value": "22.83",
+          "unit": "%",
+          "start": 1062,
+          "end": 1068
+        },
+        {
+          "value": "0.60",
+          "unit": "%",
+          "start": 1103,
+          "end": 1108
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1034,
+      "end": 1109,
+      "text": "25Q1毛利率32.40%/同比+5.68pct，三费率22.83%/同比-7.04pct，费用结构持续优化，净利率同比+5.20pct至0.60%。",
+      "quantities": [
+        {
+          "value": "32.40",
+          "unit": "%",
+          "start": 1041,
+          "end": 1047
+        },
+        {
+          "value": "22.83",
+          "unit": "%",
+          "start": 1062,
+          "end": 1068
+        },
+        {
+          "value": "0.60",
+          "unit": "%",
+          "start": 1103,
+          "end": 1108
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1144,
+      "end": 1219,
+      "text": "K12学校运营作为公司主业保持强劲增长，2024年教育服务业务实现收入2.60亿元/同比+41.86%，毛利率提升至32.73%（+3.91pct）。",
+      "quantities": [
+        {
+          "value": "2.60",
+          "unit": "亿元",
+          "start": 1179,
+          "end": 1185
+        },
+        {
+          "value": "+41.86",
+          "unit": "%",
+          "start": 1188,
+          "end": 1195
+        },
+        {
+          "value": "32.73",
+          "unit": "%",
+          "start": 1202,
+          "end": 1208
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "学校运营作为公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2111,
+      "end": 2200,
+      "text": "预计2025-2027年公司归母净利润分别为0.25/0.53/0.77亿元，EPS分别为0.04/0.09/0.13元，对应目前PE分别为114/55/37，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "0.77",
+          "unit": "亿元",
+          "start": 2143,
+          "end": 2149
+        },
+        {
+          "value": "0.13",
+          "unit": "元",
+          "start": 2166,
+          "end": 2171
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2250,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2250,
+    "processed_ranges": [
+      [
+        0,
+        2250
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2250,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 29,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.003459,
+  "source_content_sha256": "a8b0ae9b6fc16631db46ffe42f9ffce09b674043924300210fc6615b99448968"
+}

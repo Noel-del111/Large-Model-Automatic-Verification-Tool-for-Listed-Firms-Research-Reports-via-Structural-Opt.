@@ -1,0 +1,554 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000337",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "一年只有四个季度，Q5不成立，且前文对应的是2025年第一季度。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 151,
+          "end": 233,
+          "text": "2025年Q5，公司实现营业收入45.91亿元，同比-10.91%；实现归母净利润1.79亿元，同比-32.59%；实现扣非净利润1.71亿元，同比-34.94%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年Q5，公司实现营业收入45.91亿元，同比-10.91%；实现归母净利润1.79亿元，同比-32.59%；实现扣非净利润1.71亿元，同比-34.94%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 151,
+          "end": 233,
+          "text": "2025年Q5，公司实现营业收入45.91亿元，同比-10.91%；实现归母净利润1.79亿元，同比-32.59%；实现扣非净利润1.71亿元，同比-34.94%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ff361c132bd5cf596323d245",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目”连续重复，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 697,
+          "end": 790,
+          "text": "当前，公司积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目，积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目，通过构建LTP中心，实施全自动化产线，提升公司的长期竞争力。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "当前，公司积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目，积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目，通过构建LTP中心，实施全自动化产线，提升公司的长期竞争力。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 697,
+          "end": 790,
+          "text": "当前，公司积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目，积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目，通过构建LTP中心，实施全自动化产线，提升公司的长期竞争力。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d78d7e61f0d2d8a1deda68ea",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“2024年毛利率%”仅有百分号而无具体数值，关键财务指标数据缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 611,
+          "end": 697,
+          "text": "2024年毛利率%，同比-2.64pct；净利率5.15%，同比-4.61pct，25Q1毛利率14.30%，同比-0.96pct；净利率3.90%，同比-1.33pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年毛利率%，同比-2.64pct；净利率5.15%，同比-4.61pct，25Q1毛利率14.30%，同比-0.96pct；净利率3.90%，同比-1.33pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 611,
+          "end": 697,
+          "text": "2024年毛利率%，同比-2.64pct；净利率5.15%，同比-4.61pct，25Q1毛利率14.30%，同比-0.96pct；净利率3.90%，同比-1.33pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2c9e48458d837c4b6c74fdac",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1372
+        ]
+      ],
+      "estimated_input_tokens": 5841,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:21:39.295789+00:00",
+        "request_sha256": "41f7213fd9e49ee97eab331553557f0db817fe5007751ead247a3c61caedafbf",
+        "input_token_estimate": 16290,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278434",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d2d3c6a82b5145a4a66cce29d8f0f455",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3840,
+        "output_tokens": 3888,
+        "usage_source": "provider",
+        "duration_seconds": 14.462841,
+        "cost_cny": "0.019392",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年Q5，公司实现营业收入45.91亿元，同比-10.91%；实现归母净利润1.79亿元，同比-32.59%；实现扣非净利润1.71亿元，同比-34.94%。"
+          }
+        ],
+        "reason": "一年只有四个季度，Q5不成立，且前文对应的是2025年第一季度。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "当前，公司积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目，积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目，通过构建LTP中心，实施全自动化产线，提升公司的长期竞争力。"
+          }
+        ],
+        "reason": "“积极推进高端制造转型，重点投资于数字化转型和灯塔工厂项目”连续重复，无新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年毛利率%，同比-2.64pct；净利率5.15%，同比-4.61pct，25Q1毛利率14.30%，同比-0.96pct；净利率3.90%，同比-1.33pct。"
+          }
+        ],
+        "reason": "“2024年毛利率%”仅有百分号而无具体数值，关键财务指标数据缺失。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 44,
+      "end": 101,
+      "text": "近日，中集车辆发布2024年报和2025年第一季度报，2024年实现营业收入209.98亿元，同比-16.30%；",
+      "quantities": [
+        {
+          "value": "209.98",
+          "unit": "亿元",
+          "start": 82,
+          "end": 90
+        },
+        {
+          "value": "-16.30",
+          "unit": "%",
+          "start": 93,
+          "end": 100
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年第一季度",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 101,
+      "end": 126,
+      "text": "实现归母净利润10.85亿元，同比-55.80%；",
+      "quantities": [
+        {
+          "value": "10.85",
+          "unit": "亿元",
+          "start": 108,
+          "end": 115
+        },
+        {
+          "value": "-55.80",
+          "unit": "%",
+          "start": 118,
+          "end": 125
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 126,
+      "end": 151,
+      "text": "实现扣非净利润10.79亿元，同比-30.56%。",
+      "quantities": [
+        {
+          "value": "10.79",
+          "unit": "亿元",
+          "start": 133,
+          "end": 140
+        },
+        {
+          "value": "-30.56",
+          "unit": "%",
+          "start": 143,
+          "end": 150
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 151,
+      "end": 185,
+      "text": "2025年Q5，公司实现营业收入45.91亿元，同比-10.91%；",
+      "quantities": [
+        {
+          "value": "45.91",
+          "unit": "亿元",
+          "start": 167,
+          "end": 174
+        },
+        {
+          "value": "-10.91",
+          "unit": "%",
+          "start": 177,
+          "end": 184
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 185,
+      "end": 209,
+      "text": "实现归母净利润1.79亿元，同比-32.59%；",
+      "quantities": [
+        {
+          "value": "1.79",
+          "unit": "亿元",
+          "start": 192,
+          "end": 198
+        },
+        {
+          "value": "-32.59",
+          "unit": "%",
+          "start": 201,
+          "end": 208
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 209,
+      "end": 233,
+      "text": "实现扣非净利润1.71亿元，同比-34.94%。",
+      "quantities": [
+        {
+          "value": "1.71",
+          "unit": "亿元",
+          "start": 216,
+          "end": 222
+        },
+        {
+          "value": "-34.94",
+          "unit": "%",
+          "start": 225,
+          "end": 232
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 257,
+      "end": 314,
+      "text": "分产品来看，2024年全球半挂车收入149.52亿元，同比下降20.49%，但国内半挂车销量同比上升12%，营收\n",
+      "quantities": [
+        {
+          "value": "149.52",
+          "unit": "亿元",
+          "start": 275,
+          "end": 283
+        },
+        {
+          "value": "20.49",
+          "unit": "%",
+          "start": 288,
+          "end": 294
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 307,
+          "end": 310
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 611,
+      "end": 632,
+      "text": "2024年毛利率%，同比-2.64pct；",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 632,
+      "end": 677,
+      "text": "净利率5.15%，同比-4.61pct，25Q1毛利率14.30%，同比-0.96pct；",
+      "quantities": [
+        {
+          "value": "5.15",
+          "unit": "%",
+          "start": 635,
+          "end": 640
+        },
+        {
+          "value": "14.30",
+          "unit": "%",
+          "start": 659,
+          "end": 665
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 632,
+      "end": 677,
+      "text": "净利率5.15%，同比-4.61pct，25Q1毛利率14.30%，同比-0.96pct；",
+      "quantities": [
+        {
+          "value": "5.15",
+          "unit": "%",
+          "start": 635,
+          "end": 640
+        },
+        {
+          "value": "14.30",
+          "unit": "%",
+          "start": 659,
+          "end": 665
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 677,
+      "end": 697,
+      "text": "净利率3.90%，同比-1.33pct。",
+      "quantities": [
+        {
+          "value": "3.90",
+          "unit": "%",
+          "start": 680,
+          "end": 685
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1173,
+      "end": 1217,
+      "text": "我们预计公司2025-2027年营收分别为215.56、228.11、248.92亿元；",
+      "quantities": [
+        {
+          "value": "248.92",
+          "unit": "亿元",
+          "start": 1208,
+          "end": 1216
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1217,
+      "end": 1304,
+      "text": "归母净利润分别为11.51亿元、12.94亿元、15.07亿元，EPS分别为0.61、0.69、0.80元，对应PE分别为13、12、10倍，首次覆盖，给予“增持-A”评级。",
+      "quantities": [
+        {
+          "value": "11.51",
+          "unit": "亿元",
+          "start": 1225,
+          "end": 1232
+        },
+        {
+          "value": "12.94",
+          "unit": "亿元",
+          "start": 1233,
+          "end": 1240
+        },
+        {
+          "value": "15.07",
+          "unit": "亿元",
+          "start": 1241,
+          "end": 1248
+        },
+        {
+          "value": "0.80",
+          "unit": "元",
+          "start": 1265,
+          "end": 1270
+        },
+        {
+          "value": "10",
+          "unit": "倍",
+          "start": 1284,
+          "end": 1287
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1372,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1372,
+    "processed_ranges": [
+      [
+        0,
+        1372
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1372,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 13,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002186,
+  "source_content_sha256": "08c96497bad766f57a695e596d2133435d586bc2cf4bc10bc37eeb139b45ff5c"
+}

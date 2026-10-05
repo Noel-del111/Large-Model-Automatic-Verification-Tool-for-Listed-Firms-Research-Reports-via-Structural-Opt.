@@ -1,0 +1,285 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000656",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“129年”本身不成立，不是合法可用的日期时间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 42,
+          "end": 108,
+          "text": "129年5月29日，DeepSeek在开源平台HuggingFace发布了其R1模型的最新版本——DeepSeek-R1-0528。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "129年5月29日，DeepSeek在开源平台HuggingFace发布了其R1模型的最新版本——DeepSeek-R1-0528。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 42,
+          "end": 108,
+          "text": "129年5月29日，DeepSeek在开源平台HuggingFace发布了其R1模型的最新版本——DeepSeek-R1-0528。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aa369af35a6c36f2f5de9167",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "70%到87.5%是上升，却表述为“下降至”，与数值变化方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 277,
+          "end": 333,
+          "text": "AIME2025成绩跃升：在高阶数学测试AIME2025中，R1-0528准确率从旧版的70%下降至87.5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "AIME2025成绩跃升：在高阶数学测试AIME2025中，R1-0528准确率从旧版的70%下降至87.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 277,
+          "end": 333,
+          "text": "AIME2025成绩跃升：在高阶数学测试AIME2025中，R1-0528准确率从旧版的70%下降至87.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "63f76fc966da907453008c98",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "前值“12K”带单位K，后值“23”缺少K，量纲不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 335,
+          "end": 386,
+          "text": "token使用量翻倍：平均每题思考token数从12K增加至23，反映出更复杂、更深入的思维路径建构。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "token使用量翻倍：平均每题思考token数从12K增加至23，反映出更复杂、更深入的思维路径建构。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 335,
+          "end": 386,
+          "text": "token使用量翻倍：平均每题思考token数从12K增加至23，反映出更复杂、更深入的思维路径建构。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "49c2b588e9b9ff75875c619e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "第3条风险提示序号后无具体内容，属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 898,
+          "end": 927,
+          "text": "风险提示：1）AI需求不及预期；2）地缘政治环境干扰；3）"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "风险提示：1）AI需求不及预期；2）地缘政治环境干扰；3）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 898,
+          "end": 927,
+          "text": "风险提示：1）AI需求不及预期；2）地缘政治环境干扰；3）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f9fa3a9277ff0c391397fe56",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          927
+        ]
+      ],
+      "estimated_input_tokens": 5330,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:40:07.910898+00:00",
+        "request_sha256": "cfca05f64f616edcdf3d48afdbd7dbf4c1b08e029f3d4db0da57eb3b73e36768",
+        "input_token_estimate": 14909,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277053",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1840ce6037a144678a3eee8c5ba6c28d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3576,
+        "output_tokens": 3346,
+        "usage_source": "provider",
+        "duration_seconds": 13.887003,
+        "cost_cny": "0.01696",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "129年5月29日，DeepSeek在开源平台HuggingFace发布了其R1模型的最新版本——DeepSeek-R1-0528。"
+          }
+        ],
+        "reason": "年份“129年”本身不成立，不是合法可用的日期时间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "AIME2025成绩跃升：在高阶数学测试AIME2025中，R1-0528准确率从旧版的70%下降至87.5%。"
+          }
+        ],
+        "reason": "70%到87.5%是上升，却表述为“下降至”，与数值变化方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "token使用量翻倍：平均每题思考token数从12K增加至23，反映出更复杂、更深入的思维路径建构。"
+          }
+        ],
+        "reason": "前值“12K”带单位K，后值“23”缺少K，量纲不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "风险提示：1）AI需求不及预期；2）地缘政治环境干扰；3）"
+          }
+        ],
+        "reason": "第3条风险提示序号后无具体内容，属性值为空。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 927,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 927,
+    "processed_ranges": [
+      [
+        0,
+        927
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 927,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001415,
+  "source_content_sha256": "b57094fd72abaa0d10a46f70420effafe06d069f48786461fb2f3835c58baa35"
+}

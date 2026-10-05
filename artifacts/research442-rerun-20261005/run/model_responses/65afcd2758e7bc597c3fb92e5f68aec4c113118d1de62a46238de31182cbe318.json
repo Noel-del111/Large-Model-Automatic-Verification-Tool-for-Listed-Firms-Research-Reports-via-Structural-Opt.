@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"4月31日，中央政治局会议提出统筹研究消化存量房产和优化增量住房的政策措施，具备方向性意义，令人联想到2014年的“去库存”。\"}], \"reason\": \"4月只有30天，不存在4月31日。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。\"}], \"reason\": \"时间区间起点5月5日晚于终点4月29日，起止倒置。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"2024.5.5-2024.4.29期间，房地产板块91只个股上涨，18只个股下跌，1只个股持平，占比分别为83%、16%、5%。\"}], \"reason\": \"91+18+1=110只，1只持平占比约0.9%，非5%；且83%+16%+5%超过100%。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"个股端推荐贝壳W、华润置地、龙湖集团、滨江集团、华发股份、华润置地、保利发展。\"}], \"reason\": \"推荐个股列表中华润置地重复出现，无新增信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:41:19.956251+00:00",
+    "request_sha256": "b644117d743d7abd939f53b26b1a22ef40e44fb2f43beb2932684e7e9e8ad2c2",
+    "input_token_estimate": 16008,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278152",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ab62e71b2d514a648aa59f2c8fbe9e95",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3755,
+    "output_tokens": 4233,
+    "usage_source": "provider",
+    "duration_seconds": 16.670161,
+    "cost_cny": "0.020687"
+  },
+  "cache_request": {
+    "key": "65afcd2758e7bc597c3fb92e5f68aec4c113118d1de62a46238de31182cbe318",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b644117d743d7abd939f53b26b1a22ef40e44fb2f43beb2932684e7e9e8ad2c2"
+  }
+}

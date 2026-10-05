@@ -1,0 +1,472 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000411",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一公司业务与产品描述连续出现两次，内容完全重复，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 71,
+          "end": 149,
+          "text": "公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。"
+        },
+        {
+          "kind": "source_text",
+          "start": 149,
+          "end": 227,
+          "text": "公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。",
+          "start": 71,
+          "end": 149
+        },
+        {
+          "text": "公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。",
+          "start": 149,
+          "end": 227
+        }
+      ],
+      "spans": [
+        {
+          "start": 71,
+          "end": 149,
+          "text": "公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。"
+        },
+        {
+          "start": 149,
+          "end": 227,
+          "text": "公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。"
+        }
+      ],
+      "warnings": [],
+      "id": "85cf296238ba241307aa7cad",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“2025年6-1月”起点6月晚于终点1月，月份区间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 360,
+          "end": 434,
+          "text": "根据公司管理层初步预测，公司2025年6-1月营业收入较上年同期增长22.27%至29.68%，归母净利润较上年同期增长13.92%至19.28%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据公司管理层初步预测，公司2025年6-1月营业收入较上年同期增长22.27%至29.68%，归母净利润较上年同期增长13.92%至19.28%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 360,
+          "end": 434,
+          "text": "根据公司管理层初步预测，公司2025年6-1月营业收入较上年同期增长22.27%至29.68%，归母净利润较上年同期增长13.92%至19.28%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "34deaf097684d1f556e06262",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "归母净利润三年对应四个YOY；且1.01→1.21约19.80%、1.21→1.54约27.27%，与20.61%、26.38%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 227,
+          "end": 360,
+          "text": "公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 227,
+          "end": 360,
+          "text": "公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d21ce833d5ad5ad40f57e6aa",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1768
+        ]
+      ],
+      "estimated_input_tokens": 6351,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:37:02.639347+00:00",
+        "request_sha256": "1c317e39e8fd743d1ed791b664e7fa681d66153542591d818829fe6206fb85ca",
+        "input_token_estimate": 17641,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279785",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9ab0a63627cd41cf9dfd32effef6e01f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4073,
+        "output_tokens": 12849,
+        "usage_source": "provider",
+        "duration_seconds": 51.591463,
+        "cost_cny": "0.055469"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。",
+            "start": 71,
+            "end": 149
+          },
+          {
+            "text": "公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。",
+            "start": 149,
+            "end": 227
+          }
+        ],
+        "reason": "同一公司业务与产品描述连续出现两次，内容完全重复，无新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据公司管理层初步预测，公司2025年6-1月营业收入较上年同期增长22.27%至29.68%，归母净利润较上年同期增长13.92%至19.28%。"
+          }
+        ],
+        "reason": "“2025年6-1月”起点6月晚于终点1月，月份区间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。"
+          }
+        ],
+        "reason": "归母净利润三年对应四个YOY；且1.01→1.21约19.80%、1.21→1.54约27.27%，与20.61%、26.38%不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 227,
+      "end": 298,
+      "text": "公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；",
+      "quantities": [
+        {
+          "value": "10.19",
+          "unit": "亿元",
+          "start": 247,
+          "end": 254
+        },
+        {
+          "value": "9.37",
+          "unit": "亿元",
+          "start": 255,
+          "end": 261
+        },
+        {
+          "value": "12.30",
+          "unit": "亿元",
+          "start": 262,
+          "end": 269
+        },
+        {
+          "value": "-18.43",
+          "unit": "%",
+          "start": 276,
+          "end": 283
+        },
+        {
+          "value": "-8.02",
+          "unit": "%",
+          "start": 284,
+          "end": 290
+        },
+        {
+          "value": "31.26",
+          "unit": "%",
+          "start": 291,
+          "end": 297
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 298,
+      "end": 360,
+      "text": "实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。",
+      "quantities": [
+        {
+          "value": "1.01",
+          "unit": "亿元",
+          "start": 305,
+          "end": 311
+        },
+        {
+          "value": "1.21",
+          "unit": "亿元",
+          "start": 312,
+          "end": 318
+        },
+        {
+          "value": "1.54",
+          "unit": "亿元",
+          "start": 319,
+          "end": 325
+        },
+        {
+          "value": "-4.60",
+          "unit": "%",
+          "start": 332,
+          "end": 338
+        },
+        {
+          "value": "20.61",
+          "unit": "%",
+          "start": 339,
+          "end": 345
+        },
+        {
+          "value": "26.38",
+          "unit": "%",
+          "start": 346,
+          "end": 352
+        },
+        {
+          "value": "21.38",
+          "unit": "%",
+          "start": 353,
+          "end": 359
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 360,
+      "end": 434,
+      "text": "根据公司管理层初步预测，公司2025年6-1月营业收入较上年同期增长22.27%至29.68%，归母净利润较上年同期增长13.92%至19.28%。",
+      "quantities": [
+        {
+          "value": "22.27",
+          "unit": "%",
+          "start": 394,
+          "end": 400
+        },
+        {
+          "value": "29.68",
+          "unit": "%",
+          "start": 401,
+          "end": 407
+        },
+        {
+          "value": "13.92",
+          "unit": "%",
+          "start": 420,
+          "end": 426
+        },
+        {
+          "value": "19.28",
+          "unit": "%",
+          "start": 427,
+          "end": 433
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "根据公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 360,
+      "end": 434,
+      "text": "根据公司管理层初步预测，公司2025年6-1月营业收入较上年同期增长22.27%至29.68%，归母净利润较上年同期增长13.92%至19.28%。",
+      "quantities": [
+        {
+          "value": "22.27",
+          "unit": "%",
+          "start": 394,
+          "end": 400
+        },
+        {
+          "value": "29.68",
+          "unit": "%",
+          "start": 401,
+          "end": 407
+        },
+        {
+          "value": "13.92",
+          "unit": "%",
+          "start": 420,
+          "end": 426
+        },
+        {
+          "value": "19.28",
+          "unit": "%",
+          "start": 427,
+          "end": 433
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "根据公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1562,
+      "end": 1627,
+      "text": "从上述可比公司来看，2024年度可比公司的平均收入规模为36.51亿元、平均PE-TTM为33.05X、销售毛利率为22.40%；",
+      "quantities": [
+        {
+          "value": "36.51",
+          "unit": "亿元",
+          "start": 1590,
+          "end": 1597
+        },
+        {
+          "value": "22.40",
+          "unit": "%",
+          "start": 1620,
+          "end": 1626
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "从上述可比公司",
+        "年度可比公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1768,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1768,
+    "processed_ranges": [
+      [
+        0,
+        1768
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 51.61454,
+  "source_content_sha256": "ef18024c4f520013b9a3e455c74c8896c9951a9f364b57100754babc9d919be4"
+}

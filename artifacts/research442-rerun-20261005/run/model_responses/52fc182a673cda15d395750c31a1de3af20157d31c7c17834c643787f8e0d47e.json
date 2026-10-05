@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。\"}], \"reason\": \"股票授予价格通常以元计价，20.6分/股即0.206元/股，货币单位使用错误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"盈利预测：考虑公司2025年限制性股票激励计划的可能影响，我们预计2025-2027年公司归母净利润，，PE分别为13.0X/11.2X/9.9X。\"}], \"reason\": \"归母净利润后连续两个逗号，三个年度的归母净利润数值均缺失。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"会计成本方面，预计将摊销的总费用约2.35亿元，假设2025年6月中旬执行授予，则激励计划预计摊销费用在2028-2025年分别为7157.8/9995.4/4882.0/1497.5万元。\"}], \"reason\": \"摊销年度区间写作“2028-2025年”，起点晚于终点，该时间区间不成立。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。\"}], \"reason\": \"“限制性股票激励计划”后的括号内为空，缺少应填写的文件类型或状态等非数值属性值。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:02:58.302727+00:00",
+    "request_sha256": "5ccf010ccdfb22e0d6c4d58f58f85ced07e5f326a41230b95bfffc2db02aa4b3",
+    "input_token_estimate": 15545,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277689",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c116bfb7ad4642818665c6d84b3fc2dc",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3664,
+    "output_tokens": 6660,
+    "usage_source": "provider",
+    "duration_seconds": 27.688219,
+    "cost_cny": "0.030304"
+  },
+  "cache_request": {
+    "key": "52fc182a673cda15d395750c31a1de3af20157d31c7c17834c643787f8e0d47e",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5ccf010ccdfb22e0d6c4d58f58f85ced07e5f326a41230b95bfffc2db02aa4b3"
+  }
+}

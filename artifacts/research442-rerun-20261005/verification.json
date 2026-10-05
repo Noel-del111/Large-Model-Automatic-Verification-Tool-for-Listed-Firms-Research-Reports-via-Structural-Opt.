@@ -1,0 +1,26 @@
+{
+  "batch": "research442-rerun-20261005",
+  "queued_documents": 442,
+  "prediction_counts": {
+    "legacy_rules": 442,
+    "model_direct": 442,
+    "hybrid": 442
+  },
+  "response_status": {
+    "ok": 442
+  },
+  "fingerprints_verified": {
+    "inputs": true,
+    "examples": true,
+    "source": true,
+    "baseline": true
+  },
+  "old_batch_recovered": false,
+  "excluded": [
+    "local_model_config.json",
+    "model_usage.sqlite3",
+    "smoke run"
+  ],
+  "credential_scan": "pattern scan passed; explicit source allowlist",
+  "publication_authorization": "User explicitly authorized public inputs, gold and model responses in chat on 2026-10-05"
+}

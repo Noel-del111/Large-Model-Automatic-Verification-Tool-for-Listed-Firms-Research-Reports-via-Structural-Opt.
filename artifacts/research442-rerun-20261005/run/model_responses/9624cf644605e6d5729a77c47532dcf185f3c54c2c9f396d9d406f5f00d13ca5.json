@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"2024年9月31日以来，高层持续出台稳增长政策，降准降息，且加大房地产的支持政策，力度和密集程度高于以往，且强化对资本市场的重视和政策支持；\"}], \"reason\": \"2024年9月只有30天，不存在9月31日，该日期不成立。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"但当前焦化厂开工率并未出现明显下滑，铁水日均产量仍保持在/吨水平，预计焦煤价格仍有支撑。\"}], \"reason\": \"“保持在/吨水平”中斜杠前缺少铁水日均产量的具体数值。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"本周要闻回顾：煤价企稳和环渤海港去库，否极泰来重视煤炭配置，否极泰来重视煤炭配置\"}], \"reason\": \"同一回顾段落内“否极泰来重视煤炭配置”连续重复一次，无新增信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:15:30.930282+00:00",
+    "request_sha256": "f162c6a79af2719987daa288c9643015a3dfb661afa35e19f197436216ab62c3",
+    "input_token_estimate": 18534,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280678",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "5103ef36e6a946c39aa6b725618133e7",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4370,
+    "output_tokens": 5929,
+    "usage_source": "provider",
+    "duration_seconds": 22.834201,
+    "cost_cny": "0.028086"
+  },
+  "cache_request": {
+    "key": "9624cf644605e6d5729a77c47532dcf185f3c54c2c9f396d9d406f5f00d13ca5",
+    "purpose": "text_review.detect",
+    "messages_sha256": "f162c6a79af2719987daa288c9643015a3dfb661afa35e19f197436216ab62c3"
+  }
+}

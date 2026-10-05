@@ -1,0 +1,559 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000461",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "营业收入单位写作“亿分”，应为“亿元”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 159,
+          "end": 196,
+          "text": "2024 年公司实现总营业收入 64.37 亿分，同比减少 20.33%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024 年公司实现总营业收入 64.37 亿分，同比减少 20.33%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 159,
+          "end": 196,
+          "text": "2024 年公司实现总营业收入 64.37 亿分，同比减少 20.33%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d17ca8dc80a227be682fc2ae",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "分项加总8.9+1+8.4+1.3=19.6亿元，与新增订单总额15.7亿元不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 449,
+          "end": 542,
+          "text": "2025Q1 公司实现新增订单 15.7 亿元，其中余热锅炉新增订单 8.9 亿元，清洁环保能源装备新增订单 1 亿元，解决方案新增订单 8.4 亿元，备件及服务新增订单 1.3 亿元；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1 公司实现新增订单 15.7 亿元，其中余热锅炉新增订单 8.9 亿元，清洁环保能源装备新增订单 1 亿元，解决方案新增订单 8.4 亿元，备件及服务新增订单 1.3 亿元；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 449,
+          "end": 542,
+          "text": "2025Q1 公司实现新增订单 15.7 亿元，其中余热锅炉新增订单 8.9 亿元，清洁环保能源装备新增订单 1 亿元，解决方案新增订单 8.4 亿元，备件及服务新增订单 1.3 亿元；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "66373f1e2ada2f0e8ff8a607",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "前文已述“继国务院印发大规模设备更新改造政策以来”及积极关注争取业务机会，此处重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 904,
+          "end": 941,
+          "text": "继国务院印发大规模设备更新改造政策以来，公司正积极关注并争取相关业务机会。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "继国务院印发大规模设备更新改造政策以来，公司正积极关注并争取相关业务机会。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 904,
+          "end": 941,
+          "text": "继国务院印发大规模设备更新改造政策以来，公司正积极关注并争取相关业务机会。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "55ed9d66dd7c333c17d6fddd",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1718
+        ]
+      ],
+      "estimated_input_tokens": 6124,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:18:41.155972+00:00",
+        "request_sha256": "e24da44f10ba13b7322b1ab29cf8aac3b85968d3640f7c0adcafbe47612cbfa0",
+        "input_token_estimate": 17093,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279237",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "45c7cef5744a449ea8d04b7ac482783f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4103,
+        "output_tokens": 10895,
+        "usage_source": "provider",
+        "duration_seconds": 40.497472,
+        "cost_cny": "0.047683"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024 年公司实现总营业收入 64.37 亿分，同比减少 20.33%；"
+          }
+        ],
+        "reason": "营业收入单位写作“亿分”，应为“亿元”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2025Q1 公司实现新增订单 15.7 亿元，其中余热锅炉新增订单 8.9 亿元，清洁环保能源装备新增订单 1 亿元，解决方案新增订单 8.4 亿元，备件及服务新增订单 1.3 亿元；"
+          }
+        ],
+        "reason": "分项加总8.9+1+8.4+1.3=19.6亿元，与新增订单总额15.7亿元不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "继国务院印发大规模设备更新改造政策以来，公司正积极关注并争取相关业务机会。"
+          }
+        ],
+        "reason": "前文已述“继国务院印发大规模设备更新改造政策以来”及积极关注争取业务机会，此处重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 129,
+      "end": 196,
+      "text": "2） 公司发布 2024 年度报告及 2025 年一季报， 2024 年公司实现总营业收入 64.37 亿分，同比减少 20.33%；",
+      "quantities": [
+        {
+          "value": "20.33",
+          "unit": "%",
+          "start": 189,
+          "end": 195
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 196,
+      "end": 224,
+      "text": "实现归母净利润 4.40 亿元，同比增长705.74%；",
+      "quantities": [
+        {
+          "value": "4.40",
+          "unit": "亿元",
+          "start": 204,
+          "end": 211
+        },
+        {
+          "value": "705.74",
+          "unit": "%",
+          "start": 216,
+          "end": 223
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 224,
+      "end": 256,
+      "text": "实现扣非归母净利润 1.44 亿元，同比增长 1436.69%；",
+      "quantities": [
+        {
+          "value": "1.44",
+          "unit": "亿元",
+          "start": 234,
+          "end": 241
+        },
+        {
+          "value": "1436.69",
+          "unit": "%",
+          "start": 247,
+          "end": 255
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 256,
+      "end": 287,
+      "text": "实现基本每股收益 0.60 元/股，同比增长 757.14%。",
+      "quantities": [
+        {
+          "value": "0.60",
+          "unit": "元/股",
+          "start": 265,
+          "end": 273
+        },
+        {
+          "value": "757.14",
+          "unit": "%",
+          "start": 279,
+          "end": 286
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 287,
+      "end": 328,
+      "text": " 2025 年一季度，公司实现总营业收入 12.13 亿元，同比增长 5.32%；",
+      "quantities": [
+        {
+          "value": "12.13",
+          "unit": "亿元",
+          "start": 308,
+          "end": 316
+        },
+        {
+          "value": "5.32",
+          "unit": "%",
+          "start": 322,
+          "end": 327
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 328,
+      "end": 356,
+      "text": "实现归母净利润 0.54 亿元，同比减少 79.18%；",
+      "quantities": [
+        {
+          "value": "0.54",
+          "unit": "亿元",
+          "start": 336,
+          "end": 343
+        },
+        {
+          "value": "79.18",
+          "unit": "%",
+          "start": 349,
+          "end": 355
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 356,
+      "end": 387,
+      "text": "实现扣非归母净利润 0.47 亿元，同比增长 217.11%；",
+      "quantities": [
+        {
+          "value": "0.47",
+          "unit": "亿元",
+          "start": 366,
+          "end": 373
+        },
+        {
+          "value": "217.11",
+          "unit": "%",
+          "start": 379,
+          "end": 386
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 387,
+      "end": 415,
+      "text": " 实现基本每股收益 0.07 元/股，同比减少 80%。",
+      "quantities": [
+        {
+          "value": "0.07",
+          "unit": "元/股",
+          "start": 397,
+          "end": 405
+        },
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 411,
+          "end": 414
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 959,
+      "end": 994,
+      "text": " 2024 年公司整体毛利率 18.47%，同比提升 2.01pct。",
+      "quantities": [
+        {
+          "value": "18.47",
+          "unit": "%",
+          "start": 974,
+          "end": 980
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 994,
+      "end": 1103,
+      "text": "分产品来看，余热锅炉、清洁环保能源装备、解决方案、备件及服务毛利率分别为 17.87%、 23.13%、 12.41%、 26.5%，分别同比+3.76pct、 +5.13pct、 -0.07pct、 +5.8pct。",
+      "quantities": [
+        {
+          "value": "17.87",
+          "unit": "%",
+          "start": 1031,
+          "end": 1037
+        },
+        {
+          "value": "23.13",
+          "unit": "%",
+          "start": 1039,
+          "end": 1045
+        },
+        {
+          "value": "12.41",
+          "unit": "%",
+          "start": 1047,
+          "end": 1053
+        },
+        {
+          "value": "26.5",
+          "unit": "%",
+          "start": 1055,
+          "end": 1060
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1530,
+      "end": 1615,
+      "text": "盈利预测： 我们预计公司 2025-2027 年营业收入分别为 71.71 亿元、79.29 亿元、 85.01 亿元，增速分别为 11.4%、 10.6%、 7.2%；",
+      "quantities": [
+        {
+          "value": "71.71",
+          "unit": "亿元",
+          "start": 1562,
+          "end": 1570
+        },
+        {
+          "value": "79.29",
+          "unit": "亿元",
+          "start": 1571,
+          "end": 1579
+        },
+        {
+          "value": "85.01",
+          "unit": "亿元",
+          "start": 1581,
+          "end": 1589
+        },
+        {
+          "value": "11.4",
+          "unit": "%",
+          "start": 1596,
+          "end": 1601
+        },
+        {
+          "value": "10.6",
+          "unit": "%",
+          "start": 1603,
+          "end": 1608
+        },
+        {
+          "value": "7.2",
+          "unit": "%",
+          "start": 1610,
+          "end": 1614
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1615,
+      "end": 1668,
+      "text": " 归母净利润分别为 4.65、 4.75、 5.15 亿元，增速分别为 5.8%、 2.1%、 8.5%。",
+      "quantities": [
+        {
+          "value": "5.15",
+          "unit": "亿元",
+          "start": 1637,
+          "end": 1644
+        },
+        {
+          "value": "5.8",
+          "unit": "%",
+          "start": 1651,
+          "end": 1655
+        },
+        {
+          "value": "2.1",
+          "unit": "%",
+          "start": 1657,
+          "end": 1661
+        },
+        {
+          "value": "8.5",
+          "unit": "%",
+          "start": 1663,
+          "end": 1667
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1718,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1718,
+    "processed_ranges": [
+      [
+        0,
+        1718
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 40.525564,
+  "source_content_sha256": "da1eaa53ff43bd386b7aec5d93563bc5619517fdd4f30ee943cb65b3d1480d9c"
+}

@@ -1,0 +1,346 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000229",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间范围起始日（3月27日）晚于结束日（3月26日），期间关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 30,
+          "end": 154,
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 30,
+          "end": 154,
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e6d65bf3724ad36bb945113e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "有色金属板块涨9.35%，较上证涨0.53%应领先8.82个百分点，较沪深300涨1.40%应领先7.95个百分点，与文中8.81和6.94不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 30,
+          "end": 154,
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 30,
+          "end": 154,
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "89e501c0403ca0a70a1b435c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "申万一级子行业共31个，排名第41位不可能，且与“排名靠前”自相矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 30,
+          "end": 154,
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 30,
+          "end": 154,
+          "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "283d239a1be3f7e30875f73b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "新能源汽车销量通常以万辆计，88.3辆数量级过小，应为“万辆”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 449,
+          "end": 523,
+          "text": "2024年3月，新能源汽车销量88.3辆，环比大幅上升85.12%；动力电池装车量35GWh，比上年同期上升25.99%，环比大幅上升94.44%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年3月，新能源汽车销量88.3辆，环比大幅上升85.12%；动力电池装车量35GWh，比上年同期上升25.99%，环比大幅上升94.44%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 449,
+          "end": 523,
+          "text": "2024年3月，新能源汽车销量88.3辆，环比大幅上升85.12%；动力电池装车量35GWh，比上年同期上升25.99%，环比大幅上升94.44%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d929775d96b8424f1d6cac9a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“美元指数持续震荡，十年期美国国债实际收益率下降”等宏观描述在板块情况和投资建议中重复出现。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 204,
+          "end": 282,
+          "text": "从宏观经济发展的大背景来看，目前全球经济增速下滑迹象明显，美元指数持续震荡，十年期美国国债实际收益率下降，黄金价格中枢抬升明显，中长期继续看好金价中枢上涨。"
+        },
+        {
+          "kind": "source_text",
+          "start": 530,
+          "end": 649,
+          "text": "目前全球经济增速下滑迹象明显，美联储距离降息时点越来越近，美元指数持续震荡，十年期美国国债实际收益率下降，在长期通胀预期较为平稳的情况下美债实际收益率未来向上空间有限，叠加全球主要发达国家经济体通胀处于较高水平，黄金价格中枢有望持续抬升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从宏观经济发展的大背景来看，目前全球经济增速下滑迹象明显，美元指数持续震荡，十年期美国国债实际收益率下降，黄金价格中枢抬升明显，中长期继续看好金价中枢上涨。"
+        },
+        {
+          "text": "目前全球经济增速下滑迹象明显，美联储距离降息时点越来越近，美元指数持续震荡，十年期美国国债实际收益率下降，在长期通胀预期较为平稳的情况下美债实际收益率未来向上空间有限，叠加全球主要发达国家经济体通胀处于较高水平，黄金价格中枢有望持续抬升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 204,
+          "end": 282,
+          "text": "从宏观经济发展的大背景来看，目前全球经济增速下滑迹象明显，美元指数持续震荡，十年期美国国债实际收益率下降，黄金价格中枢抬升明显，中长期继续看好金价中枢上涨。"
+        },
+        {
+          "start": 530,
+          "end": 649,
+          "text": "目前全球经济增速下滑迹象明显，美联储距离降息时点越来越近，美元指数持续震荡，十年期美国国债实际收益率下降，在长期通胀预期较为平稳的情况下美债实际收益率未来向上空间有限，叠加全球主要发达国家经济体通胀处于较高水平，黄金价格中枢有望持续抬升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8ce024ed4ff0c170a6ea60bf",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          745
+        ]
+      ],
+      "estimated_input_tokens": 4314,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:20:33.933121+00:00",
+        "request_sha256": "21d3d15de17183c06bec852dd371751cc5d0a86e29834bc6294af359127ccb88",
+        "input_token_estimate": 11871,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.274015",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "11d1af51de7f4faf92fead6244ceb519",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 2771,
+        "output_tokens": 7486,
+        "usage_source": "provider",
+        "duration_seconds": 28.439469,
+        "cost_cny": "0.032715"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+          }
+        ],
+        "reason": "时间范围起始日（3月27日）晚于结束日（3月26日），期间关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+          }
+        ],
+        "reason": "有色金属板块涨9.35%，较上证涨0.53%应领先8.82个百分点，较沪深300涨1.40%应领先7.95个百分点，与文中8.81和6.94不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。"
+          }
+        ],
+        "reason": "申万一级子行业共31个，排名第41位不可能，且与“排名靠前”自相矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年3月，新能源汽车销量88.3辆，环比大幅上升85.12%；动力电池装车量35GWh，比上年同期上升25.99%，环比大幅上升94.44%。"
+          }
+        ],
+        "reason": "新能源汽车销量通常以万辆计，88.3辆数量级过小，应为“万辆”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "从宏观经济发展的大背景来看，目前全球经济增速下滑迹象明显，美元指数持续震荡，十年期美国国债实际收益率下降，黄金价格中枢抬升明显，中长期继续看好金价中枢上涨。"
+          },
+          {
+            "text": "目前全球经济增速下滑迹象明显，美联储距离降息时点越来越近，美元指数持续震荡，十年期美国国债实际收益率下降，在长期通胀预期较为平稳的情况下美债实际收益率未来向上空间有限，叠加全球主要发达国家经济体通胀处于较高水平，黄金价格中枢有望持续抬升。"
+          }
+        ],
+        "reason": "“美元指数持续震荡，十年期美国国债实际收益率下降”等宏观描述在板块情况和投资建议中重复出现。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 745,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 745,
+    "processed_ranges": [
+      [
+        0,
+        745
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 28.463247,
+  "source_content_sha256": "815446b63e1e1784b916063a270f5c49f8388927631bff1bbde00f3bb99cca7c"
+}

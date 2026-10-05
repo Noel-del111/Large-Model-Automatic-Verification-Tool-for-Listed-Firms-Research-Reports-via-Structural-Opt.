@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"事件：2025年5月23日，国家能源局南方监管局发布《南方区域电力市场运行规则（）》。\"}], \"reason\": \"法规名称后括号内为空，缺少文号等非数值属性值。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。\"}, {\"text\": \"3阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。\"}], \"reason\": \"同一分配内容以不同编号重复出现，无新增信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:21:08.518046+00:00",
+    "request_sha256": "af71900f40071c54d29b261d9c544a4f3784068ed7f337fae825c2aff7ed0482",
+    "input_token_estimate": 15240,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277384",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b468ef72a2df458bab0719e596edf5c1",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3542,
+    "output_tokens": 6835,
+    "usage_source": "provider",
+    "duration_seconds": 30.506932,
+    "cost_cny": "0.030882"
+  },
+  "cache_request": {
+    "key": "9933fe1382ad94c7a4bcdeadeab9af30fd1cf4052a2050694e483b529c3ba4e2",
+    "purpose": "text_review.detect",
+    "messages_sha256": "af71900f40071c54d29b261d9c544a4f3784068ed7f337fae825c2aff7ed0482"
+  }
+}

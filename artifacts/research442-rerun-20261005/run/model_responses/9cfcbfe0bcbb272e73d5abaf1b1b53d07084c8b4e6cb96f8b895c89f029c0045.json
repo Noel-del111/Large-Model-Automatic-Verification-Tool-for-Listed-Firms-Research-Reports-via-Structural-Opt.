@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"近期机器人布局加速，增资极目机器30亿，申请注册“”商标，哈勃入股千寻智能。\"}],\"reason\":\"“申请注册‘’商标”中商标名称引号内为空，非数值属性值缺失。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"小鹏在2025Q1财报电话会议上表示，2024年内推出面向工业和商业场景的人形机器人。\"}],\"reason\":\"2025Q1会议上称2024年内推出，所涉时间已过去，先后关系矛盾。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"华为提供模型、算法、算力底座套利，建立全球元宇宙产业创新中心，并与优必选等企业合作。\"}],\"reason\":\"“套利”为金融术语，与“算力底座”搭配不当，导致表达含义错误。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"松延动力N2机器人订单已突破2000万台；\"}],\"reason\":\"人形机器人订单以“万台”计量，量级与行业通常交付规模明显不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:27:25.623191+00:00",
+    "request_sha256": "a7d91c9d6067f5d37db7a71ba6365008196a2eaad32142dd44a85aa1585fd5d4",
+    "input_token_estimate": 18188,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280332",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f37519f30c4646bea4a094806641b7b8",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4180,
+    "output_tokens": 6267,
+    "usage_source": "provider",
+    "duration_seconds": 25.758846,
+    "cost_cny": "0.029248"
+  },
+  "cache_request": {
+    "key": "9cfcbfe0bcbb272e73d5abaf1b1b53d07084c8b4e6cb96f8b895c89f029c0045",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a7d91c9d6067f5d37db7a71ba6365008196a2eaad32142dd44a85aa1585fd5d4"
+  }
+}

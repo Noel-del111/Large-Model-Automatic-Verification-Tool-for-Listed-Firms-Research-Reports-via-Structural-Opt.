@@ -1,0 +1,391 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000573",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万一级行业共31个，排名却为第50，超出行业总数范围，数值矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 56,
+          "end": 111,
+          "text": "5月沪深300指数上涨1.85%，通信(申万)指数上涨3.98%，跑赢大盘，在申万31个一级行业中排名第50。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月沪深300指数上涨1.85%，通信(申万)指数上涨3.98%，跑赢大盘，在申万31个一级行业中排名第50。",
+          "start": 56,
+          "end": 120
+        }
+      ],
+      "spans": [
+        {
+          "start": 56,
+          "end": 111,
+          "text": "5月沪深300指数上涨1.85%，通信(申万)指数上涨3.98%，跑赢大盘，在申万31个一级行业中排名第50。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "caf300a1e401eebf9357304b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "阿里、腾讯Capex数值后单位写为“元”，与资本开支通常以亿元或亿美元计量的口径不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 339,
+          "end": 446,
+          "text": "根据最新一季度财报显示，阿里、腾讯的Capex分别为246.12元/274.76元，同比+120.68%/+91.35%，环比-22.54%/-24.93%，资本开支环比下滑主要受到AI美对华AI芯片出口管制影响。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据最新一季度财报显示，阿里、腾讯的Capex分别为246.12元/274.76元，同比+120.68%/+91.35%，环比-22.54%/-24.93%，资本开支环比下滑主要受到AI美对华AI芯片出口管制影响。",
+          "start": 241,
+          "end": 354
+        }
+      ],
+      "spans": [
+        {
+          "start": 339,
+          "end": 446,
+          "text": "根据最新一季度财报显示，阿里、腾讯的Capex分别为246.12元/274.76元，同比+120.68%/+91.35%，环比-22.54%/-24.93%，资本开支环比下滑主要受到AI美对华AI芯片出口管制影响。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d70b52b57e56b36a0550bd05",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "GB200是英伟达GPU产品，不是CPU，将“GB200CPU芯片”作为CPU购买对象属于术语误用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 677,
+          "end": 763,
+          "text": "Oracle在5月计划斥资约400亿美元，用于购买英伟达GB200CPU芯片，支持得克萨斯州阿比林建设“星际之门”项目；马斯克近期宣布xAI计划将扩展GPU卡达100万张。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Oracle在5月计划斥资约400亿美元，用于购买英伟达GB200CPU芯片，支持得克萨斯州阿比林建设“星际之门”项目；马斯克近期宣布xAI计划将扩展GPU卡达100万张。",
+          "start": 692,
+          "end": 797
+        }
+      ],
+      "spans": [
+        {
+          "start": 677,
+          "end": 763,
+          "text": "Oracle在5月计划斥资约400亿美元，用于购买英伟达GB200CPU芯片，支持得克萨斯州阿比林建设“星际之门”项目；马斯克近期宣布xAI计划将扩展GPU卡达100万张。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "026a60f6b5139e6ddaa0600b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句中英伟达净利润同比增长26%重复出现，第一次概括与第二次列举冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 205,
+          "end": 234,
+          "text": "（1）英伟达一季度净利润同比增长26%，AI高景气度持续。"
+        },
+        {
+          "kind": "source_text",
+          "start": 234,
+          "end": 286,
+          "text": "英伟达FY2026Q1整体收入同比增长69%；净利润同比增长26%；其中数据中心业务营收同比增长73%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "（1）英伟达一季度净利润同比增长26%，AI高景气度持续。",
+          "start": 168,
+          "end": 204
+        },
+        {
+          "text": "英伟达FY2026Q1整体收入同比增长69%；净利润同比增长26%；其中数据中心业务营收同比增长73%。",
+          "start": 201,
+          "end": 259
+        }
+      ],
+      "spans": [
+        {
+          "start": 205,
+          "end": 234,
+          "text": "（1）英伟达一季度净利润同比增长26%，AI高景气度持续。"
+        },
+        {
+          "start": 234,
+          "end": 286,
+          "text": "英伟达FY2026Q1整体收入同比增长69%；净利润同比增长26%；其中数据中心业务营收同比增长73%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7380956254ed991b506a563c",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1280
+        ]
+      ],
+      "estimated_input_tokens": 5787,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:32:18.296904+00:00",
+        "request_sha256": "4cd7a4e34f53be5539d1b0e68d24e263cea9c7a01273d8cec85ff10998fd6dae",
+        "input_token_estimate": 16111,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278255",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9ab6a1132b8247418d9369b58fac0fdf",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3808,
+        "output_tokens": 11349,
+        "usage_source": "provider",
+        "duration_seconds": 43.879832,
+        "cost_cny": "0.049204"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "5月沪深300指数上涨1.85%，通信(申万)指数上涨3.98%，跑赢大盘，在申万31个一级行业中排名第50。",
+            "start": 56,
+            "end": 120
+          }
+        ],
+        "reason": "申万一级行业共31个，排名却为第50，超出行业总数范围，数值矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "根据最新一季度财报显示，阿里、腾讯的Capex分别为246.12元/274.76元，同比+120.68%/+91.35%，环比-22.54%/-24.93%，资本开支环比下滑主要受到AI美对华AI芯片出口管制影响。",
+            "start": 241,
+            "end": 354
+          }
+        ],
+        "reason": "阿里、腾讯Capex数值后单位写为“元”，与资本开支通常以亿元或亿美元计量的口径不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "Oracle在5月计划斥资约400亿美元，用于购买英伟达GB200CPU芯片，支持得克萨斯州阿比林建设“星际之门”项目；马斯克近期宣布xAI计划将扩展GPU卡达100万张。",
+            "start": 692,
+            "end": 797
+          }
+        ],
+        "reason": "GB200是英伟达GPU产品，不是CPU，将“GB200CPU芯片”作为CPU购买对象属于术语误用。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "（1）英伟达一季度净利润同比增长26%，AI高景气度持续。",
+            "start": 168,
+            "end": 204
+          },
+          {
+            "text": "英伟达FY2026Q1整体收入同比增长69%；净利润同比增长26%；其中数据中心业务营收同比增长73%。",
+            "start": 201,
+            "end": 259
+          }
+        ],
+        "reason": "同一句中英伟达净利润同比增长26%重复出现，第一次概括与第二次列举冗余。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 205,
+      "end": 234,
+      "text": "（1）英伟达一季度净利润同比增长26%，AI高景气度持续。",
+      "quantities": [
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 221,
+          "end": 224
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 257,
+      "end": 268,
+      "text": "净利润同比增长26%；",
+      "quantities": [
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 264,
+          "end": 267
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 268,
+      "end": 286,
+      "text": "其中数据中心业务营收同比增长73%。",
+      "quantities": [
+        {
+          "value": "73",
+          "unit": "%",
+          "start": 282,
+          "end": 285
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 532,
+      "end": 584,
+      "text": "GPU云计算服务商新锐CoreWeave发布财报，2025Q1实现营收9.82亿美元，同比增长420%。",
+      "quantities": [
+        {
+          "value": "420",
+          "unit": "%",
+          "start": 579,
+          "end": 583
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1280,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1280,
+    "processed_ranges": [
+      [
+        0,
+        1280
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 43.903404,
+  "source_content_sha256": "ab506f2eed0b6395d94e99fab6e039b1757f2824e3a26413704662394e696830"
+}

@@ -1,0 +1,560 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000501",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "起始年份“129”不是合理的四位年份，无法构成有效的历史统计期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 255,
+          "end": 307,
+          "text": "根据EUSPA数据，129-2033年，全球GNSS下游市场收入将从的2600亿欧元增至5800亿欧元；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据EUSPA数据，129-2033年，全球GNSS下游市场收入将从的2600亿欧元增至5800亿欧元；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 255,
+          "end": 307,
+          "text": "根据EUSPA数据，129-2033年，全球GNSS下游市场收入将从的2600亿欧元增至5800亿欧元；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ad1a5c99205713ea53131cec",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "其他板块均列出毛利率具体数值，本句只有同比变动，缺少对应的毛利率数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 827,
+          "end": 873,
+          "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 827,
+          "end": 873,
+          "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "39071ebf3f09723672f3c358",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1762
+        ]
+      ],
+      "estimated_input_tokens": 6191,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:54:35.681791+00:00",
+        "request_sha256": "affe3afa7a7cdc1da756516f41d90481d5038729452eda548b5b521b671b7bd6",
+        "input_token_estimate": 17265,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279409",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "aa3b674a144b457b814b3bb081acf871",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4095,
+        "output_tokens": 10152,
+        "usage_source": "provider",
+        "duration_seconds": 40.188999,
+        "cost_cny": "0.044703",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据EUSPA数据，129-2033年，全球GNSS下游市场收入将从的2600亿欧元增至5800亿欧元；"
+          }
+        ],
+        "reason": "起始年份“129”不是合理的四位年份，无法构成有效的历史统计期间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "资源与公共事业板块：2024年实现收入14.25亿元，同比+26.41%，毛利率为54.71%，同比-1.85pct。"
+          },
+          {
+            "text": "资源与公共事业板块：2024年实现收入14.25亿元，同比+26.41%，毛利率为54.71%，同比-1.85pct。"
+          }
+        ],
+        "reason": "同一板块同一组收入、同比和毛利率数据连续重复出现，没有新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "建筑与基建板块：2024年实现收入10.53亿元，同比+8.97%，，同比+4.55pct。"
+          }
+        ],
+        "reason": "其他板块均列出毛利率具体数值，本句只有同比变动，缺少对应的毛利率数值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "资源与公共事业板块：2024年实现收入14.25亿元，同比+26.41%，毛利率为54.71%，同比-1.85pct。"
+          },
+          {
+            "text": "资源与公共事业板块：2024年实现收入14.25亿元，同比+26.41%，毛利率为54.71%，同比-1.85pct。"
+          }
+        ],
+        "reason": "同一板块同一组收入、同比和毛利率数据连续重复出现，没有新增信息。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 47,
+      "end": 99,
+      "text": "华测导航发布2024年及2025一季度报告，2024年，公司实现营收32.51亿元，同比+21.38%；",
+      "quantities": [
+        {
+          "value": "32.51",
+          "unit": "亿元",
+          "start": 81,
+          "end": 88
+        },
+        {
+          "value": "+21.38",
+          "unit": "%",
+          "start": 91,
+          "end": 98
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 99,
+      "end": 146,
+      "text": "归母净利润5.83亿元，同比+29.89%，扣非后归母净利润5.04亿元，同比+35.31%。",
+      "quantities": [
+        {
+          "value": "5.83",
+          "unit": "亿元",
+          "start": 104,
+          "end": 110
+        },
+        {
+          "value": "+29.89",
+          "unit": "%",
+          "start": 113,
+          "end": 120
+        },
+        {
+          "value": "5.04",
+          "unit": "亿元",
+          "start": 129,
+          "end": 135
+        },
+        {
+          "value": "+35.31",
+          "unit": "%",
+          "start": 138,
+          "end": 145
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 99,
+      "end": 146,
+      "text": "归母净利润5.83亿元，同比+29.89%，扣非后归母净利润5.04亿元，同比+35.31%。",
+      "quantities": [
+        {
+          "value": "5.83",
+          "unit": "亿元",
+          "start": 104,
+          "end": 110
+        },
+        {
+          "value": "+29.89",
+          "unit": "%",
+          "start": 113,
+          "end": 120
+        },
+        {
+          "value": "5.04",
+          "unit": "亿元",
+          "start": 129,
+          "end": 135
+        },
+        {
+          "value": "+35.31",
+          "unit": "%",
+          "start": 138,
+          "end": 145
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 146,
+      "end": 173,
+      "text": "2025Q1实现营收7.89亿元，同比+27.91%；",
+      "quantities": [
+        {
+          "value": "7.89",
+          "unit": "亿元",
+          "start": 156,
+          "end": 162
+        },
+        {
+          "value": "+27.91",
+          "unit": "%",
+          "start": 165,
+          "end": 172
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 173,
+      "end": 195,
+      "text": "归母净利润1.43亿元，同比+38.50%；",
+      "quantities": [
+        {
+          "value": "1.43",
+          "unit": "亿元",
+          "start": 178,
+          "end": 184
+        },
+        {
+          "value": "+38.50",
+          "unit": "%",
+          "start": 187,
+          "end": 194
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 195,
+      "end": 221,
+      "text": "实现扣非归母净利润1.23亿元，同比+42.09%。",
+      "quantities": [
+        {
+          "value": "1.23",
+          "unit": "亿元",
+          "start": 204,
+          "end": 210
+        },
+        {
+          "value": "+42.09",
+          "unit": "%",
+          "start": 213,
+          "end": 220
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 576,
+      "end": 635,
+      "text": "资源与公共事业板块：2024年实现收入14.25亿元，同比+26.41%，毛利率为54.71%，同比-1.85pct。",
+      "quantities": [
+        {
+          "value": "14.25",
+          "unit": "亿元",
+          "start": 595,
+          "end": 602
+        },
+        {
+          "value": "+26.41",
+          "unit": "%",
+          "start": 605,
+          "end": 612
+        },
+        {
+          "value": "54.71",
+          "unit": "%",
+          "start": 617,
+          "end": 623
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 636,
+      "end": 695,
+      "text": "资源与公共事业板块：2024年实现收入14.25亿元，同比+26.41%，毛利率为54.71%，同比-1.85pct。",
+      "quantities": [
+        {
+          "value": "14.25",
+          "unit": "亿元",
+          "start": 655,
+          "end": 662
+        },
+        {
+          "value": "+26.41",
+          "unit": "%",
+          "start": 665,
+          "end": 672
+        },
+        {
+          "value": "54.71",
+          "unit": "%",
+          "start": 677,
+          "end": 683
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1024,
+      "end": 1080,
+      "text": "地理空间信息板块：2024年实现收入5.89亿元，同比+38.44%，毛利率为53.1%，同比+6.31pct。",
+      "quantities": [
+        {
+          "value": "5.89",
+          "unit": "亿元",
+          "start": 1042,
+          "end": 1048
+        },
+        {
+          "value": "+38.44",
+          "unit": "%",
+          "start": 1051,
+          "end": 1058
+        },
+        {
+          "value": "53.1",
+          "unit": "%",
+          "start": 1063,
+          "end": 1068
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1321,
+      "end": 1380,
+      "text": "机器人与自动驾驶板块：2024年实现收入1.85亿元，同比+15.53%，毛利率为41.95%，同比-4.89pct。",
+      "quantities": [
+        {
+          "value": "1.85",
+          "unit": "亿元",
+          "start": 1341,
+          "end": 1347
+        },
+        {
+          "value": "+15.53",
+          "unit": "%",
+          "start": 1350,
+          "end": 1357
+        },
+        {
+          "value": "41.95",
+          "unit": "%",
+          "start": 1362,
+          "end": 1368
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1549,
+      "end": 1623,
+      "text": "盈利预测、估值分析和投资建议：预计公司2025-2027年归母净利润7.40/9.39/11.87亿元，同比增长26.8%/26.9%/26.5%；",
+      "quantities": [
+        {
+          "value": "11.87",
+          "unit": "亿元",
+          "start": 1593,
+          "end": 1600
+        },
+        {
+          "value": "26.8",
+          "unit": "%",
+          "start": 1605,
+          "end": 1610
+        },
+        {
+          "value": "26.9",
+          "unit": "%",
+          "start": 1611,
+          "end": 1616
+        },
+        {
+          "value": "26.5",
+          "unit": "%",
+          "start": 1617,
+          "end": 1622
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1762,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1762,
+    "processed_ranges": [
+      [
+        0,
+        1762
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1762,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002823,
+  "source_content_sha256": "37b20bddbae2a68908e73601f5f014c1215c87adf9763110ddfbd1fb489457aa"
+}

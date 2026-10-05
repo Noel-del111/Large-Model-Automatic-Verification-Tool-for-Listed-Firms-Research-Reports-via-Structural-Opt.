@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"面板板块2024年第一季度实现营业收入亿元，同比+11.8%；归母净利润-1.0亿元，同比+96.5%；销售毛利率为12.1%，同环比+3.4/-1.7pct；销售净利率为-0.1%，同环比+2.4/+6.8pct。\", \"start\": 1808, \"end\": 1951}], \"reason\": \"“实现营业收入亿元”中缺少面板板块第一季度营业收入的具体数值。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"我们认为，三个方向值得持续关注：（1）AI大模型发展带来成长机遇，算力产业链持续受益，服务器、电视机、PCB等硬件有望持续受益。\", \"start\": 431, \"end\": 498}], \"reason\": \"算力产业链硬件通常为服务器、交换机、PCB等，电视机不属于算力硬件，术语使用不当。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"投资评级：电子行业创新动能强劲，今年受益于AI、国产替代、消费复苏等激化，我们持续看好其成长性。\", \"start\": 2534, \"end\": 2586}], \"reason\": \"“激化”与“受益”搭配不当，应为“催化”等表示促进的词语，导致含义错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:51:26.688865+00:00",
+    "request_sha256": "17de842948a51aa5fdd015ed1d535e56f3c334ed57ceb76706a25e03eb8c7427",
+    "input_token_estimate": 19162,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.281306",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "595f7bccfb9f4d65b4fe2f22018c9a10",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4608,
+    "output_tokens": 8575,
+    "usage_source": "provider",
+    "duration_seconds": 33.314559,
+    "cost_cny": "0.038908"
+  },
+  "cache_request": {
+    "key": "8b916231f21117857cca0e557dbc2b98d23bbd0efc3657bdaf503339e80c50c8",
+    "purpose": "text_review.detect",
+    "messages_sha256": "17de842948a51aa5fdd015ed1d535e56f3c334ed57ceb76706a25e03eb8c7427"
+  }
+}

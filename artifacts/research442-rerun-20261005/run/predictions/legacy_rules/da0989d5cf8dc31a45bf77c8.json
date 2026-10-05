@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000511",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "df95483446b607ef5b4ca871",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 618,
+          "end": 738,
+          "text": "\n\n投资建议\n\n我们预计2027-2025年公司归母净利润分别为50、57、63亿元，对应的EPS分别为0.62、0.71、0.79元，最新收盘价对应PE分别为131x、115x、103x，对应PB分别为4x、4x、4x，维持“增持”评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 764,
+    "total_chars": 764,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001767,
+  "source_content_sha256": "ae043cb4b89df9e6ae78abb40fed4cd5e8018d131beea875bcefa3f5efc14635"
+}

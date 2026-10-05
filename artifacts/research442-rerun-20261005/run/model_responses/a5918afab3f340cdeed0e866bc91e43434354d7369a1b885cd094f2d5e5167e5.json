@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"本月电气设备板块表现表现弱于大盘。\"}],\"reason\":\"“表现”连续重复，属于同一信息不必要重复。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"2025年4月，变压器出口金额为6.65亿美元，同比增长32.5%；电线电缆出口金额为29.48亿美元，同比增长36.7%；高压开关及控制装置融资金额为5.29亿美元，同比增长58.00%；低压开关及控制装置出口金额为31.58亿美元，。\"}],\"reason\":\"上下文列举出口金额与同比增速，此处“高压开关及控制装置融资金额”不应使用“融资金额”，应为出口金额。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"低压开关及控制装置出口金额为31.58亿美元，。\"}],\"reason\":\"同组出口分项均列同比增长率，此句仅列金额并以“，。”结束，同比增速缺失。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:51:57.876031+00:00",
+    "request_sha256": "84465ddbf98c42aa3d2d1e2f0db1c9586b4453b67b02f96a0feb75e54d28629c",
+    "input_token_estimate": 15190,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277334",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "49b80abe4d2143ce9d1e99b72d1f8de4",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3533,
+    "output_tokens": 6392,
+    "usage_source": "provider",
+    "duration_seconds": 29.093461,
+    "cost_cny": "0.029101"
+  },
+  "cache_request": {
+    "key": "a5918afab3f340cdeed0e866bc91e43434354d7369a1b885cd094f2d5e5167e5",
+    "purpose": "text_review.detect",
+    "messages_sha256": "84465ddbf98c42aa3d2d1e2f0db1c9586b4453b67b02f96a0feb75e54d28629c"
+  }
+}

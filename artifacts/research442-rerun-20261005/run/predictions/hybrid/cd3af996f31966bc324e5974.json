@@ -1,0 +1,626 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000379",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "spans": [
+        {
+          "start": 683,
+          "end": 715,
+          "text": "截至2024年12月32日，公司拥有海内外各类知识产权327项。"
+        }
+      ],
+      "reason": "该年月日不是有效公历日期。",
+      "status": "confirmed_error",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 685,
+          "end": 696,
+          "text": "2024年12月32日"
+        },
+        {
+          "kind": "deterministic",
+          "check": "calendar_date",
+          "year": 2024,
+          "month": 12,
+          "day": 32
+        }
+      ],
+      "detector_id": "verified.calendar",
+      "validation": "deterministic",
+      "verification_spans": [
+        {
+          "start": 685,
+          "end": 696,
+          "text": "2024年12月32日"
+        }
+      ],
+      "id": "2d1fed2cfcd26e486b5944ea",
+      "detector_ids": [
+        "hybrid.model",
+        "verified.calendar"
+      ],
+      "original_spans": [
+        {
+          "text": "截至2024年12月32日，公司拥有海内外各类知识产权327项。"
+        }
+      ],
+      "review_priority": "confirmed"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "“归母净利润5795亿分”的单位“亿分”不是规范计量单位，应为“万元”或“亿元”，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 56,
+          "end": 220,
+          "text": "2024年营收1.59亿元，同比+37%，归母净利润5795亿分，同比+28%公司发布2024年报与2025年一季报，实现营收1.59亿元，同比增长36.63%；归母净利润5794.77万元，同比增长28.17%；2025Q1实现营收4743.87万元，同比增长68.78%，归母净利润1488.26万元，同比增长69.93%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年营收1.59亿元，同比+37%，归母净利润5795亿分，同比+28%公司发布2024年报与2025年一季报，实现营收1.59亿元，同比增长36.63%；归母净利润5794.77万元，同比增长28.17%；2025Q1实现营收4743.87万元，同比增长68.78%，归母净利润1488.26万元，同比增长69.93%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 56,
+          "end": 220,
+          "text": "2024年营收1.59亿元，同比+37%，归母净利润5795亿分，同比+28%公司发布2024年报与2025年一季报，实现营收1.59亿元，同比增长36.63%；归母净利润5794.77万元，同比增长28.17%；2025Q1实现营收4743.87万元，同比增长68.78%，归母净利润1488.26万元，同比增长69.93%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "88c5b7f7cabd41ffeaee74b2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "明细合计4+14+1=19项，与所述新增16项专利不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 589,
+          "end": 631,
+          "text": "2024年，公司新增16项专利，其中发明专利4项，实用新型专利14项，外观专利1项。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司新增16项专利，其中发明专利4项，实用新型专利14项，外观专利1项。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 589,
+          "end": 631,
+          "text": "2024年，公司新增16项专利，其中发明专利4项，实用新型专利14项，外观专利1项。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2c1ae8d8c1b5ebbb6472a03f",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1035
+        ]
+      ],
+      "estimated_input_tokens": 5443,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:10:11.902870+00:00",
+        "request_sha256": "09fd678d50ad64ac8ad39e2e56a32433b1d5830a3f2ae2edc32f79e988c2eedc",
+        "input_token_estimate": 15196,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27734",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "99cc2fd37374467a9fbdabd6eb3034a8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3663,
+        "output_tokens": 9077,
+        "usage_source": "provider",
+        "duration_seconds": 34.64667,
+        "cost_cny": "0.039971",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年营收1.59亿元，同比+37%，归母净利润5795亿分，同比+28%公司发布2024年报与2025年一季报，实现营收1.59亿元，同比增长36.63%；归母净利润5794.77万元，同比增长28.17%；2025Q1实现营收4743.87万元，同比增长68.78%，归母净利润1488.26万元，同比增长69.93%。"
+          }
+        ],
+        "reason": "“归母净利润5795亿分”的单位“亿分”不是规范计量单位，应为“万元”或“亿元”，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "截至2024年12月32日，公司拥有海内外各类知识产权327项。"
+          }
+        ],
+        "reason": "2024年12月只有31天，不存在12月32日，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2024年，公司新增16项专利，其中发明专利4项，实用新型专利14项，外观专利1项。"
+          }
+        ],
+        "reason": "明细合计4+14+1=19项，与所述新增16项专利不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 0,
+      "end": 41,
+      "text": "北交所信息更新：消费电子回暖防盗方案需求扩张，2025Q1归母净利润同比+70%\n",
+      "quantities": [
+        {
+          "value": "+70",
+          "unit": "%",
+          "start": 36,
+          "end": 40
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 56,
+      "end": 137,
+      "text": "2024年营收1.59亿元，同比+37%，归母净利润5795亿分，同比+28%公司发布2024年报与2025年一季报，实现营收1.59亿元，同比增长36.63%；",
+      "quantities": [
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 63,
+          "end": 69
+        },
+        {
+          "value": "+37",
+          "unit": "%",
+          "start": 72,
+          "end": 76
+        },
+        {
+          "value": "+28",
+          "unit": "%",
+          "start": 91,
+          "end": 95
+        },
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 119,
+          "end": 125
+        },
+        {
+          "value": "36.63",
+          "unit": "%",
+          "start": 130,
+          "end": 136
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 56,
+      "end": 137,
+      "text": "2024年营收1.59亿元，同比+37%，归母净利润5795亿分，同比+28%公司发布2024年报与2025年一季报，实现营收1.59亿元，同比增长36.63%；",
+      "quantities": [
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 63,
+          "end": 69
+        },
+        {
+          "value": "+37",
+          "unit": "%",
+          "start": 72,
+          "end": 76
+        },
+        {
+          "value": "+28",
+          "unit": "%",
+          "start": 91,
+          "end": 95
+        },
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 119,
+          "end": 125
+        },
+        {
+          "value": "36.63",
+          "unit": "%",
+          "start": 130,
+          "end": 136
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 56,
+      "end": 137,
+      "text": "2024年营收1.59亿元，同比+37%，归母净利润5795亿分，同比+28%公司发布2024年报与2025年一季报，实现营收1.59亿元，同比增长36.63%；",
+      "quantities": [
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 63,
+          "end": 69
+        },
+        {
+          "value": "+37",
+          "unit": "%",
+          "start": 72,
+          "end": 76
+        },
+        {
+          "value": "+28",
+          "unit": "%",
+          "start": 91,
+          "end": 95
+        },
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 119,
+          "end": 125
+        },
+        {
+          "value": "36.63",
+          "unit": "%",
+          "start": 130,
+          "end": 136
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 137,
+      "end": 163,
+      "text": "归母净利润5794.77万元，同比增长28.17%；",
+      "quantities": [
+        {
+          "value": "5794.77",
+          "unit": "万元",
+          "start": 142,
+          "end": 151
+        },
+        {
+          "value": "28.17",
+          "unit": "%",
+          "start": 156,
+          "end": 162
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 163,
+      "end": 220,
+      "text": "2025Q1实现营收4743.87万元，同比增长68.78%，归母净利润1488.26万元，同比增长69.93%。",
+      "quantities": [
+        {
+          "value": "4743.87",
+          "unit": "万元",
+          "start": 173,
+          "end": 182
+        },
+        {
+          "value": "68.78",
+          "unit": "%",
+          "start": 187,
+          "end": 193
+        },
+        {
+          "value": "1488.26",
+          "unit": "万元",
+          "start": 199,
+          "end": 208
+        },
+        {
+          "value": "69.93",
+          "unit": "%",
+          "start": 213,
+          "end": 219
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 163,
+      "end": 220,
+      "text": "2025Q1实现营收4743.87万元，同比增长68.78%，归母净利润1488.26万元，同比增长69.93%。",
+      "quantities": [
+        {
+          "value": "4743.87",
+          "unit": "万元",
+          "start": 173,
+          "end": 182
+        },
+        {
+          "value": "68.78",
+          "unit": "%",
+          "start": 187,
+          "end": 193
+        },
+        {
+          "value": "1488.26",
+          "unit": "万元",
+          "start": 199,
+          "end": 208
+        },
+        {
+          "value": "69.93",
+          "unit": "%",
+          "start": 213,
+          "end": 219
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 220,
+      "end": 362,
+      "text": "公司受益消费电子行业持续向好，我们维持2025-2026年并新增2027年盈利预测，预计2025-2027年归母净利润分别为0.65/0.73/0.88亿元，对应EPS分别为0.43/0.48/0.58元/股，对应当前股价的PE分别为34.3/30.8/25.5倍，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "0.88",
+          "unit": "亿元",
+          "start": 292,
+          "end": 298
+        },
+        {
+          "value": "0.58",
+          "unit": "元/股",
+          "start": 317,
+          "end": 324
+        },
+        {
+          "value": "25.5",
+          "unit": "倍",
+          "start": 347,
+          "end": 352
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 423,
+      "end": 476,
+      "text": "其中，内销收1入1.07亿元，同比增长61.40%，毛利率54.20%，比2023年提升2.94个百分点；",
+      "quantities": [
+        {
+          "value": "1.07",
+          "unit": "亿元",
+          "start": 431,
+          "end": 437
+        },
+        {
+          "value": "61.40",
+          "unit": "%",
+          "start": 442,
+          "end": 448
+        },
+        {
+          "value": "54.20",
+          "unit": "%",
+          "start": 452,
+          "end": 458
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 476,
+      "end": 509,
+      "text": "外销5179.26万元，同比增长10.41%，毛利率61.31%。",
+      "quantities": [
+        {
+          "value": "5179.26",
+          "unit": "万元",
+          "start": 478,
+          "end": 487
+        },
+        {
+          "value": "10.41",
+          "unit": "%",
+          "start": 492,
+          "end": 498
+        },
+        {
+          "value": "61.31",
+          "unit": "%",
+          "start": 502,
+          "end": 508
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 509,
+      "end": 589,
+      "text": "2024年，公司加大研发投入，新增8个研发项目，引进资深技术人员，科研人员人力成本增加，研发费用1203.86万元，同比增长62.86%，占营收比例7.56%。",
+      "quantities": [
+        {
+          "value": "1203.86",
+          "unit": "万元",
+          "start": 557,
+          "end": 566
+        },
+        {
+          "value": "62.86",
+          "unit": "%",
+          "start": 571,
+          "end": 577
+        },
+        {
+          "value": "7.56",
+          "unit": "%",
+          "start": 583,
+          "end": 588
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1035,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1035,
+    "processed_ranges": [
+      [
+        0,
+        1035
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1035,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002103,
+  "source_content_sha256": "8e94458b41f31d26f97f01b07f2514d1286f2eeed295b5e1ea0f5b917b91316a"
+}

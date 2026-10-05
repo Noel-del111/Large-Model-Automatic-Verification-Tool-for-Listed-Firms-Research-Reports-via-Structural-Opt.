@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"GLP-1R/GIPR双靶点的HDM1005，其肥胖适应症已在2025年13月完成全部受试者入组，2型糖尿病于2025年4月完成首例患者入组；\"}],\"reason\":\"一年只有12个月，“2025年13月”不是合法日期。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年公司收入419.1亿元，（同比+3.2%，以下均为同比口径）；实现归母净利润35.1亿元（）。\"}],\"reason\":\"归母净利润35.1亿元后的括号为空，缺少应披露的同比增速数值。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"我们预计2025-2027年归母净利润为40.61、47.16、55.37、25.37亿元，EPS为2.32/2.69/3.16元，对应PE为16.3/14.0/11.9倍，维持公司“买入”评级。\"}],\"reason\":\"2025-2027仅三年，却列四个归母净利润数值，与年份数及后文三年EPS/PE序列不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:59:08.941419+00:00",
+    "request_sha256": "aca5de30cf406b25fd2138e8294d09aa7699b4eb592fd1c117cc712c67e297c9",
+    "input_token_estimate": 15238,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277382",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "df74b3e534ef43e7809b0624775dc0de",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3673,
+    "output_tokens": 6194,
+    "usage_source": "provider",
+    "duration_seconds": 24.825509,
+    "cost_cny": "0.028449"
+  },
+  "cache_request": {
+    "key": "9326e6b8075828f431bb1cfaa03942cd7351613f675781cc05e42f97751f63b3",
+    "purpose": "text_review.detect",
+    "messages_sha256": "aca5de30cf406b25fd2138e8294d09aa7699b4eb592fd1c117cc712c67e297c9"
+  }
+}

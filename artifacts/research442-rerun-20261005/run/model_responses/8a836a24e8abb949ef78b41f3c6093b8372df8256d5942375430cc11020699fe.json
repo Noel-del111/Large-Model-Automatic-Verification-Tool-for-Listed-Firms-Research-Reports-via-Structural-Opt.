@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"据Wind，0524-5.31一周，30个大中城市商品房销售面积216.79万平方公里，同比-2.46%。\"}], \"reason\": \"商品房销售面积单位应为万平方米，写成万平方公里量级严重错误。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"风险提示：基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；新材料品种下游景气度及自身成长性不及预期；地产产业链坏账减值损失超预期。\"}], \"reason\": \"风险提示中同一风险表述“基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响”重复出现两次，未增加新信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:51:31.811897+00:00",
+    "request_sha256": "80072af84289aff6a26c369c1d9066579c0aefa6d256e0078e1385dcaaddfade",
+    "input_token_estimate": 15758,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277902",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ddedd4ee1cbc45329713745ceab6cc6f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3739,
+    "output_tokens": 5378,
+    "usage_source": "provider",
+    "duration_seconds": 22.787789,
+    "cost_cny": "0.025251"
+  },
+  "cache_request": {
+    "key": "8a836a24e8abb949ef78b41f3c6093b8372df8256d5942375430cc11020699fe",
+    "purpose": "text_review.detect",
+    "messages_sha256": "80072af84289aff6a26c369c1d9066579c0aefa6d256e0078e1385dcaaddfade"
+  }
+}

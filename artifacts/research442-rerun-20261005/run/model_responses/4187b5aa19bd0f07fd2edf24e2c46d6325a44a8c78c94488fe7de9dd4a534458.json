@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"GB300已于5月上旬在各大云服务器厂商送样，公司预计Q13末开始量产发货。\"}], \"reason\": \"“Q13末”不是合法季度编号，无法成立。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"公司预计在今年末有望实现左右的毛利率。\"}], \"reason\": \"“实现左右的毛利率”缺少具体百分比数值。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"分布业绩：数据中心收入391亿美元，YoY+73%，QoQ+10%；游戏和AIPC收入38亿美元，YoY+42%，QoQ+48%；专业可视化收入5.1亿美元，YoY+19%，环比持平；汽车和机器人收入5.7亿美元，YoY+72%，QoQ-1%。\"}], \"reason\": \"应为“分部业绩”，指各业务分部，写成“分布业绩”导致术语含义错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:02:57.913052+00:00",
+    "request_sha256": "c5cca59d0dc3ab45ba5075e2866c454978b28b9bba455ae455c0be732db18287",
+    "input_token_estimate": 15427,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277571",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1dad09eedc0345d0859afe9d54ffb8cb",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3689,
+    "output_tokens": 7915,
+    "usage_source": "provider",
+    "duration_seconds": 30.382237,
+    "cost_cny": "0.035349"
+  },
+  "cache_request": {
+    "key": "4187b5aa19bd0f07fd2edf24e2c46d6325a44a8c78c94488fe7de9dd4a534458",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c5cca59d0dc3ab45ba5075e2866c454978b28b9bba455ae455c0be732db18287"
+  }
+}

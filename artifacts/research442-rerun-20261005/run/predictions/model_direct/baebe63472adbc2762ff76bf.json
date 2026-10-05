@@ -1,0 +1,449 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000179",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“1023年7月”不成立，应为2023年7月。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 111,
+          "end": 217,
+          "text": "我们认为互联互通十周年有望迎来港股政策红利期，1023年7月活跃资本市场政策部署强调巩固香港金融中心地位，2024年10月香港成立促进流动性专责小组，2024年4月证监会开展5项对港合作（见附表1、2及附图1）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们认为互联互通十周年有望迎来港股政策红利期，1023年7月活跃资本市场政策部署强调巩固香港金融中心地位，2024年10月香港成立促进流动性专责小组，2024年4月证监会开展5项对港合作（见附表1、2及附图1）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 111,
+          "end": 217,
+          "text": "我们认为互联互通十周年有望迎来港股政策红利期，1023年7月活跃资本市场政策部署强调巩固香港金融中心地位，2024年10月香港成立促进流动性专责小组，2024年4月证监会开展5项对港合作（见附表1、2及附图1）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1152e2b863d16c66a4320a6d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“20%股息率”表述错误，此处对应的是股息税率而非股息率。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 565,
+          "end": 676,
+          "text": "我们测算2023年港股通股票分红总额1.7万亿港元，港股通投资者赚取约1500亿港元，20%股息率对应约300亿的股息税，下降10%股息税预计为港股通个人和基金投资者免税约150亿，占当年财政税收不足0.1%（见附表5）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们测算2023年港股通股票分红总额1.7万亿港元，港股通投资者赚取约1500亿港元，20%股息率对应约300亿的股息税，下降10%股息税预计为港股通个人和基金投资者免税约150亿，占当年财政税收不足0.1%（见附表5）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 565,
+          "end": 676,
+          "text": "我们测算2023年港股通股票分红总额1.7万亿港元，港股通投资者赚取约1500亿港元，20%股息率对应约300亿的股息税，下降10%股息税预计为港股通个人和基金投资者免税约150亿，占当年财政税收不足0.1%（见附表5）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c18e777ba7154c0a2b219fb5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "持股占比从10%提升至15%/20%/30%，对应增幅应为50%/100%/200%，区间为50%-200%，原文50%-250%计算有误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 743,
+          "end": 850,
+          "text": "2023年港股通持股市值占港股通股票市值约10%，假设股息税优化政策带动港股通持股占比提升至15%/20%/30%，对应南向ADT增幅50%-250%，费率不变下对应总营收增幅1%-4%，对应净利润增幅1%-6%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2023年港股通持股市值占港股通股票市值约10%，假设股息税优化政策带动港股通持股占比提升至15%/20%/30%，对应南向ADT增幅50%-250%，费率不变下对应总营收增幅1%-4%，对应净利润增幅1%-6%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 743,
+          "end": 850,
+          "text": "2023年港股通持股市值占港股通股票市值约10%，假设股息税优化政策带动港股通持股占比提升至15%/20%/30%，对应南向ADT增幅50%-250%，费率不变下对应总营收增幅1%-4%，对应净利润增幅1%-6%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8d2e85dd008270fd31a4d292",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一段内“4月期货/期权ADV同比+18%/+17%”信息重复出现，无新增含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1194,
+          "end": 1250,
+          "text": "2024年4月港股现货ADT1155亿港元，同比+6%，环比+4%，4月期货/期权ADV同比+18%/+17%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1250,
+          "end": 1370,
+          "text": "4.22-5.10近三周现货ADT分别达1255/1315/1363亿港元，较2024Q1提升分别+22%/+28%/+32%，4月期货/期权ADV同比+18%/+17%，LME ADV同比+44%，北向/南向ADT同比基本持平/+12%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年4月港股现货ADT1155亿港元，同比+6%，环比+4%，4月期货/期权ADV同比+18%/+17%。"
+        },
+        {
+          "text": "4.22-5.10近三周现货ADT分别达1255/1315/1363亿港元，较2024Q1提升分别+22%/+28%/+32%，4月期货/期权ADV同比+18%/+17%，LME ADV同比+44%，北向/南向ADT同比基本持平/+12%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1194,
+          "end": 1250,
+          "text": "2024年4月港股现货ADT1155亿港元，同比+6%，环比+4%，4月期货/期权ADV同比+18%/+17%。"
+        },
+        {
+          "start": 1250,
+          "end": 1370,
+          "text": "4.22-5.10近三周现货ADT分别达1255/1315/1363亿港元，较2024Q1提升分别+22%/+28%/+32%，4月期货/期权ADV同比+18%/+17%，LME ADV同比+44%，北向/南向ADT同比基本持平/+12%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "215e12d56b51cbdd3af3579e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1557
+        ]
+      ],
+      "estimated_input_tokens": 6063,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:52:21.650905+00:00",
+        "request_sha256": "ee6f9ce3365133374ed4a9990f8f3f133be21335677a3cddd6159ba68ca3ce77",
+        "input_token_estimate": 16878,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279022",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "dea5ef97cc0b40a5b8f76d05b4a741f1",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3975,
+        "output_tokens": 14155,
+        "usage_source": "provider",
+        "duration_seconds": 54.464546,
+        "cost_cny": "0.060595"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "我们认为互联互通十周年有望迎来港股政策红利期，1023年7月活跃资本市场政策部署强调巩固香港金融中心地位，2024年10月香港成立促进流动性专责小组，2024年4月证监会开展5项对港合作（见附表1、2及附图1）。"
+          }
+        ],
+        "reason": "年份“1023年7月”不成立，应为2023年7月。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "我们测算2023年港股通股票分红总额1.7万亿港元，港股通投资者赚取约1500亿港元，20%股息率对应约300亿的股息税，下降10%股息税预计为港股通个人和基金投资者免税约150亿，占当年财政税收不足0.1%（见附表5）。"
+          }
+        ],
+        "reason": "“20%股息率”表述错误，此处对应的是股息税率而非股息率。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2023年港股通持股市值占港股通股票市值约10%，假设股息税优化政策带动港股通持股占比提升至15%/20%/30%，对应南向ADT增幅50%-250%，费率不变下对应总营收增幅1%-4%，对应净利润增幅1%-6%。"
+          }
+        ],
+        "reason": "持股占比从10%提升至15%/20%/30%，对应增幅应为50%/100%/200%，区间为50%-200%，原文50%-250%计算有误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024年4月港股现货ADT1155亿港元，同比+6%，环比+4%，4月期货/期权ADV同比+18%/+17%。"
+          },
+          {
+            "text": "4.22-5.10近三周现货ADT分别达1255/1315/1363亿港元，较2024Q1提升分别+22%/+28%/+32%，4月期货/期权ADV同比+18%/+17%，LME ADV同比+44%，北向/南向ADT同比基本持平/+12%。"
+          }
+        ],
+        "reason": "同一段内“4月期货/期权ADV同比+18%/+17%”信息重复出现，无新增含义。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 743,
+      "end": 850,
+      "text": "2023年港股通持股市值占港股通股票市值约10%，假设股息税优化政策带动港股通持股占比提升至15%/20%/30%，对应南向ADT增幅50%-250%，费率不变下对应总营收增幅1%-4%，对应净利润增幅1%-6%。",
+      "quantities": [
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 764,
+          "end": 767
+        },
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 789,
+          "end": 792
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 793,
+          "end": 796
+        },
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 797,
+          "end": 800
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 810,
+          "end": 813
+        },
+        {
+          "value": "-250",
+          "unit": "%",
+          "start": 813,
+          "end": 818
+        },
+        {
+          "value": "1",
+          "unit": "%",
+          "start": 831,
+          "end": 833
+        },
+        {
+          "value": "-4",
+          "unit": "%",
+          "start": 833,
+          "end": 836
+        },
+        {
+          "value": "1",
+          "unit": "%",
+          "start": 844,
+          "end": 846
+        },
+        {
+          "value": "-6",
+          "unit": "%",
+          "start": 846,
+          "end": 849
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 743,
+      "end": 850,
+      "text": "2023年港股通持股市值占港股通股票市值约10%，假设股息税优化政策带动港股通持股占比提升至15%/20%/30%，对应南向ADT增幅50%-250%，费率不变下对应总营收增幅1%-4%，对应净利润增幅1%-6%。",
+      "quantities": [
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 764,
+          "end": 767
+        },
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 789,
+          "end": 792
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 793,
+          "end": 796
+        },
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 797,
+          "end": 800
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 810,
+          "end": 813
+        },
+        {
+          "value": "-250",
+          "unit": "%",
+          "start": 813,
+          "end": 818
+        },
+        {
+          "value": "1",
+          "unit": "%",
+          "start": 831,
+          "end": 833
+        },
+        {
+          "value": "-4",
+          "unit": "%",
+          "start": 833,
+          "end": 836
+        },
+        {
+          "value": "1",
+          "unit": "%",
+          "start": 844,
+          "end": 846
+        },
+        {
+          "value": "-6",
+          "unit": "%",
+          "start": 846,
+          "end": 849
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1557,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1557,
+    "processed_ranges": [
+      [
+        0,
+        1557
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 54.49269,
+  "source_content_sha256": "439e94d85dc4e4672e98ec327495f5390208cd5843aa18fd223e4283ae8a24cd"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000376",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1259,
+    "total_chars": 1259,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001157,
+  "source_content_sha256": "01b05a84c25ce66c6cf7b43328446029ebf9113b544a1787edd3bcea8e8e44c0"
+}

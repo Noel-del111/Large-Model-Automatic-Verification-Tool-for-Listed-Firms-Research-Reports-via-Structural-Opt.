@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000384",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "33c517e55a931e40bb6aa318",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 140,
+          "end": 210,
+          "text": "2024年实现收入36.39亿元(YoY+59%)，互连类芯片和津逮服务器平台分别占比92%和8%，2024-2016年的CAGR为20%；"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1236,
+    "total_chars": 1236,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001015,
+  "source_content_sha256": "9b3059db67897ea45c40a1e677143eaedc0c152d8308c8c7b02d25f6a3071c1e"
+}

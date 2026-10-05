@@ -1,0 +1,608 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000494",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "尼龙切片销售均价单位应为元/吨，原文写成元/平方米，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 405,
+          "end": 525,
+          "text": "2024年尼龙切片实现收入71.67亿元，同比增长19.17%；毛利率8.07%，同比提升1.37pct；产量57.65万吨，同比增长22.17%；销量56.50万吨，同比增长18.24%；销售均价12685元/平方米，同比增长0.78%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年尼龙切片实现收入71.67亿元，同比增长19.17%；毛利率8.07%，同比提升1.37pct；产量57.65万吨，同比增长22.17%；销量56.50万吨，同比增长18.24%；销售均价12685元/平方米，同比增长0.78%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 405,
+          "end": 525,
+          "text": "2024年尼龙切片实现收入71.67亿元，同比增长19.17%；毛利率8.07%，同比提升1.37pct；产量57.65万吨，同比增长22.17%；销量56.50万吨，同比增长18.24%；销售均价12685元/平方米，同比增长0.78%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5847c5bd10740656a26760b3",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "52%加35%加18%等于105%，产量占比合计超过100%，计算不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 525,
+          "end": 568,
+          "text": "从几大基地来看，2024年杭州、滕州、常德基地分别贡献了52%、35%、18%的产量。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从几大基地来看，2024年杭州、滕州、常德基地分别贡献了52%、35%、18%的产量。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 525,
+          "end": 568,
+          "text": "从几大基地来看，2024年杭州、滕州、常德基地分别贡献了52%、35%、18%的产量。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d9a4e5e6563d59aa62a7a061",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "工程塑料收入23.16亿元除以尼龙切片收入71.67亿元约为32.32%，原文占比22.32%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 568,
+          "end": 693,
+          "text": "从产品类别看，尼龙纤维级高端产品切片仍然是最重要收入组成部分，2024年实现收入47.54亿元，占比66.34%；工程塑料紧随其后，2024年实现收入23.16亿元，占比22.32%；膜级产品稳态发展，2024年实现收入0.76亿元，占比1.06%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从产品类别看，尼龙纤维级高端产品切片仍然是最重要收入组成部分，2024年实现收入47.54亿元，占比66.34%；工程塑料紧随其后，2024年实现收入23.16亿元，占比22.32%；膜级产品稳态发展，2024年实现收入0.76亿元，占比1.06%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 568,
+          "end": 693,
+          "text": "从产品类别看，尼龙纤维级高端产品切片仍然是最重要收入组成部分，2024年实现收入47.54亿元，占比66.34%；工程塑料紧随其后，2024年实现收入23.16亿元，占比22.32%；膜级产品稳态发展，2024年实现收入0.76亿元，占比1.06%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "59728f2579a50bc993971a61",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "2023年表观消费量为467万吨，2024年634万吨应同比增长，却写同比下降24%，数值与方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 997,
+          "end": 1083,
+          "text": "根据华瑞信息数据显示，2024年我国PA6表观消费量达到了634万吨，同比下降24%，主因下游膜级包材、工程塑料、民用纺丝等不同业态及应用场景的PA6的需求仍保持稳步增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据华瑞信息数据显示，2024年我国PA6表观消费量达到了634万吨，同比下降24%，主因下游膜级包材、工程塑料、民用纺丝等不同业态及应用场景的PA6的需求仍保持稳步增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 997,
+          "end": 1083,
+          "text": "根据华瑞信息数据显示，2024年我国PA6表观消费量达到了634万吨，同比下降24%，主因下游膜级包材、工程塑料、民用纺丝等不同业态及应用场景的PA6的需求仍保持稳步增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9ae9b7ebde88953e4bba98bb",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "772.6万吨除以1099.5万吨约70.3%，并非80.3%，占比计算不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1147,
+          "end": 1230,
+          "text": "截至2024年末，全球PA6总产能约1099.5万吨，其中中国PA6产能增长迅猛，达到772.6万吨，占全球比重由2020年的62.1%提升至2024年的80.3%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年末，全球PA6总产能约1099.5万吨，其中中国PA6产能增长迅猛，达到772.6万吨，占全球比重由2020年的62.1%提升至2024年的80.3%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1147,
+          "end": 1230,
+          "text": "截至2024年末，全球PA6总产能约1099.5万吨，其中中国PA6产能增长迅猛，达到772.6万吨，占全球比重由2020年的62.1%提升至2024年的80.3%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b9896127665654748ea67055",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "同比变动后百分号前无具体数值，缺少同比变动幅度。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 807,
+          "end": 838,
+          "text": "销售均价10942元/吨，同比变动% ，环比变动-4.35%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "销售均价10942元/吨，同比变动% ，环比变动-4.35%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 807,
+          "end": 838,
+          "text": "销售均价10942元/吨，同比变动% ，环比变动-4.35%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "276b9208368a12f863305d8d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2137
+        ]
+      ],
+      "estimated_input_tokens": 6415,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:18:59.393122+00:00",
+        "request_sha256": "6529236651b29b8d56ab3c79b52ce4505ee6887261603342701ee230ca880f4e",
+        "input_token_estimate": 17940,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280084",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ae4f2f8daa8a410cb031ce6763c9ac0a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4324,
+        "output_tokens": 9282,
+        "usage_source": "provider",
+        "duration_seconds": 34.524164,
+        "cost_cny": "0.041452"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年尼龙切片实现收入71.67亿元，同比增长19.17%；毛利率8.07%，同比提升1.37pct；产量57.65万吨，同比增长22.17%；销量56.50万吨，同比增长18.24%；销售均价12685元/平方米，同比增长0.78%。"
+          }
+        ],
+        "reason": "尼龙切片销售均价单位应为元/吨，原文写成元/平方米，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "从几大基地来看，2024年杭州、滕州、常德基地分别贡献了52%、35%、18%的产量。"
+          }
+        ],
+        "reason": "52%加35%加18%等于105%，产量占比合计超过100%，计算不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "从产品类别看，尼龙纤维级高端产品切片仍然是最重要收入组成部分，2024年实现收入47.54亿元，占比66.34%；工程塑料紧随其后，2024年实现收入23.16亿元，占比22.32%；膜级产品稳态发展，2024年实现收入0.76亿元，占比1.06%。"
+          }
+        ],
+        "reason": "工程塑料收入23.16亿元除以尼龙切片收入71.67亿元约为32.32%，原文占比22.32%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "根据华瑞信息数据显示，2024年我国PA6表观消费量达到了634万吨，同比下降24%，主因下游膜级包材、工程塑料、民用纺丝等不同业态及应用场景的PA6的需求仍保持稳步增长。"
+          }
+        ],
+        "reason": "2023年表观消费量为467万吨，2024年634万吨应同比增长，却写同比下降24%，数值与方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "截至2024年末，全球PA6总产能约1099.5万吨，其中中国PA6产能增长迅猛，达到772.6万吨，占全球比重由2020年的62.1%提升至2024年的80.3%。"
+          }
+        ],
+        "reason": "772.6万吨除以1099.5万吨约70.3%，并非80.3%，占比计算不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "销售均价10942元/吨，同比变动% ，环比变动-4.35%；"
+          }
+        ],
+        "reason": "同比变动后百分号前无具体数值，缺少同比变动幅度。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 94,
+      "end": 119,
+      "text": "实现归母净利润3.00亿元，同比增长52.66%；",
+      "quantities": [
+        {
+          "value": "3.00",
+          "unit": "亿元",
+          "start": 101,
+          "end": 107
+        },
+        {
+          "value": "52.66",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 119,
+      "end": 146,
+      "text": "实现扣非归母净利润2.91亿元，同比增长51.62%；",
+      "quantities": [
+        {
+          "value": "2.91",
+          "unit": "亿元",
+          "start": 128,
+          "end": 134
+        },
+        {
+          "value": "51.62",
+          "unit": "%",
+          "start": 139,
+          "end": 145
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 146,
+      "end": 167,
+      "text": "毛利率8.06%，同比提升1.36pct。",
+      "quantities": [
+        {
+          "value": "8.06",
+          "unit": "%",
+          "start": 149,
+          "end": 154
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 209,
+      "end": 245,
+      "text": "实现归母净利润0.81亿元，同比增长15.04%，环比增长21.16%；",
+      "quantities": [
+        {
+          "value": "0.81",
+          "unit": "亿元",
+          "start": 216,
+          "end": 222
+        },
+        {
+          "value": "15.04",
+          "unit": "%",
+          "start": 227,
+          "end": 233
+        },
+        {
+          "value": "21.16",
+          "unit": "%",
+          "start": 238,
+          "end": 244
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 245,
+      "end": 283,
+      "text": "实现扣非归母净利润0.77亿元，同比增长19.31%，环比增长17.59%；",
+      "quantities": [
+        {
+          "value": "0.77",
+          "unit": "亿元",
+          "start": 254,
+          "end": 260
+        },
+        {
+          "value": "19.31",
+          "unit": "%",
+          "start": 265,
+          "end": 271
+        },
+        {
+          "value": "17.59",
+          "unit": "%",
+          "start": 276,
+          "end": 282
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 283,
+      "end": 316,
+      "text": "毛利率8.17%，同比提升0.23pct，环比提升1.10pct。",
+      "quantities": [
+        {
+          "value": "8.17",
+          "unit": "%",
+          "start": 286,
+          "end": 291
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 437,
+      "end": 458,
+      "text": "毛利率8.07%，同比提升1.37pct；",
+      "quantities": [
+        {
+          "value": "8.07",
+          "unit": "%",
+          "start": 440,
+          "end": 445
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 877,
+      "end": 918,
+      "text": "2025Q1整体毛利率8.17%，同比提升0.23pct，环比提升1.10pct。",
+      "quantities": [
+        {
+          "value": "8.17",
+          "unit": "%",
+          "start": 888,
+          "end": 893
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1904,
+      "end": 2090,
+      "text": "由于产品价格和项目进度变化，我们调整盈利预测，预计公司2025-2027年收入分别为90.04(原88.45)/106.21(原104.05)/120.92亿元，同比增长25.6%/18.0%/13.9%，归母净利润分别为4.12(原3.80)/5.30(原4.86)/6.30亿元，同比增长37.3%/28.6%/18.9%，对应PE分别为9.0x/7.0x/5.9x；",
+      "quantities": [
+        {
+          "value": "120.92",
+          "unit": "亿元",
+          "start": 1976,
+          "end": 1984
+        },
+        {
+          "value": "25.6",
+          "unit": "%",
+          "start": 1989,
+          "end": 1994
+        },
+        {
+          "value": "18.0",
+          "unit": "%",
+          "start": 1995,
+          "end": 2000
+        },
+        {
+          "value": "13.9",
+          "unit": "%",
+          "start": 2001,
+          "end": 2006
+        },
+        {
+          "value": "6.30",
+          "unit": "亿元",
+          "start": 2039,
+          "end": 2045
+        },
+        {
+          "value": "37.3",
+          "unit": "%",
+          "start": 2050,
+          "end": 2055
+        },
+        {
+          "value": "28.6",
+          "unit": "%",
+          "start": 2056,
+          "end": 2061
+        },
+        {
+          "value": "18.9",
+          "unit": "%",
+          "start": 2062,
+          "end": 2067
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2137,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2137,
+    "processed_ranges": [
+      [
+        0,
+        2137
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 34.550108,
+  "source_content_sha256": "a7084f71d8651d53c978ac40b7507263cf1bdad01354eecadaddf8a5c4d120fb"
+}

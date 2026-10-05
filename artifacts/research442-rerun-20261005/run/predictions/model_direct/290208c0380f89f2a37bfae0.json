@@ -1,0 +1,292 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000711",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年年初至今”作为报告期时间不成立，且与周报上下文时间不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 789,
+          "end": 828,
+          "text": "零售各细分板块中，本周钟表珠宝板块涨幅最大，129年年初至今钟表珠宝板块领跑。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "零售各细分板块中，本周钟表珠宝板块涨幅最大，129年年初至今钟表珠宝板块领跑。",
+          "reason": "“129年年初至今”作为报告期时间不成立，且与周报上下文时间不符。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 789,
+          "end": 828,
+          "text": "零售各细分板块中，本周钟表珠宝板块涨幅最大，129年年初至今钟表珠宝板块领跑。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aff2201cced391e09398f128",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万31个一级行业中排名不可能出现第40位，名次超出行业总数。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 702,
+          "end": 789,
+          "text": "本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。",
+          "reason": "申万31个一级行业中排名不可能出现第40位，名次超出行业总数。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 702,
+          "end": 789,
+          "text": "本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b4ab0921a44d97b5311171fb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "商贸零售指数上涨0.69%，上证综指下跌0.03%，前者跑赢后者应为0.72个百分点，而非0.71个百分点。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 702,
+          "end": 789,
+          "text": "本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。",
+          "reason": "商贸零售指数上涨0.69%，上证综指下跌0.03%，前者跑赢后者应为0.72个百分点，而非0.71个百分点。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 702,
+          "end": 789,
+          "text": "本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6c006fa76735972ae7a04c1e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "末尾“5. 关注具备差异化管线的医美产品厂商”与投资主线四开头内容重复，属不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1091,
+          "end": 1161,
+          "text": "投资主线四（医美）：关注具备差异化管线的医美产品厂商，重点推荐爱美客、科笛-B等，受益标的锦波生物等；5. 关注具备差异化管线的医美产品厂商"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资主线四（医美）：关注具备差异化管线的医美产品厂商，重点推荐爱美客、科笛-B等，受益标的锦波生物等；5. 关注具备差异化管线的医美产品厂商",
+          "reason": "末尾“5. 关注具备差异化管线的医美产品厂商”与投资主线四开头内容重复，属不必要重复。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1091,
+          "end": 1161,
+          "text": "投资主线四（医美）：关注具备差异化管线的医美产品厂商，重点推荐爱美客、科笛-B等，受益标的锦波生物等；5. 关注具备差异化管线的医美产品厂商"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d06836de1c8f925e23881419",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1190
+        ]
+      ],
+      "estimated_input_tokens": 5830,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:20:03.382422+00:00",
+        "request_sha256": "271676524047b1b7e2584a9c2757f1274cb00fdc533e5519bef428ae49959963",
+        "input_token_estimate": 16215,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278359",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6a11fa2af65e4ba8b9430d7023a92f79",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3831,
+        "output_tokens": 4518,
+        "usage_source": "provider",
+        "duration_seconds": 19.304375,
+        "cost_cny": "0.021903"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "零售各细分板块中，本周钟表珠宝板块涨幅最大，129年年初至今钟表珠宝板块领跑。",
+            "reason": "“129年年初至今”作为报告期时间不成立，且与周报上下文时间不符。"
+          }
+        ],
+        "reason": "“129年年初至今”作为报告期时间不成立，且与周报上下文时间不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。",
+            "reason": "申万31个一级行业中排名不可能出现第40位，名次超出行业总数。"
+          }
+        ],
+        "reason": "申万31个一级行业中排名不可能出现第40位，名次超出行业总数。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。",
+            "reason": "商贸零售指数上涨0.69%，上证综指下跌0.03%，前者跑赢后者应为0.72个百分点，而非0.71个百分点。"
+          }
+        ],
+        "reason": "商贸零售指数上涨0.69%，上证综指下跌0.03%，前者跑赢后者应为0.72个百分点，而非0.71个百分点。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "投资主线四（医美）：关注具备差异化管线的医美产品厂商，重点推荐爱美客、科笛-B等，受益标的锦波生物等；5. 关注具备差异化管线的医美产品厂商",
+            "reason": "末尾“5. 关注具备差异化管线的医美产品厂商”与投资主线四开头内容重复，属不必要重复。"
+          }
+        ],
+        "reason": "末尾“5. 关注具备差异化管线的医美产品厂商”与投资主线四开头内容重复，属不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1190,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1190,
+    "processed_ranges": [
+      [
+        0,
+        1190
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 19.335304,
+  "source_content_sha256": "c5e2d5aeffb43bd713cc78bb0e08c61ec514ea95b60523b0f3baa194f46b1bb3"
+}

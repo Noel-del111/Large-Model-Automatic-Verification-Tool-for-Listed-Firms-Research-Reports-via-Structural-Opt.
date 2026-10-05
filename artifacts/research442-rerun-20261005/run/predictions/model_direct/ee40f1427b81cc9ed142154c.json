@@ -1,0 +1,328 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000281",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "4月没有31日，该日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 113,
+          "end": 168,
+          "text": "4月31日，《两江新区空天信息暨低空经济发展行动计划》发布，提出力争在2027年空天信息产业规模达1000元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月31日，《两江新区空天信息暨低空经济发展行动计划》发布，提出力争在2027年空天信息产业规模达1000元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 113,
+          "end": 168,
+          "text": "4月31日，《两江新区空天信息暨低空经济发展行动计划》发布，提出力争在2027年空天信息产业规模达1000元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b8c78469917dfb1c955e96f9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "空天信息产业规模写为“1000元”，按语境单位应为亿元或万元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 113,
+          "end": 168,
+          "text": "4月31日，《两江新区空天信息暨低空经济发展行动计划》发布，提出力争在2027年空天信息产业规模达1000元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月31日，《两江新区空天信息暨低空经济发展行动计划》发布，提出力争在2027年空天信息产业规模达1000元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 113,
+          "end": 168,
+          "text": "4月31日，《两江新区空天信息暨低空经济发展行动计划》发布，提出力争在2027年空天信息产业规模达1000元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2913320b600eb6dd3433519b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "声明“由高到低”排列，但计算机设备2.48%高于软件开发1.84%，顺序并非降序。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1049,
+          "end": 1106,
+          "text": "计算机二级行业涨跌幅由高到低分别为：软件开发(1.84%)、IT服务II(1.39%)、计算机设备(2.48%)。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "计算机二级行业涨跌幅由高到低分别为：软件开发(1.84%)、IT服务II(1.39%)、计算机设备(2.48%)。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1049,
+          "end": 1106,
+          "text": "计算机二级行业涨跌幅由高到低分别为：软件开发(1.84%)、IT服务II(1.39%)、计算机设备(2.48%)。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "83e57f32e506063c085a0670",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万一级子行业共31个，排名不可能为第33位，总数与排名冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1019,
+          "end": 1049,
+          "text": "在申万31个一级子行业中，计算机板块周涨跌幅排名为第33位。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在申万31个一级子行业中，计算机板块周涨跌幅排名为第33位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1019,
+          "end": 1049,
+          "text": "在申万31个一级子行业中，计算机板块周涨跌幅排名为第33位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "062c320daefde2d40b15619f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "计算机行业周报中“债券久期因子”非股票板块指标，与沪深300、创业板综比较不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 948,
+          "end": 1019,
+          "text": "本周（04.29-05.03），A股债券久期因子上涨1.88%，板块整体跑赢沪深300指数达1.32pct，跑输创业板综指数达0.51pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（04.29-05.03），A股债券久期因子上涨1.88%，板块整体跑赢沪深300指数达1.32pct，跑输创业板综指数达0.51pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 948,
+          "end": 1019,
+          "text": "本周（04.29-05.03），A股债券久期因子上涨1.88%，板块整体跑赢沪深300指数达1.32pct，跑输创业板综指数达0.51pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "457df948d5a57a1189640f0b",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1456
+        ]
+      ],
+      "estimated_input_tokens": 6015,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:37:45.320628+00:00",
+        "request_sha256": "f3ac67ea9a24ceaac3bc98445cb4224300361f13d9ebb504ff7add379d5fbb5a",
+        "input_token_estimate": 16735,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278879",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e9cf73eb4496459e9ed976a7aca7844b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3868,
+        "output_tokens": 6515,
+        "usage_source": "provider",
+        "duration_seconds": 25.359346,
+        "cost_cny": "0.029928"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "4月31日，《两江新区空天信息暨低空经济发展行动计划》发布，提出力争在2027年空天信息产业规模达1000元。"
+          }
+        ],
+        "reason": "4月没有31日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "4月31日，《两江新区空天信息暨低空经济发展行动计划》发布，提出力争在2027年空天信息产业规模达1000元。"
+          }
+        ],
+        "reason": "空天信息产业规模写为“1000元”，按语境单位应为亿元或万元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "计算机二级行业涨跌幅由高到低分别为：软件开发(1.84%)、IT服务II(1.39%)、计算机设备(2.48%)。"
+          }
+        ],
+        "reason": "声明“由高到低”排列，但计算机设备2.48%高于软件开发1.84%，顺序并非降序。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "在申万31个一级子行业中，计算机板块周涨跌幅排名为第33位。"
+          }
+        ],
+        "reason": "申万一级子行业共31个，排名不可能为第33位，总数与排名冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "本周（04.29-05.03），A股债券久期因子上涨1.88%，板块整体跑赢沪深300指数达1.32pct，跑输创业板综指数达0.51pct。"
+          }
+        ],
+        "reason": "计算机行业周报中“债券久期因子”非股票板块指标，与沪深300、创业板综比较不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1456,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1456,
+    "processed_ranges": [
+      [
+        0,
+        1456
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.38324,
+  "source_content_sha256": "489ef5da40eda115aabeaa70e1f36f9221f1249649556de2246fa175831ef2b9"
+}

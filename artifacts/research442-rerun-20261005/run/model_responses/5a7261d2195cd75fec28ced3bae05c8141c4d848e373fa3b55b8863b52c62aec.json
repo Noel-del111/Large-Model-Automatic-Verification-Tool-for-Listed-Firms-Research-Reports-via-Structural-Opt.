@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"大元泵业(603)\"}], \"reason\": \"股票代码应六位，仅写“603”不完整，不符合证券代码格式。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"预计公司2025-2027年营收分别为21.80、24.47、27.27亿元，；归母净利润分别为2.57、3.05、3.61亿元，同比增速分别为0.70%、18.82%、18.12%。\"}], \"reason\": \"按2024年归母净利2.55亿元及预测值计算，同比增速约0.78%、18.68%、18.36%，与文中0.70%、18.82%、18.12%不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:24:05.308617+00:00",
+    "request_sha256": "fce44ae1b4098b9cefdffde486d064ea615493b20f4d2e79d1a0b4d0d6689a46",
+    "input_token_estimate": 16412,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278556",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "bbe7319c559e4f3ea72549422ec0cd79",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3958,
+    "output_tokens": 9807,
+    "usage_source": "provider",
+    "duration_seconds": 36.017004,
+    "cost_cny": "0.043186"
+  },
+  "cache_request": {
+    "key": "5a7261d2195cd75fec28ced3bae05c8141c4d848e373fa3b55b8863b52c62aec",
+    "purpose": "text_review.detect",
+    "messages_sha256": "fce44ae1b4098b9cefdffde486d064ea615493b20f4d2e79d1a0b4d0d6689a46"
+  }
+}

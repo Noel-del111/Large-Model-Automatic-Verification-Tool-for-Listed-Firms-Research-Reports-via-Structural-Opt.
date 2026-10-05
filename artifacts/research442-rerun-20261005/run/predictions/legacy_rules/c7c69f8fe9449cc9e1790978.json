@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000500",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "84a0d046f4e55c5540f5993a",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 166,
+          "end": 209,
+          "text": "公司2024年实现营收2.03亿分，公司营收在2024-2017年复合增速达到12%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1185,
+    "total_chars": 1185,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001207,
+  "source_content_sha256": "c0d9536f5b6515e8c69714554e3ef599dc3eafcf041f0b2888fc466600ab90cb"
+}

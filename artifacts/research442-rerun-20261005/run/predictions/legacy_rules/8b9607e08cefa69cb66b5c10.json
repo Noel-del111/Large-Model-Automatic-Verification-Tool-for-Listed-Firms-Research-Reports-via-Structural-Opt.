@@ -1,0 +1,18 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000702",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1302,
+    "total_chars": 1302,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001341,
+  "source_content_sha256": "8cb6893c6396ea5e5c7b881e08c549325e100a31e31f8d59e5a7818f02323216"
+}

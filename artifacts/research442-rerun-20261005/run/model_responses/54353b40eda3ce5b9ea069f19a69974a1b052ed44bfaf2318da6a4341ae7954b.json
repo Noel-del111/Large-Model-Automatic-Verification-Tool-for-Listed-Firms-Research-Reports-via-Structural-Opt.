@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。\"}], \"reason\": \"同一新品介绍句子在原文中连续重复出现，属于不必要的冗余。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"公司4月线下铺货后、于3月底投放梯媒（分众），迅速提升新品曝光量\"}], \"reason\": \"前文称4月线下铺货后，后文称于3月底投放梯媒，3月底早于4月，先后关系矛盾。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"我们预计公司2025-2027年实现营收34.52/38.02/40.07元\"}], \"reason\": \"预计营收数值后单位写为“元”，通常应表达为“亿元”或“万元”，单位与量纲不符。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"对应EPS为0.68/0.74/0.77元，对应当前股价PE为16/14/14/15倍。\"}], \"reason\": \"2025-2027三个年度对应EPS为三个值，但PE给出四个值16/14/14/15，年度数与数值数量不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:13:41.788144+00:00",
+    "request_sha256": "9d2814e3fb8ab977ec0e4ac44ad04b16ec8a0f1a78e6a19648266b2cc009edac",
+    "input_token_estimate": 17040,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279184",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "33a6fa046bb941f9b4cd39f0a648633c",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3959,
+    "output_tokens": 6496,
+    "usage_source": "provider",
+    "duration_seconds": 26.164054,
+    "cost_cny": "0.029943"
+  },
+  "cache_request": {
+    "key": "54353b40eda3ce5b9ea069f19a69974a1b052ed44bfaf2318da6a4341ae7954b",
+    "purpose": "text_review.detect",
+    "messages_sha256": "9d2814e3fb8ab977ec0e4ac44ad04b16ec8a0f1a78e6a19648266b2cc009edac"
+  }
+}

@@ -1,0 +1,490 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000402",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "设计产能数值空缺，仅有单位“万吨”，无法核验产能。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 493,
+          "end": 559,
+          "text": "2024年，公司的泰胜昌吉基地落成并投产，该基地为中高端塔筒产品而规划建设，以“”大直径塔筒为主，兼顾中亚海外市场，设计产能为万吨。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司的泰胜昌吉基地落成并投产，该基地为中高端塔筒产品而规划建设，以“”大直径塔筒为主，兼顾中亚海外市场，设计产能为万吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 493,
+          "end": 559,
+          "text": "2024年，公司的泰胜昌吉基地落成并投产，该基地为中高端塔筒产品而规划建设，以“”大直径塔筒为主，兼顾中亚海外市场，设计产能为万吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f1dc63e72e02355b5019cde3",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "报告期为2024年报及2025年一季报，却预计2023年完成技改，完成时间早于报告期。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 595,
+          "end": 653,
+          "text": "同时，公司积极推进泰胜蓝岛基地技术改造项目、泰胜哈密基地技术改造项目、泰胜上海基地技术改造项目，预计2023年完成。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "同时，公司积极推进泰胜蓝岛基地技术改造项目、泰胜哈密基地技术改造项目、泰胜上海基地技术改造项目，预计2023年完成。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 595,
+          "end": 653,
+          "text": "同时，公司积极推进泰胜蓝岛基地技术改造项目、泰胜哈密基地技术改造项目、泰胜上海基地技术改造项目，预计2023年完成。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dd214bb9a2029704d9ce9bd8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "订单金额以“公顷”计量，公顷为面积单位，不应作为金额单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 747,
+          "end": 789,
+          "text": "截至2024年末，公司在执行及待执行订单共计49.17亿公顷，同比增长27.97%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年末，公司在执行及待执行订单共计49.17亿公顷，同比增长27.97%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 747,
+          "end": 789,
+          "text": "截至2024年末，公司在执行及待执行订单共计49.17亿公顷，同比增长27.97%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2684480efe39e6676eeb31e2",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1316
+        ]
+      ],
+      "estimated_input_tokens": 5835,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:29:47.656518+00:00",
+        "request_sha256": "7f7eff85ce758d57fd8dea5396d9a7e6278a9e4cb7edd33e1dda45360d00dbed",
+        "input_token_estimate": 16247,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278391",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "dec97525ecc34c2ca8c033a2ae9f9281",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3840,
+        "output_tokens": 5859,
+        "usage_source": "provider",
+        "duration_seconds": 23.700488,
+        "cost_cny": "0.027276",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年，公司的泰胜昌吉基地落成并投产，该基地为中高端塔筒产品而规划建设，以“”大直径塔筒为主，兼顾中亚海外市场，设计产能为万吨。"
+          }
+        ],
+        "reason": "设计产能数值空缺，仅有单位“万吨”，无法核验产能。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "同时，公司积极推进泰胜蓝岛基地技术改造项目、泰胜哈密基地技术改造项目、泰胜上海基地技术改造项目，预计2023年完成。"
+          }
+        ],
+        "reason": "报告期为2024年报及2025年一季报，却预计2023年完成技改，完成时间早于报告期。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "截至2024年末，公司在执行及待执行订单共计49.17亿公顷，同比增长27.97%。"
+          }
+        ],
+        "reason": "订单金额以“公顷”计量，公顷为面积单位，不应作为金额单位。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 111,
+      "end": 131,
+      "text": "公司2024年实现营收48.38亿元，；",
+      "quantities": [
+        {
+          "value": "48.38",
+          "unit": "亿元",
+          "start": 122,
+          "end": 129
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 131,
+      "end": 155,
+      "text": "实现归母净利润1.82亿元，同比-37.77%；",
+      "quantities": [
+        {
+          "value": "1.82",
+          "unit": "亿元",
+          "start": 138,
+          "end": 144
+        },
+        {
+          "value": "-37.77",
+          "unit": "%",
+          "start": 147,
+          "end": 154
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 155,
+      "end": 181,
+      "text": "实现扣非归母净利润1.78亿元，同比-29.11%。",
+      "quantities": [
+        {
+          "value": "1.78",
+          "unit": "亿元",
+          "start": 164,
+          "end": 170
+        },
+        {
+          "value": "-29.11",
+          "unit": "%",
+          "start": 173,
+          "end": 180
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 181,
+      "end": 210,
+      "text": "公司2025Q1实现营收7.95亿元，同比+21.01%；",
+      "quantities": [
+        {
+          "value": "7.95",
+          "unit": "亿元",
+          "start": 193,
+          "end": 199
+        },
+        {
+          "value": "+21.01",
+          "unit": "%",
+          "start": 202,
+          "end": 209
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 210,
+      "end": 234,
+      "text": "实现归母净利润0.45亿元，同比-17.47%；",
+      "quantities": [
+        {
+          "value": "0.45",
+          "unit": "亿元",
+          "start": 217,
+          "end": 223
+        },
+        {
+          "value": "-17.47",
+          "unit": "%",
+          "start": 226,
+          "end": 233
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 234,
+      "end": 260,
+      "text": "实现扣非归母净利润0.43亿元，同比-16.06%。",
+      "quantities": [
+        {
+          "value": "0.43",
+          "unit": "亿元",
+          "start": 243,
+          "end": 249
+        },
+        {
+          "value": "-16.06",
+          "unit": "%",
+          "start": 252,
+          "end": 259
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 260,
+      "end": 317,
+      "text": "2024年，公司销售毛利率为13.83%，同比下降6.26pct，销售净利率为3.89%，同比下降2.22pct。",
+      "quantities": [
+        {
+          "value": "13.83",
+          "unit": "%",
+          "start": 274,
+          "end": 280
+        },
+        {
+          "value": "3.89",
+          "unit": "%",
+          "start": 299,
+          "end": 304
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 260,
+      "end": 317,
+      "text": "2024年，公司销售毛利率为13.83%，同比下降6.26pct，销售净利率为3.89%，同比下降2.22pct。",
+      "quantities": [
+        {
+          "value": "13.83",
+          "unit": "%",
+          "start": 274,
+          "end": 280
+        },
+        {
+          "value": "3.89",
+          "unit": "%",
+          "start": 299,
+          "end": 304
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 317,
+      "end": 378,
+      "text": "2025年第一季度，公司销售毛利率为13.94%，同比下降6.18pct，销售净利率为5.39%，同比下降3.08pct。",
+      "quantities": [
+        {
+          "value": "13.94",
+          "unit": "%",
+          "start": 335,
+          "end": 341
+        },
+        {
+          "value": "5.39",
+          "unit": "%",
+          "start": 360,
+          "end": 365
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 317,
+      "end": 378,
+      "text": "2025年第一季度，公司销售毛利率为13.94%，同比下降6.18pct，销售净利率为5.39%，同比下降3.08pct。",
+      "quantities": [
+        {
+          "value": "13.94",
+          "unit": "%",
+          "start": 335,
+          "end": 341
+        },
+        {
+          "value": "5.39",
+          "unit": "%",
+          "start": 360,
+          "end": 365
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 378,
+      "end": 462,
+      "text": "由于国内风电行业竞争加剧，部分区域市场订单毛利率有所下降，叠加国内海上风电市场处于调整期，公司海上风电业务量同比有所下滑，导致公司2024年及2025Q1整体业绩承压。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "导致公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1316,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1316,
+    "processed_ranges": [
+      [
+        0,
+        1316
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1316,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001995,
+  "source_content_sha256": "d364355d6feaf58d382d4fc572e861ed059df1b40cac702a0dcfe3aeff4c81d2"
+}

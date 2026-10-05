@@ -1,0 +1,402 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000659",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一发展轨迹结论连续重复，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 77,
+          "end": 135,
+          "text": "三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 77,
+          "end": 135,
+          "text": "三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c95875bbb45fb00a1dd9dfc0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "190年代不是合法年代，应为1990年代或20世纪90年代。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 135,
+          "end": 204,
+          "text": "两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 135,
+          "end": 204,
+          "text": "两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "80c9f813f31d1faeea4186ab",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前称成长为全球市场领导者，后称恶化为负增值低端代工模式，同一发展轨迹不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 135,
+          "end": 204,
+          "text": "两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 135,
+          "end": 204,
+          "text": "两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "efcac6a7e8220e4fb2839f35",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "众筹是融资方式，不是技术突破方式；低级供应商非规范供应链层级术语。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 592,
+          "end": 651,
+          "text": "中国制造业通过自主研发和众筹促进技术突破，推动整条供应链的国产替代趋势，从低级供应商逐步提升至一级供应商，再到整车厂；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中国制造业通过自主研发和众筹促进技术突破，推动整条供应链的国产替代趋势，从低级供应商逐步提升至一级供应商，再到整车厂；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 592,
+          "end": 651,
+          "text": "中国制造业通过自主研发和众筹促进技术突破，推动整条供应链的国产替代趋势，从低级供应商逐步提升至一级供应商，再到整车厂；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b9f87087159b604627c86f3e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "活动名称的引号内为空，关键属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1472,
+          "end": 1508,
+          "text": "特斯拉在2024年10月的“”活动中展示了新一代人型机器人Optimus"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "特斯拉在2024年10月的“”活动中展示了新一代人型机器人Optimus"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1472,
+          "end": 1508,
+          "text": "特斯拉在2024年10月的“”活动中展示了新一代人型机器人Optimus"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c1752888e34a749aef8fe880",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "起止时间倒置，2025年9月晚于2024年3月，期间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1388,
+          "end": 1427,
+          "text": "2025年9月至2024年3月间，发生了几件对高端制造领域产生震撼影响的事件："
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年9月至2024年3月间，发生了几件对高端制造领域产生震撼影响的事件："
+        }
+      ],
+      "spans": [
+        {
+          "start": 1388,
+          "end": 1427,
+          "text": "2025年9月至2024年3月间，发生了几件对高端制造领域产生震撼影响的事件："
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "40c869efd053b430a6cfe6a6",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1955
+        ]
+      ],
+      "estimated_input_tokens": 6654,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:42:48.488408+00:00",
+        "request_sha256": "35279f78860e49073bb1f4e145d0f2478d3b74ac869ed48351686d6f0746149d",
+        "input_token_estimate": 18458,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280602",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2f2ce7f2fb644744975f02b1257cbbe9",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4105,
+        "output_tokens": 8118,
+        "usage_source": "provider",
+        "duration_seconds": 32.719135,
+        "cost_cny": "0.036577"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。"
+          }
+        ],
+        "reason": "同一发展轨迹结论连续重复，未增加新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。"
+          }
+        ],
+        "reason": "190年代不是合法年代，应为1990年代或20世纪90年代。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。"
+          }
+        ],
+        "reason": "前称成长为全球市场领导者，后称恶化为负增值低端代工模式，同一发展轨迹不能同时成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "中国制造业通过自主研发和众筹促进技术突破，推动整条供应链的国产替代趋势，从低级供应商逐步提升至一级供应商，再到整车厂；"
+          }
+        ],
+        "reason": "众筹是融资方式，不是技术突破方式；低级供应商非规范供应链层级术语。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "特斯拉在2024年10月的“”活动中展示了新一代人型机器人Optimus"
+          }
+        ],
+        "reason": "活动名称的引号内为空，关键属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2025年9月至2024年3月间，发生了几件对高端制造领域产生震撼影响的事件："
+          }
+        ],
+        "reason": "起止时间倒置，2025年9月晚于2024年3月，期间不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 1698,
+      "end": 1756,
+      "text": "目前，三花和拓普的市盈率分别为27倍和25倍，低于其长期平均水平约30倍，反映出其人形机器人业务基本上没有估值溢价。",
+      "quantities": [
+        {
+          "value": "27",
+          "unit": "倍",
+          "start": 1713,
+          "end": 1716
+        },
+        {
+          "value": "25",
+          "unit": "倍",
+          "start": 1717,
+          "end": 1720
+        },
+        {
+          "value": "30",
+          "unit": "倍",
+          "start": 1731,
+          "end": 1734
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1955,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1955,
+    "processed_ranges": [
+      [
+        0,
+        1955
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 32.745762,
+  "source_content_sha256": "92d007e4487321f576d2f89f0adcaa50faf1c26fb4cb3d739056daf4de261aa1"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"OPEC+进一步计划7月增产。\",\"start\":21,\"end\":36},{\"text\":\"OPEC+进一步计划7月增产。\",\"start\":37,\"end\":52}],\"reason\":\"正文连续两次出现完全相同的“OPEC+进一步计划7月增产。”表述，属不必要重复。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"5月31日，OPEC+表示同意将石油套利增加41.1万桶/日，为5月以来连续第三个月的计划增产，同时增产幅度与5、6月的幅度相当。\"}],\"reason\":\"石油产量增加应用“产量”或“供应量”，“套利”为金融交易术语，此处使用不当。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"WTI期货结算价为60.79美分/桶，周环比-1.20%。\"}],\"reason\":\"WTI原油期货结算价单位应为美元/桶，同段布伦特为美元/桶，此处写成美分/桶导致量纲错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:56:27.815673+00:00",
+    "request_sha256": "94c14e5513ac92ca9b1b3cb5675ec031ec18b41d18cc4d29aa0923eafcbc4099",
+    "input_token_estimate": 15575,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277719",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "0adfca2773904671b9ec9be7998ad6d0",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3822,
+    "output_tokens": 7257,
+    "usage_source": "provider",
+    "duration_seconds": 28.095006,
+    "cost_cny": "0.03285"
+  },
+  "cache_request": {
+    "key": "7f1a3c39eab005f5d3da3c02e99ec6ae8fa363f100407ba3d03253aa6eb29b8b",
+    "purpose": "text_review.detect",
+    "messages_sha256": "94c14e5513ac92ca9b1b3cb5675ec031ec18b41d18cc4d29aa0923eafcbc4099"
+  }
+}

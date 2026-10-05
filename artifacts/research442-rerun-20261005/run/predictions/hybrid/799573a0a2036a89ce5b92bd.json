@@ -1,0 +1,981 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000444",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“224年”不是合法年份，应为2024年，时间信息本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 666,
+          "end": 701,
+          "text": "224年中国LNG地区成交均价4512.57元/吨，同比下降7.2%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "224年中国LNG地区成交均价4512.57元/吨，同比下降7.2%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 666,
+          "end": 701,
+          "text": "224年中国LNG地区成交均价4512.57元/吨，同比下降7.2%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e3e213d7218d58efeec99c13",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“甲醇产量”后直接接单位“万吨”，缺少应报告的具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 887,
+          "end": 913,
+          "text": "2024年，实现甲醇产量万吨，同比增长18.43%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，实现甲醇产量万吨，同比增长18.43%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 887,
+          "end": 913,
+          "text": "2024年，实现甲醇产量万吨，同比增长18.43%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "09dacb89be0310c81a8a1111",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "原煤产量单位应为吨或万吨，不是平方米；天然气销量单位应为亿方或类似体积单位，不是亿吨。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 550,
+          "end": 584,
+          "text": "25Q1实现原煤产量1406.65万平方米，同比增长138.75%；"
+        },
+        {
+          "kind": "source_text",
+          "start": 816,
+          "end": 857,
+          "text": "25Q1需求仍疲软，产量16.57亿方，，销量8.65亿吨，同比下降26.75%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1实现原煤产量1406.65万平方米，同比增长138.75%；"
+        },
+        {
+          "text": "25Q1需求仍疲软，产量16.57亿方，，销量8.65亿吨，同比下降26.75%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 550,
+          "end": 584,
+          "text": "25Q1实现原煤产量1406.65万平方米，同比增长138.75%；"
+        },
+        {
+          "start": 816,
+          "end": 857,
+          "text": "25Q1需求仍疲软，产量16.57亿方，，销量8.65亿吨，同比下降26.75%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "770c495fc111466cefd6be0d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "相邻两句重复表达“天然气价格下降、销量锐减拖累业绩”，信息不必要地重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 618,
+          "end": 666,
+          "text": "天然气价格持续下降，销量锐减拖累业绩。由于天然气价格持续下降且销量锐减，进一步拖累业务业绩表现。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "天然气价格持续下降，销量锐减拖累业绩。由于天然气价格持续下降且销量锐减，进一步拖累业务业绩表现。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 618,
+          "end": 666,
+          "text": "天然气价格持续下降，销量锐减拖累业绩。由于天然气价格持续下降且销量锐减，进一步拖累业务业绩表现。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "70357982faf2a526e2aff05f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "2024年4月无法发布2024年度利润分配预案，分红预案通常针对上一完整年度。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1413,
+          "end": 1503,
+          "text": "2024年4月24日，广汇能源发布《关于2024年度利润分配预案的公告》，宣布2024年拟派发现金股利0.622元/股，本次现金分红金额达到39.76亿元，分红比例高达134.3%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年4月24日，广汇能源发布《关于2024年度利润分配预案的公告》，宣布2024年拟派发现金股利0.622元/股，本次现金分红金额达到39.76亿元，分红比例高达134.3%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1413,
+          "end": 1503,
+          "text": "2024年4月24日，广汇能源发布《关于2024年度利润分配预案的公告》，宣布2024年拟派发现金股利0.622元/股，本次现金分红金额达到39.76亿元，分红比例高达134.3%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c07cb5aece9fdfe685c6316d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "2024年归母净利润29.61亿元大于净利润27.98亿元，归母净利润通常不应超过净利润。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 60,
+          "end": 144,
+          "text": "2024年，公司实现营业收入364.41亿元，同比下降40.72%；归母净利润29.61亿元，同比下降42.60%；扣非归母净利润29.52亿元，同比下降46.41%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1017,
+          "end": 1104,
+          "text": "2024年，公司毛利率为11.36%，费用率为10.77%，净利率7.68%。营业总成本为323.03亿元，同比下降40.34%；实现净利润为27.98亿元，同比下降43%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司实现营业收入364.41亿元，同比下降40.72%；归母净利润29.61亿元，同比下降42.60%；扣非归母净利润29.52亿元，同比下降46.41%。"
+        },
+        {
+          "text": "2024年，公司毛利率为11.36%，费用率为10.77%，净利率7.68%。营业总成本为323.03亿元，同比下降40.34%；实现净利润为27.98亿元，同比下降43%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 60,
+          "end": 144,
+          "text": "2024年，公司实现营业收入364.41亿元，同比下降40.72%；归母净利润29.61亿元，同比下降42.60%；扣非归母净利润29.52亿元，同比下降46.41%。"
+        },
+        {
+          "start": 1017,
+          "end": 1104,
+          "text": "2024年，公司毛利率为11.36%，费用率为10.77%，净利率7.68%。营业总成本为323.03亿元，同比下降40.34%；实现净利润为27.98亿元，同比下降43%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0d69a692f63257f52be309a7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "2025Q1归母净利润6.94亿元大于净利润6.59亿元，归母净利润通常不应超过净利润。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 146,
+          "end": 230,
+          "text": "2025年第一季度，公司实现营业收入89.02亿元，同比下降11.34%；归母净利润6.94亿元，同比下降14.07%；扣非归母净利润7.01亿元，同比下降9.48%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1106,
+          "end": 1195,
+          "text": "2025Q1，公司毛利率为10.42%，费用率为11.34%，净利率7.40%。营业总成本为79.74亿元，同比下降11.75%；实现净利润为6.59亿元，同比下降14.48%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年第一季度，公司实现营业收入89.02亿元，同比下降11.34%；归母净利润6.94亿元，同比下降14.07%；扣非归母净利润7.01亿元，同比下降9.48%。"
+        },
+        {
+          "text": "2025Q1，公司毛利率为10.42%，费用率为11.34%，净利率7.40%。营业总成本为79.74亿元，同比下降11.75%；实现净利润为6.59亿元，同比下降14.48%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 146,
+          "end": 230,
+          "text": "2025年第一季度，公司实现营业收入89.02亿元，同比下降11.34%；归母净利润6.94亿元，同比下降14.07%；扣非归母净利润7.01亿元，同比下降9.48%。"
+        },
+        {
+          "start": 1106,
+          "end": 1195,
+          "text": "2025Q1，公司毛利率为10.42%，费用率为11.34%，净利率7.40%。营业总成本为79.74亿元，同比下降11.75%；实现净利润为6.59亿元，同比下降14.48%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6bdc36e907f8fcceef8d3bb7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按前文2025年4月25日收盘价5.72元计算，5.72/0.44≈13.0、5.72/0.53≈10.79、5.72/0.61≈9.38，与所列PE不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1675,
+          "end": 1760,
+          "text": "预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1675,
+          "end": 1760,
+          "text": "预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c1bcb5cba4f6342dfabbcc47",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "标题含“投资评级”，但正文仅给出盈利预测，未给出投资评级结论，必要要素缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1631,
+          "end": 1760,
+          "text": "公司盈利预测及投资评级：在保证稳定持续的资本支出的情况下，公司未来有望保持高股息高分红。预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司盈利预测及投资评级：在保证稳定持续的资本支出的情况下，公司未来有望保持高股息高分红。预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1631,
+          "end": 1760,
+          "text": "公司盈利预测及投资评级：在保证稳定持续的资本支出的情况下，公司未来有望保持高股息高分红。预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1c09501c045d849a0f5056b1",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1784
+        ]
+      ],
+      "estimated_input_tokens": 6078,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:05:38.499440+00:00",
+        "request_sha256": "a2f895fdb6f8e45e07e4a78058a8fef6684e751b320d928aeeb3e5f082ffec0d",
+        "input_token_estimate": 16989,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279133",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "eece54d049734481a3384f92b93eb19b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4102,
+        "output_tokens": 12037,
+        "usage_source": "provider",
+        "duration_seconds": 45.115592,
+        "cost_cny": "0.05225",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "224年中国LNG地区成交均价4512.57元/吨，同比下降7.2%。"
+          }
+        ],
+        "reason": "年份“224年”不是合法年份，应为2024年，时间信息本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年，实现甲醇产量万吨，同比增长18.43%；"
+          }
+        ],
+        "reason": "“甲醇产量”后直接接单位“万吨”，缺少应报告的具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "25Q1实现原煤产量1406.65万平方米，同比增长138.75%；"
+          },
+          {
+            "text": "25Q1需求仍疲软，产量16.57亿方，，销量8.65亿吨，同比下降26.75%。"
+          }
+        ],
+        "reason": "原煤产量单位应为吨或万吨，不是平方米；天然气销量单位应为亿方或类似体积单位，不是亿吨。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "天然气价格持续下降，销量锐减拖累业绩。由于天然气价格持续下降且销量锐减，进一步拖累业务业绩表现。"
+          }
+        ],
+        "reason": "相邻两句重复表达“天然气价格下降、销量锐减拖累业绩”，信息不必要地重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2024年4月24日，广汇能源发布《关于2024年度利润分配预案的公告》，宣布2024年拟派发现金股利0.622元/股，本次现金分红金额达到39.76亿元，分红比例高达134.3%"
+          }
+        ],
+        "reason": "2024年4月无法发布2024年度利润分配预案，分红预案通常针对上一完整年度。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年，公司实现营业收入364.41亿元，同比下降40.72%；归母净利润29.61亿元，同比下降42.60%；扣非归母净利润29.52亿元，同比下降46.41%。"
+          },
+          {
+            "text": "2024年，公司毛利率为11.36%，费用率为10.77%，净利率7.68%。营业总成本为323.03亿元，同比下降40.34%；实现净利润为27.98亿元，同比下降43%。"
+          }
+        ],
+        "reason": "2024年归母净利润29.61亿元大于净利润27.98亿元，归母净利润通常不应超过净利润。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025年第一季度，公司实现营业收入89.02亿元，同比下降11.34%；归母净利润6.94亿元，同比下降14.07%；扣非归母净利润7.01亿元，同比下降9.48%。"
+          },
+          {
+            "text": "2025Q1，公司毛利率为10.42%，费用率为11.34%，净利率7.40%。营业总成本为79.74亿元，同比下降11.75%；实现净利润为6.59亿元，同比下降14.48%。"
+          }
+        ],
+        "reason": "2025Q1归母净利润6.94亿元大于净利润6.59亿元，归母净利润通常不应超过净利润。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。"
+          }
+        ],
+        "reason": "按前文2025年4月25日收盘价5.72元计算，5.72/0.44≈13.0、5.72/0.53≈10.79、5.72/0.61≈9.38，与所列PE不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "公司盈利预测及投资评级：在保证稳定持续的资本支出的情况下，公司未来有望保持高股息高分红。预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。"
+          }
+        ],
+        "reason": "标题含“投资评级”，但正文仅给出盈利预测，未给出投资评级结论，必要要素缺失。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 57,
+      "end": 94,
+      "text": "事件：2024年，公司实现营业收入364.41亿元，同比下降40.72%；",
+      "quantities": [
+        {
+          "value": "364.41",
+          "unit": "亿元",
+          "start": 74,
+          "end": 82
+        },
+        {
+          "value": "40.72",
+          "unit": "%",
+          "start": 87,
+          "end": 93
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 94,
+      "end": 118,
+      "text": "归母净利润29.61亿元，同比下降42.60%；",
+      "quantities": [
+        {
+          "value": "29.61",
+          "unit": "亿元",
+          "start": 99,
+          "end": 106
+        },
+        {
+          "value": "42.60",
+          "unit": "%",
+          "start": 111,
+          "end": 117
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 118,
+      "end": 144,
+      "text": "扣非归母净利润29.52亿元，同比下降46.41%。",
+      "quantities": [
+        {
+          "value": "29.52",
+          "unit": "亿元",
+          "start": 125,
+          "end": 132
+        },
+        {
+          "value": "46.41",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 146,
+      "end": 183,
+      "text": "2025年第一季度，公司实现营业收入89.02亿元，同比下降11.34%；",
+      "quantities": [
+        {
+          "value": "89.02",
+          "unit": "亿元",
+          "start": 164,
+          "end": 171
+        },
+        {
+          "value": "11.34",
+          "unit": "%",
+          "start": 176,
+          "end": 182
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 183,
+      "end": 206,
+      "text": "归母净利润6.94亿元，同比下降14.07%；",
+      "quantities": [
+        {
+          "value": "6.94",
+          "unit": "亿元",
+          "start": 188,
+          "end": 194
+        },
+        {
+          "value": "14.07",
+          "unit": "%",
+          "start": 199,
+          "end": 205
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 206,
+      "end": 230,
+      "text": "扣非归母净利润7.01亿元，同比下降9.48%。",
+      "quantities": [
+        {
+          "value": "7.01",
+          "unit": "亿元",
+          "start": 213,
+          "end": 219
+        },
+        {
+          "value": "9.48",
+          "unit": "%",
+          "start": 224,
+          "end": 229
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 237,
+      "end": 288,
+      "text": "24Q4业绩成为全年亮点，归母净利润达9.58亿元，同比大幅增长211.54%，环比增长75.05%。",
+      "quantities": [
+        {
+          "value": "9.58",
+          "unit": "亿元",
+          "start": 256,
+          "end": 262
+        },
+        {
+          "value": "211.54",
+          "unit": "%",
+          "start": 269,
+          "end": 276
+        },
+        {
+          "value": "75.05",
+          "unit": "%",
+          "start": 281,
+          "end": 287
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 417,
+      "end": 442,
+      "text": "毛利率为22.95%，同比下降11.73个百分点。",
+      "quantities": [
+        {
+          "value": "22.95",
+          "unit": "%",
+          "start": 421,
+          "end": 427
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 519,
+      "end": 550,
+      "text": "2024年煤炭业务营业收入17.38亿，同比上升18.03%。",
+      "quantities": [
+        {
+          "value": "18.03",
+          "unit": "%",
+          "start": 543,
+          "end": 549
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 752,
+      "end": 782,
+      "text": "天然气业务板块营业收入为13.06亿，同比下降65.95%。",
+      "quantities": [
+        {
+          "value": "65.95",
+          "unit": "%",
+          "start": 775,
+          "end": 781
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1017,
+      "end": 1056,
+      "text": "2024年，公司毛利率为11.36%，费用率为10.77%，净利率7.68%。",
+      "quantities": [
+        {
+          "value": "11.36",
+          "unit": "%",
+          "start": 1029,
+          "end": 1035
+        },
+        {
+          "value": "10.77",
+          "unit": "%",
+          "start": 1040,
+          "end": 1046
+        },
+        {
+          "value": "7.68",
+          "unit": "%",
+          "start": 1050,
+          "end": 1055
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1017,
+      "end": 1056,
+      "text": "2024年，公司毛利率为11.36%，费用率为10.77%，净利率7.68%。",
+      "quantities": [
+        {
+          "value": "11.36",
+          "unit": "%",
+          "start": 1029,
+          "end": 1035
+        },
+        {
+          "value": "10.77",
+          "unit": "%",
+          "start": 1040,
+          "end": 1046
+        },
+        {
+          "value": "7.68",
+          "unit": "%",
+          "start": 1050,
+          "end": 1055
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1082,
+      "end": 1104,
+      "text": "实现净利润为27.98亿元，同比下降43%。",
+      "quantities": [
+        {
+          "value": "27.98",
+          "unit": "亿元",
+          "start": 1088,
+          "end": 1095
+        },
+        {
+          "value": "43",
+          "unit": "%",
+          "start": 1100,
+          "end": 1103
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1106,
+      "end": 1146,
+      "text": "2025Q1，公司毛利率为10.42%，费用率为11.34%，净利率7.40%。",
+      "quantities": [
+        {
+          "value": "10.42",
+          "unit": "%",
+          "start": 1119,
+          "end": 1125
+        },
+        {
+          "value": "11.34",
+          "unit": "%",
+          "start": 1130,
+          "end": 1136
+        },
+        {
+          "value": "7.40",
+          "unit": "%",
+          "start": 1140,
+          "end": 1145
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1106,
+      "end": 1146,
+      "text": "2025Q1，公司毛利率为10.42%，费用率为11.34%，净利率7.40%。",
+      "quantities": [
+        {
+          "value": "10.42",
+          "unit": "%",
+          "start": 1119,
+          "end": 1125
+        },
+        {
+          "value": "11.34",
+          "unit": "%",
+          "start": 1130,
+          "end": 1136
+        },
+        {
+          "value": "7.40",
+          "unit": "%",
+          "start": 1140,
+          "end": 1145
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1171,
+      "end": 1195,
+      "text": "实现净利润为6.59亿元，同比下降14.48%。",
+      "quantities": [
+        {
+          "value": "6.59",
+          "unit": "亿元",
+          "start": 1177,
+          "end": 1183
+        },
+        {
+          "value": "14.48",
+          "unit": "%",
+          "start": 1188,
+          "end": 1194
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1675,
+      "end": 1760,
+      "text": "预计2025-2027年归母净利润28.80/34.71/39.64亿元，对应EPS分别为0.44/0.53/0.61元/股，对应PE13.42/11.13/9.75倍。",
+      "quantities": [
+        {
+          "value": "39.64",
+          "unit": "亿元",
+          "start": 1704,
+          "end": 1711
+        },
+        {
+          "value": "0.61",
+          "unit": "元/股",
+          "start": 1730,
+          "end": 1737
+        },
+        {
+          "value": "9.75",
+          "unit": "倍",
+          "start": 1754,
+          "end": 1759
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1784,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1784,
+    "processed_ranges": [
+      [
+        0,
+        1784
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1784,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 17,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002935,
+  "source_content_sha256": "9abade6dca6c2ba4e7c74898e3bd07e7048201d93a734d8de8921588de57b45d"
+}

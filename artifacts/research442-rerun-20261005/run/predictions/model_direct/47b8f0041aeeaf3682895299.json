@@ -1,0 +1,540 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000503",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码应为六位数字，此处写成“3008-42”，不符合证券代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 20,
+          "end": 33,
+          "text": "帝科股份(3008-42)"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "帝科股份(3008-42)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 20,
+          "end": 33,
+          "text": "帝科股份(3008-42)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "099285d3f17b2be986320873",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“2024年总营收”后直接接“亿元”，缺少应报告的具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 88,
+          "end": 136,
+          "text": "公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 88,
+          "end": 136,
+          "text": "公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2bfc42a2513541149e314871",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "23年毛利率11.14%下降1.8pct应为9.34%，与所列24年毛利率9.38%不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 188,
+          "end": 223,
+          "text": "毛利率11.14%、9.38%，YOY+2.3pct、-1.8pct；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "毛利率11.14%、9.38%，YOY+2.3pct、-1.8pct；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 188,
+          "end": 223,
+          "text": "毛利率11.14%、9.38%，YOY+2.3pct、-1.8pct；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4db13c97326d81a395a9c559",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“债权费用率”不是规范财务指标，期间费用率中对应项目通常表述为财务费用率。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 289,
+          "end": 332,
+          "text": "债权费用率在期间费用率中占比最高，公司23、24年债权费用率分别是3.2%、3.1%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "债权费用率在期间费用率中占比最高，公司23、24年债权费用率分别是3.2%、3.1%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 289,
+          "end": 332,
+          "text": "债权费用率在期间费用率中占比最高，公司23、24年债权费用率分别是3.2%、3.1%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9b847abb292269682a87d99e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1005
+        ]
+      ],
+      "estimated_input_tokens": 5503,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:56:55.971235+00:00",
+        "request_sha256": "a194a29b328b295632d2a9085a04f57ea109bc4196a85e954f16643ce0abd0c8",
+        "input_token_estimate": 15340,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277484",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "613cf95a0a4f4e1d9de41e6bd09e60c2",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3681,
+        "output_tokens": 7293,
+        "usage_source": "provider",
+        "duration_seconds": 26.91463,
+        "cost_cny": "0.032853"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "帝科股份(3008-42)"
+          }
+        ],
+        "reason": "股票代码应为六位数字，此处写成“3008-42”，不符合证券代码格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。"
+          }
+        ],
+        "reason": "“2024年总营收”后直接接“亿元”，缺少应报告的具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "毛利率11.14%、9.38%，YOY+2.3pct、-1.8pct；"
+          }
+        ],
+        "reason": "23年毛利率11.14%下降1.8pct应为9.34%，与所列24年毛利率9.38%不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "债权费用率在期间费用率中占比最高，公司23、24年债权费用率分别是3.2%、3.1%。"
+          }
+        ],
+        "reason": "“债权费用率”不是规范财务指标，期间费用率中对应项目通常表述为财务费用率。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 88,
+      "end": 136,
+      "text": "公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。",
+      "quantities": [
+        {
+          "value": "3.6",
+          "unit": "亿元",
+          "start": 115,
+          "end": 120
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 130,
+          "end": 133
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 88,
+      "end": 136,
+      "text": "公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。",
+      "quantities": [
+        {
+          "value": "3.6",
+          "unit": "亿元",
+          "start": 115,
+          "end": 120
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 130,
+          "end": 133
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 88,
+      "end": 136,
+      "text": "公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。",
+      "quantities": [
+        {
+          "value": "3.6",
+          "unit": "亿元",
+          "start": 115,
+          "end": 120
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 130,
+          "end": 133
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 88,
+      "end": 136,
+      "text": "公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。",
+      "quantities": [
+        {
+          "value": "3.6",
+          "unit": "亿元",
+          "start": 115,
+          "end": 120
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 130,
+          "end": 133
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 171,
+      "end": 188,
+      "text": "归母净利润3.86、3.60亿元；",
+      "quantities": [
+        {
+          "value": "3.60",
+          "unit": "亿元",
+          "start": 181,
+          "end": 187
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 188,
+      "end": 223,
+      "text": "毛利率11.14%、9.38%，YOY+2.3pct、-1.8pct；",
+      "quantities": [
+        {
+          "value": "11.14",
+          "unit": "%",
+          "start": 191,
+          "end": 197
+        },
+        {
+          "value": "9.38",
+          "unit": "%",
+          "start": 198,
+          "end": 203
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 257,
+      "end": 289,
+      "text": "净利率3.9%、2.2%，YOY+4.5pct、-1.7pct。",
+      "quantities": [
+        {
+          "value": "3.9",
+          "unit": "%",
+          "start": 260,
+          "end": 264
+        },
+        {
+          "value": "2.2",
+          "unit": "%",
+          "start": 265,
+          "end": 269
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 831,
+      "end": 947,
+      "text": "我们预计25、26、27年公司营收分别164、171、210亿元，归母净利润分别为3.87、4.11、5.70亿元，参考可比公司估值，给予2025年PE20倍，目标价格54.31元，对应市值77.4亿元，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "210",
+          "unit": "亿元",
+          "start": 858,
+          "end": 863
+        },
+        {
+          "value": "5.70",
+          "unit": "亿元",
+          "start": 882,
+          "end": 888
+        },
+        {
+          "value": "20",
+          "unit": "倍",
+          "start": 907,
+          "end": 910
+        },
+        {
+          "value": "54.31",
+          "unit": "元",
+          "start": 915,
+          "end": 921
+        },
+        {
+          "value": "77.4",
+          "unit": "亿元",
+          "start": 926,
+          "end": 932
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "参考可比公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 831,
+      "end": 947,
+      "text": "我们预计25、26、27年公司营收分别164、171、210亿元，归母净利润分别为3.87、4.11、5.70亿元，参考可比公司估值，给予2025年PE20倍，目标价格54.31元，对应市值77.4亿元，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "210",
+          "unit": "亿元",
+          "start": 858,
+          "end": 863
+        },
+        {
+          "value": "5.70",
+          "unit": "亿元",
+          "start": 882,
+          "end": 888
+        },
+        {
+          "value": "20",
+          "unit": "倍",
+          "start": 907,
+          "end": 910
+        },
+        {
+          "value": "54.31",
+          "unit": "元",
+          "start": 915,
+          "end": 921
+        },
+        {
+          "value": "77.4",
+          "unit": "亿元",
+          "start": 926,
+          "end": 932
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "参考可比公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1005,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1005,
+    "processed_ranges": [
+      [
+        0,
+        1005
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 26.94628,
+  "source_content_sha256": "19305a4e7c6e57f9d971bab4ca7262cd32ce87c5d934bc1fbc9deb6be5c22172"
+}

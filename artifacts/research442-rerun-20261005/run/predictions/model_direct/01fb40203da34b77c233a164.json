@@ -1,0 +1,648 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000714",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "事件写“2025-2024财年”，后文写“2024-2025财年”，同一财年区间倒置冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 42,
+          "end": 143,
+          "text": "2025年5月26日，印度制药企业Aurobindo Pharma发布2025-2024财年第四季度财报，Q4实现营业收入838.2亿卢比，同比增长10.6%，净利润为90.3亿卢比，同比下滑0.5%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月26日，印度制药企业Aurobindo Pharma发布2025-2024财年第四季度财报，Q4实现营业收入838.2亿卢比，同比增长10.6%，净利润为90.3亿卢比，同比下滑0.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 42,
+          "end": 143,
+          "text": "2025年5月26日，印度制药企业Aurobindo Pharma发布2025-2024财年第四季度财报，Q4实现营业收入838.2亿卢比，同比增长10.6%，净利润为90.3亿卢比，同比下滑0.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d05aedcdb7f4a62fe0eb1594",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“2024-2025财年Q4（）”括号内时间范围为空，缺少对应期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 170,
+          "end": 296,
+          "text": "2024-2025财年Q4（），公司实现营业收入838.2亿卢比，同比增长10.6%，毛利率为59.1%，EBITDA为179.2亿卢比，同比增长6.2%，EBITDA利润率为21.4%，同比下滑0.9pct，净利润为90.3亿卢比，同比下滑0.5%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024-2025财年Q4（），公司实现营业收入838.2亿卢比，同比增长10.6%，毛利率为59.1%，EBITDA为179.2亿卢比，同比增长6.2%，EBITDA利润率为21.4%，同比下滑0.9pct，净利润为90.3亿卢比，同比下滑0.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 170,
+          "end": 296,
+          "text": "2024-2025财年Q4（），公司实现营业收入838.2亿卢比，同比增长10.6%，毛利率为59.1%，EBITDA为179.2亿卢比，同比增长6.2%，EBITDA利润率为21.4%，同比下滑0.9pct，净利润为90.3亿卢比，同比下滑0.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "50223b370551796cce0e1daa",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "销售收入应以货币单位计，写“214.7亿公斤”把金额单位误作重量单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 466,
+          "end": 506,
+          "text": "欧洲制剂业务实现销售收入214.7亿公斤，同比增长17.2%，占比为25.6%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "欧洲制剂业务实现销售收入214.7亿公斤，同比增长17.2%，占比为25.6%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 466,
+          "end": 506,
+          "text": "欧洲制剂业务实现销售收入214.7亿公斤，同比增长17.2%，占比为25.6%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "76b33d32c2edbf383c8018ab",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "10亿美元约合850亿卢比，原文写约8,500亿卢比，数量级相差10倍。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 690,
+          "end": 756,
+          "text": "公司已经有2个生物类似药在欧洲获批，预计26财年开始贡献收入，欧洲制剂业务将稳步向10亿美元（约8,500亿卢比）的收入里程碑迈进。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司已经有2个生物类似药在欧洲获批，预计26财年开始贡献收入，欧洲制剂业务将稳步向10亿美元（约8,500亿卢比）的收入里程碑迈进。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 690,
+          "end": 756,
+          "text": "公司已经有2个生物类似药在欧洲获批，预计26财年开始贡献收入，欧洲制剂业务将稳步向10亿美元（约8,500亿卢比）的收入里程碑迈进。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cca6539d8e9eeab4bfe5b577",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "30.8亿卢比除以总营收838.2亿卢比约3.7%，原文占比3.4%不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 544,
+          "end": 582,
+          "text": "ARV制剂业务实现销售收入30.8亿卢比，同比增长29.4%，占比3.4%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "ARV制剂业务实现销售收入30.8亿卢比，同比增长29.4%，占比3.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 544,
+          "end": 582,
+          "text": "ARV制剂业务实现销售收入30.8亿卢比，同比增长29.4%，占比3.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "82d94263e6e9c77f2d7e0254",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称新兴市场“增长放缓”，后文却显示同比下滑7.8%，增长与下滑不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 378,
+          "end": 399,
+          "text": "美国及欧洲市场增长强劲，新兴市场增长放缓。"
+        },
+        {
+          "kind": "source_text",
+          "start": 506,
+          "end": 544,
+          "text": "新兴市场制剂业务实现销售收入78.6亿卢比，同比下滑7.8%，占比9.4%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "美国及欧洲市场增长强劲，新兴市场增长放缓。"
+        },
+        {
+          "text": "新兴市场制剂业务实现销售收入78.6亿卢比，同比下滑7.8%，占比9.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 378,
+          "end": 399,
+          "text": "美国及欧洲市场增长强劲，新兴市场增长放缓。"
+        },
+        {
+          "start": 506,
+          "end": 544,
+          "text": "新兴市场制剂业务实现销售收入78.6亿卢比，同比下滑7.8%，占比9.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "368602d4989af2e97093aa8d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "将二级市场股价稳定列为营业收入增长驱动，混淆股价表现与经营业绩。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 296,
+          "end": 376,
+          "text": "公司Q4营业收入创历史新高，主要得益于销量增长、新产品放量及二级市场股价的稳定，但燃料成本、企业发展成本等相关的一次性营业支出影响EBITDA超10.5亿卢比。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司Q4营业收入创历史新高，主要得益于销量增长、新产品放量及二级市场股价的稳定，但燃料成本、企业发展成本等相关的一次性营业支出影响EBITDA超10.5亿卢比。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 296,
+          "end": 376,
+          "text": "公司Q4营业收入创历史新高，主要得益于销量增长、新产品放量及二级市场股价的稳定，但燃料成本、企业发展成本等相关的一次性营业支出影响EBITDA超10.5亿卢比。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9de22d3bff8f4ebbe592eb78",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          870
+        ]
+      ],
+      "estimated_input_tokens": 5351,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:21:44.651338+00:00",
+        "request_sha256": "425af2244497b6ddba1773e0428a827cd8b09bfb8939a2ae036194ec428a09e0",
+        "input_token_estimate": 14914,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277058",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2b8b3623fadd4d5b89eebbc31effb17d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3560,
+        "output_tokens": 8074,
+        "usage_source": "provider",
+        "duration_seconds": 32.981432,
+        "cost_cny": "0.035856"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2025年5月26日，印度制药企业Aurobindo Pharma发布2025-2024财年第四季度财报，Q4实现营业收入838.2亿卢比，同比增长10.6%，净利润为90.3亿卢比，同比下滑0.5%。"
+          }
+        ],
+        "reason": "事件写“2025-2024财年”，后文写“2024-2025财年”，同一财年区间倒置冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2024-2025财年Q4（），公司实现营业收入838.2亿卢比，同比增长10.6%，毛利率为59.1%，EBITDA为179.2亿卢比，同比增长6.2%，EBITDA利润率为21.4%，同比下滑0.9pct，净利润为90.3亿卢比，同比下滑0.5%。"
+          }
+        ],
+        "reason": "“2024-2025财年Q4（）”括号内时间范围为空，缺少对应期间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "欧洲制剂业务实现销售收入214.7亿公斤，同比增长17.2%，占比为25.6%。"
+          }
+        ],
+        "reason": "销售收入应以货币单位计，写“214.7亿公斤”把金额单位误作重量单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司已经有2个生物类似药在欧洲获批，预计26财年开始贡献收入，欧洲制剂业务将稳步向10亿美元（约8,500亿卢比）的收入里程碑迈进。"
+          }
+        ],
+        "reason": "10亿美元约合850亿卢比，原文写约8,500亿卢比，数量级相差10倍。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "ARV制剂业务实现销售收入30.8亿卢比，同比增长29.4%，占比3.4%。"
+          }
+        ],
+        "reason": "30.8亿卢比除以总营收838.2亿卢比约3.7%，原文占比3.4%不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "美国及欧洲市场增长强劲，新兴市场增长放缓。"
+          },
+          {
+            "text": "新兴市场制剂业务实现销售收入78.6亿卢比，同比下滑7.8%，占比9.4%。"
+          }
+        ],
+        "reason": "前文称新兴市场“增长放缓”，后文却显示同比下滑7.8%，增长与下滑不能同时成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司Q4营业收入创历史新高，主要得益于销量增长、新产品放量及二级市场股价的稳定，但燃料成本、企业发展成本等相关的一次性营业支出影响EBITDA超10.5亿卢比。"
+          }
+        ],
+        "reason": "将二级市场股价稳定列为营业收入增长驱动，混淆股价表现与经营业绩。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 0,
+      "end": 30,
+      "text": "医药：Aurobindo Q4净利润小幅下滑，低于市场预期\n",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 42,
+      "end": 143,
+      "text": "2025年5月26日，印度制药企业Aurobindo Pharma发布2025-2024财年第四季度财报，Q4实现营业收入838.2亿卢比，同比增长10.6%，净利润为90.3亿卢比，同比下滑0.5%。",
+      "quantities": [
+        {
+          "value": "10.6",
+          "unit": "%",
+          "start": 116,
+          "end": 121
+        },
+        {
+          "value": "0.5",
+          "unit": "%",
+          "start": 138,
+          "end": 142
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 42,
+      "end": 143,
+      "text": "2025年5月26日，印度制药企业Aurobindo Pharma发布2025-2024财年第四季度财报，Q4实现营业收入838.2亿卢比，同比增长10.6%，净利润为90.3亿卢比，同比下滑0.5%。",
+      "quantities": [
+        {
+          "value": "10.6",
+          "unit": "%",
+          "start": 116,
+          "end": 121
+        },
+        {
+          "value": "0.5",
+          "unit": "%",
+          "start": 138,
+          "end": 142
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 152,
+      "end": 170,
+      "text": "Q4营收创历史新高，净利润小幅下滑。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 152,
+      "end": 170,
+      "text": "Q4营收创历史新高，净利润小幅下滑。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 170,
+      "end": 296,
+      "text": "2024-2025财年Q4（），公司实现营业收入838.2亿卢比，同比增长10.6%，毛利率为59.1%，EBITDA为179.2亿卢比，同比增长6.2%，EBITDA利润率为21.4%，同比下滑0.9pct，净利润为90.3亿卢比，同比下滑0.5%。",
+      "quantities": [
+        {
+          "value": "10.6",
+          "unit": "%",
+          "start": 207,
+          "end": 212
+        },
+        {
+          "value": "59.1",
+          "unit": "%",
+          "start": 217,
+          "end": 222
+        },
+        {
+          "value": "6.2",
+          "unit": "%",
+          "start": 243,
+          "end": 247
+        },
+        {
+          "value": "21.4",
+          "unit": "%",
+          "start": 258,
+          "end": 263
+        },
+        {
+          "value": "0.5",
+          "unit": "%",
+          "start": 291,
+          "end": 295
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 170,
+      "end": 296,
+      "text": "2024-2025财年Q4（），公司实现营业收入838.2亿卢比，同比增长10.6%，毛利率为59.1%，EBITDA为179.2亿卢比，同比增长6.2%，EBITDA利润率为21.4%，同比下滑0.9pct，净利润为90.3亿卢比，同比下滑0.5%。",
+      "quantities": [
+        {
+          "value": "10.6",
+          "unit": "%",
+          "start": 207,
+          "end": 212
+        },
+        {
+          "value": "59.1",
+          "unit": "%",
+          "start": 217,
+          "end": 222
+        },
+        {
+          "value": "6.2",
+          "unit": "%",
+          "start": 243,
+          "end": 247
+        },
+        {
+          "value": "21.4",
+          "unit": "%",
+          "start": 258,
+          "end": 263
+        },
+        {
+          "value": "0.5",
+          "unit": "%",
+          "start": 291,
+          "end": 295
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 170,
+      "end": 296,
+      "text": "2024-2025财年Q4（），公司实现营业收入838.2亿卢比，同比增长10.6%，毛利率为59.1%，EBITDA为179.2亿卢比，同比增长6.2%，EBITDA利润率为21.4%，同比下滑0.9pct，净利润为90.3亿卢比，同比下滑0.5%。",
+      "quantities": [
+        {
+          "value": "10.6",
+          "unit": "%",
+          "start": 207,
+          "end": 212
+        },
+        {
+          "value": "59.1",
+          "unit": "%",
+          "start": 217,
+          "end": 222
+        },
+        {
+          "value": "6.2",
+          "unit": "%",
+          "start": 243,
+          "end": 247
+        },
+        {
+          "value": "21.4",
+          "unit": "%",
+          "start": 258,
+          "end": 263
+        },
+        {
+          "value": "0.5",
+          "unit": "%",
+          "start": 291,
+          "end": 295
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 296,
+      "end": 376,
+      "text": "公司Q4营业收入创历史新高，主要得益于销量增长、新产品放量及二级市场股价的稳定，但燃料成本、企业发展成本等相关的一次性营业支出影响EBITDA超10.5亿卢比。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 870,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 870,
+    "processed_ranges": [
+      [
+        0,
+        870
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 33.006352,
+  "source_content_sha256": "dd76372e084f8eed2bcfbe5eea9b4cb80d6329d7900e6d8a2c5e606d15dd71d5"
+}

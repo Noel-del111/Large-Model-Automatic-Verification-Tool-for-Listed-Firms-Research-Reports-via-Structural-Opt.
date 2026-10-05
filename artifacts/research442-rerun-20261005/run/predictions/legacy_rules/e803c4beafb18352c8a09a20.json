@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000224",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "bd7989cd9eff75df9e4330be",
+      "error_type": "数值不一致错误",
+      "spans": [
+        {
+          "start": 484,
+          "end": 553,
+          "text": "其中高端、次高端、区域酒企收入同比增速分别16.5%、14.15%、，区域市场调节空间更大、动销去库更良性的头部酒企，业绩稳定性更为突出。"
+        }
+      ],
+      "reason": "研报中列举对象数与数值个数不一致：对象 3 个、数值 2 个，需人工核对。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.001"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1569,
+    "total_chars": 1569,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001762,
+  "source_content_sha256": "a30d4bed57db250662e029bd13e8ad5e1bb4f783342b15fde25b6a91762ec757"
+}

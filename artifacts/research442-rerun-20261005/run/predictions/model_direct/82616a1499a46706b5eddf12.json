@@ -1,0 +1,514 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000507",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "时间范围写作“2023-2021年”，起点晚于终点，时间区间本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 445,
+          "end": 502,
+          "text": "根据住建部数据，2023-2021年我国工程造价咨询企业业务收入增速分别为14.00%、0.17%、-2.01%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据住建部数据，2023-2021年我国工程造价咨询企业业务收入增速分别为14.00%、0.17%、-2.01%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 445,
+          "end": 502,
+          "text": "根据住建部数据，2023-2021年我国工程造价咨询企业业务收入增速分别为14.00%、0.17%、-2.01%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fd370ff042ba9fbf2a4c355a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "金额单位应为“亿元”，原文写成“亿分”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 211,
+          "end": 239,
+          "text": "2024年末在手订单余额为28.58亿分（+2.30%）"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年末在手订单余额为28.58亿分（+2.30%）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 211,
+          "end": 239,
+          "text": "2024年末在手订单余额为28.58亿分（+2.30%）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dd98a67ea4f9f28157c5ee56",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "签署文件名称在书名号内为空，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 698,
+          "end": 810,
+          "text": "2025年5月，公司全资子公司北京青矩工程管理技术创新投资有限公司与北京求实工程管理有限公司（标的公司）股东高其琳就以现金方式收购其持有的标的公司45.12%股份事宜达成初步意向并签署《》，预计转让对价为人民币2250万元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月，公司全资子公司北京青矩工程管理技术创新投资有限公司与北京求实工程管理有限公司（标的公司）股东高其琳就以现金方式收购其持有的标的公司45.12%股份事宜达成初步意向并签署《》，预计转让对价为人民币2250万元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 698,
+          "end": 810,
+          "text": "2025年5月，公司全资子公司北京青矩工程管理技术创新投资有限公司与北京求实工程管理有限公司（标的公司）股东高其琳就以现金方式收购其持有的标的公司45.12%股份事宜达成初步意向并签署《》，预计转让对价为人民币2250万元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c81afe5259c3dd26c495c824",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "鸟巢、水立方为体育场馆，不属于商业综合体，术语归类不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 810,
+          "end": 860,
+          "text": "标的公司主要为鸟巢、水立方等商业综合体、城市地铁线路等代表性建设项目提供以造价咨询为主的工程咨询服务"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "标的公司主要为鸟巢、水立方等商业综合体、城市地铁线路等代表性建设项目提供以造价咨询为主的工程咨询服务"
+        }
+      ],
+      "spans": [
+        {
+          "start": 810,
+          "end": 860,
+          "text": "标的公司主要为鸟巢、水立方等商业综合体、城市地铁线路等代表性建设项目提供以造价咨询为主的工程咨询服务"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1a3a6f677119a7e304709ac9",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          937
+        ]
+      ],
+      "estimated_input_tokens": 5439,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:00:46.987685+00:00",
+        "request_sha256": "8f697e5c01d5869c97830106356dae9aee019be4431a8cf2a0686f4686bd88fb",
+        "input_token_estimate": 15153,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277297",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d6ef929b9d5f4931a61e24ce0c7d5944",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3587,
+        "output_tokens": 7620,
+        "usage_source": "provider",
+        "duration_seconds": 32.160137,
+        "cost_cny": "0.034067"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据住建部数据，2023-2021年我国工程造价咨询企业业务收入增速分别为14.00%、0.17%、-2.01%；"
+          }
+        ],
+        "reason": "时间范围写作“2023-2021年”，起点晚于终点，时间区间本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年末在手订单余额为28.58亿分（+2.30%）"
+          }
+        ],
+        "reason": "金额单位应为“亿元”，原文写成“亿分”，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2025年5月，公司全资子公司北京青矩工程管理技术创新投资有限公司与北京求实工程管理有限公司（标的公司）股东高其琳就以现金方式收购其持有的标的公司45.12%股份事宜达成初步意向并签署《》，预计转让对价为人民币2250万元。"
+          }
+        ],
+        "reason": "签署文件名称在书名号内为空，非数值属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "标的公司主要为鸟巢、水立方等商业综合体、城市地铁线路等代表性建设项目提供以造价咨询为主的工程咨询服务"
+          }
+        ],
+        "reason": "鸟巢、水立方为体育场馆，不属于商业综合体，术语归类不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 55,
+      "end": 86,
+      "text": "2025Q1公司实现营收1.38亿元，归母净利润0.15亿元\n",
+      "quantities": [
+        {
+          "value": "1.38",
+          "unit": "亿元",
+          "start": 67,
+          "end": 73
+        },
+        {
+          "value": "0.15",
+          "unit": "亿元",
+          "start": 79,
+          "end": 85
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 55,
+      "end": 86,
+      "text": "2025Q1公司实现营收1.38亿元，归母净利润0.15亿元\n",
+      "quantities": [
+        {
+          "value": "1.38",
+          "unit": "亿元",
+          "start": 67,
+          "end": 73
+        },
+        {
+          "value": "0.15",
+          "unit": "亿元",
+          "start": 79,
+          "end": 85
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 87,
+      "end": 177,
+      "text": "工程造价咨询龙头青矩技术2025年第一季度实现营收1.38亿元（-3.36%），归母净利润1458.49万元（-20.95%），扣非后归母净利润1360.18万元（+0.16%）。",
+      "quantities": [
+        {
+          "value": "1.38",
+          "unit": "亿元",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "-3.36",
+          "unit": "%",
+          "start": 119,
+          "end": 125
+        },
+        {
+          "value": "1458.49",
+          "unit": "万元",
+          "start": 132,
+          "end": 141
+        },
+        {
+          "value": "-20.95",
+          "unit": "%",
+          "start": 142,
+          "end": 149
+        },
+        {
+          "value": "1360.18",
+          "unit": "万元",
+          "start": 159,
+          "end": 168
+        },
+        {
+          "value": "+0.16",
+          "unit": "%",
+          "start": 169,
+          "end": 175
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 87,
+      "end": 177,
+      "text": "工程造价咨询龙头青矩技术2025年第一季度实现营收1.38亿元（-3.36%），归母净利润1458.49万元（-20.95%），扣非后归母净利润1360.18万元（+0.16%）。",
+      "quantities": [
+        {
+          "value": "1.38",
+          "unit": "亿元",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "-3.36",
+          "unit": "%",
+          "start": 119,
+          "end": 125
+        },
+        {
+          "value": "1458.49",
+          "unit": "万元",
+          "start": 132,
+          "end": 141
+        },
+        {
+          "value": "-20.95",
+          "unit": "%",
+          "start": 142,
+          "end": 149
+        },
+        {
+          "value": "1360.18",
+          "unit": "万元",
+          "start": 159,
+          "end": 168
+        },
+        {
+          "value": "+0.16",
+          "unit": "%",
+          "start": 169,
+          "end": 175
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 87,
+      "end": 177,
+      "text": "工程造价咨询龙头青矩技术2025年第一季度实现营收1.38亿元（-3.36%），归母净利润1458.49万元（-20.95%），扣非后归母净利润1360.18万元（+0.16%）。",
+      "quantities": [
+        {
+          "value": "1.38",
+          "unit": "亿元",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "-3.36",
+          "unit": "%",
+          "start": 119,
+          "end": 125
+        },
+        {
+          "value": "1458.49",
+          "unit": "万元",
+          "start": 132,
+          "end": 141
+        },
+        {
+          "value": "-20.95",
+          "unit": "%",
+          "start": 142,
+          "end": 149
+        },
+        {
+          "value": "1360.18",
+          "unit": "万元",
+          "start": 159,
+          "end": 168
+        },
+        {
+          "value": "+0.16",
+          "unit": "%",
+          "start": 169,
+          "end": 175
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 240,
+      "end": 424,
+      "text": "因新签订单转化需要一定周期，我们维持2025年-2026年盈利预测并新增2027年盈利预测，预计2025-2027年归母净利润分别为2.58/3.02/3.50亿元，对应EPS分别为2.68/3.15/3.64元/股，当前股价对应PE分别为14.1/12.0/10.4倍，我们看好公司涉密信息系统相关领域监理咨询业务增长前景以及未来新兴领域拓展潜力，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "3.50",
+          "unit": "亿元",
+          "start": 316,
+          "end": 322
+        },
+        {
+          "value": "3.64",
+          "unit": "元/股",
+          "start": 341,
+          "end": 348
+        },
+        {
+          "value": "10.4",
+          "unit": "倍",
+          "start": 370,
+          "end": 375
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2026年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们看好公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 937,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 937,
+    "processed_ranges": [
+      [
+        0,
+        937
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 32.195116,
+  "source_content_sha256": "cf907e0839be13474f881ebae027c150fa25d12283d7ce1760b9b004f3621491"
+}

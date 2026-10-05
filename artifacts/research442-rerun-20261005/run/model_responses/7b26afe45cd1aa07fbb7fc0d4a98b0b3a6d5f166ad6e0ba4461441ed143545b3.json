@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"RokidGlasses仅重49g，外观接近于普通眼镜，却拥有多种前沿AR显示功能；与此同时，RokidGlasses的重量设计为49g，整体造型与传统眼镜相似，配备领先的AR显示技术，更新选代后的RokidGlasses全面接入AI大模型，集成了通义千问、DeepSeek、豆包、智谱清言、纳米搜索等多个大模型，支持实时翻译、物体识别、导航及消息提醒，还支持随手拍照查看、声纹支付等多种功能。\"}],\"reason\":\"同时重复表述RokidGlasses重49g及外观接近普通眼镜/传统眼镜，属于不必要重复。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"从指数表现来看，本周（2025-05-26至2025-05-30），上证指数周涨跌-0.026%，深证成指涨跌幅为+0.91%，创业板指数涨跌幅-1.40%，科创50涨跌幅为-0.36%，中万电子指数涨跌幅-0.59%。\"}],\"reason\":\"行业常用指数名称为“申万电子指数”，非“中万电子指数”。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"板块概念指数来看，表现最好的是EDA指数，涨福为6.53%，表现最弱的是显示面板指数，跌幅为1.25%。\"}],\"reason\":\"“涨福”不是金融标准术语，应为“涨幅”。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"Rokid旗下带显示的智能眼镜——RokidGlasses，全球已交定金订单超25万立方米，其中在线订单超4万台，且今年内有望全部交付。\"}],\"reason\":\"智能眼镜订单数量不能用体积单位“立方米”，应为台/副等数量单位。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"XR行业第三方研究机构WellsennXR统计数据显示，2024年全球AI眼镜销量达到234万台，预计2025年全球AI眼镜销售有望达到550万台，同比下降135%。\"}],\"reason\":\"2024年234万台至2025年预计550万台为增长，不是下降，且下降135%不可能。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:54:06.701842+00:00",
+    "request_sha256": "081152f5ecad5a7fde295e1fbb146a1c127ed806ae15113a84af9d8b67c6cbfd",
+    "input_token_estimate": 15393,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277537",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "fb0ea6c659f64679942593864459fcf2",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3668,
+    "output_tokens": 6904,
+    "usage_source": "provider",
+    "duration_seconds": 28.914882,
+    "cost_cny": "0.031284"
+  },
+  "cache_request": {
+    "key": "7b26afe45cd1aa07fbb7fc0d4a98b0b3a6d5f166ad6e0ba4461441ed143545b3",
+    "purpose": "text_review.detect",
+    "messages_sha256": "081152f5ecad5a7fde295e1fbb146a1c127ed806ae15113a84af9d8b67c6cbfd"
+  }
+}

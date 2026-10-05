@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"收入高增主要系中国新能源汽车行业保持强劲增长，新能源乘用车客户定点车型于2025年4月31日SOP放量、商用车新平台的批量销售所致\"}],\"reason\":\"2025年4月没有31日，该日期不成立。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"新能源汽车和轨交收入166.42平方分米\"}],\"reason\":\"收入应以货币单位计量，此处错误地使用面积单位“平方分米”。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"新能源汽车和轨交收入166.42平方分米，占比64.93%，同比增加67.76%\"}],\"reason\":\"若收入为166.42亿元，占总营收370.41亿元的比例约44.93%，与所述64.93%矛盾，且各业务占比之和超过100%。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年销售/管理/研发/财务费用率为%/4.16%/8.50%/-0.01%\"}],\"reason\":\"销售费用率对应位置只有百分号，缺少具体数值。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:35:19.828838+00:00",
+    "request_sha256": "a1dae9487c82859c0c6af9cf1fb06a7d222ad18a25ef4475f6f8a766f483ed22",
+    "input_token_estimate": 16029,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278173",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "28b4386b9e1347e6bc39a5f15a988ca5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3800,
+    "output_tokens": 6784,
+    "usage_source": "provider",
+    "duration_seconds": 26.360591,
+    "cost_cny": "0.030936"
+  },
+  "cache_request": {
+    "key": "7a13df60be1d8a2acaccf63fe974bffdfb836aa3c439f04c6e98c335284d3b03",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a1dae9487c82859c0c6af9cf1fb06a7d222ad18a25ef4475f6f8a766f483ed22"
+  }
+}

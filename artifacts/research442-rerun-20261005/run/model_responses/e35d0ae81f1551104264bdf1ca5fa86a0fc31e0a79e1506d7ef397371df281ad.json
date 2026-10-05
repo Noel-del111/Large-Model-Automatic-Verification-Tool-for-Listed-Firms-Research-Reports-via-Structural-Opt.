@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"①屏幕方案：萤火光引擎是雷鸟创新自研的全彩MicroLED光引擎，是目前行业最小的彩色光引擎。\", \"start\": 1046, \"end\": 1087}], \"reason\": \"该句在紧接的下一行完全重复出现一次，属于同一信息不必要地重复。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"雷鸟Air3s眼镜定价1499角，Air3sPro新增3D环绕音效系统，标配遮光前挡和充电转接器，定价1599元。\"}], \"reason\": \"“定价1499角”应使用元作单位，与前文及后文同类产品定价用元不一致，且1499角仅149.9元，明显单位错误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"采用三色合色全彩方案，内置JBD定制红绿蓝三原色屏幕，配合0.1cc超小聚合Cube棱镜，实现1670万色全彩显示输出，峰值入眼亮度6000nits，平均入眼亮度3500nits，光引擎大小0.36cc，较上一代缩小%\"}], \"reason\": \"“较上一代缩小%”中缺少具体缩小比例数值，仅以百分号结尾，数值位置为空。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:04:25.931501+00:00",
+    "request_sha256": "b26926792559912f321c6604dc1de2cdc8acbe19511f940f1efa7d1f9b236c48",
+    "input_token_estimate": 18634,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280778",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c50db6070c0a4344b69d7b6fa2350f83",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4391,
+    "output_tokens": 6272,
+    "usage_source": "provider",
+    "duration_seconds": 26.092802,
+    "cost_cny": "0.029479"
+  },
+  "cache_request": {
+    "key": "e35d0ae81f1551104264bdf1ca5fa86a0fc31e0a79e1506d7ef397371df281ad",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b26926792559912f321c6604dc1de2cdc8acbe19511f940f1efa7d1f9b236c48"
+  }
+}

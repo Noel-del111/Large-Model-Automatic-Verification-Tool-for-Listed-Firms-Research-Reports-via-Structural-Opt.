@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"智能座舱的细分赛道众多，主要包括座舱显示、智能监控、OTA、座舱域控、车联网六个领域\",\"start\":496,\"end\":540}],\"reason\":\"原文称细分赛道有六个领域，但紧接着只列出座舱显示、智能监控、OTA、座舱域控、车联网五项。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"全球及中国智能座舱行业市场规模未来增长空间较小\",\"start\":722,\"end\":738},{\"text\":\"未来，伴随汽车智能化和网联化程度不断提高，预计智能座舱行业将继续保持较快增长趋势。\",\"start\":996,\"end\":1038}],\"reason\":\"小标题称未来增长空间较小，后文却称市场规模持续增长且预计保持较快增长，两者互斥。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%，增速快于全球市场。\",\"start\":796,\"end\":996}],\"reason\":\"按2021-2024年三年复合增速计算，全球约28.6%、中国约31.6%，与原文38.66%、56.58%不符。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"预计智能座舱行业将继续保持较快增长趋势。预计智能座舱行业将继续保持较快增长趋势。\",\"start\":1013,\"end\":1063}],\"reason\":\"同一句“预计智能座舱行业将继续保持较快增长趋势”连续重复出现，未增加新信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:53:52.189069+00:00",
+    "request_sha256": "1fe9f9129cfa3e1ad7119f5872c882b26ed2fe90af25fb8d4d1dcfa354a827d9",
+    "input_token_estimate": 15852,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277996",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b818517447904e28822033588df1087f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3650,
+    "output_tokens": 5942,
+    "usage_source": "provider",
+    "duration_seconds": 24.340513,
+    "cost_cny": "0.027418"
+  },
+  "cache_request": {
+    "key": "7edd45b36c522a9aa456be36c67ccca7abada8db651aadf1818ee6ccc66758c9",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1fe9f9129cfa3e1ad7119f5872c882b26ed2fe90af25fb8d4d1dcfa354a827d9"
+  }
+}

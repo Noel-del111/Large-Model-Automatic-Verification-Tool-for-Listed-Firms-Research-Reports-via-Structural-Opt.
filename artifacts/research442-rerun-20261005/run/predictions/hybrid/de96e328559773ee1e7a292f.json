@@ -1,0 +1,834 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000502",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 1535,
+          "end": 1632,
+          "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股，对应2025-2027年PE分别为48X、38X和31X，看好外部交通改善及景区内部扩容带来的客流增长，给予“买入”评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1535,
+          "end": 1632,
+          "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股，对应2025-2027年PE分别为48X、38X和31X，看好外部交通改善及景区内部扩容带来的客流增长，给予“买入”评级。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "aabf4ad9871f2539b3172149",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "同比增长4.48%前缺少被说明的指标名称和对应数值，属明确数值位置缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 69,
+          "end": 134,
+          "text": "2024年公司实现营收7.43亿元，同比增长19.81%；，同比增长4.48%；归母扣非净利润1.52亿元，同比增长10.25%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司实现营收7.43亿元，同比增长19.81%；，同比增长4.48%；归母扣非净利润1.52亿元，同比增长10.25%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 69,
+          "end": 134,
+          "text": "2024年公司实现营收7.43亿元，同比增长19.81%；，同比增长4.48%；归母扣非净利润1.52亿元，同比增长10.25%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f8f3c09369037f07d41a8312",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "分项毛利率均同比下降，却称毛利率上升，与括号内数据方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 506,
+          "end": 568,
+          "text": "主要是旅游客运业务（45.55%，同比下降3.17个百分点）和酒店业务（30.85%，同比下降1.23个百分点）毛利率上升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "主要是旅游客运业务（45.55%，同比下降3.17个百分点）和酒店业务（30.85%，同比下降1.23个百分点）毛利率上升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 506,
+          "end": 568,
+          "text": "主要是旅游客运业务（45.55%，同比下降3.17个百分点）和酒店业务（30.85%，同比下降1.23个百分点）毛利率上升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d430ccf9a46f230dd381b561",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "销售、管理、财务费用率合计5.22%+8.84%+0.24%=14.30%，与三费费用率12.30%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 573,
+          "end": 683,
+          "text": "2024年公司三费费用率为12.30%，同比下降0.67个百分点，其中销售费用率为5.22%，同比下降0.13个百分点，管理费用率为8.84%，同比下降0.29个百分点，财务费用率为0.24%，同比下降0.25个百分点。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司三费费用率为12.30%，同比下降0.67个百分点，其中销售费用率为5.22%，同比下降0.13个百分点，管理费用率为8.84%，同比下降0.29个百分点，财务费用率为0.24%，同比下降0.25个百分点。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 573,
+          "end": 683,
+          "text": "2024年公司三费费用率为12.30%，同比下降0.67个百分点，其中销售费用率为5.22%，同比下降0.13个百分点，管理费用率为8.84%，同比下降0.29个百分点，财务费用率为0.24%，同比下降0.25个百分点。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b950af0a84fd5416a76e39f7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "景区接待游客量应为47.71万人次，「人次」前缺少「万」，导致数量级错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 856,
+          "end": 892,
+          "text": "景区Q1共接待游客47.71人次，仍然实现了平稳增长，同比增长2.6%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "景区Q1共接待游客47.71人次，仍然实现了平稳增长，同比增长2.6%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 856,
+          "end": 892,
+          "text": "景区Q1共接待游客47.71人次，仍然实现了平稳增长，同比增长2.6%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5972047de4a4e50d36c21f88",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "年份区间写成2027-2025，起点晚于终点，与上下文2025-2027年预测矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1535,
+          "end": 1570,
+          "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1535,
+          "end": 1570,
+          "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4167e8c10e6bfe95c753f619",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "数字中误用中文句号和顿号代替小数点，导致数值格式错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1470,
+          "end": 1509,
+          "text": "预计2025-2027年长白山将实现归母净利润1.77/2。23/2.73亿元"
+        },
+        {
+          "kind": "source_text",
+          "start": 1535,
+          "end": 1570,
+          "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2025-2027年长白山将实现归母净利润1.77/2。23/2.73亿元"
+        },
+        {
+          "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1470,
+          "end": 1509,
+          "text": "预计2025-2027年长白山将实现归母净利润1.77/2。23/2.73亿元"
+        },
+        {
+          "start": 1535,
+          "end": 1570,
+          "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6f3ce15af27ed21cef28ae10",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "结合后文费率下降语境，应指费用控制优化，用「债权控制」表述金融术语不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 458,
+          "end": 473,
+          "text": "毛利率略有下滑，债权控制优化。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "毛利率略有下滑，债权控制优化。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 458,
+          "end": 473,
+          "text": "毛利率略有下滑，债权控制优化。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1e50a6f077f9583cf4b8c24c",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1712
+        ]
+      ],
+      "estimated_input_tokens": 6156,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:55:49.409868+00:00",
+        "request_sha256": "14b1c80143a4937231f5e633687e04d2715e5aa78edf41469506f26b3fa073cf",
+        "input_token_estimate": 17157,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279301",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "281c9e678e01422dbfb2dc1c6ee1d876",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4033,
+        "output_tokens": 10015,
+        "usage_source": "provider",
+        "duration_seconds": 38.341144,
+        "cost_cny": "0.044093",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年公司实现营收7.43亿元，同比增长19.81%；，同比增长4.48%；归母扣非净利润1.52亿元，同比增长10.25%。"
+          }
+        ],
+        "reason": "同比增长4.48%前缺少被说明的指标名称和对应数值，属明确数值位置缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "主要是旅游客运业务（45.55%，同比下降3.17个百分点）和酒店业务（30.85%，同比下降1.23个百分点）毛利率上升。"
+          }
+        ],
+        "reason": "分项毛利率均同比下降，却称毛利率上升，与括号内数据方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2024年公司三费费用率为12.30%，同比下降0.67个百分点，其中销售费用率为5.22%，同比下降0.13个百分点，管理费用率为8.84%，同比下降0.29个百分点，财务费用率为0.24%，同比下降0.25个百分点。"
+          }
+        ],
+        "reason": "销售、管理、财务费用率合计5.22%+8.84%+0.24%=14.30%，与三费费用率12.30%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "景区Q1共接待游客47.71人次，仍然实现了平稳增长，同比增长2.6%。"
+          }
+        ],
+        "reason": "景区接待游客量应为47.71万人次，「人次」前缺少「万」，导致数量级错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股"
+          }
+        ],
+        "reason": "年份区间写成2027-2025，起点晚于终点，与上下文2025-2027年预测矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "预计2025-2027年长白山将实现归母净利润1.77/2。23/2.73亿元"
+          },
+          {
+            "text": "预计2027-2025年EPS分别为0、66/0.84/1.02元/股"
+          }
+        ],
+        "reason": "数字中误用中文句号和顿号代替小数点，导致数值格式错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "毛利率略有下滑，债权控制优化。"
+          }
+        ],
+        "reason": "结合后文费率下降语境，应指费用控制优化，用「债权控制」表述金融术语不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 45,
+      "end": 98,
+      "text": "事件：长白山发布2024年年报及25年一季度报：2024年公司实现营收7.43亿元，同比增长19.81%；",
+      "quantities": [
+        {
+          "value": "7.43",
+          "unit": "亿元",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "19.81",
+          "unit": "%",
+          "start": 91,
+          "end": 97
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 109,
+      "end": 134,
+      "text": "归母扣非净利润1.52亿元，同比增长10.25%。",
+      "quantities": [
+        {
+          "value": "1.52",
+          "unit": "亿元",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "10.25",
+          "unit": "%",
+          "start": 127,
+          "end": 133
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 136,
+      "end": 166,
+      "text": "2025年Q1公司实现营收1.29亿元，同比增长0.73%；",
+      "quantities": [
+        {
+          "value": "1.29",
+          "unit": "亿元",
+          "start": 149,
+          "end": 155
+        },
+        {
+          "value": "0.73",
+          "unit": "%",
+          "start": 160,
+          "end": 165
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 166,
+      "end": 188,
+      "text": "归母净利润439万元，同比下降58.93%；",
+      "quantities": [
+        {
+          "value": "439",
+          "unit": "万元",
+          "start": 171,
+          "end": 176
+        },
+        {
+          "value": "58.93",
+          "unit": "%",
+          "start": 181,
+          "end": 187
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 188,
+      "end": 212,
+      "text": "归母扣非净利润440万元，同比下降62.13%。",
+      "quantities": [
+        {
+          "value": "440",
+          "unit": "万元",
+          "start": 195,
+          "end": 200
+        },
+        {
+          "value": "62.13",
+          "unit": "%",
+          "start": 205,
+          "end": 211
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 243,
+      "end": 276,
+      "text": "2024年旅游客运业务实现营收5.38亿元，同比增长27.89%。",
+      "quantities": [
+        {
+          "value": "5.38",
+          "unit": "亿元",
+          "start": 258,
+          "end": 264
+        },
+        {
+          "value": "27.89",
+          "unit": "%",
+          "start": 269,
+          "end": 275
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 374,
+      "end": 406,
+      "text": "酒店业务实现营收1.40亿元，同比增长0.89%，业绩较为平稳。",
+      "quantities": [
+        {
+          "value": "1.40",
+          "unit": "亿元",
+          "start": 382,
+          "end": 388
+        },
+        {
+          "value": "0.89",
+          "unit": "%",
+          "start": 393,
+          "end": 398
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 406,
+      "end": 456,
+      "text": "旅行社业务实现营收0.30亿元，同比下降12.72%，或因市场竞争加剧以及旅游市场需求结构变化所致。",
+      "quantities": [
+        {
+          "value": "0.30",
+          "unit": "亿元",
+          "start": 415,
+          "end": 421
+        },
+        {
+          "value": "12.72",
+          "unit": "%",
+          "start": 426,
+          "end": 432
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 473,
+      "end": 568,
+      "text": "2024年公司整体毛利率为41.67%，同比下降1.31个百分点，主要是旅游客运业务（45.55%，同比下降3.17个百分点）和酒店业务（30.85%，同比下降1.23个百分点）毛利率上升。",
+      "quantities": [
+        {
+          "value": "41.67",
+          "unit": "%",
+          "start": 486,
+          "end": 492
+        },
+        {
+          "value": "45.55",
+          "unit": "%",
+          "start": 516,
+          "end": 522
+        },
+        {
+          "value": "30.85",
+          "unit": "%",
+          "start": 542,
+          "end": 548
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 473,
+      "end": 568,
+      "text": "2024年公司整体毛利率为41.67%，同比下降1.31个百分点，主要是旅游客运业务（45.55%，同比下降3.17个百分点）和酒店业务（30.85%，同比下降1.23个百分点）毛利率上升。",
+      "quantities": [
+        {
+          "value": "41.67",
+          "unit": "%",
+          "start": 486,
+          "end": 492
+        },
+        {
+          "value": "45.55",
+          "unit": "%",
+          "start": 516,
+          "end": 522
+        },
+        {
+          "value": "30.85",
+          "unit": "%",
+          "start": 542,
+          "end": 548
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 683,
+      "end": 707,
+      "text": "净利率为19.41%，同比下降2.84个百分点。",
+      "quantities": [
+        {
+          "value": "19.41",
+          "unit": "%",
+          "start": 687,
+          "end": 693
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 707,
+      "end": 785,
+      "text": "尽管毛利率和净利率有所下降，但营收的增长以及费用率的下降，使得公司净利润仍实现增长，且Q1和Q4景区客流及公司业绩均实现显著增长，冰雪第二旺季打造初具成效。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "使得公司",
+        "景区客流及公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 707,
+      "end": 785,
+      "text": "尽管毛利率和净利率有所下降，但营收的增长以及费用率的下降，使得公司净利润仍实现增长，且Q1和Q4景区客流及公司业绩均实现显著增长，冰雪第二旺季打造初具成效。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "使得公司",
+        "景区客流及公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 707,
+      "end": 785,
+      "text": "尽管毛利率和净利率有所下降，但营收的增长以及费用率的下降，使得公司净利润仍实现增长，且Q1和Q4景区客流及公司业绩均实现显著增长，冰雪第二旺季打造初具成效。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "使得公司",
+        "景区客流及公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 707,
+      "end": 785,
+      "text": "尽管毛利率和净利率有所下降，但营收的增长以及费用率的下降，使得公司净利润仍实现增长，且Q1和Q4景区客流及公司业绩均实现显著增长，冰雪第二旺季打造初具成效。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "使得公司",
+        "景区客流及公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 962,
+      "end": 1000,
+      "text": "从财务数据来看，2025Q1毛利率为22.86%，同比下降5.36个百分点；",
+      "quantities": [
+        {
+          "value": "22.86",
+          "unit": "%",
+          "start": 980,
+          "end": 986
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1097,
+      "end": 1120,
+      "text": "净利率为3.42%，同比下降4.95个百分点。",
+      "quantities": [
+        {
+          "value": "3.42",
+          "unit": "%",
+          "start": 1101,
+          "end": 1106
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1465,
+      "end": 1500,
+      "text": "投资建议：预计2025-2027年长白山将实现归母净利润1.77/2。",
+      "quantities": [],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1712,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1712,
+    "processed_ranges": [
+      [
+        0,
+        1712
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1712,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 18,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002976,
+  "source_content_sha256": "53833036242f25b4ca246b470968b0d65950d72447dfa34b8cf2d40025c3e334"
+}

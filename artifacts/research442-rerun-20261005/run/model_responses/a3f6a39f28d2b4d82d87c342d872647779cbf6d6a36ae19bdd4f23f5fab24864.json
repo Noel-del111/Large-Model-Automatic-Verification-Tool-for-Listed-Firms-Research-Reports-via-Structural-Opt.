@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"5月30日-5月26日，食品饮料指数跌幅为1.1%，一级子行业排名第24，与沪深300基本持平，子行业中软饮料（+9.3%）、其他酒类（+7.1%）、啤酒（+3.2%）表现相对领先。\"}], \"reason\": \"时间区间写作“5月30日-5月26日”，结束日期早于开始日期，先后关系矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:39:10.226185+00:00",
+    "request_sha256": "103ee73d34fbfc08b6ccb559449129fb2358e29b95ee33cfdd27cfbc2093a685",
+    "input_token_estimate": 15832,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277976",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9d1164dd4f4a4c5fb8ca5d07e434567a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3696,
+    "output_tokens": 5213,
+    "usage_source": "provider",
+    "duration_seconds": 22.89132,
+    "cost_cny": "0.024548"
+  },
+  "cache_request": {
+    "key": "a3f6a39f28d2b4d82d87c342d872647779cbf6d6a36ae19bdd4f23f5fab24864",
+    "purpose": "text_review.detect",
+    "messages_sha256": "103ee73d34fbfc08b6ccb559449129fb2358e29b95ee33cfdd27cfbc2093a685"
+  }
+}

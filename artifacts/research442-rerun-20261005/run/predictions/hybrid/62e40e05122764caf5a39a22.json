@@ -1,0 +1,485 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000408",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后括号内应为股票代码，原文空缺。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 18,
+          "end": 24,
+          "text": "申通快递()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "申通快递()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 18,
+          "end": 24,
+          "text": "申通快递()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ea66eb10a9f167e4473d70ec",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句子连续重复出现一次，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 161,
+          "end": 303,
+          "text": "公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 161,
+          "end": 303,
+          "text": "公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0bb9cb3b76c81c836feb9419",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "市占率从10.2%到13.0%是上升，但表述为“降低”，且与“稳步提升”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 342,
+          "end": 407,
+          "text": "而从经营效果看，公司件量从2021年的111亿单增长至2024年的227亿单，期间市占率也稳步提升，从10.2%降低至13.0%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "而从经营效果看，公司件量从2021年的111亿单增长至2024年的227亿单，期间市占率也稳步提升，从10.2%降低至13.0%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 342,
+          "end": 407,
+          "text": "而从经营效果看，公司件量从2021年的111亿单增长至2024年的227亿单，期间市占率也稳步提升，从10.2%降低至13.0%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4da034c561759797fe915390",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027年为三个年度，但收入增长率列出四个数值，年份与数值数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 683,
+          "end": 765,
+          "text": "而业绩考核目标以2024年为基数，2025-2027年收入增长率分别不低于12%、25.4%、38%、28%，或是净利润增长率分别不低于30%、56%、87.2%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "而业绩考核目标以2024年为基数，2025-2027年收入增长率分别不低于12%、25.4%、38%、28%，或是净利润增长率分别不低于30%、56%、87.2%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 683,
+          "end": 765,
+          "text": "而业绩考核目标以2024年为基数，2025-2027年收入增长率分别不低于12%、25.4%、38%、28%，或是净利润增长率分别不低于30%、56%、87.2%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0743320c9a94d9ae192ec4c9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "净利润与YOY、EPS、PE之间的计算关系不成立，如14亿对应EPS0.9元、PE12倍时隐含股本和股价与后续年份不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 921,
+          "end": 1028,
+          "text": "预计2025-2027年公司分别实现净利润14、16、19亿元，YOY分别为+30%、+20%、+15%，EPS为0.9元、1.1元、1.2元，当前A股价对应PE分别为12、10、8倍，维持公司“买进”的投资建议。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2025-2027年公司分别实现净利润14、16、19亿元，YOY分别为+30%、+20%、+15%，EPS为0.9元、1.1元、1.2元，当前A股价对应PE分别为12、10、8倍，维持公司“买进”的投资建议。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 921,
+          "end": 1028,
+          "text": "预计2025-2027年公司分别实现净利润14、16、19亿元，YOY分别为+30%、+20%、+15%，EPS为0.9元、1.1元、1.2元，当前A股价对应PE分别为12、10、8倍，维持公司“买进”的投资建议。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "954c4f8fbbef566e0a74a937",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1057
+        ]
+      ],
+      "estimated_input_tokens": 5550,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:34:35.696600+00:00",
+        "request_sha256": "0f72d61f1c45dae0671dc3a4995ac13f5b04975f59d2f97819686570842828f0",
+        "input_token_estimate": 15472,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277616",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "7ecf309190274b67a29a89a104b7d90a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3681,
+        "output_tokens": 6520,
+        "usage_source": "provider",
+        "duration_seconds": 26.367169,
+        "cost_cny": "0.029761",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "申通快递()"
+          }
+        ],
+        "reason": "公司名称后括号内应为股票代码，原文空缺。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。"
+          }
+        ],
+        "reason": "同一句子连续重复出现一次，未增加新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "而从经营效果看，公司件量从2021年的111亿单增长至2024年的227亿单，期间市占率也稳步提升，从10.2%降低至13.0%。"
+          }
+        ],
+        "reason": "市占率从10.2%到13.0%是上升，但表述为“降低”，且与“稳步提升”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "而业绩考核目标以2024年为基数，2025-2027年收入增长率分别不低于12%、25.4%、38%、28%，或是净利润增长率分别不低于30%、56%、87.2%。"
+          }
+        ],
+        "reason": "2025-2027年为三个年度，但收入增长率列出四个数值，年份与数值数量不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "预计2025-2027年公司分别实现净利润14、16、19亿元，YOY分别为+30%、+20%、+15%，EPS为0.9元、1.1元、1.2元，当前A股价对应PE分别为12、10、8倍，维持公司“买进”的投资建议。"
+          }
+        ],
+        "reason": "净利润与YOY、EPS、PE之间的计算关系不成立，如14亿对应EPS0.9元、PE12倍时隐含股本和股价与后续年份不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 490,
+      "end": 564,
+      "text": "得益于业务端的增长，公司2025Q1实现收入120.0亿元，YOY+18.4%，归母净利润2.4亿元，YOY+24.0%，业绩增速在快递企业中领先。",
+      "quantities": [
+        {
+          "value": "120.0",
+          "unit": "亿元",
+          "start": 512,
+          "end": 519
+        },
+        {
+          "value": "+18.4",
+          "unit": "%",
+          "start": 523,
+          "end": 529
+        },
+        {
+          "value": "2.4",
+          "unit": "亿元",
+          "start": 535,
+          "end": 540
+        },
+        {
+          "value": "+24.0",
+          "unit": "%",
+          "start": 544,
+          "end": 550
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 683,
+      "end": 765,
+      "text": "而业绩考核目标以2024年为基数，2025-2027年收入增长率分别不低于12%、25.4%、38%、28%，或是净利润增长率分别不低于30%、56%、87.2%。",
+      "quantities": [
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 720,
+          "end": 723
+        },
+        {
+          "value": "25.4",
+          "unit": "%",
+          "start": 724,
+          "end": 729
+        },
+        {
+          "value": "38",
+          "unit": "%",
+          "start": 730,
+          "end": 733
+        },
+        {
+          "value": "28",
+          "unit": "%",
+          "start": 734,
+          "end": 737
+        },
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 751,
+          "end": 754
+        },
+        {
+          "value": "56",
+          "unit": "%",
+          "start": 755,
+          "end": 758
+        },
+        {
+          "value": "87.2",
+          "unit": "%",
+          "start": 759,
+          "end": 764
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 911,
+      "end": 1028,
+      "text": "盈利预测及投资建议：预计2025-2027年公司分别实现净利润14、16、19亿元，YOY分别为+30%、+20%、+15%，EPS为0.9元、1.1元、1.2元，当前A股价对应PE分别为12、10、8倍，维持公司“买进”的投资建议。",
+      "quantities": [
+        {
+          "value": "19",
+          "unit": "亿元",
+          "start": 948,
+          "end": 952
+        },
+        {
+          "value": "+30",
+          "unit": "%",
+          "start": 959,
+          "end": 963
+        },
+        {
+          "value": "+20",
+          "unit": "%",
+          "start": 964,
+          "end": 968
+        },
+        {
+          "value": "+15",
+          "unit": "%",
+          "start": 969,
+          "end": 973
+        },
+        {
+          "value": "0.9",
+          "unit": "元",
+          "start": 978,
+          "end": 982
+        },
+        {
+          "value": "1.1",
+          "unit": "元",
+          "start": 983,
+          "end": 987
+        },
+        {
+          "value": "1.2",
+          "unit": "元",
+          "start": 988,
+          "end": 992
+        },
+        {
+          "value": "8",
+          "unit": "倍",
+          "start": 1011,
+          "end": 1013
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "维持公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1057,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1057,
+    "processed_ranges": [
+      [
+        0,
+        1057
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1057,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001853,
+  "source_content_sha256": "8522c17f4410e35b1b882da83ab27a7a9356e4b87b8bd10013a8dde43b2e1df4"
+}

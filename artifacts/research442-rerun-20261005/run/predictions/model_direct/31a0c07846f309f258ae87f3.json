@@ -1,0 +1,411 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000513",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "术语误用",
+      "reason": "海外营收属于经营性收入，不是融资来源，术语使用混淆了营收与融资。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 195,
+          "end": 273,
+          "text": "公司较早布局国际市场，先后在马来西亚、美国等多个国家建设生产基地和销售中心，2024年公司海外营收25.35亿元，占总营收约69%，成为公司重要的融资来源。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司较早布局国际市场，先后在马来西亚、美国等多个国家建设生产基地和销售中心，2024年公司海外营收25.35亿元，占总营收约69%，成为公司重要的融资来源。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 195,
+          "end": 273,
+          "text": "公司较早布局国际市场，先后在马来西亚、美国等多个国家建设生产基地和销售中心，2024年公司海外营收25.35亿元，占总营收约69%，成为公司重要的融资来源。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4f7d11d6e99b8eb389ddf62d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "由5.06亿元增至36.52亿元、历经8年，年复合增速约28%，不是38%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 273,
+          "end": 335,
+          "text": "16-24年，公司营收规模由5.06亿元增长至36.52亿元，CAGR约38%，多下游拓展+国际化驱动公司业绩保持高速增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "16-24年，公司营收规模由5.06亿元增长至36.52亿元，CAGR约38%，多下游拓展+国际化驱动公司业绩保持高速增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 273,
+          "end": 335,
+          "text": "16-24年，公司营收规模由5.06亿元增长至36.52亿元，CAGR约38%，多下游拓展+国际化驱动公司业绩保持高速增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "87e13706588bc43f04b8f0a2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间写成27-24年，终点早于起点，不能成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 649,
+          "end": 681,
+          "text": "我们预计27-24年公司医疗康护下游营收CAGR约30-35%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计27-24年公司医疗康护下游营收CAGR约30-35%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 649,
+          "end": 681,
+          "text": "我们预计27-24年公司医疗康护下游营收CAGR约30-35%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bd10d4b2c79d04d3514d8196",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1272
+        ]
+      ],
+      "estimated_input_tokens": 5837,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:06:49.460391+00:00",
+        "request_sha256": "103c6e02dfafd1c76110c68bbd479ee556270670bd0afcd542bb9ace6b97e251",
+        "input_token_estimate": 16237,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278381",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1e9957da07064d24ad0b92823ac623a0",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3759,
+        "output_tokens": 2942,
+        "usage_source": "provider",
+        "duration_seconds": 12.645775,
+        "cost_cny": "0.015527"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司较早布局国际市场，先后在马来西亚、美国等多个国家建设生产基地和销售中心，2024年公司海外营收25.35亿元，占总营收约69%，成为公司重要的融资来源。"
+          }
+        ],
+        "reason": "海外营收属于经营性收入，不是融资来源，术语使用混淆了营收与融资。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "16-24年，公司营收规模由5.06亿元增长至36.52亿元，CAGR约38%，多下游拓展+国际化驱动公司业绩保持高速增长。"
+          }
+        ],
+        "reason": "由5.06亿元增至36.52亿元、历经8年，年复合增速约28%，不是38%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "我们预计27-24年公司医疗康护下游营收CAGR约30-35%。"
+          }
+        ],
+        "reason": "时间区间写成27-24年，终点早于起点，不能成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 195,
+      "end": 273,
+      "text": "公司较早布局国际市场，先后在马来西亚、美国等多个国家建设生产基地和销售中心，2024年公司海外营收25.35亿元，占总营收约69%，成为公司重要的融资来源。",
+      "quantities": [
+        {
+          "value": "25.35",
+          "unit": "亿元",
+          "start": 244,
+          "end": 251
+        },
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 257,
+          "end": 260
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "成为公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 195,
+      "end": 273,
+      "text": "公司较早布局国际市场，先后在马来西亚、美国等多个国家建设生产基地和销售中心，2024年公司海外营收25.35亿元，占总营收约69%，成为公司重要的融资来源。",
+      "quantities": [
+        {
+          "value": "25.35",
+          "unit": "亿元",
+          "start": 244,
+          "end": 251
+        },
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 257,
+          "end": 260
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "成为公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 273,
+      "end": 335,
+      "text": "16-24年，公司营收规模由5.06亿元增长至36.52亿元，CAGR约38%，多下游拓展+国际化驱动公司业绩保持高速增长。",
+      "quantities": [
+        {
+          "value": "5.06",
+          "unit": "亿元",
+          "start": 287,
+          "end": 293
+        },
+        {
+          "value": "36.52",
+          "unit": "亿元",
+          "start": 296,
+          "end": 303
+        },
+        {
+          "value": "38",
+          "unit": "%",
+          "start": 309,
+          "end": 312
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "国际化驱动公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 545,
+      "end": 577,
+      "text": "我们预计24-27年公司智慧办公下游营收CAGR约10-15%。",
+      "quantities": [
+        {
+          "value": "-15",
+          "unit": "%",
+          "start": 572,
+          "end": 576
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 577,
+      "end": 681,
+      "text": "2）医疗康护领域，老龄化趋势推动家用护理床、电动病床等高端产品渗透率提升，公司定制化系统解决方案切入大型客户，行业成长空间大，公司加大导入力度，我们预计27-24年公司医疗康护下游营收CAGR约30-35%。",
+      "quantities": [
+        {
+          "value": "-35",
+          "unit": "%",
+          "start": 676,
+          "end": 680
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1089,
+      "end": 1226,
+      "text": "盈利预测与投资评级：公司线性驱动产品国内领先，多下游拓展+全球化布局主业有望实现稳健增长，布局机器人零部件拓展第二增长曲线，我们预计公司2025-2027年归母净利润分别为3.92/4.97/6.40亿元，同比+39%/27%/29%，现价对应PE分别为37/29/23倍。",
+      "quantities": [
+        {
+          "value": "6.40",
+          "unit": "亿元",
+          "start": 1185,
+          "end": 1191
+        },
+        {
+          "value": "+39",
+          "unit": "%",
+          "start": 1194,
+          "end": 1198
+        },
+        {
+          "value": "27",
+          "unit": "%",
+          "start": 1199,
+          "end": 1202
+        },
+        {
+          "value": "29",
+          "unit": "%",
+          "start": 1203,
+          "end": 1206
+        },
+        {
+          "value": "23",
+          "unit": "倍",
+          "start": 1222,
+          "end": 1225
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1272,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1272,
+    "processed_ranges": [
+      [
+        0,
+        1272
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 12.672393,
+  "source_content_sha256": "8ddf52c2dd14f33a01d07eea6a5d8c774f8f2c9696b1e95a038b66ab4f706c69"
+}

@@ -1,0 +1,299 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000582",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "spans": [
+        {
+          "start": 948,
+          "end": 1023,
+          "text": "以2019年第一个交易日为基准，截至2025年5月32日，沪深300收益率为29.32%，水力发电指数收益率为107.93%，超额收益率78.61%。"
+        }
+      ],
+      "reason": "该年月日不是有效公历日期。",
+      "status": "confirmed_error",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 966,
+          "end": 976,
+          "text": "2025年5月32日"
+        },
+        {
+          "kind": "deterministic",
+          "check": "calendar_date",
+          "year": 2025,
+          "month": 5,
+          "day": 32
+        }
+      ],
+      "detector_id": "verified.calendar",
+      "validation": "deterministic",
+      "verification_spans": [
+        {
+          "start": 966,
+          "end": 976,
+          "text": "2025年5月32日"
+        }
+      ],
+      "id": "5d064100a470fa91c5c08e43",
+      "detector_ids": [
+        "hybrid.model",
+        "verified.calendar"
+      ],
+      "original_spans": [
+        {
+          "text": "以2019年第一个交易日为基准，截至2025年5月32日，沪深300收益率为29.32%，水力发电指数收益率为107.93%，超额收益率78.61%。"
+        }
+      ],
+      "review_priority": "confirmed"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一折旧年限信息连续重复一次，没有新增含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 389,
+          "end": 441,
+          "text": "挡水建筑折旧年限约50年，机器设备折旧年限约20年；挡水建筑折旧年限约50年，机器设备折旧年限约20年；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "挡水建筑折旧年限约50年，机器设备折旧年限约20年；挡水建筑折旧年限约50年，机器设备折旧年限约20年；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 389,
+          "end": 441,
+          "text": "挡水建筑折旧年限约50年，机器设备折旧年限约20年；挡水建筑折旧年限约50年，机器设备折旧年限约20年；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f9cf0ebd05dd652ebef367f6",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“约亿元”前缺少具体利润数值，数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 441,
+          "end": 482,
+          "text": "2023年前后三峡电站9#-26#机组机器设备将陆续折旧到期，有望释放利润约亿元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2023年前后三峡电站9#-26#机组机器设备将陆续折旧到期，有望释放利润约亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 441,
+          "end": 482,
+          "text": "2023年前后三峡电站9#-26#机组机器设备将陆续折旧到期，有望释放利润约亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f5b100243dca83b2d7ecfc72",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1199
+        ]
+      ],
+      "estimated_input_tokens": 5792,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:39:53.804300+00:00",
+        "request_sha256": "c6594d076d1d9f62757a8cc091e60c2a4488ef7382d5896f3457f743931198a3",
+        "input_token_estimate": 16096,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27824",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3c5408135a634191bac7a039b43978b9",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3741,
+        "output_tokens": 4075,
+        "usage_source": "provider",
+        "duration_seconds": 15.680747,
+        "cost_cny": "0.020041",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "以2019年第一个交易日为基准，截至2025年5月32日，沪深300收益率为29.32%，水力发电指数收益率为107.93%，超额收益率78.61%。"
+          }
+        ],
+        "reason": "2025年5月只有31天，不存在5月32日，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "挡水建筑折旧年限约50年，机器设备折旧年限约20年；挡水建筑折旧年限约50年，机器设备折旧年限约20年；"
+          }
+        ],
+        "reason": "同一折旧年限信息连续重复一次，没有新增含义。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2023年前后三峡电站9#-26#机组机器设备将陆续折旧到期，有望释放利润约亿元。"
+          }
+        ],
+        "reason": "“约亿元”前缺少具体利润数值，数值位置为空。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "debt_ratio",
+      "metric_text": "资产负债率",
+      "start": 322,
+      "end": 389,
+      "text": "成本：资产负债率改善，固定资产折旧陆续到期，营业成本逐年下降（1）折旧在营业总成本中约占40%，而电站实际使用寿命或远高于其折旧年限。",
+      "quantities": [
+        {
+          "value": "40",
+          "unit": "%",
+          "start": 366,
+          "end": 369
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 745,
+      "end": 789,
+      "text": "2024年来水持续好转，水电行业全年实现归母净利润563.21亿元，同比增长17.3%；",
+      "quantities": [
+        {
+          "value": "563.21",
+          "unit": "亿元",
+          "start": 770,
+          "end": 778
+        },
+        {
+          "value": "17.3",
+          "unit": "%",
+          "start": 783,
+          "end": 788
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1199,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1199,
+    "processed_ranges": [
+      [
+        0,
+        1199
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1199,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002276,
+  "source_content_sha256": "09475d8058d0ca6aee996e36d85a1fcdbf1d7e5da04097b98dd9eb95f446b604"
+}

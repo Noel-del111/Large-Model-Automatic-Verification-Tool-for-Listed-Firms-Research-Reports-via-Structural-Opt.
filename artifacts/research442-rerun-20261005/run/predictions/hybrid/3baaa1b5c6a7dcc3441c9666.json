@@ -1,0 +1,329 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000261",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "一年只有12个月，不存在2023年13月份，日期不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 645,
+          "end": 730,
+          "text": "以出口至全球的数据口径来看，热泵单2023年13月份出口额、出口量分别为3.9亿、6.3万台，同比分别-40%、-36%，年初至今出口额、出口量同比分别-4%、-16%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "以出口至全球的数据口径来看，热泵单2023年13月份出口额、出口量分别为3.9亿、6.3万台，同比分别-40%、-36%，年初至今出口额、出口量同比分别-4%、-16%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 645,
+          "end": 730,
+          "text": "以出口至全球的数据口径来看，热泵单2023年13月份出口额、出口量分别为3.9亿、6.3万台，同比分别-40%、-36%，年初至今出口额、出口量同比分别-4%、-16%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0657c5bb1415442cec635d9d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "洗地机线上销售额仅写“共亿元”，未给出具体金额数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 365,
+          "end": 423,
+          "text": "2023年12/04至12/31洗地机线上销售额共亿元，同比+19.98%；销量24.99万台，同比+60.39%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2023年12/04至12/31洗地机线上销售额共亿元，同比+19.98%；销量24.99万台，同比+60.39%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 365,
+          "end": 423,
+          "text": "2023年12/04至12/31洗地机线上销售额共亿元，同比+19.98%；销量24.99万台，同比+60.39%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "49dbdcdf4c3bf5bb57cd0809",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "欧洲出口量位置只有“1.9亿、”，逗号后缺失出口量数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 730,
+          "end": 802,
+          "text": "以出口至欧洲的数据口径来看，单11月份出口额、出口量分别为1.9亿、，同比分别-64%、-62%，年初至今出口额、出口量分别-13%、-31%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "以出口至欧洲的数据口径来看，单11月份出口额、出口量分别为1.9亿、，同比分别-64%、-62%，年初至今出口额、出口量分别-13%、-31%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 730,
+          "end": 802,
+          "text": "以出口至欧洲的数据口径来看，单11月份出口额、出口量分别为1.9亿、，同比分别-64%、-62%，年初至今出口额、出口量分别-13%、-31%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2ec8afc49eaf433b049ed055",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "同比从+50.57%上升24.11pct应为+74.68%，不是+84.68%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 161,
+          "end": 206,
+          "text": "上周扫地机线上销额1.21亿元，同比从+50.57%上升24.11pct至+84.68%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "上周扫地机线上销额1.21亿元，同比从+50.57%上升24.11pct至+84.68%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 161,
+          "end": 206,
+          "text": "上周扫地机线上销额1.21亿元，同比从+50.57%上升24.11pct至+84.68%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a1dd71c5363fdc6dd4f9ae1b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "同比从+57.09%上升14.64pct应为+71.73%，不是+91.73%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 510,
+          "end": 548,
+          "text": "销量5.13万台，同比从+57.09%上升14.64pct至+91.73%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "销量5.13万台，同比从+57.09%上升14.64pct至+91.73%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 510,
+          "end": 548,
+          "text": "销量5.13万台，同比从+57.09%上升14.64pct至+91.73%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "296af86d7f84aeabf5dc2052",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1148
+        ]
+      ],
+      "estimated_input_tokens": 5575,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:34:32.204578+00:00",
+        "request_sha256": "e452629210901ae557f2db3634336d3d7dfaeeebb056ae229b5476ba7df33d53",
+        "input_token_estimate": 15551,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277695",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "7a71140d94a1400a81de6902b9e1a711",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3783,
+        "output_tokens": 8117,
+        "usage_source": "provider",
+        "duration_seconds": 31.374757,
+        "cost_cny": "0.036251",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "以出口至全球的数据口径来看，热泵单2023年13月份出口额、出口量分别为3.9亿、6.3万台，同比分别-40%、-36%，年初至今出口额、出口量同比分别-4%、-16%。"
+          }
+        ],
+        "reason": "一年只有12个月，不存在2023年13月份，日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2023年12/04至12/31洗地机线上销售额共亿元，同比+19.98%；销量24.99万台，同比+60.39%。"
+          }
+        ],
+        "reason": "洗地机线上销售额仅写“共亿元”，未给出具体金额数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "以出口至欧洲的数据口径来看，单11月份出口额、出口量分别为1.9亿、，同比分别-64%、-62%，年初至今出口额、出口量分别-13%、-31%。"
+          }
+        ],
+        "reason": "欧洲出口量位置只有“1.9亿、”，逗号后缺失出口量数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "上周扫地机线上销额1.21亿元，同比从+50.57%上升24.11pct至+84.68%；"
+          }
+        ],
+        "reason": "同比从+50.57%上升24.11pct应为+74.68%，不是+84.68%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "销量5.13万台，同比从+57.09%上升14.64pct至+91.73%；"
+          }
+        ],
+        "reason": "同比从+57.09%上升14.64pct应为+71.73%，不是+91.73%。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1148,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1148,
+    "processed_ranges": [
+      [
+        0,
+        1148
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1148,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001428,
+  "source_content_sha256": "f1a0a99b0aebf923b433184c5e552b2ba53f9bc883711f2d42a9e84f322ba6a7"
+}

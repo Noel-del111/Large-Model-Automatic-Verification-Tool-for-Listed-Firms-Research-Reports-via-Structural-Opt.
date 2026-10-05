@@ -1,0 +1,369 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000514",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "计算错误",
+      "reason": "100%估值11.60亿元，收购80%应支付9.28亿元而非6.96亿元；6.96亿元对应60%，与前述60%矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 56,
+          "end": 81,
+          "text": "公司公告拟以现金6.96亿元收购浙江索特60%股权"
+        },
+        {
+          "kind": "source_text",
+          "start": 252,
+          "end": 299,
+          "text": "经协商确定，浙江索特100%股权对应估值约11.60亿元，本次以6.96亿元收购其80%股权。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司公告拟以现金6.96亿元收购浙江索特60%股权"
+        },
+        {
+          "text": "经协商确定，浙江索特100%股权对应估值约11.60亿元，本次以6.96亿元收购其80%股权。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 56,
+          "end": 81,
+          "text": "公司公告拟以现金6.96亿元收购浙江索特60%股权"
+        },
+        {
+          "start": 252,
+          "end": 299,
+          "text": "经协商确定，浙江索特100%股权对应估值约11.60亿元，本次以6.96亿元收购其80%股权。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4f12641f964b5bcc24388d3d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "浙江索特整体净利润0.51亿元，小于其中Solamet®业务净利润0.72亿元，部分大于整体。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 521,
+          "end": 570,
+          "text": "公司24年营收35.53亿元，净利润0.51亿元，其中旗下Solamet®业务净利润0.72亿元；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司24年营收35.53亿元，净利润0.51亿元，其中旗下Solamet®业务净利润0.72亿元；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 521,
+          "end": 570,
+          "text": "公司24年营收35.53亿元，净利润0.51亿元，其中旗下Solamet®业务净利润0.72亿元；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0f086f425ac332610743ac88",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“获授有效专利”后缺少具体数量数字，应写明专利项数。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 594,
+          "end": 635,
+          "text": "截至公告发布，浙江索特全球获授有效专利项，可充分利用技术优势协同创新、强化竞争力。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至公告发布，浙江索特全球获授有效专利项，可充分利用技术优势协同创新、强化竞争力。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 594,
+          "end": 635,
+          "text": "截至公告发布，浙江索特全球获授有效专利项，可充分利用技术优势协同创新、强化竞争力。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b39f6ed807d7e0d9957e5401",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          749
+        ]
+      ],
+      "estimated_input_tokens": 5304,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:07:15.368286+00:00",
+        "request_sha256": "30bceb9292a164ccc0c85f749657b6556cea76f7a982034c2a03b7a58080ad62",
+        "input_token_estimate": 14764,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.276908",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2258e477795c40d58be9aeba62bda840",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3513,
+        "output_tokens": 6652,
+        "usage_source": "provider",
+        "duration_seconds": 28.417538,
+        "cost_cny": "0.030121"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司公告拟以现金6.96亿元收购浙江索特60%股权"
+          },
+          {
+            "text": "经协商确定，浙江索特100%股权对应估值约11.60亿元，本次以6.96亿元收购其80%股权。"
+          }
+        ],
+        "reason": "100%估值11.60亿元，收购80%应支付9.28亿元而非6.96亿元；6.96亿元对应60%，与前述60%矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司24年营收35.53亿元，净利润0.51亿元，其中旗下Solamet®业务净利润0.72亿元；"
+          }
+        ],
+        "reason": "浙江索特整体净利润0.51亿元，小于其中Solamet®业务净利润0.72亿元，部分大于整体。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "截至公告发布，浙江索特全球获授有效专利项，可充分利用技术优势协同创新、强化竞争力。"
+          }
+        ],
+        "reason": "“获授有效专利”后缺少具体数量数字，应写明专利项数。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 330,
+      "end": 387,
+      "text": "浙江索特承诺25/26/27年实现经审计净利润累计不低于2.87亿元，不足部分由董事长史卫利按60%购回债权弥补。",
+      "quantities": [
+        {
+          "value": "2.87",
+          "unit": "亿元",
+          "start": 358,
+          "end": 364
+        },
+        {
+          "value": "60",
+          "unit": "%",
+          "start": 377,
+          "end": 380
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 521,
+      "end": 570,
+      "text": "公司24年营收35.53亿元，净利润0.51亿元，其中旗下Solamet®业务净利润0.72亿元；",
+      "quantities": [
+        {
+          "value": "35.53",
+          "unit": "亿元",
+          "start": 528,
+          "end": 535
+        },
+        {
+          "value": "0.51",
+          "unit": "亿元",
+          "start": 539,
+          "end": 545
+        },
+        {
+          "value": "0.72",
+          "unit": "亿元",
+          "start": 563,
+          "end": 569
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 521,
+      "end": 570,
+      "text": "公司24年营收35.53亿元，净利润0.51亿元，其中旗下Solamet®业务净利润0.72亿元；",
+      "quantities": [
+        {
+          "value": "35.53",
+          "unit": "亿元",
+          "start": 528,
+          "end": 535
+        },
+        {
+          "value": "0.51",
+          "unit": "亿元",
+          "start": 539,
+          "end": 545
+        },
+        {
+          "value": "0.72",
+          "unit": "亿元",
+          "start": 563,
+          "end": 569
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 521,
+      "end": 570,
+      "text": "公司24年营收35.53亿元，净利润0.51亿元，其中旗下Solamet®业务净利润0.72亿元；",
+      "quantities": [
+        {
+          "value": "35.53",
+          "unit": "亿元",
+          "start": 528,
+          "end": 535
+        },
+        {
+          "value": "0.51",
+          "unit": "亿元",
+          "start": 539,
+          "end": 545
+        },
+        {
+          "value": "0.72",
+          "unit": "亿元",
+          "start": 563,
+          "end": 569
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 749,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 749,
+    "processed_ranges": [
+      [
+        0,
+        749
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 28.442066,
+  "source_content_sha256": "32768c3581eee7c364b17c4e81b6f9735268d66f2308c9d17265e9c67a7acf49"
+}

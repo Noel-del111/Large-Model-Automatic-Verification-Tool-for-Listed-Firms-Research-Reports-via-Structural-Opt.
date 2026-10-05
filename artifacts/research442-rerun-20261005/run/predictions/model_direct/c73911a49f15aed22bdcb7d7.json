@@ -1,0 +1,454 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000416",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“持有广钢气体%的股权”中百分号前缺少具体持股比例数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 333,
+          "end": 387,
+          "text": "截至2024年年报，广州市人民政府国有资产监督管理委员会直接或间接持有广钢气体%的股权，是公司的实际控制人。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年年报，广州市人民政府国有资产监督管理委员会直接或间接持有广钢气体%的股权，是公司的实际控制人。",
+          "start": 333,
+          "end": 387
+        }
+      ],
+      "spans": [
+        {
+          "start": 333,
+          "end": 387,
+          "text": "截至2024年年报，广州市人民政府国有资产监督管理委员会直接或间接持有广钢气体%的股权，是公司的实际控制人。"
+        }
+      ],
+      "warnings": [],
+      "id": "2266d4fe0c71cea7dfd29416",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“均达到ppb”中ppb是单位，但未给出具体参数数值，无法核验达到水平。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 766,
+          "end": 819,
+          "text": "从技术上看，公司电子大宗气体氮气、氦气、氧气、氩气、氢气、二氧化碳产品参数均达到ppb，远超国标GB要求；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从技术上看，公司电子大宗气体氮气、氦气、氧气、氩气、氢气、二氧化碳产品参数均达到ppb，远超国标GB要求；",
+          "start": 766,
+          "end": 819
+        }
+      ],
+      "spans": [
+        {
+          "start": 766,
+          "end": 819,
+          "text": "从技术上看，公司电子大宗气体氮气、氦气、氧气、氩气、氢气、二氧化碳产品参数均达到ppb，远超国标GB要求；"
+        }
+      ],
+      "warnings": [],
+      "id": "7c59939c775c0afec070afd3",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按2020至2024年4年复合增长，(21.03/8.67)^(1/4)-1约24.8%，与35%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 224,
+          "end": 294,
+          "text": "2020~2024年公司营业收入从8.67亿元增长至21.03亿元，CAGR约35%，系公司积极拓展电子大宗气体业务并加大氦气市场开发力度。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2020~2024年公司营业收入从8.67亿元增长至21.03亿元，CAGR约35%，系公司积极拓展电子大宗气体业务并加大氦气市场开发力度。",
+          "start": 224,
+          "end": 294
+        }
+      ],
+      "spans": [
+        {
+          "start": 224,
+          "end": 294,
+          "text": "2020~2024年公司营业收入从8.67亿元增长至21.03亿元，CAGR约35%，系公司积极拓展电子大宗气体业务并加大氦气市场开发力度。"
+        }
+      ],
+      "warnings": [],
+      "id": "9bd2d2bb98b38230b18fec10",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按2024至2030年6年复合增长，(298/195)^(1/6)-1约7.3%，与10.3%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 487,
+          "end": 543,
+          "text": "根据卓创资讯数据，2024~2030年中国电子气体市场规模有望从195亿元增长至298亿元CAGR约10.3%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据卓创资讯数据，2024~2030年中国电子气体市场规模有望从195亿元增长至298亿元CAGR约10.3%。",
+          "start": 487,
+          "end": 543
+        }
+      ],
+      "spans": [
+        {
+          "start": 487,
+          "end": 543,
+          "text": "根据卓创资讯数据，2024~2030年中国电子气体市场规模有望从195亿元增长至298亿元CAGR约10.3%。"
+        }
+      ],
+      "warnings": [],
+      "id": "4bad273e547b0ffbac952304",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "经营现金流持续低于净利润通常说明盈利质量偏弱，与“盈利质量较为优秀”结论矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 294,
+          "end": 333,
+          "text": "2020~2024年公司经营活动现金净流量均低于归母净利润，盈利质量较为优秀。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2020~2024年公司经营活动现金净流量均低于归母净利润，盈利质量较为优秀。",
+          "start": 294,
+          "end": 333
+        }
+      ],
+      "spans": [
+        {
+          "start": 294,
+          "end": 333,
+          "text": "2020~2024年公司经营活动现金净流量均低于归母净利润，盈利质量较为优秀。"
+        }
+      ],
+      "warnings": [],
+      "id": "7efd71124f0377f172be6351",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一“首次覆盖，给予增持评级”信息在报告开头和估值段重复出现，无新增含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 122,
+          "end": 136,
+          "text": "首次覆盖，给予“增持”评级。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1109,
+          "end": 1123,
+          "text": "首次覆盖，给予“增持”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "首次覆盖，给予“增持”评级。",
+          "start": 122,
+          "end": 136
+        },
+        {
+          "text": "首次覆盖，给予“增持”评级。",
+          "start": 1109,
+          "end": 1123
+        }
+      ],
+      "spans": [
+        {
+          "start": 122,
+          "end": 136,
+          "text": "首次覆盖，给予“增持”评级。"
+        },
+        {
+          "start": 1109,
+          "end": 1123,
+          "text": "首次覆盖，给予“增持”评级。"
+        }
+      ],
+      "warnings": [],
+      "id": "b0cb21f4bfd40935cf8b6077",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1173
+        ]
+      ],
+      "estimated_input_tokens": 5721,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:40:54.790238+00:00",
+        "request_sha256": "e103112963ab43b805341d121290aaaaad7307c7156b87aff6bc8c0e70a313d9",
+        "input_token_estimate": 15940,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278084",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "103e90e597704e76b9de6c2fec4adaf3",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3727,
+        "output_tokens": 16281,
+        "usage_source": "provider",
+        "duration_seconds": 57.30949,
+        "cost_cny": "0.068851"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "截至2024年年报，广州市人民政府国有资产监督管理委员会直接或间接持有广钢气体%的股权，是公司的实际控制人。",
+            "start": 333,
+            "end": 387
+          }
+        ],
+        "reason": "“持有广钢气体%的股权”中百分号前缺少具体持股比例数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "从技术上看，公司电子大宗气体氮气、氦气、氧气、氩气、氢气、二氧化碳产品参数均达到ppb，远超国标GB要求；",
+            "start": 766,
+            "end": 819
+          }
+        ],
+        "reason": "“均达到ppb”中ppb是单位，但未给出具体参数数值，无法核验达到水平。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2020~2024年公司营业收入从8.67亿元增长至21.03亿元，CAGR约35%，系公司积极拓展电子大宗气体业务并加大氦气市场开发力度。",
+            "start": 224,
+            "end": 294
+          }
+        ],
+        "reason": "按2020至2024年4年复合增长，(21.03/8.67)^(1/4)-1约24.8%，与35%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "根据卓创资讯数据，2024~2030年中国电子气体市场规模有望从195亿元增长至298亿元CAGR约10.3%。",
+            "start": 487,
+            "end": 543
+          }
+        ],
+        "reason": "按2024至2030年6年复合增长，(298/195)^(1/6)-1约7.3%，与10.3%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2020~2024年公司经营活动现金净流量均低于归母净利润，盈利质量较为优秀。",
+            "start": 294,
+            "end": 333
+          }
+        ],
+        "reason": "经营现金流持续低于净利润通常说明盈利质量偏弱，与“盈利质量较为优秀”结论矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "首次覆盖，给予“增持”评级。",
+            "start": 122,
+            "end": 136
+          },
+          {
+            "text": "首次覆盖，给予“增持”评级。",
+            "start": 1109,
+            "end": 1123
+          }
+        ],
+        "reason": "同一“首次覆盖，给予增持评级”信息在报告开头和估值段重复出现，无新增含义。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 224,
+      "end": 294,
+      "text": "2020~2024年公司营业收入从8.67亿元增长至21.03亿元，CAGR约35%，系公司积极拓展电子大宗气体业务并加大氦气市场开发力度。",
+      "quantities": [
+        {
+          "value": "8.67",
+          "unit": "亿元",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "value": "21.03",
+          "unit": "亿元",
+          "start": 250,
+          "end": 257
+        },
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 263,
+          "end": 266
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "系公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 294,
+      "end": 333,
+      "text": "2020~2024年公司经营活动现金净流量均低于归母净利润，盈利质量较为优秀。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1173,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1173,
+    "processed_ranges": [
+      [
+        0,
+        1173
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 57.337876,
+  "source_content_sha256": "3f38311fecbe3fc7827a68f43029e7ef8fbc48429b0f13caa88a36e887ddfa2e"
+}

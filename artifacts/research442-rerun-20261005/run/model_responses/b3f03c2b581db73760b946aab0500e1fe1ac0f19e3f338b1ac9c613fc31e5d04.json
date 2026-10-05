@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"分季度看，Q1~Q4公司分别实现营收2.96/4.20/2.96/5.05/2.05亿元，同比+16.85%/-0.99%/+5.19%/+2.61%；\"\n        }\n      ],\n      \"reason\": \"Q1~Q4对应四个季度，却列出五个营收值，且同比数据只有四个，数值个数与季度数矛盾。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"归母净利润0.71亿元，同比+17.66pct；\"\n        }\n      ],\n      \"reason\": \"归母净利润同比增速单位应为百分比（%），此处写成百分点（pct），单位误用。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"其中AIGC内容贡献比例由上年的31%提升至44%，同比增长44%。\"\n        }\n      ],\n      \"reason\": \"比例从31%提升至44%是提高13个百分点，不是同比增长44%，混淆百分点与百分比。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"主要由于互联网效果营销平台业务（65.11%/同比-3.05pct）毛利率提高所致。\"\n        }\n      ],\n      \"reason\": \"括号内同比-3.05pct表示毛利率下降，与“毛利率提高”的表述矛盾。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"2024年，“什么值得买”平台月均活跃用户（MAU）为3968万人，同比增长1%；注册用户达3035万人，同比增长5%。\"\n        }\n      ],\n      \"reason\": \"月均活跃用户数（3968万）大于注册用户数（3035万），不符合常理。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"未来公司将聚焦AI与全面提效，夯实AR产业链，推进AI在业务和管理中的应用，推进AI在业务和管理中的应用，并积极参与第三方AI生态共建。\"\n        }\n      ],\n      \"reason\": \"全文主题为AI，此处“AR产业链”应为“AI产业链”，术语使用错误。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"未来公司将聚焦AI与全面提效，夯实AR产业链，推进AI在业务和管理中的应用，推进AI在业务和管理中的应用，并积极参与第三方AI生态共建。\"\n        }\n      ],\n      \"reason\": \"连续重复“推进AI在业务和管理中的应用”，同一信息不必要地重复。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"风险提示：宏观经济波动风险、经营与成本风险风险、汇率风险、政策与合规风险。\"\n        }\n      ],\n      \"reason\": \"“经营与成本风险风险”重复“风险”一词，表述冗余。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:03:38.999339+00:00",
+    "request_sha256": "96b00fb09d0c0cc4fe546fc5e729fc3fc75c0bba572c2eeed47b7ba36cc1e13c",
+    "input_token_estimate": 18490,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280634",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f840274a9bf1444f99805c9bff9e904f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4489,
+    "output_tokens": 13503,
+    "usage_source": "provider",
+    "duration_seconds": 46.874692,
+    "cost_cny": "0.058501"
+  },
+  "cache_request": {
+    "key": "b3f03c2b581db73760b946aab0500e1fe1ac0f19e3f338b1ac9c613fc31e5d04",
+    "purpose": "text_review.detect",
+    "messages_sha256": "96b00fb09d0c0cc4fe546fc5e729fc3fc75c0bba572c2eeed47b7ba36cc1e13c"
+  }
+}

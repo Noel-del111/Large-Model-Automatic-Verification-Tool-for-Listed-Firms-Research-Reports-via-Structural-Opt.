@@ -1,0 +1,357 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000326",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“对应EPS为元”缺少应填写的每股收益数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1724,
+          "end": 1807,
+          "text": "预计公司2025-2027年归母净利润8.52/10.27/12.75亿元，；对应EPS为元，2025年05月23日收盘价对应PE分别为22.0/18.3/14.7倍"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司2025-2027年归母净利润8.52/10.27/12.75亿元，；对应EPS为元，2025年05月23日收盘价对应PE分别为22.0/18.3/14.7倍"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1724,
+          "end": 1807,
+          "text": "预计公司2025-2027年归母净利润8.52/10.27/12.75亿元，；对应EPS为元，2025年05月23日收盘价对应PE分别为22.0/18.3/14.7倍"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "52184fcb985a5ca49044f330",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“发布“”多模态音视频交互解决方案”中双引号内为空，缺少解决方案名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1431,
+          "end": 1527,
+          "text": "2025年4月，公司发布“”多模态音视频交互解决方案，涵盖语音识别、自然语言处理、声学前端信号处理等全链路音频算法，通过“语音+视觉+文本”三模态融合架构实现跨模态检索、多模态生成等智能交互。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4月，公司发布“”多模态音视频交互解决方案，涵盖语音识别、自然语言处理、声学前端信号处理等全链路音频算法，通过“语音+视觉+文本”三模态融合架构实现跨模态检索、多模态生成等智能交互。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1431,
+          "end": 1527,
+          "text": "2025年4月，公司发布“”多模态音视频交互解决方案，涵盖语音识别、自然语言处理、声学前端信号处理等全链路音频算法，通过“语音+视觉+文本”三模态融合架构实现跨模态检索、多模态生成等智能交互。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8fc67f74959cb60071e907b1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "该句重复前文已详列的智能座舱模组、车载4G/5G模组、C-V2X模组等产品线信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 650,
+          "end": 704,
+          "text": "公司车载产品线覆盖智能座舱模组、车载4G/5G模组、C-V2X模组等多元化产品组合，持续推动汽车智能化进程。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司车载产品线覆盖智能座舱模组、车载4G/5G模组、C-V2X模组等多元化产品组合，持续推动汽车智能化进程。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 650,
+          "end": 704,
+          "text": "公司车载产品线覆盖智能座舱模组、车载4G/5G模组、C-V2X模组等多元化产品组合，持续推动汽车智能化进程。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b9540662a78b579288080ff6",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1887
+        ]
+      ],
+      "estimated_input_tokens": 6356,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:00:49.741651+00:00",
+        "request_sha256": "7c36d36bf9feee51062e4b796a1470d4a295c388187a838335c10d1181460ffe",
+        "input_token_estimate": 17730,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279874",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "98d47a431d64411f8b768d393c205b45",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4185,
+        "output_tokens": 6092,
+        "usage_source": "provider",
+        "duration_seconds": 24.284878,
+        "cost_cny": "0.028553",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "预计公司2025-2027年归母净利润8.52/10.27/12.75亿元，；对应EPS为元，2025年05月23日收盘价对应PE分别为22.0/18.3/14.7倍"
+          }
+        ],
+        "reason": "“对应EPS为元”缺少应填写的每股收益数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2025年4月，公司发布“”多模态音视频交互解决方案，涵盖语音识别、自然语言处理、声学前端信号处理等全链路音频算法，通过“语音+视觉+文本”三模态融合架构实现跨模态检索、多模态生成等智能交互。"
+          }
+        ],
+        "reason": "“发布“”多模态音视频交互解决方案”中双引号内为空，缺少解决方案名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司车载产品线覆盖智能座舱模组、车载4G/5G模组、C-V2X模组等多元化产品组合，持续推动汽车智能化进程。"
+          }
+        ],
+        "reason": "该句重复前文已详列的智能座舱模组、车载4G/5G模组、C-V2X模组等产品线信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 70,
+      "end": 101,
+      "text": "2024年，公司实现营收185.94亿元，同比+34.14%；",
+      "quantities": [
+        {
+          "value": "185.94",
+          "unit": "亿元",
+          "start": 82,
+          "end": 90
+        },
+        {
+          "value": "+34.14",
+          "unit": "%",
+          "start": 93,
+          "end": 100
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 101,
+      "end": 126,
+      "text": "实现归母净利润5.88亿元，同比+548.49%。",
+      "quantities": [
+        {
+          "value": "5.88",
+          "unit": "亿元",
+          "start": 108,
+          "end": 114
+        },
+        {
+          "value": "+548.49",
+          "unit": "%",
+          "start": 117,
+          "end": 125
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 126,
+      "end": 157,
+      "text": "2025Q1，公司实现营收52.21亿元，同比+32.05%；",
+      "quantities": [
+        {
+          "value": "52.21",
+          "unit": "亿元",
+          "start": 139,
+          "end": 146
+        },
+        {
+          "value": "+32.05",
+          "unit": "%",
+          "start": 149,
+          "end": 156
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 157,
+      "end": 182,
+      "text": "实现归母净利润2.12亿元，同比+286.91%。",
+      "quantities": [
+        {
+          "value": "2.12",
+          "unit": "亿元",
+          "start": 164,
+          "end": 170
+        },
+        {
+          "value": "+286.91",
+          "unit": "%",
+          "start": 173,
+          "end": 181
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1724,
+      "end": 1763,
+      "text": "预计公司2025-2027年归母净利润8.52/10.27/12.75亿元，；",
+      "quantities": [
+        {
+          "value": "12.75",
+          "unit": "亿元",
+          "start": 1754,
+          "end": 1761
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1887,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1887,
+    "processed_ranges": [
+      [
+        0,
+        1887
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1887,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00209,
+  "source_content_sha256": "11ae2e8593d315e73205d7f611e0f73a2d2b265bbeedad182895335bece2fd98"
+}

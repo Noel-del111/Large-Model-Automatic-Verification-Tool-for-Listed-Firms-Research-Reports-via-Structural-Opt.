@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"富士达于129年已经拉通了所有HTCC项目的工艺流程，HTCC项目样品与小批量产已满足高端客户的需求，预计2025年将实现营收和利润的增长。\",\"start\":0,\"end\":0}],\"reason\":\"“129年”不是有效年份，时间信息不成立，疑为年份书写错误。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"产能建设方面富士达产业基地（）在2024年7月完成建设并全部转固，项目截至2023年末已实现9847万元收益。\",\"start\":0,\"end\":0}],\"reason\":\"前文已明确为产业基地（二期），此处括号内属性值缺失。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"考虑到富士达产业基地（二期）已经完成建设并转固，宇航级射频同轴电缆组件市场仍保持领先地位，我们维持2025-2026年、并增加2027年盈利预测，预计2025-2027年实现归母净利润1.05/1.51/1.78/0.23亿元，对应EPS为0.56/0.80/0.95元，当前股价对应PE为50.1/34.8/29.5X，我们维持“买入”评级。\",\"start\":0,\"end\":0}],\"reason\":\"预测区间为2025-2027三年，归母净利润却列1.05/1.51/1.78/0.23四个值，与后文EPS三个值不一致。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"射频同轴电缆实现营收4.39亿元，产业基地（二期）达产并拓展量子等领域\",\"start\":0,\"end\":0},{\"text\":\"2024年射频同轴连接器实现营业收入4.39亿元，同比增长4.65%，毛利率为29.80%；射频同轴电缆组件实现营收3.13亿元，毛利率36.58%。\",\"start\":0,\"end\":0}],\"reason\":\"小标题把射频同轴连接器的4.39亿元营收写成射频同轴电缆，正文电缆组件营收为3.13亿元，产品归属矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:15:48.870017+00:00",
+    "request_sha256": "a91dee26ca9e547dafe104bf081cf2b468badee2a0503c69110c015b97574b7b",
+    "input_token_estimate": 15238,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277382",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4fdd3b73cd3d43c6a43b93fdb1edcf8d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3620,
+    "output_tokens": 9565,
+    "usage_source": "provider",
+    "duration_seconds": 37.380147,
+    "cost_cny": "0.04188"
+  },
+  "cache_request": {
+    "key": "d033f0d53fd9446384b613edd4d2bf5c95e6db225617fc0baed1af32ed02f62e",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a91dee26ca9e547dafe104bf081cf2b468badee2a0503c69110c015b97574b7b"
+  }
+}

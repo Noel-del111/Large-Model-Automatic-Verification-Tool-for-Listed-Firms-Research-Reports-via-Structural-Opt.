@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"公司海外市场增长势头强劲，253年新能源出口订单取得较大突破，获得智利895辆新能源客车和迪拜40辆新能源客车订单，2025年，公司出口低单价客车占比预计下滑，出口至南美、欧洲新能源高端车型占比有望大幅提升，产品结构优化，出口单车均价及利润未来有望继续快速增长。\"}], \"reason\": \"253年非合理报告年份，结合上下文应为2023年，年份书写错误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"公司积极把握客车市场发展机遇，国内销量大幅增长，2024年公司内销客车辆，同比增长39.2%。\"}], \"reason\": \"公司内销客车后直接接“辆”和同比增速，缺少具体内销数量。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"公司产品竞争力强，2024年在国内市场的单车均价为48.6元，在行业公司中处于较高水平。\"}], \"reason\": \"单车均价48.6元与客车单价量级不符，结合行业应为万元。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"预计公司2027-2025年归母净利润复合增速为39.1%，给予公司2025年20倍PE，对应目标价15.2元，首次覆盖，给予“买入”评级。\"}], \"reason\": \"预测区间写为2027-2025年，起点晚于终点，时间顺序倒置。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:06:46.156175+00:00",
+    "request_sha256": "18bb4a775ec7b90bdae66714d9969eca4e3c962dccd40a1f09722af257ef0f1b",
+    "input_token_estimate": 16408,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278552",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "cc17346f8f0e45dc971ff34a52b32871",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3782,
+    "output_tokens": 5663,
+    "usage_source": "provider",
+    "duration_seconds": 22.784951,
+    "cost_cny": "0.026434"
+  },
+  "cache_request": {
+    "key": "b92b8bdc3f6ca4d900d55948dcd62f5e021565ac8fbaacb23213b6e816162a7c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "18bb4a775ec7b90bdae66714d9969eca4e3c962dccd40a1f09722af257ef0f1b"
+  }
+}

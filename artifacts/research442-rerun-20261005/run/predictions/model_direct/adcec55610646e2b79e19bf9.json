@@ -1,0 +1,608 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000709",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "Q4区间写成2025.3.31至2025.1.1，终点早于起点，且与第四季度通常时间范围不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 175,
+          "end": 354,
+          "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 175,
+          "end": 354,
+          "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "253ba331c73bbb942abb779e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "美国制剂销售收入单位写成美分，结合占比31.4%和总营收，应为美元量级，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 499,
+          "end": 552,
+          "text": "美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 499,
+          "end": 552,
+          "text": "美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "770e1f1a89265bccec0fda3c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按营业收入1281.56亿卢比计算，EBITDA利润率为371.61/1281.56≈29.0%而非28.7%；净利率为214.99/1281.56≈16.8%而非16.6%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 175,
+          "end": 354,
+          "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 175,
+          "end": 354,
+          "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "af19daa2179ace048fe548be",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "分业务占比32.9%、31.4%、19.9%、17.6%、13.5%合计115.3%，超过总收入100%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 438,
+          "end": 499,
+          "text": "印度制剂业务实现销售收入421.30亿卢比，同比增长13.6%，占比32.9%，公司印度市场份额由8.0%提升至8.3%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 499,
+          "end": 552,
+          "text": "美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。"
+        },
+        {
+          "kind": "source_text",
+          "start": 552,
+          "end": 634,
+          "text": "全球专科制剂业务实现销售收入2.95亿美元，同比增长8.6%，占比19.9%，增长放缓主要原因是美国一二月份通常为淡季，但Ilumya和Cequa等新药仍实现增长。"
+        },
+        {
+          "kind": "source_text",
+          "start": 634,
+          "end": 673,
+          "text": "新兴市场制剂业务实现销售收入2.61亿美元，同比增长6.3%，占比17.6%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 673,
+          "end": 705,
+          "text": "其他制剂业务实现销售收入2亿美元，同比增长2%，占比13.5%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "印度制剂业务实现销售收入421.30亿卢比，同比增长13.6%，占比32.9%，公司印度市场份额由8.0%提升至8.3%。"
+        },
+        {
+          "text": "美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。"
+        },
+        {
+          "text": "全球专科制剂业务实现销售收入2.95亿美元，同比增长8.6%，占比19.9%，增长放缓主要原因是美国一二月份通常为淡季，但Ilumya和Cequa等新药仍实现增长。"
+        },
+        {
+          "text": "新兴市场制剂业务实现销售收入2.61亿美元，同比增长6.3%，占比17.6%。"
+        },
+        {
+          "text": "其他制剂业务实现销售收入2亿美元，同比增长2%，占比13.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 438,
+          "end": 499,
+          "text": "印度制剂业务实现销售收入421.30亿卢比，同比增长13.6%，占比32.9%，公司印度市场份额由8.0%提升至8.3%。"
+        },
+        {
+          "start": 499,
+          "end": 552,
+          "text": "美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。"
+        },
+        {
+          "start": 552,
+          "end": 634,
+          "text": "全球专科制剂业务实现销售收入2.95亿美元，同比增长8.6%，占比19.9%，增长放缓主要原因是美国一二月份通常为淡季，但Ilumya和Cequa等新药仍实现增长。"
+        },
+        {
+          "start": 634,
+          "end": 673,
+          "text": "新兴市场制剂业务实现销售收入2.61亿美元，同比增长6.3%，占比17.6%。"
+        },
+        {
+          "start": 673,
+          "end": 705,
+          "text": "其他制剂业务实现销售收入2亿美元，同比增长2%，占比13.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "65fabfc3607f63ccd2588260",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          892
+        ]
+      ],
+      "estimated_input_tokens": 5346,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:19:04.208169+00:00",
+        "request_sha256": "207c9af699337ea867d73c79140124de55172c93c0d51926da2683e16cf675a1",
+        "input_token_estimate": 14910,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277054",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b985509a58f44016a57276bacd43e206",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3561,
+        "output_tokens": 9711,
+        "usage_source": "provider",
+        "duration_seconds": 38.146557,
+        "cost_cny": "0.042405"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。"
+          }
+        ],
+        "reason": "Q4区间写成2025.3.31至2025.1.1，终点早于起点，且与第四季度通常时间范围不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。"
+          }
+        ],
+        "reason": "美国制剂销售收入单位写成美分，结合占比31.4%和总营收，应为美元量级，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。"
+          }
+        ],
+        "reason": "按营业收入1281.56亿卢比计算，EBITDA利润率为371.61/1281.56≈29.0%而非28.7%；净利率为214.99/1281.56≈16.8%而非16.6%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "印度制剂业务实现销售收入421.30亿卢比，同比增长13.6%，占比32.9%，公司印度市场份额由8.0%提升至8.3%。"
+          },
+          {
+            "text": "美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。"
+          },
+          {
+            "text": "全球专科制剂业务实现销售收入2.95亿美元，同比增长8.6%，占比19.9%，增长放缓主要原因是美国一二月份通常为淡季，但Ilumya和Cequa等新药仍实现增长。"
+          },
+          {
+            "text": "新兴市场制剂业务实现销售收入2.61亿美元，同比增长6.3%，占比17.6%。"
+          },
+          {
+            "text": "其他制剂业务实现销售收入2亿美元，同比增长2%，占比13.5%。"
+          }
+        ],
+        "reason": "分业务占比32.9%、31.4%、19.9%、17.6%、13.5%合计115.3%，超过总收入100%。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 0,
+      "end": 27,
+      "text": "医药：SUN Q4净利润同比下滑19%，低于市场预期\n",
+      "quantities": [
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 16,
+          "end": 19
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 39,
+      "end": 138,
+      "text": "2025年5月22日，印度制药企业Sun Pharma发布2024-2025财年第四季度财报，Q4实现营业收入1281.56亿卢比，同比增长8.5%，净利润为214.99亿卢比，同比下滑19.0%。",
+      "quantities": [
+        {
+          "value": "8.5",
+          "unit": "%",
+          "start": 109,
+          "end": 113
+        },
+        {
+          "value": "19.0",
+          "unit": "%",
+          "start": 132,
+          "end": 137
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 39,
+      "end": 138,
+      "text": "2025年5月22日，印度制药企业Sun Pharma发布2024-2025财年第四季度财报，Q4实现营业收入1281.56亿卢比，同比增长8.5%，净利润为214.99亿卢比，同比下滑19.0%。",
+      "quantities": [
+        {
+          "value": "8.5",
+          "unit": "%",
+          "start": 109,
+          "end": 113
+        },
+        {
+          "value": "19.0",
+          "unit": "%",
+          "start": 132,
+          "end": 137
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 147,
+      "end": 175,
+      "text": "Q4净利润同比下滑，成本提升及非经常性损益影响利润水平。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 175,
+      "end": 354,
+      "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。",
+      "quantities": [
+        {
+          "value": "8.5",
+          "unit": "%",
+          "start": 232,
+          "end": 236
+        },
+        {
+          "value": "28.7",
+          "unit": "%",
+          "start": 265,
+          "end": 270
+        },
+        {
+          "value": "19.0",
+          "unit": "%",
+          "start": 300,
+          "end": 305
+        },
+        {
+          "value": "16.6",
+          "unit": "%",
+          "start": 310,
+          "end": 315
+        },
+        {
+          "value": "4.8",
+          "unit": "%",
+          "start": 349,
+          "end": 353
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 175,
+      "end": 354,
+      "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。",
+      "quantities": [
+        {
+          "value": "8.5",
+          "unit": "%",
+          "start": 232,
+          "end": 236
+        },
+        {
+          "value": "28.7",
+          "unit": "%",
+          "start": 265,
+          "end": 270
+        },
+        {
+          "value": "19.0",
+          "unit": "%",
+          "start": 300,
+          "end": 305
+        },
+        {
+          "value": "16.6",
+          "unit": "%",
+          "start": 310,
+          "end": 315
+        },
+        {
+          "value": "4.8",
+          "unit": "%",
+          "start": 349,
+          "end": 353
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 175,
+      "end": 354,
+      "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。",
+      "quantities": [
+        {
+          "value": "8.5",
+          "unit": "%",
+          "start": 232,
+          "end": 236
+        },
+        {
+          "value": "28.7",
+          "unit": "%",
+          "start": 265,
+          "end": 270
+        },
+        {
+          "value": "19.0",
+          "unit": "%",
+          "start": 300,
+          "end": 305
+        },
+        {
+          "value": "16.6",
+          "unit": "%",
+          "start": 310,
+          "end": 315
+        },
+        {
+          "value": "4.8",
+          "unit": "%",
+          "start": 349,
+          "end": 353
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 175,
+      "end": 354,
+      "text": "2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。",
+      "quantities": [
+        {
+          "value": "8.5",
+          "unit": "%",
+          "start": 232,
+          "end": 236
+        },
+        {
+          "value": "28.7",
+          "unit": "%",
+          "start": 265,
+          "end": 270
+        },
+        {
+          "value": "19.0",
+          "unit": "%",
+          "start": 300,
+          "end": 305
+        },
+        {
+          "value": "16.6",
+          "unit": "%",
+          "start": 310,
+          "end": 315
+        },
+        {
+          "value": "4.8",
+          "unit": "%",
+          "start": 349,
+          "end": 353
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 354,
+      "end": 408,
+      "text": "净利润同比下滑的主要原因是成本提升且Q4计提了LyndraTherapeutics投资减值36.17亿卢比。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 892,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 892,
+    "processed_ranges": [
+      [
+        0,
+        892
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 38.171834,
+  "source_content_sha256": "fd0146b148ce3370c493d1e01ebe5a46a759be63e737c29d2db8872c4c22f960"
+}

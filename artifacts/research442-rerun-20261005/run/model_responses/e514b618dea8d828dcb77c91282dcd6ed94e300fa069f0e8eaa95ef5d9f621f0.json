@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品, 公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，广泛应用在中芯国际、长江存储、士兰集科、长电科技、华天科技、道富微电等国内主流集成电路制造产线。\"}],\"reason\":\"同一句内产品列表完全重复，未新增信息。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2020-2024年，公司营业总收入由2.4亿元增至13.8亿元，4年复合增长率高达25.3%。\"}],\"reason\":\"2.4亿增至13.8亿，4年复合增长率约54.5%，与25.3%不符。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2020-2024年，公司研发费用由0.5亿元增至5.0亿元，年复合增长率高达71.4%。\"}],\"reason\":\"0.5亿增至5.0亿，4年复合增长率约77.8%，与71.4%不符。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"目前，公司已形成深紫外成像扫描技术、高精度多模式干涉量测技术、基于参考区域对比的缺陷识别算法技术等多项核心技术，能够为半导体行业客户提供涵盖设备产品、智能软件产品和相关服务的全流程良率管理解决方案，推出了无图形晶圆缺离检测设备系列、图形晶圆缺离检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，积累了包括中芯国际、长江存储、士兰集科、长电科技在内的优质客户资源。\"}],\"reason\":\"“缺离”应为“缺陷”，属于半导体检测设备行业术语错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:35:51.012121+00:00",
+    "request_sha256": "42d0d381b4800b9f4efb455d3c150a00bf43397b306fbedee00235e6384f6db3",
+    "input_token_estimate": 16393,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278537",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "48edf8551a294e70a7f543a4536bc13d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3853,
+    "output_tokens": 9399,
+    "usage_source": "provider",
+    "duration_seconds": 37.739213,
+    "cost_cny": "0.041449"
+  },
+  "cache_request": {
+    "key": "e514b618dea8d828dcb77c91282dcd6ed94e300fa069f0e8eaa95ef5d9f621f0",
+    "purpose": "text_review.detect",
+    "messages_sha256": "42d0d381b4800b9f4efb455d3c150a00bf43397b306fbedee00235e6384f6db3"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"近期更新定增进展的3家券商，有三个共同点：一是定增发行对象均包含各自的控股股东；二是募资投向更加聚焦与“服务实体经济”相关的业务板块；三是募资投向更加聚焦与“服务实体经济”相关的业务板块。\",\"start\":255,\"end\":370}],\"reason\":\"第二点和第三点表述完全相同，属于同一信息不必要地重复。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"本周日均股基成交额1.31万亿平方米，环比-5.6%，5月日均股基成交额1.44万亿，环比-3.6%，同比+50%。\",\"start\":425,\"end\":488}],\"reason\":\"股基成交额单位应为亿元或万亿元，写成“平方米”是单位量纲错误。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"监管导向券商通过股权、并购重组和债券等方式为科技型企业提供债权支持。\",\"start\":711,\"end\":746}],\"reason\":\"股权和并购重组方式提供的是股权融资，不能笼统归为“债权支持”，术语使用不当。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:07:43.834926+00:00",
+    "request_sha256": "49d798fe953b4c36a34a4d928ec29b08038ddf9705b5c07e463cd340082b6b1a",
+    "input_token_estimate": 16323,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278467",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "af70c6dba948438bbd3bb34cb9b5bf5e",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3829,
+    "output_tokens": 5873,
+    "usage_source": "provider",
+    "duration_seconds": 25.043739,
+    "cost_cny": "0.027321"
+  },
+  "cache_request": {
+    "key": "8354463c7e2e7344b8429c2cde9b6544ea7c37718f279a94b66c5015b3ba856b",
+    "purpose": "text_review.detect",
+    "messages_sha256": "49d798fe953b4c36a34a4d928ec29b08038ddf9705b5c07e463cd340082b6b1a"
+  }
+}

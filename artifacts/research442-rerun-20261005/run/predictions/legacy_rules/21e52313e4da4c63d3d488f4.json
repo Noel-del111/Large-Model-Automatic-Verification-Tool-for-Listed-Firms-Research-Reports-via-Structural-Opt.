@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000328",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "388cc3067fc1437aea139209",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 563,
+          "end": 610,
+          "text": "2022年中国SaaS市场规模为780.09亿元，2022-2019年CAGR为25.24%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 2470,
+    "total_chars": 2470,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001377,
+  "source_content_sha256": "8bda43d6a4c29c8140f0584c0c2f75af450370b05148f24bbabe9dca927924b7"
+}

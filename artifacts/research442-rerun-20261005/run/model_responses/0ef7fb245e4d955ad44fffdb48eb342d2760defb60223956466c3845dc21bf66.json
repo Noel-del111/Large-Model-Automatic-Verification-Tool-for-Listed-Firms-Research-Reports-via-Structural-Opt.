@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"公司完成对格拉默的并购后，从多方面推进对格拉默整合工作，但202年以来的全球疫情反复+全球汽车芯片短缺+海外通胀带来成本大幅上涨等因素客观上加大了格拉默的整合难度，格拉默海外此前一直对公司整体业绩产生较大拖累。\"}], \"reason\": \"“202年”不是合法年份，缺少一位数字，无法确定具体年份。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"当前，消费升级带动座椅功能和配置的丰富度持续提升，国内乘用车座椅市场空间超过亿元，且随着功能和配置升级市场空间在持续增长。\"}], \"reason\": \"“超过亿元”前无具体数字，市场空间数值位置为空。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"公司对格拉默海外区域进行多举措深度整合后，2025Q1格拉默业绩出现了显著恶化，但业绩拐点基本确立。\"}], \"reason\": \"同一句称2025Q1业绩显著恶化，又称业绩拐点基本确立，判断冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:57:27.357531+00:00",
+    "request_sha256": "737c6ce8a3391d69ec8d768b84d2f1e7775facc69882f171e65082099f6cc33c",
+    "input_token_estimate": 15779,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277923",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "30123c563e6f4b6fa8a9fae4b447ea82",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3666,
+    "output_tokens": 3616,
+    "usage_source": "provider",
+    "duration_seconds": 15.544187,
+    "cost_cny": "0.01813"
+  },
+  "cache_request": {
+    "key": "0ef7fb245e4d955ad44fffdb48eb342d2760defb60223956466c3845dc21bf66",
+    "purpose": "text_review.detect",
+    "messages_sha256": "737c6ce8a3391d69ec8d768b84d2f1e7775facc69882f171e65082099f6cc33c"
+  }
+}

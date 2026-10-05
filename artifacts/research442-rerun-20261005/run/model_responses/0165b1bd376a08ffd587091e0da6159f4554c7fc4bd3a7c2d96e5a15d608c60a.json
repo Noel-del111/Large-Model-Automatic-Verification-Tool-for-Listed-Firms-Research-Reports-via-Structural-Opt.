@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。\\n2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。\"}], \"reason\": \"同一营收和净利润数据连续重复出现，属于不必要的冗余。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"其中CMP抛光垫/CMP抛光液、清洗液/半导体显示材料业务分别实现营收7.16/2.15/4.02亿元，同比增长71.51%/178.89%/131.12%/101.12%\"}], \"reason\": \"三个业务营收对应四个同比增长率，多出101.12%无对应业务，数据不一致。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"2024年，公司研发投入金额4.62亿元，较上年同期增长21.01%，占营业收入的比例为13.86%。\"}], \"reason\": \"4.62除以33.38约等于13.84%，与原文13.86%不符。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"2025年第一季度，公司ABC抛光垫实现产品销售收入2.2亿元，同比增长63.14%，环比增长13.83%，为逐季度持续放量打下了良好的基础。\"}], \"reason\": \"前后文均为CMP抛光垫，此处“ABC抛光垫”术语错误。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"持续进行无氟光敏聚酰亚胺（）、黑色像素定义层材料（BPDL）、薄膜封装低介电材料（Low Dk INK）等新一代OLED显示材料的创新研发及送样验证\"}], \"reason\": \"无氟光敏聚酰亚胺后括号为空，缺失应有的英文缩写。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:12:49.336181+00:00",
+    "request_sha256": "272e9c27633839078495904b859abe191dc90a7b0e520847c440ba8cf0bd2c03",
+    "input_token_estimate": 19723,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.281867",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d3ff9c13e2634d63a2b006523142868e",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4579,
+    "output_tokens": 5732,
+    "usage_source": "provider",
+    "duration_seconds": 22.78854,
+    "cost_cny": "0.027507"
+  },
+  "cache_request": {
+    "key": "0165b1bd376a08ffd587091e0da6159f4554c7fc4bd3a7c2d96e5a15d608c60a",
+    "purpose": "text_review.detect",
+    "messages_sha256": "272e9c27633839078495904b859abe191dc90a7b0e520847c440ba8cf0bd2c03"
+  }
+}

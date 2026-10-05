@@ -1,0 +1,346 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000260",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "1月没有41日，该日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 294,
+          "end": 354,
+          "text": "截至1月41日，重点监测企业煤炭库存总量（含港存）2155万吨，比上周增加0.5%，比上月同期增加4万吨，增加0.2%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至1月41日，重点监测企业煤炭库存总量（含港存）2155万吨，比上周增加0.5%，比上月同期增加4万吨，增加0.2%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 294,
+          "end": 354,
+          "text": "截至1月41日，重点监测企业煤炭库存总量（含港存）2155万吨，比上周增加0.5%，比上月同期增加4万吨，增加0.2%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2e15ba0b3733d95b6246a3f6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "上周日均销量应为800万吨，减少112万吨对应降幅约14%，而非23.9%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 183,
+          "end": 242,
+          "text": "重点监测企业煤炭日均销量为688万吨，比上周日均销量减少112万吨，减少23.9%，比上月同期减少60万吨，减少8%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "重点监测企业煤炭日均销量为688万吨，比上周日均销量减少112万吨，减少23.9%，比上月同期减少60万吨，减少8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 183,
+          "end": 242,
+          "text": "重点监测企业煤炭日均销量为688万吨，比上周日均销量减少112万吨，减少23.9%，比上月同期减少60万吨，减少8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4b22f0628ad279aa4858a0ec",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "5.19除以72.96约为7.11%，与原文7.66%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 792,
+          "end": 889,
+          "text": "库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 792,
+          "end": 889,
+          "text": "库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8b8ebd694a6574863c50be45",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "独立焦化厂总库存单位‘吨’与增加量单位‘万吨’不一致，量级明显冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 792,
+          "end": 889,
+          "text": "库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 792,
+          "end": 889,
+          "text": "库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ade1113ec74d49cddbd80f0d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文动力煤指数周环比下跌，后文称动力煤价格小幅上涨，同一周价格方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 365,
+          "end": 447,
+          "text": "价格方面，环渤海动力煤（Q5500K）指数731元/吨，周环比下跌0.14%，中国进口电煤采购价格指数1076元/吨，周环比下跌0.28%。从港口看，煤价基本稳定；"
+        },
+        {
+          "kind": "source_text",
+          "start": 1211,
+          "end": 1283,
+          "text": "动力煤方面，气温低位，日耗高位，长协供应充足，进口煤维持高位，动力煤价格小幅上涨，电厂、港口库存下降，电厂维持高库存策略，关注后续电厂补库情况；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "价格方面，环渤海动力煤（Q5500K）指数731元/吨，周环比下跌0.14%，中国进口电煤采购价格指数1076元/吨，周环比下跌0.28%。从港口看，煤价基本稳定；"
+        },
+        {
+          "text": "动力煤方面，气温低位，日耗高位，长协供应充足，进口煤维持高位，动力煤价格小幅上涨，电厂、港口库存下降，电厂维持高库存策略，关注后续电厂补库情况；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 365,
+          "end": 447,
+          "text": "价格方面，环渤海动力煤（Q5500K）指数731元/吨，周环比下跌0.14%，中国进口电煤采购价格指数1076元/吨，周环比下跌0.28%。从港口看，煤价基本稳定；"
+        },
+        {
+          "start": 1211,
+          "end": 1283,
+          "text": "动力煤方面，气温低位，日耗高位，长协供应充足，进口煤维持高位，动力煤价格小幅上涨，电厂、港口库存下降，电厂维持高库存策略，关注后续电厂补库情况；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5eab715052b560af93d4f546",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1549
+        ]
+      ],
+      "estimated_input_tokens": 6015,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:32:28.490078+00:00",
+        "request_sha256": "6f01da219a3fe4eb4043113d6183f5050c34e4571327461124af64d760193789",
+        "input_token_estimate": 16758,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278902",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "afab67a3fe3249ac882a941b97139136",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4100,
+        "output_tokens": 9932,
+        "usage_source": "provider",
+        "duration_seconds": 38.906415,
+        "cost_cny": "0.043828"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "截至1月41日，重点监测企业煤炭库存总量（含港存）2155万吨，比上周增加0.5%，比上月同期增加4万吨，增加0.2%。"
+          }
+        ],
+        "reason": "1月没有41日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "重点监测企业煤炭日均销量为688万吨，比上周日均销量减少112万吨，减少23.9%，比上月同期减少60万吨，减少8%。"
+          }
+        ],
+        "reason": "上周日均销量应为800万吨，减少112万吨对应降幅约14%，而非23.9%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。"
+          }
+        ],
+        "reason": "5.19除以72.96约为7.11%，与原文7.66%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。"
+          }
+        ],
+        "reason": "独立焦化厂总库存单位‘吨’与增加量单位‘万吨’不一致，量级明显冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "价格方面，环渤海动力煤（Q5500K）指数731元/吨，周环比下跌0.14%，中国进口电煤采购价格指数1076元/吨，周环比下跌0.28%。从港口看，煤价基本稳定；"
+          },
+          {
+            "text": "动力煤方面，气温低位，日耗高位，长协供应充足，进口煤维持高位，动力煤价格小幅上涨，电厂、港口库存下降，电厂维持高库存策略，关注后续电厂补库情况；"
+          }
+        ],
+        "reason": "前文动力煤指数周环比下跌，后文称动力煤价格小幅上涨，同一周价格方向矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1549,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1549,
+    "processed_ranges": [
+      [
+        0,
+        1549
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 38.929447,
+  "source_content_sha256": "326433fd95724346d4878a34076f70348730d0b8b2f6ecc971f7f2b5e9626387"
+}

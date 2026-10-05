@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"OPEC+会议将于6月0日举行，届时将决定是否将现有的原油产量限制延长至下半年。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"6月没有0日，该日期本身不成立。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"本周（4.29-5.5）国际油价下跌，WTI原油收于78.11美元/桶，收盘价周跌幅6.85%；布伦特原油收于82.96元/桶，收盘价周跌幅7.31%。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"布伦特原油为国际油价，单位应为美元/桶，此处写成元/桶。\"\n    },\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"包括柴油和取暖油在内的馏分油库存较前一周减少桶。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"“减少”后明确要接库存变化量，但数值为空，只留下单位“桶”。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"5月5日轻质纯碱市场均价为2,080元/吨，较4月28日价格上涨24元/吨（+1.90%）；重质纯碱市场均价为2,170元/吨，较4月28日价格上涨25元/吨（+1.17%）。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"轻质纯碱上期价应为2,056元/吨，24元对应涨幅约1.17%，不是1.90%。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"5月份建议关注：1、大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤、制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。\",\n          \"start\": 0,\n          \"end\": 0\n        },\n        {\n          \"text\": \"5月份建议关注：1大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"开头与投资建议部分两次列出几乎相同的“5月份建议关注”内容，信息重复。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:57:48.609512+00:00",
+    "request_sha256": "b8c6f173da35034eacb8e6b25636aae5d2a0ab0c56af478ff07eaf5ad5b6849e",
+    "input_token_estimate": 20099,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.282243",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "53f128dbb9f3411a9615c01f6a1dfeb5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4842,
+    "output_tokens": 11287,
+    "usage_source": "provider",
+    "duration_seconds": 41.960424,
+    "cost_cny": "0.04999"
+  },
+  "cache_request": {
+    "key": "4b0c113df0e4495198ea53d5a4c3a6528d2fe63a11d3f3ee5ccb01e093416ea6",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b8c6f173da35034eacb8e6b25636aae5d2a0ab0c56af478ff07eaf5ad5b6849e"
+  }
+}

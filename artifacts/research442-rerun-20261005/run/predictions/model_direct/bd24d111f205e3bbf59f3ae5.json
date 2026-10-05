@@ -1,0 +1,479 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000364",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "开头连续两句重复“25Q1整体承压”，未新增实质信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 78,
+          "end": 95,
+          "text": "25Q1整体承压，收入利润有下滑。"
+        },
+        {
+          "kind": "source_text",
+          "start": 95,
+          "end": 148,
+          "text": "25Q1业绩整体承压，主要系受宏观经济环境、行业竞争加剧、春节错期等因素影响，消费疲软、终端动销不及预期。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1整体承压，收入利润有下滑。"
+        },
+        {
+          "text": "25Q1业绩整体承压，主要系受宏观经济环境、行业竞争加剧、春节错期等因素影响，消费疲软、终端动销不及预期。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 78,
+          "end": 95,
+          "text": "25Q1整体承压，收入利润有下滑。"
+        },
+        {
+          "start": 95,
+          "end": 148,
+          "text": "25Q1业绩整体承压，主要系受宏观经济环境、行业竞争加剧、春节错期等因素影响，消费疲软、终端动销不及预期。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b63a832fa2023184381ebcc3",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "百分比后连续两个百分号“%%”，不符合标准百分比书写格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 443,
+          "end": 493,
+          "text": "25Q1末经销商环比净增98家至3115家，平均经销商收入同比-23.36%%至20.49亿分/家。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1末经销商环比净增98家至3115家，平均经销商收入同比-23.36%%至20.49亿分/家。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 443,
+          "end": 493,
+          "text": "25Q1末经销商环比净增98家至3115家，平均经销商收入同比-23.36%%至20.49亿分/家。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "903eb893ac3bb4df402fd815",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "“亿分/家”不是合理收入单位，按上下文平均经销商收入应为“万元/家”量级。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 443,
+          "end": 493,
+          "text": "25Q1末经销商环比净增98家至3115家，平均经销商收入同比-23.36%%至20.49亿分/家。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1末经销商环比净增98家至3115家，平均经销商收入同比-23.36%%至20.49亿分/家。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 443,
+          "end": 493,
+          "text": "25Q1末经销商环比净增98家至3115家，平均经销商收入同比-23.36%%至20.49亿分/家。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7a643a4421676593ec237729",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "称“4个方面”但仅列举“产品聚焦、渠道补强、外延增长”3项，数量与列举不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 732,
+          "end": 814,
+          "text": "投资建议：短期看，公司业绩略有承压；但全年看公司将从产品聚焦、渠道补强、外延增长4个方面着手力争完成全年目标，利润方面随着收入增长以及规模优势体现，利润率有望下降。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：短期看，公司业绩略有承压；但全年看公司将从产品聚焦、渠道补强、外延增长4个方面着手力争完成全年目标，利润方面随着收入增长以及规模优势体现，利润率有望下降。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 732,
+          "end": 814,
+          "text": "投资建议：短期看，公司业绩略有承压；但全年看公司将从产品聚焦、渠道补强、外延增长4个方面着手力争完成全年目标，利润方面随着收入增长以及规模优势体现，利润率有望下降。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aeaea85947928c2720ed0ab4",
+      "detector_ids": [
+        "model_direct"
+      ],
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1022
+        ]
+      ],
+      "estimated_input_tokens": 5411,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:56:24.257248+00:00",
+        "request_sha256": "8deac7b69f2bc84fa1587766deecf9e2a0287c91d2fc89afe210b1fddcbfd445",
+        "input_token_estimate": 15129,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277273",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9e0325dc0efb4291b61920fa9e79917a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3705,
+        "output_tokens": 7314,
+        "usage_source": "provider",
+        "duration_seconds": 30.571387,
+        "cost_cny": "0.032961"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "25Q1整体承压，收入利润有下滑。"
+          },
+          {
+            "text": "25Q1业绩整体承压，主要系受宏观经济环境、行业竞争加剧、春节错期等因素影响，消费疲软、终端动销不及预期。"
+          }
+        ],
+        "reason": "开头连续两句重复“25Q1整体承压”，未新增实质信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "25Q1末经销商环比净增98家至3115家，平均经销商收入同比-23.36%%至20.49亿分/家。"
+          }
+        ],
+        "reason": "百分比后连续两个百分号“%%”，不符合标准百分比书写格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "25Q1末经销商环比净增98家至3115家，平均经销商收入同比-23.36%%至20.49亿分/家。"
+          }
+        ],
+        "reason": "“亿分/家”不是合理收入单位，按上下文平均经销商收入应为“万元/家”量级。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "投资建议：短期看，公司业绩略有承压；但全年看公司将从产品聚焦、渠道补强、外延增长4个方面着手力争完成全年目标，利润方面随着收入增长以及规模优势体现，利润率有望下降。"
+          }
+        ],
+        "reason": "称“4个方面”但仅列举“产品聚焦、渠道补强、外延增长”3项，数量与列举不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "投资建议：短期看，公司业绩略有承压；但全年看公司将从产品聚焦、渠道补强、外延增长4个方面着手力争完成全年目标，利润方面随着收入增长以及规模优势体现，利润率有望下降。"
+          }
+        ],
+        "reason": "收入增长、规模优势体现通常提升利润率，原文却说“利润率有望下降”，前后矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 27,
+      "end": 76,
+      "text": "事件：25Q1公司收入/归母净利润分别为6.42/0.75亿元（-24.80%/-57.53%）。",
+      "quantities": [
+        {
+          "value": "0.75",
+          "unit": "亿元",
+          "start": 52,
+          "end": 58
+        },
+        {
+          "value": "-24.80",
+          "unit": "%",
+          "start": 59,
+          "end": 66
+        },
+        {
+          "value": "-57.53",
+          "unit": "%",
+          "start": 67,
+          "end": 74
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 597,
+      "end": 642,
+      "text": "25Q1年公司毛利率/净利率同比-3.32/-8.56pct至40.74%/12.34%；",
+      "quantities": [
+        {
+          "value": "40.74",
+          "unit": "%",
+          "start": 628,
+          "end": 634
+        },
+        {
+          "value": "12.34",
+          "unit": "%",
+          "start": 635,
+          "end": 641
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 597,
+      "end": 642,
+      "text": "25Q1年公司毛利率/净利率同比-3.32/-8.56pct至40.74%/12.34%；",
+      "quantities": [
+        {
+          "value": "40.74",
+          "unit": "%",
+          "start": 628,
+          "end": 634
+        },
+        {
+          "value": "12.34",
+          "unit": "%",
+          "start": 635,
+          "end": 641
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 841,
+      "end": 909,
+      "text": "根据25Q1财报，我们调整盈利预测，预计25-27年营收为37/41/45亿元（前值为40/45/49亿元），同增7%/11%/10%；",
+      "quantities": [
+        {
+          "value": "45",
+          "unit": "亿元",
+          "start": 876,
+          "end": 880
+        },
+        {
+          "value": "49",
+          "unit": "亿元",
+          "start": 890,
+          "end": 894
+        },
+        {
+          "value": "7",
+          "unit": "%",
+          "start": 898,
+          "end": 900
+        },
+        {
+          "value": "11",
+          "unit": "%",
+          "start": 901,
+          "end": 904
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 905,
+          "end": 908
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 909,
+      "end": 988,
+      "text": "归母净利润为6.5/7.3/8.1亿元（前值为7.4/8.5/9.5亿元），同增4%/12%/11%，对应PE分别为20X/18X/16X，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "8.1",
+          "unit": "亿元",
+          "start": 923,
+          "end": 928
+        },
+        {
+          "value": "9.5",
+          "unit": "亿元",
+          "start": 940,
+          "end": 945
+        },
+        {
+          "value": "4",
+          "unit": "%",
+          "start": 949,
+          "end": 951
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 952,
+          "end": 955
+        },
+        {
+          "value": "11",
+          "unit": "%",
+          "start": 956,
+          "end": 959
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1022,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1022,
+    "processed_ranges": [
+      [
+        0,
+        1022
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 30.596143,
+  "source_content_sha256": "18b258cdf9ce15e0ca285dc5d9983376c9f830993e5982107cf9ce089685f257"
+}

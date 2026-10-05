@@ -1,0 +1,663 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000498",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后股票代码括号为空，缺少证券代码属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 30,
+          "end": 36,
+          "text": "贝达药业()"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "贝达药业()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 30,
+          "end": 36,
+          "text": "贝达药业()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "709703b594a3346c450dde90",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "2025Q1研发费用在“为”与“亿元”之间无数字，应填数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 413,
+          "end": 521,
+          "text": "2025Q1销售费用为2.80亿元，销售费用率为30.53%，同比基本持平；研发费用为亿元，研发费用率为12.35%，同比下降8.41pct；管理费用为1.33亿元，管理费用率为14.48%，同比下降1.11pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1销售费用为2.80亿元，销售费用率为30.53%，同比基本持平；研发费用为亿元，研发费用率为12.35%，同比下降8.41pct；管理费用为1.33亿元，管理费用率为14.48%，同比下降1.11pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 413,
+          "end": 521,
+          "text": "2025Q1销售费用为2.80亿元，销售费用率为30.53%，同比基本持平；研发费用为亿元，研发费用率为12.35%，同比下降8.41pct；管理费用为1.33亿元，管理费用率为14.48%，同比下降1.11pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5c653050a7250083c3260803",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份为0，不符合日历月份取值范围。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 577,
+          "end": 638,
+          "text": "目前一线治疗ALK阳性NSCLC适应症已通过谈判纳入医保目录，并于2025年0月获得NCCN NSCLC临床诊疗指南推荐。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前一线治疗ALK阳性NSCLC适应症已通过谈判纳入医保目录，并于2025年0月获得NCCN NSCLC临床诊疗指南推荐。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 577,
+          "end": 638,
+          "text": "目前一线治疗ALK阳性NSCLC适应症已通过谈判纳入医保目录，并于2025年0月获得NCCN NSCLC临床诊疗指南推荐。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "120597553e7efb52a3b6bf41",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "列示4款在研品种，仅列出MCLA-129、CFT8919、四代EGFR-TKI，第四款名称缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 846,
+          "end": 933,
+          "text": "公司在EGFRmu NSCLC领域持续布局，拥有4款在研品种，包括MCLA-129（EGFR/cmet双抗）、CFT8919(EGFR蛋白降解剂）、四代EGFR-TKI以及。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司在EGFRmu NSCLC领域持续布局，拥有4款在研品种，包括MCLA-129（EGFR/cmet双抗）、CFT8919(EGFR蛋白降解剂）、四代EGFR-TKI以及。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 846,
+          "end": 933,
+          "text": "公司在EGFRmu NSCLC领域持续布局，拥有4款在研品种，包括MCLA-129（EGFR/cmet双抗）、CFT8919(EGFR蛋白降解剂）、四代EGFR-TKI以及。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bfd23d329a25385d917b4898",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "标题称植物源白蛋白上市申请审评中，正文称尚未提交至NMPA，两者不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 803,
+          "end": 844,
+          "text": "对内持续布局肺癌领域产品组合，保持竞争力，对外拓展合作，植物源白蛋白上市申请审评中"
+        },
+        {
+          "kind": "source_text",
+          "start": 975,
+          "end": 1022,
+          "text": "战略合作产品植物源重组人血清白蛋白注射液的上市申请尚未提交至NMPA，且未被纳入优先审评程序。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "对内持续布局肺癌领域产品组合，保持竞争力，对外拓展合作，植物源白蛋白上市申请审评中"
+        },
+        {
+          "text": "战略合作产品植物源重组人血清白蛋白注射液的上市申请尚未提交至NMPA，且未被纳入优先审评程序。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 803,
+          "end": 844,
+          "text": "对内持续布局肺癌领域产品组合，保持竞争力，对外拓展合作，植物源白蛋白上市申请审评中"
+        },
+        {
+          "start": 975,
+          "end": 1022,
+          "text": "战略合作产品植物源重组人血清白蛋白注射液的上市申请尚未提交至NMPA，且未被纳入优先审评程序。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bb1bb97f2886295cbd3f80e2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "预测年份区间首尾倒置，2027早于2025不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1325,
+          "end": 1366,
+          "text": "我们预计公司2027-2025年营业收入为37.02、45.16和51.62亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司2027-2025年营业收入为37.02、45.16和51.62亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1325,
+          "end": 1366,
+          "text": "我们预计公司2027-2025年营业收入为37.02、45.16和51.62亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2000839f6bf33746462e4f0d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1492
+        ]
+      ],
+      "estimated_input_tokens": 5878,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:52:12.124721+00:00",
+        "request_sha256": "33cd304527eff87212dfbd3aa4a5f836b2223de3450c55a10a62c94a55763571",
+        "input_token_estimate": 16412,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278556",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "cde180258caf408faa920af7e7568953",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3931,
+        "output_tokens": 7849,
+        "usage_source": "provider",
+        "duration_seconds": 30.123135,
+        "cost_cny": "0.035327"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "贝达药业()"
+          }
+        ],
+        "reason": "公司名称后股票代码括号为空，缺少证券代码属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025Q1销售费用为2.80亿元，销售费用率为30.53%，同比基本持平；研发费用为亿元，研发费用率为12.35%，同比下降8.41pct；管理费用为1.33亿元，管理费用率为14.48%，同比下降1.11pct。"
+          }
+        ],
+        "reason": "2025Q1研发费用在“为”与“亿元”之间无数字，应填数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "目前一线治疗ALK阳性NSCLC适应症已通过谈判纳入医保目录，并于2025年0月获得NCCN NSCLC临床诊疗指南推荐。"
+          }
+        ],
+        "reason": "月份为0，不符合日历月份取值范围。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "公司在EGFRmu NSCLC领域持续布局，拥有4款在研品种，包括MCLA-129（EGFR/cmet双抗）、CFT8919(EGFR蛋白降解剂）、四代EGFR-TKI以及。"
+          }
+        ],
+        "reason": "列示4款在研品种，仅列出MCLA-129、CFT8919、四代EGFR-TKI，第四款名称缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "对内持续布局肺癌领域产品组合，保持竞争力，对外拓展合作，植物源白蛋白上市申请审评中"
+          },
+          {
+            "text": "战略合作产品植物源重组人血清白蛋白注射液的上市申请尚未提交至NMPA，且未被纳入优先审评程序。"
+          }
+        ],
+        "reason": "标题称植物源白蛋白上市申请审评中，正文称尚未提交至NMPA，两者不能同时成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "我们预计公司2027-2025年营业收入为37.02、45.16和51.62亿元。"
+          }
+        ],
+        "reason": "预测年份区间首尾倒置，2027早于2025不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 42,
+      "end": 139,
+      "text": "公司发布2024年年度报告及2025年一季报：2024年收入28.92亿元，同比增长17.74%，归母净利润4.03亿元，同比增长15.67%，扣非归母净利润4.10亿元，同比增长55.92%；",
+      "quantities": [
+        {
+          "value": "28.92",
+          "unit": "亿元",
+          "start": 72,
+          "end": 79
+        },
+        {
+          "value": "17.74",
+          "unit": "%",
+          "start": 84,
+          "end": 90
+        },
+        {
+          "value": "4.03",
+          "unit": "亿元",
+          "start": 96,
+          "end": 102
+        },
+        {
+          "value": "15.67",
+          "unit": "%",
+          "start": 107,
+          "end": 113
+        },
+        {
+          "value": "4.10",
+          "unit": "亿元",
+          "start": 121,
+          "end": 127
+        },
+        {
+          "value": "55.92",
+          "unit": "%",
+          "start": 132,
+          "end": 138
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 42,
+      "end": 139,
+      "text": "公司发布2024年年度报告及2025年一季报：2024年收入28.92亿元，同比增长17.74%，归母净利润4.03亿元，同比增长15.67%，扣非归母净利润4.10亿元，同比增长55.92%；",
+      "quantities": [
+        {
+          "value": "28.92",
+          "unit": "亿元",
+          "start": 72,
+          "end": 79
+        },
+        {
+          "value": "17.74",
+          "unit": "%",
+          "start": 84,
+          "end": 90
+        },
+        {
+          "value": "4.03",
+          "unit": "亿元",
+          "start": 96,
+          "end": 102
+        },
+        {
+          "value": "15.67",
+          "unit": "%",
+          "start": 107,
+          "end": 113
+        },
+        {
+          "value": "4.10",
+          "unit": "亿元",
+          "start": 121,
+          "end": 127
+        },
+        {
+          "value": "55.92",
+          "unit": "%",
+          "start": 132,
+          "end": 138
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 139,
+      "end": 170,
+      "text": "2025年第一季度营业收入9.18亿元，同比增长24.71%；",
+      "quantities": [
+        {
+          "value": "9.18",
+          "unit": "亿元",
+          "start": 152,
+          "end": 158
+        },
+        {
+          "value": "24.71",
+          "unit": "%",
+          "start": 163,
+          "end": 169
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 170,
+      "end": 192,
+      "text": "归母净利润1.00亿元，同比增长1.99%；",
+      "quantities": [
+        {
+          "value": "1.00",
+          "unit": "亿元",
+          "start": 175,
+          "end": 181
+        },
+        {
+          "value": "1.99",
+          "unit": "%",
+          "start": 186,
+          "end": 191
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 192,
+      "end": 215,
+      "text": "扣非净利润1.64亿元，同比增长83.59%。",
+      "quantities": [
+        {
+          "value": "1.64",
+          "unit": "亿元",
+          "start": 197,
+          "end": 203
+        },
+        {
+          "value": "83.59",
+          "unit": "%",
+          "start": 208,
+          "end": 214
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1247,
+      "end": 1312,
+      "text": "此外，BPI-16350（CDK4/6）在中国内地关于HR+/HER2-BC的上市申请已获得受理，若能获批将有望贡献新的营收增量。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1325,
+      "end": 1366,
+      "text": "我们预计公司2027-2025年营业收入为37.02、45.16和51.62亿元。",
+      "quantities": [
+        {
+          "value": "51.62",
+          "unit": "亿元",
+          "start": 1358,
+          "end": 1365
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1366,
+      "end": 1447,
+      "text": "考虑到公司核心产进入快速放量阶段，将2025-2026年的归母净利润从5.37、6.9亿元上调至6.61和9.30亿元，预计2027年归母净利润为10.30亿元。",
+      "quantities": [
+        {
+          "value": "6.9",
+          "unit": "亿元",
+          "start": 1406,
+          "end": 1411
+        },
+        {
+          "value": "9.30",
+          "unit": "亿元",
+          "start": 1419,
+          "end": 1425
+        },
+        {
+          "value": "10.30",
+          "unit": "亿元",
+          "start": 1439,
+          "end": 1446
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑到公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1366,
+      "end": 1447,
+      "text": "考虑到公司核心产进入快速放量阶段，将2025-2026年的归母净利润从5.37、6.9亿元上调至6.61和9.30亿元，预计2027年归母净利润为10.30亿元。",
+      "quantities": [
+        {
+          "value": "6.9",
+          "unit": "亿元",
+          "start": 1406,
+          "end": 1411
+        },
+        {
+          "value": "9.30",
+          "unit": "亿元",
+          "start": 1419,
+          "end": 1425
+        },
+        {
+          "value": "10.30",
+          "unit": "亿元",
+          "start": 1439,
+          "end": 1446
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑到公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1492,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1492,
+    "processed_ranges": [
+      [
+        0,
+        1492
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 30.149446,
+  "source_content_sha256": "822137936bbe4543721d4bcecc6c29951b2e0dbd30ebf6216f46267808568485"
+}

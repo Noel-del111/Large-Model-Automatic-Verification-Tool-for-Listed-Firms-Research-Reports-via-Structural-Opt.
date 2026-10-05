@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000592",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间写作5月30日~5月26日，起始日期晚于结束日期，先后关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 565,
+          "end": 663,
+          "text": "行业基础数据跟踪：5月30日~5月26日，申万石油石化指数上涨0.40%，跑赢大盘1.48pct申万基础化工指数下跌0.66%，跑赢大盘0.42pct，涨幅在全部申万一级行业中分别位列第13位、。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "行业基础数据跟踪：5月30日~5月26日，申万石油石化指数上涨0.40%，跑赢大盘1.48pct申万基础化工指数下跌0.66%，跑赢大盘0.42pct，涨幅在全部申万一级行业中分别位列第13位、。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 565,
+          "end": 663,
+          "text": "行业基础数据跟踪：5月30日~5月26日，申万石油石化指数上涨0.40%，跑赢大盘1.48pct申万基础化工指数下跌0.66%，跑赢大盘0.42pct，涨幅在全部申万一级行业中分别位列第13位、。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "41ea77505707743b3c6a76cd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "申万石油石化和基础化工涨幅分别位列，但只给出第13位，第二个排名数值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 565,
+          "end": 663,
+          "text": "行业基础数据跟踪：5月30日~5月26日，申万石油石化指数上涨0.40%，跑赢大盘1.48pct申万基础化工指数下跌0.66%，跑赢大盘0.42pct，涨幅在全部申万一级行业中分别位列第13位、。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "行业基础数据跟踪：5月30日~5月26日，申万石油石化指数上涨0.40%，跑赢大盘1.48pct申万基础化工指数下跌0.66%，跑赢大盘0.42pct，涨幅在全部申万一级行业中分别位列第13位、。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 565,
+          "end": 663,
+          "text": "行业基础数据跟踪：5月30日~5月26日，申万石油石化指数上涨0.40%，跑赢大盘1.48pct申万基础化工指数下跌0.66%，跑赢大盘0.42pct，涨幅在全部申万一级行业中分别位列第13位、。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "30fe213de54b6cb0111994f8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "盐酸价格跌幅用“克”作单位，涨跌幅应为百分比，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 885,
+          "end": 977,
+          "text": "上周价格跌幅居前的品种分别为盐酸：-28.00克；丁二烯（上海石化）：-6.59%；顺丁橡胶（华东）：-5.85%；苯胺（华东）：-5.35%；丁苯橡胶（上海1502）：-4.93%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "上周价格跌幅居前的品种分别为盐酸：-28.00克；丁二烯（上海石化）：-6.59%；顺丁橡胶（华东）：-5.85%；苯胺（华东）：-5.35%；丁苯橡胶（上海1502）：-4.93%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 885,
+          "end": 977,
+          "text": "上周价格跌幅居前的品种分别为盐酸：-28.00克；丁二烯（上海石化）：-6.59%；顺丁橡胶（华东）：-5.85%；苯胺（华东）：-5.35%；丁苯橡胶（上海1502）：-4.93%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d2b7cb3fe17f004eeb066eda",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "对二甲苯后括号内产地或规格等属性值为空，缺少必要限定信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 793,
+          "end": 977,
+          "text": "价格数据跟踪：上周价格涨幅居前的品种分别为氯化钾（青海60%）：5.66%；对二甲苯（）：4.94%；二氯甲烷（江苏）：4.59%；TDI（华东）：3.93%；液氨（江苏）：1.65%上周价格跌幅居前的品种分别为盐酸：-28.00克；丁二烯（上海石化）：-6.59%；顺丁橡胶（华东）：-5.85%；苯胺（华东）：-5.35%；丁苯橡胶（上海1502）：-4.93%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "价格数据跟踪：上周价格涨幅居前的品种分别为氯化钾（青海60%）：5.66%；对二甲苯（）：4.94%；二氯甲烷（江苏）：4.59%；TDI（华东）：3.93%；液氨（江苏）：1.65%上周价格跌幅居前的品种分别为盐酸：-28.00克；丁二烯（上海石化）：-6.59%；顺丁橡胶（华东）：-5.85%；苯胺（华东）：-5.35%；丁苯橡胶（上海1502）：-4.93%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 793,
+          "end": 977,
+          "text": "价格数据跟踪：上周价格涨幅居前的品种分别为氯化钾（青海60%）：5.66%；对二甲苯（）：4.94%；二氯甲烷（江苏）：4.59%；TDI（华东）：3.93%；液氨（江苏）：1.65%上周价格跌幅居前的品种分别为盐酸：-28.00克；丁二烯（上海石化）：-6.59%；顺丁橡胶（华东）：-5.85%；苯胺（华东）：-5.35%；丁苯橡胶（上海1502）：-4.93%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "94036069408b32af35c65746",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1407
+        ]
+      ],
+      "estimated_input_tokens": 6000,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:46:34.767991+00:00",
+        "request_sha256": "faebfacaa334308a356779f9a4cc4bad9a38f552e873285d63923d4df4d70c45",
+        "input_token_estimate": 16666,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27881",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f3199c0ae26242adba3731cc7b05122d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3943,
+        "output_tokens": 8821,
+        "usage_source": "provider",
+        "duration_seconds": 34.404852,
+        "cost_cny": "0.039227"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "行业基础数据跟踪：5月30日~5月26日，申万石油石化指数上涨0.40%，跑赢大盘1.48pct申万基础化工指数下跌0.66%，跑赢大盘0.42pct，涨幅在全部申万一级行业中分别位列第13位、。"
+          }
+        ],
+        "reason": "时间区间写作5月30日~5月26日，起始日期晚于结束日期，先后关系矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "行业基础数据跟踪：5月30日~5月26日，申万石油石化指数上涨0.40%，跑赢大盘1.48pct申万基础化工指数下跌0.66%，跑赢大盘0.42pct，涨幅在全部申万一级行业中分别位列第13位、。"
+          }
+        ],
+        "reason": "申万石油石化和基础化工涨幅分别位列，但只给出第13位，第二个排名数值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "上周价格跌幅居前的品种分别为盐酸：-28.00克；丁二烯（上海石化）：-6.59%；顺丁橡胶（华东）：-5.85%；苯胺（华东）：-5.35%；丁苯橡胶（上海1502）：-4.93%。"
+          }
+        ],
+        "reason": "盐酸价格跌幅用“克”作单位，涨跌幅应为百分比，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "价格数据跟踪：上周价格涨幅居前的品种分别为氯化钾（青海60%）：5.66%；对二甲苯（）：4.94%；二氯甲烷（江苏）：4.59%；TDI（华东）：3.93%；液氨（江苏）：1.65%上周价格跌幅居前的品种分别为盐酸：-28.00克；丁二烯（上海石化）：-6.59%；顺丁橡胶（华东）：-5.85%；苯胺（华东）：-5.35%；丁苯橡胶（上海1502）：-4.93%。"
+          }
+        ],
+        "reason": "对二甲苯后括号内产地或规格等属性值为空，缺少必要限定信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1407,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1407,
+    "processed_ranges": [
+      [
+        0,
+        1407
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 34.428323,
+  "source_content_sha256": "e87e63cc2a181c49e781b49f6154f871478b460f99c9cc9c139fde976c263ffa"
+}

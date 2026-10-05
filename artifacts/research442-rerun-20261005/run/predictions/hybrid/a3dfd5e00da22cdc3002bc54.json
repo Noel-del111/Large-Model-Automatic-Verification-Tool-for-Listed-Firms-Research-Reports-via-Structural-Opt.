@@ -1,0 +1,329 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000706",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "术语误用",
+      "reason": "标题称“A轮天使投资”，正文仅称“A轮融资”，天使投资与A轮融资属不同融资阶段，术语混用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 40,
+          "end": 106,
+          "text": "地瓜机器人完成1亿美元A轮天使投资：2025年5月28日，地平线机器人-W（9660.HK）旗下地瓜机器人宣布完成1亿美元A轮融资。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "地瓜机器人完成1亿美元A轮天使投资：2025年5月28日，地平线机器人-W（9660.HK）旗下地瓜机器人宣布完成1亿美元A轮融资。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 40,
+          "end": 106,
+          "text": "地瓜机器人完成1亿美元A轮天使投资：2025年5月28日，地平线机器人-W（9660.HK）旗下地瓜机器人宣布完成1亿美元A轮融资。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "02acf0f22db39f1fbb442cf0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "第1条与第2条内容完全相同，属于不必要的重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 789,
+          "end": 862,
+          "text": "1. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。\n2. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。\n2. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 789,
+          "end": 862,
+          "text": "1. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。\n2. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "217d000218837eff56a98712",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“应不低于%”中百分号前缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 917,
+          "end": 988,
+          "text": "项目整体新能源年自发自用电量占总可用发电量的比例应不低于%，占总用电量的比例应不低于30%，并不断提高自发自用比例，2030年前不低于35%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "项目整体新能源年自发自用电量占总可用发电量的比例应不低于%，占总用电量的比例应不低于30%，并不断提高自发自用比例，2030年前不低于35%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 917,
+          "end": 988,
+          "text": "项目整体新能源年自发自用电量占总可用发电量的比例应不低于%，占总用电量的比例应不低于30%，并不断提高自发自用比例，2030年前不低于35%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f5257cf845efd1f6b906a0b9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "同一事件先称2027年发射，后称明年年底发射，两个时间表述冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 582,
+          "end": 694,
+          "text": "当地时间5月29日，特斯拉在社交平台发文称，SpaceX将于2027年发射携带特斯拉Optimus人形机器人的星舰前往火星。特斯拉CEO马斯克表示，明年年底，SpaceX将发射携带特斯拉Optimus人形机器人的星舰前往火星"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "当地时间5月29日，特斯拉在社交平台发文称，SpaceX将于2027年发射携带特斯拉Optimus人形机器人的星舰前往火星。特斯拉CEO马斯克表示，明年年底，SpaceX将发射携带特斯拉Optimus人形机器人的星舰前往火星"
+        }
+      ],
+      "spans": [
+        {
+          "start": 582,
+          "end": 694,
+          "text": "当地时间5月29日，特斯拉在社交平台发文称，SpaceX将于2027年发射携带特斯拉Optimus人形机器人的星舰前往火星。特斯拉CEO马斯克表示，明年年底，SpaceX将发射携带特斯拉Optimus人形机器人的星舰前往火星"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7c174ba05237c2d67d0393a9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "火星旅行抵达时间不可能长达129年，单位“年”量纲明显异常。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 695,
+          "end": 715,
+          "text": "按照轨道周期计算，将在129年抵达火星。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "按照轨道周期计算，将在129年抵达火星。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 695,
+          "end": 715,
+          "text": "按照轨道周期计算，将在129年抵达火星。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3c8cf47110ed16feb3bab830",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2064
+        ]
+      ],
+      "estimated_input_tokens": 6593,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:46:09.863907+00:00",
+        "request_sha256": "53c76461ae97a8b98737d8501599ae84c604f655185412e29400d9f04d1bf541",
+        "input_token_estimate": 18351,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280495",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4109886504af48998f6328cfdbec5957",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4349,
+        "output_tokens": 6786,
+        "usage_source": "provider",
+        "duration_seconds": 28.109863,
+        "cost_cny": "0.031493",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "地瓜机器人完成1亿美元A轮天使投资：2025年5月28日，地平线机器人-W（9660.HK）旗下地瓜机器人宣布完成1亿美元A轮融资。"
+          }
+        ],
+        "reason": "标题称“A轮天使投资”，正文仅称“A轮融资”，天使投资与A轮融资属不同融资阶段，术语混用。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "1. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。\n2. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。"
+          }
+        ],
+        "reason": "第1条与第2条内容完全相同，属于不必要的重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "项目整体新能源年自发自用电量占总可用发电量的比例应不低于%，占总用电量的比例应不低于30%，并不断提高自发自用比例，2030年前不低于35%。"
+          }
+        ],
+        "reason": "“应不低于%”中百分号前缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "当地时间5月29日，特斯拉在社交平台发文称，SpaceX将于2027年发射携带特斯拉Optimus人形机器人的星舰前往火星。特斯拉CEO马斯克表示，明年年底，SpaceX将发射携带特斯拉Optimus人形机器人的星舰前往火星"
+          }
+        ],
+        "reason": "同一事件先称2027年发射，后称明年年底发射，两个时间表述冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "按照轨道周期计算，将在129年抵达火星。"
+          }
+        ],
+        "reason": "火星旅行抵达时间不可能长达129年，单位“年”量纲明显异常。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2064,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2064,
+    "processed_ranges": [
+      [
+        0,
+        2064
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2064,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001811,
+  "source_content_sha256": "313d0352026b9004fa61beb4ebdf5979f3461ede3e0df2d3d636c3f033504f82"
+}

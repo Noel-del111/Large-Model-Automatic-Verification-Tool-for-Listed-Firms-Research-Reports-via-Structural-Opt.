@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"权威发布：2025年4月国内市场手机出货量2503.8万部，其中5G手机占比79.4%。\"\n        },\n        {\n          \"text\": \"2025 年 4 月，国内市场手机出货量 2503.8 万部，同比增长 4.0%，其中，5G 手机 1988.9 万部，同比下降 1.7%，占同期手机出货量的 69.4%。\"\n        }\n      ],\n      \"reason\": \"同一期间、同一指标5G手机占比，开头为79.4%，后文为69.4%，且按出货量计算约为79.4%，两者冲突。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"2025 年 4 月，国内手机上市新机型 50 款，同比增长 47.1%，其中 5G 手机 19 款，同比下降 17.4%，占同期手机上市新机型数量的 48.0%。\"\n        }\n      ],\n      \"reason\": \"19款占50款的比例为38.0%，而非原文所写的48.0%，明确计算关系不成立。\"\n    },\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"2025 年 4-1 月，国内市场手机出货量 9470.8 万部，同比增长 3.5%，其中， 5G 手机 8093.2 万部，同比增长 5.6%，占同期手机出货量的 85.5%。\"\n        }\n      ],\n      \"reason\": \"时间区间写为“4-1月”，月份顺序倒置，常规应为“1-4月”，该期间表达本身不成立。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:21:55.923849+00:00",
+    "request_sha256": "fcdc288c1c8c742c889b753905ccda8bcbdbf9bb3e77078a01b6d3d1627fb1e7",
+    "input_token_estimate": 14660,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.276804",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "e6a7d3dd25be46e2853150580edea20d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3613,
+    "output_tokens": 3366,
+    "usage_source": "provider",
+    "duration_seconds": 13.222353,
+    "cost_cny": "0.017077"
+  },
+  "cache_request": {
+    "key": "fb663aa6e2e1bbe9afcd76e971e18022a39268fbb1d934774669a5465ff2345f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "fcdc288c1c8c742c889b753905ccda8bcbdbf9bb3e77078a01b6d3d1627fb1e7"
+  }
+}

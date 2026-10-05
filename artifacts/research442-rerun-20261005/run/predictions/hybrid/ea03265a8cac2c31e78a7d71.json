@@ -1,0 +1,664 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000347",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "动力电池出货量常用GWh计量，780WH量级过小，应为780GWh。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 461,
+          "end": 528,
+          "text": "根据GGII和鑫椤资讯数据，2024年中国动力电池出货超780WH、同比+23.0%，储能电池出货达到340GWh、同比+63.5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据GGII和鑫椤资讯数据，2024年中国动力电池出货超780WH、同比+23.0%，储能电池出货达到340GWh、同比+63.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 461,
+          "end": 528,
+          "text": "根据GGII和鑫椤资讯数据，2024年中国动力电池出货超780WH、同比+23.0%，储能电池出货达到340GWh、同比+63.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dcdf35cc4bc18342e13a4135",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内为空，未给出将新能源汽车三电系统纳入年检的法规名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 654,
+          "end": 675,
+          "text": "《》则将新能源汽车三电系统纳入到年检范围。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "《》则将新能源汽车三电系统纳入到年检范围。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 654,
+          "end": 675,
+          "text": "《》则将新能源汽车三电系统纳入到年检范围。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e544005e9865fdd66b9d9d7c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“估值”一词重复出现，句子冗余，只需保留一次。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1016,
+          "end": 1049,
+          "text": "在增厚利润的同时，有望带动估值整体估值体系重构，打造第二增长曲线。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在增厚利润的同时，有望带动估值整体估值体系重构，打造第二增长曲线。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1016,
+          "end": 1049,
+          "text": "在增厚利润的同时，有望带动估值整体估值体系重构，打造第二增长曲线。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7c282c9314e1a03db385a72c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "周转天数由232.38/247.39降至181.04/188.76，通常为改善，却说均未有显著改善，前后矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 204,
+          "end": 266,
+          "text": "存货周转天数和应收账款周转天数（181.04天/188.76天）自上年同期（232.38天/247.39天）均未有显著改善。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "存货周转天数和应收账款周转天数（181.04天/188.76天）自上年同期（232.38天/247.39天）均未有显著改善。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 204,
+          "end": 266,
+          "text": "存货周转天数和应收账款周转天数（181.04天/188.76天）自上年同期（232.38天/247.39天）均未有显著改善。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c435b3f0516598baa9e76e70",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1432
+        ]
+      ],
+      "estimated_input_tokens": 5960,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:37:19.113268+00:00",
+        "request_sha256": "7b9dc0bdecf919462065d688b7589a64959bd4361c690b7253bf3dcfaf1b2088",
+        "input_token_estimate": 16595,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278739",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "bf74df21602f43c286deaa01b214956d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3875,
+        "output_tokens": 6509,
+        "usage_source": "provider",
+        "duration_seconds": 26.157743,
+        "cost_cny": "0.029911",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "根据GGII和鑫椤资讯数据，2024年中国动力电池出货超780WH、同比+23.0%，储能电池出货达到340GWh、同比+63.5%。"
+          }
+        ],
+        "reason": "动力电池出货量常用GWh计量，780WH量级过小，应为780GWh。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "《》则将新能源汽车三电系统纳入到年检范围。"
+          }
+        ],
+        "reason": "书名号内为空，未给出将新能源汽车三电系统纳入年检的法规名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "在增厚利润的同时，有望带动估值整体估值体系重构，打造第二增长曲线。"
+          }
+        ],
+        "reason": "“估值”一词重复出现，句子冗余，只需保留一次。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "存货周转天数和应收账款周转天数（181.04天/188.76天）自上年同期（232.38天/247.39天）均未有显著改善。"
+          }
+        ],
+        "reason": "周转天数由232.38/247.39降至181.04/188.76，通常为改善，却说均未有显著改善，前后矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 60,
+      "end": 156,
+      "text": "2024年公司营收10.91亿元、同比+20.3%，归母净利润-0.82亿元、同比+57.3%，亏损同比收窄，毛利率33.0%、同比+5.3pcts，净利率-7.7%、同比+13.8pcts。",
+      "quantities": [
+        {
+          "value": "10.91",
+          "unit": "亿元",
+          "start": 69,
+          "end": 76
+        },
+        {
+          "value": "+20.3",
+          "unit": "%",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "value": "-0.82",
+          "unit": "亿元",
+          "start": 91,
+          "end": 98
+        },
+        {
+          "value": "+57.3",
+          "unit": "%",
+          "start": 101,
+          "end": 107
+        },
+        {
+          "value": "33.0",
+          "unit": "%",
+          "start": 118,
+          "end": 123
+        },
+        {
+          "value": "-7.7",
+          "unit": "%",
+          "start": 138,
+          "end": 143
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 60,
+      "end": 156,
+      "text": "2024年公司营收10.91亿元、同比+20.3%，归母净利润-0.82亿元、同比+57.3%，亏损同比收窄，毛利率33.0%、同比+5.3pcts，净利率-7.7%、同比+13.8pcts。",
+      "quantities": [
+        {
+          "value": "10.91",
+          "unit": "亿元",
+          "start": 69,
+          "end": 76
+        },
+        {
+          "value": "+20.3",
+          "unit": "%",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "value": "-0.82",
+          "unit": "亿元",
+          "start": 91,
+          "end": 98
+        },
+        {
+          "value": "+57.3",
+          "unit": "%",
+          "start": 101,
+          "end": 107
+        },
+        {
+          "value": "33.0",
+          "unit": "%",
+          "start": 118,
+          "end": 123
+        },
+        {
+          "value": "-7.7",
+          "unit": "%",
+          "start": 138,
+          "end": 143
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 60,
+      "end": 156,
+      "text": "2024年公司营收10.91亿元、同比+20.3%，归母净利润-0.82亿元、同比+57.3%，亏损同比收窄，毛利率33.0%、同比+5.3pcts，净利率-7.7%、同比+13.8pcts。",
+      "quantities": [
+        {
+          "value": "10.91",
+          "unit": "亿元",
+          "start": 69,
+          "end": 76
+        },
+        {
+          "value": "+20.3",
+          "unit": "%",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "value": "-0.82",
+          "unit": "亿元",
+          "start": 91,
+          "end": 98
+        },
+        {
+          "value": "+57.3",
+          "unit": "%",
+          "start": 101,
+          "end": 107
+        },
+        {
+          "value": "33.0",
+          "unit": "%",
+          "start": 118,
+          "end": 123
+        },
+        {
+          "value": "-7.7",
+          "unit": "%",
+          "start": 138,
+          "end": 143
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 60,
+      "end": 156,
+      "text": "2024年公司营收10.91亿元、同比+20.3%，归母净利润-0.82亿元、同比+57.3%，亏损同比收窄，毛利率33.0%、同比+5.3pcts，净利率-7.7%、同比+13.8pcts。",
+      "quantities": [
+        {
+          "value": "10.91",
+          "unit": "亿元",
+          "start": 69,
+          "end": 76
+        },
+        {
+          "value": "+20.3",
+          "unit": "%",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "value": "-0.82",
+          "unit": "亿元",
+          "start": 91,
+          "end": 98
+        },
+        {
+          "value": "+57.3",
+          "unit": "%",
+          "start": 101,
+          "end": 107
+        },
+        {
+          "value": "33.0",
+          "unit": "%",
+          "start": 118,
+          "end": 123
+        },
+        {
+          "value": "-7.7",
+          "unit": "%",
+          "start": 138,
+          "end": 143
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 266,
+      "end": 396,
+      "text": "2025年Q1公司延续良好势头，实现收入2.29亿元、同比+21.3%，归母净利润-0.04亿元、同比+85.4%，亏损进一步收窄，毛利率37.7%、同比+0.3pcts，净利率-1.8%、同比+13.1pcts，主要系期间费用控制能力持续改善，提升盈利能力。",
+      "quantities": [
+        {
+          "value": "2.29",
+          "unit": "亿元",
+          "start": 286,
+          "end": 292
+        },
+        {
+          "value": "+21.3",
+          "unit": "%",
+          "start": 295,
+          "end": 301
+        },
+        {
+          "value": "-0.04",
+          "unit": "亿元",
+          "start": 307,
+          "end": 314
+        },
+        {
+          "value": "+85.4",
+          "unit": "%",
+          "start": 317,
+          "end": 323
+        },
+        {
+          "value": "37.7",
+          "unit": "%",
+          "start": 335,
+          "end": 340
+        },
+        {
+          "value": "-1.8",
+          "unit": "%",
+          "start": 355,
+          "end": 360
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 266,
+      "end": 396,
+      "text": "2025年Q1公司延续良好势头，实现收入2.29亿元、同比+21.3%，归母净利润-0.04亿元、同比+85.4%，亏损进一步收窄，毛利率37.7%、同比+0.3pcts，净利率-1.8%、同比+13.1pcts，主要系期间费用控制能力持续改善，提升盈利能力。",
+      "quantities": [
+        {
+          "value": "2.29",
+          "unit": "亿元",
+          "start": 286,
+          "end": 292
+        },
+        {
+          "value": "+21.3",
+          "unit": "%",
+          "start": 295,
+          "end": 301
+        },
+        {
+          "value": "-0.04",
+          "unit": "亿元",
+          "start": 307,
+          "end": 314
+        },
+        {
+          "value": "+85.4",
+          "unit": "%",
+          "start": 317,
+          "end": 323
+        },
+        {
+          "value": "37.7",
+          "unit": "%",
+          "start": 335,
+          "end": 340
+        },
+        {
+          "value": "-1.8",
+          "unit": "%",
+          "start": 355,
+          "end": 360
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 266,
+      "end": 396,
+      "text": "2025年Q1公司延续良好势头，实现收入2.29亿元、同比+21.3%，归母净利润-0.04亿元、同比+85.4%，亏损进一步收窄，毛利率37.7%、同比+0.3pcts，净利率-1.8%、同比+13.1pcts，主要系期间费用控制能力持续改善，提升盈利能力。",
+      "quantities": [
+        {
+          "value": "2.29",
+          "unit": "亿元",
+          "start": 286,
+          "end": 292
+        },
+        {
+          "value": "+21.3",
+          "unit": "%",
+          "start": 295,
+          "end": 301
+        },
+        {
+          "value": "-0.04",
+          "unit": "亿元",
+          "start": 307,
+          "end": 314
+        },
+        {
+          "value": "+85.4",
+          "unit": "%",
+          "start": 317,
+          "end": 323
+        },
+        {
+          "value": "37.7",
+          "unit": "%",
+          "start": 335,
+          "end": 340
+        },
+        {
+          "value": "-1.8",
+          "unit": "%",
+          "start": 355,
+          "end": 360
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1277,
+      "end": 1339,
+      "text": "维持“买入”评级，预测公司2025~2027年归母净利润分别0.6、1.1和2.0亿元，对应PE值分别为96、48和27倍。",
+      "quantities": [
+        {
+          "value": "2.0",
+          "unit": "亿元",
+          "start": 1315,
+          "end": 1320
+        },
+        {
+          "value": "27",
+          "unit": "倍",
+          "start": 1335,
+          "end": 1338
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预测公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1432,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1432,
+    "processed_ranges": [
+      [
+        0,
+        1432
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1432,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001997,
+  "source_content_sha256": "8acd7386be52f882509bb3dd238374b5af74cfa76aa4163a8f49bd151756c62a"
+}

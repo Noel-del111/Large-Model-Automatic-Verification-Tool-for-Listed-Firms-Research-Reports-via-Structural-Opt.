@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"金融要素缺失\",\"spans\":[{\"text\":\"近两周银行、证券、保险指数涨跌幅分别-0.93%、-2.93%、-1.10%、-1.20%\"}],\"reason\":\"只列出银行、证券、保险三个指数，却给出四个涨跌幅数值，缺少一个对应板块名称。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"同期沪深300指数-1.24元\"}],\"reason\":\"沪深300指数涨跌幅应以百分比表示，写成“-1.24元”单位错误。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"在申万31个行业中，银行和非银板块涨跌幅分别排名第26、32位。\"}],\"reason\":\"申万31个行业中排名不可能出现第32位，超出总数范围。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"各子板块中，苏农银行(+6.33%)、湘财股份(+1.11%)、中国太保(+0.0182)表现最好。\"}],\"reason\":\"中国太保涨幅0.0182远低于苏农银行6.33%和湘财股份1.11%，却称其表现最好，前后矛盾。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"活期存款利率下降个百分点\"}],\"reason\":\"“下降”与“个百分点”之间缺少具体数值，无法知悉降幅。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:25:48.544254+00:00",
+    "request_sha256": "b999cc7303204e932649d3705af6532d0f7a013d16ed0a77930b096fd6573d11",
+    "input_token_estimate": 18707,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280851",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4b9f2292aa424e999a5e5c3f46c890c3",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4285,
+    "output_tokens": 6119,
+    "usage_source": "provider",
+    "duration_seconds": 25.233776,
+    "cost_cny": "0.028761"
+  },
+  "cache_request": {
+    "key": "614bac5d71da21c379ac717834359733322d602e9d4f18ae5cc72d3b597dbd55",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b999cc7303204e932649d3705af6532d0f7a013d16ed0a77930b096fd6573d11"
+  }
+}

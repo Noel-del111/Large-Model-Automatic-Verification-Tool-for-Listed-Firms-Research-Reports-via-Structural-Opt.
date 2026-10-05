@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000348",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "e1864f55f946e91171108793",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 197,
+          "end": 294,
+          "text": "2025Q1与宁德实际关联交易规模达21元（2025年全年预计关联交易规模约85亿元），同比大增，25Q1关联交易规模接近2024全年实际规模的60%，宁德订单有望重回2021-2020年规模。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1158,
+    "total_chars": 1158,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.00082,
+  "source_content_sha256": "4ba2d2e82af2d164b9fbae7d2b7c3f64a1e758b7fb9c182af2b91c0e60dae3c8"
+}

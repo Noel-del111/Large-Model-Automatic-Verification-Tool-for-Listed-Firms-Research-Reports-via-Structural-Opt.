@@ -1,0 +1,340 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000316",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份写成“0月”，不符合日历中1至12月的合法取值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 45,
+          "end": 98,
+          "text": "据劲仔官方视频号，2025年0月公司推出豆制品新品“爆香虎皮豆干”，包括经典香辣味与创新山胡椒味两种口味。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据劲仔官方视频号，2025年0月公司推出豆制品新品“爆香虎皮豆干”，包括经典香辣味与创新山胡椒味两种口味。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 45,
+          "end": 98,
+          "text": "据劲仔官方视频号，2025年0月公司推出豆制品新品“爆香虎皮豆干”，包括经典香辣味与创新山胡椒味两种口味。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b31a252c84816ac9aa594bc4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "所引《中国食物与营养发展纲要》括号内应载明年份，但该数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 149,
+          "end": 247,
+          "text": "休闲豆干市场规模超百亿元，对标其他品类成长空间广阔，且农业农村部等三部门联合印发的《中国食物与营养发展纲要（）》明确鼓励加快休闲豆制品标准化、产业化发展，有望催化行业成长、并孵化出新的行业大单品。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "休闲豆干市场规模超百亿元，对标其他品类成长空间广阔，且农业农村部等三部门联合印发的《中国食物与营养发展纲要（）》明确鼓励加快休闲豆制品标准化、产业化发展，有望催化行业成长、并孵化出新的行业大单品。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 149,
+          "end": 247,
+          "text": "休闲豆干市场规模超百亿元，对标其他品类成长空间广阔，且农业农村部等三部门联合印发的《中国食物与营养发展纲要（）》明确鼓励加快休闲豆制品标准化、产业化发展，有望催化行业成长、并孵化出新的行业大单品。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "428673e3e81b4fa101aa5516",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一“其他品类布局魔芋”信息连续以4）、5）两条重复列出，无新增内容。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 793,
+          "end": 824,
+          "text": "4）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。"
+        },
+        {
+          "kind": "source_text",
+          "start": 825,
+          "end": 856,
+          "text": "5）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。"
+        },
+        {
+          "text": "5）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 793,
+          "end": 824,
+          "text": "4）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。"
+        },
+        {
+          "start": 825,
+          "end": 856,
+          "text": "5）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bc6b8cdc447bc8c73bcbbc43",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "市盈率（PE）常用“倍”作单位，“亿分”不是PE的合理量纲。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 930,
+          "end": 1036,
+          "text": "预计2025~2027年归母净利润分别同比+15.2%/19.4%/20.0%，EPS为0.74/0.89/1.07元，对应PE为20/17/14亿分，公司大单品产品力无虞，进行升级后更加优秀，维持“推荐”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2025~2027年归母净利润分别同比+15.2%/19.4%/20.0%，EPS为0.74/0.89/1.07元，对应PE为20/17/14亿分，公司大单品产品力无虞，进行升级后更加优秀，维持“推荐”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 930,
+          "end": 1036,
+          "text": "预计2025~2027年归母净利润分别同比+15.2%/19.4%/20.0%，EPS为0.74/0.89/1.07元，对应PE为20/17/14亿分，公司大单品产品力无虞，进行升级后更加优秀，维持“推荐”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fe929fd2c2acb94abf6c5b0f",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1071
+        ]
+      ],
+      "estimated_input_tokens": 5701,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:42:48.626071+00:00",
+        "request_sha256": "7c72feed7d50bc115f4a2ce2e5e2add4ffe8d1179e31afd11e2e76f71b51eca0",
+        "input_token_estimate": 15854,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277998",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "98b212cb6cd0425790e8dce8ee1cb6cf",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3742,
+        "output_tokens": 6535,
+        "usage_source": "provider",
+        "duration_seconds": 27.696803,
+        "cost_cny": "0.029882"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "据劲仔官方视频号，2025年0月公司推出豆制品新品“爆香虎皮豆干”，包括经典香辣味与创新山胡椒味两种口味。"
+          }
+        ],
+        "reason": "月份写成“0月”，不符合日历中1至12月的合法取值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "休闲豆干市场规模超百亿元，对标其他品类成长空间广阔，且农业农村部等三部门联合印发的《中国食物与营养发展纲要（）》明确鼓励加快休闲豆制品标准化、产业化发展，有望催化行业成长、并孵化出新的行业大单品。"
+          }
+        ],
+        "reason": "所引《中国食物与营养发展纲要》括号内应载明年份，但该数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "4）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。"
+          },
+          {
+            "text": "5）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。"
+          }
+        ],
+        "reason": "同一“其他品类布局魔芋”信息连续以4）、5）两条重复列出，无新增内容。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "预计2025~2027年归母净利润分别同比+15.2%/19.4%/20.0%，EPS为0.74/0.89/1.07元，对应PE为20/17/14亿分，公司大单品产品力无虞，进行升级后更加优秀，维持“推荐”评级。"
+          }
+        ],
+        "reason": "市盈率（PE）常用“倍”作单位，“亿分”不是PE的合理量纲。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 930,
+      "end": 1036,
+      "text": "预计2025~2027年归母净利润分别同比+15.2%/19.4%/20.0%，EPS为0.74/0.89/1.07元，对应PE为20/17/14亿分，公司大单品产品力无虞，进行升级后更加优秀，维持“推荐”评级。",
+      "quantities": [
+        {
+          "value": "+15.2",
+          "unit": "%",
+          "start": 951,
+          "end": 957
+        },
+        {
+          "value": "19.4",
+          "unit": "%",
+          "start": 958,
+          "end": 963
+        },
+        {
+          "value": "20.0",
+          "unit": "%",
+          "start": 964,
+          "end": 969
+        },
+        {
+          "value": "1.07",
+          "unit": "元",
+          "start": 984,
+          "end": 989
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1071,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1071,
+    "processed_ranges": [
+      [
+        0,
+        1071
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 27.725319,
+  "source_content_sha256": "0dea43015f61aa24d4f1f1d904a2e01cbbef8b2df249f58d523010215503fa41"
+}

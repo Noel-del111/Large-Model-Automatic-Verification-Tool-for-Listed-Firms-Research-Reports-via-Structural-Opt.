@@ -1,0 +1,303 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000519",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "5月没有32日，该日期不存在。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 55,
+          "end": 64,
+          "text": "截至5月32日收盘"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至5月32日收盘"
+        }
+      ],
+      "spans": [
+        {
+          "start": 55,
+          "end": 64,
+          "text": "截至5月32日收盘"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "45111f9dd8ddc2f1642b8e9c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“超过”后缺少具体数量，无法确定覆盖城市数量。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 626,
+          "end": 638,
+          "text": "并在全国超过城市实现覆盖"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "并在全国超过城市实现覆盖"
+        }
+      ],
+      "spans": [
+        {
+          "start": 626,
+          "end": 638,
+          "text": "并在全国超过城市实现覆盖"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f915a30bbe1a19587ce19cfa",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "文件名称在书名号内为空，缺少应引用的法规或文件名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 510,
+          "end": 576,
+          "text": "本周专题：2024年3月，住建部印发《》，明确提出鼓励更新购置智能化、无人化环卫作业机具设备，推动传统环卫车辆向新能源及无人化转型。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周专题：2024年3月，住建部印发《》，明确提出鼓励更新购置智能化、无人化环卫作业机具设备，推动传统环卫车辆向新能源及无人化转型。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 510,
+          "end": 576,
+          "text": "本周专题：2024年3月，住建部印发《》，明确提出鼓励更新购置智能化、无人化环卫作业机具设备，推动传统环卫车辆向新能源及无人化转型。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ee77bd3c84b11752bf941785",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一投资逻辑在相近段落中重复表述，信息冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 862,
+          "end": 887,
+          "text": "此外在化债背景下，优质运营类资产有望迎戴维斯双击。"
+        },
+        {
+          "kind": "source_text",
+          "start": 919,
+          "end": 947,
+          "text": "叠加公用事业市场化改革，优质运营类资产有望迎戴维斯双击。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此外在化债背景下，优质运营类资产有望迎戴维斯双击。"
+        },
+        {
+          "text": "叠加公用事业市场化改革，优质运营类资产有望迎戴维斯双击。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 862,
+          "end": 887,
+          "text": "此外在化债背景下，优质运营类资产有望迎戴维斯双击。"
+        },
+        {
+          "start": 919,
+          "end": 947,
+          "text": "叠加公用事业市场化改革，优质运营类资产有望迎戴维斯双击。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "29c116a67ef759b5d9b82e60",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1061
+        ]
+      ],
+      "estimated_input_tokens": 5689,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:50:46.252681+00:00",
+        "request_sha256": "cb861a56e16b8ca517fdc5b7cbbe92c5ba5e5b0b79bc1027c0d3e1508c32639a",
+        "input_token_estimate": 15804,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277948",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "5c05c47662ed425bbf0fbfb813ef2b37",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3664,
+        "output_tokens": 4253,
+        "usage_source": "provider",
+        "duration_seconds": 17.542888,
+        "cost_cny": "0.020676",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "截至5月32日收盘"
+          }
+        ],
+        "reason": "5月没有32日，该日期不存在。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "并在全国超过城市实现覆盖"
+          }
+        ],
+        "reason": "“超过”后缺少具体数量，无法确定覆盖城市数量。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "本周专题：2024年3月，住建部印发《》，明确提出鼓励更新购置智能化、无人化环卫作业机具设备，推动传统环卫车辆向新能源及无人化转型。"
+          }
+        ],
+        "reason": "文件名称在书名号内为空，缺少应引用的法规或文件名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "此外在化债背景下，优质运营类资产有望迎戴维斯双击。"
+          },
+          {
+            "text": "叠加公用事业市场化改革，优质运营类资产有望迎戴维斯双击。"
+          }
+        ],
+        "reason": "同一投资逻辑在相近段落中重复表述，信息冗余。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1061,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1061,
+    "processed_ranges": [
+      [
+        0,
+        1061
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1061,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001403,
+  "source_content_sha256": "33a2ccb93dfb4d07945c87e78eee2a799a5ed2ccc77f286c5351a23a7e669dc2"
+}

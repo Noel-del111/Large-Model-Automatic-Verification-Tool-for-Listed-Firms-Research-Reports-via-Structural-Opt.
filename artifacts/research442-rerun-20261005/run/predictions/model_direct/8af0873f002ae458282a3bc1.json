@@ -1,0 +1,396 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000652",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "5月没有32日，该日期不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 84,
+          "end": 125,
+          "text": "截至5月32日，COMEX金主力合约环比下跌1.33%至3313.10美元/盎司。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至5月32日，COMEX金主力合约环比下跌1.33%至3313.10美元/盎司。",
+          "start": 84,
+          "end": 149
+        }
+      ],
+      "spans": [
+        {
+          "start": 84,
+          "end": 125,
+          "text": "截至5月32日，COMEX金主力合约环比下跌1.33%至3313.10美元/盎司。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a79a2dbfa3229425c992d64e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "与前文“美国国际贸易法院阻止了特朗普的‘解放日’关税生效”重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 150,
+          "end": 185,
+          "text": "本周美国国际贸易法院阻止了特朗普的“解放日”关税生效，裁定特朗普越权。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周美国国际贸易法院阻止了特朗普的“解放日”关税生效，裁定特朗普越权。",
+          "start": 179,
+          "end": 223
+        }
+      ],
+      "spans": [
+        {
+          "start": 150,
+          "end": 185,
+          "text": "本周美国国际贸易法院阻止了特朗普的“解放日”关税生效，裁定特朗普越权。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "54c2f1fac939923583fc26a7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“环比去库万吨”未给出具体去库数量，明确数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 366,
+          "end": 400,
+          "text": "基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。",
+          "start": 468,
+          "end": 509
+        }
+      ],
+      "spans": [
+        {
+          "start": 366,
+          "end": 400,
+          "text": "基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "725f531655a371b126ec0ba6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "铜社会库存以13.87吨计量，与行业通常万吨口径不符，单位量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 366,
+          "end": 400,
+          "text": "基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。",
+          "start": 468,
+          "end": 509
+        }
+      ],
+      "spans": [
+        {
+          "start": 366,
+          "end": 400,
+          "text": "基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e6b6eb1da1d0fdcba8498031",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“金作”不是规范金融表述，应为“金价”，术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 185,
+          "end": 227,
+          "text": "短期来看，美国政策、贸易谈判及地缘政治的不确定性仍然存在，避险需求则对金作形成支撑。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "短期来看，美国政策、贸易谈判及地缘政治的不确定性仍然存在，避险需求则对金作形成支撑。",
+          "start": 224,
+          "end": 277
+        }
+      ],
+      "spans": [
+        {
+          "start": 185,
+          "end": 227,
+          "text": "短期来看，美国政策、贸易谈判及地缘政治的不确定性仍然存在，避险需求则对金作形成支撑。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "06839b6739d43aee1a6ea3bb",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“融资”用在此处描述铜基本面走强，金融术语误用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 605,
+          "end": 645,
+          "text": "若需求表现超预期，则铜基本面融资或进一步走强，铜价中枢有望通过套利实现对冲效应。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "若需求表现超预期，则铜基本面融资或进一步走强，铜价中枢有望通过套利实现对冲效应。",
+          "start": 775,
+          "end": 841
+        }
+      ],
+      "spans": [
+        {
+          "start": 605,
+          "end": 645,
+          "text": "若需求表现超预期，则铜基本面融资或进一步走强，铜价中枢有望通过套利实现对冲效应。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "724ad0b932e0171df02c3f3c",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1260
+        ]
+      ],
+      "estimated_input_tokens": 5868,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:37:26.545951+00:00",
+        "request_sha256": "51d06abfdc37db0d7a6a6864684b6d154f5636b01b558acdcb5f5b8c9a5e0ec5",
+        "input_token_estimate": 16307,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278451",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "344d602918ec41f494b872635c8e29d8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3843,
+        "output_tokens": 6170,
+        "usage_source": "provider",
+        "duration_seconds": 24.923512,
+        "cost_cny": "0.028523"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "截至5月32日，COMEX金主力合约环比下跌1.33%至3313.10美元/盎司。",
+            "start": 84,
+            "end": 149
+          }
+        ],
+        "reason": "5月没有32日，该日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "本周美国国际贸易法院阻止了特朗普的“解放日”关税生效，裁定特朗普越权。",
+            "start": 179,
+            "end": 223
+          }
+        ],
+        "reason": "与前文“美国国际贸易法院阻止了特朗普的‘解放日’关税生效”重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。",
+            "start": 468,
+            "end": 509
+          }
+        ],
+        "reason": "“环比去库万吨”未给出具体去库数量，明确数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。",
+            "start": 468,
+            "end": 509
+          }
+        ],
+        "reason": "铜社会库存以13.87吨计量，与行业通常万吨口径不符，单位量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "短期来看，美国政策、贸易谈判及地缘政治的不确定性仍然存在，避险需求则对金作形成支撑。",
+            "start": 224,
+            "end": 277
+          }
+        ],
+        "reason": "“金作”不是规范金融表述，应为“金价”，术语使用不当。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "若需求表现超预期，则铜基本面融资或进一步走强，铜价中枢有望通过套利实现对冲效应。",
+            "start": 775,
+            "end": 841
+          }
+        ],
+        "reason": "“融资”用在此处描述铜基本面走强，金融术语误用。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1260,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1260,
+    "processed_ranges": [
+      [
+        0,
+        1260
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 24.950623,
+  "source_content_sha256": "d2b5bff0cd4f103dde7c5cc6e9b82f21c6dae2a62e25f27df21d4492d7beb953"
+}

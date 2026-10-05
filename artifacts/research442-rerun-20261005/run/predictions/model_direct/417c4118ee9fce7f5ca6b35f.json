@@ -1,0 +1,622 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000433",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "营业总收入单位写成“亿平方分米”，应为“亿元”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 62,
+          "end": 183,
+          "text": "本报告期内，实现营业总收入51.25亿平方分米，同比减-6.07%；归母净利2.92亿，同比增+5.37%；扣非归母净利2.6亿，同比增+5.23%；基本每股收益0.25元，加权ROE为4.59%，经营活动产生的现金流量净额为11.83亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本报告期内，实现营业总收入51.25亿平方分米，同比减-6.07%；归母净利2.92亿，同比增+5.37%；扣非归母净利2.6亿，同比增+5.23%；基本每股收益0.25元，加权ROE为4.59%，经营活动产生的现金流量净额为11.83亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 62,
+          "end": 183,
+          "text": "本报告期内，实现营业总收入51.25亿平方分米，同比减-6.07%；归母净利2.92亿，同比增+5.37%；扣非归母净利2.6亿，同比增+5.23%；基本每股收益0.25元，加权ROE为4.59%，经营活动产生的现金流量净额为11.83亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2bdf21fc2ddca49d41f72fdc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年Q1”年份不成立，合理年份应为2025年或2024年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 728,
+          "end": 779,
+          "text": "公司已披露129年Q1季报，归母净利润同比大增的主因，就是自身港航主业和旗下公司销售产品优化后的结果。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司已披露129年Q1季报，归母净利润同比大增的主因，就是自身港航主业和旗下公司销售产品优化后的结果。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 728,
+          "end": 779,
+          "text": "公司已披露129年Q1季报，归母净利润同比大增的主因，就是自身港航主业和旗下公司销售产品优化后的结果。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e49aab1a235ac4df933257f8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“运营利润下滑%”中间缺少具体百分比数值，关键数据为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 543,
+          "end": 581,
+          "text": "下滑主因是24年极端天气和达里风电场延寿后综合电价下降，导致运营利润下滑%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "下滑主因是24年极端天气和达里风电场延寿后综合电价下降，导致运营利润下滑%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 543,
+          "end": 581,
+          "text": "下滑主因是24年极端天气和达里风电场延寿后综合电价下降，导致运营利润下滑%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d5938282bc4a58cf8fbc20fc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“债权成本”应为“债务成本”或“融资成本”，债权与债务方向相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 646,
+          "end": 681,
+          "text": "大增原因是公司投资项目所需的债权成本下降，叠加收益增长导致的利润增加。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "大增原因是公司投资项目所需的债权成本下降，叠加收益增长导致的利润增加。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 646,
+          "end": 681,
+          "text": "大增原因是公司投资项目所需的债权成本下降，叠加收益增长导致的利润增加。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a9ae48df9af4583bfd96ec64",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“扣非归母净利润增0.73亿”与“同比增38.85%”不能同时成立，若为增加额则同比增幅应不同。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 286,
+          "end": 341,
+          "text": "2025年Q1业绩，营收11.93亿，同比减-10.89%，扣非归母净利润增0.73亿，同比增+38.85%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年Q1业绩，营收11.93亿，同比减-10.89%，扣非归母净利润增0.73亿，同比增+38.85%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 286,
+          "end": 341,
+          "text": "2025年Q1业绩，营收11.93亿，同比减-10.89%，扣非归母净利润增0.73亿，同比增+38.85%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0a731763c526215f70c6e432",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          833
+        ]
+      ],
+      "estimated_input_tokens": 5332,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:55:34.310837+00:00",
+        "request_sha256": "67223632a4c72f311cba30389946c9a75113cad72b8704c8d1d3bad049ff7490",
+        "input_token_estimate": 14867,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277011",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2b06bb9b73b149549d3ad193e34b164c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3589,
+        "output_tokens": 7833,
+        "usage_source": "provider",
+        "duration_seconds": 30.579375,
+        "cost_cny": "0.034921"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本报告期内，实现营业总收入51.25亿平方分米，同比减-6.07%；归母净利2.92亿，同比增+5.37%；扣非归母净利2.6亿，同比增+5.23%；基本每股收益0.25元，加权ROE为4.59%，经营活动产生的现金流量净额为11.83亿元。"
+          }
+        ],
+        "reason": "营业总收入单位写成“亿平方分米”，应为“亿元”，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "公司已披露129年Q1季报，归母净利润同比大增的主因，就是自身港航主业和旗下公司销售产品优化后的结果。"
+          }
+        ],
+        "reason": "“129年Q1”年份不成立，合理年份应为2025年或2024年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "下滑主因是24年极端天气和达里风电场延寿后综合电价下降，导致运营利润下滑%。"
+          }
+        ],
+        "reason": "“运营利润下滑%”中间缺少具体百分比数值，关键数据为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "大增原因是公司投资项目所需的债权成本下降，叠加收益增长导致的利润增加。"
+          }
+        ],
+        "reason": "“债权成本”应为“债务成本”或“融资成本”，债权与债务方向相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025年Q1业绩，营收11.93亿，同比减-10.89%，扣非归母净利润增0.73亿，同比增+38.85%。"
+          }
+        ],
+        "reason": "“扣非归母净利润增0.73亿”与“同比增38.85%”不能同时成立，若为增加额则同比增幅应不同。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 62,
+      "end": 96,
+      "text": "本报告期内，实现营业总收入51.25亿平方分米，同比减-6.07%；",
+      "quantities": [
+        {
+          "value": "-6.07",
+          "unit": "%",
+          "start": 89,
+          "end": 95
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 137,
+      "end": 183,
+      "text": "基本每股收益0.25元，加权ROE为4.59%，经营活动产生的现金流量净额为11.83亿元。",
+      "quantities": [
+        {
+          "value": "0.25",
+          "unit": "元",
+          "start": 143,
+          "end": 148
+        },
+        {
+          "value": "4.59",
+          "unit": "%",
+          "start": 155,
+          "end": 160
+        },
+        {
+          "value": "11.83",
+          "unit": "亿元",
+          "start": 175,
+          "end": 182
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 185,
+      "end": 251,
+      "text": "分红政策，公司24年拟派发现金股息约0.589亿人民币，每股约0.065元（含税）;全年分红1次，约占当年度净利润比例的20.2%。",
+      "quantities": [
+        {
+          "value": "0.065",
+          "unit": "元",
+          "start": 216,
+          "end": 222
+        },
+        {
+          "value": "20.2",
+          "unit": "%",
+          "start": 245,
+          "end": 250
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 286,
+      "end": 341,
+      "text": "2025年Q1业绩，营收11.93亿，同比减-10.89%，扣非归母净利润增0.73亿，同比增+38.85%。",
+      "quantities": [
+        {
+          "value": "-10.89",
+          "unit": "%",
+          "start": 308,
+          "end": 315
+        },
+        {
+          "value": "+38.85",
+          "unit": "%",
+          "start": 333,
+          "end": 340
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 286,
+      "end": 341,
+      "text": "2025年Q1业绩，营收11.93亿，同比减-10.89%，扣非归母净利润增0.73亿，同比增+38.85%。",
+      "quantities": [
+        {
+          "value": "-10.89",
+          "unit": "%",
+          "start": 308,
+          "end": 315
+        },
+        {
+          "value": "+38.85",
+          "unit": "%",
+          "start": 333,
+          "end": 340
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 385,
+      "end": 420,
+      "text": "港航物流分部，营收20.6亿，同比减-19.4%，营收占比40.2%；",
+      "quantities": [
+        {
+          "value": "-19.4",
+          "unit": "%",
+          "start": 403,
+          "end": 409
+        },
+        {
+          "value": "40.2",
+          "unit": "%",
+          "start": 414,
+          "end": 419
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 385,
+      "end": 420,
+      "text": "港航物流分部，营收20.6亿，同比减-19.4%，营收占比40.2%；",
+      "quantities": [
+        {
+          "value": "-19.4",
+          "unit": "%",
+          "start": 403,
+          "end": 409
+        },
+        {
+          "value": "40.2",
+          "unit": "%",
+          "start": 414,
+          "end": 419
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 482,
+      "end": 515,
+      "text": "新能源分部，营收24.3亿，同比增+3.3%，营收占比47.5%；",
+      "quantities": [
+        {
+          "value": "+3.3",
+          "unit": "%",
+          "start": 499,
+          "end": 504
+        },
+        {
+          "value": "47.5",
+          "unit": "%",
+          "start": 509,
+          "end": 514
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 482,
+      "end": 515,
+      "text": "新能源分部，营收24.3亿，同比增+3.3%，营收占比47.5%；",
+      "quantities": [
+        {
+          "value": "+3.3",
+          "unit": "%",
+          "start": 499,
+          "end": 504
+        },
+        {
+          "value": "47.5",
+          "unit": "%",
+          "start": 509,
+          "end": 514
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 583,
+      "end": 646,
+      "text": "投资及其他分部，营收6.3亿，同比增+15.9%，营收占比12.3%毛利金额1.7亿，同比增+47.4%，毛利占比12.8%。",
+      "quantities": [
+        {
+          "value": "+15.9",
+          "unit": "%",
+          "start": 601,
+          "end": 607
+        },
+        {
+          "value": "12.3",
+          "unit": "%",
+          "start": 612,
+          "end": 617
+        },
+        {
+          "value": "+47.4",
+          "unit": "%",
+          "start": 629,
+          "end": 635
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 640,
+          "end": 645
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 583,
+      "end": 646,
+      "text": "投资及其他分部，营收6.3亿，同比增+15.9%，营收占比12.3%毛利金额1.7亿，同比增+47.4%，毛利占比12.8%。",
+      "quantities": [
+        {
+          "value": "+15.9",
+          "unit": "%",
+          "start": 601,
+          "end": 607
+        },
+        {
+          "value": "12.3",
+          "unit": "%",
+          "start": 612,
+          "end": 617
+        },
+        {
+          "value": "+47.4",
+          "unit": "%",
+          "start": 629,
+          "end": 635
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 640,
+          "end": 645
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 728,
+      "end": 779,
+      "text": "公司已披露129年Q1季报，归母净利润同比大增的主因，就是自身港航主业和旗下公司销售产品优化后的结果。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "就是自身港航主业和旗下公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 833,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 833,
+    "processed_ranges": [
+      [
+        0,
+        833
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 30.603831,
+  "source_content_sha256": "b465f2393026af0e67a426c914d9255d7d86c708330b8a9e237763879c693133"
+}

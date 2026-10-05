@@ -1,0 +1,664 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000398",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "投入金额单位误写为“分”，应为“万元”等金额单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 510,
+          "end": 570,
+          "text": "截至2024年12月31日，设备监测（监控）系统产品技术平台开发及扩产项目已投入2146.41分，投入进度56.48%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年12月31日，设备监测（监控）系统产品技术平台开发及扩产项目已投入2146.41分，投入进度56.48%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 510,
+          "end": 570,
+          "text": "截至2024年12月31日，设备监测（监控）系统产品技术平台开发及扩产项目已投入2146.41分，投入进度56.48%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a24da78a4c5b2b197977166f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“投入进度”后缺少应报告的数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 570,
+          "end": 598,
+          "text": "新产品研发及产业化项目已投入858.15万元，投入进度。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新产品研发及产业化项目已投入858.15万元，投入进度。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 570,
+          "end": 598,
+          "text": "新产品研发及产业化项目已投入858.15万元，投入进度。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2a24346f07156c64210f6d99",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "法规引用错误",
+      "reason": "书名号内法规名称缺失，引用不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 861,
+          "end": 877,
+          "text": "2024年3月，国务院印发《》。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年3月，国务院印发《》。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 861,
+          "end": 877,
+          "text": "2024年3月，国务院印发《》。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "279a5bab3def60cb30fb9dda",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          991
+        ]
+      ],
+      "estimated_input_tokens": 5436,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:26:02.572446+00:00",
+        "request_sha256": "d1d0e8a1f2e15663f9bcb39be5822b6840c446d497624ca4298282e2dea6795c",
+        "input_token_estimate": 15175,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277319",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "bc2973dbbcb14ef8944296d017101354",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3611,
+        "output_tokens": 6069,
+        "usage_source": "provider",
+        "duration_seconds": 24.606933,
+        "cost_cny": "0.027887"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "截至2024年12月31日，设备监测（监控）系统产品技术平台开发及扩产项目已投入2146.41分，投入进度56.48%；"
+          }
+        ],
+        "reason": "投入金额单位误写为“分”，应为“万元”等金额单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "新产品研发及产业化项目已投入858.15万元，投入进度。"
+          }
+        ],
+        "reason": "“投入进度”后缺少应报告的数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "法规引用错误",
+        "spans": [
+          {
+            "text": "2024年3月，国务院印发《》。"
+          }
+        ],
+        "reason": "书名号内法规名称缺失，引用不完整。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 0,
+      "end": 52,
+      "text": "北交所信息更新：2024全年雷电防护类产品营收+36.60%，2025Q1实现归母净利润+33.43%\n",
+      "quantities": [
+        {
+          "value": "+36.60",
+          "unit": "%",
+          "start": 23,
+          "end": 30
+        },
+        {
+          "value": "+33.43",
+          "unit": "%",
+          "start": 44,
+          "end": 51
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 0,
+      "end": 52,
+      "text": "北交所信息更新：2024全年雷电防护类产品营收+36.60%，2025Q1实现归母净利润+33.43%\n",
+      "quantities": [
+        {
+          "value": "+36.60",
+          "unit": "%",
+          "start": 23,
+          "end": 30
+        },
+        {
+          "value": "+33.43",
+          "unit": "%",
+          "start": 44,
+          "end": 51
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 67,
+      "end": 104,
+      "text": "2025Q1营收+16.20%归母净利润+33.43%，维持“增持”评级\n",
+      "quantities": [
+        {
+          "value": "+16.20",
+          "unit": "%",
+          "start": 75,
+          "end": 82
+        },
+        {
+          "value": "+33.43",
+          "unit": "%",
+          "start": 87,
+          "end": 94
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 67,
+      "end": 104,
+      "text": "2025Q1营收+16.20%归母净利润+33.43%，维持“增持”评级\n",
+      "quantities": [
+        {
+          "value": "+16.20",
+          "unit": "%",
+          "start": 75,
+          "end": 82
+        },
+        {
+          "value": "+33.43",
+          "unit": "%",
+          "start": 87,
+          "end": 94
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 105,
+      "end": 162,
+      "text": "2024全年铁大科技实现营收2.80亿元同比增长12.40%，归母净利润5,699.13万元同比增长46.50%。",
+      "quantities": [
+        {
+          "value": "2.80",
+          "unit": "亿元",
+          "start": 119,
+          "end": 125
+        },
+        {
+          "value": "12.40",
+          "unit": "%",
+          "start": 129,
+          "end": 135
+        },
+        {
+          "value": "5,699.13",
+          "unit": "万元",
+          "start": 141,
+          "end": 151
+        },
+        {
+          "value": "46.50",
+          "unit": "%",
+          "start": 155,
+          "end": 161
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 105,
+      "end": 162,
+      "text": "2024全年铁大科技实现营收2.80亿元同比增长12.40%，归母净利润5,699.13万元同比增长46.50%。",
+      "quantities": [
+        {
+          "value": "2.80",
+          "unit": "亿元",
+          "start": 119,
+          "end": 125
+        },
+        {
+          "value": "12.40",
+          "unit": "%",
+          "start": 129,
+          "end": 135
+        },
+        {
+          "value": "5,699.13",
+          "unit": "万元",
+          "start": 141,
+          "end": 151
+        },
+        {
+          "value": "46.50",
+          "unit": "%",
+          "start": 155,
+          "end": 161
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 162,
+      "end": 215,
+      "text": "2025Q1实现营收0.62亿元同比增长16.20%，归母净利润1,569.51万元同比增长33.43%。",
+      "quantities": [
+        {
+          "value": "0.62",
+          "unit": "亿元",
+          "start": 172,
+          "end": 178
+        },
+        {
+          "value": "16.20",
+          "unit": "%",
+          "start": 182,
+          "end": 188
+        },
+        {
+          "value": "1,569.51",
+          "unit": "万元",
+          "start": 194,
+          "end": 204
+        },
+        {
+          "value": "33.43",
+          "unit": "%",
+          "start": 208,
+          "end": 214
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 162,
+      "end": 215,
+      "text": "2025Q1实现营收0.62亿元同比增长16.20%，归母净利润1,569.51万元同比增长33.43%。",
+      "quantities": [
+        {
+          "value": "0.62",
+          "unit": "亿元",
+          "start": 172,
+          "end": 178
+        },
+        {
+          "value": "16.20",
+          "unit": "%",
+          "start": 182,
+          "end": 188
+        },
+        {
+          "value": "1,569.51",
+          "unit": "万元",
+          "start": 194,
+          "end": 204
+        },
+        {
+          "value": "33.43",
+          "unit": "%",
+          "start": 208,
+          "end": 214
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 215,
+      "end": 367,
+      "text": "考虑到募投项目的稳步推进并设立子公司切入无人配送、自动巡检等领域发展，我们维持2025-2026、并增加2027年盈利预测，预计2025-2027年归母净利润0.63/0.72/0.82亿元，对应EPS为0.46/0.53/0.60元，当前股价对应PE为40.2/35.1/30.9X，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "0.82",
+          "unit": "亿元",
+          "start": 304,
+          "end": 310
+        },
+        {
+          "value": "0.60",
+          "unit": "元",
+          "start": 327,
+          "end": 332
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑到募投项目的稳步推进并设立子公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 369,
+      "end": 459,
+      "text": "2024雷电防护产品营收+36.60%，募投进度过半、切入自动巡检等前沿方向2024全年铁大科技在设备检测类产品方面实现营收1.75亿元同比增长8.97%，毛利率达到45.88%；",
+      "quantities": [
+        {
+          "value": "+36.60",
+          "unit": "%",
+          "start": 381,
+          "end": 388
+        },
+        {
+          "value": "1.75",
+          "unit": "亿元",
+          "start": 431,
+          "end": 437
+        },
+        {
+          "value": "8.97",
+          "unit": "%",
+          "start": 441,
+          "end": 446
+        },
+        {
+          "value": "45.88",
+          "unit": "%",
+          "start": 452,
+          "end": 458
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 369,
+      "end": 459,
+      "text": "2024雷电防护产品营收+36.60%，募投进度过半、切入自动巡检等前沿方向2024全年铁大科技在设备检测类产品方面实现营收1.75亿元同比增长8.97%，毛利率达到45.88%；",
+      "quantities": [
+        {
+          "value": "+36.60",
+          "unit": "%",
+          "start": 381,
+          "end": 388
+        },
+        {
+          "value": "1.75",
+          "unit": "亿元",
+          "start": 431,
+          "end": 437
+        },
+        {
+          "value": "8.97",
+          "unit": "%",
+          "start": 441,
+          "end": 446
+        },
+        {
+          "value": "45.88",
+          "unit": "%",
+          "start": 452,
+          "end": 458
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 369,
+      "end": 459,
+      "text": "2024雷电防护产品营收+36.60%，募投进度过半、切入自动巡检等前沿方向2024全年铁大科技在设备检测类产品方面实现营收1.75亿元同比增长8.97%，毛利率达到45.88%；",
+      "quantities": [
+        {
+          "value": "+36.60",
+          "unit": "%",
+          "start": 381,
+          "end": 388
+        },
+        {
+          "value": "1.75",
+          "unit": "亿元",
+          "start": 431,
+          "end": 437
+        },
+        {
+          "value": "8.97",
+          "unit": "%",
+          "start": 441,
+          "end": 446
+        },
+        {
+          "value": "45.88",
+          "unit": "%",
+          "start": 452,
+          "end": 458
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 459,
+      "end": 510,
+      "text": "雷电防护类产品营收达到3820万元同比增长36.60%，毛利率同比提升4.58pct达到42.48%。",
+      "quantities": [
+        {
+          "value": "3820",
+          "unit": "万元",
+          "start": 470,
+          "end": 476
+        },
+        {
+          "value": "36.60",
+          "unit": "%",
+          "start": 480,
+          "end": 486
+        },
+        {
+          "value": "42.48",
+          "unit": "%",
+          "start": 503,
+          "end": 509
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 459,
+      "end": 510,
+      "text": "雷电防护类产品营收达到3820万元同比增长36.60%，毛利率同比提升4.58pct达到42.48%。",
+      "quantities": [
+        {
+          "value": "3820",
+          "unit": "万元",
+          "start": 470,
+          "end": 476
+        },
+        {
+          "value": "36.60",
+          "unit": "%",
+          "start": 480,
+          "end": 486
+        },
+        {
+          "value": "42.48",
+          "unit": "%",
+          "start": 503,
+          "end": 509
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 991,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 991,
+    "processed_ranges": [
+      [
+        0,
+        991
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 14,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 24.628671,
+  "source_content_sha256": "19165c18b317d3645ea404ba17191d0768f8aea2735a939a8e53255db664d130"
+}

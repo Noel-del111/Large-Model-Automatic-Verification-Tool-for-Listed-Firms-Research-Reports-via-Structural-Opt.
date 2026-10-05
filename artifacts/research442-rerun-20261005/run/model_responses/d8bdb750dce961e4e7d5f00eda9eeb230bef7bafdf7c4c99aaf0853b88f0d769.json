@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"2024年营收1.59亿元，同比+37%，归母净利润5795亿分，同比+28%公司发布2024年报与2025年一季报，实现营收1.59亿元，同比增长36.63%；归母净利润5794.77万元，同比增长28.17%；2025Q1实现营收4743.87万元，同比增长68.78%，归母净利润1488.26万元，同比增长69.93%。\"\n        }\n      ],\n      \"reason\": \"“归母净利润5795亿分”的单位“亿分”不是规范计量单位，应为“万元”或“亿元”，单位错误。\"\n    },\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"截至2024年12月32日，公司拥有海内外各类知识产权327项。\"\n        }\n      ],\n      \"reason\": \"2024年12月只有31天，不存在12月32日，日期本身不成立。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"2024年，公司新增16项专利，其中发明专利4项，实用新型专利14项，外观专利1项。\"\n        }\n      ],\n      \"reason\": \"明细合计4+14+1=19项，与所述新增16项专利不一致。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:10:11.902870+00:00",
+    "request_sha256": "09fd678d50ad64ac8ad39e2e56a32433b1d5830a3f2ae2edc32f79e988c2eedc",
+    "input_token_estimate": 15196,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27734",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "99cc2fd37374467a9fbdabd6eb3034a8",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3663,
+    "output_tokens": 9077,
+    "usage_source": "provider",
+    "duration_seconds": 34.64667,
+    "cost_cny": "0.039971"
+  },
+  "cache_request": {
+    "key": "d8bdb750dce961e4e7d5f00eda9eeb230bef7bafdf7c4c99aaf0853b88f0d769",
+    "purpose": "text_review.detect",
+    "messages_sha256": "09fd678d50ad64ac8ad39e2e56a32433b1d5830a3f2ae2edc32f79e988c2eedc"
+  }
+}

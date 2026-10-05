@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"2022年0月游戏版号重启发放\"}], \"reason\": \"月份为“0月”，不是合法月份，日期本身不成立。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"2023年共发放978个国产版号，98个进口版号，合计1090个版号\"}], \"reason\": \"明确合计关系978+98应等于1076，而非1090，合计不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:45:47.121734+00:00",
+    "request_sha256": "94ebe5582d9247bbf79c90c9427f5dd8a63846e37a30d963e70acaf7f0d5dacf",
+    "input_token_estimate": 16848,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278992",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "deb7e5291e4543dcbfe1d65e62792f63",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4020,
+    "output_tokens": 6096,
+    "usage_source": "provider",
+    "duration_seconds": 22.689714,
+    "cost_cny": "0.028404"
+  },
+  "cache_request": {
+    "key": "b0de31e4ea40b03a3d54e59c09f5bdc4dea01b3bac262408db2a72aa6c325ac1",
+    "purpose": "text_review.detect",
+    "messages_sha256": "94ebe5582d9247bbf79c90c9427f5dd8a63846e37a30d963e70acaf7f0d5dacf"
+  }
+}

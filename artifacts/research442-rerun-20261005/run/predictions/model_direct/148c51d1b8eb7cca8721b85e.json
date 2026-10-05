@@ -1,0 +1,359 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000478",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "时间区间“25-22年”起止年份倒置，应为22-25年，后文也写作“22-25年”，此处不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 128,
+          "end": 186,
+          "text": "据艾媒咨询数据，我国化妆品市场25-22年CAGR预计为6.2%，25年有望达到5791亿元，仍在持续增长上升区间。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据艾媒咨询数据，我国化妆品市场25-22年CAGR预计为6.2%，25年有望达到5791亿元，仍在持续增长上升区间。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 128,
+          "end": 186,
+          "text": "据艾媒咨询数据，我国化妆品市场25-22年CAGR预计为6.2%，25年有望达到5791亿元，仍在持续增长上升区间。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "192893fee532f328f9fcb63d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“同比增长超%”中百分比数值缺失，仅写“超%”，无法获知具体增长幅度。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 664,
+          "end": 721,
+          "text": "据青眼情报数据，23年国产化妆品销售额同比增长超%，而以往占据主要市场份额的欧美、日韩等国家进口品牌销售额均下滑。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据青眼情报数据，23年国产化妆品销售额同比增长超%，而以往占据主要市场份额的欧美、日韩等国家进口品牌销售额均下滑。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 664,
+          "end": 721,
+          "text": "据青眼情报数据，23年国产化妆品销售额同比增长超%，而以往占据主要市场份额的欧美、日韩等国家进口品牌销售额均下滑。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f53f139244ada01afdb11d8b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“护肤彩妆两大业务齐头并进，长期发展动力充足”连续重复，未提供新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 975,
+          "end": 1042,
+          "text": "公司作为国货化妆品行业龙头，品牌力产品力强劲，护肤彩妆两大业务齐头并进，长期发展动力充足。护肤彩妆两大业务齐头并进，长期发展动力充足。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司作为国货化妆品行业龙头，品牌力产品力强劲，护肤彩妆两大业务齐头并进，长期发展动力充足。护肤彩妆两大业务齐头并进，长期发展动力充足。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 975,
+          "end": 1042,
+          "text": "公司作为国货化妆品行业龙头，品牌力产品力强劲，护肤彩妆两大业务齐头并进，长期发展动力充足。护肤彩妆两大业务齐头并进，长期发展动力充足。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "99f03b66b9a1c38e0fbdad2f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "产品版本应说“推出3.0”，写成“退出3.0”与后文“已推出第四代”及大单品升级逻辑矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 434,
+          "end": 459,
+          "text": "目前红宝石精华已退出3.0，双抗精华已推出第四代。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前红宝石精华已退出3.0，双抗精华已推出第四代。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 434,
+          "end": 459,
+          "text": "目前红宝石精华已退出3.0，双抗精华已推出第四代。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7dc78910cd8b5f80e8c9cb09",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1136
+        ]
+      ],
+      "estimated_input_tokens": 5759,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:34:56.676206+00:00",
+        "request_sha256": "867b2fc661eb352bbc180f5d92625c688fd0365f6f2002c0c81e077a8569b411",
+        "input_token_estimate": 15997,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278141",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e5bce59a1415498cb12d5f1d9802c569",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3755,
+        "output_tokens": 5371,
+        "usage_source": "provider",
+        "duration_seconds": 23.013196,
+        "cost_cny": "0.025239"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "据艾媒咨询数据，我国化妆品市场25-22年CAGR预计为6.2%，25年有望达到5791亿元，仍在持续增长上升区间。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "时间区间“25-22年”起止年份倒置，应为22-25年，后文也写作“22-25年”，此处不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "据青眼情报数据，23年国产化妆品销售额同比增长超%，而以往占据主要市场份额的欧美、日韩等国家进口品牌销售额均下滑。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“同比增长超%”中百分比数值缺失，仅写“超%”，无法获知具体增长幅度。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司作为国货化妆品行业龙头，品牌力产品力强劲，护肤彩妆两大业务齐头并进，长期发展动力充足。护肤彩妆两大业务齐头并进，长期发展动力充足。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“护肤彩妆两大业务齐头并进，长期发展动力充足”连续重复，未提供新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "目前红宝石精华已退出3.0，双抗精华已推出第四代。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "产品版本应说“推出3.0”，写成“退出3.0”与后文“已推出第四代”及大单品升级逻辑矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 60,
+      "end": 103,
+      "text": "公司作为本土化妆品公司龙头，24年营收首破百亿，品牌力强、渗透率高，长期增长确定性强。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "公司作为本土化妆品公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 753,
+      "end": 831,
+      "text": "公司2019年收购化妆师彩妆品牌彩棠，沿用珀莱雅大单品策略，推出修容盘、腮红盘等核心产品，搭配国风设计的包装，快速受到消费者青睐，24年彩棠营收超10亿元。",
+      "quantities": [
+        {
+          "value": "10",
+          "unit": "亿元",
+          "start": 826,
+          "end": 830
+        }
+      ],
+      "periods": [
+        "2019年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1042,
+      "end": 1096,
+      "text": "我们预计未来三年公司归母净利润复合增长率为17.2%，给予2025年25倍PE，，首次覆盖给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "17.2",
+          "unit": "%",
+          "start": 1063,
+          "end": 1068
+        },
+        {
+          "value": "25",
+          "unit": "倍",
+          "start": 1076,
+          "end": 1079
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计未来三年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1136,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1136,
+    "processed_ranges": [
+      [
+        0,
+        1136
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.040654,
+  "source_content_sha256": "92b93091da1a91709434504a7857c220528873c7e19b115083ecd07c811aa15f"
+}

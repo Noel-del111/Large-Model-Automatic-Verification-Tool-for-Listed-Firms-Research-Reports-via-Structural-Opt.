@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000163",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "15d20932b68f100d41416bab",
+      "error_type": "数值不一致错误",
+      "spans": [
+        {
+          "start": 1059,
+          "end": 1122,
+          "text": "从细分板块来看，农商行、国有行、城商行分别上涨2.78%、2.52%、1.25%、3.52%、5.25%，股份行跌0.85%。"
+        }
+      ],
+      "reason": "研报中列举对象数与数值个数不一致：对象 4 个、数值 6 个，需人工核对。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.001"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 2612,
+    "total_chars": 2612,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001024,
+  "source_content_sha256": "53c5030e9753c7ac8b5361f5c3351ff364a45ca224e8b26a69d229105dbccc62"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"颖泰生物()\"}], \"reason\": \"公司名称后括号内证券代码为空，缺失非数值属性值。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"截至2024年年末，公司拥有境外登记注册项，其中自主登记注册213项；此外，还拥有国内农药产品登记证421项，其中原药登记证157项，位于行业前列。\"}], \"reason\": \"“境外登记注册项”前缺少具体数量，明确数值位置为空。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"我们根据农药市场情况下调2025年盈利预测，新增2026-2027年盈利预测，预计2025-2027年的归母净利润分别为0.80（原4.05）/2.05/3.73/5.23亿元，对应EPS分别为0.07/0.17/0.30元，对应当前股价的PE分别为64.4/25.2/13.9倍。\"}], \"reason\": \"2025-2027三年预测却列出四个归母净利润数值，与年份数及EPS、PE数量不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:20:09.780035+00:00",
+    "request_sha256": "b88276581930c3045652eae7cb442237dafac34fa2f002752e4f33dbaeca84cd",
+    "input_token_estimate": 15246,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27739",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "bce6f39a38b64269a44e460ea85fcdb5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3555,
+    "output_tokens": 6173,
+    "usage_source": "provider",
+    "duration_seconds": 24.103973,
+    "cost_cny": "0.028247"
+  },
+  "cache_request": {
+    "key": "080be5a0824fd2daf8454a4d915fdff5195670259471a10989b6de8871011b71",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b88276581930c3045652eae7cb442237dafac34fa2f002752e4f33dbaeca84cd"
+  }
+}

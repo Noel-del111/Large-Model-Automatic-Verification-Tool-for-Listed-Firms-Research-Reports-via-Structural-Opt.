@@ -1,0 +1,617 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000448",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "预测期间写作“2026-2025年”，起止年份颠倒，时间区间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 238,
+          "end": 360,
+          "text": "我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 238,
+          "end": 360,
+          "text": "我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "33eb6e0acf54ca61c233a912",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "预计2025-2027年归母净利润应列三个值，却给出0.53/0.71/0.83/0.32四个数值，与年份数不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 238,
+          "end": 360,
+          "text": "我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 238,
+          "end": 360,
+          "text": "我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9303dee9c4067faab8549719",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“共实现收入”与“亿元”之间缺失应报告的具体收入数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 730,
+          "end": 759,
+          "text": "2024年公司橡塑制品共实现收入亿元，毛利率45.62%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司橡塑制品共实现收入亿元，毛利率45.62%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 730,
+          "end": 759,
+          "text": "2024年公司橡塑制品共实现收入亿元，毛利率45.62%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c9640f7e1a895f50b1023b17",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "费用支出减少通常增厚利润，不应成为归母净利润同比下降的主要原因，前提与结论矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 104,
+          "end": 210,
+          "text": "2025年一季度公司实现营收9593.12万元，同比+6.47%，环比-19.93%；实现归母净利润943.79万元，同比-11.19%，环比+33.34%，归母净利润同比有所下降主要系公司各项费用支出减少所致。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年一季度公司实现营收9593.12万元，同比+6.47%，环比-19.93%；实现归母净利润943.79万元，同比-11.19%，环比+33.34%，归母净利润同比有所下降主要系公司各项费用支出减少所致。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 104,
+          "end": 210,
+          "text": "2025年一季度公司实现营收9593.12万元，同比+6.47%，环比-19.93%；实现归母净利润943.79万元，同比-11.19%，环比+33.34%，归母净利润同比有所下降主要系公司各项费用支出减少所致。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "402fa605bcc63bdb049b11dc",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          911
+        ]
+      ],
+      "estimated_input_tokens": 5431,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:08:48.760019+00:00",
+        "request_sha256": "98bb844c76f9875cabddb7ca11ef922a13c9be94e50a9cc18b87783277879078",
+        "input_token_estimate": 15123,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277267",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "54ba9a6bbcb24db2b1fa4d2758d59da1",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3569,
+        "output_tokens": 8431,
+        "usage_source": "provider",
+        "duration_seconds": 33.835293,
+        "cost_cny": "0.037293"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+          }
+        ],
+        "reason": "预测期间写作“2026-2025年”，起止年份颠倒，时间区间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+          }
+        ],
+        "reason": "预计2025-2027年归母净利润应列三个值，却给出0.53/0.71/0.83/0.32四个数值，与年份数不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年公司橡塑制品共实现收入亿元，毛利率45.62%。"
+          }
+        ],
+        "reason": "“共实现收入”与“亿元”之间缺失应报告的具体收入数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025年一季度公司实现营收9593.12万元，同比+6.47%，环比-19.93%；实现归母净利润943.79万元，同比-11.19%，环比+33.34%，归母净利润同比有所下降主要系公司各项费用支出减少所致。"
+          }
+        ],
+        "reason": "费用支出减少通常增厚利润，不应成为归母净利润同比下降的主要原因，前提与结论矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 0,
+      "end": 39,
+      "text": "北交所信息更新：特种橡胶新材料项目稳步推进，2025Q1营收同比+6.47%\n",
+      "quantities": [
+        {
+          "value": "+6.47",
+          "unit": "%",
+          "start": 32,
+          "end": 38
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 54,
+      "end": 147,
+      "text": "2025Q1营收9593.12万元，同比+6.47%，归母净利润943.79万元，同比-11.19%2025年一季度公司实现营收9593.12万元，同比+6.47%，环比-19.93%；",
+      "quantities": [
+        {
+          "value": "9593.12",
+          "unit": "万元",
+          "start": 62,
+          "end": 71
+        },
+        {
+          "value": "+6.47",
+          "unit": "%",
+          "start": 74,
+          "end": 80
+        },
+        {
+          "value": "943.79",
+          "unit": "万元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "-11.19",
+          "unit": "%",
+          "start": 97,
+          "end": 104
+        },
+        {
+          "value": "9593.12",
+          "unit": "万元",
+          "start": 118,
+          "end": 127
+        },
+        {
+          "value": "+6.47",
+          "unit": "%",
+          "start": 130,
+          "end": 136
+        },
+        {
+          "value": "-19.93",
+          "unit": "%",
+          "start": 139,
+          "end": 146
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 54,
+      "end": 147,
+      "text": "2025Q1营收9593.12万元，同比+6.47%，归母净利润943.79万元，同比-11.19%2025年一季度公司实现营收9593.12万元，同比+6.47%，环比-19.93%；",
+      "quantities": [
+        {
+          "value": "9593.12",
+          "unit": "万元",
+          "start": 62,
+          "end": 71
+        },
+        {
+          "value": "+6.47",
+          "unit": "%",
+          "start": 74,
+          "end": 80
+        },
+        {
+          "value": "943.79",
+          "unit": "万元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "-11.19",
+          "unit": "%",
+          "start": 97,
+          "end": 104
+        },
+        {
+          "value": "9593.12",
+          "unit": "万元",
+          "start": 118,
+          "end": 127
+        },
+        {
+          "value": "+6.47",
+          "unit": "%",
+          "start": 130,
+          "end": 136
+        },
+        {
+          "value": "-19.93",
+          "unit": "%",
+          "start": 139,
+          "end": 146
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 54,
+      "end": 147,
+      "text": "2025Q1营收9593.12万元，同比+6.47%，归母净利润943.79万元，同比-11.19%2025年一季度公司实现营收9593.12万元，同比+6.47%，环比-19.93%；",
+      "quantities": [
+        {
+          "value": "9593.12",
+          "unit": "万元",
+          "start": 62,
+          "end": 71
+        },
+        {
+          "value": "+6.47",
+          "unit": "%",
+          "start": 74,
+          "end": 80
+        },
+        {
+          "value": "943.79",
+          "unit": "万元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "-11.19",
+          "unit": "%",
+          "start": 97,
+          "end": 104
+        },
+        {
+          "value": "9593.12",
+          "unit": "万元",
+          "start": 118,
+          "end": 127
+        },
+        {
+          "value": "+6.47",
+          "unit": "%",
+          "start": 130,
+          "end": 136
+        },
+        {
+          "value": "-19.93",
+          "unit": "%",
+          "start": 139,
+          "end": 146
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 147,
+      "end": 210,
+      "text": "实现归母净利润943.79万元，同比-11.19%，环比+33.34%，归母净利润同比有所下降主要系公司各项费用支出减少所致。",
+      "quantities": [
+        {
+          "value": "943.79",
+          "unit": "万元",
+          "start": 154,
+          "end": 162
+        },
+        {
+          "value": "-11.19",
+          "unit": "%",
+          "start": 165,
+          "end": 172
+        },
+        {
+          "value": "+33.34",
+          "unit": "%",
+          "start": 175,
+          "end": 182
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "归母净利润同比有所下降主要系公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 147,
+      "end": 210,
+      "text": "实现归母净利润943.79万元，同比-11.19%，环比+33.34%，归母净利润同比有所下降主要系公司各项费用支出减少所致。",
+      "quantities": [
+        {
+          "value": "943.79",
+          "unit": "万元",
+          "start": 154,
+          "end": 162
+        },
+        {
+          "value": "-11.19",
+          "unit": "%",
+          "start": 165,
+          "end": 172
+        },
+        {
+          "value": "+33.34",
+          "unit": "%",
+          "start": 175,
+          "end": 182
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "归母净利润同比有所下降主要系公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 210,
+      "end": 360,
+      "text": "公司特种橡胶材料项目将于2026逐步释放产能并形成收入，我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。",
+      "quantities": [
+        {
+          "value": "0.32",
+          "unit": "亿元",
+          "start": 304,
+          "end": 310
+        },
+        {
+          "value": "0.69",
+          "unit": "元",
+          "start": 327,
+          "end": 332
+        },
+        {
+          "value": "37.1",
+          "unit": "倍",
+          "start": 354,
+          "end": 359
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 403,
+      "end": 478,
+      "text": "特种橡胶新材料项目稳步推进，项目投产后公司产销优势将进一步扩大橡胶材料是公司主要的营收来源，2024年实现收入3.02亿元，占全部收入的73.65%。",
+      "quantities": [
+        {
+          "value": "3.02",
+          "unit": "亿元",
+          "start": 458,
+          "end": 464
+        },
+        {
+          "value": "73.65",
+          "unit": "%",
+          "start": 471,
+          "end": 477
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "项目投产后公司",
+        "产销优势将进一步扩大橡胶材料是公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 730,
+      "end": 759,
+      "text": "2024年公司橡塑制品共实现收入亿元，毛利率45.62%。",
+      "quantities": [
+        {
+          "value": "45.62",
+          "unit": "%",
+          "start": 752,
+          "end": 758
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 911,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 911,
+    "processed_ranges": [
+      [
+        0,
+        911
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 33.858191,
+  "source_content_sha256": "72ed5f21a4e6ae37d995ac3361ecac42a029eecb99012c29726ff6ef4669bc34"
+}

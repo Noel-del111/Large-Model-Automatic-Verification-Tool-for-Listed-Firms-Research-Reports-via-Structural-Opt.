@@ -1,0 +1,374 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000474",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "股票代码位置为空，缺少公司证券代码等必要属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 35,
+          "end": 40,
+          "text": "裕太微()"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "裕太微()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 35,
+          "end": 40,
+          "text": "裕太微()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cfeaf2b2cfbb38a49edb7448",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "归母净利润单位写成“亿分”，应为“亿元”，单位量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 61,
+          "end": 155,
+          "text": "公司2024年实现营业收入3.96亿元，同比增长44.86%；实现归属于上市公司股东的净利润-2.02亿分，同比增亏；归属于上市公司股东的扣除非经常性损益的净利润-2.32亿元，同比增亏。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2024年实现营业收入3.96亿元，同比增长44.86%；实现归属于上市公司股东的净利润-2.02亿分，同比增亏；归属于上市公司股东的扣除非经常性损益的净利润-2.32亿元，同比增亏。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 61,
+          "end": 155,
+          "text": "公司2024年实现营业收入3.96亿元，同比增长44.86%；实现归属于上市公司股东的净利润-2.02亿分，同比增亏；归属于上市公司股东的扣除非经常性损益的净利润-2.32亿元，同比增亏。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d303d47088e733ba7c4a13af",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一量产量信息连续重复一次，没有新增含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 464,
+          "end": 572,
+          "text": "原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产，原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产，原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 464,
+          "end": 572,
+          "text": "原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产，原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "08bbd0ae52fc19db9095e23f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "预测年份区间写成2027-2025年，起点晚于终点，时间区间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 868,
+          "end": 1040,
+          "text": "预测公司2027-2025年收入分别为5.56、8.06、12.34亿元，EPS分别为-2.25、-1.42、0.09元，当前股价对应PE分别为-42、-67、1016倍，公司是中国境内极少数实现千兆以太网物理层芯片以及2.5G以太网物理层芯片大规模出货的企业，积极研发投入拓展产品线，并积极布局机器人应用领域，首次覆盖，给予“增持”投资评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预测公司2027-2025年收入分别为5.56、8.06、12.34亿元，EPS分别为-2.25、-1.42、0.09元，当前股价对应PE分别为-42、-67、1016倍，公司是中国境内极少数实现千兆以太网物理层芯片以及2.5G以太网物理层芯片大规模出货的企业，积极研发投入拓展产品线，并积极布局机器人应用领域，首次覆盖，给予“增持”投资评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 868,
+          "end": 1040,
+          "text": "预测公司2027-2025年收入分别为5.56、8.06、12.34亿元，EPS分别为-2.25、-1.42、0.09元，当前股价对应PE分别为-42、-67、1016倍，公司是中国境内极少数实现千兆以太网物理层芯片以及2.5G以太网物理层芯片大规模出货的企业，积极研发投入拓展产品线，并积极布局机器人应用领域，首次覆盖，给予“增持”投资评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "114131a705cdff48361941b0",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1090
+        ]
+      ],
+      "estimated_input_tokens": 5698,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:30:37.868008+00:00",
+        "request_sha256": "e4cd666b6f6bb8f954c963d2b423e6347093fc2d4cb363065c019ec79dc6c053",
+        "input_token_estimate": 15841,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277985",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "48d87bca1a504fe08fa306a720e3ccfd",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3698,
+        "output_tokens": 6828,
+        "usage_source": "provider",
+        "duration_seconds": 26.923124,
+        "cost_cny": "0.03101"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "裕太微()"
+          }
+        ],
+        "reason": "股票代码位置为空，缺少公司证券代码等必要属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司2024年实现营业收入3.96亿元，同比增长44.86%；实现归属于上市公司股东的净利润-2.02亿分，同比增亏；归属于上市公司股东的扣除非经常性损益的净利润-2.32亿元，同比增亏。"
+          }
+        ],
+        "reason": "归母净利润单位写成“亿分”，应为“亿元”，单位量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产，原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产。"
+          }
+        ],
+        "reason": "同一量产量信息连续重复一次，没有新增含义。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "预测公司2027-2025年收入分别为5.56、8.06、12.34亿元，EPS分别为-2.25、-1.42、0.09元，当前股价对应PE分别为-42、-67、1016倍，公司是中国境内极少数实现千兆以太网物理层芯片以及2.5G以太网物理层芯片大规模出货的企业，积极研发投入拓展产品线，并积极布局机器人应用领域，首次覆盖，给予“增持”投资评级。"
+          }
+        ],
+        "reason": "预测年份区间写成2027-2025年，起点晚于终点，时间区间不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 46,
+      "end": 92,
+      "text": "裕太微发布2024年年度报告：公司2024年实现营业收入3.96亿元，同比增长44.86%；",
+      "quantities": [
+        {
+          "value": "3.96",
+          "unit": "亿元",
+          "start": 74,
+          "end": 80
+        },
+        {
+          "value": "44.86",
+          "unit": "%",
+          "start": 85,
+          "end": 91
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 92,
+      "end": 120,
+      "text": "实现归属于上市公司股东的净利润-2.02亿分，同比增亏；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "实现归属于上市公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 120,
+      "end": 155,
+      "text": "归属于上市公司股东的扣除非经常性损益的净利润-2.32亿元，同比增亏。",
+      "quantities": [
+        {
+          "value": "-2.32",
+          "unit": "亿元",
+          "start": 142,
+          "end": 149
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "归属于上市公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 254,
+      "end": 287,
+      "text": "2024年营业收入实现季度环比稳步增长，全年同比增长44.86%。",
+      "quantities": [
+        {
+          "value": "44.86",
+          "unit": "%",
+          "start": 280,
+          "end": 286
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 572,
+      "end": 615,
+      "text": "新补充系列产品将陆续于2024年到2026年量产出货，为后续的营收份额的提升做出贡献。",
+      "quantities": [],
+      "periods": [
+        "2024年",
+        "2026年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1090,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1090,
+    "processed_ranges": [
+      [
+        0,
+        1090
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 26.94868,
+  "source_content_sha256": "88e822322cde9d0cf567575e72dfc967ce1a90a2ecf2689588d9f71746e71c0e"
+}

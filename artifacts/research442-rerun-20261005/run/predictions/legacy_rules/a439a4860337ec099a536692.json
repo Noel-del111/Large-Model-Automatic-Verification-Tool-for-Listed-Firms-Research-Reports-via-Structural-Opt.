@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000699",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "2a552d83a7c945397ca76421",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 2142,
+          "end": 2317,
+          "text": "麦格米特：发布限制性股票激励计划，拟授予数量为308.9万股，占股本总额的0.57%，计划激励对象共计253人，授予价格22.97元/股，考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%，或以2022-2024年三年平均值为基数扣除非经常性损益的净利润增长率不低于15%/30%/60%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 5023,
+    "total_chars": 5023,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001487,
+  "source_content_sha256": "827582914183bda4ea035ef92aa427ef471e59f310eb09fc122c7d1a5a49a933"
+}

@@ -1,0 +1,462 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000696",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“营业总收入同比增长”后缺少具体增速数值，未给出百分比。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 64,
+          "end": 127,
+          "text": "从行业整体看，选取同花顺统计的申万轨交设备板块数据，2024年营业总收入同比增长；2021-2024年归母净利润增速略有波动。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从行业整体看，选取同花顺统计的申万轨交设备板块数据，2024年营业总收入同比增长；2021-2024年归母净利润增速略有波动。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 64,
+          "end": 127,
+          "text": "从行业整体看，选取同花顺统计的申万轨交设备板块数据，2024年营业总收入同比增长；2021-2024年归母净利润增速略有波动。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ceec2139758ad1ff2f40c9fb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "时间区间写成4-1月，起止月份倒置，不符合时间书写。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 452,
+          "end": 487,
+          "text": "2025年4-1月，全国铁路发送旅客14.6亿人次、同比增长5.9%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4-1月，全国铁路发送旅客14.6亿人次、同比增长5.9%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 452,
+          "end": 487,
+          "text": "2025年4-1月，全国铁路发送旅客14.6亿人次、同比增长5.9%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8145579b2afd410d9d06a9a8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "智能高寒动车组后的招标数量为空，缺失必要数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 679,
+          "end": 789,
+          "text": "2025年4月，国铁集团发布招标公告，分别招标时速350公里复兴号智能动车组（8辆编组），数量33组；时速350公里复兴号智能高寒动车组（8辆编组），；时速350公里复兴号配置动车组（16辆编组），数量20组（10列）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4月，国铁集团发布招标公告，分别招标时速350公里复兴号智能动车组（8辆编组），数量33组；时速350公里复兴号智能高寒动车组（8辆编组），；时速350公里复兴号配置动车组（16辆编组），数量20组（10列）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 679,
+          "end": 789,
+          "text": "2025年4月，国铁集团发布招标公告，分别招标时速350公里复兴号智能动车组（8辆编组），数量33组；时速350公里复兴号智能高寒动车组（8辆编组），；时速350公里复兴号配置动车组（16辆编组），数量20组（10列）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9a561dfc6f28839d550acbe8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "法规引用错误",
+      "reason": "印发的法规名称空缺，无法核验具体引用文件。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1169,
+          "end": 1204,
+          "text": "2024年9月，国家铁路局印发《》，明确老旧内燃机车报废年限为30年。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年9月，国家铁路局印发《》，明确老旧内燃机车报废年限为30年。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1169,
+          "end": 1204,
+          "text": "2024年9月，国家铁路局印发《》，明确老旧内燃机车报废年限为30年。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c90dc3dc124e54d8b9d421d7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "复兴号动车组招标时速通常为350公里，“50公里”单位及数值不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 791,
+          "end": 838,
+          "text": "2024年，国铁集团分别于5月、11月进行50公里复兴号动车组招标，分别招标165组和80组；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，国铁集团分别于5月、11月进行50公里复兴号动车组招标，分别招标165组和80组；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 791,
+          "end": 838,
+          "text": "2024年，国铁集团分别于5月、11月进行50公里复兴号动车组招标，分别招标165组和80组；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "483dad38a18e20fb45140af2",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1396
+        ]
+      ],
+      "estimated_input_tokens": 5914,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:13:29.461476+00:00",
+        "request_sha256": "7c7cc99f3636c99578bad73c3c362f790bb6a43fe0cdf6401bf0babad8fed14f",
+        "input_token_estimate": 16455,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278599",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "157cda88608f413fb67d018efb8df9e8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3877,
+        "output_tokens": 10360,
+        "usage_source": "provider",
+        "duration_seconds": 40.113712,
+        "cost_cny": "0.045317",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "从行业整体看，选取同花顺统计的申万轨交设备板块数据，2024年营业总收入同比增长；2021-2024年归母净利润增速略有波动。"
+          }
+        ],
+        "reason": "“营业总收入同比增长”后缺少具体增速数值，未给出百分比。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年4-1月，全国铁路发送旅客14.6亿人次、同比增长5.9%。"
+          }
+        ],
+        "reason": "时间区间写成4-1月，起止月份倒置，不符合时间书写。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025年4月，国铁集团发布招标公告，分别招标时速350公里复兴号智能动车组（8辆编组），数量33组；时速350公里复兴号智能高寒动车组（8辆编组），；时速350公里复兴号配置动车组（16辆编组），数量20组（10列）。"
+          }
+        ],
+        "reason": "智能高寒动车组后的招标数量为空，缺失必要数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "法规引用错误",
+        "spans": [
+          {
+            "text": "2024年9月，国家铁路局印发《》，明确老旧内燃机车报废年限为30年。"
+          }
+        ],
+        "reason": "印发的法规名称空缺，无法核验具体引用文件。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年，国铁集团分别于5月、11月进行50公里复兴号动车组招标，分别招标165组和80组；"
+          }
+        ],
+        "reason": "复兴号动车组招标时速通常为350公里，“50公里”单位及数值不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 64,
+      "end": 105,
+      "text": "从行业整体看，选取同花顺统计的申万轨交设备板块数据，2024年营业总收入同比增长；",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 105,
+      "end": 127,
+      "text": "2021-2024年归母净利润增速略有波动。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 207,
+      "end": 265,
+      "text": "据中国铁路建设债券募集说明书，2024年国铁集团实现营业总收入12830亿元，同比增长3.0%，实现净利润39万元。",
+      "quantities": [
+        {
+          "value": "12830",
+          "unit": "亿元",
+          "start": 238,
+          "end": 245
+        },
+        {
+          "value": "3.0",
+          "unit": "%",
+          "start": 250,
+          "end": 254
+        },
+        {
+          "value": "39",
+          "unit": "万元",
+          "start": 260,
+          "end": 264
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年国铁集团"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 207,
+      "end": 265,
+      "text": "据中国铁路建设债券募集说明书，2024年国铁集团实现营业总收入12830亿元，同比增长3.0%，实现净利润39万元。",
+      "quantities": [
+        {
+          "value": "12830",
+          "unit": "亿元",
+          "start": 238,
+          "end": 245
+        },
+        {
+          "value": "3.0",
+          "unit": "%",
+          "start": 250,
+          "end": 254
+        },
+        {
+          "value": "39",
+          "unit": "万元",
+          "start": 260,
+          "end": 264
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年国铁集团"
+      ]
+    },
+    {
+      "metric": "debt_ratio",
+      "metric_text": "资产负债率",
+      "start": 265,
+      "end": 312,
+      "text": "2024年末，国铁集团资产负债率为63.5%较上年末降低2.0个百分点，资产负债结构更加优化。",
+      "quantities": [
+        {
+          "value": "63.5",
+          "unit": "%",
+          "start": 282,
+          "end": 287
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "国铁集团"
+      ]
+    },
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 312,
+      "end": 352,
+      "text": "据债券定期公告，2025年Q1国铁集团实现营业总收入2814亿元，同比基本持平。",
+      "quantities": [
+        {
+          "value": "2814",
+          "unit": "亿元",
+          "start": 338,
+          "end": 344
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "国铁集团"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1396,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1396,
+    "processed_ranges": [
+      [
+        0,
+        1396
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1396,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001974,
+  "source_content_sha256": "e50d10cb0b57f5cdf784cca4cbfbddfd145573a541af42b148dfbbf9c7420397"
+}

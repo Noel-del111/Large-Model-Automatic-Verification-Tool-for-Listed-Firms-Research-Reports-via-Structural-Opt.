@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。\"}], \"reason\": \"2026-2025年区间终点2025年早于起点2026年，年份顺序颠倒。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"单班产值亿元左右。\"}], \"reason\": \"单班产值后缺少具体金额数值，仅以“亿元左右”表示。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。\"}], \"reason\": \"2025-2027年仅三年，EPS却列四个值，与盈利预测、PE数量不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:18:19.500045+00:00",
+    "request_sha256": "85ba9b874046de5027dddf33d83bf06503857675cc6c74b5e355c9a3b3c7412d",
+    "input_token_estimate": 14917,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277061",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "78f809c13a4643ad9c717151fcc36f23",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3576,
+    "output_tokens": 7510,
+    "usage_source": "provider",
+    "duration_seconds": 29.95518,
+    "cost_cny": "0.033616"
+  },
+  "cache_request": {
+    "key": "357386bd8e167895d8a81840a66d2718b01fce27e91a5789df7dfc890823c476",
+    "purpose": "text_review.detect",
+    "messages_sha256": "85ba9b874046de5027dddf33d83bf06503857675cc6c74b5e355c9a3b3c7412d"
+  }
+}

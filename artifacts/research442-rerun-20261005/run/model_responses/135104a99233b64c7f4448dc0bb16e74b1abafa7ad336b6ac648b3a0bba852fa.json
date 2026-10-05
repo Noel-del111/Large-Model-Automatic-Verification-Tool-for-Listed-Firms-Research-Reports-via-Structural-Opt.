@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"2025年5月30日，医药板块涨跌幅+0.37%，跑赢沪深300指数0.85pct，涨跌幅居申万31个子行业第33名。\"\n        }\n      ],\n      \"reason\": \"申万共31个一级子行业，排名却为第33名，名次超出总数，前后数值矛盾。\"\n    },\n    {\n      \"error_type\": \"格式错误\",\n      \"spans\": [\n        {\n          \"text\": \"康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。\"\n        }\n      ],\n      \"reason\": \"股票代码“300-759”不符合A股6位数字代码格式，正确应为“300759”。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。\"\n        }\n      ],\n      \"reason\": \"出资额写为“3000万美分”，美分通常不用于此类大额投资，单位应为“美元”。\"\n    },\n    {\n      \"error_type\": \"属性值缺失错误\",\n      \"spans\": [\n        {\n          \"text\": \"博晖创新（300318）：公司发布公告，近日收到了由国家药品监督管理局签发的医疗器械注册证，公司产品轮状病毒、诺如病毒、肠道腺病毒、星状病毒和札如病毒核酸检测试剂盒（）获得批准上市。\"\n        }\n      ],\n      \"reason\": \"产品名称后括号内容为空，缺少检测方法等必要属性值。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:35:02.116853+00:00",
+    "request_sha256": "547629adad2b6b1b7d2d561a4fe306ffbf70912f03ee23d2695935566a0e28d8",
+    "input_token_estimate": 15179,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277323",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "15dd7f35608746cc8f93229f4bf59ae7",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3618,
+    "output_tokens": 4094,
+    "usage_source": "provider",
+    "duration_seconds": 17.662949,
+    "cost_cny": "0.019994"
+  },
+  "cache_request": {
+    "key": "135104a99233b64c7f4448dc0bb16e74b1abafa7ad336b6ac648b3a0bba852fa",
+    "purpose": "text_review.detect",
+    "messages_sha256": "547629adad2b6b1b7d2d561a4fe306ffbf70912f03ee23d2695935566a0e28d8"
+  }
+}

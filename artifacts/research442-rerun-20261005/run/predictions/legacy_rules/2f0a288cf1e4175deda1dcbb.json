@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000505",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "2df167e0618ab29ab6597327",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 213,
+          "end": 281,
+          "text": "公司2024-2022年分别实现营业收入2.35亿元/2.73亿元/3.35亿元，YOY依次为15.26%/16.12%/22.61%；"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1694,
+    "total_chars": 1694,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001236,
+  "source_content_sha256": "83a9301fba26fbccc0b38d291b7b52e7eeac89491ddb2f0f2183055c2039cba0"
+}

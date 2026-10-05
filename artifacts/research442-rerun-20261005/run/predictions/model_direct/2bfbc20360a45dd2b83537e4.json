@@ -1,0 +1,416 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000453",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "12月没有32日，该日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 683,
+          "end": 717,
+          "text": "假设以2024年12月32日为基准日，重组完成后公司总资产将增长%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "假设以2024年12月32日为基准日，重组完成后公司总资产将增长%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 683,
+          "end": 717,
+          "text": "假设以2024年12月32日为基准日，重组完成后公司总资产将增长%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "863fb7316a82830d53da9923",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "总资产增长比例的具体数值缺失，仅有百分号。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 702,
+          "end": 717,
+          "text": "重组完成后公司总资产将增长%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "重组完成后公司总资产将增长%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 702,
+          "end": 717,
+          "text": "重组完成后公司总资产将增长%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "529530365d9f8b98ad9ed70f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "第二个书名号内公告名称缺失，非数值属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 120,
+          "end": 174,
+          "text": "《华电国际电力股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易报告书》《》等资产重组相关公告。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "《华电国际电力股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易报告书》《》等资产重组相关公告。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 120,
+          "end": 174,
+          "text": "《华电国际电力股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易报告书》《》等资产重组相关公告。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "79ed7f4b0a60a58db6a86b95",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "年份区间写成2027-2025年，起始年晚于结束年，时间关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 866,
+          "end": 930,
+          "text": "预计2027-2025年EPS分别为0.64元、0.69元、0.73元，对应PE分别为9倍、9倍、8倍，维持对公司“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2027-2025年EPS分别为0.64元、0.69元、0.73元，对应PE分别为9倍、9倍、8倍，维持对公司“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 866,
+          "end": 930,
+          "text": "预计2027-2025年EPS分别为0.64元、0.69元、0.73元，对应PE分别为9倍、9倍、8倍，维持对公司“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b0be01d89cc9ff2f0b54d931",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一信息在点评段落首尾不必要地重复表述。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 181,
+          "end": 203,
+          "text": "资产重组已顺利完成所需履行的决策和审批程序。"
+        },
+        {
+          "kind": "source_text",
+          "start": 367,
+          "end": 393,
+          "text": "截至目前，该重组已顺利完成所需履行的决策和审批程序。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "资产重组已顺利完成所需履行的决策和审批程序。"
+        },
+        {
+          "text": "截至目前，该重组已顺利完成所需履行的决策和审批程序。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 181,
+          "end": 203,
+          "text": "资产重组已顺利完成所需履行的决策和审批程序。"
+        },
+        {
+          "start": 367,
+          "end": 393,
+          "text": "截至目前，该重组已顺利完成所需履行的决策和审批程序。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5b4d27723f5e2845843b08d5",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          974
+        ]
+      ],
+      "estimated_input_tokens": 5589,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:12:56.354841+00:00",
+        "request_sha256": "6a1a26ef3735a55c60b488a19b1fc3a35ea39fbab4f5abf417d602994f5d246c",
+        "input_token_estimate": 15534,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277678",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "0512ebfe63f5466f860d22e38eff5196",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3588,
+        "output_tokens": 4671,
+        "usage_source": "provider",
+        "duration_seconds": 19.814838,
+        "cost_cny": "0.022272"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "假设以2024年12月32日为基准日，重组完成后公司总资产将增长%；"
+          }
+        ],
+        "reason": "12月没有32日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "重组完成后公司总资产将增长%；"
+          }
+        ],
+        "reason": "总资产增长比例的具体数值缺失，仅有百分号。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "《华电国际电力股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易报告书》《》等资产重组相关公告。"
+          }
+        ],
+        "reason": "第二个书名号内公告名称缺失，非数值属性值为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "预计2027-2025年EPS分别为0.64元、0.69元、0.73元，对应PE分别为9倍、9倍、8倍，维持对公司“买入”评级。"
+          }
+        ],
+        "reason": "年份区间写成2027-2025年，起始年晚于结束年，时间关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "资产重组已顺利完成所需履行的决策和审批程序。"
+          },
+          {
+            "text": "截至目前，该重组已顺利完成所需履行的决策和审批程序。"
+          }
+        ],
+        "reason": "同一信息在点评段落首尾不必要地重复表述。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "assets",
+      "metric_text": "总资产",
+      "start": 633,
+      "end": 717,
+      "text": "参考《华电国际电力股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易报告书》的分析数据，假设以2024年12月32日为基准日，重组完成后公司总资产将增长%；",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "华电国际电力股份有限公司",
+        "重组完成后公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 717,
+      "end": 769,
+      "text": "假设以2024年度经营数据为基准，重组完成后公司营业收入将增长25.07%、归母净利润将增长5.93%。",
+      "quantities": [
+        {
+          "value": "25.07",
+          "unit": "%",
+          "start": 748,
+          "end": 754
+        },
+        {
+          "value": "5.93",
+          "unit": "%",
+          "start": 763,
+          "end": 768
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "重组完成后公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 717,
+      "end": 769,
+      "text": "假设以2024年度经营数据为基准，重组完成后公司营业收入将增长25.07%、归母净利润将增长5.93%。",
+      "quantities": [
+        {
+          "value": "25.07",
+          "unit": "%",
+          "start": 748,
+          "end": 754
+        },
+        {
+          "value": "5.93",
+          "unit": "%",
+          "start": 763,
+          "end": 768
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "重组完成后公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 974,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 974,
+    "processed_ranges": [
+      [
+        0,
+        974
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 19.839736,
+  "source_content_sha256": "e75a0689209ccd86a7406bea76549f468848f21f6d6bd7eaa8be9742c5243790"
+}

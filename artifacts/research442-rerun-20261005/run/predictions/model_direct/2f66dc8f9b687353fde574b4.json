@@ -1,0 +1,377 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000469",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "术语误用",
+      "reason": "“专利写作”不是规范术语，应为“专利申请”或“专利受理”，影响含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 457,
+          "end": 519,
+          "text": "截至2024年9月，公司在合成生物学领域已获得8项专利授权和10项专利写作处于受理状态，同时，公司合成生物车间正式投产运营。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年9月，公司在合成生物学领域已获得8项专利授权和10项专利写作处于受理状态，同时，公司合成生物车间正式投产运营。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 457,
+          "end": 519,
+          "text": "截至2024年9月，公司在合成生物学领域已获得8项专利授权和10项专利写作处于受理状态，同时，公司合成生物车间正式投产运营。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1deb0916a35f179ce537df1e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同句两次出现“食品添加剂”，属不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 744,
+          "end": 809,
+          "text": "2025年2月，公司产品通过美国FDA GRAS认证，可作为食品添加剂、膳食补充剂、食品添加剂使用，可在美国食品、饮料市场上销售。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年2月，公司产品通过美国FDA GRAS认证，可作为食品添加剂、膳食补充剂、食品添加剂使用，可在美国食品、饮料市场上销售。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 744,
+          "end": 809,
+          "text": "2025年2月，公司产品通过美国FDA GRAS认证，可作为食品添加剂、膳食补充剂、食品添加剂使用，可在美国食品、饮料市场上销售。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "42b163d0ef003c1828b8b07a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "该句在下一行被完整重复一次，属冗余语句。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "4）麦角硫因——正在积极研发。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "31d55ec2442c950b17c36686",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "“25-24年”起止年份倒置，起点晚于终点，时间关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1258,
+          "end": 1451,
+          "text": "4、盈利预测&投资建议：由于公司因项目公司管理团队在考核期内未达业绩指标，公司根据协议约定提前终止了工业大麻雾化项目合作，我们调整公司盈利预测，预计公司25-24年营收20.81/24.80/29.96亿元（25-26年前值24.09/29.15亿元），归母净利润2.13/2.88/3.96亿元（25-26年前值2.63/3.46亿元），对应EPS0.29/0.39/0.53元/股。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4、盈利预测&投资建议：由于公司因项目公司管理团队在考核期内未达业绩指标，公司根据协议约定提前终止了工业大麻雾化项目合作，我们调整公司盈利预测，预计公司25-24年营收20.81/24.80/29.96亿元（25-26年前值24.09/29.15亿元），归母净利润2.13/2.88/3.96亿元（25-26年前值2.63/3.46亿元），对应EPS0.29/0.39/0.53元/股。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1258,
+          "end": 1451,
+          "text": "4、盈利预测&投资建议：由于公司因项目公司管理团队在考核期内未达业绩指标，公司根据协议约定提前终止了工业大麻雾化项目合作，我们调整公司盈利预测，预计公司25-24年营收20.81/24.80/29.96亿元（25-26年前值24.09/29.15亿元），归母净利润2.13/2.88/3.96亿元（25-26年前值2.63/3.46亿元），对应EPS0.29/0.39/0.53元/股。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2aba35139488dacaf6fd3b22",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1523
+        ]
+      ],
+      "estimated_input_tokens": 6131,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:25:28.735215+00:00",
+        "request_sha256": "10f2f9992f97400a6edafb24aa6720beeb019dcd12a3537e9507b6b6f7dfc845",
+        "input_token_estimate": 17067,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279211",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b16a6565169641359a80d5c9829c7747",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3952,
+        "output_tokens": 11330,
+        "usage_source": "provider",
+        "duration_seconds": 42.825095,
+        "cost_cny": "0.049272"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "截至2024年9月，公司在合成生物学领域已获得8项专利授权和10项专利写作处于受理状态，同时，公司合成生物车间正式投产运营。"
+          }
+        ],
+        "reason": "“专利写作”不是规范术语，应为“专利申请”或“专利受理”，影响含义。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025年2月，公司产品通过美国FDA GRAS认证，可作为食品添加剂、膳食补充剂、食品添加剂使用，可在美国食品、饮料市场上销售。"
+          }
+        ],
+        "reason": "同句两次出现“食品添加剂”，属不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "4）麦角硫因——正在积极研发。"
+          }
+        ],
+        "reason": "该句在下一行被完整重复一次，属冗余语句。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "4、盈利预测&投资建议：由于公司因项目公司管理团队在考核期内未达业绩指标，公司根据协议约定提前终止了工业大麻雾化项目合作，我们调整公司盈利预测，预计公司25-24年营收20.81/24.80/29.96亿元（25-26年前值24.09/29.15亿元），归母净利润2.13/2.88/3.96亿元（25-26年前值2.63/3.46亿元），对应EPS0.29/0.39/0.53元/股。"
+          }
+        ],
+        "reason": "“25-24年”起止年份倒置，起点晚于终点，时间关系矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "4）麦角硫因——正在积极研发。"
+          }
+        ],
+        "reason": "该句在下一行被完整重复一次，属冗余语句。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1258,
+      "end": 1451,
+      "text": "4、盈利预测&投资建议：由于公司因项目公司管理团队在考核期内未达业绩指标，公司根据协议约定提前终止了工业大麻雾化项目合作，我们调整公司盈利预测，预计公司25-24年营收20.81/24.80/29.96亿元（25-26年前值24.09/29.15亿元），归母净利润2.13/2.88/3.96亿元（25-26年前值2.63/3.46亿元），对应EPS0.29/0.39/0.53元/股。",
+      "quantities": [
+        {
+          "value": "29.96",
+          "unit": "亿元",
+          "start": 1354,
+          "end": 1361
+        },
+        {
+          "value": "29.15",
+          "unit": "亿元",
+          "start": 1376,
+          "end": 1383
+        },
+        {
+          "value": "3.96",
+          "unit": "亿元",
+          "start": 1400,
+          "end": 1406
+        },
+        {
+          "value": "3.46",
+          "unit": "亿元",
+          "start": 1420,
+          "end": 1426
+        },
+        {
+          "value": "0.53",
+          "unit": "元/股",
+          "start": 1443,
+          "end": 1450
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "由于公司因项目公司",
+        "我们调整公司",
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1258,
+      "end": 1451,
+      "text": "4、盈利预测&投资建议：由于公司因项目公司管理团队在考核期内未达业绩指标，公司根据协议约定提前终止了工业大麻雾化项目合作，我们调整公司盈利预测，预计公司25-24年营收20.81/24.80/29.96亿元（25-26年前值24.09/29.15亿元），归母净利润2.13/2.88/3.96亿元（25-26年前值2.63/3.46亿元），对应EPS0.29/0.39/0.53元/股。",
+      "quantities": [
+        {
+          "value": "29.96",
+          "unit": "亿元",
+          "start": 1354,
+          "end": 1361
+        },
+        {
+          "value": "29.15",
+          "unit": "亿元",
+          "start": 1376,
+          "end": 1383
+        },
+        {
+          "value": "3.96",
+          "unit": "亿元",
+          "start": 1400,
+          "end": 1406
+        },
+        {
+          "value": "3.46",
+          "unit": "亿元",
+          "start": 1420,
+          "end": 1426
+        },
+        {
+          "value": "0.53",
+          "unit": "元/股",
+          "start": 1443,
+          "end": 1450
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "由于公司因项目公司",
+        "我们调整公司",
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1523,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1523,
+    "processed_ranges": [
+      [
+        0,
+        1523
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 42.852466,
+  "source_content_sha256": "0663712ac16830622da1fa0ecaa9615d2129ab25f9eec72086102798c9eeb15a"
+}

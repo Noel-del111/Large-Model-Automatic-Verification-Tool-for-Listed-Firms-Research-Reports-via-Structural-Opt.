@@ -1,0 +1,303 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000708",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "上证综指为指数，涨跌幅不应使用货币单位“元”，应使用点或百分比。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 60,
+          "end": 123,
+          "text": "周行情：本周（2025.5.26-2025.5.30）上证综指下跌0.03元，深证成指下跌0.91%，创业板指下跌1.40%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "周行情：本周（2025.5.26-2025.5.30）上证综指下跌0.03元，深证成指下跌0.91%，创业板指下跌1.40%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 60,
+          "end": 123,
+          "text": "周行情：本周（2025.5.26-2025.5.30）上证综指下跌0.03元，深证成指下跌0.91%，创业板指下跌1.40%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "722102abb01838dea4e85832",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "臻镭科技后括号为空，缺少股票代码或其他必要属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1038,
+          "end": 1051,
+          "text": "建议关注：臻镭科技（）等。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "建议关注：臻镭科技（）等。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1038,
+          "end": 1051,
+          "text": "建议关注：臻镭科技（）等。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d737e71440be03e2ddc44ffd",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "该句与此前“已完成小版本升级、当前版本为DeepSeek-R1-0528”重复表达同一信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 512,
+          "end": 564,
+          "text": "据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 512,
+          "end": 564,
+          "text": "据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b3fa25a4856cddc53d58a05e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称最新版本仍为0528，后文却出现版本号更晚的0530作为蒸馏来源，版本逻辑矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 512,
+          "end": 564,
+          "text": "据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。"
+        },
+        {
+          "kind": "source_text",
+          "start": 630,
+          "end": 712,
+          "text": "同时，DeepSeek方面还蒸馏DeepSeek-R1-0530的思维链后训练Qwen3-8B Base，得到了DeepSeek-R1-0528-Qwen3-8B。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。"
+        },
+        {
+          "text": "同时，DeepSeek方面还蒸馏DeepSeek-R1-0530的思维链后训练Qwen3-8B Base，得到了DeepSeek-R1-0528-Qwen3-8B。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 512,
+          "end": 564,
+          "text": "据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。"
+        },
+        {
+          "start": 630,
+          "end": 712,
+          "text": "同时，DeepSeek方面还蒸馏DeepSeek-R1-0530的思维链后训练Qwen3-8B Base，得到了DeepSeek-R1-0528-Qwen3-8B。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5c258767ef22733dca5a565f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1084
+        ]
+      ],
+      "estimated_input_tokens": 5516,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:18:40.089987+00:00",
+        "request_sha256": "e12c81272cd1b518ae7616443327cedf2e19a740fba394c035eceb19dd636dd9",
+        "input_token_estimate": 15391,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277535",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f6dff6f76bd945579dfcdfd36c59ad7d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3695,
+        "output_tokens": 6002,
+        "usage_source": "provider",
+        "duration_seconds": 24.067228,
+        "cost_cny": "0.027703",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "周行情：本周（2025.5.26-2025.5.30）上证综指下跌0.03元，深证成指下跌0.91%，创业板指下跌1.40%。"
+          }
+        ],
+        "reason": "上证综指为指数，涨跌幅不应使用货币单位“元”，应使用点或百分比。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "建议关注：臻镭科技（）等。"
+          }
+        ],
+        "reason": "臻镭科技后括号为空，缺少股票代码或其他必要属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。"
+          }
+        ],
+        "reason": "该句与此前“已完成小版本升级、当前版本为DeepSeek-R1-0528”重复表达同一信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。"
+          },
+          {
+            "text": "同时，DeepSeek方面还蒸馏DeepSeek-R1-0530的思维链后训练Qwen3-8B Base，得到了DeepSeek-R1-0528-Qwen3-8B。"
+          }
+        ],
+        "reason": "前文称最新版本仍为0528，后文却出现版本号更晚的0530作为蒸馏来源，版本逻辑矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1084,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1084,
+    "processed_ranges": [
+      [
+        0,
+        1084
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1084,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001595,
+  "source_content_sha256": "47650f5739d4c7f55a0ca868552203f5620d8058b8bfd92bb9580bf4f2ee4780"
+}

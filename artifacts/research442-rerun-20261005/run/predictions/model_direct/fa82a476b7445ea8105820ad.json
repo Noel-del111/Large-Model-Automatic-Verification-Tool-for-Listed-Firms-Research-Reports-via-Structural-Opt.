@@ -1,0 +1,637 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000341",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "计算错误",
+      "reason": "对外销售203.44万头加内部销售33.71万头等于237.15万头，与共计227.15万头不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 367,
+          "end": 463,
+          "text": "报告期内，公司销售生猪（生猪销售量：指对外销售+对集团内部屠宰企业销售）共计227.15万头，较去年同期增长49.40%；其中，对外销售203.44万头，对集团内部屠宰企业销售33.71万头。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "报告期内，公司销售生猪（生猪销售量：指对外销售+对集团内部屠宰企业销售）共计227.15万头，较去年同期增长49.40%；其中，对外销售203.44万头，对集团内部屠宰企业销售33.71万头。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 367,
+          "end": 463,
+          "text": "报告期内，公司销售生猪（生猪销售量：指对外销售+对集团内部屠宰企业销售）共计227.15万头，较去年同期增长49.40%；其中，对外销售203.44万头，对集团内部屠宰企业销售33.71万头。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "56f983b82e576f7955c059e8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "平均价格“1963-35元/头”数字格式异常，连字符位置疑似应为小数点。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 463,
+          "end": 519,
+          "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 463,
+          "end": 519,
+          "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c95d4f7ee80254ab93af621c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "2024年综合成本写13.9元/斤，后续同口径用元/公斤；13.9元/斤约27.8元/公斤，与13.7元/公斤矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 564,
+          "end": 686,
+          "text": "经测算，公司2024年肉猪养殖综合成本约13.9元/斤，其中第4季度完全成本13.7元/公斤，较年初下降明显；25Q1单季度肉猪养殖综合成本为12.4元/公斤，环比上季度下降了1.3元，断奶仔猪成本270元/头，PSY29头，料肉比2.45，。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "经测算，公司2024年肉猪养殖综合成本约13.9元/斤，其中第4季度完全成本13.7元/公斤，较年初下降明显；25Q1单季度肉猪养殖综合成本为12.4元/公斤，环比上季度下降了1.3元，断奶仔猪成本270元/头，PSY29头，料肉比2.45，。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 564,
+          "end": 686,
+          "text": "经测算，公司2024年肉猪养殖综合成本约13.9元/斤，其中第4季度完全成本13.7元/公斤，较年初下降明显；25Q1单季度肉猪养殖综合成本为12.4元/公斤，环比上季度下降了1.3元，断奶仔猪成本270元/头，PSY29头，料肉比2.45，。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "944918de4dbe7f7d4d465450",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年”不是合法年份，应为2024年或24年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 803,
+          "end": 866,
+          "text": "公司129年屠宰及猪副产品业务实现收入13.86亿元，同比+20.89%；毛利率为15.52%，较上年上升10.49个百分点。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司129年屠宰及猪副产品业务实现收入13.86亿元，同比+20.89%；毛利率为15.52%，较上年上升10.49个百分点。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 803,
+          "end": 866,
+          "text": "公司129年屠宰及猪副产品业务实现收入13.86亿元，同比+20.89%；毛利率为15.52%，较上年上升10.49个百分点。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "56a012f49d6bd07b91217bf9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "外销6.89万吨加内部销售60.16万吨等于67.05万吨，大于总销售60.05万吨，分项与合计矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1033,
+          "end": 1126,
+          "text": "公司饲料销售60.05万吨，其中外销6.89万吨、向集团内部养殖企业销售60.16万吨；饲料业务实现营收2.92亿元，同比-41.31%；毛利率为22.33%，较上年增8.75个百分点。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司饲料销售60.05万吨，其中外销6.89万吨、向集团内部养殖企业销售60.16万吨；饲料业务实现营收2.92亿元，同比-41.31%；毛利率为22.33%，较上年增8.75个百分点。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1033,
+          "end": 1126,
+          "text": "公司饲料销售60.05万吨，其中外销6.89万吨、向集团内部养殖企业销售60.16万吨；饲料业务实现营收2.92亿元，同比-41.31%；毛利率为22.33%，较上年增8.75个百分点。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "099bdbf391ff2d4901e5b8bb",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1325
+        ]
+      ],
+      "estimated_input_tokens": 5728,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:27:28.762207+00:00",
+        "request_sha256": "3ed60a9cf5accd27626a1eaff3f741cd049a05e5ad31d87318b3b6312677c13c",
+        "input_token_estimate": 15984,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278128",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6e8953fdcfb94d10915619a46b77adef",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3871,
+        "output_tokens": 7501,
+        "usage_source": "provider",
+        "duration_seconds": 27.415165,
+        "cost_cny": "0.033875"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "报告期内，公司销售生猪（生猪销售量：指对外销售+对集团内部屠宰企业销售）共计227.15万头，较去年同期增长49.40%；其中，对外销售203.44万头，对集团内部屠宰企业销售33.71万头。"
+          }
+        ],
+        "reason": "对外销售203.44万头加内部销售33.71万头等于237.15万头，与共计227.15万头不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。"
+          }
+        ],
+        "reason": "平均价格“1963-35元/头”数字格式异常，连字符位置疑似应为小数点。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "经测算，公司2024年肉猪养殖综合成本约13.9元/斤，其中第4季度完全成本13.7元/公斤，较年初下降明显；25Q1单季度肉猪养殖综合成本为12.4元/公斤，环比上季度下降了1.3元，断奶仔猪成本270元/头，PSY29头，料肉比2.45，。"
+          }
+        ],
+        "reason": "2024年综合成本写13.9元/斤，后续同口径用元/公斤；13.9元/斤约27.8元/公斤，与13.7元/公斤矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "公司129年屠宰及猪副产品业务实现收入13.86亿元，同比+20.89%；毛利率为15.52%，较上年上升10.49个百分点。"
+          }
+        ],
+        "reason": "“129年”不是合法年份，应为2024年或24年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司饲料销售60.05万吨，其中外销6.89万吨、向集团内部养殖企业销售60.16万吨；饲料业务实现营收2.92亿元，同比-41.31%；毛利率为22.33%，较上年增8.75个百分点。"
+          }
+        ],
+        "reason": "外销6.89万吨加内部销售60.16万吨等于67.05万吨，大于总销售60.05万吨，分项与合计矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 67,
+      "end": 97,
+      "text": "2024年，公司实现营收55.84亿元，同比+43.51%；",
+      "quantities": [
+        {
+          "value": "55.84",
+          "unit": "亿元",
+          "start": 79,
+          "end": 86
+        },
+        {
+          "value": "+43.51",
+          "unit": "%",
+          "start": 89,
+          "end": 96
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 97,
+      "end": 128,
+      "text": "归属于上市公司股东的净利润6.86亿元，同比+271.16%；",
+      "quantities": [
+        {
+          "value": "6.86",
+          "unit": "亿元",
+          "start": 110,
+          "end": 116
+        },
+        {
+          "value": "+271.16",
+          "unit": "%",
+          "start": 119,
+          "end": 127
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "归属于上市公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 128,
+      "end": 155,
+      "text": "扣非后归母净利润为6.96亿元，同比+275.62%；",
+      "quantities": [
+        {
+          "value": "6.96",
+          "unit": "亿元",
+          "start": 137,
+          "end": 143
+        },
+        {
+          "value": "+275.62",
+          "unit": "%",
+          "start": 146,
+          "end": 154
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 165,
+      "end": 196,
+      "text": "25Q1，公司单季实现营收14.71亿元，同比+35.97%；",
+      "quantities": [
+        {
+          "value": "14.71",
+          "unit": "亿元",
+          "start": 178,
+          "end": 185
+        },
+        {
+          "value": "+35.97",
+          "unit": "%",
+          "start": 188,
+          "end": 195
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 196,
+      "end": 222,
+      "text": "实现归母净利润2.28亿元，同比+6510.85%；",
+      "quantities": [
+        {
+          "value": "2.28",
+          "unit": "亿元",
+          "start": 203,
+          "end": 209
+        },
+        {
+          "value": "+6510.85",
+          "unit": "%",
+          "start": 212,
+          "end": 221
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 222,
+      "end": 250,
+      "text": "扣非后归母净利润为2.28亿元，同比+3895.05%。",
+      "quantities": [
+        {
+          "value": "2.28",
+          "unit": "亿元",
+          "start": 231,
+          "end": 237
+        },
+        {
+          "value": "+3895.05",
+          "unit": "%",
+          "start": 240,
+          "end": 249
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 281,
+      "end": 316,
+      "text": "公司2024年生猪养殖业务实现营收37.97亿元，同比+81.53%；",
+      "quantities": [
+        {
+          "value": "37.97",
+          "unit": "亿元",
+          "start": 298,
+          "end": 305
+        },
+        {
+          "value": "+81.53",
+          "unit": "%",
+          "start": 308,
+          "end": 315
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 316,
+      "end": 343,
+      "text": "毛利率为23.42%，较上年提升了20.81个百分点。",
+      "quantities": [
+        {
+          "value": "23.42",
+          "unit": "%",
+          "start": 320,
+          "end": 326
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 840,
+      "end": 866,
+      "text": "毛利率为15.52%，较上年上升10.49个百分点。",
+      "quantities": [
+        {
+          "value": "15.52",
+          "unit": "%",
+          "start": 844,
+          "end": 850
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 866,
+      "end": 895,
+      "text": "深加工产品实现营收5219.96万元，同比+11.32%；",
+      "quantities": [
+        {
+          "value": "5219.96",
+          "unit": "万元",
+          "start": 875,
+          "end": 884
+        },
+        {
+          "value": "+11.32",
+          "unit": "%",
+          "start": 887,
+          "end": 894
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 895,
+      "end": 922,
+      "text": "毛利率为-17.63%，较上年上升12.45个百分点。",
+      "quantities": [
+        {
+          "value": "-17.63",
+          "unit": "%",
+          "start": 899,
+          "end": 906
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1077,
+      "end": 1102,
+      "text": "饲料业务实现营收2.92亿元，同比-41.31%；",
+      "quantities": [
+        {
+          "value": "2.92",
+          "unit": "亿元",
+          "start": 1085,
+          "end": 1091
+        },
+        {
+          "value": "-41.31",
+          "unit": "%",
+          "start": 1094,
+          "end": 1101
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1102,
+      "end": 1126,
+      "text": "毛利率为22.33%，较上年增8.75个百分点。",
+      "quantities": [
+        {
+          "value": "22.33",
+          "unit": "%",
+          "start": 1106,
+          "end": 1112
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1185,
+      "end": 1248,
+      "text": "我们预计，2025-2026年公司归母净利润7.62亿元/8.36亿元，截至当前股价，对应的PE为11.15x和10.17x。",
+      "quantities": [
+        {
+          "value": "7.62",
+          "unit": "亿元",
+          "start": 1207,
+          "end": 1213
+        },
+        {
+          "value": "8.36",
+          "unit": "亿元",
+          "start": 1214,
+          "end": 1220
+        }
+      ],
+      "periods": [
+        "2026年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1325,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1325,
+    "processed_ranges": [
+      [
+        0,
+        1325
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 14,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 27.440664,
+  "source_content_sha256": "a618ac230127f2018325bc5eea38306dc713cdc78ee7e2ea4eeddfe51fd73575"
+}

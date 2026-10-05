@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"到2022年2月线下机构压减率为%，线上机构压减率为87.07%。\"}], \"reason\": \"“线下机构压减率为%”中百分号前缺少应报告的数值。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"教育行业呈现剩者为王的特点，教育上市公司成为此轮教育市场复苏的最主要的受益者，债权资产、租赁负债、合同负债、经营性净现金流、营业收入、净利润等财务指标大幅改善，业绩加速释放。\"}], \"reason\": \"前文已出现“教育行业呈现剩者为王的特点，教育上市公司成为此轮教育市场复苏的最主要的受益者”，此处重复同一判断。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:36:37.587742+00:00",
+    "request_sha256": "b26f61fcec79db0d0515fea683479153f2e44c04bc2313d761ede21ddf7384a0",
+    "input_token_estimate": 16438,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278582",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9cd5ec8051fd43f284a53ed4a8c8a2df",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3779,
+    "output_tokens": 5711,
+    "usage_source": "provider",
+    "duration_seconds": 25.002459,
+    "cost_cny": "0.026623"
+  },
+  "cache_request": {
+    "key": "962fcaed96d0d997ee338f98d0f89532d5fc20cfae8053dd443494c6cbf95cb5",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b26f61fcec79db0d0515fea683479153f2e44c04bc2313d761ede21ddf7384a0"
+  }
+}

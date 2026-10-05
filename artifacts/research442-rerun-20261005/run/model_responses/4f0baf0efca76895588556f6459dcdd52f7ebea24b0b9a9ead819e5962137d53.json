@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"1395年是国内海上风电大年，国内各地海风招标陆续落地、建设提速，行业基本面持续向好，整机建议关注金风科技、明阳智能，海缆建议关注东方电缆、中天科技，管桩建议关注大金重工，零部件细分建议关注盘古智能。\"}],\"reason\":\"报告期为2025年，却称1395年为国内海上风电大年，与当前时间背景冲突。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"其中申万电力备设下跌0.71%，较沪深300跑输 pct。\"}],\"reason\":\"“跑输”与“pct”之间缺少应报告的百分点数值，明确数值位置为空。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"其中申万电力备设下跌0.71%，较沪深300跑输 pct。\"}],\"reason\":\"“申万电力备设”不是有效行业名称，应为“申万电力设备”。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"此次港股上市，全球发售股份1.35股（绿鞋前），发行价263.00港元/股。\"}],\"reason\":\"全球发售股份写作“1.35股”，缺少“亿”等量级，单位量纲错误。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"港股开盘价296.00港元/股，较发行价上涨22.55%。\"}],\"reason\":\"296.00除以263.00再减1约为12.55%，与原文22.55%不符。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"需求端呈现结构性韧性：国内大基地项目储备、欧洲库存去化加速，叠加N型技术迭代带来的成本优势，支撑5月组件排产仍维持较高水平。\\n需求端呈现结构性韧性：国内大基地项目储备、欧洲库存去化加速，叠加N型技术迭代带来的成本优势，支撑5月组件排产仍维持较高水平。\"}],\"reason\":\"同一“需求端呈现结构性韧性”整句在光伏段紧邻重复，未增加新信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:09:19.296658+00:00",
+    "request_sha256": "bc6f71399b42f20ef6ab1ca34edc1229755d90b0f63f9b1c46aa26bf59d3147b",
+    "input_token_estimate": 15885,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278029",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c054f17d413b48cd8d46d62a8cd82a61",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3738,
+    "output_tokens": 6559,
+    "usage_source": "provider",
+    "duration_seconds": 29.928114,
+    "cost_cny": "0.029974"
+  },
+  "cache_request": {
+    "key": "4f0baf0efca76895588556f6459dcdd52f7ebea24b0b9a9ead819e5962137d53",
+    "purpose": "text_review.detect",
+    "messages_sha256": "bc6f71399b42f20ef6ab1ca34edc1229755d90b0f63f9b1c46aa26bf59d3147b"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"据我们编制的国信化工价格指数，截至2025年5月29日，国信化工氟化工价格指数、国信化工制冷剂价格指数分别报1205.10、1799.47点，分别较4月底-0.90%、+0.35%。\"\n        },\n        {\n          \"text\": \"据我们编制的国信化工价格指数，截至2025年5月29日，国信化工氟化工价格指数、国信化工制冷剂价格指数分别报1205.10、1799.47点，分别较4月底-0.90%、+0.35%。\"\n        }\n      ],\n      \"reason\": \"同一国信化工价格指数数据在前后两段完全重复，未增加新信息。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"内贸价格方面，根据百川盈孚、卓创咨询，本月R22维持报价36000分/吨；R134a报价提升至47500元/吨，较上月+500元/吨；R125维持报价46000元/吨；R32报价提升至49000元/吨，较上月+1000元/吨；R410a维持报价48000元/吨；R152a维持报价28000元/吨；R142b维持报价30000元/吨；R143a维持报价46000元/吨。\"\n        }\n      ],\n      \"reason\": \"R22报价使用“分/吨”，与同段其他产品“元/吨”单位不一致，应为元/吨。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"具体来看，2025年4月R32出口均价为41885元/吨，与内贸价差为6815元/吨；R22出口均价为24577元/吨，与内贸价差9923元/吨；R134a出口均价为42241元/吨，与内贸价差为4009元/吨；R125/R143系列出口均价为31499元/吨，与内贸价差14751元/吨。\"\n        }\n      ],\n      \"reason\": \"按内贸价与出口均价计算，R32价差7115、R22价差11423、R134a价差5259、R125/R143价差14501，均与所列价差不符。\"\n    },\n    {\n      \"error_type\": \"属性值缺失错误\",\n      \"spans\": [\n        {\n          \"text\": \"2025年4月23日，生态环境部发布《中国履行<关于消耗臭氧层物质的蒙特利尔议定书>国家方案()》，主要目标包括：\"\n        }\n      ],\n      \"reason\": \"国家方案名称括号内为空，缺少应标注的年份（2025-2030年）。\"\n    },\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"排产方面，据产业在线家用空调内销排产报告显示，2025年6月排产1366万台，同比+29.3%；7月排产 万台，同比+22.8%；8月排产694万台，同比-9.2%。\"\n        }\n      ],\n      \"reason\": \"7月内销排产数值位置为空，只有单位“万台”和同比增速。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"二季度受夏季高温天气驱动，制冷剂消费进入传动旺季，在低库存背景下交易活跃度逐步提升。\"\n        }\n      ],\n      \"reason\": \"“传动旺季”应为“传统旺季”，此处用词错误导致行业季节表述不当。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:40:10.115899+00:00",
+    "request_sha256": "cfe5b1c1829958883744a5329c6e63a6d86ecfd48353812cf412bc29940e979e",
+    "input_token_estimate": 18425,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280569",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ca3db02df64e412ea3d6530c56d7dd1f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4498,
+    "output_tokens": 10563,
+    "usage_source": "provider",
+    "duration_seconds": 40.113678,
+    "cost_cny": "0.04675"
+  },
+  "cache_request": {
+    "key": "e8c6686e0d9bbbfd881cd4e8f559e392b499328016b432723507dace69f94711",
+    "purpose": "text_review.detect",
+    "messages_sha256": "cfe5b1c1829958883744a5329c6e63a6d86ecfd48353812cf412bc29940e979e"
+  }
+}

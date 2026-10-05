@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"事件：近日，国家发改委、能源局发布《》。\",\"start\":114,\"end\":136}],\"reason\":\"书名号内政策文件名称完全为空，无法识别被发布文件。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"电源可由负荷债权，也由发电企业或双方成立的合资公司债权。\",\"start\":675,\"end\":713}],\"reason\":\"用“债权”描述电源投资主体关系，混淆投资/出资与债权概念，导致含义错误。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。\",\"start\":782,\"end\":878}],\"reason\":\"同一段落先称“不断提高自发自用比例”，后称“并不断降低自发自用比例”，方向相反。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。\",\"start\":782,\"end\":878}],\"reason\":\"政策近日发布，目标时点却写“129年前”，目标时间早于政策发布时间，先后冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:28:14.287271+00:00",
+    "request_sha256": "1fa6ab5da30e6f50aabf793bd1d5befbbbc4d5f1f9f19b41ac4b8c9ce057eb89",
+    "input_token_estimate": 17256,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.2794",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "24b31d7576df474c9dd8c1d8e675ed6d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3994,
+    "output_tokens": 7152,
+    "usage_source": "provider",
+    "duration_seconds": 32.270849,
+    "cost_cny": "0.032602"
+  },
+  "cache_request": {
+    "key": "4cba8200fbdf9ed5ed527a7eb0b185169077d76e471428256e8e531d877ee7d5",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1fa6ab5da30e6f50aabf793bd1d5befbbbc4d5f1f9f19b41ac4b8c9ce057eb89"
+  }
+}

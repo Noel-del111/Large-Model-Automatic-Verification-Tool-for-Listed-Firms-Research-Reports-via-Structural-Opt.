@@ -1,0 +1,565 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000390",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "2026-2025年区间终点2025年早于起点2026年，年份顺序颠倒。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 210,
+          "end": 357,
+          "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 210,
+          "end": 357,
+          "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0f9f6f9ef74220568e0d2788",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "单班产值后缺少具体金额数值，仅以“亿元左右”表示。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 751,
+          "end": 760,
+          "text": "单班产值亿元左右。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "单班产值亿元左右。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 751,
+          "end": 760,
+          "text": "单班产值亿元左右。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "626d0aea0988608118e4057e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027年仅三年，EPS却列四个值，与盈利预测、PE数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 210,
+          "end": 357,
+          "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 210,
+          "end": 357,
+          "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1747b03e438f4222087a561d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          885
+        ]
+      ],
+      "estimated_input_tokens": 5345,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:18:19.500045+00:00",
+        "request_sha256": "85ba9b874046de5027dddf33d83bf06503857675cc6c74b5e355c9a3b3c7412d",
+        "input_token_estimate": 14917,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277061",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "78f809c13a4643ad9c717151fcc36f23",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3576,
+        "output_tokens": 7510,
+        "usage_source": "provider",
+        "duration_seconds": 29.95518,
+        "cost_cny": "0.033616"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+          }
+        ],
+        "reason": "2026-2025年区间终点2025年早于起点2026年，年份顺序颠倒。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "单班产值亿元左右。"
+          }
+        ],
+        "reason": "单班产值后缺少具体金额数值，仅以“亿元左右”表示。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+          }
+        ],
+        "reason": "2025-2027年仅三年，EPS却列四个值，与盈利预测、PE数量不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 0,
+      "end": 44,
+      "text": "北交所信息更新：云梦电子二期预计2025年中进入试运行，2025Q1归母净利润+42%\n",
+      "quantities": [
+        {
+          "value": "+42",
+          "unit": "%",
+          "start": 39,
+          "end": 43
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 59,
+      "end": 96,
+      "text": "2025Q1营收+48.05%归母净利润+41.60%，维持“增持”评级\n",
+      "quantities": [
+        {
+          "value": "+48.05",
+          "unit": "%",
+          "start": 67,
+          "end": 74
+        },
+        {
+          "value": "+41.60",
+          "unit": "%",
+          "start": 79,
+          "end": 86
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 59,
+      "end": 96,
+      "text": "2025Q1营收+48.05%归母净利润+41.60%，维持“增持”评级\n",
+      "quantities": [
+        {
+          "value": "+48.05",
+          "unit": "%",
+          "start": 67,
+          "end": 74
+        },
+        {
+          "value": "+41.60",
+          "unit": "%",
+          "start": 79,
+          "end": 86
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 97,
+      "end": 132,
+      "text": "2024全年开特股份实现营业收入82,636.29万元+26.50%。",
+      "quantities": [
+        {
+          "value": "82,636.29",
+          "unit": "万元",
+          "start": 113,
+          "end": 124
+        },
+        {
+          "value": "+26.50",
+          "unit": "%",
+          "start": 124,
+          "end": 131
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 132,
+      "end": 157,
+      "text": "归母净利润为13,784.57万元+21.24%。",
+      "quantities": [
+        {
+          "value": "13,784.57",
+          "unit": "万元",
+          "start": 138,
+          "end": 149
+        },
+        {
+          "value": "+21.24",
+          "unit": "%",
+          "start": 149,
+          "end": 156
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 157,
+      "end": 210,
+      "text": "2025Q1实现营收2.40亿元同比增长48.05%，归母净利润4,013.01万元同比增长41.60%。",
+      "quantities": [
+        {
+          "value": "2.40",
+          "unit": "亿元",
+          "start": 167,
+          "end": 173
+        },
+        {
+          "value": "48.05",
+          "unit": "%",
+          "start": 177,
+          "end": 183
+        },
+        {
+          "value": "4,013.01",
+          "unit": "万元",
+          "start": 189,
+          "end": 199
+        },
+        {
+          "value": "41.60",
+          "unit": "%",
+          "start": 203,
+          "end": 209
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 157,
+      "end": 210,
+      "text": "2025Q1实现营收2.40亿元同比增长48.05%，归母净利润4,013.01万元同比增长41.60%。",
+      "quantities": [
+        {
+          "value": "2.40",
+          "unit": "亿元",
+          "start": 167,
+          "end": 173
+        },
+        {
+          "value": "48.05",
+          "unit": "%",
+          "start": 177,
+          "end": 183
+        },
+        {
+          "value": "4,013.01",
+          "unit": "万元",
+          "start": 189,
+          "end": 199
+        },
+        {
+          "value": "41.60",
+          "unit": "%",
+          "start": 203,
+          "end": 209
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 210,
+      "end": 357,
+      "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "2.45",
+          "unit": "亿元",
+          "start": 289,
+          "end": 295
+        },
+        {
+          "value": "1.32",
+          "unit": "元",
+          "start": 317,
+          "end": 322
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 359,
+      "end": 466,
+      "text": "执行器类产品营收达到3.27亿元+55.4%，对比亚迪销售占比达到31.88%2024全年开特股份在传感器类、控制器类和执行器类产品销售收入均呈现快速增长态势，分别同比增长14.30%、11.25%和55.40%。",
+      "quantities": [
+        {
+          "value": "3.27",
+          "unit": "亿元",
+          "start": 369,
+          "end": 375
+        },
+        {
+          "value": "+55.4",
+          "unit": "%",
+          "start": 375,
+          "end": 381
+        },
+        {
+          "value": "31.88",
+          "unit": "%",
+          "start": 392,
+          "end": 398
+        },
+        {
+          "value": "14.30",
+          "unit": "%",
+          "start": 445,
+          "end": 451
+        },
+        {
+          "value": "11.25",
+          "unit": "%",
+          "start": 452,
+          "end": 458
+        },
+        {
+          "value": "55.40",
+          "unit": "%",
+          "start": 459,
+          "end": 465
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 552,
+      "end": 630,
+      "text": "其中执行器类产品营收达到3.27亿元，对应毛利率25.61%，较2023增加2.61pct，毛利率较高的执行器类产品如水阀电机、格栅电机等产品销售比重提高。",
+      "quantities": [
+        {
+          "value": "3.27",
+          "unit": "亿元",
+          "start": 564,
+          "end": 570
+        },
+        {
+          "value": "25.61",
+          "unit": "%",
+          "start": 576,
+          "end": 582
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 552,
+      "end": 630,
+      "text": "其中执行器类产品营收达到3.27亿元，对应毛利率25.61%，较2023增加2.61pct，毛利率较高的执行器类产品如水阀电机、格栅电机等产品销售比重提高。",
+      "quantities": [
+        {
+          "value": "3.27",
+          "unit": "亿元",
+          "start": 564,
+          "end": 570
+        },
+        {
+          "value": "25.61",
+          "unit": "%",
+          "start": 576,
+          "end": 582
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 552,
+      "end": 630,
+      "text": "其中执行器类产品营收达到3.27亿元，对应毛利率25.61%，较2023增加2.61pct，毛利率较高的执行器类产品如水阀电机、格栅电机等产品销售比重提高。",
+      "quantities": [
+        {
+          "value": "3.27",
+          "unit": "亿元",
+          "start": 564,
+          "end": 570
+        },
+        {
+          "value": "25.61",
+          "unit": "%",
+          "start": 576,
+          "end": 582
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 885,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 885,
+    "processed_ranges": [
+      [
+        0,
+        885
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 29.980364,
+  "source_content_sha256": "f85bef1fbded8ce82c57e33ff03eef30800f398e82d1b80898e6124d3186024d"
+}

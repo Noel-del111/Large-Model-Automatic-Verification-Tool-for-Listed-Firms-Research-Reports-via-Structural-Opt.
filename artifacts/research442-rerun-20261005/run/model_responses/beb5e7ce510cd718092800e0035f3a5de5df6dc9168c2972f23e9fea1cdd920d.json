@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"近5年，公司直销收入占比从50.78%下降至32.61%，自主产品收入占比从50.03%降低至75.07%。\"}], \"reason\": \"自主产品收入占比从50.03%到75.07%是上升，却表述为“降低”，数字变化方向与文字相反。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"其中免疫试剂10.29亿（+8.04%），生化试剂4.99亿（-13.53%），临检试剂2.14亿（+21.77%），自主仪器收入1.58万亿（+6.12%），公司在流水线和智慧化实验室解决方案的推进卓有成效。\"}], \"reason\": \"自主仪器收入1.58万亿与公司总营收25.49亿严重不符，单位应为亿而非万亿。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:23:07.246725+00:00",
+    "request_sha256": "f96f8d1a2d25e6b6b83169388090b9b7b0d3e1bfff0076088de18605669a0d02",
+    "input_token_estimate": 15855,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277999",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c8bab974e3cc4ea19d684453e4948397",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3842,
+    "output_tokens": 7996,
+    "usage_source": "provider",
+    "duration_seconds": 29.422951,
+    "cost_cny": "0.035826"
+  },
+  "cache_request": {
+    "key": "beb5e7ce510cd718092800e0035f3a5de5df6dc9168c2972f23e9fea1cdd920d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "f96f8d1a2d25e6b6b83169388090b9b7b0d3e1bfff0076088de18605669a0d02"
+  }
+}

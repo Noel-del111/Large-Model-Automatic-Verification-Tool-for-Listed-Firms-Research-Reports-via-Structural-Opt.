@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000393",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "2103d81344a4b6834e38c092",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 438,
+          "end": 491,
+          "text": "2022-2015年，公司总营收/归母净利润CAGR分别为31.3%/42.3%，22年为公司业绩巅峰期。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1066,
+    "total_chars": 1066,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.000942,
+  "source_content_sha256": "e4ea6804376fcaee5c191b2429d2d90a1c12f4edfefc38b2701bad220b57dc94"
+}

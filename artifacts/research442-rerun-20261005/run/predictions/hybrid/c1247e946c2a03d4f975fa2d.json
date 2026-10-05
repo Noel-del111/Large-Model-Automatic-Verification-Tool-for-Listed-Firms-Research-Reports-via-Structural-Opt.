@@ -1,0 +1,285 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000629",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "术语误用",
+      "reason": "前文讨论的是重仓比例，此处指标名称应为重仓比例，而非换手率，指标名与数值口径不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 357,
+          "end": 446,
+          "text": "根据2025Q1基金重仓持股数据，社会服务行业重仓基金403家，环比增加75家，持股总市值为80.10亿元，环比增加9.46亿元；换手率为0.12%，环比增加0.012pcts。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据2025Q1基金重仓持股数据，社会服务行业重仓基金403家，环比增加75家，持股总市值为80.10亿元，环比增加9.46亿元；换手率为0.12%，环比增加0.012pcts。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 357,
+          "end": 446,
+          "text": "根据2025Q1基金重仓持股数据，社会服务行业重仓基金403家，环比增加75家，持股总市值为80.10亿元，环比增加9.46亿元；换手率为0.12%，环比增加0.012pcts。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "56f839138168b1c8355a5593",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万一级行业共31个，排名不可能为第52位，名次超出行业总数。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 446,
+          "end": 487,
+          "text": "在31个申万一级行业中，社服重仓比例排名为第52位，与上一季度相同，处于较后位次。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在31个申万一级行业中，社服重仓比例排名为第52位，与上一季度相同，处于较后位次。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 446,
+          "end": 487,
+          "text": "在31个申万一级行业中，社服重仓比例排名为第52位，与上一季度相同，处于较后位次。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ce6e73e91d6c8c10b5f7577b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "2025Q5不是合法季度，一年只有四个季度，时间标识不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 607,
+          "end": 655,
+          "text": "旅游及景区重仓比例2021Q2至今总体处于低位，2025Q5为0.03%，环比上一季度基本持平。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "旅游及景区重仓比例2021Q2至今总体处于低位，2025Q5为0.03%，环比上一季度基本持平。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 607,
+          "end": 655,
+          "text": "旅游及景区重仓比例2021Q2至今总体处于低位，2025Q5为0.03%，环比上一季度基本持平。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aa8d2bad67750ab66d13bdd1",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前5只个股中专业服务2只、旅游类4只，合计6只，超过前5只总数，命题不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 996,
+          "end": 1060,
+          "text": "基金重仓比例环比下降幅度前5个股包括华测检测、首旅酒店、九华旅游、锦江酒店、信测标准，其中2只为专业服务公司、4只为旅游类公司。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "基金重仓比例环比下降幅度前5个股包括华测检测、首旅酒店、九华旅游、锦江酒店、信测标准，其中2只为专业服务公司、4只为旅游类公司。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 996,
+          "end": 1060,
+          "text": "基金重仓比例环比下降幅度前5个股包括华测检测、首旅酒店、九华旅游、锦江酒店、信测标准，其中2只为专业服务公司、4只为旅游类公司。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9296089130c82e36a0d11487",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1095
+        ]
+      ],
+      "estimated_input_tokens": 5639,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:20:09.223234+00:00",
+        "request_sha256": "d9d5b5bfaa74c96c014c67b7b8f57f459465f0fd26914d03f0828794abefb99f",
+        "input_token_estimate": 15686,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27783",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1f3244c9f9f34082986f8f4fbc787fea",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3725,
+        "output_tokens": 5881,
+        "usage_source": "provider",
+        "duration_seconds": 22.655367,
+        "cost_cny": "0.027249",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "根据2025Q1基金重仓持股数据，社会服务行业重仓基金403家，环比增加75家，持股总市值为80.10亿元，环比增加9.46亿元；换手率为0.12%，环比增加0.012pcts。"
+          }
+        ],
+        "reason": "前文讨论的是重仓比例，此处指标名称应为重仓比例，而非换手率，指标名与数值口径不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "在31个申万一级行业中，社服重仓比例排名为第52位，与上一季度相同，处于较后位次。"
+          }
+        ],
+        "reason": "申万一级行业共31个，排名不可能为第52位，名次超出行业总数。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "旅游及景区重仓比例2021Q2至今总体处于低位，2025Q5为0.03%，环比上一季度基本持平。"
+          }
+        ],
+        "reason": "2025Q5不是合法季度，一年只有四个季度，时间标识不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "基金重仓比例环比下降幅度前5个股包括华测检测、首旅酒店、九华旅游、锦江酒店、信测标准，其中2只为专业服务公司、4只为旅游类公司。"
+          }
+        ],
+        "reason": "前5只个股中专业服务2只、旅游类4只，合计6只，超过前5只总数，命题不能同时成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1095,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1095,
+    "processed_ranges": [
+      [
+        0,
+        1095
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1095,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00147,
+  "source_content_sha256": "07e9ea68a5813b83d8b5574fbf16f935267f7517e43c215bcd8c77106a1f95a2"
+}

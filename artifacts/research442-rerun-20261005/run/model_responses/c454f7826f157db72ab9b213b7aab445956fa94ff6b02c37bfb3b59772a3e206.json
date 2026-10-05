@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"我国特高压投资规模的快速发展第一阶段是2017-2014年，投资额度达1966亿元\"}],\"reason\":\"起始年份2017晚于结束年份2014，该时间区间不成立。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"“十四五”期间规划建成投产风光大基地总装机约200GW，其中外送150GW、本地自用50GW，外送比例达到85%。\"}],\"reason\":\"150除以200等于75%，与原文85%不符。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"截止到2022年底，我国已建成“17交16直”的35条特高压线路。\"}],\"reason\":\"17加16等于33，与原文35条特高压线路矛盾。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"其规模化应用将随着经济性的进一步改善大大加快，助力新能源接入电网比例大幅降低。\"}],\"reason\":\"柔性直流输电应用应助力新能源接入比例提升，而非降低，与文意相反。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"其中柔直换流阀规模同步增长，2024年预计市场规模。\"}],\"reason\":\"“2024年预计市场规模”后直接句号，缺少具体数值。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"其核心是将IGBT驱动板卡、水熔板等压接在一起组合成的一个完整柔直模块。\"}],\"reason\":\"换流阀核心压接部件应为“水冷板”，“水熔板”表述不当。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:48:11.286429+00:00",
+    "request_sha256": "39e34fb5e12e2d6ec085e17e192044e081822feb2db95909f51aafaeb2c0d8ec",
+    "input_token_estimate": 16873,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279017",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d47f7315f1164d7ea220cd0bb61692c5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3889,
+    "output_tokens": 6909,
+    "usage_source": "provider",
+    "duration_seconds": 27.607229,
+    "cost_cny": "0.031525"
+  },
+  "cache_request": {
+    "key": "c454f7826f157db72ab9b213b7aab445956fa94ff6b02c37bfb3b59772a3e206",
+    "purpose": "text_review.detect",
+    "messages_sha256": "39e34fb5e12e2d6ec085e17e192044e081822feb2db95909f51aafaeb2c0d8ec"
+  }
+}

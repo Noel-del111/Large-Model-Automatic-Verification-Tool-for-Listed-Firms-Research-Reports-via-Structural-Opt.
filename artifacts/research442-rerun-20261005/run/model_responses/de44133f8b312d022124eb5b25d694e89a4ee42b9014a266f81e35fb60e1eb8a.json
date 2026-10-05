@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"板块0月累计下跌1.02%，跑输沪深300指数3.36个百分点，在申万行业中排名第31名；\"}], \"reason\": \"“0月”不是合法月份，无法对应真实统计期间。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"小米集团：2025年第一季度集团总收入为人民币1,113亿元，创历史新高，同比下降47.4%。\"}], \"reason\": \"同一季度收入不可能既创历史新高又同比下降47.4%。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"手机×AIoT分部收入为人民币亿元，同比增长22.8%\"}], \"reason\": \"“人民币”与“亿元”之间缺少应报告的具体收入金额。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"周观点：英伟达公布FY26Q1业绩，营收441亿次，超市场预期的433亿美元；\"}], \"reason\": \"营收单位应为美元，却写成“亿次”，与后文美元预期不可比。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"OpenAI宣布了“星际之门阿联酋”（）项目\"}], \"reason\": \"项目名称后的括号内为空，缺失应有的项目英文名或补充属性值。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:58:43.239996+00:00",
+    "request_sha256": "5fc627d809b13b5ccf207e10cd5998368e2f3d105fe68d7c28749b019c88ba83",
+    "input_token_estimate": 15834,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277978",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "78db5e6806a24206aa1615cf558b4ead",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3740,
+    "output_tokens": 6559,
+    "usage_source": "provider",
+    "duration_seconds": 25.653124,
+    "cost_cny": "0.029976"
+  },
+  "cache_request": {
+    "key": "de44133f8b312d022124eb5b25d694e89a4ee42b9014a266f81e35fb60e1eb8a",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5fc627d809b13b5ccf207e10cd5998368e2f3d105fe68d7c28749b019c88ba83"
+  }
+}

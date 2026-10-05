@@ -1,0 +1,439 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000378",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句话连续重复两次，信息完全相同，构成不必要的冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 119,
+          "end": 165,
+          "text": "持续推进产品结构优化升级，以产品带动品牌发展。持续推进产品结构优化升级，以产品带动品牌发展。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "持续推进产品结构优化升级，以产品带动品牌发展。持续推进产品结构优化升级，以产品带动品牌发展。",
+          "start": 147,
+          "end": 189
+        }
+      ],
+      "spans": [
+        {
+          "start": 119,
+          "end": 165,
+          "text": "持续推进产品结构优化升级，以产品带动品牌发展。持续推进产品结构优化升级，以产品带动品牌发展。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ab5aaaa9676333223189034d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“129年”与2024年股东会、2025年展望的时间背景明显冲突，时间表述不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 654,
+          "end": 731,
+          "text": "另一方面积极探索多元发展，129年3月重组整合青岛饮料集团，5月全资收购山东老牌黄酒企业即墨黄酒，积极稳妥发展黄酒、威士忌等相关业务，探索培育新的增长点。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "另一方面积极探索多元发展，129年3月重组整合青岛饮料集团，5月全资收购山东老牌黄酒企业即墨黄酒，积极稳妥发展黄酒、威士忌等相关业务，探索培育新的增长点。",
+          "start": 472,
+          "end": 551
+        }
+      ],
+      "spans": [
+        {
+          "start": 654,
+          "end": 731,
+          "text": "另一方面积极探索多元发展，129年3月重组整合青岛饮料集团，5月全资收购山东老牌黄酒企业即墨黄酒，积极稳妥发展黄酒、威士忌等相关业务，探索培育新的增长点。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "579df9013e40320cdf06e613",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027仅三年，却列出四个营收数值；且所列增速与相邻年度营收增长不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 849,
+          "end": 928,
+          "text": "我们预计公司2025-2027年营收分别为334.67亿元、367.99亿元、347.92亿元、360.99亿元，增速分别为4.14%、3.96%、3.76%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司2025-2027年营收分别为334.67亿元、367.99亿元、347.92亿元、360.99亿元，增速分别为4.14%、3.96%、3.76%",
+          "start": 758,
+          "end": 837
+        }
+      ],
+      "spans": [
+        {
+          "start": 849,
+          "end": 928,
+          "text": "我们预计公司2025-2027年营收分别为334.67亿元、367.99亿元、347.92亿元、360.99亿元，增速分别为4.14%、3.96%、3.76%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cb83b3140ebcbe5948eb4c4d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1058
+        ]
+      ],
+      "estimated_input_tokens": 5644,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:09:18.428864+00:00",
+        "request_sha256": "21b17f10214c55202d3ff2172325bea60ebb1374f8b22547da4ebf80064c10f8",
+        "input_token_estimate": 15723,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277867",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f8de415a621540bca723e8a62ecc32d3",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3681,
+        "output_tokens": 5184,
+        "usage_source": "provider",
+        "duration_seconds": 22.159086,
+        "cost_cny": "0.024417"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "持续推进产品结构优化升级，以产品带动品牌发展。持续推进产品结构优化升级，以产品带动品牌发展。",
+            "start": 147,
+            "end": 189
+          }
+        ],
+        "reason": "同一句话连续重复两次，信息完全相同，构成不必要的冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "另一方面积极探索多元发展，129年3月重组整合青岛饮料集团，5月全资收购山东老牌黄酒企业即墨黄酒，积极稳妥发展黄酒、威士忌等相关业务，探索培育新的增长点。",
+            "start": 472,
+            "end": 551
+          }
+        ],
+        "reason": "年份“129年”与2024年股东会、2025年展望的时间背景明显冲突，时间表述不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们预计公司2025-2027年营收分别为334.67亿元、367.99亿元、347.92亿元、360.99亿元，增速分别为4.14%、3.96%、3.76%",
+            "start": 758,
+            "end": 837
+          }
+        ],
+        "reason": "2025-2027仅三年，却列出四个营收数值；且所列增速与相邻年度营收增长不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 840,
+      "end": 1015,
+      "text": "结合最新战略方针，我们预计公司2025-2027年营收分别为334.67亿元、367.99亿元、347.92亿元、360.99亿元，增速分别为4.14%、3.96%、3.76%，归母净利润分别为48.18亿元、52.32亿元、56.57亿元，增速分别为10.88%、8.59%、8.12%，对应PE估值分别为20x，19x，17x，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "334.67",
+          "unit": "亿元",
+          "start": 870,
+          "end": 878
+        },
+        {
+          "value": "367.99",
+          "unit": "亿元",
+          "start": 879,
+          "end": 887
+        },
+        {
+          "value": "347.92",
+          "unit": "亿元",
+          "start": 888,
+          "end": 896
+        },
+        {
+          "value": "360.99",
+          "unit": "亿元",
+          "start": 897,
+          "end": 905
+        },
+        {
+          "value": "4.14",
+          "unit": "%",
+          "start": 911,
+          "end": 916
+        },
+        {
+          "value": "3.96",
+          "unit": "%",
+          "start": 917,
+          "end": 922
+        },
+        {
+          "value": "3.76",
+          "unit": "%",
+          "start": 923,
+          "end": 928
+        },
+        {
+          "value": "48.18",
+          "unit": "亿元",
+          "start": 937,
+          "end": 944
+        },
+        {
+          "value": "52.32",
+          "unit": "亿元",
+          "start": 945,
+          "end": 952
+        },
+        {
+          "value": "56.57",
+          "unit": "亿元",
+          "start": 953,
+          "end": 960
+        },
+        {
+          "value": "10.88",
+          "unit": "%",
+          "start": 966,
+          "end": 972
+        },
+        {
+          "value": "8.59",
+          "unit": "%",
+          "start": 973,
+          "end": 978
+        },
+        {
+          "value": "8.12",
+          "unit": "%",
+          "start": 979,
+          "end": 984
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 840,
+      "end": 1015,
+      "text": "结合最新战略方针，我们预计公司2025-2027年营收分别为334.67亿元、367.99亿元、347.92亿元、360.99亿元，增速分别为4.14%、3.96%、3.76%，归母净利润分别为48.18亿元、52.32亿元、56.57亿元，增速分别为10.88%、8.59%、8.12%，对应PE估值分别为20x，19x，17x，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "334.67",
+          "unit": "亿元",
+          "start": 870,
+          "end": 878
+        },
+        {
+          "value": "367.99",
+          "unit": "亿元",
+          "start": 879,
+          "end": 887
+        },
+        {
+          "value": "347.92",
+          "unit": "亿元",
+          "start": 888,
+          "end": 896
+        },
+        {
+          "value": "360.99",
+          "unit": "亿元",
+          "start": 897,
+          "end": 905
+        },
+        {
+          "value": "4.14",
+          "unit": "%",
+          "start": 911,
+          "end": 916
+        },
+        {
+          "value": "3.96",
+          "unit": "%",
+          "start": 917,
+          "end": 922
+        },
+        {
+          "value": "3.76",
+          "unit": "%",
+          "start": 923,
+          "end": 928
+        },
+        {
+          "value": "48.18",
+          "unit": "亿元",
+          "start": 937,
+          "end": 944
+        },
+        {
+          "value": "52.32",
+          "unit": "亿元",
+          "start": 945,
+          "end": 952
+        },
+        {
+          "value": "56.57",
+          "unit": "亿元",
+          "start": 953,
+          "end": 960
+        },
+        {
+          "value": "10.88",
+          "unit": "%",
+          "start": 966,
+          "end": 972
+        },
+        {
+          "value": "8.59",
+          "unit": "%",
+          "start": 973,
+          "end": 978
+        },
+        {
+          "value": "8.12",
+          "unit": "%",
+          "start": 979,
+          "end": 984
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1058,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1058,
+    "processed_ranges": [
+      [
+        0,
+        1058
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 22.184917,
+  "source_content_sha256": "abe4e9b37420d48f6d0c191db0115c4091777d02df3b3f998941f1a8b8db8fb8"
+}

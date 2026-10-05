@@ -1,0 +1,417 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000300",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "日期区间1.5-1.2终点早于起点，时间区间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 801,
+          "end": 865,
+          "text": "上周（1.5-1.2）申万通信行业成交额967.35亿元，平均每日成交241.84亿元，资本充足率较前一个交易周下降7.71%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "上周（1.5-1.2）申万通信行业成交额967.35亿元，平均每日成交241.84亿元，资本充足率较前一个交易周下降7.71%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 801,
+          "end": 865,
+          "text": "上周（1.5-1.2）申万通信行业成交额967.35亿元，平均每日成交241.84亿元，资本充足率较前一个交易周下降7.71%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "640845d44730c61b5ab5f6a8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“资本充足率”是银行监管指标，不能用于描述通信行业成交额变化。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 801,
+          "end": 865,
+          "text": "上周（1.5-1.2）申万通信行业成交额967.35亿元，平均每日成交241.84亿元，资本充足率较前一个交易周下降7.71%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "上周（1.5-1.2）申万通信行业成交额967.35亿元，平均每日成交241.84亿元，资本充足率较前一个交易周下降7.71%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 801,
+          "end": 865,
+          "text": "上周（1.5-1.2）申万通信行业成交额967.35亿元，平均每日成交241.84亿元，资本充足率较前一个交易周下降7.71%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "42b7afb0e355935a61ae2560",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一列举项“数据中心”连续出现两次，属于不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 976,
+          "end": 1022,
+          "text": "投资建议：人工智能大模型带来的算力升级，带动服务器、数据中心、数据中心、光模块等产业的发展；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：人工智能大模型带来的算力升级，带动服务器、数据中心、数据中心、光模块等产业的发展；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 976,
+          "end": 1022,
+          "text": "投资建议：人工智能大模型带来的算力升级，带动服务器、数据中心、数据中心、光模块等产业的发展；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "430ee3207819b9b243b54fa2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "4除以133约为3.01%，与原文上涨个股数占比9.01%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 919,
+          "end": 974,
+          "text": "上个交易周通信板块个股涨跌情况分化：133只个股中，4只个股上涨，129只个股下跌，上涨个股数占比9.01%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "上个交易周通信板块个股涨跌情况分化：133只个股中，4只个股上涨，129只个股下跌，上涨个股数占比9.01%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 919,
+          "end": 974,
+          "text": "上个交易周通信板块个股涨跌情况分化：133只个股中，4只个股上涨，129只个股下跌，上涨个股数占比9.01%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f47e3c9715f4f953a2abb668",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "占比从60%变为10%是下降，却表述为“增加到10%”，增加与数值下降矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 323,
+          "end": 397,
+          "text": "IDC预测，到2024年，新增的生产级云原生应用在新应用的占比将从2020年的60%增加到10%，云原生的工作负载将会占据服务器上工作负载的1/3。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "IDC预测，到2024年，新增的生产级云原生应用在新应用的占比将从2020年的60%增加到10%，云原生的工作负载将会占据服务器上工作负载的1/3。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 323,
+          "end": 397,
+          "text": "IDC预测，到2024年，新增的生产级云原生应用在新应用的占比将从2020年的60%增加到10%，云原生的工作负载将会占据服务器上工作负载的1/3。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "182518906115c09a43f36c1a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "“3743”直接置于“印发”与文件名之间，不符合公文印发或文号引用格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 173,
+          "end": 316,
+          "text": "产业动态：（1）移动网络：工业和信息化部等十一部门近日联合印发3743《关于开展“信号升格”专项行动的通知》，提出将实现移动网络（4G和5G）信号显著增强，移动用户端到端业务感知明显提升，资源要素保障更加有力，监测评估能力持续增强，为广大用户提供信号好、体验优、能力强的高品质网络服务。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "产业动态：（1）移动网络：工业和信息化部等十一部门近日联合印发3743《关于开展“信号升格”专项行动的通知》，提出将实现移动网络（4G和5G）信号显著增强，移动用户端到端业务感知明显提升，资源要素保障更加有力，监测评估能力持续增强，为广大用户提供信号好、体验优、能力强的高品质网络服务。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 173,
+          "end": 316,
+          "text": "产业动态：（1）移动网络：工业和信息化部等十一部门近日联合印发3743《关于开展“信号升格”专项行动的通知》，提出将实现移动网络（4G和5G）信号显著增强，移动用户端到端业务感知明显提升，资源要素保障更加有力，监测评估能力持续增强，为广大用户提供信号好、体验优、能力强的高品质网络服务。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ef9ebc5aa584884e9ad771a5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "英文项目名称中“of5G”“supportingsatellite”缺少空格，格式不规范。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 569,
+          "end": 672,
+          "text": "（6）卫星通信：中国电信研究院牵头的“Management aspects of5G system supportingsatellite backhaul（支持卫星回传的5G系统网管要求）”立项获得通过。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "（6）卫星通信：中国电信研究院牵头的“Management aspects of5G system supportingsatellite backhaul（支持卫星回传的5G系统网管要求）”立项获得通过。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 569,
+          "end": 672,
+          "text": "（6）卫星通信：中国电信研究院牵头的“Management aspects of5G system supportingsatellite backhaul（支持卫星回传的5G系统网管要求）”立项获得通过。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c3ac8b568a395ee46ea114dd",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1152
+        ]
+      ],
+      "estimated_input_tokens": 5675,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:44:14.374035+00:00",
+        "request_sha256": "b61225103921e9acb702ee62a07000662d0274a604ae8593d9243b239e2b5dbe",
+        "input_token_estimate": 15809,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277953",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ffff9149af194536aa268d63f85c1a1b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3700,
+        "output_tokens": 7854,
+        "usage_source": "provider",
+        "duration_seconds": 31.891417,
+        "cost_cny": "0.035116",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "上周（1.5-1.2）申万通信行业成交额967.35亿元，平均每日成交241.84亿元，资本充足率较前一个交易周下降7.71%。"
+          }
+        ],
+        "reason": "日期区间1.5-1.2终点早于起点，时间区间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "上周（1.5-1.2）申万通信行业成交额967.35亿元，平均每日成交241.84亿元，资本充足率较前一个交易周下降7.71%。"
+          }
+        ],
+        "reason": "“资本充足率”是银行监管指标，不能用于描述通信行业成交额变化。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "投资建议：人工智能大模型带来的算力升级，带动服务器、数据中心、数据中心、光模块等产业的发展；"
+          }
+        ],
+        "reason": "同一列举项“数据中心”连续出现两次，属于不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "上个交易周通信板块个股涨跌情况分化：133只个股中，4只个股上涨，129只个股下跌，上涨个股数占比9.01%。"
+          }
+        ],
+        "reason": "4除以133约为3.01%，与原文上涨个股数占比9.01%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "IDC预测，到2024年，新增的生产级云原生应用在新应用的占比将从2020年的60%增加到10%，云原生的工作负载将会占据服务器上工作负载的1/3。"
+          }
+        ],
+        "reason": "占比从60%变为10%是下降，却表述为“增加到10%”，增加与数值下降矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "产业动态：（1）移动网络：工业和信息化部等十一部门近日联合印发3743《关于开展“信号升格”专项行动的通知》，提出将实现移动网络（4G和5G）信号显著增强，移动用户端到端业务感知明显提升，资源要素保障更加有力，监测评估能力持续增强，为广大用户提供信号好、体验优、能力强的高品质网络服务。"
+          }
+        ],
+        "reason": "“3743”直接置于“印发”与文件名之间，不符合公文印发或文号引用格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "（6）卫星通信：中国电信研究院牵头的“Management aspects of5G system supportingsatellite backhaul（支持卫星回传的5G系统网管要求）”立项获得通过。"
+          }
+        ],
+        "reason": "英文项目名称中“of5G”“supportingsatellite”缺少空格，格式不规范。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1152,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1152,
+    "processed_ranges": [
+      [
+        0,
+        1152
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1152,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001545,
+  "source_content_sha256": "4f0c0260d3ff5bbded9b2d7c82461639cab636cf24433f6e7a500970c4b48b1f"
+}

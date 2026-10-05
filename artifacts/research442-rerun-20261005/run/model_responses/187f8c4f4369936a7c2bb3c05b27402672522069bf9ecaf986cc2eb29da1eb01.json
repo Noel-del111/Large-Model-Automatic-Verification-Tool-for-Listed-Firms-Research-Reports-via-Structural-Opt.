@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"股票增值权将向不超过人授予25.19万份股票增值权（约占本激励计划草案公告时公司股本总额的0.21%），激励对象为公司董事、高级管理人员、部分外籍员工以及其他核心人员（不包括独立董事、监事）。\"\n        }\n      ],\n      \"reason\": \"“向不超过人授予”中缺少具体人数，应明确上限人数。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"公司股权激励连续多年实施，已成为常态化的激励机制，促进了公司核心人才队伍的建设和稳定，是公司实现可持续发展的有效措施，也体现公司对未来发展前景充满信心。\"\n        },\n        {\n          \"text\": \"公司通过股权激励机制连续多年实施，已成为常态化的激励机制，进一步促进了公司核心人才队伍的建设和稳定。\"\n        }\n      ],\n      \"reason\": \"两句话几乎重复表达同一事实，后一句没有新增信息。\"\n    },\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。\"\n        }\n      ],\n      \"reason\": \"“2026-2025年”期间起止年份颠倒，不能构成有效时间区间。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"单看2025Q1，公司实现营业收入1.86亿元，同比增长27.73%；实现归母净利润0.41亿分，同比增长32.30%；实现扣非归母净利润0.38亿元，同比增长25.99%。\"\n        }\n      ],\n      \"reason\": \"归母净利润“0.41亿分”单位错误，应为“亿元”。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:24:47.608960+00:00",
+    "request_sha256": "0fe4fcd202e2d5e7c2932a99ced98bea5cc5a358fa62d6a26ef6aab5ab6869b3",
+    "input_token_estimate": 15250,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277394",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "72c40a0e4dc6433eb1af9a3308adcb15",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3608,
+    "output_tokens": 7894,
+    "usage_source": "provider",
+    "duration_seconds": 28.101268,
+    "cost_cny": "0.035184"
+  },
+  "cache_request": {
+    "key": "187f8c4f4369936a7c2bb3c05b27402672522069bf9ecaf986cc2eb29da1eb01",
+    "purpose": "text_review.detect",
+    "messages_sha256": "0fe4fcd202e2d5e7c2932a99ced98bea5cc5a358fa62d6a26ef6aab5ab6869b3"
+  }
+}

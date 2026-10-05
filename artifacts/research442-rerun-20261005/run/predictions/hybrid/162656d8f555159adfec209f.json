@@ -1,0 +1,618 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000393",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 438,
+          "end": 491,
+          "text": "2022-2015年，公司总营收/归母净利润CAGR分别为31.3%/42.3%，22年为公司业绩巅峰期。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 438,
+          "end": 491,
+          "text": "2022-2015年，公司总营收/归母净利润CAGR分别为31.3%/42.3%，22年为公司业绩巅峰期。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "359367ee087714da07810190",
+      "detector_ids": [
+        "hybrid.model",
+        "legacy.C.INTRINSIC.002"
+      ],
+      "original_spans": [
+        {
+          "text": "2022-2015年，公司总营收/归母净利润CAGR分别为31.3%/42.3%，22年为公司业绩巅峰期。"
+        }
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“次高端核心品类”后引号内为空，缺失应列示的产品名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 328,
+          "end": 414,
+          "text": "公司坚定围绕“1+3”的产品策略，25年推出定价2000元以上的超高端“内参大师酒15年”、次高端核心品类“”，以及锚定下沉市场的“妙品”，持续完善高中低全价位段产品体系。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司坚定围绕“1+3”的产品策略，25年推出定价2000元以上的超高端“内参大师酒15年”、次高端核心品类“”，以及锚定下沉市场的“妙品”，持续完善高中低全价位段产品体系。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 328,
+          "end": 414,
+          "text": "公司坚定围绕“1+3”的产品策略，25年推出定价2000元以上的超高端“内参大师酒15年”、次高端核心品类“”，以及锚定下沉市场的“妙品”，持续完善高中低全价位段产品体系。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5a5945505e11217ceb763a25",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "风险列表中“食品安全风险”连续重复出现，未提供新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1024,
+          "end": 1066,
+          "text": "风险提示：食品安全风险，食品安全风险，市场竞争加剧，品牌价值受损，省内市场不能稳固。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "风险提示：食品安全风险，食品安全风险，市场竞争加剧，品牌价值受损，省内市场不能稳固。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1024,
+          "end": 1066,
+          "text": "风险提示：食品安全风险，食品安全风险，市场竞争加剧，品牌价值受损，省内市场不能稳固。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0de720c506f99b0d263e40b8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "价格溢价通常提升毛利率，却与毛利率同比下降7.0pct的方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 749,
+          "end": 786,
+          "text": "24年毛利率同比-7.0pct，主因高端系列价格溢价叠加低端湘泉占比提升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年毛利率同比-7.0pct，主因高端系列价格溢价叠加低端湘泉占比提升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 749,
+          "end": 786,
+          "text": "24年毛利率同比-7.0pct，主因高端系列价格溢价叠加低端湘泉占比提升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ca85de39a1e2aed01a5d5cfe",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1066
+        ]
+      ],
+      "estimated_input_tokens": 5552,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:21:16.655409+00:00",
+        "request_sha256": "83e649711672cdedf211259b0cdcb68149e196190fd367f821ceb61b90dbc483",
+        "input_token_estimate": 15489,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277633",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "88cac58a0a1642f08cfc438ea3b4f99d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3728,
+        "output_tokens": 7717,
+        "usage_source": "provider",
+        "duration_seconds": 30.073269,
+        "cost_cny": "0.034596",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2022-2015年，公司总营收/归母净利润CAGR分别为31.3%/42.3%，22年为公司业绩巅峰期。"
+          }
+        ],
+        "reason": "时间区间起点2022年晚于终点2015年，先后关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "公司坚定围绕“1+3”的产品策略，25年推出定价2000元以上的超高端“内参大师酒15年”、次高端核心品类“”，以及锚定下沉市场的“妙品”，持续完善高中低全价位段产品体系。"
+          }
+        ],
+        "reason": "“次高端核心品类”后引号内为空，缺失应列示的产品名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "风险提示：食品安全风险，食品安全风险，市场竞争加剧，品牌价值受损，省内市场不能稳固。"
+          }
+        ],
+        "reason": "风险列表中“食品安全风险”连续重复出现，未提供新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "24年毛利率同比-7.0pct，主因高端系列价格溢价叠加低端湘泉占比提升。"
+          }
+        ],
+        "reason": "价格溢价通常提升毛利率，却与毛利率同比下降7.0pct的方向矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 438,
+      "end": 491,
+      "text": "2022-2015年，公司总营收/归母净利润CAGR分别为31.3%/42.3%，22年为公司业绩巅峰期。",
+      "quantities": [
+        {
+          "value": "31.3",
+          "unit": "%",
+          "start": 467,
+          "end": 472
+        },
+        {
+          "value": "42.3",
+          "unit": "%",
+          "start": 473,
+          "end": 478
+        }
+      ],
+      "periods": [
+        "2015年"
+      ],
+      "entity_mentions": [
+        "年为公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 438,
+      "end": 491,
+      "text": "2022-2015年，公司总营收/归母净利润CAGR分别为31.3%/42.3%，22年为公司业绩巅峰期。",
+      "quantities": [
+        {
+          "value": "31.3",
+          "unit": "%",
+          "start": 467,
+          "end": 472
+        },
+        {
+          "value": "42.3",
+          "unit": "%",
+          "start": 473,
+          "end": 478
+        }
+      ],
+      "periods": [
+        "2015年"
+      ],
+      "entity_mentions": [
+        "年为公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 522,
+      "end": 601,
+      "text": "23、24年总营收/净利润分别同比-30.1%/-47.8%、-49.7%/-97.7%，其中高端内参系列23、24年营收分别同比-38.2%/-67.1%。",
+      "quantities": [
+        {
+          "value": "-30.1",
+          "unit": "%",
+          "start": 539,
+          "end": 545
+        },
+        {
+          "value": "-47.8",
+          "unit": "%",
+          "start": 546,
+          "end": 552
+        },
+        {
+          "value": "-49.7",
+          "unit": "%",
+          "start": 553,
+          "end": 559
+        },
+        {
+          "value": "-97.7",
+          "unit": "%",
+          "start": 560,
+          "end": 566
+        },
+        {
+          "value": "-38.2",
+          "unit": "%",
+          "start": 587,
+          "end": 593
+        },
+        {
+          "value": "-67.1",
+          "unit": "%",
+          "start": 594,
+          "end": 600
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 522,
+      "end": 601,
+      "text": "23、24年总营收/净利润分别同比-30.1%/-47.8%、-49.7%/-97.7%，其中高端内参系列23、24年营收分别同比-38.2%/-67.1%。",
+      "quantities": [
+        {
+          "value": "-30.1",
+          "unit": "%",
+          "start": 539,
+          "end": 545
+        },
+        {
+          "value": "-47.8",
+          "unit": "%",
+          "start": 546,
+          "end": 552
+        },
+        {
+          "value": "-49.7",
+          "unit": "%",
+          "start": 553,
+          "end": 559
+        },
+        {
+          "value": "-97.7",
+          "unit": "%",
+          "start": 560,
+          "end": 566
+        },
+        {
+          "value": "-38.2",
+          "unit": "%",
+          "start": 587,
+          "end": 593
+        },
+        {
+          "value": "-67.1",
+          "unit": "%",
+          "start": 594,
+          "end": 600
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 522,
+      "end": 601,
+      "text": "23、24年总营收/净利润分别同比-30.1%/-47.8%、-49.7%/-97.7%，其中高端内参系列23、24年营收分别同比-38.2%/-67.1%。",
+      "quantities": [
+        {
+          "value": "-30.1",
+          "unit": "%",
+          "start": 539,
+          "end": 545
+        },
+        {
+          "value": "-47.8",
+          "unit": "%",
+          "start": 546,
+          "end": 552
+        },
+        {
+          "value": "-49.7",
+          "unit": "%",
+          "start": 553,
+          "end": 559
+        },
+        {
+          "value": "-97.7",
+          "unit": "%",
+          "start": 560,
+          "end": 566
+        },
+        {
+          "value": "-38.2",
+          "unit": "%",
+          "start": 587,
+          "end": 593
+        },
+        {
+          "value": "-67.1",
+          "unit": "%",
+          "start": 594,
+          "end": 600
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 601,
+      "end": 630,
+      "text": "24Q4公司营收环比+18.0%（Q3环比-60.6%）。",
+      "quantities": [
+        {
+          "value": "+18.0",
+          "unit": "%",
+          "start": 611,
+          "end": 617
+        },
+        {
+          "value": "-60.6",
+          "unit": "%",
+          "start": 622,
+          "end": 628
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 630,
+      "end": 670,
+      "text": "25Q1公司营收/净利润分别同比-30.3%/-56.8%，业绩仍处于承压阶段。",
+      "quantities": [
+        {
+          "value": "-30.3",
+          "unit": "%",
+          "start": 646,
+          "end": 652
+        },
+        {
+          "value": "-56.8",
+          "unit": "%",
+          "start": 653,
+          "end": 659
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 630,
+      "end": 670,
+      "text": "25Q1公司营收/净利润分别同比-30.3%/-56.8%，业绩仍处于承压阶段。",
+      "quantities": [
+        {
+          "value": "-30.3",
+          "unit": "%",
+          "start": 646,
+          "end": 652
+        },
+        {
+          "value": "-56.8",
+          "unit": "%",
+          "start": 653,
+          "end": 659
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 698,
+      "end": 749,
+      "text": "受益于高端内参系列放量，22年公司毛利率达79.6%，23年毛利率首现显著下滑（同比-1.3pct）。",
+      "quantities": [
+        {
+          "value": "79.6",
+          "unit": "%",
+          "start": 719,
+          "end": 724
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 698,
+      "end": 749,
+      "text": "受益于高端内参系列放量，22年公司毛利率达79.6%，23年毛利率首现显著下滑（同比-1.3pct）。",
+      "quantities": [
+        {
+          "value": "79.6",
+          "unit": "%",
+          "start": 719,
+          "end": 724
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 749,
+      "end": 786,
+      "text": "24年毛利率同比-7.0pct，主因高端系列价格溢价叠加低端湘泉占比提升。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 786,
+      "end": 841,
+      "text": "24年净利率跌至0.9%，同比-18.5pct，盈利能力承压，除结构性失衡影响外，24年公司费效比亦有所降低。",
+      "quantities": [
+        {
+          "value": "0.9",
+          "unit": "%",
+          "start": 794,
+          "end": 798
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1066,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1066,
+    "processed_ranges": [
+      [
+        0,
+        1066
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1066,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002089,
+  "source_content_sha256": "e4ea6804376fcaee5c191b2429d2d90a1c12f4edfefc38b2701bad220b57dc94"
+}

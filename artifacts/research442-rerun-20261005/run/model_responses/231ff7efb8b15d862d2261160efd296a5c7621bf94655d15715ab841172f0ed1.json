@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"截至1月41日，重点监测企业煤炭库存总量（含港存）2155万吨，比上周增加0.5%，比上月同期增加4万吨，增加0.2%。\"\n        }\n      ],\n      \"reason\": \"1月没有41日，该日期本身不成立。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"重点监测企业煤炭日均销量为688万吨，比上周日均销量减少112万吨，减少23.9%，比上月同期减少60万吨，减少8%。\"\n        }\n      ],\n      \"reason\": \"上周日均销量应为800万吨，减少112万吨对应降幅约14%，而非23.9%。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。\"\n        }\n      ],\n      \"reason\": \"5.19除以72.96约为7.11%，与原文7.66%不符。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"库存方面，京唐港炼焦煤库存72.96万吨，周环比增加5.19万吨（7.66%）；独立焦化厂总库存1189.59吨，周环比增加83.26万吨（7.53%）；可用天数13.1天，周环比增加0.7天。\"\n        }\n      ],\n      \"reason\": \"独立焦化厂总库存单位‘吨’与增加量单位‘万吨’不一致，量级明显冲突。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"价格方面，环渤海动力煤（Q5500K）指数731元/吨，周环比下跌0.14%，中国进口电煤采购价格指数1076元/吨，周环比下跌0.28%。从港口看，煤价基本稳定；\"\n        },\n        {\n          \"text\": \"动力煤方面，气温低位，日耗高位，长协供应充足，进口煤维持高位，动力煤价格小幅上涨，电厂、港口库存下降，电厂维持高库存策略，关注后续电厂补库情况；\"\n        }\n      ],\n      \"reason\": \"前文动力煤指数周环比下跌，后文称动力煤价格小幅上涨，同一周价格方向矛盾。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:32:28.490078+00:00",
+    "request_sha256": "6f01da219a3fe4eb4043113d6183f5050c34e4571327461124af64d760193789",
+    "input_token_estimate": 16758,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278902",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "afab67a3fe3249ac882a941b97139136",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4100,
+    "output_tokens": 9932,
+    "usage_source": "provider",
+    "duration_seconds": 38.906415,
+    "cost_cny": "0.043828"
+  },
+  "cache_request": {
+    "key": "231ff7efb8b15d862d2261160efd296a5c7621bf94655d15715ab841172f0ed1",
+    "purpose": "text_review.detect",
+    "messages_sha256": "6f01da219a3fe4eb4043113d6183f5050c34e4571327461124af64d760193789"
+  }
+}

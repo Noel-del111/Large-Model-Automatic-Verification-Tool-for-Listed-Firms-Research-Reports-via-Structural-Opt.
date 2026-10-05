@@ -1,0 +1,598 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000334",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "年份区间写成2027-2025年，起点晚于终点，时间顺序颠倒。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 754,
+          "end": 790,
+          "text": "2027-2025年归母净利润对应5月27日PE倍数为28/15/9倍。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2027-2025年归母净利润对应5月27日PE倍数为28/15/9倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 754,
+          "end": 790,
+          "text": "2027-2025年归母净利润对应5月27日PE倍数为28/15/9倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7f00406f2bcd7d6620aad04b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称盈利能力稳步提升，后文却称2024年大幅亏损，同一段落内结论矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 108,
+          "end": 236,
+          "text": "2024年起，公司加强内部管理，降本增效，产能持续扩张，随着通讯、服务器、AI等市场的发展与深化，高端产品放量，业绩逐步改善，盈利能力稳步提升：2024年，公司实现营业收入33.62亿元，同比增长12.70%，实现归母净利润-5032.02万元，大幅亏损；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年起，公司加强内部管理，降本增效，产能持续扩张，随着通讯、服务器、AI等市场的发展与深化，高端产品放量，业绩逐步改善，盈利能力稳步提升：2024年，公司实现营业收入33.62亿元，同比增长12.70%，实现归母净利润-5032.02万元，大幅亏损；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 108,
+          "end": 236,
+          "text": "2024年起，公司加强内部管理，降本增效，产能持续扩张，随着通讯、服务器、AI等市场的发展与深化，高端产品放量，业绩逐步改善，盈利能力稳步提升：2024年，公司实现营业收入33.62亿元，同比增长12.70%，实现归母净利润-5032.02万元，大幅亏损；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8fb835afc197df586f2118c8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "第二个同比变化+0.68pct未说明对应指标，缺少必要金融要素。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 236,
+          "end": 280,
+          "text": "2025年Q1，公司实现毛利率9.97%，同比+1.67pct，，同比+0.68pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年Q1，公司实现毛利率9.97%，同比+1.67pct，，同比+0.68pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 236,
+          "end": 280,
+          "text": "2025年Q1，公司实现毛利率9.97%，同比+1.67pct，，同比+0.68pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4dba5cccf979f96c3c225ad2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "2024年归母净利润-5032.02万元，2025年预计2.88亿元，同比增速应约672%，而非473%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 704,
+          "end": 753,
+          "text": "归母净利润分别达到2.88/5.50/8.55亿元，归母净利润同比增速达到473%/91%/56%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "归母净利润分别达到2.88/5.50/8.55亿元，归母净利润同比增速达到473%/91%/56%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 704,
+          "end": 753,
+          "text": "归母净利润分别达到2.88/5.50/8.55亿元，归母净利润同比增速达到473%/91%/56%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e7773939004b248c63cb2161",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          983
+        ]
+      ],
+      "estimated_input_tokens": 5536,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:15:53.821220+00:00",
+        "request_sha256": "8693f4207f9d664c673d068c65c7e0d5831b355d5cdda02d84a1a457344f23c3",
+        "input_token_estimate": 15403,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277547",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "433dbf9511c44b188aae1dbd5f676ae7",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3653,
+        "output_tokens": 9980,
+        "usage_source": "provider",
+        "duration_seconds": 38.620301,
+        "cost_cny": "0.043573"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2027-2025年归母净利润对应5月27日PE倍数为28/15/9倍。"
+          }
+        ],
+        "reason": "年份区间写成2027-2025年，起点晚于终点，时间顺序颠倒。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年起，公司加强内部管理，降本增效，产能持续扩张，随着通讯、服务器、AI等市场的发展与深化，高端产品放量，业绩逐步改善，盈利能力稳步提升：2024年，公司实现营业收入33.62亿元，同比增长12.70%，实现归母净利润-5032.02万元，大幅亏损；"
+          }
+        ],
+        "reason": "前文称盈利能力稳步提升，后文却称2024年大幅亏损，同一段落内结论矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "2025年Q1，公司实现毛利率9.97%，同比+1.67pct，，同比+0.68pct。"
+          }
+        ],
+        "reason": "第二个同比变化+0.68pct未说明对应指标，缺少必要金融要素。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "归母净利润分别达到2.88/5.50/8.55亿元，归母净利润同比增速达到473%/91%/56%"
+          }
+        ],
+        "reason": "2024年归母净利润-5032.02万元，2025年预计2.88亿元，同比增速应约672%，而非473%。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 108,
+      "end": 236,
+      "text": "2024年起，公司加强内部管理，降本增效，产能持续扩张，随着通讯、服务器、AI等市场的发展与深化，高端产品放量，业绩逐步改善，盈利能力稳步提升：2024年，公司实现营业收入33.62亿元，同比增长12.70%，实现归母净利润-5032.02万元，大幅亏损；",
+      "quantities": [
+        {
+          "value": "33.62",
+          "unit": "亿元",
+          "start": 194,
+          "end": 201
+        },
+        {
+          "value": "12.70",
+          "unit": "%",
+          "start": 206,
+          "end": 212
+        },
+        {
+          "value": "-5032.02",
+          "unit": "万元",
+          "start": 220,
+          "end": 230
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 108,
+      "end": 236,
+      "text": "2024年起，公司加强内部管理，降本增效，产能持续扩张，随着通讯、服务器、AI等市场的发展与深化，高端产品放量，业绩逐步改善，盈利能力稳步提升：2024年，公司实现营业收入33.62亿元，同比增长12.70%，实现归母净利润-5032.02万元，大幅亏损；",
+      "quantities": [
+        {
+          "value": "33.62",
+          "unit": "亿元",
+          "start": 194,
+          "end": 201
+        },
+        {
+          "value": "12.70",
+          "unit": "%",
+          "start": 206,
+          "end": 212
+        },
+        {
+          "value": "-5032.02",
+          "unit": "万元",
+          "start": 220,
+          "end": 230
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 236,
+      "end": 280,
+      "text": "2025年Q1，公司实现毛利率9.97%，同比+1.67pct，，同比+0.68pct。",
+      "quantities": [
+        {
+          "value": "9.97",
+          "unit": "%",
+          "start": 251,
+          "end": 256
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 647,
+      "end": 790,
+      "text": "盈利预测与投资评级：我们预计公司2025/2026/2027年实现营业收入51.36/70.01/81.62亿元，归母净利润分别达到2.88/5.50/8.55亿元，归母净利润同比增速达到473%/91%/56%，2027-2025年归母净利润对应5月27日PE倍数为28/15/9倍。",
+      "quantities": [
+        {
+          "value": "81.62",
+          "unit": "亿元",
+          "start": 696,
+          "end": 703
+        },
+        {
+          "value": "8.55",
+          "unit": "亿元",
+          "start": 723,
+          "end": 729
+        },
+        {
+          "value": "473",
+          "unit": "%",
+          "start": 741,
+          "end": 745
+        },
+        {
+          "value": "91",
+          "unit": "%",
+          "start": 746,
+          "end": 749
+        },
+        {
+          "value": "56",
+          "unit": "%",
+          "start": 750,
+          "end": 753
+        },
+        {
+          "value": "9",
+          "unit": "倍",
+          "start": 787,
+          "end": 789
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 647,
+      "end": 790,
+      "text": "盈利预测与投资评级：我们预计公司2025/2026/2027年实现营业收入51.36/70.01/81.62亿元，归母净利润分别达到2.88/5.50/8.55亿元，归母净利润同比增速达到473%/91%/56%，2027-2025年归母净利润对应5月27日PE倍数为28/15/9倍。",
+      "quantities": [
+        {
+          "value": "81.62",
+          "unit": "亿元",
+          "start": 696,
+          "end": 703
+        },
+        {
+          "value": "8.55",
+          "unit": "亿元",
+          "start": 723,
+          "end": 729
+        },
+        {
+          "value": "473",
+          "unit": "%",
+          "start": 741,
+          "end": 745
+        },
+        {
+          "value": "91",
+          "unit": "%",
+          "start": 746,
+          "end": 749
+        },
+        {
+          "value": "56",
+          "unit": "%",
+          "start": 750,
+          "end": 753
+        },
+        {
+          "value": "9",
+          "unit": "倍",
+          "start": 787,
+          "end": 789
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 647,
+      "end": 790,
+      "text": "盈利预测与投资评级：我们预计公司2025/2026/2027年实现营业收入51.36/70.01/81.62亿元，归母净利润分别达到2.88/5.50/8.55亿元，归母净利润同比增速达到473%/91%/56%，2027-2025年归母净利润对应5月27日PE倍数为28/15/9倍。",
+      "quantities": [
+        {
+          "value": "81.62",
+          "unit": "亿元",
+          "start": 696,
+          "end": 703
+        },
+        {
+          "value": "8.55",
+          "unit": "亿元",
+          "start": 723,
+          "end": 729
+        },
+        {
+          "value": "473",
+          "unit": "%",
+          "start": 741,
+          "end": 745
+        },
+        {
+          "value": "91",
+          "unit": "%",
+          "start": 746,
+          "end": 749
+        },
+        {
+          "value": "56",
+          "unit": "%",
+          "start": 750,
+          "end": 753
+        },
+        {
+          "value": "9",
+          "unit": "倍",
+          "start": 787,
+          "end": 789
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 647,
+      "end": 790,
+      "text": "盈利预测与投资评级：我们预计公司2025/2026/2027年实现营业收入51.36/70.01/81.62亿元，归母净利润分别达到2.88/5.50/8.55亿元，归母净利润同比增速达到473%/91%/56%，2027-2025年归母净利润对应5月27日PE倍数为28/15/9倍。",
+      "quantities": [
+        {
+          "value": "81.62",
+          "unit": "亿元",
+          "start": 696,
+          "end": 703
+        },
+        {
+          "value": "8.55",
+          "unit": "亿元",
+          "start": 723,
+          "end": 729
+        },
+        {
+          "value": "473",
+          "unit": "%",
+          "start": 741,
+          "end": 745
+        },
+        {
+          "value": "91",
+          "unit": "%",
+          "start": 746,
+          "end": 749
+        },
+        {
+          "value": "56",
+          "unit": "%",
+          "start": 750,
+          "end": 753
+        },
+        {
+          "value": "9",
+          "unit": "倍",
+          "start": 787,
+          "end": 789
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 790,
+      "end": 948,
+      "text": "可比公司方面，目前A股覆铜板企业主要包括生益科技、南亚新材、华正新材及金安国纪，但目前暂无华正新材及金安国纪盈利预测，万得一致预期下，生益科技2025-2027年归母净利润对应5月27日PE倍数为23/19/15倍，考虑公司高端覆铜板逐步放量带来的成长性，我们认为南亚新材应享有估值溢价，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "倍",
+          "start": 894,
+          "end": 897
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "可比公司",
+        "考虑公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 983,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 983,
+    "processed_ranges": [
+      [
+        0,
+        983
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 38.64685,
+  "source_content_sha256": "2773eb49612da7921b2e85d66b29e258181d7c9a290a1ee649acc04322009df0"
+}

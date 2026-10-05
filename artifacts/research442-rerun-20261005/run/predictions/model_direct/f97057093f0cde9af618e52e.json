@@ -1,0 +1,602 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000346",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "科学试剂类别冒号后未列示任何具体产品，属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 196,
+          "end": 204,
+          "text": "2）科学试剂：。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）科学试剂：。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 196,
+          "end": 204,
+          "text": "2）科学试剂：。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "91a13418f303feb8899d9205",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "高等院校类别“如”后未列示任何具体院校，属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 845,
+          "end": 854,
+          "text": "5）高等院校，如。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5）高等院校，如。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 845,
+          "end": 854,
+          "text": "5）高等院校，如。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e99bdbd12f4499e07fc5c61b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "外销执行主体信息重复表述，后句未提供新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 681,
+          "end": 711,
+          "text": "2）外销：主要由子公司毕路得和美国子公司Bepharm执行。"
+        },
+        {
+          "kind": "source_text",
+          "start": 712,
+          "end": 746,
+          "text": "此外，外销业务仍由子公司毕路得和美国子公司Bepharm主导开展。。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）外销：主要由子公司毕路得和美国子公司Bepharm执行。"
+        },
+        {
+          "text": "此外，外销业务仍由子公司毕路得和美国子公司Bepharm主导开展。。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 681,
+          "end": 711,
+          "text": "2）外销：主要由子公司毕路得和美国子公司Bepharm执行。"
+        },
+        {
+          "start": 712,
+          "end": 746,
+          "text": "此外，外销业务仍由子公司毕路得和美国子公司Bepharm主导开展。。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7844c633464aa050a0dcebe7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "先说2024年，随后又倒回2019年，时间先后关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 425,
+          "end": 496,
+          "text": "2024年海外收入为1.02亿元，占比为41.12%，随后公司不断加大海外市场开拓力度，2019年海外收入为6.16亿元，占比为55.89%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年海外收入为1.02亿元，占比为41.12%，随后公司不断加大海外市场开拓力度，2019年海外收入为6.16亿元，占比为55.89%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 425,
+          "end": 496,
+          "text": "2024年海外收入为1.02亿元，占比为41.12%，随后公司不断加大海外市场开拓力度，2019年海外收入为6.16亿元，占比为55.89%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d9dfe005cb4d64c9276b1e3c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "国内毛利率从59.80%降至29.84%，却称“不断上涨”，且2018年国内毛利率高于海外50%左右，与“海外显著高于国内”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 496,
+          "end": 603,
+          "text": "此外，海外业务毛利率显著高于国内业务，国内业务的毛利率从2018年的59.80%不断上涨至2024年的29.84%，而近几年海外业务毛利率基本维持在50%左右，未来随着海外收入占比持续提升，公司盈利能力或不断提高。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此外，海外业务毛利率显著高于国内业务，国内业务的毛利率从2018年的59.80%不断上涨至2024年的29.84%，而近几年海外业务毛利率基本维持在50%左右，未来随着海外收入占比持续提升，公司盈利能力或不断提高。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 496,
+          "end": 603,
+          "text": "此外，海外业务毛利率显著高于国内业务，国内业务的毛利率从2018年的59.80%不断上涨至2024年的29.84%，而近几年海外业务毛利率基本维持在50%左右，未来随着海外收入占比持续提升，公司盈利能力或不断提高。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e4d58f55005db2a670e93707",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2024年海外收入1.02亿占比41.12%隐含总营收约2.48亿；而2025年营收13.42亿按21.81%增长反推2024年总营收约11.02亿，同一公司2024年总营收冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 425,
+          "end": 451,
+          "text": "2024年海外收入为1.02亿元，占比为41.12%"
+        },
+        {
+          "kind": "source_text",
+          "start": 861,
+          "end": 930,
+          "text": "我们预计2025年-2027年公司营业收入分别为13.42/16.38/20.01亿元，同比增长21.81%/22.01%/22.16%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年海外收入为1.02亿元，占比为41.12%"
+        },
+        {
+          "text": "我们预计2025年-2027年公司营业收入分别为13.42/16.38/20.01亿元，同比增长21.81%/22.01%/22.16%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 425,
+          "end": 451,
+          "text": "2024年海外收入为1.02亿元，占比为41.12%"
+        },
+        {
+          "start": 861,
+          "end": 930,
+          "text": "我们预计2025年-2027年公司营业收入分别为13.42/16.38/20.01亿元，同比增长21.81%/22.01%/22.16%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8877c64ef7d15086c7055cf3",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1076
+        ]
+      ],
+      "estimated_input_tokens": 5607,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:35:37.541523+00:00",
+        "request_sha256": "aee4e1f3748d2bb33bca91071bfbb7e13e5a629d008b98ad026b58d3e3bda4da",
+        "input_token_estimate": 15621,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277765",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d51ddca33dec46d8829bd325c392b758",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3686,
+        "output_tokens": 9845,
+        "usage_source": "provider",
+        "duration_seconds": 39.526759,
+        "cost_cny": "0.043066"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2）科学试剂：。"
+          }
+        ],
+        "reason": "科学试剂类别冒号后未列示任何具体产品，属性值为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "5）高等院校，如。"
+          }
+        ],
+        "reason": "高等院校类别“如”后未列示任何具体院校，属性值为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2）外销：主要由子公司毕路得和美国子公司Bepharm执行。"
+          },
+          {
+            "text": "此外，外销业务仍由子公司毕路得和美国子公司Bepharm主导开展。。"
+          }
+        ],
+        "reason": "外销执行主体信息重复表述，后句未提供新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2024年海外收入为1.02亿元，占比为41.12%，随后公司不断加大海外市场开拓力度，2019年海外收入为6.16亿元，占比为55.89%。"
+          }
+        ],
+        "reason": "先说2024年，随后又倒回2019年，时间先后关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "此外，海外业务毛利率显著高于国内业务，国内业务的毛利率从2018年的59.80%不断上涨至2024年的29.84%，而近几年海外业务毛利率基本维持在50%左右，未来随着海外收入占比持续提升，公司盈利能力或不断提高。"
+          }
+        ],
+        "reason": "国内毛利率从59.80%降至29.84%，却称“不断上涨”，且2018年国内毛利率高于海外50%左右，与“海外显著高于国内”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2024年海外收入为1.02亿元，占比为41.12%"
+          },
+          {
+            "text": "我们预计2025年-2027年公司营业收入分别为13.42/16.38/20.01亿元，同比增长21.81%/22.01%/22.16%；"
+          }
+        ],
+        "reason": "2024年海外收入1.02亿占比41.12%隐含总营收约2.48亿；而2025年营收13.42亿按21.81%增长反推2024年总营收约11.02亿，同一公司2024年总营收冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 496,
+      "end": 603,
+      "text": "此外，海外业务毛利率显著高于国内业务，国内业务的毛利率从2018年的59.80%不断上涨至2024年的29.84%，而近几年海外业务毛利率基本维持在50%左右，未来随着海外收入占比持续提升，公司盈利能力或不断提高。",
+      "quantities": [
+        {
+          "value": "59.80",
+          "unit": "%",
+          "start": 530,
+          "end": 536
+        },
+        {
+          "value": "29.84",
+          "unit": "%",
+          "start": 547,
+          "end": 553
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 570,
+          "end": 573
+        }
+      ],
+      "periods": [
+        "2018年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 496,
+      "end": 603,
+      "text": "此外，海外业务毛利率显著高于国内业务，国内业务的毛利率从2018年的59.80%不断上涨至2024年的29.84%，而近几年海外业务毛利率基本维持在50%左右，未来随着海外收入占比持续提升，公司盈利能力或不断提高。",
+      "quantities": [
+        {
+          "value": "59.80",
+          "unit": "%",
+          "start": 530,
+          "end": 536
+        },
+        {
+          "value": "29.84",
+          "unit": "%",
+          "start": 547,
+          "end": 553
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 570,
+          "end": 573
+        }
+      ],
+      "periods": [
+        "2018年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 496,
+      "end": 603,
+      "text": "此外，海外业务毛利率显著高于国内业务，国内业务的毛利率从2018年的59.80%不断上涨至2024年的29.84%，而近几年海外业务毛利率基本维持在50%左右，未来随着海外收入占比持续提升，公司盈利能力或不断提高。",
+      "quantities": [
+        {
+          "value": "59.80",
+          "unit": "%",
+          "start": 530,
+          "end": 536
+        },
+        {
+          "value": "29.84",
+          "unit": "%",
+          "start": 547,
+          "end": 553
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 570,
+          "end": 573
+        }
+      ],
+      "periods": [
+        "2018年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 856,
+      "end": 930,
+      "text": "投资建议：我们预计2025年-2027年公司营业收入分别为13.42/16.38/20.01亿元，同比增长21.81%/22.01%/22.16%；",
+      "quantities": [
+        {
+          "value": "20.01",
+          "unit": "亿元",
+          "start": 897,
+          "end": 904
+        },
+        {
+          "value": "21.81",
+          "unit": "%",
+          "start": 909,
+          "end": 915
+        },
+        {
+          "value": "22.01",
+          "unit": "%",
+          "start": 916,
+          "end": 922
+        },
+        {
+          "value": "22.16",
+          "unit": "%",
+          "start": 923,
+          "end": 929
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 930,
+      "end": 1040,
+      "text": "归母净利润为1.48/1.85/2.33亿元，同比增长26.20%/24.71%/26.17%，我们给予公司2025年预测归母净利35倍PE，对应目标市值51.8亿元，目标价57.05元/股，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "2.33",
+          "unit": "亿元",
+          "start": 946,
+          "end": 952
+        },
+        {
+          "value": "26.20",
+          "unit": "%",
+          "start": 957,
+          "end": 963
+        },
+        {
+          "value": "24.71",
+          "unit": "%",
+          "start": 964,
+          "end": 970
+        },
+        {
+          "value": "26.17",
+          "unit": "%",
+          "start": 971,
+          "end": 977
+        },
+        {
+          "value": "35",
+          "unit": "倍",
+          "start": 995,
+          "end": 998
+        },
+        {
+          "value": "51.8",
+          "unit": "亿元",
+          "start": 1007,
+          "end": 1013
+        },
+        {
+          "value": "57.05",
+          "unit": "元/股",
+          "start": 1017,
+          "end": 1025
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们给予公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1076,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1076,
+    "processed_ranges": [
+      [
+        0,
+        1076
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 39.550898,
+  "source_content_sha256": "7c045248d9cee8b3ed957a3e25a377a26e2edaf5a6545a57b0ed2692c4387bc9"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"回顾本周行情（5月30日-5月26日），有色板块本周下跌2.40%，在全部一级行业中排名靠后。\"}], \"reason\": \"周行情区间起点5月30日晚于终点5月26日，起止时间倒置。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，。截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，周环比下跌0.24%。\"}], \"reason\": \"伦铜、沪铜价格及周环比数据连续重复出现，其中第一次沪铜数据后直接句号。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"截至5月30日，本周LME铝报收2,449元/吨，较上周下跌0.71%；沪铝报收20,070元/吨，较上周下跌0.42%。\"}], \"reason\": \"LME铝为伦敦金属交易所报价，通常以美元/吨计价，此处单位误作元/吨。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:45:41.710639+00:00",
+    "request_sha256": "de41be9fd33ed4b8051ff5e7e78412f78c9d91884867d33fd968958ac3524735",
+    "input_token_estimate": 16881,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279025",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "8f79e8ed182f4103a9c64f9ad1129d03",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4006,
+    "output_tokens": 6141,
+    "usage_source": "provider",
+    "duration_seconds": 24.103809,
+    "cost_cny": "0.02857"
+  },
+  "cache_request": {
+    "key": "6ac7e3b4045fd8424441afa6e9faace8063d017ae419a76a7df5f4354b5e2365",
+    "purpose": "text_review.detect",
+    "messages_sha256": "de41be9fd33ed4b8051ff5e7e78412f78c9d91884867d33fd968958ac3524735"
+  }
+}

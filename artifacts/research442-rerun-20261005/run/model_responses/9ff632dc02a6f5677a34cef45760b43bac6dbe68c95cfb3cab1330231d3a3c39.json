@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"具体来看，工程机械下跌1.88%，通用设备下跌%，专用设备下跌1.08%，仪器仪表下跌2.77%，金属制品下跌2.62%，。\"}],\"reason\":\"“通用设备下跌%”中百分号前缺少具体数值。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"5月32日，马斯克在社交媒体发帖称，已经重新回到7x24小时工作状态，会睡在会议室、服务器机房或工厂里。\"}],\"reason\":\"5月没有32日，日期本身不存在。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"5月25日晚，由中央广播电视总台主办的《》机甲格斗擂台赛，在杭州举办。\"}],\"reason\":\"书名号内节目或赛事名称缺失，未填写具体名称。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"它们身高约130平方分米，体重约35吨，都“身怀绝技”，能做出直拳刺探、左右勾拳、上勾拳、组合拳、前踢、左右侧踢、膝踢、闪避、跌倒起身等复杂动作。\"}],\"reason\":\"身高用面积单位“平方分米”，体重“35吨”与人形机器人格斗场景量级不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:11:32.059799+00:00",
+    "request_sha256": "2d819668ce0a420eb94034e9beb335bb9d7f2960994c857859498c5ec7fa8648",
+    "input_token_estimate": 18589,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280733",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9f4c9d174e4e4b3683729c9dc60ca30c",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4422,
+    "output_tokens": 10805,
+    "usage_source": "provider",
+    "duration_seconds": 45.896445,
+    "cost_cny": "0.047642"
+  },
+  "cache_request": {
+    "key": "9ff632dc02a6f5677a34cef45760b43bac6dbe68c95cfb3cab1330231d3a3c39",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2d819668ce0a420eb94034e9beb335bb9d7f2960994c857859498c5ec7fa8648"
+  }
+}

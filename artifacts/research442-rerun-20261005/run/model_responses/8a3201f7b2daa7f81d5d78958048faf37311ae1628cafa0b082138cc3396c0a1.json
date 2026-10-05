@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年公司ABC电池量产转换效率提升至27.3%以上，ABC组件量产转换效率提升至%，后续将通过满屏技术进一步提升至25%以上。\"}],\"reason\":\"“ABC组件量产转换效率提升至%”缺少具体数值。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"公司2024年实现营收11.55亿元，同比-58.94%；实现归母净利润-53.19亿元，同比-802.92%；实现扣非归母净利润-55.53亿元，同比-1819.98%。\"},{\"text\":\"公司2025Q1实现营收41.36亿元，同比+64.53%；实现归母净利润-3.00亿元，同比-229.35%；实现扣非归母净利润4.66亿元，同比-38.56%。\"}],\"reason\":\"2024年全年营收11.55亿元，小于2025Q1营收41.36亿元，且按同比推算2024Q1营收约25亿元，与全年数据矛盾。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"预计公司2025-2027年EPS分别为0.17元、0.46元、0.92元、0.95元，对应PE分别约65倍、24倍、12倍\"}],\"reason\":\"2025-2027年为三年，但EPS列出四个数值，PE仅三个，数量不匹配。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"公司经营活动现金流净额为7.16亿元，同比+129.72%，，同环比均实现转正。\"}],\"reason\":\"同比正增长129.72%意味着上期现金流为正，与“转正”表示上期为负矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:47:48.584945+00:00",
+    "request_sha256": "5e592850095cc45831cf6e6ac5575bf2062e31a77f1cb3f7bb55350fa258aa2e",
+    "input_token_estimate": 15946,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27809",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f2fd7f0162a949ef9f10299e16810b67",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3765,
+    "output_tokens": 9682,
+    "usage_source": "provider",
+    "duration_seconds": 37.019765,
+    "cost_cny": "0.042493"
+  },
+  "cache_request": {
+    "key": "8a3201f7b2daa7f81d5d78958048faf37311ae1628cafa0b082138cc3396c0a1",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5e592850095cc45831cf6e6ac5575bf2062e31a77f1cb3f7bb55350fa258aa2e"
+  }
+}

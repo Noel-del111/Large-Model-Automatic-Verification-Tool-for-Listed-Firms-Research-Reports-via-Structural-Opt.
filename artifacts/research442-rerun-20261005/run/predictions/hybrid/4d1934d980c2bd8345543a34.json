@@ -1,0 +1,189 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000318",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "年份区间写成27-25年，起点2027晚于终点2025，且与所列净利润和YOY的年度顺序冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 642,
+          "end": 693,
+          "text": "我们预计27-25年归母净利润8.00/9.45/11.90亿元，YOY+62%/+18%/+26%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计27-25年归母净利润8.00/9.45/11.90亿元，YOY+62%/+18%/+26%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 642,
+          "end": 693,
+          "text": "我们预计27-25年归母净利润8.00/9.45/11.90亿元，YOY+62%/+18%/+26%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5c314d16a4debd3c0aecba24",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          806
+        ]
+      ],
+      "estimated_input_tokens": 5410,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:47:49.093818+00:00",
+        "request_sha256": "ac4a7351511d694d7314f0ee49b4b76913168a612d884d33f93dd349a2fdc374",
+        "input_token_estimate": 15054,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277198",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "692b3618d8174014bc560c5c763f5f1b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3563,
+        "output_tokens": 5196,
+        "usage_source": "provider",
+        "duration_seconds": 22.138199,
+        "cost_cny": "0.024347",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "我们预计27-25年归母净利润8.00/9.45/11.90亿元，YOY+62%/+18%/+26%。"
+          }
+        ],
+        "reason": "年份区间写成27-25年，起点2027晚于终点2025，且与所列净利润和YOY的年度顺序冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 642,
+      "end": 693,
+      "text": "我们预计27-25年归母净利润8.00/9.45/11.90亿元，YOY+62%/+18%/+26%。",
+      "quantities": [
+        {
+          "value": "11.90",
+          "unit": "亿元",
+          "start": 667,
+          "end": 674
+        },
+        {
+          "value": "+62",
+          "unit": "%",
+          "start": 678,
+          "end": 682
+        },
+        {
+          "value": "+18",
+          "unit": "%",
+          "start": 683,
+          "end": 687
+        },
+        {
+          "value": "+26",
+          "unit": "%",
+          "start": 688,
+          "end": 692
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 806,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 806,
+    "processed_ranges": [
+      [
+        0,
+        806
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 806,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001553,
+  "source_content_sha256": "1a6e425b00bb35af2639bf4e3c2e42fe7c137f4bfd17421dbe05da307106695d"
+}

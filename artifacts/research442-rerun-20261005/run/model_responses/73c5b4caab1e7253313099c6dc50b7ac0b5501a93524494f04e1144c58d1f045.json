@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"假设以2024年12月32日为基准日，重组完成后公司总资产将增长%；\"}],\"reason\":\"12月没有32日，该日期本身不成立。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"重组完成后公司总资产将增长%；\"}],\"reason\":\"总资产增长比例的具体数值缺失，仅有百分号。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"《华电国际电力股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易报告书》《》等资产重组相关公告。\"}],\"reason\":\"第二个书名号内公告名称缺失，非数值属性值为空。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"预计2027-2025年EPS分别为0.64元、0.69元、0.73元，对应PE分别为9倍、9倍、8倍，维持对公司“买入”评级。\"}],\"reason\":\"年份区间写成2027-2025年，起始年晚于结束年，时间关系冲突。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"资产重组已顺利完成所需履行的决策和审批程序。\"},{\"text\":\"截至目前，该重组已顺利完成所需履行的决策和审批程序。\"}],\"reason\":\"同一信息在点评段落首尾不必要地重复表述。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:12:56.354841+00:00",
+    "request_sha256": "6a1a26ef3735a55c60b488a19b1fc3a35ea39fbab4f5abf417d602994f5d246c",
+    "input_token_estimate": 15534,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277678",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "0512ebfe63f5466f860d22e38eff5196",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3588,
+    "output_tokens": 4671,
+    "usage_source": "provider",
+    "duration_seconds": 19.814838,
+    "cost_cny": "0.022272"
+  },
+  "cache_request": {
+    "key": "73c5b4caab1e7253313099c6dc50b7ac0b5501a93524494f04e1144c58d1f045",
+    "purpose": "text_review.detect",
+    "messages_sha256": "6a1a26ef3735a55c60b488a19b1fc3a35ea39fbab4f5abf417d602994f5d246c"
+  }
+}

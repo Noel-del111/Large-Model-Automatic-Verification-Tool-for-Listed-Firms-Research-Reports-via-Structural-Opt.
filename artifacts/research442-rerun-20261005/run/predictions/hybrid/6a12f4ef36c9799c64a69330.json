@@ -1,0 +1,285 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000644",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "国内铝现货库存量级不可能为50.9克，单位应为万吨等，属单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 698,
+          "end": 825,
+          "text": "库存方面，国内现货库存50.9克，环比降低8.5%，沪铝库存12.4万吨，环比降低11.9%，库存持续去化，或主要受中美缓和下游补库影响，5-5月份本为传统淡季，但考虑中美缓和或出现“淡季不淡”的情况，铝价或仍有支撑，维持2.05-2.1万元/吨的判断。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "库存方面，国内现货库存50.9克，环比降低8.5%，沪铝库存12.4万吨，环比降低11.9%，库存持续去化，或主要受中美缓和下游补库影响，5-5月份本为传统淡季，但考虑中美缓和或出现“淡季不淡”的情况，铝价或仍有支撑，维持2.05-2.1万元/吨的判断。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 698,
+          "end": 825,
+          "text": "库存方面，国内现货库存50.9克，环比降低8.5%，沪铝库存12.4万吨，环比降低11.9%，库存持续去化，或主要受中美缓和下游补库影响，5-5月份本为传统淡季，但考虑中美缓和或出现“淡季不淡”的情况，铝价或仍有支撑，维持2.05-2.1万元/吨的判断。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c9de99f188cb5b32fd2b77c5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“5-5月份”月份区间起止相同，不能构成合法期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 698,
+          "end": 825,
+          "text": "库存方面，国内现货库存50.9克，环比降低8.5%，沪铝库存12.4万吨，环比降低11.9%，库存持续去化，或主要受中美缓和下游补库影响，5-5月份本为传统淡季，但考虑中美缓和或出现“淡季不淡”的情况，铝价或仍有支撑，维持2.05-2.1万元/吨的判断。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "库存方面，国内现货库存50.9克，环比降低8.5%，沪铝库存12.4万吨，环比降低11.9%，库存持续去化，或主要受中美缓和下游补库影响，5-5月份本为传统淡季，但考虑中美缓和或出现“淡季不淡”的情况，铝价或仍有支撑，维持2.05-2.1万元/吨的判断。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 698,
+          "end": 825,
+          "text": "库存方面，国内现货库存50.9克，环比降低8.5%，沪铝库存12.4万吨，环比降低11.9%，库存持续去化，或主要受中美缓和下游补库影响，5-5月份本为传统淡季，但考虑中美缓和或出现“淡季不淡”的情况，铝价或仍有支撑，维持2.05-2.1万元/吨的判断。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c77d1fb15ec961f2d5291f42",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "2月没有30日，该日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1237,
+          "end": 1308,
+          "text": "本周国内钴价维持下跌态势，主因需求不佳，2月30日刚果金禁矿4个月，鉴于钴价仍维持弱势，6月份刚果金或有政策变化，关注政策变化带来的反弹机会。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周国内钴价维持下跌态势，主因需求不佳，2月30日刚果金禁矿4个月，鉴于钴价仍维持弱势，6月份刚果金或有政策变化，关注政策变化带来的反弹机会。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1237,
+          "end": 1308,
+          "text": "本周国内钴价维持下跌态势，主因需求不佳，2月30日刚果金禁矿4个月，鉴于钴价仍维持弱势，6月份刚果金或有政策变化，关注政策变化带来的反弹机会。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1977490f4208cb59177495fb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "在锂价持续下跌的背景下，矿端未减产通常压制而非推高锂价，前后逻辑矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 939,
+          "end": 985,
+          "text": "锂价持续下跌至近6万，部分锂盐厂开始减停产，但矿端仍未看到明显减产，或为推高锂价的主要因素。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "锂价持续下跌至近6万，部分锂盐厂开始减停产，但矿端仍未看到明显减产，或为推高锂价的主要因素。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 939,
+          "end": 985,
+          "text": "锂价持续下跌至近6万，部分锂盐厂开始减停产，但矿端仍未看到明显减产，或为推高锂价的主要因素。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "97776f3c4453e9c128335968",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1375
+        ]
+      ],
+      "estimated_input_tokens": 5944,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:30:18.087184+00:00",
+        "request_sha256": "3389d777c6ca8c064cbd1a87f37af1701720e7da4df0f91640828393ae0a25e0",
+        "input_token_estimate": 16524,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278668",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b79676c344db447c8b2be3fe5509422d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4004,
+        "output_tokens": 4903,
+        "usage_source": "provider",
+        "duration_seconds": 19.711166,
+        "cost_cny": "0.023616",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "库存方面，国内现货库存50.9克，环比降低8.5%，沪铝库存12.4万吨，环比降低11.9%，库存持续去化，或主要受中美缓和下游补库影响，5-5月份本为传统淡季，但考虑中美缓和或出现“淡季不淡”的情况，铝价或仍有支撑，维持2.05-2.1万元/吨的判断。"
+          }
+        ],
+        "reason": "国内铝现货库存量级不可能为50.9克，单位应为万吨等，属单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "库存方面，国内现货库存50.9克，环比降低8.5%，沪铝库存12.4万吨，环比降低11.9%，库存持续去化，或主要受中美缓和下游补库影响，5-5月份本为传统淡季，但考虑中美缓和或出现“淡季不淡”的情况，铝价或仍有支撑，维持2.05-2.1万元/吨的判断。"
+          }
+        ],
+        "reason": "“5-5月份”月份区间起止相同，不能构成合法期间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "本周国内钴价维持下跌态势，主因需求不佳，2月30日刚果金禁矿4个月，鉴于钴价仍维持弱势，6月份刚果金或有政策变化，关注政策变化带来的反弹机会。"
+          }
+        ],
+        "reason": "2月没有30日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "锂价持续下跌至近6万，部分锂盐厂开始减停产，但矿端仍未看到明显减产，或为推高锂价的主要因素。"
+          }
+        ],
+        "reason": "在锂价持续下跌的背景下，矿端未减产通常压制而非推高锂价，前后逻辑矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1375,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1375,
+    "processed_ranges": [
+      [
+        0,
+        1375
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1375,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001865,
+  "source_content_sha256": "fbc80b8dd6e3a923e3ea1909f3f47148b0245e6bbb96f5dbc44dc8454938a415"
+}

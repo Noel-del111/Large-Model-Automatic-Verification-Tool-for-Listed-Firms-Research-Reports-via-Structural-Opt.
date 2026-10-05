@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"微导纳米于2025年4月25日发布2024年年报，2024年4月28日发布2025年一季报：\"}],\"reason\":\"2025年一季报不可能在2024年4月28日发布，发布日早于报告期，时间关系冲突。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年，公司实现营业收入为亿元，同比上升60.74%；归母净利润为2.27亿元，同比下降16.16%；毛利率为39.99%，同比下降3.65pct；归母净利率为8.40%，同比减少7.70pct。\"}],\"reason\":\"“营业收入为亿元”缺少对应数值，未给出2024年营业收入金额。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"半导体设备收入占主营业务比重由2023年度的7.27%提升至12.14%，呈逐年下降的趋势。\"}],\"reason\":\"占比由7.27%提升至12.14%是上升，与“呈逐年下降的趋势”在同一条件下矛盾。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"截至2024年12月31日，公司在手订单总额67.72亿元，其中光伏领域、半导体领域和新兴应用领域在手订单分别为40.88亿元、15.05亿元和0.79亿元。\"}],\"reason\":\"三个领域分项合计40.88+15.05+0.79=56.72亿元，不等于在手订单总额67.72亿元。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2024年，公司经营活动产生的现金流量净额为-99,989.87万美元，公司半导体业务持续快速发展，其收款节点相对滞后而前期垫付的资金需求较大，与此同时，采购原材料等原因导致支付款项增加。\"}],\"reason\":\"前文财务数据均以人民币亿元列示，此处经营现金流用万美元，且约-10亿美元与公司营收约27亿元规模不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:16:45.671596+00:00",
+    "request_sha256": "de89922c20638e25b2a89011186e7351dda184517445746fe99f4da42659339b",
+    "input_token_estimate": 17994,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280138",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "fe1ce7fb64ac4cef86d80574c262a6bf",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4229,
+    "output_tokens": 4980,
+    "usage_source": "provider",
+    "duration_seconds": 19.729573,
+    "cost_cny": "0.024149"
+  },
+  "cache_request": {
+    "key": "7ffb3de937959d8b189805f0169de2c9c39b3b78b3d4c71854a56d2be9974cfb",
+    "purpose": "text_review.detect",
+    "messages_sha256": "de89922c20638e25b2a89011186e7351dda184517445746fe99f4da42659339b"
+  }
+}

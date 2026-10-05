@@ -1,0 +1,872 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000476",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "该句在上一句之后重复出现，同一信息不必要地重复。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "收入权重较大的预调酒收入下降是其主要原因，食用香精的收入保持稳定增长。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "2220585904c4428808756ebb",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "数字零售渠道的同比降幅数值缺失，仅写百分号。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 588,
+          "end": 633,
+          "text": "2024年，线下、即饮和数字零售各大渠道的销售额分别同比下降1.48%、43.58%和%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，线下、即饮和数字零售各大渠道的销售额分别同比下降1.48%、43.58%和%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 588,
+          "end": 633,
+          "text": "2024年，线下、即饮和数字零售各大渠道的销售额分别同比下降1.48%、43.58%和%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0aa6695bd88241835a44a0a1",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "经销商数量单位应为家或个，不能是重量单位吨。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 675,
+          "end": 737,
+          "text": "此外，经销商数量减少也是另外一个原因：2024年末经销商数量减至2068吨，较年初减少4%，其中华东市场的经销商减少16%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此外，经销商数量减少也是另外一个原因：2024年末经销商数量减至2068吨，较年初减少4%，其中华东市场的经销商减少16%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 675,
+          "end": 737,
+          "text": "此外，经销商数量减少也是另外一个原因：2024年末经销商数量减至2068吨，较年初减少4%，其中华东市场的经销商减少16%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a91d427271155bff38d54927",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“20Q”未标示年份和季度，不是合法可核验的时间表达。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 312,
+          "end": 400,
+          "text": "20Q、20241Q、20242Q、20243Q、20244Q及20251Q的收入分别同比增-14.9%、5.51%、-7.25%、-5.95%、-17.97%、-8.11%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "20Q、20241Q、20242Q、20243Q、20244Q及20251Q的收入分别同比增-14.9%、5.51%、-7.25%、-5.95%、-17.97%、-8.11%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 312,
+          "end": 400,
+          "text": "20Q、20241Q、20242Q、20243Q、20244Q及20251Q的收入分别同比增-14.9%、5.51%、-7.25%、-5.95%、-17.97%、-8.11%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0641acd5fa3d37fca45ddca5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按股价27.09元除以每股收益0.78元、1.07元，对应市盈率约为34.73倍和25.32倍，与文中34.65倍和25.28倍不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1619,
+          "end": 1729,
+          "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为0.78元、0.93元和1.07元，参照5月26日收盘价27.09元，对应的市盈率分别为34.65倍、29.13倍和25.28倍，维持公司“谨慎增持”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为0.78元、0.93元和1.07元，参照5月26日收盘价27.09元，对应的市盈率分别为34.65倍、29.13倍和25.28倍，维持公司“谨慎增持”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1619,
+          "end": 1729,
+          "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为0.78元、0.93元和1.07元，参照5月26日收盘价27.09元，对应的市盈率分别为34.65倍、29.13倍和25.28倍，维持公司“谨慎增持”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "35b4ce327f0be2c9a6c87593",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“同比减少-13.65%”字面表示减少负值即增加13.65%，与“减少”的表述矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 64,
+          "end": 125,
+          "text": "2024年，公司实现营业收入30.48亿元，同比增加-6.61%；实现归母扣非净利润6.72亿元，同比减少-13.65%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司实现营业收入30.48亿元，同比增加-6.61%；实现归母扣非净利润6.72亿元，同比减少-13.65%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 64,
+          "end": 125,
+          "text": "2024年，公司实现营业收入30.48亿元，同比增加-6.61%；实现归母扣非净利润6.72亿元，同比减少-13.65%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f7e59a38e24a224d2852b904",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "前句称累计五个季度同比下降，后句列出六个季度且2024Q1同比增5.51%，数量与方向均矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 251,
+          "end": 277,
+          "text": "2023年四季度以来，销售收入累计五个季度同比下降。"
+        },
+        {
+          "kind": "source_text",
+          "start": 312,
+          "end": 400,
+          "text": "20Q、20241Q、20242Q、20243Q、20244Q及20251Q的收入分别同比增-14.9%、5.51%、-7.25%、-5.95%、-17.97%、-8.11%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2023年四季度以来，销售收入累计五个季度同比下降。"
+        },
+        {
+          "text": "20Q、20241Q、20242Q、20243Q、20244Q及20251Q的收入分别同比增-14.9%、5.51%、-7.25%、-5.95%、-17.97%、-8.11%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 251,
+          "end": 277,
+          "text": "2023年四季度以来，销售收入累计五个季度同比下降。"
+        },
+        {
+          "start": 312,
+          "end": 400,
+          "text": "20Q、20241Q、20242Q、20243Q、20244Q及20251Q的收入分别同比增-14.9%、5.51%、-7.25%、-5.95%、-17.97%、-8.11%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b7c25f62a8164ff15a14ab36",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1780
+        ]
+      ],
+      "estimated_input_tokens": 6198,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:32:22.659784+00:00",
+        "request_sha256": "53ebaae9ae51c69865a644200b3e731ef49365060b68b8e2bb704d909d20932d",
+        "input_token_estimate": 17289,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279433",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "44d96da656984188a1d4e7b1bce6dbb1",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4129,
+        "output_tokens": 15226,
+        "usage_source": "provider",
+        "duration_seconds": 56.835364,
+        "cost_cny": "0.065033"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "收入权重较大的预调酒收入下降是其主要原因，食用香精的收入保持稳定增长。"
+          }
+        ],
+        "reason": "该句在上一句之后重复出现，同一信息不必要地重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年，线下、即饮和数字零售各大渠道的销售额分别同比下降1.48%、43.58%和%。"
+          }
+        ],
+        "reason": "数字零售渠道的同比降幅数值缺失，仅写百分号。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "此外，经销商数量减少也是另外一个原因：2024年末经销商数量减至2068吨，较年初减少4%，其中华东市场的经销商减少16%。"
+          }
+        ],
+        "reason": "经销商数量单位应为家或个，不能是重量单位吨。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "20Q、20241Q、20242Q、20243Q、20244Q及20251Q的收入分别同比增-14.9%、5.51%、-7.25%、-5.95%、-17.97%、-8.11%。"
+          }
+        ],
+        "reason": "“20Q”未标示年份和季度，不是合法可核验的时间表达。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为0.78元、0.93元和1.07元，参照5月26日收盘价27.09元，对应的市盈率分别为34.65倍、29.13倍和25.28倍，维持公司“谨慎增持”评级。"
+          }
+        ],
+        "reason": "按股价27.09元除以每股收益0.78元、1.07元，对应市盈率约为34.73倍和25.32倍，与文中34.65倍和25.28倍不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年，公司实现营业收入30.48亿元，同比增加-6.61%；实现归母扣非净利润6.72亿元，同比减少-13.65%。"
+          }
+        ],
+        "reason": "“同比减少-13.65%”字面表示减少负值即增加13.65%，与“减少”的表述矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2023年四季度以来，销售收入累计五个季度同比下降。"
+          },
+          {
+            "text": "20Q、20241Q、20242Q、20243Q、20244Q及20251Q的收入分别同比增-14.9%、5.51%、-7.25%、-5.95%、-17.97%、-8.11%。"
+          }
+        ],
+        "reason": "前句称累计五个季度同比下降，后句列出六个季度且2024Q1同比增5.51%，数量与方向均矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "收入权重较大的预调酒收入下降是其主要原因，食用香精的收入保持稳定增长。"
+          }
+        ],
+        "reason": "该句在上一句之后重复出现，同一信息不必要地重复。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 42,
+      "end": 97,
+      "text": "公司发布2024年年报以及2025年一季报：2024年，公司实现营业收入30.48亿元，同比增加-6.61%；",
+      "quantities": [
+        {
+          "value": "30.48",
+          "unit": "亿元",
+          "start": 78,
+          "end": 85
+        },
+        {
+          "value": "-6.61",
+          "unit": "%",
+          "start": 90,
+          "end": 96
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 97,
+      "end": 125,
+      "text": "实现归母扣非净利润6.72亿元，同比减少-13.65%。",
+      "quantities": [
+        {
+          "value": "6.72",
+          "unit": "亿元",
+          "start": 106,
+          "end": 112
+        },
+        {
+          "value": "-13.65",
+          "unit": "%",
+          "start": 117,
+          "end": 124
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 125,
+      "end": 162,
+      "text": "2024年第四季度，公司实现营业收入6.62亿元，同比增加-17.97%；",
+      "quantities": [
+        {
+          "value": "6.62",
+          "unit": "亿元",
+          "start": 143,
+          "end": 149
+        },
+        {
+          "value": "-17.97",
+          "unit": "%",
+          "start": 154,
+          "end": 161
+        }
+      ],
+      "periods": [
+        "2024年第四季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 162,
+      "end": 187,
+      "text": "实现归母扣非净利润1.11亿元，同比增加-14%。",
+      "quantities": [
+        {
+          "value": "1.11",
+          "unit": "亿元",
+          "start": 171,
+          "end": 177
+        },
+        {
+          "value": "-14",
+          "unit": "%",
+          "start": 182,
+          "end": 186
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 187,
+      "end": 222,
+      "text": "2025年一季度，公司实现营业收入7.37亿元，同比增加-8.11%；",
+      "quantities": [
+        {
+          "value": "7.37",
+          "unit": "亿元",
+          "start": 204,
+          "end": 210
+        },
+        {
+          "value": "-8.11",
+          "unit": "%",
+          "start": 215,
+          "end": 221
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 222,
+      "end": 249,
+      "text": "实现归母扣非净利润1.78亿元，同比增加10.39%。",
+      "quantities": [
+        {
+          "value": "1.78",
+          "unit": "亿元",
+          "start": 231,
+          "end": 237
+        },
+        {
+          "value": "10.39",
+          "unit": "%",
+          "start": 242,
+          "end": 248
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 799,
+      "end": 850,
+      "text": "预调酒的盈利情况好于收入：2024年，预调酒的销量减少，但产品结构提升，推动预调酒的毛利率进一步上升。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 850,
+      "end": 868,
+      "text": "2025年一季度的毛利率进一步升高。",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 927,
+      "end": 967,
+      "text": "在产品结构提升的推动下，预调酒录得毛利率70.03%，同比升高2.42个百分点。",
+      "quantities": [
+        {
+          "value": "70.03",
+          "unit": "%",
+          "start": 947,
+          "end": 953
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 967,
+      "end": 1000,
+      "text": "此外，本期食用香精的毛利率同比升高1.48个百分点至69.12%。",
+      "quantities": [
+        {
+          "value": "69.12",
+          "unit": "%",
+          "start": 993,
+          "end": 999
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1000,
+      "end": 1038,
+      "text": "20251Q，公司的综合毛利率进一步同比升高1.34个百分点至69.66%。",
+      "quantities": [
+        {
+          "value": "69.66",
+          "unit": "%",
+          "start": 1031,
+          "end": 1037
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1040,
+      "end": 1072,
+      "text": "2024年销售期间费用率较高，导致毛利率上升的情况下净利率下滑。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1040,
+      "end": 1072,
+      "text": "2024年销售期间费用率较高，导致毛利率上升的情况下净利率下滑。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1072,
+      "end": 1094,
+      "text": "2025年一季度，在控费的努力下净利率升高。",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1147,
+      "end": 1193,
+      "text": "在毛利率上升的情况下，由于费用率升高，2024年的净利率下滑1.22个百分点至23.50%。",
+      "quantities": [
+        {
+          "value": "23.50",
+          "unit": "%",
+          "start": 1186,
+          "end": 1192
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1147,
+      "end": 1193,
+      "text": "在毛利率上升的情况下，由于费用率升高，2024年的净利率下滑1.22个百分点至23.50%。",
+      "quantities": [
+        {
+          "value": "23.50",
+          "unit": "%",
+          "start": 1186,
+          "end": 1192
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1193,
+      "end": 1244,
+      "text": "2025年一季度费用率下降较快，同比下降6.18个百分点，从而推动本期净利率同比上升3.68个百分点。",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1597,
+      "end": 1617,
+      "text": "2025年一季度，烈酒开始实现少量营收。",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 1619,
+      "end": 1729,
+      "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为0.78元、0.93元和1.07元，参照5月26日收盘价27.09元，对应的市盈率分别为34.65倍、29.13倍和25.28倍，维持公司“谨慎增持”评级。",
+      "quantities": [
+        {
+          "value": "0.78",
+          "unit": "元",
+          "start": 1651,
+          "end": 1656
+        },
+        {
+          "value": "0.93",
+          "unit": "元",
+          "start": 1657,
+          "end": 1662
+        },
+        {
+          "value": "1.07",
+          "unit": "元",
+          "start": 1663,
+          "end": 1668
+        },
+        {
+          "value": "27.09",
+          "unit": "元",
+          "start": 1679,
+          "end": 1685
+        },
+        {
+          "value": "34.65",
+          "unit": "倍",
+          "start": 1695,
+          "end": 1701
+        },
+        {
+          "value": "29.13",
+          "unit": "倍",
+          "start": 1702,
+          "end": 1708
+        },
+        {
+          "value": "25.28",
+          "unit": "倍",
+          "start": 1709,
+          "end": 1715
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预测公司",
+        "维持公司"
+      ]
+    },
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 1619,
+      "end": 1729,
+      "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为0.78元、0.93元和1.07元，参照5月26日收盘价27.09元，对应的市盈率分别为34.65倍、29.13倍和25.28倍，维持公司“谨慎增持”评级。",
+      "quantities": [
+        {
+          "value": "0.78",
+          "unit": "元",
+          "start": 1651,
+          "end": 1656
+        },
+        {
+          "value": "0.93",
+          "unit": "元",
+          "start": 1657,
+          "end": 1662
+        },
+        {
+          "value": "1.07",
+          "unit": "元",
+          "start": 1663,
+          "end": 1668
+        },
+        {
+          "value": "27.09",
+          "unit": "元",
+          "start": 1679,
+          "end": 1685
+        },
+        {
+          "value": "34.65",
+          "unit": "倍",
+          "start": 1695,
+          "end": 1701
+        },
+        {
+          "value": "29.13",
+          "unit": "倍",
+          "start": 1702,
+          "end": 1708
+        },
+        {
+          "value": "25.28",
+          "unit": "倍",
+          "start": 1709,
+          "end": 1715
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预测公司",
+        "维持公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1780,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1780,
+    "processed_ranges": [
+      [
+        0,
+        1780
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 20,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 56.861955,
+  "source_content_sha256": "01545014ed333dff67fa2e45ddcc64109cb2fc0dd60d48b4c8e9a4d4cb9810ae"
+}

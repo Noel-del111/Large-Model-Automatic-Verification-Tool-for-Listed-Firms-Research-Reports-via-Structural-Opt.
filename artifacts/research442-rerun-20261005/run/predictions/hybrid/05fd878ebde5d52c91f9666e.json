@@ -1,0 +1,322 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000375",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 1183,
+          "end": 1253,
+          "text": "预计公司2027-2025年归母净利润复合增速为39.1%，给予公司2025年20倍PE，对应目标价15.2元，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1183,
+          "end": 1253,
+          "text": "预计公司2027-2025年归母净利润复合增速为39.1%，给予公司2025年20倍PE，对应目标价15.2元，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "226159178fd15070623719cb",
+      "detector_ids": [
+        "hybrid.model",
+        "legacy.C.INTRINSIC.002"
+      ],
+      "original_spans": [
+        {
+          "text": "预计公司2027-2025年归母净利润复合增速为39.1%，给予公司2025年20倍PE，对应目标价15.2元，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "253年非合理报告年份，结合上下文应为2023年，年份书写错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 872,
+          "end": 1003,
+          "text": "公司海外市场增长势头强劲，253年新能源出口订单取得较大突破，获得智利895辆新能源客车和迪拜40辆新能源客车订单，2025年，公司出口低单价客车占比预计下滑，出口至南美、欧洲新能源高端车型占比有望大幅提升，产品结构优化，出口单车均价及利润未来有望继续快速增长。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司海外市场增长势头强劲，253年新能源出口订单取得较大突破，获得智利895辆新能源客车和迪拜40辆新能源客车订单，2025年，公司出口低单价客车占比预计下滑，出口至南美、欧洲新能源高端车型占比有望大幅提升，产品结构优化，出口单车均价及利润未来有望继续快速增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 872,
+          "end": 1003,
+          "text": "公司海外市场增长势头强劲，253年新能源出口订单取得较大突破，获得智利895辆新能源客车和迪拜40辆新能源客车订单，2025年，公司出口低单价客车占比预计下滑，出口至南美、欧洲新能源高端车型占比有望大幅提升，产品结构优化，出口单车均价及利润未来有望继续快速增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7b5be80df92982e7e393f942",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "公司内销客车后直接接“辆”和同比增速，缺少具体内销数量。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 743,
+          "end": 790,
+          "text": "公司积极把握客车市场发展机遇，国内销量大幅增长，2024年公司内销客车辆，同比增长39.2%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司积极把握客车市场发展机遇，国内销量大幅增长，2024年公司内销客车辆，同比增长39.2%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 743,
+          "end": 790,
+          "text": "公司积极把握客车市场发展机遇，国内销量大幅增长，2024年公司内销客车辆，同比增长39.2%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0719a8743c906643fd07d5a9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "单车均价48.6元与客车单价量级不符，结合行业应为万元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 790,
+          "end": 834,
+          "text": "公司产品竞争力强，2024年在国内市场的单车均价为48.6元，在行业公司中处于较高水平。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司产品竞争力强，2024年在国内市场的单车均价为48.6元，在行业公司中处于较高水平。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 790,
+          "end": 834,
+          "text": "公司产品竞争力强，2024年在国内市场的单车均价为48.6元，在行业公司中处于较高水平。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8312cc5af47ceec1b799b910",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1299
+        ]
+      ],
+      "estimated_input_tokens": 5906,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:06:46.156175+00:00",
+        "request_sha256": "18bb4a775ec7b90bdae66714d9969eca4e3c962dccd40a1f09722af257ef0f1b",
+        "input_token_estimate": 16408,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278552",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "cc17346f8f0e45dc971ff34a52b32871",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3782,
+        "output_tokens": 5663,
+        "usage_source": "provider",
+        "duration_seconds": 22.784951,
+        "cost_cny": "0.026434",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "公司海外市场增长势头强劲，253年新能源出口订单取得较大突破，获得智利895辆新能源客车和迪拜40辆新能源客车订单，2025年，公司出口低单价客车占比预计下滑，出口至南美、欧洲新能源高端车型占比有望大幅提升，产品结构优化，出口单车均价及利润未来有望继续快速增长。"
+          }
+        ],
+        "reason": "253年非合理报告年份，结合上下文应为2023年，年份书写错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "公司积极把握客车市场发展机遇，国内销量大幅增长，2024年公司内销客车辆，同比增长39.2%。"
+          }
+        ],
+        "reason": "公司内销客车后直接接“辆”和同比增速，缺少具体内销数量。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司产品竞争力强，2024年在国内市场的单车均价为48.6元，在行业公司中处于较高水平。"
+          }
+        ],
+        "reason": "单车均价48.6元与客车单价量级不符，结合行业应为万元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "预计公司2027-2025年归母净利润复合增速为39.1%，给予公司2025年20倍PE，对应目标价15.2元，首次覆盖，给予“买入”评级。"
+          }
+        ],
+        "reason": "预测区间写为2027-2025年，起点晚于终点，时间顺序倒置。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1183,
+      "end": 1253,
+      "text": "预计公司2027-2025年归母净利润复合增速为39.1%，给予公司2025年20倍PE，对应目标价15.2元，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "39.1",
+          "unit": "%",
+          "start": 1207,
+          "end": 1212
+        },
+        {
+          "value": "20",
+          "unit": "倍",
+          "start": 1222,
+          "end": 1225
+        },
+        {
+          "value": "15.2",
+          "unit": "元",
+          "start": 1233,
+          "end": 1238
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "预计公司",
+        "给予公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1299,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1299,
+    "processed_ranges": [
+      [
+        0,
+        1299
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1299,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001715,
+  "source_content_sha256": "63d4129cc5ff54342c2d35f325227e7d8b89e289b6c5545f29d83bcd158bd263"
+}

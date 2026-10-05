@@ -1,0 +1,600 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000471",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后的括号为空，缺失股票代码等非数值属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 20,
+          "end": 26,
+          "text": "生益科技()"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "生益科技()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 20,
+          "end": 26,
+          "text": "生益科技()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dddd868d2a33d47ed4fc1e5e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句子在相邻位置完全重复，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 213,
+          "end": 251,
+          "text": "覆铜板是PCB核心原材料，传统服务器升级+AI服务器渗透驱动覆铜板量价齐升。"
+        },
+        {
+          "kind": "source_text",
+          "start": 251,
+          "end": 289,
+          "text": "覆铜板是PCB核心原材料，传统服务器升级+AI服务器渗透驱动覆铜板量价齐升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "覆铜板是PCB核心原材料，传统服务器升级+AI服务器渗透驱动覆铜板量价齐升。",
+          "start": 213,
+          "end": 251
+        },
+        {
+          "text": "覆铜板是PCB核心原材料，传统服务器升级+AI服务器渗透驱动覆铜板量价齐升。",
+          "start": 251,
+          "end": 289
+        }
+      ],
+      "spans": [
+        {
+          "start": 213,
+          "end": 251,
+          "text": "覆铜板是PCB核心原材料，传统服务器升级+AI服务器渗透驱动覆铜板量价齐升。"
+        },
+        {
+          "start": 251,
+          "end": 289,
+          "text": "覆铜板是PCB核心原材料，传统服务器升级+AI服务器渗透驱动覆铜板量价齐升。"
+        }
+      ],
+      "warnings": [],
+      "id": "0bff4205810830c29afac3d1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间起点2028年晚于终点2024年，期间关系冲突不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 309,
+          "end": 350,
+          "text": "Prismark预计2028年至2024年全球PCB产值复合增速预计为5.40%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Prismark预计2028年至2024年全球PCB产值复合增速预计为5.40%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 309,
+          "end": 350,
+          "text": "Prismark预计2028年至2024年全球PCB产值复合增速预计为5.40%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ad571a531035f42853e3497d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "研发费用金额单位应为亿元，“10亿分”量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 812,
+          "end": 840,
+          "text": "公司研发费用率持续攀升，2024年研发费用突破10亿分。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司研发费用率持续攀升，2024年研发费用突破10亿分。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 812,
+          "end": 840,
+          "text": "公司研发费用率持续攀升，2024年研发费用突破10亿分。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2eced660e3e368ff381862bd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“每股EPS”中“每股”与“EPS”含义重复，属不必要表达。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 983,
+          "end": 1103,
+          "text": "预计公司2025-2027年营收为250.81/292.43/344.78亿元，同比增长23%/17%/18%，归母净利润为26.54/31.89/35.06亿元，同比增长53%/20%/10%，每股EPS为1.09/1.31/1.44元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司2025-2027年营收为250.81/292.43/344.78亿元，同比增长23%/17%/18%，归母净利润为26.54/31.89/35.06亿元，同比增长53%/20%/10%，每股EPS为1.09/1.31/1.44元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 983,
+          "end": 1103,
+          "text": "预计公司2025-2027年营收为250.81/292.43/344.78亿元，同比增长23%/17%/18%，归母净利润为26.54/31.89/35.06亿元，同比增长53%/20%/10%，每股EPS为1.09/1.31/1.44元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "94b5c8327ef848a655671ce5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "模糊语言",
+      "reason": "“智能的渗透率”表述不完整，可解释为智能汽车、智能化等不同含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 937,
+          "end": 983,
+          "text": "受益于下游AI基建需求的释放以及新能源汽车、智能的渗透率提升，公司高端产品有望实现较快增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "受益于下游AI基建需求的释放以及新能源汽车、智能的渗透率提升，公司高端产品有望实现较快增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 937,
+          "end": 983,
+          "text": "受益于下游AI基建需求的释放以及新能源汽车、智能的渗透率提升，公司高端产品有望实现较快增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b940051b11718acb9eb4cce3",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1160
+        ]
+      ],
+      "estimated_input_tokens": 5682,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:27:28.502801+00:00",
+        "request_sha256": "5812b0b6ea5684c779d0f0b5b19b1b0a6395f8ad784476490fbf3b48e1b94789",
+        "input_token_estimate": 15817,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277961",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "5f0bec96be274a10b3227796c8232077",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3705,
+        "output_tokens": 12368,
+        "usage_source": "provider",
+        "duration_seconds": 45.721825,
+        "cost_cny": "0.053177"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "生益科技()"
+          }
+        ],
+        "reason": "公司名称后的括号为空，缺失股票代码等非数值属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "覆铜板是PCB核心原材料，传统服务器升级+AI服务器渗透驱动覆铜板量价齐升。",
+            "start": 213,
+            "end": 251
+          },
+          {
+            "text": "覆铜板是PCB核心原材料，传统服务器升级+AI服务器渗透驱动覆铜板量价齐升。",
+            "start": 251,
+            "end": 289
+          }
+        ],
+        "reason": "同一句子在相邻位置完全重复，无新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "Prismark预计2028年至2024年全球PCB产值复合增速预计为5.40%。"
+          }
+        ],
+        "reason": "时间区间起点2028年晚于终点2024年，期间关系冲突不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司研发费用率持续攀升，2024年研发费用突破10亿分。"
+          }
+        ],
+        "reason": "研发费用金额单位应为亿元，“10亿分”量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "预计公司2025-2027年营收为250.81/292.43/344.78亿元，同比增长23%/17%/18%，归母净利润为26.54/31.89/35.06亿元，同比增长53%/20%/10%，每股EPS为1.09/1.31/1.44元。"
+          }
+        ],
+        "reason": "“每股EPS”中“每股”与“EPS”含义重复，属不必要表达。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "模糊语言",
+        "spans": [
+          {
+            "text": "受益于下游AI基建需求的释放以及新能源汽车、智能的渗透率提升，公司高端产品有望实现较快增长。"
+          }
+        ],
+        "reason": "“智能的渗透率”表述不完整，可解释为智能汽车、智能化等不同含义。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 107,
+      "end": 211,
+      "text": "受益于下游PCB产能向中国大陆转移，公司业绩持续稳健增长，2005年至2024年营收和归母净利润复合增速分别为11.89%和11.71%，公司刚性覆铜板销售总额跃升至全球第二，2023年全球市占率达到14%。",
+      "quantities": [
+        {
+          "value": "11.89",
+          "unit": "%",
+          "start": 162,
+          "end": 168
+        },
+        {
+          "value": "11.71",
+          "unit": "%",
+          "start": 169,
+          "end": 175
+        },
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 207,
+          "end": 210
+        }
+      ],
+      "periods": [
+        "2005年",
+        "2024年",
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 107,
+      "end": 211,
+      "text": "受益于下游PCB产能向中国大陆转移，公司业绩持续稳健增长，2005年至2024年营收和归母净利润复合增速分别为11.89%和11.71%，公司刚性覆铜板销售总额跃升至全球第二，2023年全球市占率达到14%。",
+      "quantities": [
+        {
+          "value": "11.89",
+          "unit": "%",
+          "start": 162,
+          "end": 168
+        },
+        {
+          "value": "11.71",
+          "unit": "%",
+          "start": 169,
+          "end": 175
+        },
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 207,
+          "end": 210
+        }
+      ],
+      "periods": [
+        "2005年",
+        "2024年",
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 983,
+      "end": 1103,
+      "text": "预计公司2025-2027年营收为250.81/292.43/344.78亿元，同比增长23%/17%/18%，归母净利润为26.54/31.89/35.06亿元，同比增长53%/20%/10%，每股EPS为1.09/1.31/1.44元。",
+      "quantities": [
+        {
+          "value": "344.78",
+          "unit": "亿元",
+          "start": 1014,
+          "end": 1022
+        },
+        {
+          "value": "23",
+          "unit": "%",
+          "start": 1027,
+          "end": 1030
+        },
+        {
+          "value": "17",
+          "unit": "%",
+          "start": 1031,
+          "end": 1034
+        },
+        {
+          "value": "18",
+          "unit": "%",
+          "start": 1035,
+          "end": 1038
+        },
+        {
+          "value": "35.06",
+          "unit": "亿元",
+          "start": 1057,
+          "end": 1064
+        },
+        {
+          "value": "53",
+          "unit": "%",
+          "start": 1069,
+          "end": 1072
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 1073,
+          "end": 1076
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1077,
+          "end": 1080
+        },
+        {
+          "value": "1.44",
+          "unit": "元",
+          "start": 1097,
+          "end": 1102
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 983,
+      "end": 1103,
+      "text": "预计公司2025-2027年营收为250.81/292.43/344.78亿元，同比增长23%/17%/18%，归母净利润为26.54/31.89/35.06亿元，同比增长53%/20%/10%，每股EPS为1.09/1.31/1.44元。",
+      "quantities": [
+        {
+          "value": "344.78",
+          "unit": "亿元",
+          "start": 1014,
+          "end": 1022
+        },
+        {
+          "value": "23",
+          "unit": "%",
+          "start": 1027,
+          "end": 1030
+        },
+        {
+          "value": "17",
+          "unit": "%",
+          "start": 1031,
+          "end": 1034
+        },
+        {
+          "value": "18",
+          "unit": "%",
+          "start": 1035,
+          "end": 1038
+        },
+        {
+          "value": "35.06",
+          "unit": "亿元",
+          "start": 1057,
+          "end": 1064
+        },
+        {
+          "value": "53",
+          "unit": "%",
+          "start": 1069,
+          "end": 1072
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 1073,
+          "end": 1076
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1077,
+          "end": 1080
+        },
+        {
+          "value": "1.44",
+          "unit": "元",
+          "start": 1097,
+          "end": 1102
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1160,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1160,
+    "processed_ranges": [
+      [
+        0,
+        1160
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 45.750275,
+  "source_content_sha256": "a94609adb43cd922ad4b25b274fbcd11cd02cf0faea5fba539776e07d9f86a8c"
+}

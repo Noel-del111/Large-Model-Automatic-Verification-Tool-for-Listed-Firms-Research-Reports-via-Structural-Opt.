@@ -1,0 +1,625 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000492",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一核心业务定位连续重复，后一句未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 60,
+          "end": 137,
+          "text": "新恒汇（301678）：智能卡业务是公司的传统核心业务，主要包括智能卡芯片关键封装材料柔性引线框架产品的研发、生产和销售。智能卡业务是公司的传统核心业务。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新恒汇（301678）：智能卡业务是公司的传统核心业务，主要包括智能卡芯片关键封装材料柔性引线框架产品的研发、生产和销售。智能卡业务是公司的传统核心业务。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 60,
+          "end": 137,
+          "text": "新恒汇（301678）：智能卡业务是公司的传统核心业务，主要包括智能卡芯片关键封装材料柔性引线框架产品的研发、生产和销售。智能卡业务是公司的传统核心业务。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "45b2973dac1eab7fe92c88fc",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2024年营业收入被写成8.42/2.36亿元，同一指标出现两个数值，表述冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 137,
+          "end": 263,
+          "text": "公司2022-2024年分别实现营业收入6.84亿元/7.67亿元/8.42/2.36亿元，YOY依次为24.77%/12.13%/9.83%；实现归母净利润1.10亿元/1.52亿元/1.86亿元，YOY依次为9.38%/38.58%/22.07%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2022-2024年分别实现营业收入6.84亿元/7.67亿元/8.42/2.36亿元，YOY依次为24.77%/12.13%/9.83%；实现归母净利润1.10亿元/1.52亿元/1.86亿元，YOY依次为9.38%/38.58%/22.07%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 137,
+          "end": 263,
+          "text": "公司2022-2024年分别实现营业收入6.84亿元/7.67亿元/8.42/2.36亿元，YOY依次为24.77%/12.13%/9.83%；实现归母净利润1.10亿元/1.52亿元/1.86亿元，YOY依次为9.38%/38.58%/22.07%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4efbeb3f97fc6a0fc9219678",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按文中2024年总营收8.42亿元计算，2.42亿元占比约28.74%，与29.84%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1313,
+          "end": 1363,
+          "text": "2024年上述两项新业务合计贡献营收2.42亿元、收入占比由2022年的14.70%增至29.84%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年上述两项新业务合计贡献营收2.42亿元、收入占比由2022年的14.70%增至29.84%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1313,
+          "end": 1363,
+          "text": "2024年上述两项新业务合计贡献营收2.42亿元、收入占比由2022年的14.70%增至29.84%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d792295abd9900e1b6090962",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "保证封装材料供应应提升而非降低产品交付能力，与后文“利好”的判断矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 502,
+          "end": 596,
+          "text": "该业务主要采用一体化的经营模式，自产关键封装材料柔性引线框架用于智能卡模块封装，一方面保证低成本高质量的专用封装材料供应、进而降低产品的交付能力，另一方面也利好智能卡模块封装利润率的提升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "该业务主要采用一体化的经营模式，自产关键封装材料柔性引线框架用于智能卡模块封装，一方面保证低成本高质量的专用封装材料供应、进而降低产品的交付能力，另一方面也利好智能卡模块封装利润率的提升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 502,
+          "end": 596,
+          "text": "该业务主要采用一体化的经营模式，自产关键封装材料柔性引线框架用于智能卡模块封装，一方面保证低成本高质量的专用封装材料供应、进而降低产品的交付能力，另一方面也利好智能卡模块封装利润率的提升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6a2cd428bba7d12cc7f30673",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "新恒汇主营智能卡业务，前文未涉智能控制领域，“智能控制”与公司实际业务不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1427,
+          "end": 1476,
+          "text": "同行业上市公司对比：公司专注于智能控制领域；根据业务的相似性，选取康强电子为新恒汇的可比上市公司。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "同行业上市公司对比：公司专注于智能控制领域；根据业务的相似性，选取康强电子为新恒汇的可比上市公司。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1427,
+          "end": 1476,
+          "text": "同行业上市公司对比：公司专注于智能控制领域；根据业务的相似性，选取康强电子为新恒汇的可比上市公司。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "691a1bdc1ff905315137448b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“公司基于原有业务基础”在同一句内不必要地重复出现。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 862,
+          "end": 961,
+          "text": "2、公司基于原有业务基础，积极向蚀刻引线框架、物联网eSIM芯片封装等业务领域延伸拓展，拟打造公司业绩新的增长点。公司基于原有业务基础，2019年开拓了蚀刻引线框架业务和物联网eSIM芯片封测业务；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2、公司基于原有业务基础，积极向蚀刻引线框架、物联网eSIM芯片封装等业务领域延伸拓展，拟打造公司业绩新的增长点。公司基于原有业务基础，2019年开拓了蚀刻引线框架业务和物联网eSIM芯片封测业务；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 862,
+          "end": 961,
+          "text": "2、公司基于原有业务基础，积极向蚀刻引线框架、物联网eSIM芯片封装等业务领域延伸拓展，拟打造公司业绩新的增长点。公司基于原有业务基础，2019年开拓了蚀刻引线框架业务和物联网eSIM芯片封测业务；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6801e84c3e77d7584569133d",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1660
+        ]
+      ],
+      "estimated_input_tokens": 6213,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:46:36.328592+00:00",
+        "request_sha256": "82804db93d719ce70e9cdf955b3e654c5b0d4491cfd878f7c51e71516250a2b7",
+        "input_token_estimate": 17269,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279413",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f04c51559fa649f491953dd7628d6976",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4042,
+        "output_tokens": 10516,
+        "usage_source": "provider",
+        "duration_seconds": 41.414417,
+        "cost_cny": "0.046106",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "新恒汇（301678）：智能卡业务是公司的传统核心业务，主要包括智能卡芯片关键封装材料柔性引线框架产品的研发、生产和销售。智能卡业务是公司的传统核心业务。"
+          }
+        ],
+        "reason": "同一核心业务定位连续重复，后一句未增加新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "公司2022-2024年分别实现营业收入6.84亿元/7.67亿元/8.42/2.36亿元，YOY依次为24.77%/12.13%/9.83%；实现归母净利润1.10亿元/1.52亿元/1.86亿元，YOY依次为9.38%/38.58%/22.07%。"
+          }
+        ],
+        "reason": "2024年营业收入被写成8.42/2.36亿元，同一指标出现两个数值，表述冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2024年上述两项新业务合计贡献营收2.42亿元、收入占比由2022年的14.70%增至29.84%"
+          }
+        ],
+        "reason": "按文中2024年总营收8.42亿元计算，2.42亿元占比约28.74%，与29.84%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "该业务主要采用一体化的经营模式，自产关键封装材料柔性引线框架用于智能卡模块封装，一方面保证低成本高质量的专用封装材料供应、进而降低产品的交付能力，另一方面也利好智能卡模块封装利润率的提升。"
+          }
+        ],
+        "reason": "保证封装材料供应应提升而非降低产品交付能力，与后文“利好”的判断矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "同行业上市公司对比：公司专注于智能控制领域；根据业务的相似性，选取康强电子为新恒汇的可比上市公司。"
+          }
+        ],
+        "reason": "新恒汇主营智能卡业务，前文未涉智能控制领域，“智能控制”与公司实际业务不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2、公司基于原有业务基础，积极向蚀刻引线框架、物联网eSIM芯片封装等业务领域延伸拓展，拟打造公司业绩新的增长点。公司基于原有业务基础，2019年开拓了蚀刻引线框架业务和物联网eSIM芯片封测业务；"
+          }
+        ],
+        "reason": "“公司基于原有业务基础”在同一句内不必要地重复出现。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 137,
+      "end": 209,
+      "text": "公司2022-2024年分别实现营业收入6.84亿元/7.67亿元/8.42/2.36亿元，YOY依次为24.77%/12.13%/9.83%；",
+      "quantities": [
+        {
+          "value": "6.84",
+          "unit": "亿元",
+          "start": 157,
+          "end": 163
+        },
+        {
+          "value": "7.67",
+          "unit": "亿元",
+          "start": 164,
+          "end": 170
+        },
+        {
+          "value": "2.36",
+          "unit": "亿元",
+          "start": 176,
+          "end": 182
+        },
+        {
+          "value": "24.77",
+          "unit": "%",
+          "start": 189,
+          "end": 195
+        },
+        {
+          "value": "12.13",
+          "unit": "%",
+          "start": 196,
+          "end": 202
+        },
+        {
+          "value": "9.83",
+          "unit": "%",
+          "start": 203,
+          "end": 208
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 209,
+      "end": 263,
+      "text": "实现归母净利润1.10亿元/1.52亿元/1.86亿元，YOY依次为9.38%/38.58%/22.07%。",
+      "quantities": [
+        {
+          "value": "1.10",
+          "unit": "亿元",
+          "start": 216,
+          "end": 222
+        },
+        {
+          "value": "1.52",
+          "unit": "亿元",
+          "start": 223,
+          "end": 229
+        },
+        {
+          "value": "1.86",
+          "unit": "亿元",
+          "start": 230,
+          "end": 236
+        },
+        {
+          "value": "9.38",
+          "unit": "%",
+          "start": 243,
+          "end": 248
+        },
+        {
+          "value": "38.58",
+          "unit": "%",
+          "start": 249,
+          "end": 255
+        },
+        {
+          "value": "22.07",
+          "unit": "%",
+          "start": 256,
+          "end": 262
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 263,
+      "end": 334,
+      "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长3.80%至12.25%，归母净利润较上年同期增长0.78%至8.40%。",
+      "quantities": [
+        {
+          "value": "3.80",
+          "unit": "%",
+          "start": 297,
+          "end": 302
+        },
+        {
+          "value": "12.25",
+          "unit": "%",
+          "start": 303,
+          "end": 309
+        },
+        {
+          "value": "0.78",
+          "unit": "%",
+          "start": 322,
+          "end": 327
+        },
+        {
+          "value": "8.40",
+          "unit": "%",
+          "start": 328,
+          "end": 333
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "根据公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 263,
+      "end": 334,
+      "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长3.80%至12.25%，归母净利润较上年同期增长0.78%至8.40%。",
+      "quantities": [
+        {
+          "value": "3.80",
+          "unit": "%",
+          "start": 297,
+          "end": 302
+        },
+        {
+          "value": "12.25",
+          "unit": "%",
+          "start": 303,
+          "end": 309
+        },
+        {
+          "value": "0.78",
+          "unit": "%",
+          "start": 322,
+          "end": 327
+        },
+        {
+          "value": "8.40",
+          "unit": "%",
+          "start": 328,
+          "end": 333
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "根据公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 469,
+      "end": 502,
+      "text": "智能卡业务是公司的传统核心业务，2024年在公司营收中占比约七成；",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "智能卡业务是公司",
+        "年在公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1313,
+      "end": 1380,
+      "text": "2024年上述两项新业务合计贡献营收2.42亿元、收入占比由2022年的14.70%增至29.84%，成为公司现阶段主要的收入增长点；",
+      "quantities": [
+        {
+          "value": "2.42",
+          "unit": "亿元",
+          "start": 1331,
+          "end": 1337
+        },
+        {
+          "value": "14.70",
+          "unit": "%",
+          "start": 1349,
+          "end": 1355
+        },
+        {
+          "value": "29.84",
+          "unit": "%",
+          "start": 1357,
+          "end": 1363
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2022年"
+      ],
+      "entity_mentions": [
+        "成为公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1476,
+      "end": 1523,
+      "text": "从上述可比公司来看，2024年度可比公司的收入规模为19.65亿元、销售毛利率为11.98%；",
+      "quantities": [
+        {
+          "value": "19.65",
+          "unit": "亿元",
+          "start": 1502,
+          "end": 1509
+        },
+        {
+          "value": "11.98",
+          "unit": "%",
+          "start": 1516,
+          "end": 1522
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "从上述可比公司",
+        "年度可比公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1660,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1660,
+    "processed_ranges": [
+      [
+        0,
+        1660
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1660,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 7,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002366,
+  "source_content_sha256": "7d695b60f718178e0bbc076fe152c7ca91c483279ac537f507ce22f7ce7da9e9"
+}

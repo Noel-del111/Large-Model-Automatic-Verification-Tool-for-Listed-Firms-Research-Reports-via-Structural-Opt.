@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"海光信息(6880--41)\"}],\"reason\":\"股票代码中出现双连字符，不符合证券代码格式，应为688041。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"公司专注于国产架构CPU、DCU等核心芯片设计，129年发布首款CPU“海光一号”并实现量产。\"}],\"reason\":\"年份“129年”远早于公司2014年成立，时间不成立。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"海光信息与中科曙光的A股股票于5月26日（）开市时起开始停牌。\"}],\"reason\":\"日期后括号内应有星期等属性值却为空，未填写。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"投资建议：我们看好公司在研发端的持续投入所带来的产品性能与兼容性优势，在国产替代提速、AI产业景气度持续提升的背景下，预计公司2025-2027年实现归母融资30.66/43.57/59.92亿元，对应PE为103/73/53倍，维持“推荐”评级。\"}],\"reason\":\"“归母融资”不是规范财务术语，应为“归母净利润”，导致指标含义错误。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"风险提示：整合效果或进展不及预期的风险；研发不及预期；需求不及预期；整合效果或进展不及预期的风险。\"}],\"reason\":\"同一“整合效果或进展不及预期的风险”重复列出。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:04:29.256445+00:00",
+    "request_sha256": "145ccd23c06b69e9c5d873ade0cfb376e1a28abcc7e5af93f58884a12b6947ea",
+    "input_token_estimate": 15818,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277962",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1c5fbaef19ec47adbb8d66893e8a4f8c",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3717,
+    "output_tokens": 7783,
+    "usage_source": "provider",
+    "duration_seconds": 31.404691,
+    "cost_cny": "0.034849"
+  },
+  "cache_request": {
+    "key": "d9268d23dddf17daa3171fd15f699b5686c6835f35590d4566459188ab7d0cbb",
+    "purpose": "text_review.detect",
+    "messages_sha256": "145ccd23c06b69e9c5d873ade0cfb376e1a28abcc7e5af93f58884a12b6947ea"
+  }
+}

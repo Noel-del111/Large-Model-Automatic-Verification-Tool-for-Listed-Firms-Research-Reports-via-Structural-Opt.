@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"属性值缺失错误\",\n      \"spans\": [\n        {\n          \"text\": \"饲料销量收入均增长，“”电站健康发展。\"\n        }\n      ],\n      \"reason\": \"引号内为空，缺失应出现的电站名称或类别等非数值属性值。\"\n    },\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"预计公司2025-2027年归母净利润分别为-27.46、19.13和38.91亿元，EPS分别为-0.61、0.42、0.23和0.86元，以2025年5月6日收盘价16.36元计算，对应PE为-27.26、39.14和19.24倍，给予公司“推荐”的投资评级。\"\n        }\n      ],\n      \"reason\": \"预测期为2025-2027三年，但EPS列出四个值，与归母净利润和三个PE值不匹配。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"风险提示。硅料价格波动风险，业务拓展不及预期，电子装机不及预期，产能出清不及预期，新技术研发不及预期。\"\n        }\n      ],\n      \"reason\": \"光伏行业风险提示中“电子装机”非标准术语，通常应为“电站装机”或“光伏装机”。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:06:45.148298+00:00",
+    "request_sha256": "bdd92ce901665802c3aa4c2351971afb18e98537e8598ffed3c0033ad5b364c3",
+    "input_token_estimate": 14845,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.276989",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "120d0c3fdbad48dc8b89e94d53df0e2b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3598,
+    "output_tokens": 8128,
+    "usage_source": "provider",
+    "duration_seconds": 32.923922,
+    "cost_cny": "0.03611"
+  },
+  "cache_request": {
+    "key": "af8435217c5843f8c776bcf65b137c4d07c2fc26afcca9842aa055a42044212c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "bdd92ce901665802c3aa4c2351971afb18e98537e8598ffed3c0033ad5b364c3"
+  }
+}

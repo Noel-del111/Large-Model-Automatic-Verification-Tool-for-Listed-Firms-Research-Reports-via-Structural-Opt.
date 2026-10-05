@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000576",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万共31个一级子行业，排名却为第33名，名次超出总数，前后数值矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 44,
+          "end": 103,
+          "text": "2025年5月30日，医药板块涨跌幅+0.37%，跑赢沪深300指数0.85pct，涨跌幅居申万31个子行业第33名。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月30日，医药板块涨跌幅+0.37%，跑赢沪深300指数0.85pct，涨跌幅居申万31个子行业第33名。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 44,
+          "end": 103,
+          "text": "2025年5月30日，医药板块涨跌幅+0.37%，跑赢沪深300指数0.85pct，涨跌幅居申万31个子行业第33名。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7c9d866f61c98708d5f204f7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码“300-759”不符合A股6位数字代码格式，正确应为“300759”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 533,
+          "end": 671,
+          "text": "康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 533,
+          "end": 671,
+          "text": "康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0b023281a39d2578de153d08",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "出资额写为“3000万美分”，美分通常不用于此类大额投资，单位应为“美元”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 533,
+          "end": 671,
+          "text": "康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 533,
+          "end": 671,
+          "text": "康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "eb6c3e340c1b745a06b1c38f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "产品名称后括号内容为空，缺少检测方法等必要属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 833,
+          "end": 924,
+          "text": "博晖创新（300318）：公司发布公告，近日收到了由国家药品监督管理局签发的医疗器械注册证，公司产品轮状病毒、诺如病毒、肠道腺病毒、星状病毒和札如病毒核酸检测试剂盒（）获得批准上市。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "博晖创新（300318）：公司发布公告，近日收到了由国家药品监督管理局签发的医疗器械注册证，公司产品轮状病毒、诺如病毒、肠道腺病毒、星状病毒和札如病毒核酸检测试剂盒（）获得批准上市。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 833,
+          "end": 924,
+          "text": "博晖创新（300318）：公司发布公告，近日收到了由国家药品监督管理局签发的医疗器械注册证，公司产品轮状病毒、诺如病毒、肠道腺病毒、星状病毒和札如病毒核酸检测试剂盒（）获得批准上市。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5b0e1e881939791b5aab0ac7",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          953
+        ]
+      ],
+      "estimated_input_tokens": 5447,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:35:02.116853+00:00",
+        "request_sha256": "547629adad2b6b1b7d2d561a4fe306ffbf70912f03ee23d2695935566a0e28d8",
+        "input_token_estimate": 15179,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277323",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "15dd7f35608746cc8f93229f4bf59ae7",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3618,
+        "output_tokens": 4094,
+        "usage_source": "provider",
+        "duration_seconds": 17.662949,
+        "cost_cny": "0.019994"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2025年5月30日，医药板块涨跌幅+0.37%，跑赢沪深300指数0.85pct，涨跌幅居申万31个子行业第33名。"
+          }
+        ],
+        "reason": "申万共31个一级子行业，排名却为第33名，名次超出总数，前后数值矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。"
+          }
+        ],
+        "reason": "股票代码“300-759”不符合A股6位数字代码格式，正确应为“300759”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "康龙化成（300-759）：公司发布公告，子公司康龙英国拟作为有限合伙人以自有资金认缴出资3000万美分参与投资BLC Healthcare USD FundI L.P.，主要投资领域是全球生物医药及生命健康领域以及其他普通合伙人认为适当的行业中各种各样的证券、合同以及资产。"
+          }
+        ],
+        "reason": "出资额写为“3000万美分”，美分通常不用于此类大额投资，单位应为“美元”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "博晖创新（300318）：公司发布公告，近日收到了由国家药品监督管理局签发的医疗器械注册证，公司产品轮状病毒、诺如病毒、肠道腺病毒、星状病毒和札如病毒核酸检测试剂盒（）获得批准上市。"
+          }
+        ],
+        "reason": "产品名称后括号内容为空，缺少检测方法等必要属性值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 953,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 953,
+    "processed_ranges": [
+      [
+        0,
+        953
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 17.685292,
+  "source_content_sha256": "4ab176bfcddddf705560a153de8212a63acd7bea560a6959054923050593d04a"
+}

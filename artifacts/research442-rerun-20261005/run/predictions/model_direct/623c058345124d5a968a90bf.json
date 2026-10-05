@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000695",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "时间区间写成“4至1月”，起点晚于终点，作为期间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 65,
+          "end": 99,
+          "text": "2025年4至1月保险行业保费收入25,955亿元，同比+2.3%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4至1月保险行业保费收入25,955亿元，同比+2.3%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 65,
+          "end": 99,
+          "text": "2025年4至1月保险行业保费收入25,955亿元，同比+2.3%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "961d78e3529b170ac4b337c5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "逗号后直接句号，4月单月行业保费同比等应报数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 99,
+          "end": 120,
+          "text": "4月单月保险行业保费收入4,210亿元，。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月单月保险行业保费收入4,210亿元，。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 99,
+          "end": 120,
+          "text": "4月单月保险行业保费收入4,210亿元，。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7614329f2ddf774112771bb6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "只列寿险、健康险两个险种，却给出三个保费数值，同比也仅两个，数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 337,
+          "end": 391,
+          "text": "4月单月寿险、健康险保费收入分别为2,229亿元、614亿元、654亿元，分别同比+16.8%、-2.9%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月单月寿险、健康险保费收入分别为2,229亿元、614亿元、654亿元，分别同比+16.8%、-2.9%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 337,
+          "end": 391,
+          "text": "4月单月寿险、健康险保费收入分别为2,229亿元、614亿元、654亿元，分别同比+16.8%、-2.9%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "73087dfd4bf26c68ddd4c97e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称4月单月健康险同比为-2.9%，与“大幅上升”的表述相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 534,
+          "end": 578,
+          "text": "健康险4月单月同比大幅上升，我们认为主要由于4月险企保费节奏的变化以及去年同期较高基数。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "健康险4月单月同比大幅上升，我们认为主要由于4月险企保费节奏的变化以及去年同期较高基数。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 534,
+          "end": 578,
+          "text": "健康险4月单月同比大幅上升，我们认为主要由于4月险企保费节奏的变化以及去年同期较高基数。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "62b0b6eb636d6395a20b6253",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1588
+        ]
+      ],
+      "estimated_input_tokens": 6146,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:12:51.367257+00:00",
+        "request_sha256": "a64ce6104cb19e18872f84d3bf9fd5c46380534de0ef51988751374c4bf28bc8",
+        "input_token_estimate": 17093,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279237",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "aa2ffd52bd944b4c9e047070f20e98f5",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4044,
+        "output_tokens": 9234,
+        "usage_source": "provider",
+        "duration_seconds": 38.043575,
+        "cost_cny": "0.04098"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年4至1月保险行业保费收入25,955亿元，同比+2.3%；"
+          }
+        ],
+        "reason": "时间区间写成“4至1月”，起点晚于终点，作为期间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "4月单月保险行业保费收入4,210亿元，。"
+          }
+        ],
+        "reason": "逗号后直接句号，4月单月行业保费同比等应报数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "4月单月寿险、健康险保费收入分别为2,229亿元、614亿元、654亿元，分别同比+16.8%、-2.9%。"
+          }
+        ],
+        "reason": "只列寿险、健康险两个险种，却给出三个保费数值，同比也仅两个，数量不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "健康险4月单月同比大幅上升，我们认为主要由于4月险企保费节奏的变化以及去年同期较高基数。"
+          }
+        ],
+        "reason": "前文称4月单月健康险同比为-2.9%，与“大幅上升”的表述相反。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1588,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1588,
+    "processed_ranges": [
+      [
+        0,
+        1588
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 38.067249,
+  "source_content_sha256": "aa5efcab9ff2ed80271b89b8afd6b7f7b119fe31b576f85a49bf63b2ba68e2e8"
+}

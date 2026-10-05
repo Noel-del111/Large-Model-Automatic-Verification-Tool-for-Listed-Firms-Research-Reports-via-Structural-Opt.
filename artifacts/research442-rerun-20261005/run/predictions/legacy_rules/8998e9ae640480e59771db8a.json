@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000407",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "715be7ad61ae4fac97219e38",
+      "error_type": "数值不一致错误",
+      "spans": [
+        {
+          "start": 568,
+          "end": 617,
+          "text": "慢炖锅、压力锅分别实现收入7702.95万元、1433.52万元，分别同比增长8%、24.01%；"
+        }
+      ],
+      "reason": "研报中列举对象数与数值个数不一致：对象 2 个、数值 4 个，需人工核对。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.001"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1000,
+    "total_chars": 1000,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001028,
+  "source_content_sha256": "774c5ca579e70c30c41a29b8d9ffa7deec50834428874ad2f5451fe804112545"
+}

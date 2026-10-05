@@ -1,0 +1,1108 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000460",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 393,
+          "end": 517,
+          "text": "从产品结构上看，2024年分子砌块业务实现收入9.36亿元（-0.99%），毛利率为42%（+1.42pct），其中杂环化合物收入4.75亿元（+0.61%）、苯环化合物收入2.72亿元（-7.98%）、脂肪族类化合物1.89亿元（+6.39%）。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 393,
+          "end": 517,
+          "text": "从产品结构上看，2024年分子砌块业务实现收入9.36亿元（-0.99%），毛利率为42%（+1.42pct），其中杂环化合物收入4.75亿元（+0.61%）、苯环化合物收入2.72亿元（-7.98%）、脂肪族类化合物1.89亿元（+6.39%）。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.003",
+      "validation": "rule_candidate",
+      "id": "561f9e037682dba388bb7685",
+      "detector_ids": [
+        "legacy.C.INTRINSIC.003"
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 541,
+          "end": 646,
+          "text": "2024年科研试剂催化剂和配体业务实现收入1.66亿元（+13.35%），毛利率为37.56%（+1.31%），其中催化剂和配体收入1.15亿元（+9.3%）、活性小分子化合物收入0.5亿元（+23.86%）。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 541,
+          "end": 646,
+          "text": "2024年科研试剂催化剂和配体业务实现收入1.66亿元（+13.35%），毛利率为37.56%（+1.31%），其中催化剂和配体收入1.15亿元（+9.3%）、活性小分子化合物收入0.5亿元（+23.86%）。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.003",
+      "validation": "rule_candidate",
+      "id": "f03a65c34ca69431e338f4d8",
+      "detector_ids": [
+        "legacy.C.INTRINSIC.003"
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年”不是与后文2024Q4、25Q1对应的报告期，应为2024年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 47,
+          "end": 140,
+          "text": "129年公司实现营业收入11.02亿元（+0.93%），归母净利润1.17亿元（+7.17%），扣非净利润1.04亿元（-15.09%），经营现金流净额1.58亿元（+375.87%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "129年公司实现营业收入11.02亿元（+0.93%），归母净利润1.17亿元（+7.17%），扣非净利润1.04亿元（-15.09%），经营现金流净额1.58亿元（+375.87%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 47,
+          "end": 140,
+          "text": "129年公司实现营业收入11.02亿元（+0.93%），归母净利润1.17亿元（+7.17%），扣非净利润1.04亿元（-15.09%），经营现金流净额1.58亿元（+375.87%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7370d2e4641a31b8f319860c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“国内收入”后直接接同比增速，缺少国内收入的金额数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 708,
+          "end": 748,
+          "text": "2024年公司海外收入6.16亿元（+10.58%），国内收入（-9.12%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司海外收入6.16亿元（+10.58%），国内收入（-9.12%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 708,
+          "end": 748,
+          "text": "2024年公司海外收入6.16亿元（+10.58%），国内收入（-9.12%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d2490e9d478b6e2a0e2e7838",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "前一句列举分子砌块时已列过同一杂环化合物收入数据，此处重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 517,
+          "end": 541,
+          "text": "其中杂环化合物收入4.75亿元（+0.61%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中杂环化合物收入4.75亿元（+0.61%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 517,
+          "end": 541,
+          "text": "其中杂环化合物收入4.75亿元（+0.61%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e3517095c9792abeca5a6938",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "药物分子砌块12.7万种加科学试剂1.3万种为14万种，与“近13万种”不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 646,
+          "end": 706,
+          "text": "截至2024年底，公司常备药物分子砌块和科学试剂现货库近13万种，其中药物分子砌块为12.7万种，科学试剂为1.3万种。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年底，公司常备药物分子砌块和科学试剂现货库近13万种，其中药物分子砌块为12.7万种，科学试剂为1.3万种。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 646,
+          "end": 706,
+          "text": "截至2024年底，公司常备药物分子砌块和科学试剂现货库近13万种，其中药物分子砌块为12.7万种，科学试剂为1.3万种。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "185f40913f2ab3c14241b0d7",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1323
+        ]
+      ],
+      "estimated_input_tokens": 5626,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:17:25.239128+00:00",
+        "request_sha256": "74dd4baf39f647d56198f78559831e5029136d360af1eec331170954d49e6999",
+        "input_token_estimate": 15742,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277886",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "980044e579e84a0bae80c9656b807ada",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3879,
+        "output_tokens": 8481,
+        "usage_source": "provider",
+        "duration_seconds": 33.553314,
+        "cost_cny": "0.037803",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "129年公司实现营业收入11.02亿元（+0.93%），归母净利润1.17亿元（+7.17%），扣非净利润1.04亿元（-15.09%），经营现金流净额1.58亿元（+375.87%）。"
+          }
+        ],
+        "reason": "“129年”不是与后文2024Q4、25Q1对应的报告期，应为2024年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年公司海外收入6.16亿元（+10.58%），国内收入（-9.12%）。"
+          }
+        ],
+        "reason": "“国内收入”后直接接同比增速，缺少国内收入的金额数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "其中杂环化合物收入4.75亿元（+0.61%）。"
+          }
+        ],
+        "reason": "前一句列举分子砌块时已列过同一杂环化合物收入数据，此处重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "截至2024年底，公司常备药物分子砌块和科学试剂现货库近13万种，其中药物分子砌块为12.7万种，科学试剂为1.3万种。"
+          }
+        ],
+        "reason": "药物分子砌块12.7万种加科学试剂1.3万种为14万种，与“近13万种”不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 47,
+      "end": 140,
+      "text": "129年公司实现营业收入11.02亿元（+0.93%），归母净利润1.17亿元（+7.17%），扣非净利润1.04亿元（-15.09%），经营现金流净额1.58亿元（+375.87%）。",
+      "quantities": [
+        {
+          "value": "11.02",
+          "unit": "亿元",
+          "start": 59,
+          "end": 66
+        },
+        {
+          "value": "+0.93",
+          "unit": "%",
+          "start": 67,
+          "end": 73
+        },
+        {
+          "value": "1.17",
+          "unit": "亿元",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "+7.17",
+          "unit": "%",
+          "start": 87,
+          "end": 93
+        },
+        {
+          "value": "1.04",
+          "unit": "亿元",
+          "start": 100,
+          "end": 106
+        },
+        {
+          "value": "-15.09",
+          "unit": "%",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "1.58",
+          "unit": "亿元",
+          "start": 123,
+          "end": 129
+        },
+        {
+          "value": "+375.87",
+          "unit": "%",
+          "start": 130,
+          "end": 138
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 47,
+      "end": 140,
+      "text": "129年公司实现营业收入11.02亿元（+0.93%），归母净利润1.17亿元（+7.17%），扣非净利润1.04亿元（-15.09%），经营现金流净额1.58亿元（+375.87%）。",
+      "quantities": [
+        {
+          "value": "11.02",
+          "unit": "亿元",
+          "start": 59,
+          "end": 66
+        },
+        {
+          "value": "+0.93",
+          "unit": "%",
+          "start": 67,
+          "end": 73
+        },
+        {
+          "value": "1.17",
+          "unit": "亿元",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "+7.17",
+          "unit": "%",
+          "start": 87,
+          "end": 93
+        },
+        {
+          "value": "1.04",
+          "unit": "亿元",
+          "start": 100,
+          "end": 106
+        },
+        {
+          "value": "-15.09",
+          "unit": "%",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "1.58",
+          "unit": "亿元",
+          "start": 123,
+          "end": 129
+        },
+        {
+          "value": "+375.87",
+          "unit": "%",
+          "start": 130,
+          "end": 138
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 47,
+      "end": 140,
+      "text": "129年公司实现营业收入11.02亿元（+0.93%），归母净利润1.17亿元（+7.17%），扣非净利润1.04亿元（-15.09%），经营现金流净额1.58亿元（+375.87%）。",
+      "quantities": [
+        {
+          "value": "11.02",
+          "unit": "亿元",
+          "start": 59,
+          "end": 66
+        },
+        {
+          "value": "+0.93",
+          "unit": "%",
+          "start": 67,
+          "end": 73
+        },
+        {
+          "value": "1.17",
+          "unit": "亿元",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "+7.17",
+          "unit": "%",
+          "start": 87,
+          "end": 93
+        },
+        {
+          "value": "1.04",
+          "unit": "亿元",
+          "start": 100,
+          "end": 106
+        },
+        {
+          "value": "-15.09",
+          "unit": "%",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "1.58",
+          "unit": "亿元",
+          "start": 123,
+          "end": 129
+        },
+        {
+          "value": "+375.87",
+          "unit": "%",
+          "start": 130,
+          "end": 138
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 140,
+      "end": 212,
+      "text": "对应2024Q4营业收入2.91亿元（+1.32%），归母净利润0.34亿元（+977.27%），扣非净利润0.32亿元（+2005.91%）。",
+      "quantities": [
+        {
+          "value": "2.91",
+          "unit": "亿元",
+          "start": 152,
+          "end": 158
+        },
+        {
+          "value": "+1.32",
+          "unit": "%",
+          "start": 159,
+          "end": 165
+        },
+        {
+          "value": "0.34",
+          "unit": "亿元",
+          "start": 172,
+          "end": 178
+        },
+        {
+          "value": "+977.27",
+          "unit": "%",
+          "start": 179,
+          "end": 187
+        },
+        {
+          "value": "0.32",
+          "unit": "亿元",
+          "start": 194,
+          "end": 200
+        },
+        {
+          "value": "+2005.91",
+          "unit": "%",
+          "start": 201,
+          "end": 210
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 140,
+      "end": 212,
+      "text": "对应2024Q4营业收入2.91亿元（+1.32%），归母净利润0.34亿元（+977.27%），扣非净利润0.32亿元（+2005.91%）。",
+      "quantities": [
+        {
+          "value": "2.91",
+          "unit": "亿元",
+          "start": 152,
+          "end": 158
+        },
+        {
+          "value": "+1.32",
+          "unit": "%",
+          "start": 159,
+          "end": 165
+        },
+        {
+          "value": "0.34",
+          "unit": "亿元",
+          "start": 172,
+          "end": 178
+        },
+        {
+          "value": "+977.27",
+          "unit": "%",
+          "start": 179,
+          "end": 187
+        },
+        {
+          "value": "0.32",
+          "unit": "亿元",
+          "start": 194,
+          "end": 200
+        },
+        {
+          "value": "+2005.91",
+          "unit": "%",
+          "start": 201,
+          "end": 210
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 140,
+      "end": 212,
+      "text": "对应2024Q4营业收入2.91亿元（+1.32%），归母净利润0.34亿元（+977.27%），扣非净利润0.32亿元（+2005.91%）。",
+      "quantities": [
+        {
+          "value": "2.91",
+          "unit": "亿元",
+          "start": 152,
+          "end": 158
+        },
+        {
+          "value": "+1.32",
+          "unit": "%",
+          "start": 159,
+          "end": 165
+        },
+        {
+          "value": "0.34",
+          "unit": "亿元",
+          "start": 172,
+          "end": 178
+        },
+        {
+          "value": "+977.27",
+          "unit": "%",
+          "start": 179,
+          "end": 187
+        },
+        {
+          "value": "0.32",
+          "unit": "亿元",
+          "start": 194,
+          "end": 200
+        },
+        {
+          "value": "+2005.91",
+          "unit": "%",
+          "start": 201,
+          "end": 210
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 214,
+      "end": 302,
+      "text": "2025年一季度公司实现营业收入2.96亿元（+12.83%），归母净利润0.31亿元（+17.71%），扣非净利润0.28亿元（+10.40%），经营现金流净额0.07亿元。",
+      "quantities": [
+        {
+          "value": "2.96",
+          "unit": "亿元",
+          "start": 230,
+          "end": 236
+        },
+        {
+          "value": "+12.83",
+          "unit": "%",
+          "start": 237,
+          "end": 244
+        },
+        {
+          "value": "0.31",
+          "unit": "亿元",
+          "start": 251,
+          "end": 257
+        },
+        {
+          "value": "+17.71",
+          "unit": "%",
+          "start": 258,
+          "end": 265
+        },
+        {
+          "value": "0.28",
+          "unit": "亿元",
+          "start": 272,
+          "end": 278
+        },
+        {
+          "value": "+10.40",
+          "unit": "%",
+          "start": 279,
+          "end": 286
+        },
+        {
+          "value": "0.07",
+          "unit": "亿元",
+          "start": 295,
+          "end": 301
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 214,
+      "end": 302,
+      "text": "2025年一季度公司实现营业收入2.96亿元（+12.83%），归母净利润0.31亿元（+17.71%），扣非净利润0.28亿元（+10.40%），经营现金流净额0.07亿元。",
+      "quantities": [
+        {
+          "value": "2.96",
+          "unit": "亿元",
+          "start": 230,
+          "end": 236
+        },
+        {
+          "value": "+12.83",
+          "unit": "%",
+          "start": 237,
+          "end": 244
+        },
+        {
+          "value": "0.31",
+          "unit": "亿元",
+          "start": 251,
+          "end": 257
+        },
+        {
+          "value": "+17.71",
+          "unit": "%",
+          "start": 258,
+          "end": 265
+        },
+        {
+          "value": "0.28",
+          "unit": "亿元",
+          "start": 272,
+          "end": 278
+        },
+        {
+          "value": "+10.40",
+          "unit": "%",
+          "start": 279,
+          "end": 286
+        },
+        {
+          "value": "0.07",
+          "unit": "亿元",
+          "start": 295,
+          "end": 301
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 214,
+      "end": 302,
+      "text": "2025年一季度公司实现营业收入2.96亿元（+12.83%），归母净利润0.31亿元（+17.71%），扣非净利润0.28亿元（+10.40%），经营现金流净额0.07亿元。",
+      "quantities": [
+        {
+          "value": "2.96",
+          "unit": "亿元",
+          "start": 230,
+          "end": 236
+        },
+        {
+          "value": "+12.83",
+          "unit": "%",
+          "start": 237,
+          "end": 244
+        },
+        {
+          "value": "0.31",
+          "unit": "亿元",
+          "start": 251,
+          "end": 257
+        },
+        {
+          "value": "+17.71",
+          "unit": "%",
+          "start": 258,
+          "end": 265
+        },
+        {
+          "value": "0.28",
+          "unit": "亿元",
+          "start": 272,
+          "end": 278
+        },
+        {
+          "value": "+10.40",
+          "unit": "%",
+          "start": 279,
+          "end": 286
+        },
+        {
+          "value": "0.07",
+          "unit": "亿元",
+          "start": 295,
+          "end": 301
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 302,
+      "end": 339,
+      "text": "剔除股份支付影响，公司25Q1归母净利润为0.37亿元（+43.29%）。",
+      "quantities": [
+        {
+          "value": "0.37",
+          "unit": "亿元",
+          "start": 323,
+          "end": 329
+        },
+        {
+          "value": "+43.29",
+          "unit": "%",
+          "start": 330,
+          "end": 337
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 393,
+      "end": 517,
+      "text": "从产品结构上看，2024年分子砌块业务实现收入9.36亿元（-0.99%），毛利率为42%（+1.42pct），其中杂环化合物收入4.75亿元（+0.61%）、苯环化合物收入2.72亿元（-7.98%）、脂肪族类化合物1.89亿元（+6.39%）。",
+      "quantities": [
+        {
+          "value": "9.36",
+          "unit": "亿元",
+          "start": 416,
+          "end": 422
+        },
+        {
+          "value": "-0.99",
+          "unit": "%",
+          "start": 423,
+          "end": 429
+        },
+        {
+          "value": "42",
+          "unit": "%",
+          "start": 435,
+          "end": 438
+        },
+        {
+          "value": "4.75",
+          "unit": "亿元",
+          "start": 458,
+          "end": 464
+        },
+        {
+          "value": "+0.61",
+          "unit": "%",
+          "start": 465,
+          "end": 471
+        },
+        {
+          "value": "2.72",
+          "unit": "亿元",
+          "start": 480,
+          "end": 486
+        },
+        {
+          "value": "-7.98",
+          "unit": "%",
+          "start": 487,
+          "end": 493
+        },
+        {
+          "value": "1.89",
+          "unit": "亿元",
+          "start": 502,
+          "end": 508
+        },
+        {
+          "value": "+6.39",
+          "unit": "%",
+          "start": 509,
+          "end": 515
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 541,
+      "end": 646,
+      "text": "2024年科研试剂催化剂和配体业务实现收入1.66亿元（+13.35%），毛利率为37.56%（+1.31%），其中催化剂和配体收入1.15亿元（+9.3%）、活性小分子化合物收入0.5亿元（+23.86%）。",
+      "quantities": [
+        {
+          "value": "1.66",
+          "unit": "亿元",
+          "start": 562,
+          "end": 568
+        },
+        {
+          "value": "+13.35",
+          "unit": "%",
+          "start": 569,
+          "end": 576
+        },
+        {
+          "value": "37.56",
+          "unit": "%",
+          "start": 582,
+          "end": 588
+        },
+        {
+          "value": "+1.31",
+          "unit": "%",
+          "start": 589,
+          "end": 595
+        },
+        {
+          "value": "1.15",
+          "unit": "亿元",
+          "start": 607,
+          "end": 613
+        },
+        {
+          "value": "+9.3",
+          "unit": "%",
+          "start": 614,
+          "end": 619
+        },
+        {
+          "value": "0.5",
+          "unit": "亿元",
+          "start": 631,
+          "end": 636
+        },
+        {
+          "value": "+23.86",
+          "unit": "%",
+          "start": 637,
+          "end": 644
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 840,
+      "end": 891,
+      "text": "2024年公司毛利率为41.33%，同比提升1.33pct，主要系公司对产品结构进行优化和对价格调整。",
+      "quantities": [
+        {
+          "value": "41.33",
+          "unit": "%",
+          "start": 851,
+          "end": 857
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "主要系公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 891,
+      "end": 941,
+      "text": "2025年一季度毛利率为44.34%，同比提升5.45pct，公司全年毛利率有望维持在25Q1水平。",
+      "quantities": [
+        {
+          "value": "44.34",
+          "unit": "%",
+          "start": 903,
+          "end": 909
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 891,
+      "end": 941,
+      "text": "2025年一季度毛利率为44.34%，同比提升5.45pct，公司全年毛利率有望维持在25Q1水平。",
+      "quantities": [
+        {
+          "value": "44.34",
+          "unit": "%",
+          "start": 903,
+          "end": 909
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1184,
+      "end": 1272,
+      "text": "我们预计公司2025-2027营收分别为13.12、15.74、18.75亿元，归母净利润分别为1.43、1.78、2.31亿元，对应PE分别为27.0、21.7和16.7倍。",
+      "quantities": [
+        {
+          "value": "18.75",
+          "unit": "亿元",
+          "start": 1216,
+          "end": 1223
+        },
+        {
+          "value": "2.31",
+          "unit": "亿元",
+          "start": 1242,
+          "end": 1248
+        },
+        {
+          "value": "16.7",
+          "unit": "倍",
+          "start": 1266,
+          "end": 1271
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1184,
+      "end": 1272,
+      "text": "我们预计公司2025-2027营收分别为13.12、15.74、18.75亿元，归母净利润分别为1.43、1.78、2.31亿元，对应PE分别为27.0、21.7和16.7倍。",
+      "quantities": [
+        {
+          "value": "18.75",
+          "unit": "亿元",
+          "start": 1216,
+          "end": 1223
+        },
+        {
+          "value": "2.31",
+          "unit": "亿元",
+          "start": 1242,
+          "end": 1248
+        },
+        {
+          "value": "16.7",
+          "unit": "倍",
+          "start": 1266,
+          "end": 1271
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1323,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1323,
+    "processed_ranges": [
+      [
+        0,
+        1323
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1323,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 17,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.003826,
+  "source_content_sha256": "e65a3825eb04c0aebc9a9c60c7de8c84312bbec3cffd2133bb5592fe477d5650"
+}

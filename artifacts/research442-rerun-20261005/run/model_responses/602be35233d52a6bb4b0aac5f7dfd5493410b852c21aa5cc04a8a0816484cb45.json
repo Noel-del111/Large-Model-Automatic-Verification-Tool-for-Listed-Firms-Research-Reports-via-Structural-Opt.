@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。\"}],\"reason\":\"2024年12月没有32日，该日期本身不成立。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。\"}],\"reason\":\"净资产4.69元与资产总额7.47亿元量纲不一致，应为亿元级单位。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年主要产品产量：冶炼金吨，电解银0.81吨。\"}],\"reason\":\"“冶炼金吨”前缺少具体产量数值，指标不完整。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"公司拟收购黄金集团持有的内蒙金陶49.33625%债权。\"}],\"reason\":\"前文为收购49.33625%股权，此处误写为债权，股权与债权性质不同。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:52:00.061133+00:00",
+    "request_sha256": "4850a93c8d55c49900bbd13d6d5edbba501358a128237f2b1bc02de408465ba6",
+    "input_token_estimate": 15702,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277846",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d373e6f0bad5475d9268aff235f8998b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3764,
+    "output_tokens": 5440,
+    "usage_source": "provider",
+    "duration_seconds": 21.534974,
+    "cost_cny": "0.025524"
+  },
+  "cache_request": {
+    "key": "602be35233d52a6bb4b0aac5f7dfd5493410b852c21aa5cc04a8a0816484cb45",
+    "purpose": "text_review.detect",
+    "messages_sha256": "4850a93c8d55c49900bbd13d6d5edbba501358a128237f2b1bc02de408465ba6"
+  }
+}

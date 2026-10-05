@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000704",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一完整句子连续重复，未提供新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 417,
+          "end": 479,
+          "text": "本报告以历史发展为脉络，系统梳理了中国民办高等教育的演进轨迹。本报告以历史发展为脉络，系统梳理了中国民办高等教育的演进轨迹。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本报告以历史发展为脉络，系统梳理了中国民办高等教育的演进轨迹。本报告以历史发展为脉络，系统梳理了中国民办高等教育的演进轨迹。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 417,
+          "end": 479,
+          "text": "本报告以历史发展为脉络，系统梳理了中国民办高等教育的演进轨迹。本报告以历史发展为脉络，系统梳理了中国民办高等教育的演进轨迹。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1ced6e4e5b8f5c91921f89b1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间起点1977年晚于终点1949年，期间先后关系颠倒矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 479,
+          "end": 551,
+          "text": "从1977年至1949年的停滞沉寂，到改革开放后的萌芽再生，再到探索发展、快速扩张，直至当前的提质创特阶段，民办高等教育始终与国家发展同频共振。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从1977年至1949年的停滞沉寂，到改革开放后的萌芽再生，再到探索发展、快速扩张，直至当前的提质创特阶段，民办高等教育始终与国家发展同频共振。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 479,
+          "end": 551,
+          "text": "从1977年至1949年的停滞沉寂，到改革开放后的萌芽再生，再到探索发展、快速扩张，直至当前的提质创特阶段，民办高等教育始终与国家发展同频共振。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e7a6d09883e80a7d395689c0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "该段与开篇第一段基本逐句重复，仅末句追加不同表述，构成冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 647,
+          "end": 864,
+          "text": "近年来，教育部采取了一系列措施支持和促进民办高等教育发展。本报告系统梳理了中国民办高等教育的发展历程、现状特征及典型案例，全面展现了民办高校在我国高等教育体系中的重要地位和作用。具体从民办高校的整体概况、地区分布层次结构和排名情况等方面，深入分析当前民办高等教育的布局特征、建设现状与发展趋势。最后，本报告通过代表性院校的案例分析，总结了民办高校在办学理念、人才培养和学科建设等方面的创新实践与特色经验，为职业中学的改革发展提供参考。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近年来，教育部采取了一系列措施支持和促进民办高等教育发展。本报告系统梳理了中国民办高等教育的发展历程、现状特征及典型案例，全面展现了民办高校在我国高等教育体系中的重要地位和作用。具体从民办高校的整体概况、地区分布层次结构和排名情况等方面，深入分析当前民办高等教育的布局特征、建设现状与发展趋势。最后，本报告通过代表性院校的案例分析，总结了民办高校在办学理念、人才培养和学科建设等方面的创新实践与特色经验，为职业中学的改革发展提供参考。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 647,
+          "end": 864,
+          "text": "近年来，教育部采取了一系列措施支持和促进民办高等教育发展。本报告系统梳理了中国民办高等教育的发展历程、现状特征及典型案例，全面展现了民办高校在我国高等教育体系中的重要地位和作用。具体从民办高校的整体概况、地区分布层次结构和排名情况等方面，深入分析当前民办高等教育的布局特征、建设现状与发展趋势。最后，本报告通过代表性院校的案例分析，总结了民办高校在办学理念、人才培养和学科建设等方面的创新实践与特色经验，为职业中学的改革发展提供参考。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "660956833269024cc15ecc92",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "报告研究对象是民办高等教育，末句却称供职业中学改革发展参考，对象与主题不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 794,
+          "end": 864,
+          "text": "最后，本报告通过代表性院校的案例分析，总结了民办高校在办学理念、人才培养和学科建设等方面的创新实践与特色经验，为职业中学的改革发展提供参考。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "最后，本报告通过代表性院校的案例分析，总结了民办高校在办学理念、人才培养和学科建设等方面的创新实践与特色经验，为职业中学的改革发展提供参考。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 794,
+          "end": 864,
+          "text": "最后，本报告通过代表性院校的案例分析，总结了民办高校在办学理念、人才培养和学科建设等方面的创新实践与特色经验，为职业中学的改革发展提供参考。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "390181ebbaa3cb00278772a2",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          864
+        ]
+      ],
+      "estimated_input_tokens": 5551,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:17:38.919055+00:00",
+        "request_sha256": "c510ce72210d7feb14b54279c6a337a0b764f800476a86a124f3d01e112a2131",
+        "input_token_estimate": 15392,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277536",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ec0def0f6b584c5ea1346f93244129d2",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3459,
+        "output_tokens": 5482,
+        "usage_source": "provider",
+        "duration_seconds": 22.552973,
+        "cost_cny": "0.025387"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "本报告以历史发展为脉络，系统梳理了中国民办高等教育的演进轨迹。本报告以历史发展为脉络，系统梳理了中国民办高等教育的演进轨迹。"
+          }
+        ],
+        "reason": "同一完整句子连续重复，未提供新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "从1977年至1949年的停滞沉寂，到改革开放后的萌芽再生，再到探索发展、快速扩张，直至当前的提质创特阶段，民办高等教育始终与国家发展同频共振。"
+          }
+        ],
+        "reason": "时间区间起点1977年晚于终点1949年，期间先后关系颠倒矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "近年来，教育部采取了一系列措施支持和促进民办高等教育发展。本报告系统梳理了中国民办高等教育的发展历程、现状特征及典型案例，全面展现了民办高校在我国高等教育体系中的重要地位和作用。具体从民办高校的整体概况、地区分布层次结构和排名情况等方面，深入分析当前民办高等教育的布局特征、建设现状与发展趋势。最后，本报告通过代表性院校的案例分析，总结了民办高校在办学理念、人才培养和学科建设等方面的创新实践与特色经验，为职业中学的改革发展提供参考。"
+          }
+        ],
+        "reason": "该段与开篇第一段基本逐句重复，仅末句追加不同表述，构成冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "最后，本报告通过代表性院校的案例分析，总结了民办高校在办学理念、人才培养和学科建设等方面的创新实践与特色经验，为职业中学的改革发展提供参考。"
+          }
+        ],
+        "reason": "报告研究对象是民办高等教育，末句却称供职业中学改革发展参考，对象与主题不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 864,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 864,
+    "processed_ranges": [
+      [
+        0,
+        864
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 22.576086,
+  "source_content_sha256": "188bff6faf484e5efe6f7eabcc85550d093d19231c06d713d613fdb63509c983"
+}

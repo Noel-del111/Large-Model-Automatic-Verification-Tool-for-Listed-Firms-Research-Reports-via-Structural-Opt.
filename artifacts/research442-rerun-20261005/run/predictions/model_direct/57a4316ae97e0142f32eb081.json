@@ -1,0 +1,413 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000445",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "引号内为空，缺失应出现的电站名称或类别等非数值属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 516,
+          "end": 535,
+          "text": "饲料销量收入均增长，“”电站健康发展。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "饲料销量收入均增长，“”电站健康发展。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 516,
+          "end": 535,
+          "text": "饲料销量收入均增长，“”电站健康发展。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bbfa199732471ae3046dee55",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "预测期为2025-2027三年，但EPS列出四个值，与归母净利润和三个PE值不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 706,
+          "end": 838,
+          "text": "预计公司2025-2027年归母净利润分别为-27.46、19.13和38.91亿元，EPS分别为-0.61、0.42、0.23和0.86元，以2025年5月6日收盘价16.36元计算，对应PE为-27.26、39.14和19.24倍，给予公司“推荐”的投资评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司2025-2027年归母净利润分别为-27.46、19.13和38.91亿元，EPS分别为-0.61、0.42、0.23和0.86元，以2025年5月6日收盘价16.36元计算，对应PE为-27.26、39.14和19.24倍，给予公司“推荐”的投资评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 706,
+          "end": 838,
+          "text": "预计公司2025-2027年归母净利润分别为-27.46、19.13和38.91亿元，EPS分别为-0.61、0.42、0.23和0.86元，以2025年5月6日收盘价16.36元计算，对应PE为-27.26、39.14和19.24倍，给予公司“推荐”的投资评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "70068ce5b3b70b930c60bf9c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "光伏行业风险提示中“电子装机”非标准术语，通常应为“电站装机”或“光伏装机”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 840,
+          "end": 891,
+          "text": "风险提示。硅料价格波动风险，业务拓展不及预期，电子装机不及预期，产能出清不及预期，新技术研发不及预期。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "风险提示。硅料价格波动风险，业务拓展不及预期，电子装机不及预期，产能出清不及预期，新技术研发不及预期。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 840,
+          "end": 891,
+          "text": "风险提示。硅料价格波动风险，业务拓展不及预期，电子装机不及预期，产能出清不及预期，新技术研发不及预期。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "99e0eb9a1cf1d5ef2c80f29e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          891
+        ]
+      ],
+      "estimated_input_tokens": 5315,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:06:45.148298+00:00",
+        "request_sha256": "bdd92ce901665802c3aa4c2351971afb18e98537e8598ffed3c0033ad5b364c3",
+        "input_token_estimate": 14845,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.276989",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "120d0c3fdbad48dc8b89e94d53df0e2b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3598,
+        "output_tokens": 8128,
+        "usage_source": "provider",
+        "duration_seconds": 32.923922,
+        "cost_cny": "0.03611"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "饲料销量收入均增长，“”电站健康发展。"
+          }
+        ],
+        "reason": "引号内为空，缺失应出现的电站名称或类别等非数值属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "预计公司2025-2027年归母净利润分别为-27.46、19.13和38.91亿元，EPS分别为-0.61、0.42、0.23和0.86元，以2025年5月6日收盘价16.36元计算，对应PE为-27.26、39.14和19.24倍，给予公司“推荐”的投资评级。"
+          }
+        ],
+        "reason": "预测期为2025-2027三年，但EPS列出四个值，与归母净利润和三个PE值不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "风险提示。硅料价格波动风险，业务拓展不及预期，电子装机不及预期，产能出清不及预期，新技术研发不及预期。"
+          }
+        ],
+        "reason": "光伏行业风险提示中“电子装机”非标准术语，通常应为“电站装机”或“光伏装机”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 50,
+      "end": 101,
+      "text": "事件：公司发布2024年报及2025年一季报，24年实现营业收入919.94亿元，同比-33.87%；",
+      "quantities": [
+        {
+          "value": "919.94",
+          "unit": "亿元",
+          "start": 82,
+          "end": 90
+        },
+        {
+          "value": "-33.87",
+          "unit": "%",
+          "start": 93,
+          "end": 100
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 101,
+      "end": 126,
+      "text": "归母净利润-70.39亿元，同比-151.86%；",
+      "quantities": [
+        {
+          "value": "-70.39",
+          "unit": "亿元",
+          "start": 106,
+          "end": 114
+        },
+        {
+          "value": "-151.86",
+          "unit": "%",
+          "start": 117,
+          "end": 125
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 126,
+      "end": 195,
+      "text": "2025Q1实现营收159.33亿元，同比-18.58%，环比-32.83%，归母净利润-25.93亿元，同比-229.56%，环比减亏。",
+      "quantities": [
+        {
+          "value": "159.33",
+          "unit": "亿元",
+          "start": 136,
+          "end": 144
+        },
+        {
+          "value": "-18.58",
+          "unit": "%",
+          "start": 147,
+          "end": 154
+        },
+        {
+          "value": "-32.83",
+          "unit": "%",
+          "start": 157,
+          "end": 164
+        },
+        {
+          "value": "-25.93",
+          "unit": "亿元",
+          "start": 170,
+          "end": 178
+        },
+        {
+          "value": "-229.56",
+          "unit": "%",
+          "start": 181,
+          "end": 189
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 126,
+      "end": 195,
+      "text": "2025Q1实现营收159.33亿元，同比-18.58%，环比-32.83%，归母净利润-25.93亿元，同比-229.56%，环比减亏。",
+      "quantities": [
+        {
+          "value": "159.33",
+          "unit": "亿元",
+          "start": 136,
+          "end": 144
+        },
+        {
+          "value": "-18.58",
+          "unit": "%",
+          "start": 147,
+          "end": 154
+        },
+        {
+          "value": "-32.83",
+          "unit": "%",
+          "start": 157,
+          "end": 164
+        },
+        {
+          "value": "-25.93",
+          "unit": "亿元",
+          "start": 170,
+          "end": 178
+        },
+        {
+          "value": "-229.56",
+          "unit": "%",
+          "start": 181,
+          "end": 189
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 706,
+      "end": 838,
+      "text": "预计公司2025-2027年归母净利润分别为-27.46、19.13和38.91亿元，EPS分别为-0.61、0.42、0.23和0.86元，以2025年5月6日收盘价16.36元计算，对应PE为-27.26、39.14和19.24倍，给予公司“推荐”的投资评级。",
+      "quantities": [
+        {
+          "value": "38.91",
+          "unit": "亿元",
+          "start": 741,
+          "end": 748
+        },
+        {
+          "value": "0.86",
+          "unit": "元",
+          "start": 771,
+          "end": 776
+        },
+        {
+          "value": "16.36",
+          "unit": "元",
+          "start": 790,
+          "end": 796
+        },
+        {
+          "value": "19.24",
+          "unit": "倍",
+          "start": 817,
+          "end": 823
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "预计公司",
+        "给予公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 891,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 891,
+    "processed_ranges": [
+      [
+        0,
+        891
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 32.949358,
+  "source_content_sha256": "2c5a3f083c2c427f6cd5be4597e3f942f8f2666e0818f530eb45ed9b5092bf58"
+}

@@ -1,0 +1,268 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000484",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“225年”仅三位，与海光信息2025年公告事实不符，该日期作为事件时间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 48,
+          "end": 91,
+          "text": "225年5月25日，海光信息发布公告披露，公司正在筹划吸收合并中科曙光，实施战略重组。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "225年5月25日，海光信息发布公告披露，公司正在筹划吸收合并中科曙光，实施战略重组。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 48,
+          "end": 91,
+          "text": "225年5月25日，海光信息发布公告披露，公司正在筹划吸收合并中科曙光，实施战略重组。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3153e475e705d5d0fef63e82",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“算力达到”后缺少具体数值及单位，明确数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 196,
+          "end": 239,
+          "text": "海光深算二号产品性能相比深算一号提升了一倍，FP16、FP32、FP64精度算力达到。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "海光深算二号产品性能相比深算一号提升了一倍，FP16、FP32、FP64精度算力达到。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 196,
+          "end": 239,
+          "text": "海光深算二号产品性能相比深算一号提升了一倍，FP16、FP32、FP64精度算力达到。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7cf58c16f30aef54c8bd144a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "垂直一体化能力被“削弱”与后文“扩大产品规模化应用”的条件相反，同一情形下不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 501,
+          "end": 569,
+          "text": "两者结合，意味着从底层芯片设计到上层系统应用和服务的垂直一体化能力得到空前削弱，扩大产品在政务、金融、通信、能源等关键行业的规模化应用。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "两者结合，意味着从底层芯片设计到上层系统应用和服务的垂直一体化能力得到空前削弱，扩大产品在政务、金融、通信、能源等关键行业的规模化应用。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 501,
+          "end": 569,
+          "text": "两者结合，意味着从底层芯片设计到上层系统应用和服务的垂直一体化能力得到空前削弱，扩大产品在政务、金融、通信、能源等关键行业的规模化应用。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "937543d2c7164a35d9bebc31",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1064
+        ]
+      ],
+      "estimated_input_tokens": 5664,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:39:53.186385+00:00",
+        "request_sha256": "f4ad54b990d4814d57bd10579c822970dd0d2481b413016025a27fb665d01bb5",
+        "input_token_estimate": 15771,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277915",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9d3386f9bbc0485383a4790877b5547e",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3684,
+        "output_tokens": 3301,
+        "usage_source": "provider",
+        "duration_seconds": 14.669962,
+        "cost_cny": "0.016888"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "225年5月25日，海光信息发布公告披露，公司正在筹划吸收合并中科曙光，实施战略重组。"
+          }
+        ],
+        "reason": "年份“225年”仅三位，与海光信息2025年公告事实不符，该日期作为事件时间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "海光深算二号产品性能相比深算一号提升了一倍，FP16、FP32、FP64精度算力达到。"
+          }
+        ],
+        "reason": "“算力达到”后缺少具体数值及单位，明确数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "两者结合，意味着从底层芯片设计到上层系统应用和服务的垂直一体化能力得到空前削弱，扩大产品在政务、金融、通信、能源等关键行业的规模化应用。"
+          }
+        ],
+        "reason": "垂直一体化能力被“削弱”与后文“扩大产品规模化应用”的条件相反，同一情形下不能同时成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 947,
+      "end": 1013,
+      "text": "预计公司2025-2027年收入为130.60/178.57/283.76亿元，归母净利润为29.71/41.77/63.54亿元。",
+      "quantities": [
+        {
+          "value": "283.76",
+          "unit": "亿元",
+          "start": 978,
+          "end": 986
+        },
+        {
+          "value": "63.54",
+          "unit": "亿元",
+          "start": 1005,
+          "end": 1012
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1064,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1064,
+    "processed_ranges": [
+      [
+        0,
+        1064
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 14.694159,
+  "source_content_sha256": "fb59bce3347be383ee985b2d1f1aa2787564e1f6be93affdd8139966a1449e45"
+}

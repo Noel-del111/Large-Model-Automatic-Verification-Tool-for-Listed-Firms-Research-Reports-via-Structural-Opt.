@@ -1,0 +1,22 @@
+{
+  "hashes_verified": true,
+  "frozen_score_exact_match": true,
+  "all_hints_case_counts": {
+    "legacy_rules": {
+      "FN": 1695,
+      "TP": 52,
+      "FP": 14
+    },
+    "model_direct": {
+      "TP": 1211,
+      "FP": 604,
+      "FN": 536
+    },
+    "hybrid": {
+      "TP": 1235,
+      "FP": 625,
+      "FN": 512
+    }
+  },
+  "note": "New inference batch; old deleted batch not recovered. Root causes are not human-reviewed."
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"事件概述：公司发布5月产销快报，5月新能源汽车批发销售38.2万辆，同比+15.3%，环比+0.6%；新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%。\"\n        },\n        {\n          \"text\": \"公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。\"\n        }\n      ],\n      \"reason\": \"新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%等信息在前后文重复出现。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。\"\n        },\n        {\n          \"text\": \"受益海外车型上量及区域拓展，5月新能源出口销量8.9万辆，再创新高；\"\n        }\n      ],\n      \"reason\": \"同一出口/海外销量8.9万辆且“再创新高”的表述在相邻段落重复。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"今年公司将加大海外市场投入，积极布局巴西、乌兹别克、匈牙利、乌兹别克、土耳其、印尼布局工厂，同时加速出口，出海有望在欧洲、东南亚、澳新迎来快速发展，出海亦有望提振盈利。\"\n        }\n      ],\n      \"reason\": \"列举海外工厂布局地点时，“乌兹别克”重复出现，表述冗余。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。\"\n        }\n      ],\n      \"reason\": \"销量单位应为“辆”，却写成“平方分米”，属于量纲单位错误。\"\n    },\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"分品牌看，5月王朝海洋、腾势、方程豹、仰望销量分别34.8万辆、15,806辆、12,592辆、139辆。\"\n        },\n        {\n          \"text\": \"分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。\"\n        }\n      ],\n      \"reason\": \"腾势、方程豹、仰望销量合计约2.85万辆，与后文“3.68万”矛盾。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。\"\n        }\n      ],\n      \"reason\": \"3.68万占37.7万的比例约为9.76%，并非原文所称的11%。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"2025年为公司的高端化产品大年，腾势N9已于2025年3月上市，定位六座大型SUV，售价38.98-44.98万元，全系标配易三方技术，舒适度、豪华属性强，带动腾势品牌4、5月实现1.5、1.6、1.2万辆销量，后续有望带动整体盈利向上。\"\n        }\n      ],\n      \"reason\": \"仅列4、5月两个月份，却给出1.5、1.6、1.2万辆三个销量数字，期间与数值无法对应。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:05:57.067133+00:00",
+    "request_sha256": "410a02f481ab66be2c3a306b001d7bfc54d30abebe915c7fce365c8ad7aad7f8",
+    "input_token_estimate": 15860,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278004",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "086b292ade6941da9055831a5f145577",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3845,
+    "output_tokens": 10292,
+    "usage_source": "provider",
+    "duration_seconds": 39.959502,
+    "cost_cny": "0.045013"
+  },
+  "cache_request": {
+    "key": "e4c3e2008a1fe5407b2f7a7b362ed154a9a91c246ea5c18d7f469ff7ba44c945",
+    "purpose": "text_review.detect",
+    "messages_sha256": "410a02f481ab66be2c3a306b001d7bfc54d30abebe915c7fce365c8ad7aad7f8"
+  }
+}

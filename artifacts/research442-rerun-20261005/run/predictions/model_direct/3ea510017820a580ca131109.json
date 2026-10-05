@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000640",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "医药板块涨跌幅使用金额单位“亿元”，涨跌幅应为百分比或百分点单位，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 49,
+          "end": 109,
+          "text": "2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 49,
+          "end": 109,
+          "text": "2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c2fb79bfbac6561cdc826c37",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万子行业总数为31个，排名却为第41名，排名超出总数范围。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 49,
+          "end": 109,
+          "text": "2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 49,
+          "end": 109,
+          "text": "2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "95099f1e57719fe773ddeb93",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "惠泰医疗后的股票代码括号为空，缺失股票代码属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 868,
+          "end": 933,
+          "text": "惠泰医疗（）：公司发布公告，子公司湖南埃普特医疗器械有限公司取得一项医疗器械注册证，公司产品冠状动脉棘突球囊扩张导管获得批准上市。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "惠泰医疗（）：公司发布公告，子公司湖南埃普特医疗器械有限公司取得一项医疗器械注册证，公司产品冠状动脉棘突球囊扩张导管获得批准上市。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 868,
+          "end": 933,
+          "text": "惠泰医疗（）：公司发布公告，子公司湖南埃普特医疗器械有限公司取得一项医疗器械注册证，公司产品冠状动脉棘突球囊扩张导管获得批准上市。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "05814ae03f4244cf121412b1",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          962
+        ]
+      ],
+      "estimated_input_tokens": 5446,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:29:18.205329+00:00",
+        "request_sha256": "2bb7c3fc5ac76104832dcd7bfa240007494e684702cdcbf9583acdbd25f38f0f",
+        "input_token_estimate": 15180,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277324",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "47336142a5fd4f02a43ceb4a82280d5f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3628,
+        "output_tokens": 5384,
+        "usage_source": "provider",
+        "duration_seconds": 22.103734,
+        "cost_cny": "0.025164"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。"
+          }
+        ],
+        "reason": "医药板块涨跌幅使用金额单位“亿元”，涨跌幅应为百分比或百分点单位，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。"
+          }
+        ],
+        "reason": "申万子行业总数为31个，排名却为第41名，排名超出总数范围。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "惠泰医疗（）：公司发布公告，子公司湖南埃普特医疗器械有限公司取得一项医疗器械注册证，公司产品冠状动脉棘突球囊扩张导管获得批准上市。"
+          }
+        ],
+        "reason": "惠泰医疗后的股票代码括号为空，缺失股票代码属性值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 962,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 962,
+    "processed_ranges": [
+      [
+        0,
+        962
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 22.130162,
+  "source_content_sha256": "4ed22e4bb1cba5e7984b094628b207bd741d4007775072b2737fac5f1b1efa46"
+}

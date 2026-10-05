@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"5月20日，维谛公众号披露，为响应英伟达下一代规划，计划于2026年13月下半年正式推出800VDC电源产品系列。\"}], \"reason\": \"2026年13月不存在，日期非法；且与后文“下半年”矛盾。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"受益于交付容量大幅增长，数据中心电源在营收中占比同比提升 pct。\"}], \"reason\": \"“提升 pct”中间缺少具体提升数值，无法核验。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"2024年，公司数据中心电源、电力操作电源系统、、技术服务维护在营收中占比分别为34.1%、24.4%、15.6%、19.9%；\"}], \"reason\": \"列举项目名称时出现两个连续顿号，缺少一个业务名称，却对应四个占比。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:39:33.175032+00:00",
+    "request_sha256": "78423b75467bf76ebfc2094c5ad1ae2f96a0fa10d8ba18a32f04aca17e412093",
+    "input_token_estimate": 15450,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277594",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "139eeb5806df4b7198bd49ca39fe11da",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3655,
+    "output_tokens": 5465,
+    "usage_source": "provider",
+    "duration_seconds": 20.580751,
+    "cost_cny": "0.025515"
+  },
+  "cache_request": {
+    "key": "893ee754383b45744c7195ad7baec777efcb759810667c64afc5bb6ee61102e3",
+    "purpose": "text_review.detect",
+    "messages_sha256": "78423b75467bf76ebfc2094c5ad1ae2f96a0fa10d8ba18a32f04aca17e412093"
+  }
+}

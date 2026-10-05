@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"4月31日中共中央政治局召开会议，会议分析研究当前经济形势和经济工作，审议《关于持续深入推进长三角一体化高质量发展若干政策措施的意见》。\"}],\"reason\":\"4月只有30天，不存在4月31日，日期本身不成立。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年4月29日至5月5日期间，沪深300指数上涨0.56%，申万电子指数上涨，在31个申万一级行业中排第10。\"}],\"reason\":\"“申万电子指数上涨”后直接接逗号，缺少应报告的上涨幅度数值。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"期间电子板块大部分个股上涨：申万电子行业482只个股中，上涨381只，下跌98只，上涨比例为99.05%。\"}],\"reason\":\"381除以482约等于79.05%，原文的99.05%与上涨个股数和总个股数不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:16:32.493533+00:00",
+    "request_sha256": "cb06640b583519e812a8dc1e6cb125770a487afbcdbb922ea3ab1128f9cf87c3",
+    "input_token_estimate": 15744,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277888",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "eee41d6ecd5348539966dbce94901392",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3689,
+    "output_tokens": 3229,
+    "usage_source": "provider",
+    "duration_seconds": 13.127282,
+    "cost_cny": "0.016605"
+  },
+  "cache_request": {
+    "key": "3024bfca75cb48e5a4e1314b35cbd68b8449a4627d36044998ea775bcd21f509",
+    "purpose": "text_review.detect",
+    "messages_sha256": "cb06640b583519e812a8dc1e6cb125770a487afbcdbb922ea3ab1128f9cf87c3"
+  }
+}

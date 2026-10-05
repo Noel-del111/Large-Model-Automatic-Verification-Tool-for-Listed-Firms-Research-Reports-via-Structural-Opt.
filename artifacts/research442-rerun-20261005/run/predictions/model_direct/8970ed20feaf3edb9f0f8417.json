@@ -1,0 +1,737 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000409",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "2025年4月没有31日，该日期不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 683,
+          "end": 748,
+          "text": "收入高增主要系中国新能源汽车行业保持强劲增长，新能源乘用车客户定点车型于2025年4月31日SOP放量、商用车新平台的批量销售所致"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "收入高增主要系中国新能源汽车行业保持强劲增长，新能源乘用车客户定点车型于2025年4月31日SOP放量、商用车新平台的批量销售所致"
+        }
+      ],
+      "spans": [
+        {
+          "start": 683,
+          "end": 748,
+          "text": "收入高增主要系中国新能源汽车行业保持强劲增长，新能源乘用车客户定点车型于2025年4月31日SOP放量、商用车新平台的批量销售所致"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e6312e714934469cc199c89f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "收入应以货币单位计量，此处错误地使用面积单位“平方分米”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 642,
+          "end": 662,
+          "text": "新能源汽车和轨交收入166.42平方分米"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新能源汽车和轨交收入166.42平方分米"
+        }
+      ],
+      "spans": [
+        {
+          "start": 642,
+          "end": 662,
+          "text": "新能源汽车和轨交收入166.42平方分米"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b52d7fb7c10a809fdb51cba4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "若收入为166.42亿元，占总营收370.41亿元的比例约44.93%，与所述64.93%矛盾，且各业务占比之和超过100%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 642,
+          "end": 682,
+          "text": "新能源汽车和轨交收入166.42平方分米，占比64.93%，同比增加67.76%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新能源汽车和轨交收入166.42平方分米，占比64.93%，同比增加67.76%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 642,
+          "end": 682,
+          "text": "新能源汽车和轨交收入166.42平方分米，占比64.93%，同比增加67.76%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "404d45e768fa323a92558d28",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "销售费用率对应位置只有百分号，缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 474,
+          "end": 514,
+          "text": "2024年销售/管理/研发/财务费用率为%/4.16%/8.50%/-0.01%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年销售/管理/研发/财务费用率为%/4.16%/8.50%/-0.01%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 474,
+          "end": 514,
+          "text": "2024年销售/管理/研发/财务费用率为%/4.16%/8.50%/-0.01%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d5719549bdb31f3a5bd1043c",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1308
+        ]
+      ],
+      "estimated_input_tokens": 5749,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:35:19.828838+00:00",
+        "request_sha256": "a1dae9487c82859c0c6af9cf1fb06a7d222ad18a25ef4475f6f8a766f483ed22",
+        "input_token_estimate": 16029,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278173",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "28b4386b9e1347e6bc39a5f15a988ca5",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3800,
+        "output_tokens": 6784,
+        "usage_source": "provider",
+        "duration_seconds": 26.360591,
+        "cost_cny": "0.030936"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "收入高增主要系中国新能源汽车行业保持强劲增长，新能源乘用车客户定点车型于2025年4月31日SOP放量、商用车新平台的批量销售所致"
+          }
+        ],
+        "reason": "2025年4月没有31日，该日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "新能源汽车和轨交收入166.42平方分米"
+          }
+        ],
+        "reason": "收入应以货币单位计量，此处错误地使用面积单位“平方分米”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "新能源汽车和轨交收入166.42平方分米，占比64.93%，同比增加67.76%"
+          }
+        ],
+        "reason": "若收入为166.42亿元，占总营收370.41亿元的比例约44.93%，与所述64.93%矛盾，且各业务占比之和超过100%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年销售/管理/研发/财务费用率为%/4.16%/8.50%/-0.01%"
+          }
+        ],
+        "reason": "销售费用率对应位置只有百分号，缺少具体数值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 49,
+      "end": 88,
+      "text": "2025年一季度营业收入同比增长38.28%，归母净利润同比增长63.08%。",
+      "quantities": [
+        {
+          "value": "38.28",
+          "unit": "%",
+          "start": 65,
+          "end": 71
+        },
+        {
+          "value": "63.08",
+          "unit": "%",
+          "start": 81,
+          "end": 87
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 49,
+      "end": 88,
+      "text": "2025年一季度营业收入同比增长38.28%，归母净利润同比增长63.08%。",
+      "quantities": [
+        {
+          "value": "38.28",
+          "unit": "%",
+          "start": 65,
+          "end": 71
+        },
+        {
+          "value": "63.08",
+          "unit": "%",
+          "start": 81,
+          "end": 87
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 88,
+      "end": 119,
+      "text": "公司2024年实现营收370.41亿元，同比增长21.77%；",
+      "quantities": [
+        {
+          "value": "370.41",
+          "unit": "亿元",
+          "start": 99,
+          "end": 107
+        },
+        {
+          "value": "21.77",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 119,
+      "end": 142,
+      "text": "归母净利润42.85亿元，同比下滑9.62%。",
+      "quantities": [
+        {
+          "value": "42.85",
+          "unit": "亿元",
+          "start": 124,
+          "end": 131
+        },
+        {
+          "value": "9.62",
+          "unit": "%",
+          "start": 136,
+          "end": 141
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 142,
+      "end": 180,
+      "text": "单季度看，2024年第四季度实现营收116.44亿元，同比增长13.04%；",
+      "quantities": [
+        {
+          "value": "116.44",
+          "unit": "亿元",
+          "start": 160,
+          "end": 168
+        },
+        {
+          "value": "13.04",
+          "unit": "%",
+          "start": 173,
+          "end": 179
+        }
+      ],
+      "periods": [
+        "2024年第四季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 180,
+      "end": 273,
+      "text": "归母净利润9.32亿元，同比下滑34.43%，收入增速放缓主要系光伏、锂电等行业需求承压及电梯业务下滑所致，利润下滑主要系产品结构变化、行业竞争加剧导致毛利率下滑、投资收益同比下降所致。",
+      "quantities": [
+        {
+          "value": "9.32",
+          "unit": "亿元",
+          "start": 185,
+          "end": 191
+        },
+        {
+          "value": "34.43",
+          "unit": "%",
+          "start": 196,
+          "end": 202
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 180,
+      "end": 273,
+      "text": "归母净利润9.32亿元，同比下滑34.43%，收入增速放缓主要系光伏、锂电等行业需求承压及电梯业务下滑所致，利润下滑主要系产品结构变化、行业竞争加剧导致毛利率下滑、投资收益同比下降所致。",
+      "quantities": [
+        {
+          "value": "9.32",
+          "unit": "亿元",
+          "start": 185,
+          "end": 191
+        },
+        {
+          "value": "34.43",
+          "unit": "%",
+          "start": 196,
+          "end": 202
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 273,
+      "end": 346,
+      "text": "2025年第一季度营收89.78亿元，同比增长38.28%，归母净利润13.23亿元，增长63.08%，主要受益于新能源汽车及通用自动化业务高增。",
+      "quantities": [
+        {
+          "value": "89.78",
+          "unit": "亿元",
+          "start": 284,
+          "end": 291
+        },
+        {
+          "value": "38.28",
+          "unit": "%",
+          "start": 296,
+          "end": 302
+        },
+        {
+          "value": "13.23",
+          "unit": "亿元",
+          "start": 308,
+          "end": 315
+        },
+        {
+          "value": "63.08",
+          "unit": "%",
+          "start": 318,
+          "end": 324
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 273,
+      "end": 346,
+      "text": "2025年第一季度营收89.78亿元，同比增长38.28%，归母净利润13.23亿元，增长63.08%，主要受益于新能源汽车及通用自动化业务高增。",
+      "quantities": [
+        {
+          "value": "89.78",
+          "unit": "亿元",
+          "start": 284,
+          "end": 291
+        },
+        {
+          "value": "38.28",
+          "unit": "%",
+          "start": 296,
+          "end": 302
+        },
+        {
+          "value": "13.23",
+          "unit": "亿元",
+          "start": 308,
+          "end": 315
+        },
+        {
+          "value": "63.08",
+          "unit": "%",
+          "start": 318,
+          "end": 324
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 346,
+      "end": 420,
+      "text": "盈利能力方面，2024年公司毛利率/净利率为28.70%/11.73%，同比下降4.85/3.97pct，其中新能源汽车业务毛利率下滑拖累整体表现；",
+      "quantities": [
+        {
+          "value": "28.70",
+          "unit": "%",
+          "start": 368,
+          "end": 374
+        },
+        {
+          "value": "11.73",
+          "unit": "%",
+          "start": 375,
+          "end": 381
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 346,
+      "end": 420,
+      "text": "盈利能力方面，2024年公司毛利率/净利率为28.70%/11.73%，同比下降4.85/3.97pct，其中新能源汽车业务毛利率下滑拖累整体表现；",
+      "quantities": [
+        {
+          "value": "28.70",
+          "unit": "%",
+          "start": 368,
+          "end": 374
+        },
+        {
+          "value": "11.73",
+          "unit": "%",
+          "start": 375,
+          "end": 381
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 346,
+      "end": 420,
+      "text": "盈利能力方面，2024年公司毛利率/净利率为28.70%/11.73%，同比下降4.85/3.97pct，其中新能源汽车业务毛利率下滑拖累整体表现；",
+      "quantities": [
+        {
+          "value": "28.70",
+          "unit": "%",
+          "start": 368,
+          "end": 374
+        },
+        {
+          "value": "11.73",
+          "unit": "%",
+          "start": 375,
+          "end": 381
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 420,
+      "end": 468,
+      "text": "2025年第一季度毛利率/净利率为30.98%/14.96%，同比改善1.13/2.28pct。",
+      "quantities": [
+        {
+          "value": "30.98",
+          "unit": "%",
+          "start": 437,
+          "end": 443
+        },
+        {
+          "value": "14.96",
+          "unit": "%",
+          "start": 444,
+          "end": 450
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 420,
+      "end": 468,
+      "text": "2025年第一季度毛利率/净利率为30.98%/14.96%，同比改善1.13/2.28pct。",
+      "quantities": [
+        {
+          "value": "30.98",
+          "unit": "%",
+          "start": 437,
+          "end": 443
+        },
+        {
+          "value": "14.96",
+          "unit": "%",
+          "start": 444,
+          "end": 450
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1173,
+      "end": 1274,
+      "text": "我们预计2025年-2026年归母净利润分别为53.17/64.47亿元（前值59.66/72.05亿元），新增2027年归母净利润预测76.44亿元，对应PE34/28/24倍，维持“优于大市”评级。",
+      "quantities": [
+        {
+          "value": "64.47",
+          "unit": "亿元",
+          "start": 1202,
+          "end": 1209
+        },
+        {
+          "value": "72.05",
+          "unit": "亿元",
+          "start": 1218,
+          "end": 1225
+        },
+        {
+          "value": "76.44",
+          "unit": "亿元",
+          "start": 1241,
+          "end": 1248
+        },
+        {
+          "value": "24",
+          "unit": "倍",
+          "start": 1259,
+          "end": 1262
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2026年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1173,
+      "end": 1274,
+      "text": "我们预计2025年-2026年归母净利润分别为53.17/64.47亿元（前值59.66/72.05亿元），新增2027年归母净利润预测76.44亿元，对应PE34/28/24倍，维持“优于大市”评级。",
+      "quantities": [
+        {
+          "value": "64.47",
+          "unit": "亿元",
+          "start": 1202,
+          "end": 1209
+        },
+        {
+          "value": "72.05",
+          "unit": "亿元",
+          "start": 1218,
+          "end": 1225
+        },
+        {
+          "value": "76.44",
+          "unit": "亿元",
+          "start": 1241,
+          "end": 1248
+        },
+        {
+          "value": "24",
+          "unit": "倍",
+          "start": 1259,
+          "end": 1262
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2026年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1308,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1308,
+    "processed_ranges": [
+      [
+        0,
+        1308
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 16,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 26.386779,
+  "source_content_sha256": "9ee17bfb2d7136f5cf69c24d8ed3e2fb1626474af165e586466c1b40f6f3cbd5"
+}

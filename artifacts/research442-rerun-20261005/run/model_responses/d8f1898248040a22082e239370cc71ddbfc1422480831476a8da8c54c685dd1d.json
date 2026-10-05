@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"事件：2025年5月32日，公司公告全资子公司诺和晟泰自主研发的STC007注射液治疗腹部手术后的中、重度疼痛的II期临床试验达成预期目标。\"}], \"reason\": \"2025年5月没有32日，日期本身不成立。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"与安慰剂组相比，STC007注射液能够有效改善腹部术后疼痛中度至重度受试者的术后0-24小时的静息和运动状态下的疼痛评分（最小二乘均值差值分别为5.16、5.64、），\"}], \"reason\": \"最小二乘均值差值列出两个数值后，第三个数值位置为空，直接接右括号。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"κ阿片受体（简称KOR）不同于传统的μ阿片受体（简称MOR），是极具抗镇痛潜力的靶点，可以在不进入中枢的情况下，在外周神经系统发挥镇痛作用，不会导致呼吸抑制和便秘，且无明显成瘾性风险。\"}], \"reason\": \"“抗镇痛潜力”含义与镇痛作用相反，应为“镇痛潜力”或“抗痛潜力”。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"呕吐和恶心是研究期间最常见的不良反应，STC007低剂量组发生率为10.0%和7.5%，高剂量组发生率为10.3%和5.1%，高于盐酸曲马多注射液50mg组的20.5%和25.6%，低于安慰剂组的15.0%和12.5%，在同靶点药物中也处于较低水平。\"}], \"reason\": \"STC007各发生率均低于20.5%和25.6%，却表述为“高于”盐酸曲马多组，数值与比较方向矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:15:05.438850+00:00",
+    "request_sha256": "4f92556206d4c94a3cb19124ad8af0459a6c725f895e17afac4a20df16f5111b",
+    "input_token_estimate": 18239,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280383",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "5de160d0bcac4d2f820aee5634765398",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4278,
+    "output_tokens": 6272,
+    "usage_source": "provider",
+    "duration_seconds": 25.440705,
+    "cost_cny": "0.029366"
+  },
+  "cache_request": {
+    "key": "d8f1898248040a22082e239370cc71ddbfc1422480831476a8da8c54c685dd1d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "4f92556206d4c94a3cb19124ad8af0459a6c725f895e17afac4a20df16f5111b"
+  }
+}

@@ -1,0 +1,467 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000386",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一新品介绍句子在原文中连续重复出现，属于不必要的冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 212,
+          "end": 316,
+          "text": "新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 212,
+          "end": 316,
+          "text": "新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2eedc5019597fd679e3a3739",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "前文称4月线下铺货后，后文称于3月底投放梯媒，3月底早于4月，先后关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 483,
+          "end": 515,
+          "text": "公司4月线下铺货后、于3月底投放梯媒（分众），迅速提升新品曝光量"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司4月线下铺货后、于3月底投放梯媒（分众），迅速提升新品曝光量"
+        }
+      ],
+      "spans": [
+        {
+          "start": 483,
+          "end": 515,
+          "text": "公司4月线下铺货后、于3月底投放梯媒（分众），迅速提升新品曝光量"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ed346b01cd973231a24a4799",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "预计营收数值后单位写为“元”，通常应表达为“亿元”或“万元”，单位与量纲不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1201,
+          "end": 1239,
+          "text": "我们预计公司2025-2027年实现营收34.52/38.02/40.07元"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司2025-2027年实现营收34.52/38.02/40.07元"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1201,
+          "end": 1239,
+          "text": "我们预计公司2025-2027年实现营收34.52/38.02/40.07元"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "69ec503e10b8d180167bbe26",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027三个年度对应EPS为三个值，但PE给出四个值16/14/14/15，年度数与数值数量不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1363,
+          "end": 1407,
+          "text": "对应EPS为0.68/0.74/0.77元，对应当前股价PE为16/14/14/15倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "对应EPS为0.68/0.74/0.77元，对应当前股价PE为16/14/14/15倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1363,
+          "end": 1407,
+          "text": "对应EPS为0.68/0.74/0.77元，对应当前股价PE为16/14/14/15倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "370c33f351685e7168a5d155",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1515
+        ]
+      ],
+      "estimated_input_tokens": 6137,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:13:41.788144+00:00",
+        "request_sha256": "9d2814e3fb8ab977ec0e4ac44ad04b16ec8a0f1a78e6a19648266b2cc009edac",
+        "input_token_estimate": 17040,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279184",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "33a6fa046bb941f9b4cd39f0a648633c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3959,
+        "output_tokens": 6496,
+        "usage_source": "provider",
+        "duration_seconds": 26.164054,
+        "cost_cny": "0.029943",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。新品采用了低糖配方，符合软饮行业低糖化的健康趋势，并通过配料表干净、健康，用料真材实料等形成差异化定位。"
+          }
+        ],
+        "reason": "同一新品介绍句子在原文中连续重复出现，属于不必要的冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "公司4月线下铺货后、于3月底投放梯媒（分众），迅速提升新品曝光量"
+          }
+        ],
+        "reason": "前文称4月线下铺货后，后文称于3月底投放梯媒，3月底早于4月，先后关系矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "我们预计公司2025-2027年实现营收34.52/38.02/40.07元"
+          }
+        ],
+        "reason": "预计营收数值后单位写为“元”，通常应表达为“亿元”或“万元”，单位与量纲不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "对应EPS为0.68/0.74/0.77元，对应当前股价PE为16/14/14/15倍。"
+          }
+        ],
+        "reason": "2025-2027三个年度对应EPS为三个值，但PE给出四个值16/14/14/15，年度数与数值数量不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1201,
+      "end": 1263,
+      "text": "我们预计公司2025-2027年实现营收34.52/38.02/40.07元，同比增长5.01%/10.14%/5.39%；",
+      "quantities": [
+        {
+          "value": "40.07",
+          "unit": "元",
+          "start": 1233,
+          "end": 1239
+        },
+        {
+          "value": "5.01",
+          "unit": "%",
+          "start": 1244,
+          "end": 1249
+        },
+        {
+          "value": "10.14",
+          "unit": "%",
+          "start": 1250,
+          "end": 1256
+        },
+        {
+          "value": "5.39",
+          "unit": "%",
+          "start": 1257,
+          "end": 1262
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1263,
+      "end": 1407,
+      "text": "实现归母净利润7.14/7.81/8.13亿元，同比增长7.15%/9.46%/4.01%（还原股权激励费用后归母净利润7.30/7.89/8.13亿元，同比增长9.55%/8.16%/2.96%），对应EPS为0.68/0.74/0.77元，对应当前股价PE为16/14/14/15倍。",
+      "quantities": [
+        {
+          "value": "8.13",
+          "unit": "亿元",
+          "start": 1280,
+          "end": 1286
+        },
+        {
+          "value": "7.15",
+          "unit": "%",
+          "start": 1291,
+          "end": 1296
+        },
+        {
+          "value": "9.46",
+          "unit": "%",
+          "start": 1297,
+          "end": 1302
+        },
+        {
+          "value": "4.01",
+          "unit": "%",
+          "start": 1303,
+          "end": 1308
+        },
+        {
+          "value": "8.13",
+          "unit": "亿元",
+          "start": 1333,
+          "end": 1339
+        },
+        {
+          "value": "9.55",
+          "unit": "%",
+          "start": 1344,
+          "end": 1349
+        },
+        {
+          "value": "8.16",
+          "unit": "%",
+          "start": 1350,
+          "end": 1355
+        },
+        {
+          "value": "2.96",
+          "unit": "%",
+          "start": 1356,
+          "end": 1361
+        },
+        {
+          "value": "0.77",
+          "unit": "元",
+          "start": 1379,
+          "end": 1384
+        },
+        {
+          "value": "15",
+          "unit": "倍",
+          "start": 1403,
+          "end": 1406
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1263,
+      "end": 1407,
+      "text": "实现归母净利润7.14/7.81/8.13亿元，同比增长7.15%/9.46%/4.01%（还原股权激励费用后归母净利润7.30/7.89/8.13亿元，同比增长9.55%/8.16%/2.96%），对应EPS为0.68/0.74/0.77元，对应当前股价PE为16/14/14/15倍。",
+      "quantities": [
+        {
+          "value": "8.13",
+          "unit": "亿元",
+          "start": 1280,
+          "end": 1286
+        },
+        {
+          "value": "7.15",
+          "unit": "%",
+          "start": 1291,
+          "end": 1296
+        },
+        {
+          "value": "9.46",
+          "unit": "%",
+          "start": 1297,
+          "end": 1302
+        },
+        {
+          "value": "4.01",
+          "unit": "%",
+          "start": 1303,
+          "end": 1308
+        },
+        {
+          "value": "8.13",
+          "unit": "亿元",
+          "start": 1333,
+          "end": 1339
+        },
+        {
+          "value": "9.55",
+          "unit": "%",
+          "start": 1344,
+          "end": 1349
+        },
+        {
+          "value": "8.16",
+          "unit": "%",
+          "start": 1350,
+          "end": 1355
+        },
+        {
+          "value": "2.96",
+          "unit": "%",
+          "start": 1356,
+          "end": 1361
+        },
+        {
+          "value": "0.77",
+          "unit": "元",
+          "start": 1379,
+          "end": 1384
+        },
+        {
+          "value": "15",
+          "unit": "倍",
+          "start": 1403,
+          "end": 1406
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1515,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1515,
+    "processed_ranges": [
+      [
+        0,
+        1515
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1515,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002085,
+  "source_content_sha256": "44a343c867a2659943049367cd7f972abf12de994f560e855107c12047c0480e"
+}

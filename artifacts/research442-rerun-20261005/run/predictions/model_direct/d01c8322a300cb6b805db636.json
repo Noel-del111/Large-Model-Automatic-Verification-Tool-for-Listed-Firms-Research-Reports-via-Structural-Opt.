@@ -1,0 +1,1395 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000319",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "4月没有31日，该日期不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 60,
+          "end": 186,
+          "text": "4月31日公司公告，2024年实现营收（5.08亿元，+11.36%），归母净利润（1.02亿元，-24.42%），扣非归母净利润（0.76亿元，-22.75%）；毛利率（43.67%,-7.58pcts）,净利率（21.96%,-8.34pcts）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月31日公司公告，2024年实现营收（5.08亿元，+11.36%），归母净利润（1.02亿元，-24.42%），扣非归母净利润（0.76亿元，-22.75%）；毛利率（43.67%,-7.58pcts）,净利率（21.96%,-8.34pcts）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 60,
+          "end": 186,
+          "text": "4月31日公司公告，2024年实现营收（5.08亿元，+11.36%），归母净利润（1.02亿元，-24.42%），扣非归母净利润（0.76亿元，-22.75%）；毛利率（43.67%,-7.58pcts）,净利率（21.96%,-8.34pcts）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aa75fecc8ed22b1e35c7047d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "在建工程后括号内只有单位“亿元”，缺少应报告的具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 960,
+          "end": 1002,
+          "text": "在建工程达到（亿元，+84.34%），主要系航空产业园建设投入、待安装调试设备增加；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在建工程达到（亿元，+84.34%），主要系航空产业园建设投入、待安装调试设备增加；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 960,
+          "end": 1002,
+          "text": "在建工程达到（亿元，+84.34%），主要系航空产业园建设投入、待安装调试设备增加；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "86e8bf0185061dbda13703f9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "销售金额单位写成“人次”，应为金额单位“亿元”，否则无法与0.40亿元比较。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1025,
+          "end": 1080,
+          "text": "公司预计2025年向关联人销售产品、商品金额为1.05亿人次，相较去年发生额0.40亿元，增长162.50%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司预计2025年向关联人销售产品、商品金额为1.05亿人次，相较去年发生额0.40亿元，增长162.50%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1025,
+          "end": 1080,
+          "text": "公司预计2025年向关联人销售产品、商品金额为1.05亿人次，相较去年发生额0.40亿元，增长162.50%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a52f6ad54604a01b625b06ef",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          3658
+        ]
+      ],
+      "estimated_input_tokens": 7998,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:44:06.360222+00:00",
+        "request_sha256": "f05e4bf4d061c72b21bec8c8c16247924e9bbf426b922baa625072d4b580ae2e",
+        "input_token_estimate": 22325,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.284469",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "066d88df012c41dfa3dfdb0cab6688b7",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 5271,
+        "output_tokens": 11554,
+        "usage_source": "provider",
+        "duration_seconds": 42.653795,
+        "cost_cny": "0.051487"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "4月31日公司公告，2024年实现营收（5.08亿元，+11.36%），归母净利润（1.02亿元，-24.42%），扣非归母净利润（0.76亿元，-22.75%）；毛利率（43.67%,-7.58pcts）,净利率（21.96%,-8.34pcts）。"
+          }
+        ],
+        "reason": "4月没有31日，该日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "在建工程达到（亿元，+84.34%），主要系航空产业园建设投入、待安装调试设备增加；"
+          }
+        ],
+        "reason": "在建工程后括号内只有单位“亿元”，缺少应报告的具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司预计2025年向关联人销售产品、商品金额为1.05亿人次，相较去年发生额0.40亿元，增长162.50%。"
+          }
+        ],
+        "reason": "销售金额单位写成“人次”，应为金额单位“亿元”，否则无法与0.40亿元比较。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 0,
+      "end": 40,
+      "text": "2024年报及2025一季报点评：营收再创新高，乘上商业航天和国产民机发展东风\n",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 60,
+      "end": 142,
+      "text": "4月31日公司公告，2024年实现营收（5.08亿元，+11.36%），归母净利润（1.02亿元，-24.42%），扣非归母净利润（0.76亿元，-22.75%）；",
+      "quantities": [
+        {
+          "value": "5.08",
+          "unit": "亿元",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "+11.36",
+          "unit": "%",
+          "start": 87,
+          "end": 94
+        },
+        {
+          "value": "1.02",
+          "unit": "亿元",
+          "start": 102,
+          "end": 108
+        },
+        {
+          "value": "-24.42",
+          "unit": "%",
+          "start": 109,
+          "end": 116
+        },
+        {
+          "value": "0.76",
+          "unit": "亿元",
+          "start": 126,
+          "end": 132
+        },
+        {
+          "value": "-22.75",
+          "unit": "%",
+          "start": 133,
+          "end": 140
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "日公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 60,
+      "end": 142,
+      "text": "4月31日公司公告，2024年实现营收（5.08亿元，+11.36%），归母净利润（1.02亿元，-24.42%），扣非归母净利润（0.76亿元，-22.75%）；",
+      "quantities": [
+        {
+          "value": "5.08",
+          "unit": "亿元",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "+11.36",
+          "unit": "%",
+          "start": 87,
+          "end": 94
+        },
+        {
+          "value": "1.02",
+          "unit": "亿元",
+          "start": 102,
+          "end": 108
+        },
+        {
+          "value": "-24.42",
+          "unit": "%",
+          "start": 109,
+          "end": 116
+        },
+        {
+          "value": "0.76",
+          "unit": "亿元",
+          "start": 126,
+          "end": 132
+        },
+        {
+          "value": "-22.75",
+          "unit": "%",
+          "start": 133,
+          "end": 140
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "日公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 60,
+      "end": 142,
+      "text": "4月31日公司公告，2024年实现营收（5.08亿元，+11.36%），归母净利润（1.02亿元，-24.42%），扣非归母净利润（0.76亿元，-22.75%）；",
+      "quantities": [
+        {
+          "value": "5.08",
+          "unit": "亿元",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "+11.36",
+          "unit": "%",
+          "start": 87,
+          "end": 94
+        },
+        {
+          "value": "1.02",
+          "unit": "亿元",
+          "start": 102,
+          "end": 108
+        },
+        {
+          "value": "-24.42",
+          "unit": "%",
+          "start": 109,
+          "end": 116
+        },
+        {
+          "value": "0.76",
+          "unit": "亿元",
+          "start": 126,
+          "end": 132
+        },
+        {
+          "value": "-22.75",
+          "unit": "%",
+          "start": 133,
+          "end": 140
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "日公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 142,
+      "end": 186,
+      "text": "毛利率（43.67%,-7.58pcts）,净利率（21.96%,-8.34pcts）。",
+      "quantities": [
+        {
+          "value": "43.67",
+          "unit": "%",
+          "start": 146,
+          "end": 152
+        },
+        {
+          "value": "21.96",
+          "unit": "%",
+          "start": 168,
+          "end": 174
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 142,
+      "end": 186,
+      "text": "毛利率（43.67%,-7.58pcts）,净利率（21.96%,-8.34pcts）。",
+      "quantities": [
+        {
+          "value": "43.67",
+          "unit": "%",
+          "start": 146,
+          "end": 152
+        },
+        {
+          "value": "21.96",
+          "unit": "%",
+          "start": 168,
+          "end": 174
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 188,
+      "end": 259,
+      "text": "2025Q1营业收入（0.61亿元，+40.61%），归母净利润（0.10亿元，+145.34%），扣非归母净利润（0.02亿元，由亏转盈）；",
+      "quantities": [
+        {
+          "value": "0.61",
+          "unit": "亿元",
+          "start": 199,
+          "end": 205
+        },
+        {
+          "value": "+40.61",
+          "unit": "%",
+          "start": 206,
+          "end": 213
+        },
+        {
+          "value": "0.10",
+          "unit": "亿元",
+          "start": 221,
+          "end": 227
+        },
+        {
+          "value": "+145.34",
+          "unit": "%",
+          "start": 228,
+          "end": 236
+        },
+        {
+          "value": "0.02",
+          "unit": "亿元",
+          "start": 246,
+          "end": 252
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 188,
+      "end": 259,
+      "text": "2025Q1营业收入（0.61亿元，+40.61%），归母净利润（0.10亿元，+145.34%），扣非归母净利润（0.02亿元，由亏转盈）；",
+      "quantities": [
+        {
+          "value": "0.61",
+          "unit": "亿元",
+          "start": 199,
+          "end": 205
+        },
+        {
+          "value": "+40.61",
+          "unit": "%",
+          "start": 206,
+          "end": 213
+        },
+        {
+          "value": "0.10",
+          "unit": "亿元",
+          "start": 221,
+          "end": 227
+        },
+        {
+          "value": "+145.34",
+          "unit": "%",
+          "start": 228,
+          "end": 236
+        },
+        {
+          "value": "0.02",
+          "unit": "亿元",
+          "start": 246,
+          "end": 252
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 188,
+      "end": 259,
+      "text": "2025Q1营业收入（0.61亿元，+40.61%），归母净利润（0.10亿元，+145.34%），扣非归母净利润（0.02亿元，由亏转盈）；",
+      "quantities": [
+        {
+          "value": "0.61",
+          "unit": "亿元",
+          "start": 199,
+          "end": 205
+        },
+        {
+          "value": "+40.61",
+          "unit": "%",
+          "start": 206,
+          "end": 213
+        },
+        {
+          "value": "0.10",
+          "unit": "亿元",
+          "start": 221,
+          "end": 227
+        },
+        {
+          "value": "+145.34",
+          "unit": "%",
+          "start": 228,
+          "end": 236
+        },
+        {
+          "value": "0.02",
+          "unit": "亿元",
+          "start": 246,
+          "end": 252
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 259,
+      "end": 304,
+      "text": "毛利率（46.18%，+10.21pcts),净利率（15.06%,+4.73pcts)。",
+      "quantities": [
+        {
+          "value": "46.18",
+          "unit": "%",
+          "start": 263,
+          "end": 269
+        },
+        {
+          "value": "15.06",
+          "unit": "%",
+          "start": 286,
+          "end": 292
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 259,
+      "end": 304,
+      "text": "毛利率（46.18%，+10.21pcts),净利率（15.06%,+4.73pcts)。",
+      "quantities": [
+        {
+          "value": "46.18",
+          "unit": "%",
+          "start": 263,
+          "end": 269
+        },
+        {
+          "value": "15.06",
+          "unit": "%",
+          "start": 286,
+          "end": 292
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 313,
+      "end": 343,
+      "text": "公司2024年营收创近年来新高，2025Q1业绩取得开门红\n",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 344,
+      "end": 423,
+      "text": "2024年，公司营业收入（5.08亿元，+11.36%）稳步增长，创近年来新高，连续六年正增长，，主要系受产品结构变化，下游主机或总体客户价格下降的影响所致。",
+      "quantities": [
+        {
+          "value": "5.08",
+          "unit": "亿元",
+          "start": 357,
+          "end": 363
+        },
+        {
+          "value": "+11.36",
+          "unit": "%",
+          "start": 364,
+          "end": 371
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 423,
+      "end": 572,
+      "text": "公司归母净利润（1.02亿元，-24.42%）和净利率（21.96%，-8.34pcts）均有所下降，主要系研发费用（0.60亿元，+25.64%）和销售费用（0.11亿元，+35.04%）快速增长、部分奖补资金已于2023年支付完毕导致其他收益（0.16亿元，-41.57%）明显下降等原因所致。",
+      "quantities": [
+        {
+          "value": "1.02",
+          "unit": "亿元",
+          "start": 431,
+          "end": 437
+        },
+        {
+          "value": "-24.42",
+          "unit": "%",
+          "start": 438,
+          "end": 445
+        },
+        {
+          "value": "21.96",
+          "unit": "%",
+          "start": 451,
+          "end": 457
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 482,
+          "end": 488
+        },
+        {
+          "value": "+25.64",
+          "unit": "%",
+          "start": 489,
+          "end": 496
+        },
+        {
+          "value": "0.11",
+          "unit": "亿元",
+          "start": 503,
+          "end": 509
+        },
+        {
+          "value": "+35.04",
+          "unit": "%",
+          "start": 510,
+          "end": 517
+        },
+        {
+          "value": "0.16",
+          "unit": "亿元",
+          "start": 547,
+          "end": 553
+        },
+        {
+          "value": "-41.57",
+          "unit": "%",
+          "start": 554,
+          "end": 561
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 423,
+      "end": 572,
+      "text": "公司归母净利润（1.02亿元，-24.42%）和净利率（21.96%，-8.34pcts）均有所下降，主要系研发费用（0.60亿元，+25.64%）和销售费用（0.11亿元，+35.04%）快速增长、部分奖补资金已于2023年支付完毕导致其他收益（0.16亿元，-41.57%）明显下降等原因所致。",
+      "quantities": [
+        {
+          "value": "1.02",
+          "unit": "亿元",
+          "start": 431,
+          "end": 437
+        },
+        {
+          "value": "-24.42",
+          "unit": "%",
+          "start": 438,
+          "end": 445
+        },
+        {
+          "value": "21.96",
+          "unit": "%",
+          "start": 451,
+          "end": 457
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 482,
+          "end": 488
+        },
+        {
+          "value": "+25.64",
+          "unit": "%",
+          "start": 489,
+          "end": 496
+        },
+        {
+          "value": "0.11",
+          "unit": "亿元",
+          "start": 503,
+          "end": 509
+        },
+        {
+          "value": "+35.04",
+          "unit": "%",
+          "start": 510,
+          "end": 517
+        },
+        {
+          "value": "0.16",
+          "unit": "亿元",
+          "start": 547,
+          "end": 553
+        },
+        {
+          "value": "-41.57",
+          "unit": "%",
+          "start": 554,
+          "end": 561
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 574,
+      "end": 652,
+      "text": "2025Q1，公司营业收入（0.61亿元，+40.61%）和归母净利润（0.10亿元，+145.34%）同比快速增长，主要系通信及航空产品销售收入增加所致。",
+      "quantities": [
+        {
+          "value": "0.61",
+          "unit": "亿元",
+          "start": 588,
+          "end": 594
+        },
+        {
+          "value": "+40.61",
+          "unit": "%",
+          "start": 595,
+          "end": 602
+        },
+        {
+          "value": "0.10",
+          "unit": "亿元",
+          "start": 610,
+          "end": 616
+        },
+        {
+          "value": "+145.34",
+          "unit": "%",
+          "start": 617,
+          "end": 625
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 574,
+      "end": 652,
+      "text": "2025Q1，公司营业收入（0.61亿元，+40.61%）和归母净利润（0.10亿元，+145.34%）同比快速增长，主要系通信及航空产品销售收入增加所致。",
+      "quantities": [
+        {
+          "value": "0.61",
+          "unit": "亿元",
+          "start": 588,
+          "end": 594
+        },
+        {
+          "value": "+40.61",
+          "unit": "%",
+          "start": 595,
+          "end": 602
+        },
+        {
+          "value": "0.10",
+          "unit": "亿元",
+          "start": 610,
+          "end": 616
+        },
+        {
+          "value": "+145.34",
+          "unit": "%",
+          "start": 617,
+          "end": 625
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1440,
+      "end": 1541,
+      "text": "①宇航及通信产品：2024年营收（1.98亿元，-30.77%）有所下降，主要受宇航产品销售价格下降与产品结构变化双重影响所致，营收占比38.91%,毛利率（54.59%,-1.03pcts)略有下滑。",
+      "quantities": [
+        {
+          "value": "1.98",
+          "unit": "亿元",
+          "start": 1457,
+          "end": 1463
+        },
+        {
+          "value": "-30.77",
+          "unit": "%",
+          "start": 1464,
+          "end": 1471
+        },
+        {
+          "value": "38.91",
+          "unit": "%",
+          "start": 1508,
+          "end": 1514
+        },
+        {
+          "value": "54.59",
+          "unit": "%",
+          "start": 1519,
+          "end": 1525
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1440,
+      "end": 1541,
+      "text": "①宇航及通信产品：2024年营收（1.98亿元，-30.77%）有所下降，主要受宇航产品销售价格下降与产品结构变化双重影响所致，营收占比38.91%,毛利率（54.59%,-1.03pcts)略有下滑。",
+      "quantities": [
+        {
+          "value": "1.98",
+          "unit": "亿元",
+          "start": 1457,
+          "end": 1463
+        },
+        {
+          "value": "-30.77",
+          "unit": "%",
+          "start": 1464,
+          "end": 1471
+        },
+        {
+          "value": "38.91",
+          "unit": "%",
+          "start": 1508,
+          "end": 1514
+        },
+        {
+          "value": "54.59",
+          "unit": "%",
+          "start": 1519,
+          "end": 1525
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1440,
+      "end": 1541,
+      "text": "①宇航及通信产品：2024年营收（1.98亿元，-30.77%）有所下降，主要受宇航产品销售价格下降与产品结构变化双重影响所致，营收占比38.91%,毛利率（54.59%,-1.03pcts)略有下滑。",
+      "quantities": [
+        {
+          "value": "1.98",
+          "unit": "亿元",
+          "start": 1457,
+          "end": 1463
+        },
+        {
+          "value": "-30.77",
+          "unit": "%",
+          "start": 1464,
+          "end": 1471
+        },
+        {
+          "value": "38.91",
+          "unit": "%",
+          "start": 1508,
+          "end": 1514
+        },
+        {
+          "value": "54.59",
+          "unit": "%",
+          "start": 1519,
+          "end": 1525
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1838,
+      "end": 1931,
+      "text": "②航空航天工艺装备：2024年营收（2.27亿元，+81.37%）高速增长，主要系客户新增任务工装需求增加所致，营收占比44.65%，毛利率（40.71%,-1.35pcts）略有下滑。",
+      "quantities": [
+        {
+          "value": "2.27",
+          "unit": "亿元",
+          "start": 1856,
+          "end": 1862
+        },
+        {
+          "value": "+81.37",
+          "unit": "%",
+          "start": 1863,
+          "end": 1870
+        },
+        {
+          "value": "44.65",
+          "unit": "%",
+          "start": 1898,
+          "end": 1904
+        },
+        {
+          "value": "40.71",
+          "unit": "%",
+          "start": 1909,
+          "end": 1915
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1838,
+      "end": 1931,
+      "text": "②航空航天工艺装备：2024年营收（2.27亿元，+81.37%）高速增长，主要系客户新增任务工装需求增加所致，营收占比44.65%，毛利率（40.71%,-1.35pcts）略有下滑。",
+      "quantities": [
+        {
+          "value": "2.27",
+          "unit": "亿元",
+          "start": 1856,
+          "end": 1862
+        },
+        {
+          "value": "+81.37",
+          "unit": "%",
+          "start": 1863,
+          "end": 1870
+        },
+        {
+          "value": "44.65",
+          "unit": "%",
+          "start": 1898,
+          "end": 1904
+        },
+        {
+          "value": "40.71",
+          "unit": "%",
+          "start": 1909,
+          "end": 1915
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1838,
+      "end": 1931,
+      "text": "②航空航天工艺装备：2024年营收（2.27亿元，+81.37%）高速增长，主要系客户新增任务工装需求增加所致，营收占比44.65%，毛利率（40.71%,-1.35pcts）略有下滑。",
+      "quantities": [
+        {
+          "value": "2.27",
+          "unit": "亿元",
+          "start": 1856,
+          "end": 1862
+        },
+        {
+          "value": "+81.37",
+          "unit": "%",
+          "start": 1863,
+          "end": 1870
+        },
+        {
+          "value": "44.65",
+          "unit": "%",
+          "start": 1898,
+          "end": 1904
+        },
+        {
+          "value": "40.71",
+          "unit": "%",
+          "start": 1909,
+          "end": 1915
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 2302,
+      "end": 2416,
+      "text": "③航空产品：2024年营收（0.83亿元，+84.81%）高速增长，营收占比16.39%，毛利率（25.87%，-16.85pcts）有所下降，主要系项目构成较上年有明显变化以及生产设备转固投入使用，折旧费用较上年同期增加所致。",
+      "quantities": [
+        {
+          "value": "0.83",
+          "unit": "亿元",
+          "start": 2316,
+          "end": 2322
+        },
+        {
+          "value": "+84.81",
+          "unit": "%",
+          "start": 2323,
+          "end": 2330
+        },
+        {
+          "value": "16.39",
+          "unit": "%",
+          "start": 2340,
+          "end": 2346
+        },
+        {
+          "value": "25.87",
+          "unit": "%",
+          "start": 2351,
+          "end": 2357
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 2302,
+      "end": 2416,
+      "text": "③航空产品：2024年营收（0.83亿元，+84.81%）高速增长，营收占比16.39%，毛利率（25.87%，-16.85pcts）有所下降，主要系项目构成较上年有明显变化以及生产设备转固投入使用，折旧费用较上年同期增加所致。",
+      "quantities": [
+        {
+          "value": "0.83",
+          "unit": "亿元",
+          "start": 2316,
+          "end": 2322
+        },
+        {
+          "value": "+84.81",
+          "unit": "%",
+          "start": 2323,
+          "end": 2330
+        },
+        {
+          "value": "16.39",
+          "unit": "%",
+          "start": 2340,
+          "end": 2346
+        },
+        {
+          "value": "25.87",
+          "unit": "%",
+          "start": 2351,
+          "end": 2357
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 2302,
+      "end": 2416,
+      "text": "③航空产品：2024年营收（0.83亿元，+84.81%）高速增长，营收占比16.39%，毛利率（25.87%，-16.85pcts）有所下降，主要系项目构成较上年有明显变化以及生产设备转固投入使用，折旧费用较上年同期增加所致。",
+      "quantities": [
+        {
+          "value": "0.83",
+          "unit": "亿元",
+          "start": 2316,
+          "end": 2322
+        },
+        {
+          "value": "+84.81",
+          "unit": "%",
+          "start": 2323,
+          "end": 2330
+        },
+        {
+          "value": "16.39",
+          "unit": "%",
+          "start": 2340,
+          "end": 2346
+        },
+        {
+          "value": "25.87",
+          "unit": "%",
+          "start": 2351,
+          "end": 2357
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 3110,
+      "end": 3144,
+      "text": "2024年，公司营收持续增长，针对公司未来的发展，我们有如下观点：\n",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "针对公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 3463,
+      "end": 3607,
+      "text": "基于以上观点，我们预计公司2025-2027年的营业收入分别为6.56亿元/8.18亿元/9.99亿元，归母净利润分别为1.17亿元/1.40亿元/1.70亿元，EPS分别为0.29元/0.34元/0.42元，维持“买入”评级，给予目标价24.65元，分别对应85倍/73倍/59倍PE。",
+      "quantities": [
+        {
+          "value": "6.56",
+          "unit": "亿元",
+          "start": 3494,
+          "end": 3500
+        },
+        {
+          "value": "8.18",
+          "unit": "亿元",
+          "start": 3501,
+          "end": 3507
+        },
+        {
+          "value": "9.99",
+          "unit": "亿元",
+          "start": 3508,
+          "end": 3514
+        },
+        {
+          "value": "1.17",
+          "unit": "亿元",
+          "start": 3523,
+          "end": 3529
+        },
+        {
+          "value": "1.40",
+          "unit": "亿元",
+          "start": 3530,
+          "end": 3536
+        },
+        {
+          "value": "1.70",
+          "unit": "亿元",
+          "start": 3537,
+          "end": 3543
+        },
+        {
+          "value": "0.29",
+          "unit": "元",
+          "start": 3550,
+          "end": 3555
+        },
+        {
+          "value": "0.34",
+          "unit": "元",
+          "start": 3556,
+          "end": 3561
+        },
+        {
+          "value": "0.42",
+          "unit": "元",
+          "start": 3562,
+          "end": 3567
+        },
+        {
+          "value": "24.65",
+          "unit": "元",
+          "start": 3582,
+          "end": 3588
+        },
+        {
+          "value": "85",
+          "unit": "倍",
+          "start": 3593,
+          "end": 3596
+        },
+        {
+          "value": "73",
+          "unit": "倍",
+          "start": 3597,
+          "end": 3600
+        },
+        {
+          "value": "59",
+          "unit": "倍",
+          "start": 3601,
+          "end": 3604
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 3463,
+      "end": 3607,
+      "text": "基于以上观点，我们预计公司2025-2027年的营业收入分别为6.56亿元/8.18亿元/9.99亿元，归母净利润分别为1.17亿元/1.40亿元/1.70亿元，EPS分别为0.29元/0.34元/0.42元，维持“买入”评级，给予目标价24.65元，分别对应85倍/73倍/59倍PE。",
+      "quantities": [
+        {
+          "value": "6.56",
+          "unit": "亿元",
+          "start": 3494,
+          "end": 3500
+        },
+        {
+          "value": "8.18",
+          "unit": "亿元",
+          "start": 3501,
+          "end": 3507
+        },
+        {
+          "value": "9.99",
+          "unit": "亿元",
+          "start": 3508,
+          "end": 3514
+        },
+        {
+          "value": "1.17",
+          "unit": "亿元",
+          "start": 3523,
+          "end": 3529
+        },
+        {
+          "value": "1.40",
+          "unit": "亿元",
+          "start": 3530,
+          "end": 3536
+        },
+        {
+          "value": "1.70",
+          "unit": "亿元",
+          "start": 3537,
+          "end": 3543
+        },
+        {
+          "value": "0.29",
+          "unit": "元",
+          "start": 3550,
+          "end": 3555
+        },
+        {
+          "value": "0.34",
+          "unit": "元",
+          "start": 3556,
+          "end": 3561
+        },
+        {
+          "value": "0.42",
+          "unit": "元",
+          "start": 3562,
+          "end": 3567
+        },
+        {
+          "value": "24.65",
+          "unit": "元",
+          "start": 3582,
+          "end": 3588
+        },
+        {
+          "value": "85",
+          "unit": "倍",
+          "start": 3593,
+          "end": 3596
+        },
+        {
+          "value": "73",
+          "unit": "倍",
+          "start": 3597,
+          "end": 3600
+        },
+        {
+          "value": "59",
+          "unit": "倍",
+          "start": 3601,
+          "end": 3604
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 3658,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 3658,
+    "processed_ranges": [
+      [
+        0,
+        3658
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 29,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 42.679451,
+  "source_content_sha256": "5eaf979c255b3cdc1954b8b3ad3afff7578a3cdb1dacf34bb535695e82e42e55"
+}

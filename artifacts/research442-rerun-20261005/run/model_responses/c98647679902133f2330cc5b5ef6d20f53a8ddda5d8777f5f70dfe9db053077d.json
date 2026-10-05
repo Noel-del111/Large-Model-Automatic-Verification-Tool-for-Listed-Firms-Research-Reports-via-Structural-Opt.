@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2）下调政策利率0.1pct，带动了5月20日公布5年期以上LPR同步下调10个基点，从3.6%降至3.3%，进一步降低购房者置业成本。\"}],\"reason\":\"10个基点等于0.10%，从3.6%降至3.3%为下调30个基点，与所述10个基点不符。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"值得注意的是，二线城市本月平均溢价率仍有12.1%，已经连续4个月超过20%。\"}],\"reason\":\"本月平均溢价率为12.1%，不可能同时满足连续4个月超过20%。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"百强房企4月全口径销售额同比-9.3%（前值：-11.1%），环比-11.8%；1-4月累计。\"}],\"reason\":\"写明“1-4月累计”但后面没有给出累计销售额或同比数值。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"5月7日国新办举办“一揽子金融政策支持稳市场稳预期”有关情况发布会。主要包括：1）降准 pct，提供长期流动性1万亿。\"}],\"reason\":\"“降准 pct”中缺少降准幅度的具体数值。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"一、二、三线城市土地成交建面同比增速为-29.2%、-\\n\\n【房企】7.4%、-12.7%；平均土地溢价率为13.1%、13.8%、2.8%，一、二线城市同比提升8.1、9.1pct，三线城市同比-0.4pct。\"}],\"reason\":\"小标题“【房企】”插入百分数中，导致“-7.4%”被割裂，数值格式损坏。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"未来一年（2025年5月-2026年4月）行业国内外债券到期规模为7772亿元，其中2025年6、2025年7月、2026年4月是到期小高峰，到期规模分别为1003、867、806亿元。\"}],\"reason\":\"日期“2025年6”缺少月份单位“月”，不符合日期书写格式。\"},{\"error_type\":\"模糊语言\",\"spans\":[{\"text\":\"3）预期，所以会调整相关措施去提升推进进度。\"}],\"reason\":\"未说明谁预期、何种预期以及调整什么措施，政策要点表达模糊。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:31:11.379639+00:00",
+    "request_sha256": "b1a3b71fae2017ab9785b6aa240bfd1e40a30d12d50530d5c8469a91c937968e",
+    "input_token_estimate": 25696,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.28784",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "e8206c921adc4bf196dd970e2a566e3d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 6220,
+    "output_tokens": 13654,
+    "usage_source": "provider",
+    "duration_seconds": 53.230434,
+    "cost_cny": "0.060836"
+  },
+  "cache_request": {
+    "key": "c98647679902133f2330cc5b5ef6d20f53a8ddda5d8777f5f70dfe9db053077d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b1a3b71fae2017ab9785b6aa240bfd1e40a30d12d50530d5c8469a91c937968e"
+  }
+}

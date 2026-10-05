@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000205",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "4月只有30天，日期“4月31日”不存在。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 113,
+          "end": 159,
+          "text": "4月31日，上海2024年住宅用地第一批次集中供应地块全部完成出让，总出让金额达253亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月31日，上海2024年住宅用地第一批次集中供应地块全部完成出让，总出让金额达253亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 113,
+          "end": 159,
+          "text": "4月31日，上海2024年住宅用地第一批次集中供应地块全部完成出让，总出让金额达253亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "14242fc2182b381b266f4b17",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "前文4月二手房成交约18000套，其中存量住宅不可能达16000万套，单位“万套”多余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 310,
+          "end": 339,
+          "text": "依据过往经验，推测其中的存量住宅成交套数为16000万套。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "依据过往经验，推测其中的存量住宅成交套数为16000万套。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 310,
+          "end": 339,
+          "text": "依据过往经验，推测其中的存量住宅成交套数为16000万套。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9f2d6492cccfa43ca4fb5bab",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "房地产销售周期通常称“去化周期”，“热化周期”不是规范术语。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 612,
+          "end": 653,
+          "text": "随着热化周期变长、学区热度降低以及新盘入市等多重因素影响，这类板块价格也开始松动。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "随着热化周期变长、学区热度降低以及新盘入市等多重因素影响，这类板块价格也开始松动。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 612,
+          "end": 653,
+          "text": "随着热化周期变长、学区热度降低以及新盘入市等多重因素影响，这类板块价格也开始松动。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "44756bb8a1e9530b1bd21d68",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          761
+        ]
+      ],
+      "estimated_input_tokens": 5356,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:05:30.267245+00:00",
+        "request_sha256": "d0872d7eebe2226832dcca3568977888d4ea2979d072b34caaa25b36bb678f73",
+        "input_token_estimate": 14895,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277039",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6bcf1a048125482fbf08bd21109dc192",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3522,
+        "output_tokens": 8900,
+        "usage_source": "provider",
+        "duration_seconds": 35.811363,
+        "cost_cny": "0.039122"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "4月31日，上海2024年住宅用地第一批次集中供应地块全部完成出让，总出让金额达253亿元。"
+          }
+        ],
+        "reason": "4月只有30天，日期“4月31日”不存在。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "依据过往经验，推测其中的存量住宅成交套数为16000万套。"
+          }
+        ],
+        "reason": "前文4月二手房成交约18000套，其中存量住宅不可能达16000万套，单位“万套”多余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "随着热化周期变长、学区热度降低以及新盘入市等多重因素影响，这类板块价格也开始松动。"
+          }
+        ],
+        "reason": "房地产销售周期通常称“去化周期”，“热化周期”不是规范术语。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 761,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 761,
+    "processed_ranges": [
+      [
+        0,
+        761
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 35.836378,
+  "source_content_sha256": "efbeaf3d6720587f601263034944ea26d27b2cba9d5fd05047a88c77b3a2f931"
+}

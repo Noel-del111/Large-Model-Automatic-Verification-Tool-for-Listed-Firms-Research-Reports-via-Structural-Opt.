@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"【事件】6月40日中国平安公告称，拟发行117.65亿港元H股可转债，用于补充集团资本需求，支持医疗和养老战略发展。\"}],\"reason\":\"6月没有40日，该公告日期本身不成立。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"本次可转债为零息债券，将于2030年到期。\"},{\"text\":\"①可转债本金总金额117.65亿港元，到期日为2030年6月，发行价为本金额100%，为高息债券。\"}],\"reason\":\"同一可转债前称零息债券，后称高息债券，二者互斥。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2024年7月公司已完成35万美分可转债发行，于2029年到期，利率为0.875%。\"}],\"reason\":\"美分为辅币单位，35万美分仅3500美元，不可能为可转债发行规模。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:28:46.612714+00:00",
+    "request_sha256": "686da9f916a43164043fee4a2cff3e6f5d784c7db86b45b27e35cc322416bf9d",
+    "input_token_estimate": 14801,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.276945",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "fc6687e0f0224a2188742e2b00118b9e",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3523,
+    "output_tokens": 7907,
+    "usage_source": "provider",
+    "duration_seconds": 31.536841,
+    "cost_cny": "0.035151"
+  },
+  "cache_request": {
+    "key": "aa6a7f7ed00f0fd83538608001a3d1ab32b45ad99039be411eeee4e8432b3019",
+    "purpose": "text_review.detect",
+    "messages_sha256": "686da9f916a43164043fee4a2cff3e6f5d784c7db86b45b27e35cc322416bf9d"
+  }
+}

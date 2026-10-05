@@ -1,0 +1,461 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000425",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“ABC组件量产转换效率提升至%”缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1029,
+          "end": 1095,
+          "text": "2024年公司ABC电池量产转换效率提升至27.3%以上，ABC组件量产转换效率提升至%，后续将通过满屏技术进一步提升至25%以上。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司ABC电池量产转换效率提升至27.3%以上，ABC组件量产转换效率提升至%，后续将通过满屏技术进一步提升至25%以上。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1029,
+          "end": 1095,
+          "text": "2024年公司ABC电池量产转换效率提升至27.3%以上，ABC组件量产转换效率提升至%，后续将通过满屏技术进一步提升至25%以上。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9b640f3b3be989e5ac98e678",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2024年全年营收11.55亿元，小于2025Q1营收41.36亿元，且按同比推算2024Q1营收约25亿元，与全年数据矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 122,
+          "end": 208,
+          "text": "公司2024年实现营收11.55亿元，同比-58.94%；实现归母净利润-53.19亿元，同比-802.92%；实现扣非归母净利润-55.53亿元，同比-1819.98%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 208,
+          "end": 290,
+          "text": "公司2025Q1实现营收41.36亿元，同比+64.53%；实现归母净利润-3.00亿元，同比-229.35%；实现扣非归母净利润4.66亿元，同比-38.56%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2024年实现营收11.55亿元，同比-58.94%；实现归母净利润-53.19亿元，同比-802.92%；实现扣非归母净利润-55.53亿元，同比-1819.98%。"
+        },
+        {
+          "text": "公司2025Q1实现营收41.36亿元，同比+64.53%；实现归母净利润-3.00亿元，同比-229.35%；实现扣非归母净利润4.66亿元，同比-38.56%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 122,
+          "end": 208,
+          "text": "公司2024年实现营收11.55亿元，同比-58.94%；实现归母净利润-53.19亿元，同比-802.92%；实现扣非归母净利润-55.53亿元，同比-1819.98%。"
+        },
+        {
+          "start": 208,
+          "end": 290,
+          "text": "公司2025Q1实现营收41.36亿元，同比+64.53%；实现归母净利润-3.00亿元，同比-229.35%；实现扣非归母净利润4.66亿元，同比-38.56%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f7f004a725dbc602d721c4a3",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027年为三年，但EPS列出四个数值，PE仅三个，数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1130,
+          "end": 1192,
+          "text": "预计公司2025-2027年EPS分别为0.17元、0.46元、0.92元、0.95元，对应PE分别约65倍、24倍、12倍"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司2025-2027年EPS分别为0.17元、0.46元、0.92元、0.95元，对应PE分别约65倍、24倍、12倍"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1130,
+          "end": 1192,
+          "text": "预计公司2025-2027年EPS分别为0.17元、0.46元、0.92元、0.95元，对应PE分别约65倍、24倍、12倍"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "03ff9a29859aab7194b60abc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同比正增长129.72%意味着上期现金流为正，与“转正”表示上期为负矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 374,
+          "end": 414,
+          "text": "公司经营活动现金流净额为7.16亿元，同比+129.72%，，同环比均实现转正。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司经营活动现金流净额为7.16亿元，同比+129.72%，，同环比均实现转正。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 374,
+          "end": 414,
+          "text": "公司经营活动现金流净额为7.16亿元，同比+129.72%，，同环比均实现转正。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "69c1a4ed4f6bf0ceb28d93ef",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1243
+        ]
+      ],
+      "estimated_input_tokens": 5722,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:47:48.584945+00:00",
+        "request_sha256": "5e592850095cc45831cf6e6ac5575bf2062e31a77f1cb3f7bb55350fa258aa2e",
+        "input_token_estimate": 15946,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27809",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f2fd7f0162a949ef9f10299e16810b67",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3765,
+        "output_tokens": 9682,
+        "usage_source": "provider",
+        "duration_seconds": 37.019765,
+        "cost_cny": "0.042493",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年公司ABC电池量产转换效率提升至27.3%以上，ABC组件量产转换效率提升至%，后续将通过满屏技术进一步提升至25%以上。"
+          }
+        ],
+        "reason": "“ABC组件量产转换效率提升至%”缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "公司2024年实现营收11.55亿元，同比-58.94%；实现归母净利润-53.19亿元，同比-802.92%；实现扣非归母净利润-55.53亿元，同比-1819.98%。"
+          },
+          {
+            "text": "公司2025Q1实现营收41.36亿元，同比+64.53%；实现归母净利润-3.00亿元，同比-229.35%；实现扣非归母净利润4.66亿元，同比-38.56%。"
+          }
+        ],
+        "reason": "2024年全年营收11.55亿元，小于2025Q1营收41.36亿元，且按同比推算2024Q1营收约25亿元，与全年数据矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "预计公司2025-2027年EPS分别为0.17元、0.46元、0.92元、0.95元，对应PE分别约65倍、24倍、12倍"
+          }
+        ],
+        "reason": "2025-2027年为三年，但EPS列出四个数值，PE仅三个，数量不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司经营活动现金流净额为7.16亿元，同比+129.72%，，同环比均实现转正。"
+          }
+        ],
+        "reason": "同比正增长129.72%意味着上期现金流为正，与“转正”表示上期为负矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 122,
+      "end": 151,
+      "text": "公司2024年实现营收11.55亿元，同比-58.94%；",
+      "quantities": [
+        {
+          "value": "11.55",
+          "unit": "亿元",
+          "start": 133,
+          "end": 140
+        },
+        {
+          "value": "-58.94",
+          "unit": "%",
+          "start": 143,
+          "end": 150
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 151,
+      "end": 178,
+      "text": "实现归母净利润-53.19亿元，同比-802.92%；",
+      "quantities": [
+        {
+          "value": "-53.19",
+          "unit": "亿元",
+          "start": 158,
+          "end": 166
+        },
+        {
+          "value": "-802.92",
+          "unit": "%",
+          "start": 169,
+          "end": 177
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 178,
+      "end": 208,
+      "text": "实现扣非归母净利润-55.53亿元，同比-1819.98%。",
+      "quantities": [
+        {
+          "value": "-55.53",
+          "unit": "亿元",
+          "start": 187,
+          "end": 195
+        },
+        {
+          "value": "-1819.98",
+          "unit": "%",
+          "start": 198,
+          "end": 207
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 208,
+      "end": 238,
+      "text": "公司2025Q1实现营收41.36亿元，同比+64.53%；",
+      "quantities": [
+        {
+          "value": "41.36",
+          "unit": "亿元",
+          "start": 220,
+          "end": 227
+        },
+        {
+          "value": "+64.53",
+          "unit": "%",
+          "start": 230,
+          "end": 237
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 238,
+      "end": 264,
+      "text": "实现归母净利润-3.00亿元，同比-229.35%；",
+      "quantities": [
+        {
+          "value": "-3.00",
+          "unit": "亿元",
+          "start": 245,
+          "end": 252
+        },
+        {
+          "value": "-229.35",
+          "unit": "%",
+          "start": 255,
+          "end": 263
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 264,
+      "end": 290,
+      "text": "实现扣非归母净利润4.66亿元，同比-38.56%。",
+      "quantities": [
+        {
+          "value": "4.66",
+          "unit": "亿元",
+          "start": 273,
+          "end": 279
+        },
+        {
+          "value": "-38.56",
+          "unit": "%",
+          "start": 282,
+          "end": 289
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 336,
+      "end": 374,
+      "text": "季度，公司销售毛利率为0.53%，环比提高13.46个百分点，盈利能力改善；",
+      "quantities": [
+        {
+          "value": "0.53",
+          "unit": "%",
+          "start": 347,
+          "end": 352
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1243,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1243,
+    "processed_ranges": [
+      [
+        0,
+        1243
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1243,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 7,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002247,
+  "source_content_sha256": "e4ce5595b03ffcaf0a63d4e206bcf5c85ca0d5e676c512ef638f6e482c6bb4c3"
+}

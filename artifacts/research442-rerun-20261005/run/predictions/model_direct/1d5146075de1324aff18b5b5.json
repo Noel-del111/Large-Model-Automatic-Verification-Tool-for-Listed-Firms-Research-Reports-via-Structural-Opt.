@@ -1,0 +1,411 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000377",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "“亿分”不是正确营收单位，应为“亿元”，单位量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 160,
+          "end": 213,
+          "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 160,
+          "end": 213,
+          "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8c8015454dadf0973c8e2a1f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“超 亿片”缺少具体销售数量，数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 160,
+          "end": 213,
+          "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 160,
+          "end": 213,
+          "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1790695cc06d664b0b6b4afc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "季度标识Q0不存在，合法季度应为Q1至Q4。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 213,
+          "end": 244,
+          "text": "2025年Q0实现营业收入1.35亿元，同比增长64.53%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年Q0实现营业收入1.35亿元，同比增长64.53%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 213,
+          "end": 244,
+          "text": "2025年Q0实现营业收入1.35亿元，同比增长64.53%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a7d1fe1254d0b0dc69b47649",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "预计年份“129年”不是合法年份，应为2025年等四位年份。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 697,
+          "end": 774,
+          "text": "我们预计公司129/2026/2027年分别实现收入6.53/7.84/9.42亿元，归母净利润分别为0.01/0.40/0.70亿元，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司129/2026/2027年分别实现收入6.53/7.84/9.42亿元，归母净利润分别为0.01/0.40/0.70亿元，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 697,
+          "end": 774,
+          "text": "我们预计公司129/2026/2027年分别实现收入6.53/7.84/9.42亿元，归母净利润分别为0.01/0.40/0.70亿元，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "966e14dff52a6d27090d653c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一关于芯中芯科技的描述连续重复出现，属于不必要的冗余表达。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "参投的深圳市芯中芯科技主要集中在家电、音频，面向智能物联网市场，提供基于Wi-Fi、音频DSP、Bluetooth、AIoT等技术的智能控制模块与解决方案"
+        },
+        {
+          "text": "参投的深圳市芯中芯科技主要集中在家电、音频，面向智能物联网市场，提供基于Wi-Fi、音频DSP、Bluetooth、AIoT等技术的智能控制模块与解决方案，产品广泛应用于智能家居、智能穿戴、智能健康等各类智能物联网相关的智能终端。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "91c3600896143246f97d3c7e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          823
+        ]
+      ],
+      "estimated_input_tokens": 5381,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:08:25.181240+00:00",
+        "request_sha256": "c417be33d09142456fa2fc17de0a5a050a47a77b2985dee0716d176e3918267f",
+        "input_token_estimate": 14977,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277121",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d753a54191cf4672ad84348b99100a88",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3511,
+        "output_tokens": 6334,
+        "usage_source": "provider",
+        "duration_seconds": 25.846481,
+        "cost_cny": "0.028847"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；"
+          }
+        ],
+        "reason": "“亿分”不是正确营收单位，应为“亿元”，单位量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；"
+          }
+        ],
+        "reason": "“超 亿片”缺少具体销售数量，数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年Q0实现营业收入1.35亿元，同比增长64.53%。"
+          }
+        ],
+        "reason": "季度标识Q0不存在，合法季度应为Q1至Q4。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "我们预计公司129/2026/2027年分别实现收入6.53/7.84/9.42亿元，归母净利润分别为0.01/0.40/0.70亿元，维持“买入”评级。"
+          }
+        ],
+        "reason": "预计年份“129年”不是合法年份，应为2025年等四位年份。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "参投的深圳市芯中芯科技主要集中在家电、音频，面向智能物联网市场，提供基于Wi-Fi、音频DSP、Bluetooth、AIoT等技术的智能控制模块与解决方案"
+          },
+          {
+            "text": "参投的深圳市芯中芯科技主要集中在家电、音频，面向智能物联网市场，提供基于Wi-Fi、音频DSP、Bluetooth、AIoT等技术的智能控制模块与解决方案，产品广泛应用于智能家居、智能穿戴、智能健康等各类智能物联网相关的智能终端。"
+          }
+        ],
+        "reason": "同一关于芯中芯科技的描述连续重复出现，属于不必要的冗余表达。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "参投的深圳市芯中芯科技主要集中在家电、音频，面向智能物联网市场，提供基于Wi-Fi、音频DSP、Bluetooth、AIoT等技术的智能控制模块与解决方案"
+          },
+          {
+            "text": "参投的深圳市芯中芯科技主要集中在家电、音频，面向智能物联网市场，提供基于Wi-Fi、音频DSP、Bluetooth、AIoT等技术的智能控制模块与解决方案，产品广泛应用于智能家居、智能穿戴、智能健康等各类智能物联网相关的智能终端。"
+          }
+        ],
+        "reason": "同一关于芯中芯科技的描述连续重复出现，属于不必要的冗余表达。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 160,
+      "end": 213,
+      "text": "2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；",
+      "quantities": [
+        {
+          "value": "25.98",
+          "unit": "%",
+          "start": 182,
+          "end": 188
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 213,
+      "end": 244,
+      "text": "2025年Q0实现营业收入1.35亿元，同比增长64.53%。",
+      "quantities": [
+        {
+          "value": "1.35",
+          "unit": "亿元",
+          "start": 226,
+          "end": 232
+        },
+        {
+          "value": "64.53",
+          "unit": "%",
+          "start": 237,
+          "end": 243
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 697,
+      "end": 774,
+      "text": "我们预计公司129/2026/2027年分别实现收入6.53/7.84/9.42亿元，归母净利润分别为0.01/0.40/0.70亿元，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "9.42",
+          "unit": "亿元",
+          "start": 733,
+          "end": 739
+        },
+        {
+          "value": "0.70",
+          "unit": "亿元",
+          "start": 758,
+          "end": 764
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 823,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 823,
+    "processed_ranges": [
+      [
+        0,
+        823
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.869442,
+  "source_content_sha256": "74c57a78b9deb689f6af2f5ac04386bbc0e385a79a4665432080a5f38f666205"
+}

@@ -1,0 +1,634 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000389",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "股票代码字段括号内为空，缺少公司证券代码。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 41,
+          "end": 47,
+          "text": "中炬高新()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中炬高新()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 41,
+          "end": 47,
+          "text": "中炬高新()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "edfac27160bfaa4fec1ff436",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“债权发行”应为“债券发行”，债权与债券含义不同。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 290,
+          "end": 338,
+          "text": "公司2025年目标完成至少1起债权发行，补短板或空白，提升发展效率；实现不低于同行的营收增速等。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2025年目标完成至少1起债权发行，补短板或空白，提升发展效率；实现不低于同行的营收增速等。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 290,
+          "end": 338,
+          "text": "公司2025年目标完成至少1起债权发行，补短板或空白，提升发展效率；实现不低于同行的营收增速等。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f06f1c1694669cfc407e28ca",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句“目前外部窜货和电商冲击均在减弱”连续重复，未提供新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 710,
+          "end": 742,
+          "text": "目前外部窜货和电商冲击均在减弱，目前外部窜货和电商冲击均在减弱，"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前外部窜货和电商冲击均在减弱，目前外部窜货和电商冲击均在减弱，"
+        }
+      ],
+      "spans": [
+        {
+          "start": 710,
+          "end": 742,
+          "text": "目前外部窜货和电商冲击均在减弱，目前外部窜货和电商冲击均在减弱，"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ceae8a27a49fd6f627c068c8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“三价管理”括号内“出厂价、、零售价”中间为空，缺少一个价格类别名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1024,
+          "end": 1096,
+          "text": "公司正在做三价管理（出厂价、、零售价），抓住主要产品，盯住重点场所及重点客户，加大费用投入过程管理，规范三价标准，为后续建立错位竞争打下基础。。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司正在做三价管理（出厂价、、零售价），抓住主要产品，盯住重点场所及重点客户，加大费用投入过程管理，规范三价标准，为后续建立错位竞争打下基础。。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1024,
+          "end": 1096,
+          "text": "公司正在做三价管理（出厂价、、零售价），抓住主要产品，盯住重点场所及重点客户，加大费用投入过程管理，规范三价标准，为后续建立错位竞争打下基础。。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b1211d4ee2c9afd64f902937",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025年预测净利润低于2024年，当前PE18倍下对应2025年PE应高于18倍，与17.4倍矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1399,
+          "end": 1449,
+          "text": "当前股价对应PE分别为17.4/16.1/14.9倍，公司当前PE18倍，维持公司“强烈推荐”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "当前股价对应PE分别为17.4/16.1/14.9倍，公司当前PE18倍，维持公司“强烈推荐”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1399,
+          "end": 1449,
+          "text": "当前股价对应PE分别为17.4/16.1/14.9倍，公司当前PE18倍，维持公司“强烈推荐”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2ecff86eb3e76ce4dae5231d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1503
+        ]
+      ],
+      "estimated_input_tokens": 6002,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:17:15.232323+00:00",
+        "request_sha256": "19dcee4b0f6f5b9935f8bc774587427e6dd1f05107afe82be5d7a8f901a8f746",
+        "input_token_estimate": 16722,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278866",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "24998c00565e47c4a729ea477d8c6b5d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3960,
+        "output_tokens": 10838,
+        "usage_source": "provider",
+        "duration_seconds": 44.581684,
+        "cost_cny": "0.047312",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "中炬高新()"
+          }
+        ],
+        "reason": "股票代码字段括号内为空，缺少公司证券代码。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司2025年目标完成至少1起债权发行，补短板或空白，提升发展效率；实现不低于同行的营收增速等。"
+          }
+        ],
+        "reason": "“债权发行”应为“债券发行”，债权与债券含义不同。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "目前外部窜货和电商冲击均在减弱，目前外部窜货和电商冲击均在减弱，"
+          }
+        ],
+        "reason": "同一句“目前外部窜货和电商冲击均在减弱”连续重复，未提供新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "公司正在做三价管理（出厂价、、零售价），抓住主要产品，盯住重点场所及重点客户，加大费用投入过程管理，规范三价标准，为后续建立错位竞争打下基础。。"
+          }
+        ],
+        "reason": "“三价管理”括号内“出厂价、、零售价”中间为空，缺少一个价格类别名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "当前股价对应PE分别为17.4/16.1/14.9倍，公司当前PE18倍，维持公司“强烈推荐”评级。"
+          }
+        ],
+        "reason": "2025年预测净利润低于2024年，当前PE18倍下对应2025年PE应高于18倍，与17.4倍矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 67,
+      "end": 98,
+      "text": "公司公布2024年年报，实现营收55.19亿元/+7.39%；",
+      "quantities": [
+        {
+          "value": "55.19",
+          "unit": "亿元",
+          "start": 83,
+          "end": 90
+        },
+        {
+          "value": "+7.39",
+          "unit": "%",
+          "start": 91,
+          "end": 97
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 98,
+      "end": 118,
+      "text": "归母净利润8.93亿元/-47.37%。",
+      "quantities": [
+        {
+          "value": "8.93",
+          "unit": "亿元",
+          "start": 103,
+          "end": 109
+        },
+        {
+          "value": "-47.37",
+          "unit": "%",
+          "start": 110,
+          "end": 117
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 118,
+      "end": 142,
+      "text": "公司毛利率39.78%，同比提高7.07pct。",
+      "quantities": [
+        {
+          "value": "39.78",
+          "unit": "%",
+          "start": 123,
+          "end": 129
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 190,
+      "end": 236,
+      "text": "净利率17.38%，同升-16.42pct（净利润下降2023年转回计提预计负债高基数影响。",
+      "quantities": [
+        {
+          "value": "17.38",
+          "unit": "%",
+          "start": 193,
+          "end": 199
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 190,
+      "end": 236,
+      "text": "净利率17.38%，同升-16.42pct（净利润下降2023年转回计提预计负债高基数影响。",
+      "quantities": [
+        {
+          "value": "17.38",
+          "unit": "%",
+          "start": 193,
+          "end": 199
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 238,
+      "end": 290,
+      "text": "扣非后净利润为6.71亿元/+27.97%，主要受益于原材料成本下降和精细化管理带来的降本增效成果显著。",
+      "quantities": [
+        {
+          "value": "6.71",
+          "unit": "亿元",
+          "start": 245,
+          "end": 251
+        },
+        {
+          "value": "+27.97",
+          "unit": "%",
+          "start": 252,
+          "end": 259
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 340,
+      "end": 368,
+      "text": "公司2025Q1实现营收11.02亿元/-25.81%；",
+      "quantities": [
+        {
+          "value": "11.02",
+          "unit": "亿元",
+          "start": 352,
+          "end": 359
+        },
+        {
+          "value": "-25.81",
+          "unit": "%",
+          "start": 360,
+          "end": 367
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 368,
+      "end": 388,
+      "text": "归母净利润1.81亿元/-24.24%。",
+      "quantities": [
+        {
+          "value": "1.81",
+          "unit": "亿元",
+          "start": 373,
+          "end": 379
+        },
+        {
+          "value": "-24.24",
+          "unit": "%",
+          "start": 380,
+          "end": 387
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 388,
+      "end": 412,
+      "text": "公司毛利率38.73%，同比提高1.75pct。",
+      "quantities": [
+        {
+          "value": "38.73",
+          "unit": "%",
+          "start": 393,
+          "end": 399
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 460,
+      "end": 481,
+      "text": "净利率16.46%，同升-1.17pct。",
+      "quantities": [
+        {
+          "value": "16.46",
+          "unit": "%",
+          "start": 463,
+          "end": 469
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1290,
+      "end": 1399,
+      "text": "我们预计公司25/26/27年实现营收分别为56.67/59.93/63.09亿元，同比增速2.7%/5.8%/5.3%，净利润分别为8.64/9.34/10.04亿元，对应EPS分别为1.10/1.19/1.28元。",
+      "quantities": [
+        {
+          "value": "63.09",
+          "unit": "亿元",
+          "start": 1324,
+          "end": 1331
+        },
+        {
+          "value": "2.7",
+          "unit": "%",
+          "start": 1336,
+          "end": 1340
+        },
+        {
+          "value": "5.8",
+          "unit": "%",
+          "start": 1341,
+          "end": 1345
+        },
+        {
+          "value": "5.3",
+          "unit": "%",
+          "start": 1346,
+          "end": 1350
+        },
+        {
+          "value": "10.04",
+          "unit": "亿元",
+          "start": 1367,
+          "end": 1374
+        },
+        {
+          "value": "1.28",
+          "unit": "元",
+          "start": 1393,
+          "end": 1398
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1290,
+      "end": 1399,
+      "text": "我们预计公司25/26/27年实现营收分别为56.67/59.93/63.09亿元，同比增速2.7%/5.8%/5.3%，净利润分别为8.64/9.34/10.04亿元，对应EPS分别为1.10/1.19/1.28元。",
+      "quantities": [
+        {
+          "value": "63.09",
+          "unit": "亿元",
+          "start": 1324,
+          "end": 1331
+        },
+        {
+          "value": "2.7",
+          "unit": "%",
+          "start": 1336,
+          "end": 1340
+        },
+        {
+          "value": "5.8",
+          "unit": "%",
+          "start": 1341,
+          "end": 1345
+        },
+        {
+          "value": "5.3",
+          "unit": "%",
+          "start": 1346,
+          "end": 1350
+        },
+        {
+          "value": "10.04",
+          "unit": "亿元",
+          "start": 1367,
+          "end": 1374
+        },
+        {
+          "value": "1.28",
+          "unit": "元",
+          "start": 1393,
+          "end": 1398
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1503,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1503,
+    "processed_ranges": [
+      [
+        0,
+        1503
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1503,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00226,
+  "source_content_sha256": "b0eb6e06ba2fa39eee743f21b3f6608a4c6873a32baa1e0b6aee25aedb82c65d"
+}

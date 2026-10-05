@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000474",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "f145f6a6c66dd3669e9b936b",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 860,
+          "end": 1040,
+          "text": "\n\n盈利预测\n\n预测公司2027-2025年收入分别为5.56、8.06、12.34亿元，EPS分别为-2.25、-1.42、0.09元，当前股价对应PE分别为-42、-67、1016倍，公司是中国境内极少数实现千兆以太网物理层芯片以及2.5G以太网物理层芯片大规模出货的企业，积极研发投入拓展产品线，并积极布局机器人应用领域，首次覆盖，给予“增持”投资评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1090,
+    "total_chars": 1090,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.00111,
+  "source_content_sha256": "88e822322cde9d0cf567575e72dfc967ce1a90a2ecf2689588d9f71746e71c0e"
+}

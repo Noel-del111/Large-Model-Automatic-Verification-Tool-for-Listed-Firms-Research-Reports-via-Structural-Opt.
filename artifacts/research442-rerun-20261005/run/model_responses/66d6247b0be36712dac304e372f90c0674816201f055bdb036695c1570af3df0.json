@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"我们认为互联互通十周年有望迎来港股政策红利期，1023年7月活跃资本市场政策部署强调巩固香港金融中心地位，2024年10月香港成立促进流动性专责小组，2024年4月证监会开展5项对港合作（见附表1、2及附图1）。\"\n        }\n      ],\n      \"reason\": \"年份“1023年7月”不成立，应为2023年7月。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"我们测算2023年港股通股票分红总额1.7万亿港元，港股通投资者赚取约1500亿港元，20%股息率对应约300亿的股息税，下降10%股息税预计为港股通个人和基金投资者免税约150亿，占当年财政税收不足0.1%（见附表5）。\"\n        }\n      ],\n      \"reason\": \"“20%股息率”表述错误，此处对应的是股息税率而非股息率。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"2023年港股通持股市值占港股通股票市值约10%，假设股息税优化政策带动港股通持股占比提升至15%/20%/30%，对应南向ADT增幅50%-250%，费率不变下对应总营收增幅1%-4%，对应净利润增幅1%-6%。\"\n        }\n      ],\n      \"reason\": \"持股占比从10%提升至15%/20%/30%，对应增幅应为50%/100%/200%，区间为50%-200%，原文50%-250%计算有误。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"2024年4月港股现货ADT1155亿港元，同比+6%，环比+4%，4月期货/期权ADV同比+18%/+17%。\"\n        },\n        {\n          \"text\": \"4.22-5.10近三周现货ADT分别达1255/1315/1363亿港元，较2024Q1提升分别+22%/+28%/+32%，4月期货/期权ADV同比+18%/+17%，LME ADV同比+44%，北向/南向ADT同比基本持平/+12%。\"\n        }\n      ],\n      \"reason\": \"同一段内“4月期货/期权ADV同比+18%/+17%”信息重复出现，无新增含义。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:52:21.650905+00:00",
+    "request_sha256": "ee6f9ce3365133374ed4a9990f8f3f133be21335677a3cddd6159ba68ca3ce77",
+    "input_token_estimate": 16878,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279022",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "dea5ef97cc0b40a5b8f76d05b4a741f1",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3975,
+    "output_tokens": 14155,
+    "usage_source": "provider",
+    "duration_seconds": 54.464546,
+    "cost_cny": "0.060595"
+  },
+  "cache_request": {
+    "key": "66d6247b0be36712dac304e372f90c0674816201f055bdb036695c1570af3df0",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ee6f9ce3365133374ed4a9990f8f3f133be21335677a3cddd6159ba68ca3ce77"
+  }
+}

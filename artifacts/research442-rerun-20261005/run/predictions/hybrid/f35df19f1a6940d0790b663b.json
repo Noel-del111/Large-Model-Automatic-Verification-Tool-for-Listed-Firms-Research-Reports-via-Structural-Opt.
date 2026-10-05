@@ -1,0 +1,597 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000458",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "归母净利润金额单位写成“毫秒”，毫秒是时间单位，不能用于表示货币金额。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 361,
+          "end": 435,
+          "text": "2025年一季度公司实现营收2.30亿（+3.6%），归母净利润0.58毫秒（+5.20%），随着渠道库存调整趋于尾声，业绩表现预计将逐步企稳回升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年一季度公司实现营收2.30亿（+3.6%），归母净利润0.58毫秒（+5.20%），随着渠道库存调整趋于尾声，业绩表现预计将逐步企稳回升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 361,
+          "end": 435,
+          "text": "2025年一季度公司实现营收2.30亿（+3.6%），归母净利润0.58毫秒（+5.20%），随着渠道库存调整趋于尾声，业绩表现预计将逐步企稳回升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5ecea9db9dc40cf259690c84",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-27年为三年，却列出四个归母净利润数值，与年份数及三个增长率、三个PE不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 904,
+          "end": 1045,
+          "text": "投资建议：考虑集采降价影响，下调2025-26年盈利预测，新增2027年盈利预测，预计2025-27年归母净利润为2.22/2.73/3.31/2.69亿（2025-26年原为2.99/3.56亿），同比增长77.5%/23.1%/21.2%，当前股价对应PE为30/24/20倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：考虑集采降价影响，下调2025-26年盈利预测，新增2027年盈利预测，预计2025-27年归母净利润为2.22/2.73/3.31/2.69亿（2025-26年原为2.99/3.56亿），同比增长77.5%/23.1%/21.2%，当前股价对应PE为30/24/20倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 904,
+          "end": 1045,
+          "text": "投资建议：考虑集采降价影响，下调2025-26年盈利预测，新增2027年盈利预测，预计2025-27年归母净利润为2.22/2.73/3.31/2.69亿（2025-26年原为2.99/3.56亿），同比增长77.5%/23.1%/21.2%，当前股价对应PE为30/24/20倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cc3a104ede10bb512f180d38",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一“集采风险正逐步出清，维持‘优于大市’评级”连续重复，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1103,
+          "end": 1145,
+          "text": "集采风险正逐步出清，维持“优于大市”评级。集采风险正逐步出清，维持“优于大市”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "集采风险正逐步出清，维持“优于大市”评级。集采风险正逐步出清，维持“优于大市”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1103,
+          "end": 1145,
+          "text": "集采风险正逐步出清，维持“优于大市”评级。集采风险正逐步出清，维持“优于大市”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d5bf75735194f8a174b1d018",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1181
+        ]
+      ],
+      "estimated_input_tokens": 5654,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:15:11.934134+00:00",
+        "request_sha256": "acb29637b49992c8eefd0dd7cfbcc3cbb4e2b5fa72d6065e1420a47c41024e2f",
+        "input_token_estimate": 15758,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277902",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "15dfbed5752e4d3c83f8306bb1063faf",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3800,
+        "output_tokens": 10154,
+        "usage_source": "provider",
+        "duration_seconds": 38.084812,
+        "cost_cny": "0.044416",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2025年一季度公司实现营收2.30亿（+3.6%），归母净利润0.58毫秒（+5.20%），随着渠道库存调整趋于尾声，业绩表现预计将逐步企稳回升。"
+          }
+        ],
+        "reason": "归母净利润金额单位写成“毫秒”，毫秒是时间单位，不能用于表示货币金额。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "投资建议：考虑集采降价影响，下调2025-26年盈利预测，新增2027年盈利预测，预计2025-27年归母净利润为2.22/2.73/3.31/2.69亿（2025-26年原为2.99/3.56亿），同比增长77.5%/23.1%/21.2%，当前股价对应PE为30/24/20倍。"
+          }
+        ],
+        "reason": "2025-27年为三年，却列出四个归母净利润数值，与年份数及三个增长率、三个PE不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "集采风险正逐步出清，维持“优于大市”评级。集采风险正逐步出清，维持“优于大市”评级。"
+          }
+        ],
+        "reason": "同一“集采风险正逐步出清，维持‘优于大市’评级”连续重复，未增加新信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 74,
+      "end": 139,
+      "text": "2024年公司实现营收8.06亿（-33.3%），归母净利润1.25亿（-55.0%），扣非归母净利润0.95亿（-62.8%）。",
+      "quantities": [
+        {
+          "value": "-33.3",
+          "unit": "%",
+          "start": 91,
+          "end": 97
+        },
+        {
+          "value": "-55.0",
+          "unit": "%",
+          "start": 110,
+          "end": 116
+        },
+        {
+          "value": "-62.8",
+          "unit": "%",
+          "start": 131,
+          "end": 137
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 74,
+      "end": 139,
+      "text": "2024年公司实现营收8.06亿（-33.3%），归母净利润1.25亿（-55.0%），扣非归母净利润0.95亿（-62.8%）。",
+      "quantities": [
+        {
+          "value": "-33.3",
+          "unit": "%",
+          "start": 91,
+          "end": 97
+        },
+        {
+          "value": "-55.0",
+          "unit": "%",
+          "start": 110,
+          "end": 116
+        },
+        {
+          "value": "-62.8",
+          "unit": "%",
+          "start": 131,
+          "end": 137
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 74,
+      "end": 139,
+      "text": "2024年公司实现营收8.06亿（-33.3%），归母净利润1.25亿（-55.0%），扣非归母净利润0.95亿（-62.8%）。",
+      "quantities": [
+        {
+          "value": "-33.3",
+          "unit": "%",
+          "start": 91,
+          "end": 97
+        },
+        {
+          "value": "-55.0",
+          "unit": "%",
+          "start": 110,
+          "end": 116
+        },
+        {
+          "value": "-62.8",
+          "unit": "%",
+          "start": 131,
+          "end": 137
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 139,
+      "end": 234,
+      "text": "单四季度实现营收2.98亿（-28.5%），归母净利润0.64亿（-34.3%），2024年5月，人工关节国采接续采购项目于天津开标，公司旗下髋关节的三个产品系统以及全膝关节系统均成功中标。",
+      "quantities": [
+        {
+          "value": "-28.5",
+          "unit": "%",
+          "start": 153,
+          "end": 159
+        },
+        {
+          "value": "-34.3",
+          "unit": "%",
+          "start": 172,
+          "end": 178
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 139,
+      "end": 234,
+      "text": "单四季度实现营收2.98亿（-28.5%），归母净利润0.64亿（-34.3%），2024年5月，人工关节国采接续采购项目于天津开标，公司旗下髋关节的三个产品系统以及全膝关节系统均成功中标。",
+      "quantities": [
+        {
+          "value": "-28.5",
+          "unit": "%",
+          "start": 153,
+          "end": 159
+        },
+        {
+          "value": "-34.3",
+          "unit": "%",
+          "start": 172,
+          "end": 178
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 299,
+      "end": 361,
+      "text": "另一方面，2024年境外收入达3.53亿（+78.31%），占整体营收比例提升至43.8%，已成为支撑公司发展的重要驱动力。",
+      "quantities": [
+        {
+          "value": "+78.31",
+          "unit": "%",
+          "start": 320,
+          "end": 327
+        },
+        {
+          "value": "43.8",
+          "unit": "%",
+          "start": 339,
+          "end": 344
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "已成为支撑公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 361,
+      "end": 435,
+      "text": "2025年一季度公司实现营收2.30亿（+3.6%），归母净利润0.58毫秒（+5.20%），随着渠道库存调整趋于尾声，业绩表现预计将逐步企稳回升。",
+      "quantities": [
+        {
+          "value": "+3.6",
+          "unit": "%",
+          "start": 381,
+          "end": 386
+        },
+        {
+          "value": "+5.20",
+          "unit": "%",
+          "start": 400,
+          "end": 406
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 361,
+      "end": 435,
+      "text": "2025年一季度公司实现营收2.30亿（+3.6%），归母净利润0.58毫秒（+5.20%），随着渠道库存调整趋于尾声，业绩表现预计将逐步企稳回升。",
+      "quantities": [
+        {
+          "value": "+3.6",
+          "unit": "%",
+          "start": 381,
+          "end": 386
+        },
+        {
+          "value": "+5.20",
+          "unit": "%",
+          "start": 400,
+          "end": 406
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 452,
+      "end": 477,
+      "text": "2024年公司毛利率为66.6%（-5.9pp）。",
+      "quantities": [
+        {
+          "value": "66.6",
+          "unit": "%",
+          "start": 463,
+          "end": 468
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 574,
+      "end": 596,
+      "text": "公司净利率下降至15.5%（-7.5pp）。",
+      "quantities": [
+        {
+          "value": "15.5",
+          "unit": "%",
+          "start": 582,
+          "end": 587
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 596,
+      "end": 641,
+      "text": "2025年一季度毛利率环比回升至66.7%，净利率回升至25.2%，预计集采影响正在出清。",
+      "quantities": [
+        {
+          "value": "66.7",
+          "unit": "%",
+          "start": 612,
+          "end": 617
+        },
+        {
+          "value": "25.2",
+          "unit": "%",
+          "start": 624,
+          "end": 629
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 596,
+      "end": 641,
+      "text": "2025年一季度毛利率环比回升至66.7%，净利率回升至25.2%，预计集采影响正在出清。",
+      "quantities": [
+        {
+          "value": "66.7",
+          "unit": "%",
+          "start": 612,
+          "end": 617
+        },
+        {
+          "value": "25.2",
+          "unit": "%",
+          "start": 624,
+          "end": 629
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 904,
+      "end": 1045,
+      "text": "投资建议：考虑集采降价影响，下调2025-26年盈利预测，新增2027年盈利预测，预计2025-27年归母净利润为2.22/2.73/3.31/2.69亿（2025-26年原为2.99/3.56亿），同比增长77.5%/23.1%/21.2%，当前股价对应PE为30/24/20倍。",
+      "quantities": [
+        {
+          "value": "77.5",
+          "unit": "%",
+          "start": 1008,
+          "end": 1013
+        },
+        {
+          "value": "23.1",
+          "unit": "%",
+          "start": 1014,
+          "end": 1019
+        },
+        {
+          "value": "21.2",
+          "unit": "%",
+          "start": 1020,
+          "end": 1025
+        },
+        {
+          "value": "20",
+          "unit": "倍",
+          "start": 1041,
+          "end": 1044
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1181,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1181,
+    "processed_ranges": [
+      [
+        0,
+        1181
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1181,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 13,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002209,
+  "source_content_sha256": "7d67655c079cdc2493a902708e4ada0723eb23b148e0d64660fe581f38f3fd43"
+}

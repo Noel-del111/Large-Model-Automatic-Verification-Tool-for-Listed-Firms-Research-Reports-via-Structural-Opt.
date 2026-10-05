@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。\"}],\"reason\":\"日期区间写成5月5日-1日，起点晚于终点，时间关系冲突。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。\"}],\"reason\":\"“流动量约人次”处缺少具体数值，只有单位人次。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"同时随着离岸人民币兑日元汇率的持续增长，去哪儿数据显示假期飞往日本的机票预订量较20019年增长六成以上。\"}],\"reason\":\"“20019年”年份不成立，应为2019年。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"我们分析国际航班运力的恢复（从去年五一恢复至3-4提升至今年7-8成）、供给丰富与价格回落（假期广之旅出境游产品数量较去年同比猛增150%，产品价格同比下降10%-20%）、多国免签利好、请三休九的拼假模式（根据广之旅快讯，选择节前出发人数与正日出发人数比例为3:1），均为出境人次恢复提速提供基础。\"}],\"reason\":\"“从去年五一恢复至3-4”中3-4后缺少单位“成”，与后文7-8成不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:25:15.758274+00:00",
+    "request_sha256": "182a3ccd3d8638e0c7f90336f840a6b46fcf5a7d86902322c4c2abd8e4962dfe",
+    "input_token_estimate": 16783,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278927",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "a03ee750ba8f46eea18e0d4cc2bc020e",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3953,
+    "output_tokens": 8160,
+    "usage_source": "provider",
+    "duration_seconds": 32.736659,
+    "cost_cny": "0.036593"
+  },
+  "cache_request": {
+    "key": "44803ac80aea66d7fec5c2c4f60af3d6a5afababcf36f6dbf530c97d24547aa2",
+    "purpose": "text_review.detect",
+    "messages_sha256": "182a3ccd3d8638e0c7f90336f840a6b46fcf5a7d86902322c4c2abd8e4962dfe"
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000691",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "同一近两周区间一处写5/29-5/16，起点晚于终点，与后文5/16-5/29顺序矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 45,
+          "end": 74,
+          "text": "申万通信板块近2周（5/29-5/16）累计上涨0.89%"
+        },
+        {
+          "kind": "source_text",
+          "start": 216,
+          "end": 248,
+          "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "申万通信板块近2周（5/29-5/16）累计上涨0.89%"
+        },
+        {
+          "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨"
+        }
+      ],
+      "spans": [
+        {
+          "start": 45,
+          "end": 74,
+          "text": "申万通信板块近2周（5/29-5/16）累计上涨0.89%"
+        },
+        {
+          "start": 216,
+          "end": 248,
+          "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0376147ac86cf9dcf128e95a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“位列位”缺少具体名次，未给出排名数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 93,
+          "end": 110,
+          "text": "涨幅在31个申万一级行业中位列位；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "涨幅在31个申万一级行业中位列位；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 93,
+          "end": 110,
+          "text": "涨幅在31个申万一级行业中位列位；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4d661e8e5335feda598c6a18",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "称6个三级子板块整体上涨，但列表中SW通信工程及服务(-0.55%)和SW通信应用增值服务(-1.06%)为下跌。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 216,
+          "end": 369,
+          "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨，涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨，涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 216,
+          "end": 369,
+          "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨，涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "80ba899e3b2786324e3182b6",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "从高到低排列，但+4.17%与+2.17%之间用“＜”，与高到低排序矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 249,
+          "end": 369,
+          "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 249,
+          "end": 369,
+          "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "386bdecf7f8e3c87b5ceedfb",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "派息率是比例指标，应使用百分比表示，此处单位写为“元”错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 527,
+          "end": 549,
+          "text": "中国移动：公司2024年全年派息率为73元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中国移动：公司2024年全年派息率为73元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 527,
+          "end": 549,
+          "text": "中国移动：公司2024年全年派息率为73元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "44a6c89e0767d5f1c8bdfae3",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          903
+        ]
+      ],
+      "estimated_input_tokens": 5462,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:10:55.139425+00:00",
+        "request_sha256": "ad2b207910dbd4e73c3019e3196ec8862db130695717983333be7e629adf3614",
+        "input_token_estimate": 15197,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277341",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6c8e1f24ef214e5cb75922bae5dff21f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3590,
+        "output_tokens": 8187,
+        "usage_source": "provider",
+        "duration_seconds": 33.833289,
+        "cost_cny": "0.036338",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "申万通信板块近2周（5/29-5/16）累计上涨0.89%"
+          },
+          {
+            "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨"
+          }
+        ],
+        "reason": "同一近两周区间一处写5/29-5/16，起点晚于终点，与后文5/16-5/29顺序矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "涨幅在31个申万一级行业中位列位；"
+          }
+        ],
+        "reason": "“位列位”缺少具体名次，未给出排名数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨，涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+          }
+        ],
+        "reason": "称6个三级子板块整体上涨，但列表中SW通信工程及服务(-0.55%)和SW通信应用增值服务(-1.06%)为下跌。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。"
+          }
+        ],
+        "reason": "从高到低排列，但+4.17%与+2.17%之间用“＜”，与高到低排序矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "中国移动：公司2024年全年派息率为73元。"
+          }
+        ],
+        "reason": "派息率是比例指标，应使用百分比表示，此处单位写为“元”错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 903,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 903,
+    "processed_ranges": [
+      [
+        0,
+        903
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 903,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001336,
+  "source_content_sha256": "590b6a6fd2a6ade3879f550277dc8eacd0f902de02468403b6f61940c05258b8"
+}

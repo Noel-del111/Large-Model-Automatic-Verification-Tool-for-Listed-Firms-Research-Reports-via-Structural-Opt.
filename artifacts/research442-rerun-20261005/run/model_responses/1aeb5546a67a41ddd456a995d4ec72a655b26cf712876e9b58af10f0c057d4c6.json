@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"根据住建部数据，2023-2021年我国工程造价咨询企业业务收入增速分别为14.00%、0.17%、-2.01%；\"}], \"reason\": \"时间范围写作“2023-2021年”，起点晚于终点，时间区间本身不成立。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2024年末在手订单余额为28.58亿分（+2.30%）\"}], \"reason\": \"金额单位应为“亿元”，原文写成“亿分”，量纲错误。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"2025年5月，公司全资子公司北京青矩工程管理技术创新投资有限公司与北京求实工程管理有限公司（标的公司）股东高其琳就以现金方式收购其持有的标的公司45.12%股份事宜达成初步意向并签署《》，预计转让对价为人民币2250万元。\"}], \"reason\": \"签署文件名称在书名号内为空，非数值属性值缺失。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"标的公司主要为鸟巢、水立方等商业综合体、城市地铁线路等代表性建设项目提供以造价咨询为主的工程咨询服务\"}], \"reason\": \"鸟巢、水立方为体育场馆，不属于商业综合体，术语归类不当。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:00:46.987685+00:00",
+    "request_sha256": "8f697e5c01d5869c97830106356dae9aee019be4431a8cf2a0686f4686bd88fb",
+    "input_token_estimate": 15153,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277297",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d6ef929b9d5f4931a61e24ce0c7d5944",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3587,
+    "output_tokens": 7620,
+    "usage_source": "provider",
+    "duration_seconds": 32.160137,
+    "cost_cny": "0.034067"
+  },
+  "cache_request": {
+    "key": "1aeb5546a67a41ddd456a995d4ec72a655b26cf712876e9b58af10f0c057d4c6",
+    "purpose": "text_review.detect",
+    "messages_sha256": "8f697e5c01d5869c97830106356dae9aee019be4431a8cf2a0686f4686bd88fb"
+  }
+}

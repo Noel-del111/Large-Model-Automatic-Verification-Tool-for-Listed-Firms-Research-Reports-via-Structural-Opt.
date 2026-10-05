@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000456",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "769e62635c2222624c834d0b",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 674,
+          "end": 725,
+          "text": "2028-2023年中国液冷服务器市场年复合增长率将达45.8%，2028年市场规模将达102亿美元。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1101,
+    "total_chars": 1101,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001277,
+  "source_content_sha256": "08369ba6bf98d0c1552cc48db2338b1edc909748bb797f8ac74870f394a7742a"
+}

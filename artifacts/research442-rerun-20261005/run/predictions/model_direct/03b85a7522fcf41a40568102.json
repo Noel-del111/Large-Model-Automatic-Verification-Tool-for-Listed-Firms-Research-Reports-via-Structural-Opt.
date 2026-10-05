@@ -1,0 +1,480 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000213",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份出现13月，不符合公历月份取值范围。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 884,
+          "end": 956,
+          "text": "2023年医疗机构诊疗人次持续恢复，2023年1－13月，我国医疗卫生机构总诊疗人次45.2亿人次，同比增长5.3%，其中医院27.5亿人次，。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2023年医疗机构诊疗人次持续恢复，2023年1－13月，我国医疗卫生机构总诊疗人次45.2亿人次，同比增长5.3%，其中医院27.5亿人次，。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 884,
+          "end": 956,
+          "text": "2023年医疗机构诊疗人次持续恢复，2023年1－13月，我国医疗卫生机构总诊疗人次45.2亿人次，同比增长5.3%，其中医院27.5亿人次，。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0adb0cb5c5fcfc55feb913eb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "人均可支配收入单位应为元，此处写成亿元，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 462,
+          "end": 515,
+          "text": "近年来，全国居民人均可支配收入已由2018年的28228元增长至2023年的39218亿元，消费升级加速；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近年来，全国居民人均可支配收入已由2018年的28228元增长至2023年的39218亿元，消费升级加速；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 462,
+          "end": 515,
+          "text": "近年来，全国居民人均可支配收入已由2018年的28228元增长至2023年的39218亿元，消费升级加速；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4467d4b8fea27b5de650966a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "按相邻年份数值计算的营收和利润同比与原文给出的同比明显不符，如2023年营收按2022年29111.40亿元计应降约13.4%，并非3.70%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1001,
+          "end": 1106,
+          "text": "2020年，规模以上医药制造业营业总收入为25053.57亿元，同比增长4.5%，利润总额为3693.40亿元，同比增长12.8%，营业总收入增速有所放缓，但利润总额增速有所上升，主要系高毛利企业占比增加所致。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1106,
+          "end": 1188,
+          "text": "2021年，医药行业盈利水平逐渐恢复，全国规模以上医药制造业实现营业总收入29288.5亿元，同比增长20.1%，实现利润总额6271.4亿元，同比增长77.9%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1188,
+          "end": 1256,
+          "text": "2022年，规模以上医药制造企业营业收入为29111.40亿元，同比下降1.60%；利润总额为4288.70亿元，同比下降31.80%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1256,
+          "end": 1369,
+          "text": "2023年，规模以上医药制造企业营业收入为25205.70亿元，同比下降3.70%；利润总额为3473.00亿元，同比下降15.10%，主要系受医保控费力度加大、新药研发力度加大、疫情相关用品需求下降、行业内部调整等因素影响。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2020年，规模以上医药制造业营业总收入为25053.57亿元，同比增长4.5%，利润总额为3693.40亿元，同比增长12.8%，营业总收入增速有所放缓，但利润总额增速有所上升，主要系高毛利企业占比增加所致。"
+        },
+        {
+          "text": "2021年，医药行业盈利水平逐渐恢复，全国规模以上医药制造业实现营业总收入29288.5亿元，同比增长20.1%，实现利润总额6271.4亿元，同比增长77.9%。"
+        },
+        {
+          "text": "2022年，规模以上医药制造企业营业收入为29111.40亿元，同比下降1.60%；利润总额为4288.70亿元，同比下降31.80%。"
+        },
+        {
+          "text": "2023年，规模以上医药制造企业营业收入为25205.70亿元，同比下降3.70%；利润总额为3473.00亿元，同比下降15.10%，主要系受医保控费力度加大、新药研发力度加大、疫情相关用品需求下降、行业内部调整等因素影响。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1001,
+          "end": 1106,
+          "text": "2020年，规模以上医药制造业营业总收入为25053.57亿元，同比增长4.5%，利润总额为3693.40亿元，同比增长12.8%，营业总收入增速有所放缓，但利润总额增速有所上升，主要系高毛利企业占比增加所致。"
+        },
+        {
+          "start": 1106,
+          "end": 1188,
+          "text": "2021年，医药行业盈利水平逐渐恢复，全国规模以上医药制造业实现营业总收入29288.5亿元，同比增长20.1%，实现利润总额6271.4亿元，同比增长77.9%。"
+        },
+        {
+          "start": 1188,
+          "end": 1256,
+          "text": "2022年，规模以上医药制造企业营业收入为29111.40亿元，同比下降1.60%；利润总额为4288.70亿元，同比下降31.80%。"
+        },
+        {
+          "start": 1256,
+          "end": 1369,
+          "text": "2023年，规模以上医药制造企业营业收入为25205.70亿元，同比下降3.70%；利润总额为3473.00亿元，同比下降15.10%，主要系受医保控费力度加大、新药研发力度加大、疫情相关用品需求下降、行业内部调整等因素影响。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "06371244032c6213b121169d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1369
+        ]
+      ],
+      "estimated_input_tokens": 5894,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:10:17.893458+00:00",
+        "request_sha256": "32d41537b77c5a5a4e7214d008d7af009858eb0ff8317a583c23f209c4867749",
+        "input_token_estimate": 16392,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278536",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "c477a6fa399e4e2dba71970129854b6c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3791,
+        "output_tokens": 8200,
+        "usage_source": "provider",
+        "duration_seconds": 34.265175,
+        "cost_cny": "0.036591"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2023年医疗机构诊疗人次持续恢复，2023年1－13月，我国医疗卫生机构总诊疗人次45.2亿人次，同比增长5.3%，其中医院27.5亿人次，。"
+          }
+        ],
+        "reason": "月份出现13月，不符合公历月份取值范围。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "近年来，全国居民人均可支配收入已由2018年的28228元增长至2023年的39218亿元，消费升级加速；"
+          }
+        ],
+        "reason": "人均可支配收入单位应为元，此处写成亿元，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2020年，规模以上医药制造业营业总收入为25053.57亿元，同比增长4.5%，利润总额为3693.40亿元，同比增长12.8%，营业总收入增速有所放缓，但利润总额增速有所上升，主要系高毛利企业占比增加所致。"
+          },
+          {
+            "text": "2021年，医药行业盈利水平逐渐恢复，全国规模以上医药制造业实现营业总收入29288.5亿元，同比增长20.1%，实现利润总额6271.4亿元，同比增长77.9%。"
+          },
+          {
+            "text": "2022年，规模以上医药制造企业营业收入为29111.40亿元，同比下降1.60%；利润总额为4288.70亿元，同比下降31.80%。"
+          },
+          {
+            "text": "2023年，规模以上医药制造企业营业收入为25205.70亿元，同比下降3.70%；利润总额为3473.00亿元，同比下降15.10%，主要系受医保控费力度加大、新药研发力度加大、疫情相关用品需求下降、行业内部调整等因素影响。"
+          }
+        ],
+        "reason": "按相邻年份数值计算的营收和利润同比与原文给出的同比明显不符，如2023年营收按2022年29111.40亿元计应降约13.4%，并非3.70%。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 18,
+      "end": 88,
+      "text": "2023年，受医保控费力度加大、新药研发力度加大、疫情相关用品需求下降、行业内部调整等因素影响，医药制造企业营业收入和利润总额同比有所下降。",
+      "quantities": [],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 339,
+      "end": 415,
+      "text": "2023年，受医保控费力度加大、新药研发力度加大、疫情相关用品需求下降、行业内部调整等因素影响，医药制造企业复苏进程减缓，营业收入和利润总额均同比下降。",
+      "quantities": [],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 1001,
+      "end": 1106,
+      "text": "2020年，规模以上医药制造业营业总收入为25053.57亿元，同比增长4.5%，利润总额为3693.40亿元，同比增长12.8%，营业总收入增速有所放缓，但利润总额增速有所上升，主要系高毛利企业占比增加所致。",
+      "quantities": [
+        {
+          "value": "25053.57",
+          "unit": "亿元",
+          "start": 1022,
+          "end": 1032
+        },
+        {
+          "value": "4.5",
+          "unit": "%",
+          "start": 1037,
+          "end": 1041
+        },
+        {
+          "value": "3693.40",
+          "unit": "亿元",
+          "start": 1047,
+          "end": 1056
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 1061,
+          "end": 1066
+        }
+      ],
+      "periods": [
+        "2020年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 1001,
+      "end": 1106,
+      "text": "2020年，规模以上医药制造业营业总收入为25053.57亿元，同比增长4.5%，利润总额为3693.40亿元，同比增长12.8%，营业总收入增速有所放缓，但利润总额增速有所上升，主要系高毛利企业占比增加所致。",
+      "quantities": [
+        {
+          "value": "25053.57",
+          "unit": "亿元",
+          "start": 1022,
+          "end": 1032
+        },
+        {
+          "value": "4.5",
+          "unit": "%",
+          "start": 1037,
+          "end": 1041
+        },
+        {
+          "value": "3693.40",
+          "unit": "亿元",
+          "start": 1047,
+          "end": 1056
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 1061,
+          "end": 1066
+        }
+      ],
+      "periods": [
+        "2020年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 1106,
+      "end": 1188,
+      "text": "2021年，医药行业盈利水平逐渐恢复，全国规模以上医药制造业实现营业总收入29288.5亿元，同比增长20.1%，实现利润总额6271.4亿元，同比增长77.9%。",
+      "quantities": [
+        {
+          "value": "29288.5",
+          "unit": "亿元",
+          "start": 1143,
+          "end": 1152
+        },
+        {
+          "value": "20.1",
+          "unit": "%",
+          "start": 1157,
+          "end": 1162
+        },
+        {
+          "value": "6271.4",
+          "unit": "亿元",
+          "start": 1169,
+          "end": 1177
+        },
+        {
+          "value": "77.9",
+          "unit": "%",
+          "start": 1182,
+          "end": 1187
+        }
+      ],
+      "periods": [
+        "2021年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1188,
+      "end": 1230,
+      "text": "2022年，规模以上医药制造企业营业收入为29111.40亿元，同比下降1.60%；",
+      "quantities": [
+        {
+          "value": "29111.40",
+          "unit": "亿元",
+          "start": 1209,
+          "end": 1219
+        },
+        {
+          "value": "1.60",
+          "unit": "%",
+          "start": 1224,
+          "end": 1229
+        }
+      ],
+      "periods": [
+        "2022年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1256,
+      "end": 1298,
+      "text": "2023年，规模以上医药制造企业营业收入为25205.70亿元，同比下降3.70%；",
+      "quantities": [
+        {
+          "value": "25205.70",
+          "unit": "亿元",
+          "start": 1277,
+          "end": 1287
+        },
+        {
+          "value": "3.70",
+          "unit": "%",
+          "start": 1292,
+          "end": 1297
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1369,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1369,
+    "processed_ranges": [
+      [
+        0,
+        1369
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 7,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 34.290552,
+  "source_content_sha256": "8f464cacd5b5ad1013a1b4bc847f89b046c59141f77cb19baa08d4c4442f8e43"
+}

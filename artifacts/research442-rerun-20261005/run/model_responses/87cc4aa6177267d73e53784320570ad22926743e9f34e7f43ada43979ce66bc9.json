@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"本周COMEX金价-1.33%至3313.10美元/克，美债10年期TIPS下降11BP至2.07%。\"}],\"reason\":\"COMEX金价通常以美元/盎司报价，3313.10美元/克量纲明显错误。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"本周海外氧化镝、氧化铽价格环比分别持平/上涨至760/2800美元/吨，出口管制后的海外价格大涨兑现，类比锑，内盘价格亦触底回升。\"}],\"reason\":\"海外氧化镝、氧化铽价格一般以美元/公斤报价，760/2800美元/吨量纲错误。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"本周LME镍价-1.7%至1.53万美元/吨，上期所镍价-2.1%至万元/吨。\"}],\"reason\":\"“至万元/吨”前缺少具体数值。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"本周碳酸锂三大样本库存整体下降，其中冶炼厂库存5.62万吨，环比-0.08万吨；下游库存4.16万吨，环比+0.08万吨；其他环节库存3.37万吨，环比-0.02万吨；合计库存13.16万吨，环比-0.02万吨。\"}],\"reason\":\"5.62+4.16+3.37=13.15，与合计13.16不一致。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"截至本周四，全国主流地区铜库存环比周一降0.10万吨至13.87万吨，继续表现去库。全国主流地区铜库存自周一以来累计减少0.10万吨，总量维持在13.87万吨水平。\"}],\"reason\":\"同一库存下降信息重复表述。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"钼精矿、钼铁库存去库至历史较低水平。钼精矿、钼铁库存去库至历史较低水平。\"}],\"reason\":\"同一信息连续重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:16:46.967312+00:00",
+    "request_sha256": "787d6e5635798d870ffc5f15e5be65d90841491078f22887ae666166a768913d",
+    "input_token_estimate": 17203,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279347",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "3b9283f947db4ec4bbb3ebf0b6cdfd9e",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4221,
+    "output_tokens": 9939,
+    "usage_source": "provider",
+    "duration_seconds": 38.214682,
+    "cost_cny": "0.043977"
+  },
+  "cache_request": {
+    "key": "87cc4aa6177267d73e53784320570ad22926743e9f34e7f43ada43979ce66bc9",
+    "purpose": "text_review.detect",
+    "messages_sha256": "787d6e5635798d870ffc5f15e5be65d90841491078f22887ae666166a768913d"
+  }
+}

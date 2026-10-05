@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"截至2024年13月31日，公司已推出具有著作权的B端字体超过1700款，并开发形成3600余套字库产品（含字由业务字体）。\"}], \"reason\": \"日期中的“13月”不存在，时间信息本身非法。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"2024-2022年，公司营业收入保持稳定，销售毛利率维持在80%左右。\"}], \"reason\": \"期间写作2024-2022年，起始年份晚于结束年份，时间关系冲突。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。\"}], \"reason\": \"同一句连续重复两次，信息冗余。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"公司致力于用技术解决AI生成内容中出现的文字错误、字体风格不适用、字体无债权等问题。\"}], \"reason\": \"“字体无债权”混淆法律术语，应指字体无版权或侵权问题。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"截至2024年末，字由累计注册用户已超过万，日活超过37万人次，月活将近80万人次，长期成长空间广阔。\"}], \"reason\": \"“累计注册用户已超过万”缺少具体数值，无法确认注册用户量。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"预测公司2025-2027年的营业收入为2.38、2.85、3.26、3.33亿元，归母净利润为0.50、0.63、0.72亿元，EPS为0.50、0.63、0.72元/股，对应的PE为75.99、60.00、52.78倍。\"}], \"reason\": \"2025-2027年为三个年度，营业收入却列出四个数值，与其余指标个数不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:51:28.048988+00:00",
+    "request_sha256": "53e90d6e85f0d7753487cb9b7196f6a3709cb69a73aac5bc5530ac4a37661236",
+    "input_token_estimate": 15868,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278012",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "8aa9eead620d4b50a313d62cd00482a9",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3703,
+    "output_tokens": 7422,
+    "usage_source": "provider",
+    "duration_seconds": 29.779763,
+    "cost_cny": "0.033391"
+  },
+  "cache_request": {
+    "key": "d962d19e79c9025f7e67f1a9d549f9273e7b830b9608c74d351c18668d67b3dd",
+    "purpose": "text_review.detect",
+    "messages_sha256": "53e90d6e85f0d7753487cb9b7196f6a3709cb69a73aac5bc5530ac4a37661236"
+  }
+}

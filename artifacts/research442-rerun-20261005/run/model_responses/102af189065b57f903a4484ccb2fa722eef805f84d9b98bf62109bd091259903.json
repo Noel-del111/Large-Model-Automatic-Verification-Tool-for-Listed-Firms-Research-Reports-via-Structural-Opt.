@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"本周市场表现：截至5月32日收盘，本周公用事业板块下跌0.2%，表现劣于大盘。\"}],\"reason\":\"5月32日不存在，日期本身不成立。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"截至5月30日，广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港澳洲煤(Q5500)库提价705.53元/吨，周环比持平。\"}],\"reason\":\"同一印尼煤价格及环比变动在分号内重复一次。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"截至5月29日，内陆17省煤炭库存8372.9万吨，较上周增加238.6万吨，周环比上升2.93%；内陆17省电厂日耗为280.6万克，较上周下降35.7万克/日，周环比下降11.29%；可用天数为29.8天，较上周增加4.1天。\"}],\"reason\":\"电厂日耗用“万克/日”作为单位不符合电量/煤耗语境，后文沿海8省同类指标为“万吨/日”。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"5月22日，国际燃气联盟（IGU）在第29届世界燃气大会（WGC2025）召开期间发布《》。\"}],\"reason\":\"《》内报告名称缺失，非数值属性值为空。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"其中，LNG供应量为27.8亿方，周环比上升3.4%，占天然气供应量的52.2%；进口管道气30.4亿方，同比下降14.7%，周环比下降13.8%。\"}],\"reason\":\"天然气供应量58.2亿方，LNG 27.8亿方占比约47.8%，52.2%对应管道气30.4亿方，占比与数值不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:07:09.922384+00:00",
+    "request_sha256": "d6b5870576667206f34ea84b5b1da36f7d13a3cdc1d99ced3950acb25ea0ead3",
+    "input_token_estimate": 19717,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.281861",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1591c63ec68e47989e38d7a7fc2aec35",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4785,
+    "output_tokens": 10304,
+    "usage_source": "provider",
+    "duration_seconds": 38.935073,
+    "cost_cny": "0.046001"
+  },
+  "cache_request": {
+    "key": "102af189065b57f903a4484ccb2fa722eef805f84d9b98bf62109bd091259903",
+    "purpose": "text_review.detect",
+    "messages_sha256": "d6b5870576667206f34ea84b5b1da36f7d13a3cdc1d99ced3950acb25ea0ead3"
+  }
+}

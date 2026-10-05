@@ -1,0 +1,672 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000643",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间起点5月30日晚于终点5月26日，先后关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1694,
+          "end": 1747,
+          "text": "2025年5月30日至5月26日，上证综指下跌0.03%，深证成指下跌0.91%，创业板指下跌1.40%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月30日至5月26日，上证综指下跌0.03%，深证成指下跌0.91%，创业板指下跌1.40%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1694,
+          "end": 1747,
+          "text": "2025年5月30日至5月26日，上证综指下跌0.03%，深证成指下跌0.91%，创业板指下跌1.40%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3bf13708bf21bcb04cc10aaa",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万一级行业共31个，排名35超出行业总数，数值矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1753,
+          "end": 1803,
+          "text": "申万轻工制造上涨0.14%，相较沪深300指数+1.23pct，在31个申万一级行业指数中排名35；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "申万轻工制造上涨0.14%，相较沪深300指数+1.23pct，在31个申万一级行业指数中排名35；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1753,
+          "end": 1803,
+          "text": "申万轻工制造上涨0.14%，相较沪深300指数+1.23pct，在31个申万一级行业指数中排名35；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b0e900b947878fbfd1d53dba",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "指数涨幅单位应为百分比或pct，误用为万平方米。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1803,
+          "end": 1855,
+          "text": "申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1803,
+          "end": 1855,
+          "text": "申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a159bc0d359e9e8659a5d7a8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "前文称申万一级行业31个，此处称32个，行业总数前后不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1803,
+          "end": 1855,
+          "text": "申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1803,
+          "end": 1855,
+          "text": "申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c1b6146918b2f9cfa2f70468",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          4327
+        ]
+      ],
+      "estimated_input_tokens": 8129,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:36:42.664844+00:00",
+        "request_sha256": "c322d10c85e87c1b5965681522447a323b16414584e7e441e0dc0b1dda1ded03",
+        "input_token_estimate": 22812,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.284956",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9c148c28d944453f9f7f8f52b7c3a312",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 5740,
+        "output_tokens": 9977,
+        "usage_source": "provider",
+        "duration_seconds": 36.397604,
+        "cost_cny": "0.045648",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2025年5月30日至5月26日，上证综指下跌0.03%，深证成指下跌0.91%，创业板指下跌1.40%。"
+          }
+        ],
+        "reason": "时间区间起点5月30日晚于终点5月26日，先后关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "申万轻工制造上涨0.14%，相较沪深300指数+1.23pct，在31个申万一级行业指数中排名35；"
+          }
+        ],
+        "reason": "申万一级行业共31个，排名35超出行业总数，数值矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。"
+          }
+        ],
+        "reason": "指数涨幅单位应为百分比或pct，误用为万平方米。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。"
+          }
+        ],
+        "reason": "前文称申万一级行业31个，此处称32个，行业总数前后不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 909,
+      "end": 958,
+      "text": "2020年-2024年，公司营业总收入由4.24亿元增长至15.94亿元，CAGR为39.25%；",
+      "quantities": [
+        {
+          "value": "4.24",
+          "unit": "亿元",
+          "start": 929,
+          "end": 935
+        },
+        {
+          "value": "15.94",
+          "unit": "亿元",
+          "start": 938,
+          "end": 945
+        },
+        {
+          "value": "39.25",
+          "unit": "%",
+          "start": 951,
+          "end": 957
+        }
+      ],
+      "periods": [
+        "2020年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 958,
+      "end": 1002,
+      "text": "归母净利润由0.26亿元增长至2.2亿元，CAGR为70.55%，均呈现快速增长的态势。",
+      "quantities": [
+        {
+          "value": "0.26",
+          "unit": "亿元",
+          "start": 964,
+          "end": 970
+        },
+        {
+          "value": "2.2",
+          "unit": "亿元",
+          "start": 973,
+          "end": 978
+        },
+        {
+          "value": "70.55",
+          "unit": "%",
+          "start": 984,
+          "end": 990
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 1088,
+      "end": 1137,
+      "text": "2020年-2024年，公司营业总收入由5.78亿元增长至15.46亿元，CAGR为27.89%；",
+      "quantities": [
+        {
+          "value": "5.78",
+          "unit": "亿元",
+          "start": 1108,
+          "end": 1114
+        },
+        {
+          "value": "15.46",
+          "unit": "亿元",
+          "start": 1117,
+          "end": 1124
+        },
+        {
+          "value": "27.89",
+          "unit": "%",
+          "start": 1130,
+          "end": 1136
+        }
+      ],
+      "periods": [
+        "2020年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1137,
+      "end": 1183,
+      "text": "归母净利润由1.15亿元增长至3.24亿元，CAGR为29.56%，整体呈现良好的发展态势。",
+      "quantities": [
+        {
+          "value": "1.15",
+          "unit": "亿元",
+          "start": 1143,
+          "end": 1149
+        },
+        {
+          "value": "3.24",
+          "unit": "亿元",
+          "start": 1152,
+          "end": 1158
+        },
+        {
+          "value": "29.56",
+          "unit": "%",
+          "start": 1164,
+          "end": 1170
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 1236,
+      "end": 1286,
+      "text": "2020年-2024年，公司营业总收入由10.26亿元增长至23.26亿元，CAGR为22.71%。",
+      "quantities": [
+        {
+          "value": "10.26",
+          "unit": "亿元",
+          "start": 1256,
+          "end": 1263
+        },
+        {
+          "value": "23.26",
+          "unit": "亿元",
+          "start": 1266,
+          "end": 1273
+        },
+        {
+          "value": "22.71",
+          "unit": "%",
+          "start": 1279,
+          "end": 1285
+        }
+      ],
+      "periods": [
+        "2020年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1286,
+      "end": 1340,
+      "text": "公司近年来归母净利润波动较大，2024年公司实现归母净利润0.57亿元，同比增长25.68%，情况有所改善。",
+      "quantities": [
+        {
+          "value": "0.57",
+          "unit": "亿元",
+          "start": 1315,
+          "end": 1321
+        },
+        {
+          "value": "25.68",
+          "unit": "%",
+          "start": 1326,
+          "end": 1332
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1286,
+      "end": 1340,
+      "text": "公司近年来归母净利润波动较大，2024年公司实现归母净利润0.57亿元，同比增长25.68%，情况有所改善。",
+      "quantities": [
+        {
+          "value": "0.57",
+          "unit": "亿元",
+          "start": 1315,
+          "end": 1321
+        },
+        {
+          "value": "25.68",
+          "unit": "%",
+          "start": 1326,
+          "end": 1332
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 1433,
+      "end": 1484,
+      "text": "2020年-2024年，公司营业总收入由117.89亿元增长至171.57亿元，CAGR为9.84%；",
+      "quantities": [
+        {
+          "value": "117.89",
+          "unit": "亿元",
+          "start": 1453,
+          "end": 1461
+        },
+        {
+          "value": "171.57",
+          "unit": "亿元",
+          "start": 1464,
+          "end": 1472
+        },
+        {
+          "value": "9.84",
+          "unit": "%",
+          "start": 1478,
+          "end": 1483
+        }
+      ],
+      "periods": [
+        "2020年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1484,
+      "end": 1525,
+      "text": "归母净利润由11.2亿元增长至14.09亿元，CAGR为5.91%，增长较为稳健。",
+      "quantities": [
+        {
+          "value": "11.2",
+          "unit": "亿元",
+          "start": 1490,
+          "end": 1496
+        },
+        {
+          "value": "14.09",
+          "unit": "亿元",
+          "start": 1499,
+          "end": 1506
+        },
+        {
+          "value": "5.91",
+          "unit": "%",
+          "start": 1512,
+          "end": 1517
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1595,
+      "end": 1684,
+      "text": "2024年，公司实现营业收入11.51亿元，同比下降18.72%，但归母净利润不降反升，实现归母净利润0.64亿元，同比增长27.4%，得益于公司的业务结构优化和降成本措施有效。",
+      "quantities": [
+        {
+          "value": "11.51",
+          "unit": "亿元",
+          "start": 1609,
+          "end": 1616
+        },
+        {
+          "value": "18.72",
+          "unit": "%",
+          "start": 1621,
+          "end": 1627
+        },
+        {
+          "value": "0.64",
+          "unit": "亿元",
+          "start": 1646,
+          "end": 1652
+        },
+        {
+          "value": "27.4",
+          "unit": "%",
+          "start": 1657,
+          "end": 1662
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "得益于公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1595,
+      "end": 1684,
+      "text": "2024年，公司实现营业收入11.51亿元，同比下降18.72%，但归母净利润不降反升，实现归母净利润0.64亿元，同比增长27.4%，得益于公司的业务结构优化和降成本措施有效。",
+      "quantities": [
+        {
+          "value": "11.51",
+          "unit": "亿元",
+          "start": 1609,
+          "end": 1616
+        },
+        {
+          "value": "18.72",
+          "unit": "%",
+          "start": 1621,
+          "end": 1627
+        },
+        {
+          "value": "0.64",
+          "unit": "亿元",
+          "start": 1646,
+          "end": 1652
+        },
+        {
+          "value": "27.4",
+          "unit": "%",
+          "start": 1657,
+          "end": 1662
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "得益于公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1595,
+      "end": 1684,
+      "text": "2024年，公司实现营业收入11.51亿元，同比下降18.72%，但归母净利润不降反升，实现归母净利润0.64亿元，同比增长27.4%，得益于公司的业务结构优化和降成本措施有效。",
+      "quantities": [
+        {
+          "value": "11.51",
+          "unit": "亿元",
+          "start": 1609,
+          "end": 1616
+        },
+        {
+          "value": "18.72",
+          "unit": "%",
+          "start": 1621,
+          "end": 1627
+        },
+        {
+          "value": "0.64",
+          "unit": "亿元",
+          "start": 1646,
+          "end": 1652
+        },
+        {
+          "value": "27.4",
+          "unit": "%",
+          "start": 1657,
+          "end": 1662
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "得益于公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 4327,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 4327,
+    "processed_ranges": [
+      [
+        0,
+        4327
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 4327,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00384,
+  "source_content_sha256": "896e61dd347d84da34f3fa1681eabc87f9cf5e0c339fd712f7cdcfa3b6493d4f"
+}

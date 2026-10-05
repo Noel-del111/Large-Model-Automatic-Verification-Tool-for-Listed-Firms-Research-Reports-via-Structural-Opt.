@@ -1,0 +1,391 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000568",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一Agentforce签约与ARR数据在相邻两句中重复陈述，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 234,
+          "end": 383,
+          "text": "Agentforce需求持续增长，自推出以来已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。Agentforce需求持续增长：自推出以来，Agentforce已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Agentforce需求持续增长，自推出以来已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。Agentforce需求持续增长：自推出以来，Agentforce已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 234,
+          "end": 383,
+          "text": "Agentforce需求持续增长，自推出以来已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。Agentforce需求持续增长：自推出以来，Agentforce已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "13fd83983091718e8cfe4a88",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一英伟达一季度收入超越的彭博一致预期，前文为432.9亿美元，后文为433.1亿美元，数值冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 100,
+          "end": 141,
+          "text": "公司一季度收入441亿美元，同比增长69%，超越彭博一致预期（432.9亿美元）；"
+        },
+        {
+          "kind": "source_text",
+          "start": 385,
+          "end": 419,
+          "text": "入441亿美元，同比增长69%，超越彭博一致预期（433.1亿美元）"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司一季度收入441亿美元，同比增长69%，超越彭博一致预期（432.9亿美元）；"
+        },
+        {
+          "text": "入441亿美元，同比增长69%，超越彭博一致预期（433.1亿美元）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 100,
+          "end": 141,
+          "text": "公司一季度收入441亿美元，同比增长69%，超越彭博一致预期（432.9亿美元）；"
+        },
+        {
+          "start": 385,
+          "end": 419,
+          "text": "入441亿美元，同比增长69%，超越彭博一致预期（433.1亿美元）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "356f449af9c284973bcec937",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "70%升至87.5%是提升，却表述为“下降至”，与提升语义及数值方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 611,
+          "end": 669,
+          "text": "新版模型在复杂推理任务中的表现有了显著提升，在AIME2025测试中，新版模型准确率由旧版的70%下降至87.5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新版模型在复杂推理任务中的表现有了显著提升，在AIME2025测试中，新版模型准确率由旧版的70%下降至87.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 611,
+          "end": 669,
+          "text": "新版模型在复杂推理任务中的表现有了显著提升，在AIME2025测试中，新版模型准确率由旧版的70%下降至87.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1cc38d94390efdb0cefafae2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“达亿元”前缺少具体数值，应给出明确收入金额，如1.5亿元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 671,
+          "end": 699,
+          "text": "快手：可灵2.1模型正式上线，可灵AI一季度收入达亿元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "快手：可灵2.1模型正式上线，可灵AI一季度收入达亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 671,
+          "end": 699,
+          "text": "快手：可灵2.1模型正式上线，可灵AI一季度收入达亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fae0dc286215834bb94b60b9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "付费客户数量用“万吨”作为单位，单位明显错误，应为家/个等数量单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1576,
+          "end": 1673,
+          "text": "Salesforce财报显示，其AI Agent平台Agentforce已签约超8,000笔交易，付费客户超过4,000万吨，相关ARR突破10亿美元，标志AI Agent迈入实质性商业化阶段。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Salesforce财报显示，其AI Agent平台Agentforce已签约超8,000笔交易，付费客户超过4,000万吨，相关ARR突破10亿美元，标志AI Agent迈入实质性商业化阶段。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1576,
+          "end": 1673,
+          "text": "Salesforce财报显示，其AI Agent平台Agentforce已签约超8,000笔交易，付费客户超过4,000万吨，相关ARR突破10亿美元，标志AI Agent迈入实质性商业化阶段。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c825bd0074a69aa48bc51a1e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“算力的长期增长逻辑未变”及其前置理由在相邻句子中重复出现，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1424,
+          "end": 1536,
+          "text": "作为AI基础设施的重要组成部分，算力的长期增长逻辑未变，我们继续看好【英伟达】【NEBIUS】【Coreweave】【Vertiv】等核心算力提供商订单需求维持高景气度。作为AI基础设施的重要组成部分，算力的长期增长逻辑未变"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "作为AI基础设施的重要组成部分，算力的长期增长逻辑未变，我们继续看好【英伟达】【NEBIUS】【Coreweave】【Vertiv】等核心算力提供商订单需求维持高景气度。作为AI基础设施的重要组成部分，算力的长期增长逻辑未变"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1424,
+          "end": 1536,
+          "text": "作为AI基础设施的重要组成部分，算力的长期增长逻辑未变，我们继续看好【英伟达】【NEBIUS】【Coreweave】【Vertiv】等核心算力提供商订单需求维持高景气度。作为AI基础设施的重要组成部分，算力的长期增长逻辑未变"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ea3eea1c4cf4b998d71827a3",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2510
+        ]
+      ],
+      "estimated_input_tokens": 6817,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:21:02.420898+00:00",
+        "request_sha256": "f2f5965e3b8902420ab7bbbe3ded50606cd3acb6735e7fdfea8db6074e157608",
+        "input_token_estimate": 19045,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281189",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ed06b309d0db497ba122b6c29d788009",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4445,
+        "output_tokens": 9595,
+        "usage_source": "provider",
+        "duration_seconds": 36.825755,
+        "cost_cny": "0.042825",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "Agentforce需求持续增长，自推出以来已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。Agentforce需求持续增长：自推出以来，Agentforce已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。"
+          }
+        ],
+        "reason": "同一Agentforce签约与ARR数据在相邻两句中重复陈述，无新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "公司一季度收入441亿美元，同比增长69%，超越彭博一致预期（432.9亿美元）；"
+          },
+          {
+            "text": "入441亿美元，同比增长69%，超越彭博一致预期（433.1亿美元）"
+          }
+        ],
+        "reason": "同一英伟达一季度收入超越的彭博一致预期，前文为432.9亿美元，后文为433.1亿美元，数值冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "新版模型在复杂推理任务中的表现有了显著提升，在AIME2025测试中，新版模型准确率由旧版的70%下降至87.5%。"
+          }
+        ],
+        "reason": "70%升至87.5%是提升，却表述为“下降至”，与提升语义及数值方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "快手：可灵2.1模型正式上线，可灵AI一季度收入达亿元。"
+          }
+        ],
+        "reason": "“达亿元”前缺少具体数值，应给出明确收入金额，如1.5亿元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "Salesforce财报显示，其AI Agent平台Agentforce已签约超8,000笔交易，付费客户超过4,000万吨，相关ARR突破10亿美元，标志AI Agent迈入实质性商业化阶段。"
+          }
+        ],
+        "reason": "付费客户数量用“万吨”作为单位，单位明显错误，应为家/个等数量单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "作为AI基础设施的重要组成部分，算力的长期增长逻辑未变，我们继续看好【英伟达】【NEBIUS】【Coreweave】【Vertiv】等核心算力提供商订单需求维持高景气度。作为AI基础设施的重要组成部分，算力的长期增长逻辑未变"
+          }
+        ],
+        "reason": "“算力的长期增长逻辑未变”及其前置理由在相邻句子中重复出现，无新增信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2510,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2510,
+    "processed_ranges": [
+      [
+        0,
+        2510
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2510,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002322,
+  "source_content_sha256": "210674a6dfd006b1dd5d89c61a130a1bc52e3db0b05b8112f24b35aedcac346a"
+}

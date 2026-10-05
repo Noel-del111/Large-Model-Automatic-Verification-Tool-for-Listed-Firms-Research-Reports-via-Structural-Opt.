@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"截至2024年年报，广州市人民政府国有资产监督管理委员会直接或间接持有广钢气体%的股权，是公司的实际控制人。\",\"start\":333,\"end\":387}],\"reason\":\"“持有广钢气体%的股权”中百分号前缺少具体持股比例数值。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"从技术上看，公司电子大宗气体氮气、氦气、氧气、氩气、氢气、二氧化碳产品参数均达到ppb，远超国标GB要求；\",\"start\":766,\"end\":819}],\"reason\":\"“均达到ppb”中ppb是单位，但未给出具体参数数值，无法核验达到水平。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2020~2024年公司营业收入从8.67亿元增长至21.03亿元，CAGR约35%，系公司积极拓展电子大宗气体业务并加大氦气市场开发力度。\",\"start\":224,\"end\":294}],\"reason\":\"按2020至2024年4年复合增长，(21.03/8.67)^(1/4)-1约24.8%，与35%不符。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"根据卓创资讯数据，2024~2030年中国电子气体市场规模有望从195亿元增长至298亿元CAGR约10.3%。\",\"start\":487,\"end\":543}],\"reason\":\"按2024至2030年6年复合增长，(298/195)^(1/6)-1约7.3%，与10.3%不符。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"2020~2024年公司经营活动现金净流量均低于归母净利润，盈利质量较为优秀。\",\"start\":294,\"end\":333}],\"reason\":\"经营现金流持续低于净利润通常说明盈利质量偏弱，与“盈利质量较为优秀”结论矛盾。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"首次覆盖，给予“增持”评级。\",\"start\":122,\"end\":136},{\"text\":\"首次覆盖，给予“增持”评级。\",\"start\":1109,\"end\":1123}],\"reason\":\"同一“首次覆盖，给予增持评级”信息在报告开头和估值段重复出现，无新增含义。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:40:54.790238+00:00",
+    "request_sha256": "e103112963ab43b805341d121290aaaaad7307c7156b87aff6bc8c0e70a313d9",
+    "input_token_estimate": 15940,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278084",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "103e90e597704e76b9de6c2fec4adaf3",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3727,
+    "output_tokens": 16281,
+    "usage_source": "provider",
+    "duration_seconds": 57.30949,
+    "cost_cny": "0.068851"
+  },
+  "cache_request": {
+    "key": "97ff735bb1286bbf8f0cba1e1df49e9c970e2f639ed547386da4c8d2f1551ea4",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e103112963ab43b805341d121290aaaaad7307c7156b87aff6bc8c0e70a313d9"
+  }
+}

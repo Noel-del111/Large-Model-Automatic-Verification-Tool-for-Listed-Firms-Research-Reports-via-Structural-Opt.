@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000673",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份为0月，不符合日历月份取值，时间信息不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 202,
+          "end": 257,
+          "text": "交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 202,
+          "end": 257,
+          "text": "交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b6b0818acb45357bec0ddc24",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "多晶硅价格通常以万元/吨报价，此处写成亿元/万吨，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 202,
+          "end": 257,
+          "text": "交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 202,
+          "end": 257,
+          "text": "交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5d97c4200d158ee982774084",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“约吨以上”缺少具体库存数值，无法判断库存量级。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 259,
+          "end": 311,
+          "text": "库存动态：截止本周，多晶硅整体库存约吨以上，下游采购速度放缓，多晶硅整体库存水位短期内仍有继续增长趋势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "库存动态：截止本周，多晶硅整体库存约吨以上，下游采购速度放缓，多晶硅整体库存水位短期内仍有继续增长趋势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 259,
+          "end": 311,
+          "text": "库存动态：截止本周，多晶硅整体库存约吨以上，下游采购速度放缓，多晶硅整体库存水位短期内仍有继续增长趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f9a391a56598bd701a9e8e60",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "多晶硅生产语境中“月度融资”非产量或排产指标，术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 365,
+          "end": 434,
+          "text": "结合近期市场趋势及企业排产情况，认为6月多晶硅企业即将开始产能置换，月度融资整体维持稳定，后续多晶硅月度产量将会再度下调并维持在较低水平。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "结合近期市场趋势及企业排产情况，认为6月多晶硅企业即将开始产能置换，月度融资整体维持稳定，后续多晶硅月度产量将会再度下调并维持在较低水平。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 365,
+          "end": 434,
+          "text": "结合近期市场趋势及企业排产情况，认为6月多晶硅企业即将开始产能置换，月度融资整体维持稳定，后续多晶硅月度产量将会再度下调并维持在较低水平。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a8406ce57ce05c70f203901f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          672
+        ]
+      ],
+      "estimated_input_tokens": 5292,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:57:22.949172+00:00",
+        "request_sha256": "c946cd849cb8661a04aedadd131f365cc71cd8d04b1b1177c9868268780589ef",
+        "input_token_estimate": 14710,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.276854",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "0f72cffee4e44f409ffad4bb70afff93",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3485,
+        "output_tokens": 3927,
+        "usage_source": "provider",
+        "duration_seconds": 17.388078,
+        "cost_cny": "0.019193"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。"
+          }
+        ],
+        "reason": "月份为0月，不符合日历月份取值，时间信息不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。"
+          }
+        ],
+        "reason": "多晶硅价格通常以万元/吨报价，此处写成亿元/万吨，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "库存动态：截止本周，多晶硅整体库存约吨以上，下游采购速度放缓，多晶硅整体库存水位短期内仍有继续增长趋势。"
+          }
+        ],
+        "reason": "“约吨以上”缺少具体库存数值，无法判断库存量级。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "结合近期市场趋势及企业排产情况，认为6月多晶硅企业即将开始产能置换，月度融资整体维持稳定，后续多晶硅月度产量将会再度下调并维持在较低水平。"
+          }
+        ],
+        "reason": "多晶硅生产语境中“月度融资”非产量或排产指标，术语使用不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 672,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 672,
+    "processed_ranges": [
+      [
+        0,
+        672
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 17.417651,
+  "source_content_sha256": "5f7baab5a9c95a4ad65f77edb84e620c1d30dd5c3c8cbc156755c995a72a7ba3"
+}

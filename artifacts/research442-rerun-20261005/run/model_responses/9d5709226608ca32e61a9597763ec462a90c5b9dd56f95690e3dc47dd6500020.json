@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"下游景气度情况：1）实物工作量的角度来看，本周（5月32日）水泥出货率47.8%，环比+1.4pct，本周（5月28日）石油沥青装置开工率为27.7%，环比-3.1pct。\"}], \"reason\": \"5月32日不是合法日期，5月没有32日。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"根据总市值加权平均统计，本周（0530-0526）建筑指数上涨1.24%，沪深300板块下跌0.65%，建筑板块跑赢大盘1.89pct。\"}], \"reason\": \"本周区间写作0530-0526，起始5月30日晚于结束5月26日，时间顺序冲突。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"建筑设计及服务、园林工程、建筑装修板块涨幅居前，涨幅分别为4.01%、3.95%、2.99%，较沪深300分别取得4.67pct、4.6pct、3.64pct、4.64pct的正收益。\"}], \"reason\": \"仅列举三个板块，却给出四个相对沪深300收益数值，数量对应不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:43:28.474240+00:00",
+    "request_sha256": "072c81300e816d5b71c4093c27fe103490357e4514fc1ebc18109ccf2e5ce107",
+    "input_token_estimate": 15903,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278047",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7a4a3d5d29fa464aa49f62d3f0b3061c",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3767,
+    "output_tokens": 5374,
+    "usage_source": "provider",
+    "duration_seconds": 20.759861,
+    "cost_cny": "0.025263"
+  },
+  "cache_request": {
+    "key": "9d5709226608ca32e61a9597763ec462a90c5b9dd56f95690e3dc47dd6500020",
+    "purpose": "text_review.detect",
+    "messages_sha256": "072c81300e816d5b71c4093c27fe103490357e4514fc1ebc18109ccf2e5ce107"
+  }
+}

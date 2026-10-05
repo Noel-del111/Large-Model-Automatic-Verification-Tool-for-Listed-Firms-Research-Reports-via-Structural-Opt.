@@ -1,0 +1,417 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000633",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "计算错误",
+      "reason": "10个基点等于0.10%，从3.6%降至3.3%为下调30个基点，与所述10个基点不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 3891,
+          "end": 3959,
+          "text": "2）下调政策利率0.1pct，带动了5月20日公布5年期以上LPR同步下调10个基点，从3.6%降至3.3%，进一步降低购房者置业成本。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）下调政策利率0.1pct，带动了5月20日公布5年期以上LPR同步下调10个基点，从3.6%降至3.3%，进一步降低购房者置业成本。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 3891,
+          "end": 3959,
+          "text": "2）下调政策利率0.1pct，带动了5月20日公布5年期以上LPR同步下调10个基点，从3.6%降至3.3%，进一步降低购房者置业成本。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b44fbc4cc3cd6383a249ee0a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "本月平均溢价率为12.1%，不可能同时满足连续4个月超过20%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1981,
+          "end": 2020,
+          "text": "值得注意的是，二线城市本月平均溢价率仍有12.1%，已经连续4个月超过20%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "值得注意的是，二线城市本月平均溢价率仍有12.1%，已经连续4个月超过20%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1981,
+          "end": 2020,
+          "text": "值得注意的是，二线城市本月平均溢价率仍有12.1%，已经连续4个月超过20%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "840f2206ced276262a79c2b6",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "写明“1-4月累计”但后面没有给出累计销售额或同比数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2375,
+          "end": 2422,
+          "text": "百强房企4月全口径销售额同比-9.3%（前值：-11.1%），环比-11.8%；1-4月累计。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "百强房企4月全口径销售额同比-9.3%（前值：-11.1%），环比-11.8%；1-4月累计。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2375,
+          "end": 2422,
+          "text": "百强房企4月全口径销售额同比-9.3%（前值：-11.1%），环比-11.8%；1-4月累计。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c347e85b87f9e363862e20c2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“降准 pct”中缺少降准幅度的具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 3832,
+          "end": 3891,
+          "text": "5月7日国新办举办“一揽子金融政策支持稳市场稳预期”有关情况发布会。主要包括：1）降准 pct，提供长期流动性1万亿。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月7日国新办举办“一揽子金融政策支持稳市场稳预期”有关情况发布会。主要包括：1）降准 pct，提供长期流动性1万亿。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 3832,
+          "end": 3891,
+          "text": "5月7日国新办举办“一揽子金融政策支持稳市场稳预期”有关情况发布会。主要包括：1）降准 pct，提供长期流动性1万亿。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f34976afc9e200fbe7600ab4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "小标题“【房企】”插入百分数中，导致“-7.4%”被割裂，数值格式损坏。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2248,
+          "end": 2353,
+          "text": "一、二、三线城市土地成交建面同比增速为-29.2%、-\n\n【房企】7.4%、-12.7%；平均土地溢价率为13.1%、13.8%、2.8%，一、二线城市同比提升8.1、9.1pct，三线城市同比-0.4pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "一、二、三线城市土地成交建面同比增速为-29.2%、-\n\n【房企】7.4%、-12.7%；平均土地溢价率为13.1%、13.8%、2.8%，一、二线城市同比提升8.1、9.1pct，三线城市同比-0.4pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2248,
+          "end": 2353,
+          "text": "一、二、三线城市土地成交建面同比增速为-29.2%、-\n\n【房企】7.4%、-12.7%；平均土地溢价率为13.1%、13.8%、2.8%，一、二线城市同比提升8.1、9.1pct，三线城市同比-0.4pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7dc9ccb1af400c2f488837fc",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "日期“2025年6”缺少月份单位“月”，不符合日期书写格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 3168,
+          "end": 3261,
+          "text": "未来一年（2025年5月-2026年4月）行业国内外债券到期规模为7772亿元，其中2025年6、2025年7月、2026年4月是到期小高峰，到期规模分别为1003、867、806亿元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "未来一年（2025年5月-2026年4月）行业国内外债券到期规模为7772亿元，其中2025年6、2025年7月、2026年4月是到期小高峰，到期规模分别为1003、867、806亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 3168,
+          "end": 3261,
+          "text": "未来一年（2025年5月-2026年4月）行业国内外债券到期规模为7772亿元，其中2025年6、2025年7月、2026年4月是到期小高峰，到期规模分别为1003、867、806亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7aac202932a05be0627d752f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "模糊语言",
+      "reason": "未说明谁预期、何种预期以及调整什么措施，政策要点表达模糊。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 3578,
+          "end": 3600,
+          "text": "3）预期，所以会调整相关措施去提升推进进度。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "3）预期，所以会调整相关措施去提升推进进度。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 3578,
+          "end": 3600,
+          "text": "3）预期，所以会调整相关措施去提升推进进度。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0ab83b47f10d4ebfca37f55f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          4984
+        ]
+      ],
+      "estimated_input_tokens": 9198,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:31:11.379639+00:00",
+        "request_sha256": "b1a3b71fae2017ab9785b6aa240bfd1e40a30d12d50530d5c8469a91c937968e",
+        "input_token_estimate": 25696,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.28784",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e8206c921adc4bf196dd970e2a566e3d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 6220,
+        "output_tokens": 13654,
+        "usage_source": "provider",
+        "duration_seconds": 53.230434,
+        "cost_cny": "0.060836",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2）下调政策利率0.1pct，带动了5月20日公布5年期以上LPR同步下调10个基点，从3.6%降至3.3%，进一步降低购房者置业成本。"
+          }
+        ],
+        "reason": "10个基点等于0.10%，从3.6%降至3.3%为下调30个基点，与所述10个基点不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "值得注意的是，二线城市本月平均溢价率仍有12.1%，已经连续4个月超过20%。"
+          }
+        ],
+        "reason": "本月平均溢价率为12.1%，不可能同时满足连续4个月超过20%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "百强房企4月全口径销售额同比-9.3%（前值：-11.1%），环比-11.8%；1-4月累计。"
+          }
+        ],
+        "reason": "写明“1-4月累计”但后面没有给出累计销售额或同比数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "5月7日国新办举办“一揽子金融政策支持稳市场稳预期”有关情况发布会。主要包括：1）降准 pct，提供长期流动性1万亿。"
+          }
+        ],
+        "reason": "“降准 pct”中缺少降准幅度的具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "一、二、三线城市土地成交建面同比增速为-29.2%、-\n\n【房企】7.4%、-12.7%；平均土地溢价率为13.1%、13.8%、2.8%，一、二线城市同比提升8.1、9.1pct，三线城市同比-0.4pct。"
+          }
+        ],
+        "reason": "小标题“【房企】”插入百分数中，导致“-7.4%”被割裂，数值格式损坏。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "未来一年（2025年5月-2026年4月）行业国内外债券到期规模为7772亿元，其中2025年6、2025年7月、2026年4月是到期小高峰，到期规模分别为1003、867、806亿元。"
+          }
+        ],
+        "reason": "日期“2025年6”缺少月份单位“月”，不符合日期书写格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "模糊语言",
+        "spans": [
+          {
+            "text": "3）预期，所以会调整相关措施去提升推进进度。"
+          }
+        ],
+        "reason": "未说明谁预期、何种预期以及调整什么措施，政策要点表达模糊。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 4984,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 4984,
+    "processed_ranges": [
+      [
+        0,
+        4984
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 4984,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.003208,
+  "source_content_sha256": "1afa8b21cd272a44c3cbd7917dd0b968152dc1061d6d97c541054f719207c93b"
+}

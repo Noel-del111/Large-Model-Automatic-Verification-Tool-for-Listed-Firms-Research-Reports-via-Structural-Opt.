@@ -1,0 +1,256 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000552",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "spans": [
+        {
+          "start": 1562,
+          "end": 1633,
+          "text": "2024年9月31日以来，高层持续出台稳增长政策，降准降息，且加大房地产的支持政策，力度和密集程度高于以往，且强化对资本市场的重视和政策支持；"
+        }
+      ],
+      "reason": "该年月日不是有效公历日期。",
+      "status": "confirmed_error",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1562,
+          "end": 1572,
+          "text": "2024年9月31日"
+        },
+        {
+          "kind": "deterministic",
+          "check": "calendar_date",
+          "year": 2024,
+          "month": 9,
+          "day": 31
+        }
+      ],
+      "detector_id": "verified.calendar",
+      "validation": "deterministic",
+      "verification_spans": [
+        {
+          "start": 1562,
+          "end": 1572,
+          "text": "2024年9月31日"
+        }
+      ],
+      "id": "2a479ec19f423279d567df01",
+      "detector_ids": [
+        "hybrid.model",
+        "verified.calendar"
+      ],
+      "original_spans": [
+        {
+          "text": "2024年9月31日以来，高层持续出台稳增长政策，降准降息，且加大房地产的支持政策，力度和密集程度高于以往，且强化对资本市场的重视和政策支持；"
+        }
+      ],
+      "review_priority": "confirmed"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“保持在/吨水平”中斜杠前缺少铁水日均产量的具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1056,
+          "end": 1100,
+          "text": "但当前焦化厂开工率并未出现明显下滑，铁水日均产量仍保持在/吨水平，预计焦煤价格仍有支撑。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "但当前焦化厂开工率并未出现明显下滑，铁水日均产量仍保持在/吨水平，预计焦煤价格仍有支撑。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1056,
+          "end": 1100,
+          "text": "但当前焦化厂开工率并未出现明显下滑，铁水日均产量仍保持在/吨水平，预计焦煤价格仍有支撑。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1923688bcf183c8fe92e97ff",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一回顾段落内“否极泰来重视煤炭配置”连续重复一次，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 31,
+          "end": 71,
+          "text": "本周要闻回顾：煤价企稳和环渤海港去库，否极泰来重视煤炭配置，否极泰来重视煤炭配置"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周要闻回顾：煤价企稳和环渤海港去库，否极泰来重视煤炭配置，否极泰来重视煤炭配置"
+        }
+      ],
+      "spans": [
+        {
+          "start": 31,
+          "end": 71,
+          "text": "本周要闻回顾：煤价企稳和环渤海港去库，否极泰来重视煤炭配置，否极泰来重视煤炭配置"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e298a53f4b84cd64fb833f26",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2083
+        ]
+      ],
+      "estimated_input_tokens": 6677,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:15:30.930282+00:00",
+        "request_sha256": "f162c6a79af2719987daa288c9643015a3dfb661afa35e19f197436216ab62c3",
+        "input_token_estimate": 18534,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280678",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "5103ef36e6a946c39aa6b725618133e7",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4370,
+        "output_tokens": 5929,
+        "usage_source": "provider",
+        "duration_seconds": 22.834201,
+        "cost_cny": "0.028086",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2024年9月31日以来，高层持续出台稳增长政策，降准降息，且加大房地产的支持政策，力度和密集程度高于以往，且强化对资本市场的重视和政策支持；"
+          }
+        ],
+        "reason": "2024年9月只有30天，不存在9月31日，该日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "但当前焦化厂开工率并未出现明显下滑，铁水日均产量仍保持在/吨水平，预计焦煤价格仍有支撑。"
+          }
+        ],
+        "reason": "“保持在/吨水平”中斜杠前缺少铁水日均产量的具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "本周要闻回顾：煤价企稳和环渤海港去库，否极泰来重视煤炭配置，否极泰来重视煤炭配置"
+          }
+        ],
+        "reason": "同一回顾段落内“否极泰来重视煤炭配置”连续重复一次，无新增信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2083,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2083,
+    "processed_ranges": [
+      [
+        0,
+        2083
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2083,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001844,
+  "source_content_sha256": "706eda0f3942432f653980b4477183203eb969a5da38fdac14c72190966d1ade"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"贝达药业()\"}], \"reason\": \"公司名称后股票代码括号为空，缺少证券代码属性值。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"2025Q1销售费用为2.80亿元，销售费用率为30.53%，同比基本持平；研发费用为亿元，研发费用率为12.35%，同比下降8.41pct；管理费用为1.33亿元，管理费用率为14.48%，同比下降1.11pct。\"}], \"reason\": \"2025Q1研发费用在“为”与“亿元”之间无数字，应填数值。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"目前一线治疗ALK阳性NSCLC适应症已通过谈判纳入医保目录，并于2025年0月获得NCCN NSCLC临床诊疗指南推荐。\"}], \"reason\": \"月份为0，不符合日历月份取值范围。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"公司在EGFRmu NSCLC领域持续布局，拥有4款在研品种，包括MCLA-129（EGFR/cmet双抗）、CFT8919(EGFR蛋白降解剂）、四代EGFR-TKI以及。\"}], \"reason\": \"列示4款在研品种，仅列出MCLA-129、CFT8919、四代EGFR-TKI，第四款名称缺失。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"对内持续布局肺癌领域产品组合，保持竞争力，对外拓展合作，植物源白蛋白上市申请审评中\"}, {\"text\": \"战略合作产品植物源重组人血清白蛋白注射液的上市申请尚未提交至NMPA，且未被纳入优先审评程序。\"}], \"reason\": \"标题称植物源白蛋白上市申请审评中，正文称尚未提交至NMPA，两者不能同时成立。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"我们预计公司2027-2025年营业收入为37.02、45.16和51.62亿元。\"}], \"reason\": \"预测年份区间首尾倒置，2027早于2025不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:52:12.124721+00:00",
+    "request_sha256": "33cd304527eff87212dfbd3aa4a5f836b2223de3450c55a10a62c94a55763571",
+    "input_token_estimate": 16412,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278556",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "cde180258caf408faa920af7e7568953",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3931,
+    "output_tokens": 7849,
+    "usage_source": "provider",
+    "duration_seconds": 30.123135,
+    "cost_cny": "0.035327"
+  },
+  "cache_request": {
+    "key": "3a9e28fa132b98bf24960779b0b2ddd75a0a360cd8a5258a9587d74e10455619",
+    "purpose": "text_review.detect",
+    "messages_sha256": "33cd304527eff87212dfbd3aa4a5f836b2223de3450c55a10a62c94a55763571"
+  }
+}

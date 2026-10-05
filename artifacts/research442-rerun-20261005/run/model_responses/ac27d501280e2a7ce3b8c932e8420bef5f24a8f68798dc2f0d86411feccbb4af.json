@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"我们预计2027-2025年公司营业收入为32/39/50亿元，归母净利润为4.5/6.3/8.9亿元，对应PE为31/22/16X，维持“买入”评级。\"\n        }\n      ],\n      \"reason\": \"预测区间写作“2027-2025年”，起始年份晚于结束年份，时间顺序不成立。\"\n    },\n    {\n      \"error_type\": \"时间矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"叶片机匣加工涂层项目从22年7月开始建设，建设期24个月，预计26年6月完成建设。\"\n        }\n      ],\n      \"reason\": \"项目从22年7月开始，建设期24个月应于24年7月完成，与预计26年6月完成冲突。\"\n    },\n    {\n      \"error_type\": \"时间矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"先进核能材料及关键零部件智能化升级项目从24年11月开始建设，建设期24个月，预计26年10月完成建设。\"\n        }\n      ],\n      \"reason\": \"项目从24年11月开始，建设期24个月应于26年11月完成，与预计26年10月完成冲突。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"公司预计债权达产后每年可带来收入21.09亿元、净利润3.61-3.77亿元，为公司带来业绩新增量。\"\n        }\n      ],\n      \"reason\": \"“债权”不能“达产”，应为可转债项目或募投项目，术语搭配不当。\"\n    },\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"截至2025年4月30日，公司两机领域的12.28亿元在手订单中，叶片、机匣金额为10.17亿元，其中包含加工涂层制造工序的有3.48亿元，包括2.45和1.47亿元的铸件毛坯和加工涂层订单，加工涂层订单在含有加工涂层工序的订单中占比已达42%，看好公司未来加工涂层订单持续突破。\"\n        }\n      ],\n      \"reason\": \"包含加工涂层工序的订单为3.48亿元，但列示的2.45亿元和1.47亿元合计为3.92亿元，两者冲突。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:42:12.080153+00:00",
+    "request_sha256": "92a217bce6bfe711c62ae2e27398d0c69a6c8318130fe64aa245b9d68d3d3d1f",
+    "input_token_estimate": 15286,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27743",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f2b7cce234414ac799eabce8e5c403e2",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3612,
+    "output_tokens": 8570,
+    "usage_source": "provider",
+    "duration_seconds": 33.161995,
+    "cost_cny": "0.037892"
+  },
+  "cache_request": {
+    "key": "ac27d501280e2a7ce3b8c932e8420bef5f24a8f68798dc2f0d86411feccbb4af",
+    "purpose": "text_review.detect",
+    "messages_sha256": "92a217bce6bfe711c62ae2e27398d0c69a6c8318130fe64aa245b9d68d3d3d1f"
+  }
+}

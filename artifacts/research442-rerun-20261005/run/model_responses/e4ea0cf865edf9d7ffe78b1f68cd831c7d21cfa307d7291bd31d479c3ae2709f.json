@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"整体来看，4月全球逆变器出口57.72亿分，环比增长27.70%，同比增长17.04%，4月全球逆变器出口数据表现亮眼，同环比持续回升，实现高增速。\"}],\"reason\":\"出口金额单位应为“亿元”，写成“亿分”不是正确的货币单位。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"2025年4-1月，我国逆变器累计出口金额为179.24亿元，同比增长9.37%，保持稳定。\"}],\"reason\":\"累计出口期间应为2025年1-4月，写成“4-1月”时间顺序颠倒、不成立。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"分国家来看，2025年4月，我国对沙特、阿联酋、印度、巴基斯坦逆变器出口金额分别为0.33、0.12、1.66、2.73、3.58亿元，分别同比-91.39%、+133.17%、+0.86%、+2.99%。\"}],\"reason\":\"列出4个国家却给出5个出口金额，同比项仅4个，数据项数量不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:29:52.648076+00:00",
+    "request_sha256": "bbb39d4fd68627106c4b49c3dd43176aa639d5f2f062582d946ff35c3c722c26",
+    "input_token_estimate": 17989,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280133",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4fd6ede163c34e5c90d8005be73f01a8",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4306,
+    "output_tokens": 8366,
+    "usage_source": "provider",
+    "duration_seconds": 33.119332,
+    "cost_cny": "0.03777"
+  },
+  "cache_request": {
+    "key": "e4ea0cf865edf9d7ffe78b1f68cd831c7d21cfa307d7291bd31d479c3ae2709f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "bbb39d4fd68627106c4b49c3dd43176aa639d5f2f062582d946ff35c3c722c26"
+  }
+}

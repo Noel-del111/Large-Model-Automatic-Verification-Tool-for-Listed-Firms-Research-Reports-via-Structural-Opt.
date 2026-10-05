@@ -1,0 +1,241 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000623",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "出口金额单位应为“亿元”，写成“亿分”不是正确的货币单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 73,
+          "end": 147,
+          "text": "整体来看，4月全球逆变器出口57.72亿分，环比增长27.70%，同比增长17.04%，4月全球逆变器出口数据表现亮眼，同环比持续回升，实现高增速。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "整体来看，4月全球逆变器出口57.72亿分，环比增长27.70%，同比增长17.04%，4月全球逆变器出口数据表现亮眼，同环比持续回升，实现高增速。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 73,
+          "end": 147,
+          "text": "整体来看，4月全球逆变器出口57.72亿分，环比增长27.70%，同比增长17.04%，4月全球逆变器出口数据表现亮眼，同环比持续回升，实现高增速。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "beb1d2a3a9a87742f311af71",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "累计出口期间应为2025年1-4月，写成“4-1月”时间顺序颠倒、不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 147,
+          "end": 193,
+          "text": "2025年4-1月，我国逆变器累计出口金额为179.24亿元，同比增长9.37%，保持稳定。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4-1月，我国逆变器累计出口金额为179.24亿元，同比增长9.37%，保持稳定。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 147,
+          "end": 193,
+          "text": "2025年4-1月，我国逆变器累计出口金额为179.24亿元，同比增长9.37%，保持稳定。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7b8d7c8368766161e72cebbf",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "列出4个国家却给出5个出口金额，同比项仅4个，数据项数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 614,
+          "end": 717,
+          "text": "分国家来看，2025年4月，我国对沙特、阿联酋、印度、巴基斯坦逆变器出口金额分别为0.33、0.12、1.66、2.73、3.58亿元，分别同比-91.39%、+133.17%、+0.86%、+2.99%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分国家来看，2025年4月，我国对沙特、阿联酋、印度、巴基斯坦逆变器出口金额分别为0.33、0.12、1.66、2.73、3.58亿元，分别同比-91.39%、+133.17%、+0.86%、+2.99%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 614,
+          "end": 717,
+          "text": "分国家来看，2025年4月，我国对沙特、阿联酋、印度、巴基斯坦逆变器出口金额分别为0.33、0.12、1.66、2.73、3.58亿元，分别同比-91.39%、+133.17%、+0.86%、+2.99%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cb2686935f96c51a45af9b49",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2014
+        ]
+      ],
+      "estimated_input_tokens": 6459,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:29:52.648076+00:00",
+        "request_sha256": "bbb39d4fd68627106c4b49c3dd43176aa639d5f2f062582d946ff35c3c722c26",
+        "input_token_estimate": 17989,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280133",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4fd6ede163c34e5c90d8005be73f01a8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4306,
+        "output_tokens": 8366,
+        "usage_source": "provider",
+        "duration_seconds": 33.119332,
+        "cost_cny": "0.03777",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "整体来看，4月全球逆变器出口57.72亿分，环比增长27.70%，同比增长17.04%，4月全球逆变器出口数据表现亮眼，同环比持续回升，实现高增速。"
+          }
+        ],
+        "reason": "出口金额单位应为“亿元”，写成“亿分”不是正确的货币单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年4-1月，我国逆变器累计出口金额为179.24亿元，同比增长9.37%，保持稳定。"
+          }
+        ],
+        "reason": "累计出口期间应为2025年1-4月，写成“4-1月”时间顺序颠倒、不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "分国家来看，2025年4月，我国对沙特、阿联酋、印度、巴基斯坦逆变器出口金额分别为0.33、0.12、1.66、2.73、3.58亿元，分别同比-91.39%、+133.17%、+0.86%、+2.99%。"
+          }
+        ],
+        "reason": "列出4个国家却给出5个出口金额，同比项仅4个，数据项数量不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2014,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2014,
+    "processed_ranges": [
+      [
+        0,
+        2014
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2014,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001755,
+  "source_content_sha256": "154427e6c472ab0702178ed232eeb9617ca74e4eeaad9e1c60753e756c555aa8"
+}

@@ -1,0 +1,373 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000702",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年”不是合法年份，无法与1995年构成有效时间区间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 440,
+          "end": 479,
+          "text": "1995年至129年，光固化涂料在世界工业涂料中的占比由3.5%增长至10%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1995年至129年，光固化涂料在世界工业涂料中的占比由3.5%增长至10%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 440,
+          "end": 479,
+          "text": "1995年至129年，光固化涂料在世界工业涂料中的占比由3.5%增长至10%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c40f4dbae9f7dab914f5f9ca",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“%-5%”缺少百分号前的具体数字，数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 517,
+          "end": 575,
+          "text": "光引发剂作为光固化材料的核心组成部分，在光固化材料中占比为%-5%，成本一般占到光固化产品整体成本的10%-15%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "光引发剂作为光固化材料的核心组成部分，在光固化材料中占比为%-5%，成本一般占到光固化产品整体成本的10%-15%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 517,
+          "end": 575,
+          "text": "光引发剂作为光固化材料的核心组成部分，在光固化材料中占比为%-5%，成本一般占到光固化产品整体成本的10%-15%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7cbf4db8f5623a543b5e5248",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "产值从31.13亿元增至45.93亿元，却表述为“降低至”，数值增减方向与措辞矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 575,
+          "end": 627,
+          "text": "近年来，光引发剂产值由2018年的31.13亿元降低至2023年的45.93亿元，CAGR为8.09%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近年来，光引发剂产值由2018年的31.13亿元降低至2023年的45.93亿元，CAGR为8.09%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 575,
+          "end": 627,
+          "text": "近年来，光引发剂产值由2018年的31.13亿元降低至2023年的45.93亿元，CAGR为8.09%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a3b1dd909aa2224587431105",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "3.84万吨到6.1万吨四年复合增速应约12.2%，而非2.27%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 627,
+          "end": 668,
+          "text": "产量由2019年的3.84万吨增长至2023年的6.1万吨，CAGR为2.27%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "产量由2019年的3.84万吨增长至2023年的6.1万吨，CAGR为2.27%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 627,
+          "end": 668,
+          "text": "产量由2019年的3.84万吨增长至2023年的6.1万吨，CAGR为2.27%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "13159cbeecac8de602671534",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "2.54除以12.53约20.27%，与33.21%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 728,
+          "end": 775,
+          "text": "2023年中国光固化原材料出口12.53万吨，其中光引发剂出口2.54万吨，占比33.21%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2023年中国光固化原材料出口12.53万吨，其中光引发剂出口2.54万吨，占比33.21%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 728,
+          "end": 775,
+          "text": "2023年中国光固化原材料出口12.53万吨，其中光引发剂出口2.54万吨，占比33.21%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "05798eff4b8f95b7caacae4f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "企业名称为6个，产能数值却有7个，数量不对应，无法逐一匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 875,
+          "end": 954,
+          "text": "目前我国光引发剂头部企业久日新材、强力新材、沃凯珑、IGM、扬帆新材、固润科技国内产能分别为2.285、1.66、1.3、1.2、0.8、0.5、0.8万吨。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前我国光引发剂头部企业久日新材、强力新材、沃凯珑、IGM、扬帆新材、固润科技国内产能分别为2.285、1.66、1.3、1.2、0.8、0.5、0.8万吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 875,
+          "end": 954,
+          "text": "目前我国光引发剂头部企业久日新材、强力新材、沃凯珑、IGM、扬帆新材、固润科技国内产能分别为2.285、1.66、1.3、1.2、0.8、0.5、0.8万吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "314a6ede5809ba8de957a95a",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1302
+        ]
+      ],
+      "estimated_input_tokens": 5899,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:16:43.730598+00:00",
+        "request_sha256": "72ad86f75bf33b5ccea6e079b0a050da3134c93340eecaf60d41b3517dd12775",
+        "input_token_estimate": 16389,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278533",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3fd30f7897644609b9286028ecd2157f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3832,
+        "output_tokens": 7405,
+        "usage_source": "provider",
+        "duration_seconds": 27.751435,
+        "cost_cny": "0.033452",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "1995年至129年，光固化涂料在世界工业涂料中的占比由3.5%增长至10%。"
+          }
+        ],
+        "reason": "“129年”不是合法年份，无法与1995年构成有效时间区间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "光引发剂作为光固化材料的核心组成部分，在光固化材料中占比为%-5%，成本一般占到光固化产品整体成本的10%-15%。"
+          }
+        ],
+        "reason": "“%-5%”缺少百分号前的具体数字，数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "近年来，光引发剂产值由2018年的31.13亿元降低至2023年的45.93亿元，CAGR为8.09%；"
+          }
+        ],
+        "reason": "产值从31.13亿元增至45.93亿元，却表述为“降低至”，数值增减方向与措辞矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "产量由2019年的3.84万吨增长至2023年的6.1万吨，CAGR为2.27%。"
+          }
+        ],
+        "reason": "3.84万吨到6.1万吨四年复合增速应约12.2%，而非2.27%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2023年中国光固化原材料出口12.53万吨，其中光引发剂出口2.54万吨，占比33.21%。"
+          }
+        ],
+        "reason": "2.54除以12.53约20.27%，与33.21%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "目前我国光引发剂头部企业久日新材、强力新材、沃凯珑、IGM、扬帆新材、固润科技国内产能分别为2.285、1.66、1.3、1.2、0.8、0.5、0.8万吨。"
+          }
+        ],
+        "reason": "企业名称为6个，产能数值却有7个，数量不对应，无法逐一匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1302,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1302,
+    "processed_ranges": [
+      [
+        0,
+        1302
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1302,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00168,
+  "source_content_sha256": "8cb6893c6396ea5e5c7b881e08c549325e100a31e31f8d59e5a7818f02323216"
+}

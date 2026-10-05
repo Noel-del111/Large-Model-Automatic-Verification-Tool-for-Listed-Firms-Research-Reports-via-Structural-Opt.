@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"本周上涨个股数量家，下跌个股102家\"\n        }\n      ],\n      \"reason\": \"“上涨个股数量”后缺少具体家数，仅有单位“家”，数值信息缺失。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"总交易金额达519美元\"\n        }\n      ],\n      \"reason\": \"2024年中国药企License-out总交易金额通常以亿美元计，519美元缺少“亿”字，单位量级错误。\"\n    },\n    {\n      \"error_type\": \"格式错误\",\n      \"spans\": [\n        {\n          \"text\": \"原研药品共有704a款\"\n        }\n      ],\n      \"reason\": \"药品数量“704a款”中混入字母a，不符合数字格式。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:13:26.035241+00:00",
+    "request_sha256": "a1c092c201d4774a96c1513ba3f70e2c70ca5eb35e1016c116421a59d2695a82",
+    "input_token_estimate": 17163,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279307",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "78b061ef80974ac6aec30762b7408775",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4043,
+    "output_tokens": 3542,
+    "usage_source": "provider",
+    "duration_seconds": 15.704404,
+    "cost_cny": "0.018211"
+  },
+  "cache_request": {
+    "key": "f6be14a712bc6e53b4c10547bdf2e1d87478ee6f19015c618e7dd7794ce4c05c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a1c092c201d4774a96c1513ba3f70e2c70ca5eb35e1016c116421a59d2695a82"
+  }
+}

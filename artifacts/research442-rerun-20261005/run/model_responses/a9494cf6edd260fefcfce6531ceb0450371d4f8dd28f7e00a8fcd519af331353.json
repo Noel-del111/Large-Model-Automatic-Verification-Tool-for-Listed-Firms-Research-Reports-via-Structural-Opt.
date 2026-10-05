@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2024年实现营收22.49元，同增38.29%；\",\"start\":74,\"end\":109}],\"reason\":\"营收金额写为“22.49元”，缺少“亿”字，与后文亿元口径及公司规模明显不符。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"实现扣非归母净利润0.58亿元，同增%。\",\"start\":176,\"end\":201}],\"reason\":\"扣非归母净利润的同比增速仅写“同增%”，明确数值位置为空。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"其中通用动力机械产品毛利率同减5.47pct至13.00%，高压清洗剂产品毛利率同减3.92pct至20.62%。\",\"start\":337,\"end\":397}],\"reason\":\"公司产品为“高压清洗机”，此处误写为“高压清洗剂”，产品类别表述错误。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"分产品来看，2024年公司通用动力机械、高压清洗机、配件分别实现收入10.02、10.85、0.72亿元，同比增速分别为14.20%、70.07%、56.93%、23.12%，储能产品实现收入0.07亿元。\",\"start\":217,\"end\":325}],\"reason\":\"收入列举三项（通用、高压清洗机、配件），同比增速却列四项，收入项与增速项数量不匹配。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"公司新建年产140万台通用动力机械产品工程建设项目预计于2024年下半年完成主体工程建设，并逐步、分批释放产能。\",\"start\":664,\"end\":736}],\"reason\":\"报告已发布2024年报和2025一季报，仍称2024年下半年为“预计”完成，时间关系冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:38:24.168493+00:00",
+    "request_sha256": "33e94f09cb7f2c5e1d2a194eb7c0a5f72020af25ddeab9c76098085330d3d437",
+    "input_token_estimate": 15946,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27809",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "368c676edc5e460381cd55022d4ed00c",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3806,
+    "output_tokens": 11417,
+    "usage_source": "provider",
+    "duration_seconds": 46.00479,
+    "cost_cny": "0.049474"
+  },
+  "cache_request": {
+    "key": "a9494cf6edd260fefcfce6531ceb0450371d4f8dd28f7e00a8fcd519af331353",
+    "purpose": "text_review.detect",
+    "messages_sha256": "33e94f09cb7f2c5e1d2a194eb7c0a5f72020af25ddeab9c76098085330d3d437"
+  }
+}

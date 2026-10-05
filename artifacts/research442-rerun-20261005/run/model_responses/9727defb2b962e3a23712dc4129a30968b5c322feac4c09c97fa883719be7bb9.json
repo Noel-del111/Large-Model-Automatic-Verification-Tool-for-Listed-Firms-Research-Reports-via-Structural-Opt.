@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"根据芯思想研究院发布的224年全球委外封测榜单\"}], \"reason\": \"年份“224年”不成立，应为2024年。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"2025年计划固定资产投资元，主要用于扩大先进技术产能。\"}], \"reason\": \"“固定资产投资”后缺少数值，仅剩单位“元”。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"根据公司2025年1月18日《》\"}], \"reason\": \"书名号内文件名称缺失，无法核验公告来源。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"公司在2025年Q1淡季仍实现营收93.35亿分\"}], \"reason\": \"营收单位“亿分”错误，应为“亿元”。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:46:05.862399+00:00",
+    "request_sha256": "d22882a5d48d205c4adb7aab77c133b54ac44cd8b42756eb0e8add17cbe44988",
+    "input_token_estimate": 17894,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280038",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "77920b5e0bbd4e0499591bc38bab2bfb",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4079,
+    "output_tokens": 7122,
+    "usage_source": "provider",
+    "duration_seconds": 28.859321,
+    "cost_cny": "0.032567"
+  },
+  "cache_request": {
+    "key": "9727defb2b962e3a23712dc4129a30968b5c322feac4c09c97fa883719be7bb9",
+    "purpose": "text_review.detect",
+    "messages_sha256": "d22882a5d48d205c4adb7aab77c133b54ac44cd8b42756eb0e8add17cbe44988"
+  }
+}

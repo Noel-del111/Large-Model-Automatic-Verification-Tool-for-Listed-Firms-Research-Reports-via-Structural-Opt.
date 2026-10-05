@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2）业绩端主要由铜加工产品贡献：公司吨毛利较为稳定，2019-2009年期间吨毛利处于3000-4500元/吨，伴随体量扩张，公司归母净利从1.8亿增长至10.6亿，CAGR为20%，2020-2024年，受行业竞争加剧，吨毛利在2000-3000元/吨波动，截至2024年底公司归母净利7亿元，其中铜加工贡献毛利87%。\"}],\"reason\":\"时间区间写成2019-2009年，起始年份晚于结束年份，期间关系冲突。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"截至2024年13月，紫铜及黄铜管消耗量分别为92/55万吨，合计消耗147万吨，yoy+18%。\"}],\"reason\":\"2024年没有13月，日期本身不成立。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"1)营收随规模增长稳健提升：2009-2024年营收CAGR为19%，增速稳健，与公司铜加工行业销售量增长匹配，铜加工行业销售量从14.8万吨增长至100.6万吨，CAGR为19%，2024年公司铜加工行业和贸易营收占比分别为71%/29%。\"}],\"reason\":\"14.8万吨到100.6万吨按2009-2024年15年计，CAGR约13.6%，并非19%。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"公司铜箔产品伴随下游新能源汽车发展需求稳健，但现阶段产能过剩，吨毛利下降抑制产量释放，截至2024年12月中国4.5μm/6μm铜箔吨加工费分别为3.25/1.9元/吨，较2021年高点7.65/4.5万元/吨降幅较大，抑制产量进一步释放。\"}],\"reason\":\"2024年吨加工费用“元/吨”，2021年高点却用“万元/吨”，比较单位不一致。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"1）2024年铜箔/铜管材产量增速为铜材产品增速前二，中国铜加工材产量近5年稳定在2000万吨以上，CAGR为3%。\"}],\"reason\":\"2024年产量2125万吨，按近5年CAGR3%反推五年前约1833万吨，低于2000万吨，与“稳定在2000万吨以上”冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:33:47.353077+00:00",
+    "request_sha256": "991b4548db8804c04c3189b219b8f338ec6c645f000303e9a36327e217ea5646",
+    "input_token_estimate": 16701,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278845",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4ad36e168c6642f1ac1f9423b96cd41a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3990,
+    "output_tokens": 11440,
+    "usage_source": "provider",
+    "duration_seconds": 44.80207,
+    "cost_cny": "0.04975"
+  },
+  "cache_request": {
+    "key": "0caae0172e0996b9c1aa86366867b5fab26b0f0a518914de7e5c0a55896d2b2c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "991b4548db8804c04c3189b219b8f338ec6c645f000303e9a36327e217ea5646"
+  }
+}

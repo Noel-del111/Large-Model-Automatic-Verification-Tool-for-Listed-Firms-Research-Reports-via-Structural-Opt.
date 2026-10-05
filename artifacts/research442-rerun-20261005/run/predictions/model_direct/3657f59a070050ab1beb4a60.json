@@ -1,0 +1,372 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000626",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "COMEX金价通常以美元/盎司报价，3313.10美元/克量纲明显错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 572,
+          "end": 623,
+          "text": "本周COMEX金价-1.33%至3313.10美元/克，美债10年期TIPS下降11BP至2.07%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周COMEX金价-1.33%至3313.10美元/克，美债10年期TIPS下降11BP至2.07%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 572,
+          "end": 623,
+          "text": "本周COMEX金价-1.33%至3313.10美元/克，美债10年期TIPS下降11BP至2.07%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6432d87b2465a1b7b17246fc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "海外氧化镝、氧化铽价格一般以美元/公斤报价，760/2800美元/吨量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 840,
+          "end": 905,
+          "text": "本周海外氧化镝、氧化铽价格环比分别持平/上涨至760/2800美元/吨，出口管制后的海外价格大涨兑现，类比锑，内盘价格亦触底回升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周海外氧化镝、氧化铽价格环比分别持平/上涨至760/2800美元/吨，出口管制后的海外价格大涨兑现，类比锑，内盘价格亦触底回升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 840,
+          "end": 905,
+          "text": "本周海外氧化镝、氧化铽价格环比分别持平/上涨至760/2800美元/吨，出口管制后的海外价格大涨兑现，类比锑，内盘价格亦触底回升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aeccbe3c55e531d738604769",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“至万元/吨”前缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1608,
+          "end": 1647,
+          "text": "本周LME镍价-1.7%至1.53万美元/吨，上期所镍价-2.1%至万元/吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周LME镍价-1.7%至1.53万美元/吨，上期所镍价-2.1%至万元/吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1608,
+          "end": 1647,
+          "text": "本周LME镍价-1.7%至1.53万美元/吨，上期所镍价-2.1%至万元/吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "709ad9ff4cf17b4d5f5672d0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "5.62+4.16+3.37=13.15，与合计13.16不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1396,
+          "end": 1502,
+          "text": "本周碳酸锂三大样本库存整体下降，其中冶炼厂库存5.62万吨，环比-0.08万吨；下游库存4.16万吨，环比+0.08万吨；其他环节库存3.37万吨，环比-0.02万吨；合计库存13.16万吨，环比-0.02万吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周碳酸锂三大样本库存整体下降，其中冶炼厂库存5.62万吨，环比-0.08万吨；下游库存4.16万吨，环比+0.08万吨；其他环节库存3.37万吨，环比-0.02万吨；合计库存13.16万吨，环比-0.02万吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1396,
+          "end": 1502,
+          "text": "本周碳酸锂三大样本库存整体下降，其中冶炼厂库存5.62万吨，环比-0.08万吨；下游库存4.16万吨，环比+0.08万吨；其他环节库存3.37万吨，环比-0.02万吨；合计库存13.16万吨，环比-0.02万吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "348cb29482f8547e96c4a812",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一库存下降信息重复表述。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 106,
+          "end": 188,
+          "text": "截至本周四，全国主流地区铜库存环比周一降0.10万吨至13.87万吨，继续表现去库。全国主流地区铜库存自周一以来累计减少0.10万吨，总量维持在13.87万吨水平。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至本周四，全国主流地区铜库存环比周一降0.10万吨至13.87万吨，继续表现去库。全国主流地区铜库存自周一以来累计减少0.10万吨，总量维持在13.87万吨水平。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 106,
+          "end": 188,
+          "text": "截至本周四，全国主流地区铜库存环比周一降0.10万吨至13.87万吨，继续表现去库。全国主流地区铜库存自周一以来累计减少0.10万吨，总量维持在13.87万吨水平。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d45c5a9f834cca3ddb2a54b8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一信息连续重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1119,
+          "end": 1155,
+          "text": "钼精矿、钼铁库存去库至历史较低水平。钼精矿、钼铁库存去库至历史较低水平。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "钼精矿、钼铁库存去库至历史较低水平。钼精矿、钼铁库存去库至历史较低水平。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1119,
+          "end": 1155,
+          "text": "钼精矿、钼铁库存去库至历史较低水平。钼精矿、钼铁库存去库至历史较低水平。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c31312461f5310cc664b153d",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1722
+        ]
+      ],
+      "estimated_input_tokens": 6173,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:16:46.967312+00:00",
+        "request_sha256": "787d6e5635798d870ffc5f15e5be65d90841491078f22887ae666166a768913d",
+        "input_token_estimate": 17203,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279347",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3b9283f947db4ec4bbb3ebf0b6cdfd9e",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4221,
+        "output_tokens": 9939,
+        "usage_source": "provider",
+        "duration_seconds": 38.214682,
+        "cost_cny": "0.043977"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本周COMEX金价-1.33%至3313.10美元/克，美债10年期TIPS下降11BP至2.07%。"
+          }
+        ],
+        "reason": "COMEX金价通常以美元/盎司报价，3313.10美元/克量纲明显错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本周海外氧化镝、氧化铽价格环比分别持平/上涨至760/2800美元/吨，出口管制后的海外价格大涨兑现，类比锑，内盘价格亦触底回升。"
+          }
+        ],
+        "reason": "海外氧化镝、氧化铽价格一般以美元/公斤报价，760/2800美元/吨量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "本周LME镍价-1.7%至1.53万美元/吨，上期所镍价-2.1%至万元/吨。"
+          }
+        ],
+        "reason": "“至万元/吨”前缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "本周碳酸锂三大样本库存整体下降，其中冶炼厂库存5.62万吨，环比-0.08万吨；下游库存4.16万吨，环比+0.08万吨；其他环节库存3.37万吨，环比-0.02万吨；合计库存13.16万吨，环比-0.02万吨。"
+          }
+        ],
+        "reason": "5.62+4.16+3.37=13.15，与合计13.16不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "截至本周四，全国主流地区铜库存环比周一降0.10万吨至13.87万吨，继续表现去库。全国主流地区铜库存自周一以来累计减少0.10万吨，总量维持在13.87万吨水平。"
+          }
+        ],
+        "reason": "同一库存下降信息重复表述。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "钼精矿、钼铁库存去库至历史较低水平。钼精矿、钼铁库存去库至历史较低水平。"
+          }
+        ],
+        "reason": "同一信息连续重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1722,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1722,
+    "processed_ranges": [
+      [
+        0,
+        1722
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 38.242011,
+  "source_content_sha256": "a3792cfd5e869d2ef2154860cc7cb89f12156fedcf460f1ce58b96c902b98beb"
+}

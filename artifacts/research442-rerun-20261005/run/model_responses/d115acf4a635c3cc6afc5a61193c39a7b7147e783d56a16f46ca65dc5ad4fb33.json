@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"5月33日，Solaredge公布2024年一季度业绩。\"}], \"reason\": \"月份为5月时日期不可能为33日，该日期本身不成立。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"公司GAAP毛利率连续两个季度为负，23Q4/24Q1分别为-17.9%和%；\"}], \"reason\": \"24Q1的GAAP毛利率数值未写出，百分比前为空，无法判断具体数值。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"公司24Q1电池平均售价0.38元/Wh（23Q4为0.40美元/Wh）；\"}], \"reason\": \"同一电池平均售价指标前后分别用人民币元和美元计价，单位不一致且未说明换算。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"其中太阳能业务由正转负（4.0%→-3.5%），非太阳能业务毛利率大幅减少（-2.2%→47.2%）。\"}, {\"text\": \"公司非太阳能业务毛利率降幅较大，主要原因是电池产品结构发生变化，单相电池占比增加，单相电池产品使用的电芯为前期价格较高的库存，导致毛利率降幅较大。\"}], \"reason\": \"非太阳能业务毛利率从-2.2%升至47.2%，却称大幅减少、降幅较大，数值变化方向与文字描述相反。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:08:19.018728+00:00",
+    "request_sha256": "e4b8ccd5d24105c1dcb889d31ff111e19372e1efe900a09d8d66b8193b637981",
+    "input_token_estimate": 18113,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280257",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9572117618674be9b0501832eda9a70a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4225,
+    "output_tokens": 5847,
+    "usage_source": "provider",
+    "duration_seconds": 22.047876,
+    "cost_cny": "0.027613"
+  },
+  "cache_request": {
+    "key": "d115acf4a635c3cc6afc5a61193c39a7b7147e783d56a16f46ca65dc5ad4fb33",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e4b8ccd5d24105c1dcb889d31ff111e19372e1efe900a09d8d66b8193b637981"
+  }
+}

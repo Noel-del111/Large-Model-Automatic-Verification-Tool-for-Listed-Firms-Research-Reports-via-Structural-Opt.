@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"茶饮：霸王茶姬公布2025Q13业绩，各项数据实现稳健增长。\"}], \"reason\": \"2025Q13中季度数13不合法，一年只有四个季度。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\"}, {\"text\": \"麦角硫因凭借“线粒体靶向修复”、“30倍于辅酶Q10的抗氧化效能”等科学标签，成为高端抗衰产品核心卖点。\"}], \"reason\": \"同一句话连续出现两次，信息重复，没有新增内容。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"计划2025年内地新增 家门店，海外加速拓店。\"}], \"reason\": \"“新增”与“家门店”之间缺少具体门店数量。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:24:48.263035+00:00",
+    "request_sha256": "afd04fe9430a01cf132fb7922a65627c7b437cb7dc524ad1d6c1dfa89f585df8",
+    "input_token_estimate": 16637,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278781",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "877f28f7562049b8bf181c73688060d3",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3989,
+    "output_tokens": 10193,
+    "usage_source": "provider",
+    "duration_seconds": 40.413875,
+    "cost_cny": "0.044761"
+  },
+  "cache_request": {
+    "key": "487834bffc141b3b35c5b7576db271cbea06fae57c4733e60a60a1e7799deee7",
+    "purpose": "text_review.detect",
+    "messages_sha256": "afd04fe9430a01cf132fb7922a65627c7b437cb7dc524ad1d6c1dfa89f585df8"
+  }
+}

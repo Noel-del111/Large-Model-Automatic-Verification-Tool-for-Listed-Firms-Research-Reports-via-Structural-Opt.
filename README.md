@@ -7,6 +7,8 @@
 
 ## 第二版：FinED-Bench（2026-10-04 阶段交接）
 
+2026-10-05 新增：[442 篇重跑 R01 证据包](artifacts/research442-rerun-20261005/README.md)。包括同批输入、三组预测、原始响应、冻结源码/提示、哈希及逐条 TP/FP/FN 离线复算；这是新批次，不是已删除旧批次的恢复，也不代表当前 main 的新推理效果。
+
 本轮学习依据是 **《Are Large Language Models Reliable Reviewers? A Benchmark for Error Detection in Financial Documents》及其 FinED-Bench 数据集**。本地原文为相邻论文目录中的 `2026.findings-acl.1481.pdf`。FinRiskAtlas 是另一篇论文，其已有操作级分析仅保留为可选工具，不是本轮主线。
 
 第二版保留研报—财报配对核查，并新增独立的单份文本检测：保留全文结构和字符偏移，按 15 类错误生成候选，再验证原文锚点与可复算证据。未验证的候选进入复核，空结果合法；没有检出错误不表示全文已被证实正确。

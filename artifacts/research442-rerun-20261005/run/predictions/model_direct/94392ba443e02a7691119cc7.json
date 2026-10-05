@@ -1,0 +1,497 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000324",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "4月只有30天，不存在4月31日，该日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 401,
+          "end": 475,
+          "text": "2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 401,
+          "end": 475,
+          "text": "2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9f15792ac900d86af7bfa790",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "高速公路运营里程通常以公里计，609米仅0.609公里，与路产规模严重不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 56,
+          "end": 96,
+          "text": "公司是公路板块核心标的，主营收费公路业务，截至2024年底拥有运营里程609米。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司是公路板块核心标的，主营收费公路业务，截至2024年底拥有运营里程609米。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 56,
+          "end": 96,
+          "text": "公司是公路板块核心标的，主营收费公路业务，截至2024年底拥有运营里程609米。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "55d770134d3f9bc11ca55d08",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "两个“亿元”前缺少应填写的具体归母净利润增加数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 690,
+          "end": 741,
+          "text": "预计收购可以增加2025-2026年归母净利润 亿元、 亿元，占2024年归母净利润的11%、12%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计收购可以增加2025-2026年归母净利润 亿元、 亿元，占2024年归母净利润的11%、12%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 690,
+          "end": 741,
+          "text": "预计收购可以增加2025-2026年归母净利润 亿元、 亿元，占2024年归母净利润的11%、12%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9c6277334b52345aa7bc74a5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "折扣由八五折变为九五折意味着优惠减少，公司应增加收费而非节省减免。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 401,
+          "end": 475,
+          "text": "2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 401,
+          "end": 475,
+          "text": "2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bf6bfbf9f81b2f6337e954d4",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "改扩建2024年才完工通车，却预计2023年车流量明显修复，先后时间冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 499,
+          "end": 551,
+          "text": "公司核心路产宣广高速在2022年开启改扩建，2024年改扩建完工通车，预计在2023年车流量有明显修复。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司核心路产宣广高速在2022年开启改扩建，2024年改扩建完工通车，预计在2023年车流量有明显修复。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 499,
+          "end": 551,
+          "text": "公司核心路产宣广高速在2022年开启改扩建，2024年改扩建完工通车，预计在2023年车流量有明显修复。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ef70d231a2dcd71a650cb549",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1064
+        ]
+      ],
+      "estimated_input_tokens": 5609,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:56:23.222301+00:00",
+        "request_sha256": "b4934c657dd5fc162e239b132d98b668fd78d23afc3d6cbac648eafba68d7d6e",
+        "input_token_estimate": 15611,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277755",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "5cffb5a9950e4c629b7c7c9b129fd6f0",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3705,
+        "output_tokens": 8627,
+        "usage_source": "provider",
+        "duration_seconds": 34.570812,
+        "cost_cny": "0.038213"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。"
+          }
+        ],
+        "reason": "4月只有30天，不存在4月31日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司是公路板块核心标的，主营收费公路业务，截至2024年底拥有运营里程609米。"
+          }
+        ],
+        "reason": "高速公路运营里程通常以公里计，609米仅0.609公里，与路产规模严重不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "预计收购可以增加2025-2026年归母净利润 亿元、 亿元，占2024年归母净利润的11%、12%。"
+          }
+        ],
+        "reason": "两个“亿元”前缺少应填写的具体归母净利润增加数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。"
+          }
+        ],
+        "reason": "折扣由八五折变为九五折意味着优惠减少，公司应增加收费而非节省减免。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "公司核心路产宣广高速在2022年开启改扩建，2024年改扩建完工通车，预计在2023年车流量有明显修复。"
+          }
+        ],
+        "reason": "改扩建2024年才完工通车，却预计2023年车流量明显修复，先后时间冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 56,
+      "end": 96,
+      "text": "公司是公路板块核心标的，主营收费公路业务，截至2024年底拥有运营里程609米。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 222,
+      "end": 248,
+      "text": "2024年公司归母净利润16.7亿元，同比增长1%。",
+      "quantities": [
+        {
+          "value": "16.7",
+          "unit": "亿元",
+          "start": 234,
+          "end": 240
+        },
+        {
+          "value": "1",
+          "unit": "%",
+          "start": 245,
+          "end": 247
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 339,
+      "end": 399,
+      "text": "同时受益于断头路打通，公司宁宣杭路、岳武高速在2023年实现毛利转正，并在2024年毛利率均由0%左右提升至40%左右。",
+      "quantities": [
+        {
+          "value": "0",
+          "unit": "%",
+          "start": 386,
+          "end": 388
+        },
+        {
+          "value": "40",
+          "unit": "%",
+          "start": 393,
+          "end": 396
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 690,
+      "end": 741,
+      "text": "预计收购可以增加2025-2026年归母净利润 亿元、 亿元，占2024年归母净利润的11%、12%。",
+      "quantities": [
+        {
+          "value": "11",
+          "unit": "%",
+          "start": 733,
+          "end": 736
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 737,
+          "end": 740
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 690,
+      "end": 741,
+      "text": "预计收购可以增加2025-2026年归母净利润 亿元、 亿元，占2024年归母净利润的11%、12%。",
+      "quantities": [
+        {
+          "value": "11",
+          "unit": "%",
+          "start": 733,
+          "end": 736
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 737,
+          "end": 740
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 877,
+      "end": 945,
+      "text": "预计公司2025-2027年归母净利润分别为18.9亿元、19.9亿元、21.0亿元，对应PE分别为15.2倍、14.4倍、13.6倍。",
+      "quantities": [
+        {
+          "value": "18.9",
+          "unit": "亿元",
+          "start": 899,
+          "end": 905
+        },
+        {
+          "value": "19.9",
+          "unit": "亿元",
+          "start": 906,
+          "end": 912
+        },
+        {
+          "value": "21.0",
+          "unit": "亿元",
+          "start": 913,
+          "end": 919
+        },
+        {
+          "value": "15.2",
+          "unit": "倍",
+          "start": 927,
+          "end": 932
+        },
+        {
+          "value": "14.4",
+          "unit": "倍",
+          "start": 933,
+          "end": 938
+        },
+        {
+          "value": "13.6",
+          "unit": "倍",
+          "start": 939,
+          "end": 944
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1064,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1064,
+    "processed_ranges": [
+      [
+        0,
+        1064
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 34.601398,
+  "source_content_sha256": "45b0a286e17bed8a5e5ff5a9960f1ff8ad5597ffd21d1346f2ee84bcea121050"
+}

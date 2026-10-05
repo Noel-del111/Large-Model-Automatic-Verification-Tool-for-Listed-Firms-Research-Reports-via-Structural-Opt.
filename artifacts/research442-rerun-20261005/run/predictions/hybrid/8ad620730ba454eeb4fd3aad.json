@@ -1,0 +1,434 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000305",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "6月没有0日，该日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 526,
+          "end": 566,
+          "text": "OPEC+会议将于6月0日举行，届时将决定是否将现有的原油产量限制延长至下半年。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "OPEC+会议将于6月0日举行，届时将决定是否将现有的原油产量限制延长至下半年。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 526,
+          "end": 566,
+          "text": "OPEC+会议将于6月0日举行，届时将决定是否将现有的原油产量限制延长至下半年。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "04cb7cb849289ce97c92f94e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "布伦特原油为国际油价，单位应为美元/桶，此处写成元/桶。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 340,
+          "end": 416,
+          "text": "本周（4.29-5.5）国际油价下跌，WTI原油收于78.11美元/桶，收盘价周跌幅6.85%；布伦特原油收于82.96元/桶，收盘价周跌幅7.31%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（4.29-5.5）国际油价下跌，WTI原油收于78.11美元/桶，收盘价周跌幅6.85%；布伦特原油收于82.96元/桶，收盘价周跌幅7.31%。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 340,
+          "end": 416,
+          "text": "本周（4.29-5.5）国际油价下跌，WTI原油收于78.11美元/桶，收盘价周跌幅6.85%；布伦特原油收于82.96元/桶，收盘价周跌幅7.31%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "579ee150fe0721b5a5d00298",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“减少”后明确要接库存变化量，但数值为空，只留下单位“桶”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 776,
+          "end": 800,
+          "text": "包括柴油和取暖油在内的馏分油库存较前一周减少桶。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "包括柴油和取暖油在内的馏分油库存较前一周减少桶。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 776,
+          "end": 800,
+          "text": "包括柴油和取暖油在内的馏分油库存较前一周减少桶。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b6a1b6adc41f655a7c00b5c9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "轻质纯碱上期价应为2,056元/吨，24元对应涨幅约1.17%，不是1.90%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1148,
+          "end": 1236,
+          "text": "5月5日轻质纯碱市场均价为2,080元/吨，较4月28日价格上涨24元/吨（+1.90%）；重质纯碱市场均价为2,170元/吨，较4月28日价格上涨25元/吨（+1.17%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月5日轻质纯碱市场均价为2,080元/吨，较4月28日价格上涨24元/吨（+1.90%）；重质纯碱市场均价为2,170元/吨，较4月28日价格上涨25元/吨（+1.17%）。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 1148,
+          "end": 1236,
+          "text": "5月5日轻质纯碱市场均价为2,080元/吨，较4月28日价格上涨24元/吨（+1.90%）；重质纯碱市场均价为2,170元/吨，较4月28日价格上涨25元/吨（+1.17%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "487b6687e0004d821e5ad644",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "开头与投资建议部分两次列出几乎相同的“5月份建议关注”内容，信息重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 29,
+          "end": 151,
+          "text": "5月份建议关注：1、大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤、制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。"
+        },
+        {
+          "kind": "source_text",
+          "start": 2146,
+          "end": 2266,
+          "text": "5月份建议关注：1大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月份建议关注：1、大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤、制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "text": "5月份建议关注：1大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 29,
+          "end": 151,
+          "text": "5月份建议关注：1、大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤、制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。"
+        },
+        {
+          "start": 2146,
+          "end": 2266,
+          "text": "5月份建议关注：1大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2d68525892404a04370e6fb3",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2750
+        ]
+      ],
+      "estimated_input_tokens": 7229,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:57:48.609512+00:00",
+        "request_sha256": "b8c6f173da35034eacb8e6b25636aae5d2a0ab0c56af478ff07eaf5ad5b6849e",
+        "input_token_estimate": 20099,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.282243",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "53f128dbb9f3411a9615c01f6a1dfeb5",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4842,
+        "output_tokens": 11287,
+        "usage_source": "provider",
+        "duration_seconds": 41.960424,
+        "cost_cny": "0.04999",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "OPEC+会议将于6月0日举行，届时将决定是否将现有的原油产量限制延长至下半年。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "6月没有0日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本周（4.29-5.5）国际油价下跌，WTI原油收于78.11美元/桶，收盘价周跌幅6.85%；布伦特原油收于82.96元/桶，收盘价周跌幅7.31%。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "布伦特原油为国际油价，单位应为美元/桶，此处写成元/桶。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "包括柴油和取暖油在内的馏分油库存较前一周减少桶。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“减少”后明确要接库存变化量，但数值为空，只留下单位“桶”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "5月5日轻质纯碱市场均价为2,080元/吨，较4月28日价格上涨24元/吨（+1.90%）；重质纯碱市场均价为2,170元/吨，较4月28日价格上涨25元/吨（+1.17%）。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "轻质纯碱上期价应为2,056元/吨，24元对应涨幅约1.17%，不是1.90%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "5月份建议关注：1、大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤、制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "text": "5月份建议关注：1大宗商品价格上行，关注大型能源央企及相关油服公司在新时代背景下的改革改善与经营业绩提升；2、下游催化较多，一季报超预期的部分半导体、OLED等电子材料公司；3、化纤制冷剂、化肥等子行业的旺季及补库行情，农药或迎来触底改善。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "开头与投资建议部分两次列出几乎相同的“5月份建议关注”内容，信息重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 1970,
+      "end": 2026,
+      "text": "截至5月5日，SW基础化工市盈率（TTM剔除负值）为21.44倍，处在历史（2002年至今的56.18%分位数；",
+      "quantities": [
+        {
+          "value": "21.44",
+          "unit": "倍",
+          "start": 1996,
+          "end": 2002
+        },
+        {
+          "value": "56.18",
+          "unit": "%",
+          "start": 2016,
+          "end": 2022
+        }
+      ],
+      "periods": [
+        "2002年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 2061,
+      "end": 2146,
+      "text": "SW石油石化市盈率（TTM剔除负值）为12.40倍，处在历史（2002年至今）的26.06%分位数市净率（MRQ剔除负值）为1.33倍，处在历史水平的10.78%分位数。",
+      "quantities": [
+        {
+          "value": "12.40",
+          "unit": "倍",
+          "start": 2080,
+          "end": 2086
+        },
+        {
+          "value": "26.06",
+          "unit": "%",
+          "start": 2101,
+          "end": 2107
+        },
+        {
+          "value": "1.33",
+          "unit": "倍",
+          "start": 2123,
+          "end": 2128
+        },
+        {
+          "value": "10.78",
+          "unit": "%",
+          "start": 2136,
+          "end": 2142
+        }
+      ],
+      "periods": [
+        "2002年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2750,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2750,
+    "processed_ranges": [
+      [
+        0,
+        2750
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2750,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002359,
+  "source_content_sha256": "1e645b99832bec1e61eae76bf5bb716ecfc0e7e1a66fbd9efc52b459ef535cf3"
+}

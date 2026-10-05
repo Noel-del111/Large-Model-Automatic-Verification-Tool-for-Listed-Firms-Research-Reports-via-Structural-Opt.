@@ -1,0 +1,426 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000331",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同一公司收入规模一处称行业末位，另一处称行业第一，相互矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 40,
+          "end": 62,
+          "text": "从航空货运到综合物流，收入规模位居行业末位。"
+        },
+        {
+          "kind": "source_text",
+          "start": 140,
+          "end": 211,
+          "text": "2024年跨境电商蓬勃发展，空运运价上涨，公司营业收入为241亿元，同比增长17%，收入规模位居行业第一；归母净利润为27亿分，同比增长8%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从航空货运到综合物流，收入规模位居行业末位。"
+        },
+        {
+          "text": "2024年跨境电商蓬勃发展，空运运价上涨，公司营业收入为241亿元，同比增长17%，收入规模位居行业第一；归母净利润为27亿分，同比增长8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 40,
+          "end": 62,
+          "text": "从航空货运到综合物流，收入规模位居行业末位。"
+        },
+        {
+          "start": 140,
+          "end": 211,
+          "text": "2024年跨境电商蓬勃发展，空运运价上涨，公司营业收入为241亿元，同比增长17%，收入规模位居行业第一；归母净利润为27亿分，同比增长8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "77dfdea27837a7d89f27675c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "净利润单位应为元，写成“亿分”使金额缩小100倍，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 193,
+          "end": 211,
+          "text": "归母净利润为27亿分，同比增长8%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "归母净利润为27亿分，同比增长8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 193,
+          "end": 211,
+          "text": "归母净利润为27亿分，同比增长8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "be901eaa902ad9e98c7a112e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间“2024-2019年”起点晚于终点，期间关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 572,
+          "end": 644,
+          "text": "（1）跨境电商解决方案：2024-2019年收入CAGR为71%，2024年跨境电商货量同比增长48%，预计未来将持续受益于跨境电商出口高景气；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "（1）跨境电商解决方案：2024-2019年收入CAGR为71%，2024年跨境电商货量同比增长48%，预计未来将持续受益于跨境电商出口高景气；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 572,
+          "end": 644,
+          "text": "（1）跨境电商解决方案：2024-2019年收入CAGR为71%，2024年跨境电商货量同比增长48%，预计未来将持续受益于跨境电商出口高景气；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fbe6314f7c63cfdcc57f7def",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "风险提示中“油价大幅上涨风险”连续重复出现，属于不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 927,
+          "end": 973,
+          "text": "海外经济和国际关系波动风险、竞争加剧风险、油价大幅上涨风险、油价大幅上涨风险、安全运行风险。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "海外经济和国际关系波动风险、竞争加剧风险、油价大幅上涨风险、油价大幅上涨风险、安全运行风险。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 927,
+          "end": 973,
+          "text": "海外经济和国际关系波动风险、竞争加剧风险、油价大幅上涨风险、油价大幅上涨风险、安全运行风险。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "13ad8dc5e8d87f21ccfcfd7b",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          973
+        ]
+      ],
+      "estimated_input_tokens": 5542,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:09:54.428788+00:00",
+        "request_sha256": "d3987a31b706af6d7c0d4bc5bfded9c355c500db2065e4bcdaf31117463de113",
+        "input_token_estimate": 15423,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277567",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "a06fec96969541db81ae064b4a565ab6",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3606,
+        "output_tokens": 5780,
+        "usage_source": "provider",
+        "duration_seconds": 23.408034,
+        "cost_cny": "0.026726"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "从航空货运到综合物流，收入规模位居行业末位。"
+          },
+          {
+            "text": "2024年跨境电商蓬勃发展，空运运价上涨，公司营业收入为241亿元，同比增长17%，收入规模位居行业第一；归母净利润为27亿分，同比增长8%。"
+          }
+        ],
+        "reason": "同一公司收入规模一处称行业末位，另一处称行业第一，相互矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "归母净利润为27亿分，同比增长8%。"
+          }
+        ],
+        "reason": "净利润单位应为元，写成“亿分”使金额缩小100倍，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "（1）跨境电商解决方案：2024-2019年收入CAGR为71%，2024年跨境电商货量同比增长48%，预计未来将持续受益于跨境电商出口高景气；"
+          }
+        ],
+        "reason": "时间区间“2024-2019年”起点晚于终点，期间关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "海外经济和国际关系波动风险、竞争加剧风险、油价大幅上涨风险、油价大幅上涨风险、安全运行风险。"
+          }
+        ],
+        "reason": "风险提示中“油价大幅上涨风险”连续重复出现，属于不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 140,
+      "end": 193,
+      "text": "2024年跨境电商蓬勃发展，空运运价上涨，公司营业收入为241亿元，同比增长17%，收入规模位居行业第一；",
+      "quantities": [
+        {
+          "value": "241",
+          "unit": "亿元",
+          "start": 168,
+          "end": 173
+        },
+        {
+          "value": "17",
+          "unit": "%",
+          "start": 178,
+          "end": 181
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 193,
+      "end": 211,
+      "text": "归母净利润为27亿分，同比增长8%。",
+      "quantities": [
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 208,
+          "end": 210
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 485,
+      "end": 644,
+      "text": "区别于航空速运业务，公司综合物流解决方案依托自身能力建设与海外核心供应商合作，可实现跨境物流的全流程服务，2024年营收占比达52%，其中跨境电商及产地直达业务收入增幅较大：（1）跨境电商解决方案：2024-2019年收入CAGR为71%，2024年跨境电商货量同比增长48%，预计未来将持续受益于跨境电商出口高景气；",
+      "quantities": [
+        {
+          "value": "52",
+          "unit": "%",
+          "start": 548,
+          "end": 551
+        },
+        {
+          "value": "71",
+          "unit": "%",
+          "start": 601,
+          "end": 604
+        },
+        {
+          "value": "48",
+          "unit": "%",
+          "start": 620,
+          "end": 623
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2019年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 831,
+      "end": 919,
+      "text": "预计公司2025-2027年归母净利润分别为24亿元、27亿元、29亿元，参考可比公司2025年平均PE，给予2025年10倍PE，目标价15.2元，首次覆盖给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "24",
+          "unit": "亿元",
+          "start": 853,
+          "end": 857
+        },
+        {
+          "value": "27",
+          "unit": "亿元",
+          "start": 858,
+          "end": 862
+        },
+        {
+          "value": "29",
+          "unit": "亿元",
+          "start": 863,
+          "end": 867
+        },
+        {
+          "value": "10",
+          "unit": "倍",
+          "start": 891,
+          "end": 894
+        },
+        {
+          "value": "15.2",
+          "unit": "元",
+          "start": 900,
+          "end": 905
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "预计公司",
+        "参考可比公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 973,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 973,
+    "processed_ranges": [
+      [
+        0,
+        973
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.4368,
+  "source_content_sha256": "8590a935f69e00c7397e961c5576ac71d7074ff91859d315f75b054a79477b81"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"本报告期内，实现营业总收入亿，同比增+19.67%；\"}], \"reason\": \"营业总收入后直接接单位“亿”，缺少具体数值。\"}, {\"error_type\": \"金融要素缺失\", \"spans\": [{\"text\": \"基本每股收益1.16元，加权\"}], \"reason\": \"基本每股收益后应列加权平均净资产收益率，此处缺失且无后续数值。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"股息政策，公司24年拟派发现金股息约12.3亿人民币，每股约全年分红1次，约占当年度净利润比例的30.7%。\"}], \"reason\": \"每股分红应以元/股表示，写成“每股约全年分红1次”，单位错误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"2025年Q1业绩，营收170.6亿，同比增+10.6%，扣非归母净利\"}], \"reason\": \"扣非归母净利后缺少具体数值。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"快递分部，营收623亿，同比增+19.2%，营收占比90.2%；毛\"}], \"reason\": \"“毛”后缺“利”或“利率”及对应数值。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"货代分部，营收37.6亿，同比增+22.5%，营收占比5.5%；毛\"}], \"reason\": \"“毛”后缺“利”或“利率”及对应数值。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"航空分部，营收17.2亿，同比增+43.2%；毛利金额亏损1.7亿。\"}], \"reason\": \"毛利为负时通常称“毛利亏损”或“毛利为-1.7亿”，称“毛利金额亏损”术语不当。\"}, {\"error_type\": \"格式错误\", \"spans\": [{\"text\": \">>其他业务，营收11.6亿，同比增+5.8%；毛利金额为6.1亿。\"}], \"reason\": \"正文出现多余符号“>>”，不符合正常文本格式。\"}, {\"error_type\": \"模糊语言\", \"spans\": [{\"text\": \"24年业务数据亮25%，超行业平均增速；\"}], \"reason\": \"“亮25%”缺字，无法明确业务数据增长的具体内容和口径。\"}, {\"error_type\": \"模糊语言\", \"spans\": [{\"text\": \"单票收入较去年小4.9%；\"}], \"reason\": \"“小4.9%”缺字，无法确定是下降、减少还是其他变化。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"经济波动风险；市场竞争加剧风险；客户需求变动及政策风险；市场竞争加剧风险；\"}], \"reason\": \"“市场竞争加剧风险”在风险提示中重复出现。\"}, {\"error_type\": \"金融要素缺失\", \"spans\": [{\"text\": \"投资评级\\n\\n公司借助科技化手段，引领综合实力持续提升。\"}], \"reason\": \"“投资评级”标题下未给出具体评级结果，缺失必要要素。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:00:27.578962+00:00",
+    "request_sha256": "5892345d764cb1d1376e401653ec829c0fb535c6f9ec62fd3f42691c618863c7",
+    "input_token_estimate": 11522,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.273666",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "68542afd74b94833bbe82fbd6c861996",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 2702,
+    "output_tokens": 8007,
+    "usage_source": "provider",
+    "duration_seconds": 30.765519,
+    "cost_cny": "0.03473"
+  },
+  "cache_request": {
+    "key": "8d8eafa967153e8edf44dd629e4bdffdf1a11466eb315bb3ad3c98bc05e0b00c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5892345d764cb1d1376e401653ec829c0fb535c6f9ec62fd3f42691c618863c7"
+  }
+}

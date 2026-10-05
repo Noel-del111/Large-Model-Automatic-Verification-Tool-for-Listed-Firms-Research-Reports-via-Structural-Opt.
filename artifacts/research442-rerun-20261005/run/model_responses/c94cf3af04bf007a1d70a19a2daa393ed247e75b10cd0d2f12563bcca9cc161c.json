@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"5月0日，苹果向渠道商下发了调价通知，宣布iPhone16ProMax、iPhone16Pro将降价，降幅超过千元。\",\"reason\":\"“5月0日”不是合法日期，每月无0日。\"}],\"reason\":\"日期本身不成立。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；\",\"reason\":\"同一信息连续重复一次，未增添新内容。\"}],\"reason\":\"同一信息不必要地重复。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"公司应收账款较2023年同期减少5.63亿元，同比下降32.30%，财务费用降低8,025.18万元，降幅达51.72%，负债总额同比下降10.45%，资产负债率从48.70%降低至45.55%，下降5.15个百分点；通过优化业务合作，聚焦核心业务与优势领域，公司全年毛利率从2023年的3.25%提升至4.40%。\",\"reason\":\"48.70%减45.55%等于3.15个百分点，不是5.15个百分点。\"}],\"reason\":\"明确的计算关系不成立。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"公司积极布局AI算力服务业务，未来将不会对业绩造成任何影响。\",\"reason\":\"积极布局并开启第二增长曲线，却称不会对业绩造成影响，前后矛盾。\"}],\"reason\":\"同一条件下命题不能同时成立。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"预测公司2027-2025年收入分别为711.52、782.67、853.12亿元，EPS分别为0.54、0.66、0.71元，当前股价对应PE分别为21.4、17.6、16.4倍，苹果手机降价叠加国补，有望提升手机销售量，并且为新一代iPhone17系列预热，公司布局AI算力业务，有望为公司业绩赋能，给予“买入”投资评级。\",\"reason\":\"年份区间写成2027-2025，终点早于起点，时间关系冲突。\"}],\"reason\":\"年份区间倒置。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"国内互联网大厂资本开资不及预期风险\",\"reason\":\"标准术语为“资本开支”或“资本支出”，“资本开资”使用不当。\"}],\"reason\":\"金融术语使用不当。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:53:16.170680+00:00",
+    "request_sha256": "ccc21f5fd6f1023e857a237da9d8f4eac1653b4eaba84af6d9e53d4472eb0824",
+    "input_token_estimate": 18027,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280171",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "989a46554b1e460584d3c192ab6cb33d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4245,
+    "output_tokens": 9295,
+    "usage_source": "provider",
+    "duration_seconds": 35.030679,
+    "cost_cny": "0.041425"
+  },
+  "cache_request": {
+    "key": "c94cf3af04bf007a1d70a19a2daa393ed247e75b10cd0d2f12563bcca9cc161c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ccc21f5fd6f1023e857a237da9d8f4eac1653b4eaba84af6d9e53d4472eb0824"
+  }
+}

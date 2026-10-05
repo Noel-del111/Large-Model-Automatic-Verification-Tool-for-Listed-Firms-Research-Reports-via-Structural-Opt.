@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"4月31日，上海2024年住宅用地第一批次集中供应地块全部完成出让，总出让金额达253亿元。\"}],\"reason\":\"4月只有30天，日期“4月31日”不存在。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"依据过往经验，推测其中的存量住宅成交套数为16000万套。\"}],\"reason\":\"前文4月二手房成交约18000套，其中存量住宅不可能达16000万套，单位“万套”多余。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"随着热化周期变长、学区热度降低以及新盘入市等多重因素影响，这类板块价格也开始松动。\"}],\"reason\":\"房地产销售周期通常称“去化周期”，“热化周期”不是规范术语。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:05:30.267245+00:00",
+    "request_sha256": "d0872d7eebe2226832dcca3568977888d4ea2979d072b34caaa25b36bb678f73",
+    "input_token_estimate": 14895,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277039",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "6bcf1a048125482fbf08bd21109dc192",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3522,
+    "output_tokens": 8900,
+    "usage_source": "provider",
+    "duration_seconds": 35.811363,
+    "cost_cny": "0.039122"
+  },
+  "cache_request": {
+    "key": "8cfea8c4821a3b6f72da6929f8d2c0b123676fac325a9f60f9b90fddb0d05268",
+    "purpose": "text_review.detect",
+    "messages_sha256": "d0872d7eebe2226832dcca3568977888d4ea2979d072b34caaa25b36bb678f73"
+  }
+}

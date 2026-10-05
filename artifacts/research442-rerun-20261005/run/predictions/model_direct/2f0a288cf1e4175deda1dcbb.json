@@ -1,0 +1,574 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000505",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一公司股票代码前文为920027，后文为920028，两者冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 13,
+          "end": 25,
+          "text": "交大铁发(920027)"
+        },
+        {
+          "kind": "source_text",
+          "start": 159,
+          "end": 213,
+          "text": "交大铁发（920028）：公司专业从事轨道交通智能产品及装备的研发、生产、销售，并提供轨道交通专业技术服务。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "交大铁发(920027)"
+        },
+        {
+          "text": "交大铁发（920028）：公司专业从事轨道交通智能产品及装备的研发、生产、销售，并提供轨道交通专业技术服务。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 13,
+          "end": 25,
+          "text": "交大铁发(920027)"
+        },
+        {
+          "start": 159,
+          "end": 213,
+          "text": "交大铁发（920028）：公司专业从事轨道交通智能产品及装备的研发、生产、销售，并提供轨道交通专业技术服务。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a02f4f1e7e591ca3a39825cf",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "发行市盈率明确写“为倍”，缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 33,
+          "end": 157,
+          "text": "本周二（5月27日）有一只北交所新股“交大铁发”申购，发行价格为8.81元、发行市盈率为倍（每股收益按照2024年度经会计师事务所依据中国会计准则审计的扣除非经常性损益后归属于母公司股东净利润除以考虑超额配售选择权全额行使时本次发行后总股本计算）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周二（5月27日）有一只北交所新股“交大铁发”申购，发行价格为8.81元、发行市盈率为倍（每股收益按照2024年度经会计师事务所依据中国会计准则审计的扣除非经常性损益后归属于母公司股东净利润除以考虑超额配售选择权全额行使时本次发行后总股本计算）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 33,
+          "end": 157,
+          "text": "本周二（5月27日）有一只北交所新股“交大铁发”申购，发行价格为8.81元、发行市盈率为倍（每股收益按照2024年度经会计师事务所依据中国会计准则审计的扣除非经常性损益后归属于母公司股东净利润除以考虑超额配售选择权全额行使时本次发行后总股本计算）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2f53c7f3241bb6fc55a8a826",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "年份区间“2024-2022年”起点2024晚于终点2022，时间顺序矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 213,
+          "end": 336,
+          "text": "公司2024-2022年分别实现营业收入2.35亿元/2.73亿元/3.35亿元，YOY依次为15.26%/16.12%/22.61%；实现归母净利润0.34亿元/0.48亿元/0.53亿元，YOY依次为15.00%/41.00%/12.04%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2024-2022年分别实现营业收入2.35亿元/2.73亿元/3.35亿元，YOY依次为15.26%/16.12%/22.61%；实现归母净利润0.34亿元/0.48亿元/0.53亿元，YOY依次为15.00%/41.00%/12.04%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 213,
+          "end": 336,
+          "text": "公司2024-2022年分别实现营业收入2.35亿元/2.73亿元/3.35亿元，YOY依次为15.26%/16.12%/22.61%；实现归母净利润0.34亿元/0.48亿元/0.53亿元，YOY依次为15.00%/41.00%/12.04%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "19f949653f6cc4d6a5613b21",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“归母净利润较”后缺失具体增长幅度或数值，句子不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 336,
+          "end": 390,
+          "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长2.83%至21.53%，归母净利润较。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长2.83%至21.53%，归母净利润较。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 336,
+          "end": 390,
+          "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长2.83%至21.53%，归母净利润较。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3295c7e993366d66ad3f0f28",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1694
+        ]
+      ],
+      "estimated_input_tokens": 6290,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:58:41.741314+00:00",
+        "request_sha256": "86b8cb8650327df2c0ddbaa70d8b4cff735b48759840a218c9f8784ae52e1337",
+        "input_token_estimate": 17493,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279637",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "270dfc2ee6c14263809f4287ca7474d6",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4068,
+        "output_tokens": 7509,
+        "usage_source": "provider",
+        "duration_seconds": 29.438018,
+        "cost_cny": "0.034104"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "交大铁发(920027)"
+          },
+          {
+            "text": "交大铁发（920028）：公司专业从事轨道交通智能产品及装备的研发、生产、销售，并提供轨道交通专业技术服务。"
+          }
+        ],
+        "reason": "同一公司股票代码前文为920027，后文为920028，两者冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "本周二（5月27日）有一只北交所新股“交大铁发”申购，发行价格为8.81元、发行市盈率为倍（每股收益按照2024年度经会计师事务所依据中国会计准则审计的扣除非经常性损益后归属于母公司股东净利润除以考虑超额配售选择权全额行使时本次发行后总股本计算）。"
+          }
+        ],
+        "reason": "发行市盈率明确写“为倍”，缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "公司2024-2022年分别实现营业收入2.35亿元/2.73亿元/3.35亿元，YOY依次为15.26%/16.12%/22.61%；实现归母净利润0.34亿元/0.48亿元/0.53亿元，YOY依次为15.00%/41.00%/12.04%。"
+          }
+        ],
+        "reason": "年份区间“2024-2022年”起点2024晚于终点2022，时间顺序矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长2.83%至21.53%，归母净利润较。"
+          }
+        ],
+        "reason": "“归母净利润较”后缺失具体增长幅度或数值，句子不完整。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 33,
+      "end": 157,
+      "text": "本周二（5月27日）有一只北交所新股“交大铁发”申购，发行价格为8.81元、发行市盈率为倍（每股收益按照2024年度经会计师事务所依据中国会计准则审计的扣除非经常性损益后归属于母公司股东净利润除以考虑超额配售选择权全额行使时本次发行后总股本计算）。",
+      "quantities": [
+        {
+          "value": "8.81",
+          "unit": "元",
+          "start": 65,
+          "end": 70
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "会计准则审计的扣除非经常性损益后归属于母公司"
+      ]
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 33,
+      "end": 157,
+      "text": "本周二（5月27日）有一只北交所新股“交大铁发”申购，发行价格为8.81元、发行市盈率为倍（每股收益按照2024年度经会计师事务所依据中国会计准则审计的扣除非经常性损益后归属于母公司股东净利润除以考虑超额配售选择权全额行使时本次发行后总股本计算）。",
+      "quantities": [
+        {
+          "value": "8.81",
+          "unit": "元",
+          "start": 65,
+          "end": 70
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "会计准则审计的扣除非经常性损益后归属于母公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 33,
+      "end": 157,
+      "text": "本周二（5月27日）有一只北交所新股“交大铁发”申购，发行价格为8.81元、发行市盈率为倍（每股收益按照2024年度经会计师事务所依据中国会计准则审计的扣除非经常性损益后归属于母公司股东净利润除以考虑超额配售选择权全额行使时本次发行后总股本计算）。",
+      "quantities": [
+        {
+          "value": "8.81",
+          "unit": "元",
+          "start": 65,
+          "end": 70
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "会计准则审计的扣除非经常性损益后归属于母公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 213,
+      "end": 281,
+      "text": "公司2024-2022年分别实现营业收入2.35亿元/2.73亿元/3.35亿元，YOY依次为15.26%/16.12%/22.61%；",
+      "quantities": [
+        {
+          "value": "2.35",
+          "unit": "亿元",
+          "start": 233,
+          "end": 239
+        },
+        {
+          "value": "2.73",
+          "unit": "亿元",
+          "start": 240,
+          "end": 246
+        },
+        {
+          "value": "3.35",
+          "unit": "亿元",
+          "start": 247,
+          "end": 253
+        },
+        {
+          "value": "15.26",
+          "unit": "%",
+          "start": 260,
+          "end": 266
+        },
+        {
+          "value": "16.12",
+          "unit": "%",
+          "start": 267,
+          "end": 273
+        },
+        {
+          "value": "22.61",
+          "unit": "%",
+          "start": 274,
+          "end": 280
+        }
+      ],
+      "periods": [
+        "2022年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 281,
+      "end": 336,
+      "text": "实现归母净利润0.34亿元/0.48亿元/0.53亿元，YOY依次为15.00%/41.00%/12.04%。",
+      "quantities": [
+        {
+          "value": "0.34",
+          "unit": "亿元",
+          "start": 288,
+          "end": 294
+        },
+        {
+          "value": "0.48",
+          "unit": "亿元",
+          "start": 295,
+          "end": 301
+        },
+        {
+          "value": "0.53",
+          "unit": "亿元",
+          "start": 302,
+          "end": 308
+        },
+        {
+          "value": "15.00",
+          "unit": "%",
+          "start": 315,
+          "end": 321
+        },
+        {
+          "value": "41.00",
+          "unit": "%",
+          "start": 322,
+          "end": 328
+        },
+        {
+          "value": "12.04",
+          "unit": "%",
+          "start": 329,
+          "end": 335
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 336,
+      "end": 390,
+      "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长2.83%至21.53%，归母净利润较。",
+      "quantities": [
+        {
+          "value": "2.83",
+          "unit": "%",
+          "start": 370,
+          "end": 375
+        },
+        {
+          "value": "21.53",
+          "unit": "%",
+          "start": 376,
+          "end": 382
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "根据公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 336,
+      "end": 390,
+      "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长2.83%至21.53%，归母净利润较。",
+      "quantities": [
+        {
+          "value": "2.83",
+          "unit": "%",
+          "start": 370,
+          "end": 375
+        },
+        {
+          "value": "21.53",
+          "unit": "%",
+          "start": 376,
+          "end": 382
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "根据公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1484,
+      "end": 1551,
+      "text": "从可比公司情况来看，2024年可比公司的平均营业收入为7.96亿元，平均PE-2024年为30.16X，平均销售毛利率为36.60%；",
+      "quantities": [
+        {
+          "value": "7.96",
+          "unit": "亿元",
+          "start": 1511,
+          "end": 1517
+        },
+        {
+          "value": "36.60",
+          "unit": "%",
+          "start": 1544,
+          "end": 1550
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "从可比公司",
+        "年可比公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1484,
+      "end": 1551,
+      "text": "从可比公司情况来看，2024年可比公司的平均营业收入为7.96亿元，平均PE-2024年为30.16X，平均销售毛利率为36.60%；",
+      "quantities": [
+        {
+          "value": "7.96",
+          "unit": "亿元",
+          "start": 1511,
+          "end": 1517
+        },
+        {
+          "value": "36.60",
+          "unit": "%",
+          "start": 1544,
+          "end": 1550
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "从可比公司",
+        "年可比公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1694,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1694,
+    "processed_ranges": [
+      [
+        0,
+        1694
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 29.467377,
+  "source_content_sha256": "83a9301fba26fbccc0b38d291b7b52e7eeac89491ddb2f0f2183055c2039cba0"
+}

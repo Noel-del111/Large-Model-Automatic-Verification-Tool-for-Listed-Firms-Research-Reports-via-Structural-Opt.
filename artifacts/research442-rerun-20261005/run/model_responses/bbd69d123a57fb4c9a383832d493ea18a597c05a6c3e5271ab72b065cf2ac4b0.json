@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2024 年公司实现总营业收入 64.37 亿分，同比减少 20.33%；\"}], \"reason\": \"营业收入单位写作“亿分”，应为“亿元”。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"2025Q1 公司实现新增订单 15.7 亿元，其中余热锅炉新增订单 8.9 亿元，清洁环保能源装备新增订单 1 亿元，解决方案新增订单 8.4 亿元，备件及服务新增订单 1.3 亿元；\"}], \"reason\": \"分项加总8.9+1+8.4+1.3=19.6亿元，与新增订单总额15.7亿元不符。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"继国务院印发大规模设备更新改造政策以来，公司正积极关注并争取相关业务机会。\"}], \"reason\": \"前文已述“继国务院印发大规模设备更新改造政策以来”及积极关注争取业务机会，此处重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:18:41.155972+00:00",
+    "request_sha256": "e24da44f10ba13b7322b1ab29cf8aac3b85968d3640f7c0adcafbe47612cbfa0",
+    "input_token_estimate": 17093,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279237",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "45c7cef5744a449ea8d04b7ac482783f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4103,
+    "output_tokens": 10895,
+    "usage_source": "provider",
+    "duration_seconds": 40.497472,
+    "cost_cny": "0.047683"
+  },
+  "cache_request": {
+    "key": "bbd69d123a57fb4c9a383832d493ea18a597c05a6c3e5271ab72b065cf2ac4b0",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e24da44f10ba13b7322b1ab29cf8aac3b85968d3640f7c0adcafbe47612cbfa0"
+  }
+}

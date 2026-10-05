@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"Agentforce需求持续增长，自推出以来已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。Agentforce需求持续增长：自推出以来，Agentforce已签约超8,000笔交易，其中4,000为付费客户，年度经常性收入（ARR）已突破10亿美元。\"}],\"reason\":\"同一Agentforce签约与ARR数据在相邻两句中重复陈述，无新增信息。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"公司一季度收入441亿美元，同比增长69%，超越彭博一致预期（432.9亿美元）；\"},{\"text\":\"入441亿美元，同比增长69%，超越彭博一致预期（433.1亿美元）\"}],\"reason\":\"同一英伟达一季度收入超越的彭博一致预期，前文为432.9亿美元，后文为433.1亿美元，数值冲突。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"新版模型在复杂推理任务中的表现有了显著提升，在AIME2025测试中，新版模型准确率由旧版的70%下降至87.5%。\"}],\"reason\":\"70%升至87.5%是提升，却表述为“下降至”，与提升语义及数值方向矛盾。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"快手：可灵2.1模型正式上线，可灵AI一季度收入达亿元。\"}],\"reason\":\"“达亿元”前缺少具体数值，应给出明确收入金额，如1.5亿元。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"Salesforce财报显示，其AI Agent平台Agentforce已签约超8,000笔交易，付费客户超过4,000万吨，相关ARR突破10亿美元，标志AI Agent迈入实质性商业化阶段。\"}],\"reason\":\"付费客户数量用“万吨”作为单位，单位明显错误，应为家/个等数量单位。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"作为AI基础设施的重要组成部分，算力的长期增长逻辑未变，我们继续看好【英伟达】【NEBIUS】【Coreweave】【Vertiv】等核心算力提供商订单需求维持高景气度。作为AI基础设施的重要组成部分，算力的长期增长逻辑未变\"}],\"reason\":\"“算力的长期增长逻辑未变”及其前置理由在相邻句子中重复出现，无新增信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:21:02.420898+00:00",
+    "request_sha256": "f2f5965e3b8902420ab7bbbe3ded50606cd3acb6735e7fdfea8db6074e157608",
+    "input_token_estimate": 19045,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.281189",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ed06b309d0db497ba122b6c29d788009",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4445,
+    "output_tokens": 9595,
+    "usage_source": "provider",
+    "duration_seconds": 36.825755,
+    "cost_cny": "0.042825"
+  },
+  "cache_request": {
+    "key": "4b0526be25101fa6185c4167b11198ed1164977511d88f12885f45b90e07576c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "f2f5965e3b8902420ab7bbbe3ded50606cd3acb6735e7fdfea8db6074e157608"
+  }
+}

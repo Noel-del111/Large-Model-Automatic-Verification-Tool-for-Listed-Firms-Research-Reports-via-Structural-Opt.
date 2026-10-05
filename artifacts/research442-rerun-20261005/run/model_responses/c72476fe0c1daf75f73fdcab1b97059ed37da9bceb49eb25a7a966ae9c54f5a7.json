@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"根据隆众资讯，250543当周液氮库容率仅为32.4%，同比-9.5pct，库存较低导致检修带来的局部供需失衡加剧。\"}], \"reason\": \"250543表示2025年5月43日，日期本身不成立。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"根据卓创资讯工业气体，自250417以来的6周，液氮价格环比持续上涨，250529当周液氮价格达元/吨，同比+8.0%，继250522当周同比近两年来首次转正之后，同比涨幅继续扩大。\"}], \"reason\": \"“液氮价格达元/吨”中缺少具体价格数值。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"根据中核（)供应链管理公司招标公告，中国聚变能源有限公司上海聚变科学研究中心建设工程方案设计项目进入公开招标阶段，资金来源已经落实，我们看好该项目成为BEST项目之后的又一大规模投资项目，带动板块进入资本开支扩张周期。\"}], \"reason\": \"“中核（)供应链管理公司”括号内为空，公司名称属性值缺失。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:21:46.778516+00:00",
+    "request_sha256": "27268e80d3bb0f9214aa5931f7651995e5e6e50b44639b5bb46cbdd2c4ba3b5b",
+    "input_token_estimate": 16229,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278373",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "5577e6826d954cc4b1f531bf318c2898",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3796,
+    "output_tokens": 5223,
+    "usage_source": "provider",
+    "duration_seconds": 21.540961,
+    "cost_cny": "0.024688"
+  },
+  "cache_request": {
+    "key": "c72476fe0c1daf75f73fdcab1b97059ed37da9bceb49eb25a7a966ae9c54f5a7",
+    "purpose": "text_review.detect",
+    "messages_sha256": "27268e80d3bb0f9214aa5931f7651995e5e6e50b44639b5bb46cbdd2c4ba3b5b"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；\"}],\"reason\":\"月份“13月”不存在，2025年13月财年不是合法时间表述。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；\"}],\"reason\":\"括号内“微软”与“Meta”之间有两个顿号，中间缺失一个公司名称。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"需求和政策驱动智算中心（）基建爆发，资本开支达千亿美元量级：\"}],\"reason\":\"“智算中心”后的括号内为空，缺失应有的缩写或说明性名称。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"AIDC功率密度提升对AI基建的供电、散热提出低要求，价值量上看AI基础设施建设中制冷占比超20%、供配电系统超50%。\"}],\"reason\":\"功率密度提升应要求供电、散热能力更高，却写成“提出低要求”，前后矛盾。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"据康明斯预测，2026年全球数据中心柴发市场将达90亿美元，且将保持近两位数增长至2023年。\"}],\"reason\":\"先预测2026年市场规模，又说保持增长至2023年，时间顺序倒置。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:02:23.354525+00:00",
+    "request_sha256": "e7bc009bd595555e264458af9686975aa9fe73a227b0003fa4e1f9976bb050ab",
+    "input_token_estimate": 16332,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278476",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "571aa7c01ca847abbd53c0ebe7ee88bb",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3809,
+    "output_tokens": 5963,
+    "usage_source": "provider",
+    "duration_seconds": 26.834883,
+    "cost_cny": "0.027661"
+  },
+  "cache_request": {
+    "key": "7ef5819d9d734b82cc3c85a32696b71796d7edc12f1022cd0f62a30bd3c8ae6d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e7bc009bd595555e264458af9686975aa9fe73a227b0003fa4e1f9976bb050ab"
+  }
+}

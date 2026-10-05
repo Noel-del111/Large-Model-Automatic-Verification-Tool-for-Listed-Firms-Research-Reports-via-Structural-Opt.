@@ -1,0 +1,346 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000258",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "术语误用",
+      "reason": "钙钛矿属于太阳能电池，不是锂离子电池，术语类别错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 35,
+          "end": 63,
+          "text": "钙钛矿属于第三代锂离子电池，在性能和特点上具备诸多优势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "钙钛矿属于第三代锂离子电池，在性能和特点上具备诸多优势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 35,
+          "end": 63,
+          "text": "钙钛矿属于第三代锂离子电池，在性能和特点上具备诸多优势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1a111e22d4198c9344d5ea1e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“多出分钟左右”缺少具体数值，关键时长数值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 224,
+          "end": 304,
+          "text": "根据极电自建的户外电站数据，钙钛矿组件阵列每天早晨比同地区晶硅组件阵列平均早启动约25分钟，晚上晚关断约20分钟，每天工作时长多出分钟左右，拥有优秀的弱光效应。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据极电自建的户外电站数据，钙钛矿组件阵列每天早晨比同地区晶硅组件阵列平均早启动约25分钟，晚上晚关断约20分钟，每天工作时长多出分钟左右，拥有优秀的弱光效应。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 224,
+          "end": 304,
+          "text": "根据极电自建的户外电站数据，钙钛矿组件阵列每天早晨比同地区晶硅组件阵列平均早启动约25分钟，晚上晚关断约20分钟，每天工作时长多出分钟左右，拥有优秀的弱光效应。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a0ace28f5d64967f7163a413",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "设备市场空间应为货币金额，单位“元”与后文“112亿元”矛盾，应为亿元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 479,
+          "end": 520,
+          "text": "目前钙钛矿设备投资较高，中性预测下，2026年钙钛矿设备市场空间有望达到112元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前钙钛矿设备投资较高，中性预测下，2026年钙钛矿设备市场空间有望达到112元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 479,
+          "end": 520,
+          "text": "目前钙钛矿设备投资较高，中性预测下，2026年钙钛矿设备市场空间有望达到112元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "89b97e82bf1d2c7d9e4b0f74",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "三个效率值对应四个成本值，数量不匹配，且效率提升时成本未按预期单调下降。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 841,
+          "end": 899,
+          "text": "根据我们测算，效率提升至22%、25%、28%时，单瓦理想成本有望降至0.52、0.82、0.72、0.64元/W。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据我们测算，效率提升至22%、25%、28%时，单瓦理想成本有望降至0.52、0.82、0.72、0.64元/W。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 841,
+          "end": 899,
+          "text": "根据我们测算，效率提升至22%、25%、28%时，单瓦理想成本有望降至0.52、0.82、0.72、0.64元/W。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9e18a982671551b4c3b124dc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一“技术路线百花齐放”信息在相邻句内不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 906,
+          "end": 944,
+          "text": "钙钛矿制备路线尚无明确答案，技术路线百花齐放，技术实力强的厂商有望充分受益。"
+        },
+        {
+          "kind": "source_text",
+          "start": 969,
+          "end": 997,
+          "text": "其他环节中镀膜和涂布均有自身技术特点，技术路线百花齐放。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "钙钛矿制备路线尚无明确答案，技术路线百花齐放，技术实力强的厂商有望充分受益。"
+        },
+        {
+          "text": "其他环节中镀膜和涂布均有自身技术特点，技术路线百花齐放。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 906,
+          "end": 944,
+          "text": "钙钛矿制备路线尚无明确答案，技术路线百花齐放，技术实力强的厂商有望充分受益。"
+        },
+        {
+          "start": 969,
+          "end": 997,
+          "text": "其他环节中镀膜和涂布均有自身技术特点，技术路线百花齐放。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7e096098149de0e39bfa134e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1262
+        ]
+      ],
+      "estimated_input_tokens": 5861,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:30:46.806019+00:00",
+        "request_sha256": "2ad30ba90d0acb8429a93f29e99eb0f2dad6a388b0c927f53f6eb46c2646234b",
+        "input_token_estimate": 16281,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278425",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d79848b416134c30be88416ee79143d8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3844,
+        "output_tokens": 5964,
+        "usage_source": "provider",
+        "duration_seconds": 24.525121,
+        "cost_cny": "0.0277"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "钙钛矿属于第三代锂离子电池，在性能和特点上具备诸多优势。"
+          }
+        ],
+        "reason": "钙钛矿属于太阳能电池，不是锂离子电池，术语类别错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "根据极电自建的户外电站数据，钙钛矿组件阵列每天早晨比同地区晶硅组件阵列平均早启动约25分钟，晚上晚关断约20分钟，每天工作时长多出分钟左右，拥有优秀的弱光效应。"
+          }
+        ],
+        "reason": "“多出分钟左右”缺少具体数值，关键时长数值为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "目前钙钛矿设备投资较高，中性预测下，2026年钙钛矿设备市场空间有望达到112元。"
+          }
+        ],
+        "reason": "设备市场空间应为货币金额，单位“元”与后文“112亿元”矛盾，应为亿元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "根据我们测算，效率提升至22%、25%、28%时，单瓦理想成本有望降至0.52、0.82、0.72、0.64元/W。"
+          }
+        ],
+        "reason": "三个效率值对应四个成本值，数量不匹配，且效率提升时成本未按预期单调下降。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "钙钛矿制备路线尚无明确答案，技术路线百花齐放，技术实力强的厂商有望充分受益。"
+          },
+          {
+            "text": "其他环节中镀膜和涂布均有自身技术特点，技术路线百花齐放。"
+          }
+        ],
+        "reason": "同一“技术路线百花齐放”信息在相邻句内不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1262,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1262,
+    "processed_ranges": [
+      [
+        0,
+        1262
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 24.549273,
+  "source_content_sha256": "c4d18cd3e414363899375bba91b472ff24bad493a00f9f51d8609000f73b328c"
+}

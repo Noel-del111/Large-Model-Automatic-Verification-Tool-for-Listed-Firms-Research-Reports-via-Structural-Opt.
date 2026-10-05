@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"截至2024年05月03日，6家民营大炼化公司近一周股价涨跌幅：恒逸石化（环比+6.39%）、新凤鸣、桐昆股份（环比+2.91%）、恒力石化（环比+0.65%）、荣盛石化（环比+0.54%）、东方盛虹（环比+0.30%）。\"}], \"reason\": \"新凤鸣后未给出近一周股价涨跌幅数值，其他五家公司均有数据。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"本周布伦特原油周均价为86.16/桶，环比-1.83美元/桶（环比-2.08%）。\"}], \"reason\": \"本周布伦特原油周均价“86.16/桶”缺少货币单位“美元”，与后文“美元/桶”不一致。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"价差方面，本周MMA/丙烯腈/LLDPE/LDPE/HDPE/抗冲聚丙烯/均聚聚丙烯/无规聚丙烯/均聚聚丙烯/PC/纯苯价差上升，光伏级EVA/苯乙烯价差缩窄。\"}], \"reason\": \"同一价差上升列表中“均聚聚丙烯”重复出现，属于不必要重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:23:36.716508+00:00",
+    "request_sha256": "fb98d49a35f6eef36d14097dae9672e19d0ce80351537b5a6bfb3da79fff13ad",
+    "input_token_estimate": 15571,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277715",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "8c244827de644e6cae93b0e8f0f8bfd2",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3780,
+    "output_tokens": 4483,
+    "usage_source": "provider",
+    "duration_seconds": 18.077902,
+    "cost_cny": "0.021712"
+  },
+  "cache_request": {
+    "key": "0b1e73e7230ca35c2cf41f66c083bfdb4c783ef6226068a74a5afa2dbfb62b54",
+    "purpose": "text_review.detect",
+    "messages_sha256": "fb98d49a35f6eef36d14097dae9672e19d0ce80351537b5a6bfb3da79fff13ad"
+  }
+}

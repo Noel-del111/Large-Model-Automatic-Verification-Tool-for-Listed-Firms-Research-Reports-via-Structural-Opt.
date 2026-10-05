@@ -1,0 +1,381 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000435",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“202年”不是合法年份，缺少一位数字，无法确定具体年份。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 66,
+          "end": 171,
+          "text": "公司完成对格拉默的并购后，从多方面推进对格拉默整合工作，但202年以来的全球疫情反复+全球汽车芯片短缺+海外通胀带来成本大幅上涨等因素客观上加大了格拉默的整合难度，格拉默海外此前一直对公司整体业绩产生较大拖累。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司完成对格拉默的并购后，从多方面推进对格拉默整合工作，但202年以来的全球疫情反复+全球汽车芯片短缺+海外通胀带来成本大幅上涨等因素客观上加大了格拉默的整合难度，格拉默海外此前一直对公司整体业绩产生较大拖累。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 66,
+          "end": 171,
+          "text": "公司完成对格拉默的并购后，从多方面推进对格拉默整合工作，但202年以来的全球疫情反复+全球汽车芯片短缺+海外通胀带来成本大幅上涨等因素客观上加大了格拉默的整合难度，格拉默海外此前一直对公司整体业绩产生较大拖累。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6c2d74e53ba614b3524e9803",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“超过亿元”前无具体数字，市场空间数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 415,
+          "end": 476,
+          "text": "当前，消费升级带动座椅功能和配置的丰富度持续提升，国内乘用车座椅市场空间超过亿元，且随着功能和配置升级市场空间在持续增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "当前，消费升级带动座椅功能和配置的丰富度持续提升，国内乘用车座椅市场空间超过亿元，且随着功能和配置升级市场空间在持续增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 415,
+          "end": 476,
+          "text": "当前，消费升级带动座椅功能和配置的丰富度持续提升，国内乘用车座椅市场空间超过亿元，且随着功能和配置升级市场空间在持续增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4915611339ca5fd19a72deb3",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同一句称2025Q1业绩显著恶化，又称业绩拐点基本确立，判断冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 298,
+          "end": 348,
+          "text": "公司对格拉默海外区域进行多举措深度整合后，2025Q1格拉默业绩出现了显著恶化，但业绩拐点基本确立。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司对格拉默海外区域进行多举措深度整合后，2025Q1格拉默业绩出现了显著恶化，但业绩拐点基本确立。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 298,
+          "end": 348,
+          "text": "公司对格拉默海外区域进行多举措深度整合后，2025Q1格拉默业绩出现了显著恶化，但业绩拐点基本确立。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "449d0cfb51ded778a75ac49a",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1062
+        ]
+      ],
+      "estimated_input_tokens": 5680,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:57:27.357531+00:00",
+        "request_sha256": "737c6ce8a3391d69ec8d768b84d2f1e7775facc69882f171e65082099f6cc33c",
+        "input_token_estimate": 15779,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277923",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "30123c563e6f4b6fa8a9fae4b447ea82",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3666,
+        "output_tokens": 3616,
+        "usage_source": "provider",
+        "duration_seconds": 15.544187,
+        "cost_cny": "0.01813"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "公司完成对格拉默的并购后，从多方面推进对格拉默整合工作，但202年以来的全球疫情反复+全球汽车芯片短缺+海外通胀带来成本大幅上涨等因素客观上加大了格拉默的整合难度，格拉默海外此前一直对公司整体业绩产生较大拖累。"
+          }
+        ],
+        "reason": "“202年”不是合法年份，缺少一位数字，无法确定具体年份。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "当前，消费升级带动座椅功能和配置的丰富度持续提升，国内乘用车座椅市场空间超过亿元，且随着功能和配置升级市场空间在持续增长。"
+          }
+        ],
+        "reason": "“超过亿元”前无具体数字，市场空间数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司对格拉默海外区域进行多举措深度整合后，2025Q1格拉默业绩出现了显著恶化，但业绩拐点基本确立。"
+          }
+        ],
+        "reason": "同一句称2025Q1业绩显著恶化，又称业绩拐点基本确立，判断冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 834,
+      "end": 958,
+      "text": "盈利预测与投资评级：我们维持公司2025-2027年归母净利润分别为6.46亿元、10.97亿元、13.84亿元的预测，对应的EPS分别为0.51元、0.87元、1.09元，2025-2027年市盈率分别为27.10倍、15.98倍、12.66倍。",
+      "quantities": [
+        {
+          "value": "6.46",
+          "unit": "亿元",
+          "start": 868,
+          "end": 874
+        },
+        {
+          "value": "10.97",
+          "unit": "亿元",
+          "start": 875,
+          "end": 882
+        },
+        {
+          "value": "13.84",
+          "unit": "亿元",
+          "start": 883,
+          "end": 890
+        },
+        {
+          "value": "0.51",
+          "unit": "元",
+          "start": 903,
+          "end": 908
+        },
+        {
+          "value": "0.87",
+          "unit": "元",
+          "start": 909,
+          "end": 914
+        },
+        {
+          "value": "1.09",
+          "unit": "元",
+          "start": 915,
+          "end": 920
+        },
+        {
+          "value": "27.10",
+          "unit": "倍",
+          "start": 937,
+          "end": 943
+        },
+        {
+          "value": "15.98",
+          "unit": "倍",
+          "start": 944,
+          "end": 950
+        },
+        {
+          "value": "12.66",
+          "unit": "倍",
+          "start": 951,
+          "end": 957
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们维持公司"
+      ]
+    },
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 834,
+      "end": 958,
+      "text": "盈利预测与投资评级：我们维持公司2025-2027年归母净利润分别为6.46亿元、10.97亿元、13.84亿元的预测，对应的EPS分别为0.51元、0.87元、1.09元，2025-2027年市盈率分别为27.10倍、15.98倍、12.66倍。",
+      "quantities": [
+        {
+          "value": "6.46",
+          "unit": "亿元",
+          "start": 868,
+          "end": 874
+        },
+        {
+          "value": "10.97",
+          "unit": "亿元",
+          "start": 875,
+          "end": 882
+        },
+        {
+          "value": "13.84",
+          "unit": "亿元",
+          "start": 883,
+          "end": 890
+        },
+        {
+          "value": "0.51",
+          "unit": "元",
+          "start": 903,
+          "end": 908
+        },
+        {
+          "value": "0.87",
+          "unit": "元",
+          "start": 909,
+          "end": 914
+        },
+        {
+          "value": "1.09",
+          "unit": "元",
+          "start": 915,
+          "end": 920
+        },
+        {
+          "value": "27.10",
+          "unit": "倍",
+          "start": 937,
+          "end": 943
+        },
+        {
+          "value": "15.98",
+          "unit": "倍",
+          "start": 944,
+          "end": 950
+        },
+        {
+          "value": "12.66",
+          "unit": "倍",
+          "start": 951,
+          "end": 957
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们维持公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1062,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1062,
+    "processed_ranges": [
+      [
+        0,
+        1062
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 15.566969,
+  "source_content_sha256": "f80bf911078ce52dfc8e25960ac9f4a3bed761e5b23c1a5932f97c894b3a57a7"
+}

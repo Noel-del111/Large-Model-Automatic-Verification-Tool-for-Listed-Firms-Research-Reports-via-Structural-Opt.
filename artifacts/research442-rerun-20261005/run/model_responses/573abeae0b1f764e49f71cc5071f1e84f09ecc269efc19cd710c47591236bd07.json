@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"25Q13业绩OPAT和NBV表现较强。\"}], \"reason\": \"25Q13不是合法季度，Q13不存在，应为25Q1等有效季度。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"中国平安()\"}], \"reason\": \"公司名称后的括号内缺少股票代码，非数值属性值为空。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"中国平安25Q1集团营收和归母净利润同比分别下降5.2%和26.4%至2328亿元和270亿元，利润下降主要是受好医生联营转并表带来的一次性34亿财务损失和TPL账户中债券价值的波动，作为分红基数的集团OPAT同比增长%至379亿元，其中核心寿险业务受益于NBV34.9%的较高增长和边际提升的利率水平实现了5%的OPAT增速，财险综合成本率同比下降3pct至96.6%的较好水平，集团保险资金非年化综合投资收益率同比提升0.2pct至1.3%，带动集团归母净资产较年初增加1.2%至9397亿元。\"}], \"reason\": \"“同比增长%”中百分号前缺少具体增速数值。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"1、刨除单独上市的平安银行，21-24年平安集团其他子板块的信用和资产减值损失分别为312亿、106亿、200亿、332亿和433亿，主要集中在寿险和资管，其中寿险部分的地产持仓在保险投资组合中有较为明确的披露，即24年末持仓余额为2025亿元，3.5%的占比已经压缩较多，我们理解在24年整体投资收益较好的环境下平安加快对风险的减值；\"}], \"reason\": \"21-24年共4年，却列出5个减值损失数值，年份数量与数值数量不匹配。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"4、寿险也面临挑战，主要是基础管理弱化后高绩优（钻石/钻会）人力的下降以及2024年NBV的绝对额（285亿元）只有历史高点19年（759亿元）的40%，致使CSM余额增速尚未转正。\"}], \"reason\": \"285亿元除以759亿元约为37.5%，不是40%，比例计算有误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:10:52.210755+00:00",
+    "request_sha256": "6cc719102b8392de779e248b3f4dc365c18de8acfdf7f2242e3e9e5d23876bcd",
+    "input_token_estimate": 19233,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.281377",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "73a1500502214df7ae008b8a7e59e292",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4555,
+    "output_tokens": 10800,
+    "usage_source": "provider",
+    "duration_seconds": 39.798891,
+    "cost_cny": "0.047755"
+  },
+  "cache_request": {
+    "key": "573abeae0b1f764e49f71cc5071f1e84f09ecc269efc19cd710c47591236bd07",
+    "purpose": "text_review.detect",
+    "messages_sha256": "6cc719102b8392de779e248b3f4dc365c18de8acfdf7f2242e3e9e5d23876bcd"
+  }
+}

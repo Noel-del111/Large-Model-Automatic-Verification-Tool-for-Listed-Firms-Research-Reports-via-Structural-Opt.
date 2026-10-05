@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"从公司各类产品营业收入看，精密功能件及结构件营收占比九成以上，是公司营收主要来源。从公司各类产品营业收入看，精密功能件及结构件营收占比九成以上，是公司营收主要来源。\"}],\"reason\":\"同一信息连续重复，无新增含义。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"从应用领域出货规模来看，2024年全球平板电脑出货量达到亿台，全球笔电出货量将达到1.74亿台，整体市场仍在扩容。\"}],\"reason\":\"“达到亿台”前缺少具体数字，平板电脑出货量数值缺失。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"归母净利润分别为1.13、2.19、2.70亿瓦特，。\"}],\"reason\":\"净利润单位应为“亿元”，误用功率单位“亿瓦特”。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"碳纳米管性能优异，GGII预测225年全球碳纳米管导电浆料市场需求量为59万吨，市场规模为224亿元。\"}],\"reason\":\"“225年”应为“2025年”，年份书写错误导致所指预测时间不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:27:51.428843+00:00",
+    "request_sha256": "1bba3bd6119877e2aa5b13624ea1448da2c078ef3ba3093d28aee349629a5901",
+    "input_token_estimate": 15366,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27751",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "792d57d470fd40fc80c46338305b0717",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3584,
+    "output_tokens": 6890,
+    "usage_source": "provider",
+    "duration_seconds": 28.52855,
+    "cost_cny": "0.031144"
+  },
+  "cache_request": {
+    "key": "b5f915708c22bb87c767129ff8239eefd495a891d8e604174de96b25123fb21f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1bba3bd6119877e2aa5b13624ea1448da2c078ef3ba3093d28aee349629a5901"
+  }
+}

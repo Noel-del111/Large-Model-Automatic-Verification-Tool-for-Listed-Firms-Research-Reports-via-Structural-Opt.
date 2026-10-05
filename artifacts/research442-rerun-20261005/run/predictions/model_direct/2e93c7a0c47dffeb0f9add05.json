@@ -1,0 +1,375 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000426",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收单位应为“亿元”，此处写成“亿次”，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 120,
+          "end": 175,
+          "text": "2024年，公司实现营收7.93亿次，同比增加11.19%，实现归母净利润1.13亿元，同比增加23.70%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司实现营收7.93亿次，同比增加11.19%，实现归母净利润1.13亿元，同比增加23.70%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 120,
+          "end": 175,
+          "text": "2024年，公司实现营收7.93亿次，同比增加11.19%，实现归母净利润1.13亿元，同比增加23.70%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e88b86501269b93e92cb0c6c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "样板和小批量板仅两类，却列出三个平均订单面积数值，类别与数值数量不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 782,
+          "end": 826,
+          "text": "其中样板和小批量板的平均订单面积分别为0.69平方米、0.49平方米和13.58平方米。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中样板和小批量板的平均订单面积分别为0.69平方米、0.49平方米和13.58平方米。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 782,
+          "end": 826,
+          "text": "其中样板和小批量板的平均订单面积分别为0.69平方米、0.49平方米和13.58平方米。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e4efe19c0dffab40283af5ca",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1514
+        ]
+      ],
+      "estimated_input_tokens": 6067,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:48:47.877264+00:00",
+        "request_sha256": "3b3d980ea0118c0fc926137f4958c4232b5fb12ca5fd75b7c42432a4bbfbc96c",
+        "input_token_estimate": 16883,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279027",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4281ba44da5b4c9f9fdac12d2cf71e5f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3906,
+        "output_tokens": 5606,
+        "usage_source": "provider",
+        "duration_seconds": 22.898608,
+        "cost_cny": "0.02633"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年，公司实现营收7.93亿次，同比增加11.19%，实现归母净利润1.13亿元，同比增加23.70%；"
+          }
+        ],
+        "reason": "营收单位应为“亿元”，此处写成“亿次”，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "其中样板和小批量板的平均订单面积分别为0.69平方米、0.49平方米和13.58平方米。"
+          }
+        ],
+        "reason": "样板和小批量板仅两类，却列出三个平均订单面积数值，类别与数值数量不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 67,
+      "end": 175,
+      "text": "受益于工业控制、通讯设备等下游应用领域需求增长、公司对客户的开发与维护、持续优化产品结构、进行研发创新等，2024年，公司实现营收7.93亿次，同比增加11.19%，实现归母净利润1.13亿元，同比增加23.70%；",
+      "quantities": [
+        {
+          "value": "11.19",
+          "unit": "%",
+          "start": 143,
+          "end": 149
+        },
+        {
+          "value": "1.13",
+          "unit": "亿元",
+          "start": 157,
+          "end": 163
+        },
+        {
+          "value": "23.70",
+          "unit": "%",
+          "start": 168,
+          "end": 174
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 67,
+      "end": 175,
+      "text": "受益于工业控制、通讯设备等下游应用领域需求增长、公司对客户的开发与维护、持续优化产品结构、进行研发创新等，2024年，公司实现营收7.93亿次，同比增加11.19%，实现归母净利润1.13亿元，同比增加23.70%；",
+      "quantities": [
+        {
+          "value": "11.19",
+          "unit": "%",
+          "start": 143,
+          "end": 149
+        },
+        {
+          "value": "1.13",
+          "unit": "亿元",
+          "start": 157,
+          "end": 163
+        },
+        {
+          "value": "23.70",
+          "unit": "%",
+          "start": 168,
+          "end": 174
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 175,
+      "end": 228,
+      "text": "2025Q1公司实现营收2.01亿元，同比增长10.79%，实现归母净利润0.26亿元，同比+1.27%。",
+      "quantities": [
+        {
+          "value": "2.01",
+          "unit": "亿元",
+          "start": 187,
+          "end": 193
+        },
+        {
+          "value": "10.79",
+          "unit": "%",
+          "start": 198,
+          "end": 204
+        },
+        {
+          "value": "0.26",
+          "unit": "亿元",
+          "start": 212,
+          "end": 218
+        },
+        {
+          "value": "+1.27",
+          "unit": "%",
+          "start": 221,
+          "end": 227
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 175,
+      "end": 228,
+      "text": "2025Q1公司实现营收2.01亿元，同比增长10.79%，实现归母净利润0.26亿元，同比+1.27%。",
+      "quantities": [
+        {
+          "value": "2.01",
+          "unit": "亿元",
+          "start": 187,
+          "end": 193
+        },
+        {
+          "value": "10.79",
+          "unit": "%",
+          "start": 198,
+          "end": 204
+        },
+        {
+          "value": "0.26",
+          "unit": "亿元",
+          "start": 212,
+          "end": 218
+        },
+        {
+          "value": "+1.27",
+          "unit": "%",
+          "start": 221,
+          "end": 227
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1329,
+      "end": 1445,
+      "text": "我们预计公司2025/2026/2027年分别实现收入9.1/11.2/13.5亿元，实现归母净利润分别为1.36/1.77/2.3亿元，当前股价对应2025-2027年PE分别为44倍、34倍、26倍，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "13.5",
+          "unit": "亿元",
+          "start": 1365,
+          "end": 1371
+        },
+        {
+          "value": "2.3",
+          "unit": "亿元",
+          "start": 1392,
+          "end": 1397
+        },
+        {
+          "value": "44",
+          "unit": "倍",
+          "start": 1419,
+          "end": 1422
+        },
+        {
+          "value": "34",
+          "unit": "倍",
+          "start": 1423,
+          "end": 1426
+        },
+        {
+          "value": "26",
+          "unit": "倍",
+          "start": 1427,
+          "end": 1430
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1514,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1514,
+    "processed_ranges": [
+      [
+        0,
+        1514
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 22.923549,
+  "source_content_sha256": "60fdd852c5fd2fe27e58dcbb642e1f2465154b750ffed09189c7abf63fff2104"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"从2023全年维度来看，2023年汽车销量万辆，同比上升11.9%；\"}], \"reason\": \"“汽车销量”后直接接单位“万辆”，缺少具体销量数值。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"整体来看，2023年汽车行业实现营收3.7元，同比+16%，归母净利润0.14万亿元，同比+42%。\"}], \"reason\": \"汽车行业营收写成3.7元，与同比增长和归母净利润万亿元量级不符，单位错误。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2024年Q1汽车销量同比+10.6%，韧性较强。\"}, {\"text\": \"2024年Q1汽车销量672万辆，同比上升10.6%，环比下降25.2%；\"}], \"reason\": \"同一期间汽车销量同比增速10.6%在相邻两句中重复出现。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"2024年Q1汽车销量环比下降主要系一季度是汽车消费旺季，年底冲量透支部分需求、春节假期等因素影响，但同比来看仍然实现10.6%的增长，韧性较强。\"}], \"reason\": \"一季度通常为汽车消费淡季，此处称旺季却用于解释环比下降，前后逻辑矛盾。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"我们认为，电动化：国内能源渗透率依然有提升空间；智能化：高阶智能驾驶有望在2024年进入放量周期；高端化：自主品牌结构升级，产品价格带覆盖上移；全球化：国内整车厂进入海外扩张期，国内优质零部件的海外基地2024年将逐步进入收获期。\"}], \"reason\": \"电动化语境下应为“新能源渗透率”，“能源渗透率”术语不准确。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:21:53.808429+00:00",
+    "request_sha256": "68b5657f27c474fd74f76fd74a225d52297075726754bae1d1694acac9179ea0",
+    "input_token_estimate": 17197,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279341",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9a9ac0f52237477fa5a62489a4f8e267",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4097,
+    "output_tokens": 8586,
+    "usage_source": "provider",
+    "duration_seconds": 33.047388,
+    "cost_cny": "0.038441"
+  },
+  "cache_request": {
+    "key": "fdb59795103de30cdb539dbe666be5da78feaaa63ef560d89e93a17321aef685",
+    "purpose": "text_review.detect",
+    "messages_sha256": "68b5657f27c474fd74f76fd74a225d52297075726754bae1d1694acac9179ea0"
+  }
+}

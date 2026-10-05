@@ -1,0 +1,14 @@
+[
+  {
+    "path": "cases.jsonl",
+    "sha256": "d006f190138a5536a00491aaa038944d2d6e4bd507487c809ddbf83f8bf41424"
+  },
+  {
+    "path": "score.json",
+    "sha256": "6a50f95663b700df9799f525516edf145d8ec9fdc148a049d2c5455ccb375f2c"
+  },
+  {
+    "path": "summary.json",
+    "sha256": "abcce156528fbdfec8fe87a6a35afc5a4d2b9c1324b7b48266e6be8f4d46d066"
+  }
+]

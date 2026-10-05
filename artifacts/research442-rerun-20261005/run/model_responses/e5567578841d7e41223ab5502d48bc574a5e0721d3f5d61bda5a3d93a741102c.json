@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"经调整经营利润为1.39亿美元，同比增长195%；\",\n          \"start\": 119,\n          \"end\": 144\n        },\n        {\n          \"text\": \"经调整经营利润为1.39亿美元，同比增长195%；\",\n          \"start\": 164,\n          \"end\": 189\n        }\n      ],\n      \"reason\": \"同一经调整经营利润数据在事件段中重复出现，属不必要重复。\"\n    },\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"2025年将进入富有催化意义的重要时期，预计有余个概念验证里程碑读出。\"\n        }\n      ],\n      \"reason\": \"“有余个”前缺少具体数字，无法确定概念验证里程碑的数量。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:50:51.119806+00:00",
+    "request_sha256": "110b006ae2efc9e6120c821bc11b311e28edc4b562363b5eb564546a6d4f8b25",
+    "input_token_estimate": 16342,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278486",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c9634b7e3fbe48709d6009b09e6e8570",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3937,
+    "output_tokens": 8784,
+    "usage_source": "provider",
+    "duration_seconds": 33.42036,
+    "cost_cny": "0.039073"
+  },
+  "cache_request": {
+    "key": "e5567578841d7e41223ab5502d48bc574a5e0721d3f5d61bda5a3d93a741102c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "110b006ae2efc9e6120c821bc11b311e28edc4b562363b5eb564546a6d4f8b25"
+  }
+}

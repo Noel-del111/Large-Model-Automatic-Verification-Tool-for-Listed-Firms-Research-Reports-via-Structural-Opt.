@@ -1,0 +1,394 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000480",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句内产品列表完全重复，未新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 154,
+          "end": 323,
+          "text": "公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品, 公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，广泛应用在中芯国际、长江存储、士兰集科、长电科技、华天科技、道富微电等国内主流集成电路制造产线。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品, 公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，广泛应用在中芯国际、长江存储、士兰集科、长电科技、华天科技、道富微电等国内主流集成电路制造产线。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 154,
+          "end": 323,
+          "text": "公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品, 公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，广泛应用在中芯国际、长江存储、士兰集科、长电科技、华天科技、道富微电等国内主流集成电路制造产线。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e4a66f42d0751ddf98568069",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "2.4亿增至13.8亿，4年复合增长率约54.5%，与25.3%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 357,
+          "end": 405,
+          "text": "2020-2024年，公司营业总收入由2.4亿元增至13.8亿元，4年复合增长率高达25.3%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2020-2024年，公司营业总收入由2.4亿元增至13.8亿元，4年复合增长率高达25.3%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 357,
+          "end": 405,
+          "text": "2020-2024年，公司营业总收入由2.4亿元增至13.8亿元，4年复合增长率高达25.3%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "eb65c66028398bb155181032",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "0.5亿增至5.0亿，4年复合增长率约77.8%，与71.4%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 897,
+          "end": 942,
+          "text": "2020-2024年，公司研发费用由0.5亿元增至5.0亿元，年复合增长率高达71.4%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2020-2024年，公司研发费用由0.5亿元增至5.0亿元，年复合增长率高达71.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 897,
+          "end": 942,
+          "text": "2020-2024年，公司研发费用由0.5亿元增至5.0亿元，年复合增长率高达71.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "471c471723aeb445199e78b0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“缺离”应为“缺陷”，属于半导体检测设备行业术语错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 942,
+          "end": 1130,
+          "text": "目前，公司已形成深紫外成像扫描技术、高精度多模式干涉量测技术、基于参考区域对比的缺陷识别算法技术等多项核心技术，能够为半导体行业客户提供涵盖设备产品、智能软件产品和相关服务的全流程良率管理解决方案，推出了无图形晶圆缺离检测设备系列、图形晶圆缺离检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，积累了包括中芯国际、长江存储、士兰集科、长电科技在内的优质客户资源。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前，公司已形成深紫外成像扫描技术、高精度多模式干涉量测技术、基于参考区域对比的缺陷识别算法技术等多项核心技术，能够为半导体行业客户提供涵盖设备产品、智能软件产品和相关服务的全流程良率管理解决方案，推出了无图形晶圆缺离检测设备系列、图形晶圆缺离检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，积累了包括中芯国际、长江存储、士兰集科、长电科技在内的优质客户资源。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 942,
+          "end": 1130,
+          "text": "目前，公司已形成深紫外成像扫描技术、高精度多模式干涉量测技术、基于参考区域对比的缺陷识别算法技术等多项核心技术，能够为半导体行业客户提供涵盖设备产品、智能软件产品和相关服务的全流程良率管理解决方案，推出了无图形晶圆缺离检测设备系列、图形晶圆缺离检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，积累了包括中芯国际、长江存储、士兰集科、长电科技在内的优质客户资源。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c2ab9f2479bea4ec5f57c9d4",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1316
+        ]
+      ],
+      "estimated_input_tokens": 5898,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:35:51.012121+00:00",
+        "request_sha256": "42d0d381b4800b9f4efb455d3c150a00bf43397b306fbedee00235e6384f6db3",
+        "input_token_estimate": 16393,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278537",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "48edf8551a294e70a7f543a4536bc13d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3853,
+        "output_tokens": 9399,
+        "usage_source": "provider",
+        "duration_seconds": 37.739213,
+        "cost_cny": "0.041449",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品, 公司产品主要包括无图形晶圆缺陷检测设备系列、图形晶圆缺陷检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，广泛应用在中芯国际、长江存储、士兰集科、长电科技、华天科技、道富微电等国内主流集成电路制造产线。"
+          }
+        ],
+        "reason": "同一句内产品列表完全重复，未新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2020-2024年，公司营业总收入由2.4亿元增至13.8亿元，4年复合增长率高达25.3%。"
+          }
+        ],
+        "reason": "2.4亿增至13.8亿，4年复合增长率约54.5%，与25.3%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2020-2024年，公司研发费用由0.5亿元增至5.0亿元，年复合增长率高达71.4%。"
+          }
+        ],
+        "reason": "0.5亿增至5.0亿，4年复合增长率约77.8%，与71.4%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "目前，公司已形成深紫外成像扫描技术、高精度多模式干涉量测技术、基于参考区域对比的缺陷识别算法技术等多项核心技术，能够为半导体行业客户提供涵盖设备产品、智能软件产品和相关服务的全流程良率管理解决方案，推出了无图形晶圆缺离检测设备系列、图形晶圆缺离检测设备系列、三维形貌量测设备系列、薄膜膜厚量测设备系列等产品，积累了包括中芯国际、长江存储、士兰集科、长电科技在内的优质客户资源。"
+          }
+        ],
+        "reason": "“缺离”应为“缺陷”，属于半导体检测设备行业术语错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 357,
+      "end": 405,
+      "text": "2020-2024年，公司营业总收入由2.4亿元增至13.8亿元，4年复合增长率高达25.3%。",
+      "quantities": [
+        {
+          "value": "2.4",
+          "unit": "亿元",
+          "start": 376,
+          "end": 381
+        },
+        {
+          "value": "13.8",
+          "unit": "亿元",
+          "start": 383,
+          "end": 389
+        },
+        {
+          "value": "25.3",
+          "unit": "%",
+          "start": 399,
+          "end": 404
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 405,
+      "end": 460,
+      "text": "2024年，公司受研发费用高增等因素影响，公司扣非归母净利润-1.2亿元，同比减少1.6亿元，利润端短期承压。",
+      "quantities": [
+        {
+          "value": "-1.2",
+          "unit": "亿元",
+          "start": 435,
+          "end": 441
+        },
+        {
+          "value": "1.6",
+          "unit": "亿元",
+          "start": 446,
+          "end": 451
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1138,
+      "end": 1184,
+      "text": "我们预计公司2025/2026/2027年分别实现营业收入21.3、31.0、42.7亿元；",
+      "quantities": [
+        {
+          "value": "42.7",
+          "unit": "亿元",
+          "start": 1177,
+          "end": 1183
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1184,
+      "end": 1268,
+      "text": "归母净利润分别为2.1、3.6、5.8亿元，对应EPS为0.65、1.14、1.80元，对应2025年5月30日收盘价PE分别为108.62、61.94、39.08倍。",
+      "quantities": [
+        {
+          "value": "5.8",
+          "unit": "亿元",
+          "start": 1200,
+          "end": 1205
+        },
+        {
+          "value": "1.80",
+          "unit": "元",
+          "start": 1222,
+          "end": 1227
+        },
+        {
+          "value": "39.08",
+          "unit": "倍",
+          "start": 1261,
+          "end": 1267
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1316,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1316,
+    "processed_ranges": [
+      [
+        0,
+        1316
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1316,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001921,
+  "source_content_sha256": "81caa3b787f8e92ece8c3445f9d8cc2c21f1c0cb2856616c5d1709f62aa5478b"
+}

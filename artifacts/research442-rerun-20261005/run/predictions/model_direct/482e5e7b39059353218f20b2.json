@@ -1,0 +1,302 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000703",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "一年只有12个月，2025年13月不存在，时间信息非法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 345,
+          "end": 423,
+          "text": "2025年13月，根据美国半导体行业协会（SIA）的数据，全球半导体销售额为559.0亿美元，同比增长18.8%，环比增长1.8%，连续第17个月同比增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年13月，根据美国半导体行业协会（SIA）的数据，全球半导体销售额为559.0亿美元，同比增长18.8%，环比增长1.8%，连续第17个月同比增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 345,
+          "end": 423,
+          "text": "2025年13月，根据美国半导体行业协会（SIA）的数据，全球半导体销售额为559.0亿美元，同比增长18.8%，环比增长1.8%，连续第17个月同比增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dbde4a9ab7c349bdfa76d350",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "成交额单位写成“亿分”，量纲不合常规，应为亿元等金额单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 186,
+          "end": 215,
+          "text": "新材料板块成交额7075.91亿分，环比缩量21.51%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新材料板块成交额7075.91亿分，环比缩量21.51%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 186,
+          "end": 215,
+          "text": "新材料板块成交额7075.91亿分，环比缩量21.51%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c45b99334c256947ca82f559",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一时间、同一信息连续重复，属于不必要的冗余语句。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 673,
+          "end": 729,
+          "text": "截至2025年5月28日，5月稀有气体价格环比小幅下降。截至2025年5月28日，5月稀有气体价格环比小幅下降。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2025年5月28日，5月稀有气体价格环比小幅下降。截至2025年5月28日，5月稀有气体价格环比小幅下降。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 673,
+          "end": 729,
+          "text": "截至2025年5月28日，5月稀有气体价格环比小幅下降。截至2025年5月28日，5月稀有气体价格环比小幅下降。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "71d7777815aaba7d24383a97",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "分层级出口额0.11+1.41=1.52亿美元，与总额1.53亿美元不符，合计不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 496,
+          "end": 549,
+          "text": "4月我国超硬材料及其制品出口1.63万吨，同比上涨22.88%；出口额1.53亿美元，同比下跌2.69%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 549,
+          "end": 651,
+          "text": "分层级来看，超硬材料出口53.86吨，同比下跌34.93%；出口额0.11亿美元，同比下跌54.37%；4月，我国超硬制品出口1.62万吨，同比上涨23.24%；出口额1.41亿美元，同比上涨7.13%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月我国超硬材料及其制品出口1.63万吨，同比上涨22.88%；出口额1.53亿美元，同比下跌2.69%。"
+        },
+        {
+          "text": "分层级来看，超硬材料出口53.86吨，同比下跌34.93%；出口额0.11亿美元，同比下跌54.37%；4月，我国超硬制品出口1.62万吨，同比上涨23.24%；出口额1.41亿美元，同比上涨7.13%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 496,
+          "end": 549,
+          "text": "4月我国超硬材料及其制品出口1.63万吨，同比上涨22.88%；出口额1.53亿美元，同比下跌2.69%。"
+        },
+        {
+          "start": 549,
+          "end": 651,
+          "text": "分层级来看，超硬材料出口53.86吨，同比下跌34.93%；出口额0.11亿美元，同比下跌54.37%；4月，我国超硬制品出口1.62万吨，同比上涨23.24%；出口额1.41亿美元，同比上涨7.13%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2cab0b7dfccc7d89007d6faf",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1087
+        ]
+      ],
+      "estimated_input_tokens": 5555,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:17:11.533158+00:00",
+        "request_sha256": "c817bad18fe9ebe068f134cd842b76107a77c74426fc4cb614e3e54dc0d49bd3",
+        "input_token_estimate": 15490,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277634",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "389f1a29aa0f463c9645b93b6353b9ac",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3725,
+        "output_tokens": 7092,
+        "usage_source": "provider",
+        "duration_seconds": 27.327704,
+        "cost_cny": "0.032093"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年13月，根据美国半导体行业协会（SIA）的数据，全球半导体销售额为559.0亿美元，同比增长18.8%，环比增长1.8%，连续第17个月同比增长。"
+          }
+        ],
+        "reason": "一年只有12个月，2025年13月不存在，时间信息非法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "新材料板块成交额7075.91亿分，环比缩量21.51%。"
+          }
+        ],
+        "reason": "成交额单位写成“亿分”，量纲不合常规，应为亿元等金额单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "截至2025年5月28日，5月稀有气体价格环比小幅下降。截至2025年5月28日，5月稀有气体价格环比小幅下降。"
+          }
+        ],
+        "reason": "同一时间、同一信息连续重复，属于不必要的冗余语句。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "4月我国超硬材料及其制品出口1.63万吨，同比上涨22.88%；出口额1.53亿美元，同比下跌2.69%。"
+          },
+          {
+            "text": "分层级来看，超硬材料出口53.86吨，同比下跌34.93%；出口额0.11亿美元，同比下跌54.37%；4月，我国超硬制品出口1.62万吨，同比上涨23.24%；出口额1.41亿美元，同比上涨7.13%。"
+          }
+        ],
+        "reason": "分层级出口额0.11+1.41=1.52亿美元，与总额1.53亿美元不符，合计不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1087,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1087,
+    "processed_ranges": [
+      [
+        0,
+        1087
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 27.354045,
+  "source_content_sha256": "d54a9565c2cd66b187addc48990df21b6be973f0ea5536701d174c948ed938b7"
+}

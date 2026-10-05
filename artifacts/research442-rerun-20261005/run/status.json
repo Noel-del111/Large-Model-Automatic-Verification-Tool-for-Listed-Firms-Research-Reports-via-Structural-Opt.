@@ -1,0 +1,23 @@
+{
+  "mode": "model",
+  "requested": 442,
+  "completed_documents": 442,
+  "real_model_evaluated": true,
+  "stop_reason": null,
+  "detectors": [
+    "legacy_rules",
+    "model_direct",
+    "hybrid"
+  ],
+  "model_calls_this_run": 442,
+  "prior_run_model_calls_reused": 0,
+  "new_model_calls": 442,
+  "budget": {
+    "budget_cny": 20.0,
+    "accounted_cny": 15.030589,
+    "calls": 443,
+    "uncertain_calls": 0,
+    "cost_basis": "configured_rate_upper_bound",
+    "note": "Conservative accounting at configured upper rates, not a provider invoice. Unknown usage and interrupted calls retain the maximum reservation."
+  }
+}

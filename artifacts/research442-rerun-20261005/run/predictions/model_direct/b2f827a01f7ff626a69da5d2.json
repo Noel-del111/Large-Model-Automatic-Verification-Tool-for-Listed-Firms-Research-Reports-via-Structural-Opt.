@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000277",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "期间写为‘4-1月’，起止月份倒置，应为‘1-4月’。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 221,
+          "end": 261,
+          "text": "2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 221,
+          "end": 261,
+          "text": "2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "12d544b0c02d394f06e214d6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "‘1019年’与上下文多处‘2019年’同期比较冲突，年份数字错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 221,
+          "end": 261,
+          "text": "2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 221,
+          "end": 261,
+          "text": "2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "98ae9f1233d5262afc3c7506",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "过夜旅客128万除以入境旅客272万约47.1%，与46.9%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 323,
+          "end": 360,
+          "text": "其中，过夜旅客数量128万人次，占比46.9%，与2019年同期基本持平。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，过夜旅客数量128万人次，占比46.9%，与2019年同期基本持平。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 323,
+          "end": 360,
+          "text": "其中，过夜旅客数量128万人次，占比46.9%，与2019年同期基本持平。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "019ff24fe0f4b240068d0e0f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "EV为企业价值，不是倍数，表述‘EV为9倍’混淆了EV与EV/EBITDA等估值倍数。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 723,
+          "end": 807,
+          "text": "持续推荐金沙中国有限公司，公司是澳门博彩行业龙头，博彩桌、酒店、购物中心等供给均为行业第一，对应24年盈利预期，当下PE估值10倍，EV为9倍，估值较低，具备配置价值。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "持续推荐金沙中国有限公司，公司是澳门博彩行业龙头，博彩桌、酒店、购物中心等供给均为行业第一，对应24年盈利预期，当下PE估值10倍，EV为9倍，估值较低，具备配置价值。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 723,
+          "end": 807,
+          "text": "持续推荐金沙中国有限公司，公司是澳门博彩行业龙头，博彩桌、酒店、购物中心等供给均为行业第一，对应24年盈利预期，当下PE估值10倍，EV为9倍，估值较低，具备配置价值。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c5838f447d35049510099640",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          858
+        ]
+      ],
+      "estimated_input_tokens": 5424,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:36:17.119298+00:00",
+        "request_sha256": "9340486463539e51a27d55d890bfe167ba67603f38802104376137d84bbc79c9",
+        "input_token_estimate": 15094,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277238",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "692f203aef904b9f84570ef450c15c94",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3575,
+        "output_tokens": 6249,
+        "usage_source": "provider",
+        "duration_seconds": 25.495434,
+        "cost_cny": "0.028571"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。"
+          }
+        ],
+        "reason": "期间写为‘4-1月’，起止月份倒置，应为‘1-4月’。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。"
+          }
+        ],
+        "reason": "‘1019年’与上下文多处‘2019年’同期比较冲突，年份数字错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "其中，过夜旅客数量128万人次，占比46.9%，与2019年同期基本持平。"
+          }
+        ],
+        "reason": "过夜旅客128万除以入境旅客272万约47.1%，与46.9%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "持续推荐金沙中国有限公司，公司是澳门博彩行业龙头，博彩桌、酒店、购物中心等供给均为行业第一，对应24年盈利预期，当下PE估值10倍，EV为9倍，估值较低，具备配置价值。"
+          }
+        ],
+        "reason": "EV为企业价值，不是倍数，表述‘EV为9倍’混淆了EV与EV/EBITDA等估值倍数。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 858,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 858,
+    "processed_ranges": [
+      [
+        0,
+        858
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.520539,
+  "source_content_sha256": "5bb88d481fb34416084f677bcf934783d1dde82869c9decbfe0f6eeb4f357a54"
+}

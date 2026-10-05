@@ -1,0 +1,321 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000646",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "统计时间起点为5月26日，终点只写16日，缺少月份，日期区间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 842,
+          "end": 881,
+          "text": "天猫宠物发布了618抢先购全周期战报，统计时间为5月26日0点-16日24点。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "天猫宠物发布了618抢先购全周期战报，统计时间为5月26日0点-16日24点。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 842,
+          "end": 881,
+          "text": "天猫宠物发布了618抢先购全周期战报，统计时间为5月26日0点-16日24点。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f683e758c83151bb427cea19",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "《》内法规名称缺失，无法确认所推进的法律文件。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 3141,
+          "end": 3170,
+          "text": "②韩国召开国家生物委员会会议，推进《》，强调生物技术创新。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "②韩国召开国家生物委员会会议，推进《》，强调生物技术创新。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 3141,
+          "end": 3170,
+          "text": "②韩国召开国家生物委员会会议，推进《》，强调生物技术创新。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "32c429b1cd4af607937cbdec",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "相邻两句重复“我国宠物经济蓬勃发展，国产品牌崛起快速”，同一信息不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1344,
+          "end": 1384,
+          "text": "3）我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，关注国内收入高增长的公司。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1385,
+          "end": 1422,
+          "text": "我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，聚焦国内收入高成长企业。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "3）我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，关注国内收入高增长的公司。"
+        },
+        {
+          "text": "我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，聚焦国内收入高成长企业。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1344,
+          "end": 1384,
+          "text": "3）我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，关注国内收入高增长的公司。"
+        },
+        {
+          "start": 1385,
+          "end": 1422,
+          "text": "我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，聚焦国内收入高成长企业。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "787a2deb65c7660d542d5dc2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一小标题在相邻小点中重复出现“祖代鸡引种不确定性犹存”，信息冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1546,
+          "end": 1559,
+          "text": "①祖代鸡引种不确定性犹存。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1831,
+          "end": 1851,
+          "text": "②祖代鸡引种不确定性犹存。本周价格稳定。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "①祖代鸡引种不确定性犹存。"
+        },
+        {
+          "text": "②祖代鸡引种不确定性犹存。本周价格稳定。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1546,
+          "end": 1559,
+          "text": "①祖代鸡引种不确定性犹存。"
+        },
+        {
+          "start": 1831,
+          "end": 1851,
+          "text": "②祖代鸡引种不确定性犹存。本周价格稳定。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9ae8e367a431ec182c9ad3dc",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          4184
+        ]
+      ],
+      "estimated_input_tokens": 8744,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:38:10.728845+00:00",
+        "request_sha256": "27e1c8c9c8965e9ae23d06ae34f2439983c8fa209c1d3442c4b810a16fb0cea8",
+        "input_token_estimate": 24334,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.286478",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2f267f3d44164adaaf7bfdfd69715fea",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 5807,
+        "output_tokens": 13243,
+        "usage_source": "provider",
+        "duration_seconds": 52.723353,
+        "cost_cny": "0.058779",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "天猫宠物发布了618抢先购全周期战报，统计时间为5月26日0点-16日24点。"
+          }
+        ],
+        "reason": "统计时间起点为5月26日，终点只写16日，缺少月份，日期区间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "②韩国召开国家生物委员会会议，推进《》，强调生物技术创新。"
+          }
+        ],
+        "reason": "《》内法规名称缺失，无法确认所推进的法律文件。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "3）我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，关注国内收入高增长的公司。"
+          },
+          {
+            "text": "我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，聚焦国内收入高成长企业。"
+          }
+        ],
+        "reason": "相邻两句重复“我国宠物经济蓬勃发展，国产品牌崛起快速”，同一信息不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "①祖代鸡引种不确定性犹存。"
+          },
+          {
+            "text": "②祖代鸡引种不确定性犹存。本周价格稳定。"
+          }
+        ],
+        "reason": "同一小标题在相邻小点中重复出现“祖代鸡引种不确定性犹存”，信息冗余。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 4184,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 4184,
+    "processed_ranges": [
+      [
+        0,
+        4184
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 4184,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002639,
+  "source_content_sha256": "976810156023ff8efe63e018b0779dcdbe1246fb358975ebb3a8e9be8ee0f648"
+}

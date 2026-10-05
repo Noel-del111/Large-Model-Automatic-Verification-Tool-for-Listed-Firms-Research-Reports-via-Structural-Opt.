@@ -1,0 +1,329 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000584",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "金融要素缺失",
+      "reason": "只列出银行、证券、保险三个指数，却给出四个涨跌幅数值，缺少一个对应板块名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 57,
+          "end": 102,
+          "text": "近两周银行、证券、保险指数涨跌幅分别-0.93%、-2.93%、-1.10%、-1.20%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近两周银行、证券、保险指数涨跌幅分别-0.93%、-2.93%、-1.10%、-1.20%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 57,
+          "end": 102,
+          "text": "近两周银行、证券、保险指数涨跌幅分别-0.93%、-2.93%、-1.10%、-1.20%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2be284fa04c8000d8e1454ab",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "沪深300指数涨跌幅应以百分比表示，写成“-1.24元”单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 103,
+          "end": 118,
+          "text": "同期沪深300指数-1.24元"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "同期沪深300指数-1.24元"
+        }
+      ],
+      "spans": [
+        {
+          "start": 103,
+          "end": 118,
+          "text": "同期沪深300指数-1.24元"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3a59cfc656425fccc5f888b1",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万31个行业中排名不可能出现第32位，超出总数范围。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 119,
+          "end": 151,
+          "text": "在申万31个行业中，银行和非银板块涨跌幅分别排名第26、32位。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在申万31个行业中，银行和非银板块涨跌幅分别排名第26、32位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 119,
+          "end": 151,
+          "text": "在申万31个行业中，银行和非银板块涨跌幅分别排名第26、32位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d638f81a77ad64c5948ffad7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "中国太保涨幅0.0182远低于苏农银行6.33%和湘财股份1.11%，却称其表现最好，前后矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 151,
+          "end": 201,
+          "text": "各子板块中，苏农银行(+6.33%)、湘财股份(+1.11%)、中国太保(+0.0182)表现最好。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "各子板块中，苏农银行(+6.33%)、湘财股份(+1.11%)、中国太保(+0.0182)表现最好。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 151,
+          "end": 201,
+          "text": "各子板块中，苏农银行(+6.33%)、湘财股份(+1.11%)、中国太保(+0.0182)表现最好。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "76ed4fc6fdf32bb8e0a52702",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“下降”与“个百分点”之间缺少具体数值，无法知悉降幅。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 336,
+          "end": 348,
+          "text": "活期存款利率下降个百分点"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "活期存款利率下降个百分点"
+        }
+      ],
+      "spans": [
+        {
+          "start": 336,
+          "end": 348,
+          "text": "活期存款利率下降个百分点"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "84fcf860216e69eec8406361",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2156
+        ]
+      ],
+      "estimated_input_tokens": 6737,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:25:48.544254+00:00",
+        "request_sha256": "b999cc7303204e932649d3705af6532d0f7a013d16ed0a77930b096fd6573d11",
+        "input_token_estimate": 18707,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280851",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4b9f2292aa424e999a5e5c3f46c890c3",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4285,
+        "output_tokens": 6119,
+        "usage_source": "provider",
+        "duration_seconds": 25.233776,
+        "cost_cny": "0.028761",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "近两周银行、证券、保险指数涨跌幅分别-0.93%、-2.93%、-1.10%、-1.20%"
+          }
+        ],
+        "reason": "只列出银行、证券、保险三个指数，却给出四个涨跌幅数值，缺少一个对应板块名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "同期沪深300指数-1.24元"
+          }
+        ],
+        "reason": "沪深300指数涨跌幅应以百分比表示，写成“-1.24元”单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "在申万31个行业中，银行和非银板块涨跌幅分别排名第26、32位。"
+          }
+        ],
+        "reason": "申万31个行业中排名不可能出现第32位，超出总数范围。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "各子板块中，苏农银行(+6.33%)、湘财股份(+1.11%)、中国太保(+0.0182)表现最好。"
+          }
+        ],
+        "reason": "中国太保涨幅0.0182远低于苏农银行6.33%和湘财股份1.11%，却称其表现最好，前后矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "活期存款利率下降个百分点"
+          }
+        ],
+        "reason": "“下降”与“个百分点”之间缺少具体数值，无法知悉降幅。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2156,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2156,
+    "processed_ranges": [
+      [
+        0,
+        2156
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2156,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001814,
+  "source_content_sha256": "f70a3600b8c758d141e9d8bbf55c56baace3c8563fa342a7871bcf0bcfcbd1bf"
+}

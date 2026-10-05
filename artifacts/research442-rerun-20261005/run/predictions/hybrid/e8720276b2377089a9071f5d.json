@@ -1,0 +1,346 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000677",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 903,
+          "end": 978,
+          "text": "根据海关总署数据，2023-2019年我国初级形状的硝酸纤维素出口量维持在2-2.5万吨之间波动，2024年出口量下降至1.56万吨，同比下降36%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 903,
+          "end": 978,
+          "text": "根据海关总署数据，2023-2019年我国初级形状的硝酸纤维素出口量维持在2-2.5万吨之间波动，2024年出口量下降至1.56万吨，同比下降36%。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "3e2d361a46307f88c6ef484e",
+      "detector_ids": [
+        "hybrid.model",
+        "legacy.C.INTRINSIC.002"
+      ],
+      "original_spans": [
+        {
+          "text": "根据海关总署数据，2023-2019年我国初级形状的硝酸纤维素出口量维持在2-2.5万吨之间波动，2024年出口量下降至1.56万吨，同比下降36%。",
+          "start": 1090,
+          "end": 1200
+        }
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "18时65分不成立，分钟数最大为59。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 50,
+          "end": 107,
+          "text": "根据极目新闻报道，据河北衡水武邑县应急管理局通报，5月30日18时65分左右，武邑县一化工企业车间发生煮洗釜爆炸。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据极目新闻报道，据河北衡水武邑县应急管理局通报，5月30日18时65分左右，武邑县一化工企业车间发生煮洗釜爆炸。",
+          "start": 0,
+          "end": 76
+        }
+      ],
+      "spans": [
+        {
+          "start": 50,
+          "end": 107,
+          "text": "根据极目新闻报道，据河北衡水武邑县应急管理局通报，5月30日18时65分左右，武邑县一化工企业车间发生煮洗釜爆炸。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "76ffa30581007aaf6f8b3dd5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "两处均表达约90%民用硝化棉需求在涂料和油墨领域，信息重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 614,
+          "end": 666,
+          "text": "根据北化股份2024年年报，硝化棉全球市场需求基本稳定，目前有90%的民用硝化棉产品用于涂料和油墨市场。"
+        },
+        {
+          "kind": "source_text",
+          "start": 666,
+          "end": 692,
+          "text": "硝化棉产品90%的民用市场需求集中于涂料和油墨领域。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据北化股份2024年年报，硝化棉全球市场需求基本稳定，目前有90%的民用硝化棉产品用于涂料和油墨市场。",
+          "start": 687,
+          "end": 748
+        },
+        {
+          "text": "硝化棉产品90%的民用市场需求集中于涂料和油墨领域。",
+          "start": 749,
+          "end": 775
+        }
+      ],
+      "spans": [
+        {
+          "start": 614,
+          "end": 666,
+          "text": "根据北化股份2024年年报，硝化棉全球市场需求基本稳定，目前有90%的民用硝化棉产品用于涂料和油墨市场。"
+        },
+        {
+          "start": 666,
+          "end": 692,
+          "text": "硝化棉产品90%的民用市场需求集中于涂料和油墨领域。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "20bffd69ee329f5c24e58e25",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "投资建议开头与点评结尾使用同一段话，重复陈述相同判断。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1144,
+          "end": 1211,
+          "text": "若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1220,
+          "end": 1308,
+          "text": "若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨，建议关注国内具备硝化棉产能布局的相关企业。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨。",
+          "start": 1191,
+          "end": 1280
+        },
+        {
+          "text": "若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨，建议关注国内具备硝化棉产能布局的相关企业。",
+          "start": 1281,
+          "end": 1393
+        }
+      ],
+      "spans": [
+        {
+          "start": 1144,
+          "end": 1211,
+          "text": "若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨。"
+        },
+        {
+          "start": 1220,
+          "end": 1308,
+          "text": "若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨，建议关注国内具备硝化棉产能布局的相关企业。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "991ebbfd43e3c07505c364e4",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1407
+        ]
+      ],
+      "estimated_input_tokens": 6068,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:01:19.213346+00:00",
+        "request_sha256": "2a40bde61977b7722c5f0fc0a7bc0a38084df1bef00c5201ba82949f21b40b15",
+        "input_token_estimate": 16832,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278976",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e58c31992ef0411180add64f680e56d2",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3919,
+        "output_tokens": 7274,
+        "usage_source": "provider",
+        "duration_seconds": 32.330798,
+        "cost_cny": "0.033015",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据极目新闻报道，据河北衡水武邑县应急管理局通报，5月30日18时65分左右，武邑县一化工企业车间发生煮洗釜爆炸。",
+            "start": 0,
+            "end": 76
+          }
+        ],
+        "reason": "18时65分不成立，分钟数最大为59。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "根据海关总署数据，2023-2019年我国初级形状的硝酸纤维素出口量维持在2-2.5万吨之间波动，2024年出口量下降至1.56万吨，同比下降36%。",
+            "start": 1090,
+            "end": 1200
+          }
+        ],
+        "reason": "年份区间写作2023-2019，起点晚于终点，时间顺序冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "根据北化股份2024年年报，硝化棉全球市场需求基本稳定，目前有90%的民用硝化棉产品用于涂料和油墨市场。",
+            "start": 687,
+            "end": 748
+          },
+          {
+            "text": "硝化棉产品90%的民用市场需求集中于涂料和油墨领域。",
+            "start": 749,
+            "end": 775
+          }
+        ],
+        "reason": "两处均表达约90%民用硝化棉需求在涂料和油墨领域，信息重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨。",
+            "start": 1191,
+            "end": 1280
+          },
+          {
+            "text": "若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨，建议关注国内具备硝化棉产能布局的相关企业。",
+            "start": 1281,
+            "end": 1393
+          }
+        ],
+        "reason": "投资建议开头与点评结尾使用同一段话，重复陈述相同判断。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1407,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1407,
+    "processed_ranges": [
+      [
+        0,
+        1407
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1407,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001722,
+  "source_content_sha256": "c322fc2fc68567952c66a30fa2fdfacd2ca404093ec431a52d07f7d5e13adca3"
+}

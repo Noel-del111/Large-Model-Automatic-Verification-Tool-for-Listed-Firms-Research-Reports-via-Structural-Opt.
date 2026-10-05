@@ -1,0 +1,252 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000689",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "列举沪深300、中证50、中证1000三个指数，却给出四个跌幅数值，指数与数值无法一一对应。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 69,
+          "end": 133,
+          "text": "具体来看，沪深300、中证50和中证1000指数分别下跌1.26%、0.78%、5.26%和0.68%，红利指数上涨0.01%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "具体来看，沪深300、中证50和中证1000指数分别下跌1.26%、0.78%、5.26%和0.68%，红利指数上涨0.01%。",
+          "start": 116,
+          "end": 182
+        }
+      ],
+      "spans": [
+        {
+          "start": 69,
+          "end": 133,
+          "text": "具体来看，沪深300、中证50和中证1000指数分别下跌1.26%、0.78%、5.26%和0.68%，红利指数上涨0.01%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8bc18087728332b2c7686fbb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“另类型基金整体平均收益最高，上涨”后缺少具体涨幅数值，关键数据缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 285,
+          "end": 412,
+          "text": "录得平均正收益的基金类型有：债券型基金、货币市场基金、另类型基金和QDII基金，其中由于黄金资产优异表现，另类型基金整体平均收益最高，上涨，其次是QDII基金，主要是海外的医药生物主题基金表现较好，可能与近期举行的2025年美国临床肿瘤学会（）年会有关。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "录得平均正收益的基金类型有：债券型基金、货币市场基金、另类型基金和QDII基金，其中由于黄金资产优异表现，另类型基金整体平均收益最高，上涨，其次是QDII基金，主要是海外的医药生物主题基金表现较好，可能与近期举行的2025年美国临床肿瘤学会（）年会有关。",
+          "start": 420,
+          "end": 620
+        }
+      ],
+      "spans": [
+        {
+          "start": 285,
+          "end": 412,
+          "text": "录得平均正收益的基金类型有：债券型基金、货币市场基金、另类型基金和QDII基金，其中由于黄金资产优异表现，另类型基金整体平均收益最高，上涨，其次是QDII基金，主要是海外的医药生物主题基金表现较好，可能与近期举行的2025年美国临床肿瘤学会（）年会有关。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cde772778267ea5665707288",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“美国临床肿瘤学会（）”括号内应填缩写名称，此处为空，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 384,
+          "end": 412,
+          "text": "可能与近期举行的2025年美国临床肿瘤学会（）年会有关。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "可能与近期举行的2025年美国临床肿瘤学会（）年会有关。",
+          "start": 568,
+          "end": 620
+        }
+      ],
+      "spans": [
+        {
+          "start": 384,
+          "end": 412,
+          "text": "可能与近期举行的2025年美国临床肿瘤学会（）年会有关。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ab3df819005ff2d4b463840f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1155
+        ]
+      ],
+      "estimated_input_tokens": 5793,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:09:49.280783+00:00",
+        "request_sha256": "abc6aeb2601654aa7411292cde9b5439ddc66dc48c82496435ec9372a42ee46d",
+        "input_token_estimate": 16082,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278226",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "850f1a23f4774f479f1ffa689eed2f1d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3713,
+        "output_tokens": 5758,
+        "usage_source": "provider",
+        "duration_seconds": 25.563511,
+        "cost_cny": "0.026745"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "具体来看，沪深300、中证50和中证1000指数分别下跌1.26%、0.78%、5.26%和0.68%，红利指数上涨0.01%。",
+            "start": 116,
+            "end": 182
+          }
+        ],
+        "reason": "列举沪深300、中证50、中证1000三个指数，却给出四个跌幅数值，指数与数值无法一一对应。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "录得平均正收益的基金类型有：债券型基金、货币市场基金、另类型基金和QDII基金，其中由于黄金资产优异表现，另类型基金整体平均收益最高，上涨，其次是QDII基金，主要是海外的医药生物主题基金表现较好，可能与近期举行的2025年美国临床肿瘤学会（）年会有关。",
+            "start": 420,
+            "end": 620
+          }
+        ],
+        "reason": "“另类型基金整体平均收益最高，上涨”后缺少具体涨幅数值，关键数据缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "可能与近期举行的2025年美国临床肿瘤学会（）年会有关。",
+            "start": 568,
+            "end": 620
+          }
+        ],
+        "reason": "“美国临床肿瘤学会（）”括号内应填缩写名称，此处为空，非数值属性值缺失。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1155,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1155,
+    "processed_ranges": [
+      [
+        0,
+        1155
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.589626,
+  "source_content_sha256": "c2aeafaef6ec60ded890a91fb7f292935746abdb667a90d4cf39d58392530625"
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000295",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "第一阶段写作2014-3017年，与“随后2018-2020年”的先后关系冲突，3017年也被包含该区间内。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1290,
+          "end": 1372,
+          "text": "我国特高压投资规模的快速发展第一阶段是2014-3017年，投资额度达1966亿元，随后发展较为平稳，2018-2020年共投入2130亿元用来发展特高压工程建设。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我国特高压投资规模的快速发展第一阶段是2014-3017年，投资额度达1966亿元，随后发展较为平稳，2018-2020年共投入2130亿元用来发展特高压工程建设。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1290,
+          "end": 1372,
+          "text": "我国特高压投资规模的快速发展第一阶段是2014-3017年，投资额度达1966亿元，随后发展较为平稳，2018-2020年共投入2130亿元用来发展特高压工程建设。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6a10dd17ecdd9388b9aae62e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "外送约165GW占总装机约255GW的比例约为64.7%，不是原文所称约85%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1039,
+          "end": 1096,
+          "text": "预计“十五五”期间规划建设风光基地总装机约255GW，其中外送约165GW、本地自用约90GW，外送比例约85%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计“十五五”期间规划建设风光基地总装机约255GW，其中外送约165GW、本地自用约90GW，外送比例约85%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1039,
+          "end": 1096,
+          "text": "预计“十五五”期间规划建设风光基地总装机约255GW，其中外送约165GW、本地自用约90GW，外送比例约85%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7032b65562396f044297b174",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "柔直换流阀市场规模与同句千亿元、1458.8亿元同属金额，87.5万元量级明显不符，应为亿元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 711,
+          "end": 805,
+          "text": "兴业证券研究所测算数据显示，预计2024年柔性直流项目总投资体量接近千亿元水平，到2027年行业规模可达1458.8亿元，其中柔直换流阀规模同步增长，2024年预计市场规模达87.5万元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "兴业证券研究所测算数据显示，预计2024年柔性直流项目总投资体量接近千亿元水平，到2027年行业规模可达1458.8亿元，其中柔直换流阀规模同步增长，2024年预计市场规模达87.5万元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 711,
+          "end": 805,
+          "text": "兴业证券研究所测算数据显示，预计2024年柔性直流项目总投资体量接近千亿元水平，到2027年行业规模可达1458.8亿元，其中柔直换流阀规模同步增长，2024年预计市场规模达87.5万元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "015e481d90357e2578da234c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“水熔板”不是电力换流阀领域的规范术语，通常应为“水冷板”类散热部件，术语使用错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 620,
+          "end": 678,
+          "text": "其中，换流阀是直流电和交流电相互转化的桥梁，其核心是将IGBT驱动板卡、水熔板等压接在一起组合成的一个完整柔直模块。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，换流阀是直流电和交流电相互转化的桥梁，其核心是将IGBT驱动板卡、水熔板等压接在一起组合成的一个完整柔直模块。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 620,
+          "end": 678,
+          "text": "其中，换流阀是直流电和交流电相互转化的桥梁，其核心是将IGBT驱动板卡、水熔板等压接在一起组合成的一个完整柔直模块。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4cf2f4bc9dd2e5438c144bab",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1434
+        ]
+      ],
+      "estimated_input_tokens": 6049,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:42:45.290621+00:00",
+        "request_sha256": "0955a78878f3c578388919fd130e19754fca3985458a19d0c25185a473a89a45",
+        "input_token_estimate": 16835,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278979",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2fa784d5c46a4793959426fb9df58f4c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3876,
+        "output_tokens": 6332,
+        "usage_source": "provider",
+        "duration_seconds": 26.557081,
+        "cost_cny": "0.029204"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "我国特高压投资规模的快速发展第一阶段是2014-3017年，投资额度达1966亿元，随后发展较为平稳，2018-2020年共投入2130亿元用来发展特高压工程建设。"
+          }
+        ],
+        "reason": "第一阶段写作2014-3017年，与“随后2018-2020年”的先后关系冲突，3017年也被包含该区间内。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "预计“十五五”期间规划建设风光基地总装机约255GW，其中外送约165GW、本地自用约90GW，外送比例约85%。"
+          }
+        ],
+        "reason": "外送约165GW占总装机约255GW的比例约为64.7%，不是原文所称约85%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "兴业证券研究所测算数据显示，预计2024年柔性直流项目总投资体量接近千亿元水平，到2027年行业规模可达1458.8亿元，其中柔直换流阀规模同步增长，2024年预计市场规模达87.5万元。"
+          }
+        ],
+        "reason": "柔直换流阀市场规模与同句千亿元、1458.8亿元同属金额，87.5万元量级明显不符，应为亿元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "其中，换流阀是直流电和交流电相互转化的桥梁，其核心是将IGBT驱动板卡、水熔板等压接在一起组合成的一个完整柔直模块。"
+          }
+        ],
+        "reason": "“水熔板”不是电力换流阀领域的规范术语，通常应为“水冷板”类散热部件，术语使用错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1434,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1434,
+    "processed_ranges": [
+      [
+        0,
+        1434
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 26.58084,
+  "source_content_sha256": "fac6d44678b77d489788704373e99e44c58be2c937e00b168e868860fb013bd7"
+}

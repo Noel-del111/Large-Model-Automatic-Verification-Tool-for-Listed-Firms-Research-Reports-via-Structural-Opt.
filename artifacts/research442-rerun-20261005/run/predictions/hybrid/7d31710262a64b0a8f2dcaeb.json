@@ -1,0 +1,357 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000452",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年”作为年份不成立，时间信息非法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 659,
+          "end": 713,
+          "text": "慧图科技是公司四大业务子集团之一，自129年公司完成对慧图科技的收购后，慧图科技的营业收入和净利润持续增长。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "慧图科技是公司四大业务子集团之一，自129年公司完成对慧图科技的收购后，慧图科技的营业收入和净利润持续增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 659,
+          "end": 713,
+          "text": "慧图科技是公司四大业务子集团之一，自129年公司完成对慧图科技的收购后，慧图科技的营业收入和净利润持续增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "07db9b951efa8b95d41558b0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一2024年水利建设投资同比变化，前文称下降12.8%，后文称增长12.8%，方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 68,
+          "end": 127,
+          "text": "2024年，我国水利建设投资创历史新高，实施水利工程项目4.7万个，完成水利建设投资1.4万亿元，同比下降12.8%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 344,
+          "end": 425,
+          "text": "2024年，我国水利建设投资创历史新高，实施水利工程项目46967个，完成水利建设投资13529亿元，同比增长12.8%，未来水利投资或将继续增长，行业发展向好。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，我国水利建设投资创历史新高，实施水利工程项目4.7万个，完成水利建设投资1.4万亿元，同比下降12.8%。"
+        },
+        {
+          "text": "2024年，我国水利建设投资创历史新高，实施水利工程项目46967个，完成水利建设投资13529亿元，同比增长12.8%，未来水利投资或将继续增长，行业发展向好。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 68,
+          "end": 127,
+          "text": "2024年，我国水利建设投资创历史新高，实施水利工程项目4.7万个，完成水利建设投资1.4万亿元，同比下降12.8%。"
+        },
+        {
+          "start": 344,
+          "end": 425,
+          "text": "2024年，我国水利建设投资创历史新高，实施水利工程项目46967个，完成水利建设投资13529亿元，同比增长12.8%，未来水利投资或将继续增长，行业发展向好。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fb4aed7cf9150d2780c90700",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "目标价单位应为元，此处写成“亿分”，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 925,
+          "end": 969,
+          "text": "我们给予公司2025年31倍PE，对应目标价为5.89亿分，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们给予公司2025年31倍PE，对应目标价为5.89亿分，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 925,
+          "end": 969,
+          "text": "我们给予公司2025年31倍PE，对应目标价为5.89亿分，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "90411f2732a6ceab52fae54e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "2025-2027三年对应PE，仅见25和16两个数值，中间缺失一个。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 792,
+          "end": 841,
+          "text": "预计公司2025-2027年归母净利润分别为1.6/2.2/2.7亿元，对应PE为25//16倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司2025-2027年归母净利润分别为1.6/2.2/2.7亿元，对应PE为25//16倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 792,
+          "end": 841,
+          "text": "预计公司2025-2027年归母净利润分别为1.6/2.2/2.7亿元，对应PE为25//16倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "644127deb6eed97ee08cb54c",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1011
+        ]
+      ],
+      "estimated_input_tokens": 5587,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:12:09.972907+00:00",
+        "request_sha256": "cb4bb1b76e1eec7a94d75e43c52fb59c7f4dca4ee2a6d6095820f41e9288e4f9",
+        "input_token_estimate": 15538,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277682",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "547800812ac7421f9cb7af0a48e277a7",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3619,
+        "output_tokens": 6981,
+        "usage_source": "provider",
+        "duration_seconds": 28.526481,
+        "cost_cny": "0.031543",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "慧图科技是公司四大业务子集团之一，自129年公司完成对慧图科技的收购后，慧图科技的营业收入和净利润持续增长。"
+          }
+        ],
+        "reason": "“129年”作为年份不成立，时间信息非法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2024年，我国水利建设投资创历史新高，实施水利工程项目4.7万个，完成水利建设投资1.4万亿元，同比下降12.8%。"
+          },
+          {
+            "text": "2024年，我国水利建设投资创历史新高，实施水利工程项目46967个，完成水利建设投资13529亿元，同比增长12.8%，未来水利投资或将继续增长，行业发展向好。"
+          }
+        ],
+        "reason": "同一2024年水利建设投资同比变化，前文称下降12.8%，后文称增长12.8%，方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "我们给予公司2025年31倍PE，对应目标价为5.89亿分，首次覆盖，给予“买入”评级。"
+          }
+        ],
+        "reason": "目标价单位应为元，此处写成“亿分”，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "预计公司2025-2027年归母净利润分别为1.6/2.2/2.7亿元，对应PE为25//16倍。"
+          }
+        ],
+        "reason": "2025-2027三年对应PE，仅见25和16两个数值，中间缺失一个。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 659,
+      "end": 713,
+      "text": "慧图科技是公司四大业务子集团之一，自129年公司完成对慧图科技的收购后，慧图科技的营业收入和净利润持续增长。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "慧图科技是公司四大业务子集团",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 659,
+      "end": 713,
+      "text": "慧图科技是公司四大业务子集团之一，自129年公司完成对慧图科技的收购后，慧图科技的营业收入和净利润持续增长。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "慧图科技是公司四大业务子集团",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 792,
+      "end": 841,
+      "text": "预计公司2025-2027年归母净利润分别为1.6/2.2/2.7亿元，对应PE为25//16倍。",
+      "quantities": [
+        {
+          "value": "2.7",
+          "unit": "亿元",
+          "start": 822,
+          "end": 827
+        },
+        {
+          "value": "16",
+          "unit": "倍",
+          "start": 837,
+          "end": 840
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1011,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1011,
+    "processed_ranges": [
+      [
+        0,
+        1011
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1011,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001538,
+  "source_content_sha256": "62a97dd9ffbd578b6a43a9d0f5961cb2d802756cf112c109c33739446a9144e8"
+}

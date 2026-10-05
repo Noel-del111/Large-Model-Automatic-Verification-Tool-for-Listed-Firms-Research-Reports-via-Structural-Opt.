@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。\", \"reason\": \"同一长句中“如泰康发起成立稳行私募基金（首期规模120亿）”连续出现两次，未增加新信息。\"}]}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。\", \"reason\": \"“阳光和远私募（总规模亿）”中总规模数值空缺，仅剩单位。\"}]}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"根据财联社报道，平安资管近期获批成立恒毅持盈(深圳)私募基金管理有限公司，注册资本3亿分，将作为基金管理人向平安人寿定向发行契约型私募证券投资基金，首期基金规模300亿元。\", \"reason\": \"注册资本单位写成“分”，私募基金管理公司注册资本应为“元”。\"}]}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"内地企业赴港上市热度不减，有望满足企业债权需求并提升港股流动性。\", \"reason\": \"企业赴港上市属于股权融资，称“满足企业债权需求”误用了融资性质术语。\"}]}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:52:39.912370+00:00",
+    "request_sha256": "9391e8a49482f1a5e1e3e8f38e707caaa2331ec0d8b646ea2b3bfd72e03c09df",
+    "input_token_estimate": 16654,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278798",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9fee4e39f09a4d12bf64d37167cf3c7a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3815,
+    "output_tokens": 7601,
+    "usage_source": "provider",
+    "duration_seconds": 30.670733,
+    "cost_cny": "0.034219"
+  },
+  "cache_request": {
+    "key": "573f6bef0b266e6d84d2fc0a7e90426d87755b80766df19ae979bad365d28a4b",
+    "purpose": "text_review.detect",
+    "messages_sha256": "9391e8a49482f1a5e1e3e8f38e707caaa2331ec0d8b646ea2b3bfd72e03c09df"
+  }
+}

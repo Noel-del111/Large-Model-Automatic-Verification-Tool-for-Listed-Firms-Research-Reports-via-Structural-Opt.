@@ -1,0 +1,540 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000601",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "日期“5月32日”不存在，5月没有32日，时间信息不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 262,
+          "end": 311,
+          "text": "香港特别行政区政府于5月32日在宪报刊登《稳定币条例》，意味香港在虚拟资产监管迈出了里程碑的一步。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "香港特别行政区政府于5月32日在宪报刊登《稳定币条例》，意味香港在虚拟资产监管迈出了里程碑的一步。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 262,
+          "end": 311,
+          "text": "香港特别行政区政府于5月32日在宪报刊登《稳定币条例》，意味香港在虚拟资产监管迈出了里程碑的一步。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "83947cef5d89ed416127251f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“5年28日”缺少月份且年份写法不完整，无法构成合法日期。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 891,
+          "end": 916,
+          "text": "美东时间5年28日盘后，英伟达发布FY26Q1业绩"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "美东时间5年28日盘后，英伟达发布FY26Q1业绩"
+        }
+      ],
+      "spans": [
+        {
+          "start": 891,
+          "end": 916,
+          "text": "美东时间5年28日盘后，英伟达发布FY26Q1业绩"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d2b63f953ac8a9fd5576d0f7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "标题中“行业”一词连续出现，属于不必要的重复表述。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 0,
+          "end": 32,
+          "text": "计算机行业行业月报：EDA管控升级，RWA+稳定币构建新金融范式"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "计算机行业行业月报：EDA管控升级，RWA+稳定币构建新金融范式"
+        }
+      ],
+      "spans": [
+        {
+          "start": 0,
+          "end": 32,
+          "text": "计算机行业行业月报：EDA管控升级，RWA+稳定币构建新金融范式"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f80e17c87dcc7cb8259e7ac9",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一段落内两次表述5月板块横盘整理，信息重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 34,
+          "end": 52,
+          "text": "5月板块横盘整理，短期面临方向选择。"
+        },
+        {
+          "kind": "source_text",
+          "start": 117,
+          "end": 129,
+          "text": "板块在5月迎来横盘整理。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月板块横盘整理，短期面临方向选择。"
+        },
+        {
+          "text": "板块在5月迎来横盘整理。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 34,
+          "end": 52,
+          "text": "5月板块横盘整理，短期面临方向选择。"
+        },
+        {
+          "start": 117,
+          "end": 129,
+          "text": "板块在5月迎来横盘整理。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "52b13bb711381c776186b47d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "指数名称前的括号内为空，缺失应有的指数名称或代码属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 52,
+          "end": 74,
+          "text": "人工智能板块指数（）5月涨跌幅为-0.78%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "人工智能板块指数（）5月涨跌幅为-0.78%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 52,
+          "end": 74,
+          "text": "人工智能板块指数（）5月涨跌幅为-0.78%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "28a2c4533dd930484adb2088",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "制裁加码倒逼突围应提高国产化率，此处却称降低国产化率，前后逻辑矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 746,
+          "end": 783,
+          "text": "美国对华半导体产业制裁进一步加码，倒逼国产EDA厂商加速突围，降低国产化率"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "美国对华半导体产业制裁进一步加码，倒逼国产EDA厂商加速突围，降低国产化率"
+        }
+      ],
+      "spans": [
+        {
+          "start": 746,
+          "end": 783,
+          "text": "美国对华半导体产业制裁进一步加码，倒逼国产EDA厂商加速突围，降低国产化率"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8680d9c4feba66d49309581b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“超过”后缺失具体市场份额数值或比例，无法判断占据份额。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 717,
+          "end": 745,
+          "text": "目前全球EDA厂商新思、楷登与西门子占据超过中国市场份额"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前全球EDA厂商新思、楷登与西门子占据超过中国市场份额"
+        }
+      ],
+      "spans": [
+        {
+          "start": 717,
+          "end": 745,
+          "text": "目前全球EDA厂商新思、楷登与西门子占据超过中国市场份额"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "469892307a2062f4ef45c04c",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1660
+        ]
+      ],
+      "estimated_input_tokens": 6236,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:54:17.760765+00:00",
+        "request_sha256": "8c394815017c436dd7bec4f54a4517197fc98dc40c23375416fb08181e9e7004",
+        "input_token_estimate": 17329,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279473",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "71f886d3f44147b9824eb612cb48f848",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4071,
+        "output_tokens": 7928,
+        "usage_source": "provider",
+        "duration_seconds": 32.564616,
+        "cost_cny": "0.035783"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "香港特别行政区政府于5月32日在宪报刊登《稳定币条例》，意味香港在虚拟资产监管迈出了里程碑的一步。"
+          }
+        ],
+        "reason": "日期“5月32日”不存在，5月没有32日，时间信息不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "美东时间5年28日盘后，英伟达发布FY26Q1业绩"
+          }
+        ],
+        "reason": "“5年28日”缺少月份且年份写法不完整，无法构成合法日期。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "计算机行业行业月报：EDA管控升级，RWA+稳定币构建新金融范式"
+          }
+        ],
+        "reason": "标题中“行业”一词连续出现，属于不必要的重复表述。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "5月板块横盘整理，短期面临方向选择。"
+          },
+          {
+            "text": "板块在5月迎来横盘整理。"
+          }
+        ],
+        "reason": "同一段落内两次表述5月板块横盘整理，信息重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "人工智能板块指数（）5月涨跌幅为-0.78%"
+          }
+        ],
+        "reason": "指数名称前的括号内为空，缺失应有的指数名称或代码属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "美国对华半导体产业制裁进一步加码，倒逼国产EDA厂商加速突围，降低国产化率"
+          }
+        ],
+        "reason": "制裁加码倒逼突围应提高国产化率，此处却称降低国产化率，前后逻辑矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "目前全球EDA厂商新思、楷登与西门子占据超过中国市场份额"
+          }
+        ],
+        "reason": "“超过”后缺失具体市场份额数值或比例，无法判断占据份额。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 891,
+      "end": 1070,
+      "text": "美东时间5年28日盘后，英伟达发布FY26Q1业绩，一季度整体营收为441亿美元，同比增长69%，高于市场预期的432.9亿美元，净利润187.8亿美元，同比增长26%，其中因受到出口限制等影响，因H20芯片相关产品产生45亿美元费用，显著低于此前预估水平，其中核心业务数据中心营收同比增长73%，达到391亿美元（市场预期393亿美元），占销售额的88%。",
+      "quantities": [
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 936,
+          "end": 939
+        },
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 972,
+          "end": 975
+        },
+        {
+          "value": "73",
+          "unit": "%",
+          "start": 1036,
+          "end": 1039
+        },
+        {
+          "value": "88",
+          "unit": "%",
+          "start": 1066,
+          "end": 1069
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 891,
+      "end": 1070,
+      "text": "美东时间5年28日盘后，英伟达发布FY26Q1业绩，一季度整体营收为441亿美元，同比增长69%，高于市场预期的432.9亿美元，净利润187.8亿美元，同比增长26%，其中因受到出口限制等影响，因H20芯片相关产品产生45亿美元费用，显著低于此前预估水平，其中核心业务数据中心营收同比增长73%，达到391亿美元（市场预期393亿美元），占销售额的88%。",
+      "quantities": [
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 936,
+          "end": 939
+        },
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 972,
+          "end": 975
+        },
+        {
+          "value": "73",
+          "unit": "%",
+          "start": 1036,
+          "end": 1039
+        },
+        {
+          "value": "88",
+          "unit": "%",
+          "start": 1066,
+          "end": 1069
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 891,
+      "end": 1070,
+      "text": "美东时间5年28日盘后，英伟达发布FY26Q1业绩，一季度整体营收为441亿美元，同比增长69%，高于市场预期的432.9亿美元，净利润187.8亿美元，同比增长26%，其中因受到出口限制等影响，因H20芯片相关产品产生45亿美元费用，显著低于此前预估水平，其中核心业务数据中心营收同比增长73%，达到391亿美元（市场预期393亿美元），占销售额的88%。",
+      "quantities": [
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 936,
+          "end": 939
+        },
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 972,
+          "end": 975
+        },
+        {
+          "value": "73",
+          "unit": "%",
+          "start": 1036,
+          "end": 1039
+        },
+        {
+          "value": "88",
+          "unit": "%",
+          "start": 1066,
+          "end": 1069
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1660,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1660,
+    "processed_ranges": [
+      [
+        0,
+        1660
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 32.590628,
+  "source_content_sha256": "df016996e219bf5140f6506184188edfc6757b7e184dd77ca5494975798ed2e6"
+}

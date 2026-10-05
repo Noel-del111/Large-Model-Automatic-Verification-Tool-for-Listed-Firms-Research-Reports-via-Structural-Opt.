@@ -1,0 +1,338 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000355",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "时间区间写成2027-2025年，起点晚于终点，区间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1247,
+          "end": 1292,
+          "text": "我们预计2027-2025年水星家纺记忆枕销售额有望从1.14亿元大幅提升至6.44亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计2027-2025年水星家纺记忆枕销售额有望从1.14亿元大幅提升至6.44亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1247,
+          "end": 1292,
+          "text": "我们预计2027-2025年水星家纺记忆枕销售额有望从1.14亿元大幅提升至6.44亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a4e1d101e82d7c7076b44698",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一表述“研发+营销同步发力，积极拥抱行业新机遇”在相邻段落中完全重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 719,
+          "end": 741,
+          "text": "2）研发+营销同步发力，积极拥抱行业新机遇。"
+        },
+        {
+          "kind": "source_text",
+          "start": 742,
+          "end": 764,
+          "text": "4）研发+营销同步发力，积极拥抱行业新机遇。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）研发+营销同步发力，积极拥抱行业新机遇。"
+        },
+        {
+          "text": "4）研发+营销同步发力，积极拥抱行业新机遇。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 719,
+          "end": 741,
+          "text": "2）研发+营销同步发力，积极拥抱行业新机遇。"
+        },
+        {
+          "start": 742,
+          "end": 764,
+          "text": "4）研发+营销同步发力，积极拥抱行业新机遇。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "49e05b004766fc41c2525e24",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“市场规模亿元”前缺少具体数值，无法得知2024年国内家纺市场规模。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 636,
+          "end": 719,
+          "text": "2024年国内家纺市场规模亿元，据我们估算前三大品牌水星家纺/罗莱生活/富安娜市占率分别约为1.3%/1.1%/0.9%，行业集中度较低，但龙头市占率呈小幅提升趋势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年国内家纺市场规模亿元，据我们估算前三大品牌水星家纺/罗莱生活/富安娜市占率分别约为1.3%/1.1%/0.9%，行业集中度较低，但龙头市占率呈小幅提升趋势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 636,
+          "end": 719,
+          "text": "2024年国内家纺市场规模亿元，据我们估算前三大品牌水星家纺/罗莱生活/富安娜市占率分别约为1.3%/1.1%/0.9%，行业集中度较低，但龙头市占率呈小幅提升趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4e072d9b9aba4105ef8bb3a1",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "预测值从3.86/4.26亿元变为3.99/4.48亿元是上调，却表述为“下调”，前后矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1292,
+          "end": 1397,
+          "text": "我们将2025/2026年公司归母净利润预测值从3.86/4.26亿元分别下调至3.99/4.48亿元，增加2027年预测值4.97亿元，对应2025-2027年PE分别为12/11/10X，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们将2025/2026年公司归母净利润预测值从3.86/4.26亿元分别下调至3.99/4.48亿元，增加2027年预测值4.97亿元，对应2025-2027年PE分别为12/11/10X，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1292,
+          "end": 1397,
+          "text": "我们将2025/2026年公司归母净利润预测值从3.86/4.26亿元分别下调至3.99/4.48亿元，增加2027年预测值4.97亿元，对应2025-2027年PE分别为12/11/10X，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "909b5d54e52f62a8613d746c",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1447
+        ]
+      ],
+      "estimated_input_tokens": 6047,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:48:22.677400+00:00",
+        "request_sha256": "c720bd0fce99b23f5273b39675c06a340dbb4cc339b9214031083477a35ee954",
+        "input_token_estimate": 16802,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278946",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "a7ed59695ade4f2b9905a42caf927bfc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3905,
+        "output_tokens": 5900,
+        "usage_source": "provider",
+        "duration_seconds": 23.605264,
+        "cost_cny": "0.027505"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "我们预计2027-2025年水星家纺记忆枕销售额有望从1.14亿元大幅提升至6.44亿元。"
+          }
+        ],
+        "reason": "时间区间写成2027-2025年，起点晚于终点，区间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2）研发+营销同步发力，积极拥抱行业新机遇。"
+          },
+          {
+            "text": "4）研发+营销同步发力，积极拥抱行业新机遇。"
+          }
+        ],
+        "reason": "同一表述“研发+营销同步发力，积极拥抱行业新机遇”在相邻段落中完全重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年国内家纺市场规模亿元，据我们估算前三大品牌水星家纺/罗莱生活/富安娜市占率分别约为1.3%/1.1%/0.9%，行业集中度较低，但龙头市占率呈小幅提升趋势。"
+          }
+        ],
+        "reason": "“市场规模亿元”前缺少具体数值，无法得知2024年国内家纺市场规模。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "我们将2025/2026年公司归母净利润预测值从3.86/4.26亿元分别下调至3.99/4.48亿元，增加2027年预测值4.97亿元，对应2025-2027年PE分别为12/11/10X，维持“买入”评级。"
+          }
+        ],
+        "reason": "预测值从3.86/4.26亿元变为3.99/4.48亿元是上调，却表述为“下调”，前后矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1292,
+      "end": 1397,
+      "text": "我们将2025/2026年公司归母净利润预测值从3.86/4.26亿元分别下调至3.99/4.48亿元，增加2027年预测值4.97亿元，对应2025-2027年PE分别为12/11/10X，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "4.26",
+          "unit": "亿元",
+          "start": 1321,
+          "end": 1327
+        },
+        {
+          "value": "4.48",
+          "unit": "亿元",
+          "start": 1337,
+          "end": 1343
+        },
+        {
+          "value": "4.97",
+          "unit": "亿元",
+          "start": 1354,
+          "end": 1360
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1447,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1447,
+    "processed_ranges": [
+      [
+        0,
+        1447
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.629729,
+  "source_content_sha256": "dc64a59bc48ec310c2d5f77049f3fd5c150bec6df7b3e2e14b951c64987fd70b"
+}

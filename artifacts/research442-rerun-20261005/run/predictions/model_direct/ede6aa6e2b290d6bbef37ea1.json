@@ -1,0 +1,495 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000613",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一能源业务小标题连续重复，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 579,
+          "end": 630,
+          "text": "能源业务：储能部署创纪录，本土化供应链抵御贸易风险\n能源业务：储能部署创纪录，本土化供应链抵御贸易风险"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "能源业务：储能部署创纪录，本土化供应链抵御贸易风险\n能源业务：储能部署创纪录，本土化供应链抵御贸易风险"
+        }
+      ],
+      "spans": [
+        {
+          "start": 579,
+          "end": 630,
+          "text": "能源业务：储能部署创纪录，本土化供应链抵御贸易风险\n能源业务：储能部署创纪录，本土化供应链抵御贸易风险"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "df69cc688f4b0e23e81eec80",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "GAAP是会计口径，未说明是净利润等哪个财务指标，指标名称缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 76,
+          "end": 126,
+          "text": "公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 76,
+          "end": 126,
+          "text": "公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6dcd59c31f7343937a918d3f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“增长”与-71%互相矛盾，负增长应表述为下降。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 76,
+          "end": 126,
+          "text": "公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 76,
+          "end": 126,
+          "text": "公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6f40a8930982ea68da07a5c1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "电力交付量单位应为TWh等电量单位，TBh不是常用电量单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 851,
+          "end": 914,
+          "text": "本季度新增1,800个超级充电桩（总量达67,316个），电力交付量同比增长26%至1.4TBh，充电生态商业化能力持续堪忧。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本季度新增1,800个超级充电桩（总量达67,316个），电力交付量同比增长26%至1.4TBh，充电生态商业化能力持续堪忧。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 851,
+          "end": 914,
+          "text": "本季度新增1,800个超级充电桩（总量达67,316个），电力交付量同比增长26%至1.4TBh，充电生态商业化能力持续堪忧。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8b1caa1eb8bbdb33c2b4c87f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“自由融资”非标准财务指标，结合语境应为自由现金流。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 997,
+          "end": 1066,
+          "text": "公司现金流管理能力显著提升，运营现金流达21.56亿美元，自由融资6.64亿美元（同比+126%），现金储备同比增长38%至370亿美元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司现金流管理能力显著提升，运营现金流达21.56亿美元，自由融资6.64亿美元（同比+126%），现金储备同比增长38%至370亿美元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 997,
+          "end": 1066,
+          "text": "公司现金流管理能力显著提升，运营现金流达21.56亿美元，自由融资6.64亿美元（同比+126%），现金储备同比增长38%至370亿美元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4b2f74eeee0e9048558e6485",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“至美元”前缺少具体金额数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1066,
+          "end": 1148,
+          "text": "研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1066,
+          "end": 1148,
+          "text": "研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "128a4f40ae413474b5803112",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称重点投向AI及Robotaxi等前沿领域，与本句低价值技术环节集中矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1066,
+          "end": 1148,
+          "text": "研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1066,
+          "end": 1148,
+          "text": "研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "caceb5cc154b11f7e2653ebb",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码后缀应为字母O，原文误为数字0，导致代码格式错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1223,
+          "end": 1279,
+          "text": "科技巨头在AI及云计算领域的行业地位有望助力其未来发展，可继续关注谷歌（GOOGL.0）和微软（MSFT.0）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "科技巨头在AI及云计算领域的行业地位有望助力其未来发展，可继续关注谷歌（GOOGL.0）和微软（MSFT.0）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1223,
+          "end": 1279,
+          "text": "科技巨头在AI及云计算领域的行业地位有望助力其未来发展，可继续关注谷歌（GOOGL.0）和微软（MSFT.0）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "28eeb7563390e33f9c9a0fdc",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1340
+        ]
+      ],
+      "estimated_input_tokens": 5800,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:05:00.712268+00:00",
+        "request_sha256": "50229003a3e8ed2e5d096f770caa734ca670933d00e12143b39ac82c8cc70a15",
+        "input_token_estimate": 16179,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278323",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "16b24ff1e171454abc58e17460774de0",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3794,
+        "output_tokens": 9271,
+        "usage_source": "provider",
+        "duration_seconds": 37.736247,
+        "cost_cny": "0.040878"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "能源业务：储能部署创纪录，本土化供应链抵御贸易风险\n能源业务：储能部署创纪录，本土化供应链抵御贸易风险"
+          }
+        ],
+        "reason": "同一能源业务小标题连续重复，未增加新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。"
+          }
+        ],
+        "reason": "GAAP是会计口径，未说明是净利润等哪个财务指标，指标名称缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。"
+          }
+        ],
+        "reason": "“增长”与-71%互相矛盾，负增长应表述为下降。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本季度新增1,800个超级充电桩（总量达67,316个），电力交付量同比增长26%至1.4TBh，充电生态商业化能力持续堪忧。"
+          }
+        ],
+        "reason": "电力交付量单位应为TWh等电量单位，TBh不是常用电量单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司现金流管理能力显著提升，运营现金流达21.56亿美元，自由融资6.64亿美元（同比+126%），现金储备同比增长38%至370亿美元。"
+          }
+        ],
+        "reason": "“自由融资”非标准财务指标，结合语境应为自由现金流。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。"
+          }
+        ],
+        "reason": "“至美元”前缺少具体金额数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。"
+          }
+        ],
+        "reason": "前文称重点投向AI及Robotaxi等前沿领域，与本句低价值技术环节集中矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "科技巨头在AI及云计算领域的行业地位有望助力其未来发展，可继续关注谷歌（GOOGL.0）和微软（MSFT.0）。"
+          }
+        ],
+        "reason": "股票代码后缀应为字母O，原文误为数字0，导致代码格式错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 76,
+      "end": 102,
+      "text": "公司第一季度总营收为193.35亿美元，同比-9%；",
+      "quantities": [
+        {
+          "value": "-9",
+          "unit": "%",
+          "start": 98,
+          "end": 101
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 804,
+      "end": 851,
+      "text": "服务收入同比增长15%至26.38亿美元，毛利率提升主要源于非保修维护服务及碰撞维修业务优化。",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 812,
+          "end": 815
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1340,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1340,
+    "processed_ranges": [
+      [
+        0,
+        1340
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 37.760875,
+  "source_content_sha256": "3c592eaa69fee52a573e963a9f0b3ef963d7bca9a6ce520493896ac39cfeb194"
+}

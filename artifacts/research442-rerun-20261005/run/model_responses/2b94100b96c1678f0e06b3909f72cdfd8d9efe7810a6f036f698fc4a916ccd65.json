@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"5月30日，中国人民银行发布2025年13月金融市场运行数据。\"}],\"reason\":\"月份“13月”不存在，属于日期时间本身不成立。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"文件共个部分、19条具体举措，从坚持和加强党的领导、完善公司治理结构、提升企业科学管理水平、健全企业激励创新制度、建立健全企业社会责任与企业文化体系、优化企业综合监管和服务体系等方面作出全面系统部署特别强调立足发展新质生产力，提升创新链产业链水平，打造开放协同高效的创新生态，专设“健全企业激励创新制度”一章，从创新组织形式、要素配置效率、激励机制设计等三方面提出具体举措。\"}],\"reason\":\"“共个部分”前缺少具体数字，文件部分数量未给出。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"此外，该章节同样围绕创新组织形式、要素配置效率以及激励机制设计三个核心维度制定了实施路径。\"}],\"reason\":\"前文已说明该章从创新组织形式、要素配置效率、激励机制设计三方面提出举措，此处再次重复同一组三方面。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:55:15.932003+00:00",
+    "request_sha256": "c6047484dade31edc88de3c2dae18b4b6993ecd3fb7ad7670c07a569de4268d6",
+    "input_token_estimate": 15802,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277946",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1f32c6809bdd4c5b88c94433d3e10c7a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3625,
+    "output_tokens": 8050,
+    "usage_source": "provider",
+    "duration_seconds": 33.409596,
+    "cost_cny": "0.035825"
+  },
+  "cache_request": {
+    "key": "2b94100b96c1678f0e06b3909f72cdfd8d9efe7810a6f036f698fc4a916ccd65",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c6047484dade31edc88de3c2dae18b4b6993ecd3fb7ad7670c07a569de4268d6"
+  }
+}

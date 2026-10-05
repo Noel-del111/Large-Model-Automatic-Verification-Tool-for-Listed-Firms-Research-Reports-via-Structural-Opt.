@@ -1,0 +1,323 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000522",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "原文称细分赛道有六个领域，但紧接着只列出座舱显示、智能监控、OTA、座舱域控、车联网五项。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 321,
+          "end": 363,
+          "text": "智能座舱的细分赛道众多，主要包括座舱显示、智能监控、OTA、座舱域控、车联网六个领域"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "智能座舱的细分赛道众多，主要包括座舱显示、智能监控、OTA、座舱域控、车联网六个领域",
+          "start": 496,
+          "end": 540
+        }
+      ],
+      "spans": [
+        {
+          "start": 321,
+          "end": 363,
+          "text": "智能座舱的细分赛道众多，主要包括座舱显示、智能监控、OTA、座舱域控、车联网六个领域"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4786c5eccd2289f584b5e196",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "小标题称未来增长空间较小，后文却称市场规模持续增长且预计保持较快增长，两者互斥。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 816,
+          "end": 839,
+          "text": "全球及中国智能座舱行业市场规模未来增长空间较小"
+        },
+        {
+          "kind": "source_text",
+          "start": 1002,
+          "end": 1043,
+          "text": "未来，伴随汽车智能化和网联化程度不断提高，预计智能座舱行业将继续保持较快增长趋势。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "全球及中国智能座舱行业市场规模未来增长空间较小",
+          "start": 722,
+          "end": 738
+        },
+        {
+          "text": "未来，伴随汽车智能化和网联化程度不断提高，预计智能座舱行业将继续保持较快增长趋势。",
+          "start": 996,
+          "end": 1038
+        }
+      ],
+      "spans": [
+        {
+          "start": 816,
+          "end": 839,
+          "text": "全球及中国智能座舱行业市场规模未来增长空间较小"
+        },
+        {
+          "start": 1002,
+          "end": 1043,
+          "text": "未来，伴随汽车智能化和网联化程度不断提高，预计智能座舱行业将继续保持较快增长趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9dbeb3e3a5f795a840bb813d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按2021-2024年三年复合增速计算，全球约28.6%、中国约31.6%，与原文38.66%、56.58%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 898,
+          "end": 1002,
+          "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%，增速快于全球市场。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%，增速快于全球市场。",
+          "start": 796,
+          "end": 996
+        }
+      ],
+      "spans": [
+        {
+          "start": 898,
+          "end": 1002,
+          "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%，增速快于全球市场。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ae208899d552b8ef0e1eab12",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句“预计智能座舱行业将继续保持较快增长趋势”连续重复出现，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1023,
+          "end": 1063,
+          "text": "预计智能座舱行业将继续保持较快增长趋势。预计智能座舱行业将继续保持较快增长趋势。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计智能座舱行业将继续保持较快增长趋势。预计智能座舱行业将继续保持较快增长趋势。",
+          "start": 1013,
+          "end": 1063
+        }
+      ],
+      "spans": [
+        {
+          "start": 1023,
+          "end": 1063,
+          "text": "预计智能座舱行业将继续保持较快增长趋势。预计智能座舱行业将继续保持较快增长趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d54601c480f03387deb2a0a7",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1063
+        ]
+      ],
+      "estimated_input_tokens": 5708,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:53:52.189069+00:00",
+        "request_sha256": "1fe9f9129cfa3e1ad7119f5872c882b26ed2fe90af25fb8d4d1dcfa354a827d9",
+        "input_token_estimate": 15852,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277996",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b818517447904e28822033588df1087f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3650,
+        "output_tokens": 5942,
+        "usage_source": "provider",
+        "duration_seconds": 24.340513,
+        "cost_cny": "0.027418",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "智能座舱的细分赛道众多，主要包括座舱显示、智能监控、OTA、座舱域控、车联网六个领域",
+            "start": 496,
+            "end": 540
+          }
+        ],
+        "reason": "原文称细分赛道有六个领域，但紧接着只列出座舱显示、智能监控、OTA、座舱域控、车联网五项。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "全球及中国智能座舱行业市场规模未来增长空间较小",
+            "start": 722,
+            "end": 738
+          },
+          {
+            "text": "未来，伴随汽车智能化和网联化程度不断提高，预计智能座舱行业将继续保持较快增长趋势。",
+            "start": 996,
+            "end": 1038
+          }
+        ],
+        "reason": "小标题称未来增长空间较小，后文却称市场规模持续增长且预计保持较快增长，两者互斥。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2021-2024年全球智能座舱市场规模从331.6亿美元增长至706.3亿美元，CAGR达38.66%；中国智能座舱市场规模从76.3亿美元增长至173.8亿美元，CAGR达56.58%，增速快于全球市场。",
+            "start": 796,
+            "end": 996
+          }
+        ],
+        "reason": "按2021-2024年三年复合增速计算，全球约28.6%、中国约31.6%，与原文38.66%、56.58%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "预计智能座舱行业将继续保持较快增长趋势。预计智能座舱行业将继续保持较快增长趋势。",
+            "start": 1013,
+            "end": 1063
+          }
+        ],
+        "reason": "同一句“预计智能座舱行业将继续保持较快增长趋势”连续重复出现，未增加新信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1063,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1063,
+    "processed_ranges": [
+      [
+        0,
+        1063
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1063,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001572,
+  "source_content_sha256": "09055463fda0967e892b43bef2078e833530916ea6e739010678d4b166fd52ad"
+}

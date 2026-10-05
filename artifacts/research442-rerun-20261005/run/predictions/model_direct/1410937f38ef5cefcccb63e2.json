@@ -1,0 +1,733 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000385",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "季度编号Q6不存在，一年仅有四个季度。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 448,
+          "end": 481,
+          "text": "2025Q6实现营业收入1.61亿元、归母净利润975.78万元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q6实现营业收入1.61亿元、归母净利润975.78万元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 448,
+          "end": 481,
+          "text": "2025Q6实现营业收入1.61亿元、归母净利润975.78万元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e753df57c1bc81914f8681a2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "发明专利数量缺失，仅有“项”字而无具体数字。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 268,
+          "end": 296,
+          "text": "截至2024年年末，公司拥有专利77项，其中发明专利项。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年年末，公司拥有专利77项，其中发明专利项。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 268,
+          "end": 296,
+          "text": "截至2024年年末，公司拥有专利77项，其中发明专利项。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3287e3e364bcb7f4fd5fe76a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "国产汽车单车塑料用量约100g与行业常识不符，应为100kg，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 825,
+          "end": 913,
+          "text": "目前，发达国家汽车平均塑料用量达到300kg/辆以上，而国产汽车的平均单车塑料用量约为100g，随着重视程度的不断增加，我国汽车塑料用量和汽车塑料零部件在未来有望释放更大空间。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前，发达国家汽车平均塑料用量达到300kg/辆以上，而国产汽车的平均单车塑料用量约为100g，随着重视程度的不断增加，我国汽车塑料用量和汽车塑料零部件在未来有望释放更大空间。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 825,
+          "end": 913,
+          "text": "目前，发达国家汽车平均塑料用量达到300kg/辆以上，而国产汽车的平均单车塑料用量约为100g，随着重视程度的不断增加，我国汽车塑料用量和汽车塑料零部件在未来有望释放更大空间。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "82bf8f03b4c518f8dc299342",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "双色成型技术正是将不同物性材料同时成型，与“无法将不同物性的材料同时成型”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 296,
+          "end": 382,
+          "text": "公司技术能力包括双色成型技术、高光免喷漆成型技术、金属嵌件埋入成型技术，无法将不同物性的材料同时成型，实现一次成型塑料零件中多达35个用于电连接和固定作用金属件的精确埋入。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司技术能力包括双色成型技术、高光免喷漆成型技术、金属嵌件埋入成型技术，无法将不同物性的材料同时成型，实现一次成型塑料零件中多达35个用于电连接和固定作用金属件的精确埋入。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 296,
+          "end": 382,
+          "text": "公司技术能力包括双色成型技术、高光免喷漆成型技术、金属嵌件埋入成型技术，无法将不同物性的材料同时成型，实现一次成型塑料零件中多达35个用于电连接和固定作用金属件的精确埋入。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e04960a634880c395e47966c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间范围“2025-2024年”起止年份颠倒，终点早于起点。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1529,
+          "end": 1573,
+          "text": "此外，2023年9月，子公司骏创北美开始量产，2025-2024年属于产能设计爬坡阶段；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此外，2023年9月，子公司骏创北美开始量产，2025-2024年属于产能设计爬坡阶段；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1529,
+          "end": 1573,
+          "text": "此外，2023年9月，子公司骏创北美开始量产，2025-2024年属于产能设计爬坡阶段；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "badecc8dbc66a4d53916c228",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "预测年份为2025-2027共三年，但PE给出四个数值，多出25.1倍，与预测期不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1774,
+          "end": 1873,
+          "text": "我们预计公司2025-2027年归母净利润分别为0.68/0.90/1.18亿元，对应EPS分别为0.52/0.69/0.90元/股，对应当前股价PE分别为73.5/54.9/42.1/25.1倍。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司2025-2027年归母净利润分别为0.68/0.90/1.18亿元，对应EPS分别为0.52/0.69/0.90元/股，对应当前股价PE分别为73.5/54.9/42.1/25.1倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1774,
+          "end": 1873,
+          "text": "我们预计公司2025-2027年归母净利润分别为0.68/0.90/1.18亿元，对应EPS分别为0.52/0.69/0.90元/股，对应当前股价PE分别为73.5/54.9/42.1/25.1倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9f363c58c96855dafde5d087",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2074
+        ]
+      ],
+      "estimated_input_tokens": 6655,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:57:16.768234+00:00",
+        "request_sha256": "2853ed50d22284e71afaa1ca3ae6b5216103cc9adcc0dc14d8d9275a483f99ea",
+        "input_token_estimate": 18497,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280641",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "91c19205fe344cad87f147a4da721f16",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4225,
+        "output_tokens": 8391,
+        "usage_source": "provider",
+        "duration_seconds": 31.784119,
+        "cost_cny": "0.037789"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025Q6实现营业收入1.61亿元、归母净利润975.78万元。"
+          }
+        ],
+        "reason": "季度编号Q6不存在，一年仅有四个季度。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "截至2024年年末，公司拥有专利77项，其中发明专利项。"
+          }
+        ],
+        "reason": "发明专利数量缺失，仅有“项”字而无具体数字。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "目前，发达国家汽车平均塑料用量达到300kg/辆以上，而国产汽车的平均单车塑料用量约为100g，随着重视程度的不断增加，我国汽车塑料用量和汽车塑料零部件在未来有望释放更大空间。"
+          }
+        ],
+        "reason": "国产汽车单车塑料用量约100g与行业常识不符，应为100kg，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司技术能力包括双色成型技术、高光免喷漆成型技术、金属嵌件埋入成型技术，无法将不同物性的材料同时成型，实现一次成型塑料零件中多达35个用于电连接和固定作用金属件的精确埋入。"
+          }
+        ],
+        "reason": "双色成型技术正是将不同物性材料同时成型，与“无法将不同物性的材料同时成型”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "此外，2023年9月，子公司骏创北美开始量产，2025-2024年属于产能设计爬坡阶段；"
+          }
+        ],
+        "reason": "时间范围“2025-2024年”起止年份颠倒，终点早于起点。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们预计公司2025-2027年归母净利润分别为0.68/0.90/1.18亿元，对应EPS分别为0.52/0.69/0.90元/股，对应当前股价PE分别为73.5/54.9/42.1/25.1倍。"
+          }
+        ],
+        "reason": "预测年份为2025-2027共三年，但PE给出四个数值，多出25.1倍，与预测期不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 55,
+      "end": 93,
+      "text": "汽车塑料零部件供应商服务于T公司、斯凯孚等，2024年实现营收7.55亿元。",
+      "quantities": [
+        {
+          "value": "7.55",
+          "unit": "亿元",
+          "start": 86,
+          "end": 92
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "汽车塑料零部件供应商服务于T公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 382,
+      "end": 448,
+      "text": "2024年实现营业收入7.55亿元（yoy+8.08%）、归母净利润5,115.61万元，毛利率、净利率分别为22.7%、6.2%；",
+      "quantities": [
+        {
+          "value": "7.55",
+          "unit": "亿元",
+          "start": 393,
+          "end": 399
+        },
+        {
+          "value": "+8.08",
+          "unit": "%",
+          "start": 403,
+          "end": 409
+        },
+        {
+          "value": "5,115.61",
+          "unit": "万元",
+          "start": 416,
+          "end": 426
+        },
+        {
+          "value": "22.7",
+          "unit": "%",
+          "start": 437,
+          "end": 442
+        },
+        {
+          "value": "6.2",
+          "unit": "%",
+          "start": 443,
+          "end": 447
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 382,
+      "end": 448,
+      "text": "2024年实现营业收入7.55亿元（yoy+8.08%）、归母净利润5,115.61万元，毛利率、净利率分别为22.7%、6.2%；",
+      "quantities": [
+        {
+          "value": "7.55",
+          "unit": "亿元",
+          "start": 393,
+          "end": 399
+        },
+        {
+          "value": "+8.08",
+          "unit": "%",
+          "start": 403,
+          "end": 409
+        },
+        {
+          "value": "5,115.61",
+          "unit": "万元",
+          "start": 416,
+          "end": 426
+        },
+        {
+          "value": "22.7",
+          "unit": "%",
+          "start": 437,
+          "end": 442
+        },
+        {
+          "value": "6.2",
+          "unit": "%",
+          "start": 443,
+          "end": 447
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 382,
+      "end": 448,
+      "text": "2024年实现营业收入7.55亿元（yoy+8.08%）、归母净利润5,115.61万元，毛利率、净利率分别为22.7%、6.2%；",
+      "quantities": [
+        {
+          "value": "7.55",
+          "unit": "亿元",
+          "start": 393,
+          "end": 399
+        },
+        {
+          "value": "+8.08",
+          "unit": "%",
+          "start": 403,
+          "end": 409
+        },
+        {
+          "value": "5,115.61",
+          "unit": "万元",
+          "start": 416,
+          "end": 426
+        },
+        {
+          "value": "22.7",
+          "unit": "%",
+          "start": 437,
+          "end": 442
+        },
+        {
+          "value": "6.2",
+          "unit": "%",
+          "start": 443,
+          "end": 447
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 382,
+      "end": 448,
+      "text": "2024年实现营业收入7.55亿元（yoy+8.08%）、归母净利润5,115.61万元，毛利率、净利率分别为22.7%、6.2%；",
+      "quantities": [
+        {
+          "value": "7.55",
+          "unit": "亿元",
+          "start": 393,
+          "end": 399
+        },
+        {
+          "value": "+8.08",
+          "unit": "%",
+          "start": 403,
+          "end": 409
+        },
+        {
+          "value": "5,115.61",
+          "unit": "万元",
+          "start": 416,
+          "end": 426
+        },
+        {
+          "value": "22.7",
+          "unit": "%",
+          "start": 437,
+          "end": 442
+        },
+        {
+          "value": "6.2",
+          "unit": "%",
+          "start": 443,
+          "end": 447
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 448,
+      "end": 481,
+      "text": "2025Q6实现营业收入1.61亿元、归母净利润975.78万元。",
+      "quantities": [
+        {
+          "value": "1.61",
+          "unit": "亿元",
+          "start": 460,
+          "end": 466
+        },
+        {
+          "value": "975.78",
+          "unit": "万元",
+          "start": 472,
+          "end": 480
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 448,
+      "end": 481,
+      "text": "2025Q6实现营业收入1.61亿元、归母净利润975.78万元。",
+      "quantities": [
+        {
+          "value": "1.61",
+          "unit": "亿元",
+          "start": 460,
+          "end": 466
+        },
+        {
+          "value": "975.78",
+          "unit": "万元",
+          "start": 472,
+          "end": 480
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 649,
+      "end": 733,
+      "text": "2024年，汽车塑料零部件产品营收达到7.08亿元，同比增长8.11%，占营业收入总额的94%，主要系公司与客户合作关系不断加深，新能源汽车零部件系列收入同比增加所致。",
+      "quantities": [
+        {
+          "value": "7.08",
+          "unit": "亿元",
+          "start": 668,
+          "end": 674
+        },
+        {
+          "value": "8.11",
+          "unit": "%",
+          "start": 679,
+          "end": 684
+        },
+        {
+          "value": "94",
+          "unit": "%",
+          "start": 693,
+          "end": 696
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "主要系公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 649,
+      "end": 733,
+      "text": "2024年，汽车塑料零部件产品营收达到7.08亿元，同比增长8.11%，占营业收入总额的94%，主要系公司与客户合作关系不断加深，新能源汽车零部件系列收入同比增加所致。",
+      "quantities": [
+        {
+          "value": "7.08",
+          "unit": "亿元",
+          "start": 668,
+          "end": 674
+        },
+        {
+          "value": "8.11",
+          "unit": "%",
+          "start": 679,
+          "end": 684
+        },
+        {
+          "value": "94",
+          "unit": "%",
+          "start": 693,
+          "end": 696
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "主要系公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1419,
+      "end": 1472,
+      "text": "公司主要客户均为跨国经营的国际化公司，2024年公司外销收入占总营收67.07%，同比上升8.7pcts。",
+      "quantities": [
+        {
+          "value": "67.07",
+          "unit": "%",
+          "start": 1453,
+          "end": 1459
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "公司主要客户均为跨国经营的国际化公司",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1766,
+      "end": 1873,
+      "text": "盈利预测与评级：我们预计公司2025-2027年归母净利润分别为0.68/0.90/1.18亿元，对应EPS分别为0.52/0.69/0.90元/股，对应当前股价PE分别为73.5/54.9/42.1/25.1倍。",
+      "quantities": [
+        {
+          "value": "1.18",
+          "unit": "亿元",
+          "start": 1808,
+          "end": 1814
+        },
+        {
+          "value": "0.90",
+          "unit": "元/股",
+          "start": 1833,
+          "end": 1840
+        },
+        {
+          "value": "25.1",
+          "unit": "倍",
+          "start": 1867,
+          "end": 1872
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2074,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2074,
+    "processed_ranges": [
+      [
+        0,
+        2074
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 31.808893,
+  "source_content_sha256": "4fec23379034962f9ee781d66462e353baf82868442eb040ca7dbfa47845b0b2"
+}

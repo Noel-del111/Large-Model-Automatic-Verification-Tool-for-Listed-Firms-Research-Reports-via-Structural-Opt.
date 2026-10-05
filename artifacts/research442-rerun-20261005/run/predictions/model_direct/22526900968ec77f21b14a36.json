@@ -1,0 +1,410 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000475",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "2025年3月没有32日，日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 140,
+          "end": 196,
+          "text": "截至2025年3月32日，亚普股份总资产为68.97亿元，资产负债率为33.63%，账面货币资金14.02亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2025年3月32日，亚普股份总资产为68.97亿元，资产负债率为33.63%，账面货币资金14.02亿元。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 140,
+          "end": 196,
+          "text": "截至2025年3月32日，亚普股份总资产为68.97亿元，资产负债率为33.63%，账面货币资金14.02亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "30424357eac884123f8acdf6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "A股股票代码应为6位数字，此处仅为4位，不符合股票代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 24,
+          "end": 34,
+          "text": "亚普股份(6030)"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "亚普股份(6030)",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 24,
+          "end": 34,
+          "text": "亚普股份(6030)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e192e63d0687f483f6a54d66",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1039
+        ]
+      ],
+      "estimated_input_tokens": 5579,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:31:43.296544+00:00",
+        "request_sha256": "1d6491368628f257c17fb2339f4fe8153b5a3a1eac7e1606e238919f0c90dade",
+        "input_token_estimate": 15534,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277678",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "91f44ac59ea24c699540d2483ec69aa7",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3699,
+        "output_tokens": 3663,
+        "usage_source": "provider",
+        "duration_seconds": 16.102425,
+        "cost_cny": "0.018351"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "截至2025年3月32日，亚普股份总资产为68.97亿元，资产负债率为33.63%，账面货币资金14.02亿元。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "2025年3月没有32日，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "亚普股份(6030)",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "A股股票代码应为6位数字，此处仅为4位，不符合股票代码格式。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "assets",
+      "metric_text": "总资产",
+      "start": 140,
+      "end": 196,
+      "text": "截至2025年3月32日，亚普股份总资产为68.97亿元，资产负债率为33.63%，账面货币资金14.02亿元。",
+      "quantities": [
+        {
+          "value": "68.97",
+          "unit": "亿元",
+          "start": 161,
+          "end": 168
+        },
+        {
+          "value": "33.63",
+          "unit": "%",
+          "start": 175,
+          "end": 181
+        },
+        {
+          "value": "14.02",
+          "unit": "亿元",
+          "start": 188,
+          "end": 195
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "debt_ratio",
+      "metric_text": "资产负债率",
+      "start": 140,
+      "end": 196,
+      "text": "截至2025年3月32日，亚普股份总资产为68.97亿元，资产负债率为33.63%，账面货币资金14.02亿元。",
+      "quantities": [
+        {
+          "value": "68.97",
+          "unit": "亿元",
+          "start": 161,
+          "end": 168
+        },
+        {
+          "value": "33.63",
+          "unit": "%",
+          "start": 175,
+          "end": 181
+        },
+        {
+          "value": "14.02",
+          "unit": "亿元",
+          "start": 188,
+          "end": 195
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 405,
+      "end": 451,
+      "text": "2024/25Q1赢双科技实现营收3.12/0.74亿元，净利润为0.55/0.14亿元，。",
+      "quantities": [
+        {
+          "value": "0.74",
+          "unit": "亿元",
+          "start": 427,
+          "end": 433
+        },
+        {
+          "value": "0.14",
+          "unit": "亿元",
+          "start": 443,
+          "end": 449
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 405,
+      "end": 451,
+      "text": "2024/25Q1赢双科技实现营收3.12/0.74亿元，净利润为0.55/0.14亿元，。",
+      "quantities": [
+        {
+          "value": "0.74",
+          "unit": "亿元",
+          "start": 427,
+          "end": 433
+        },
+        {
+          "value": "0.14",
+          "unit": "亿元",
+          "start": 443,
+          "end": 449
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 595,
+      "end": 624,
+      "text": "按标的公司24年扣非净利润测算对应收购PE估值约为15倍。",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "倍",
+          "start": 620,
+          "end": 623
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "按标的公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 789,
+      "end": 919,
+      "text": "考虑收购事项尚在推进，我们维持公司盈利预测，预计2025-2027年营收分别为86.73/96.47/102.39亿元，归母净利润为5.37/6.09/6.72亿元，EPS为1.05/1.19/1.31元/股，当前股价对应PE为18.1/16.0/14.4倍。",
+      "quantities": [
+        {
+          "value": "102.39",
+          "unit": "亿元",
+          "start": 840,
+          "end": 848
+        },
+        {
+          "value": "6.72",
+          "unit": "亿元",
+          "start": 865,
+          "end": 871
+        },
+        {
+          "value": "1.31",
+          "unit": "元/股",
+          "start": 886,
+          "end": 893
+        },
+        {
+          "value": "14.4",
+          "unit": "倍",
+          "start": 913,
+          "end": 918
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们维持公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 789,
+      "end": 919,
+      "text": "考虑收购事项尚在推进，我们维持公司盈利预测，预计2025-2027年营收分别为86.73/96.47/102.39亿元，归母净利润为5.37/6.09/6.72亿元，EPS为1.05/1.19/1.31元/股，当前股价对应PE为18.1/16.0/14.4倍。",
+      "quantities": [
+        {
+          "value": "102.39",
+          "unit": "亿元",
+          "start": 840,
+          "end": 848
+        },
+        {
+          "value": "6.72",
+          "unit": "亿元",
+          "start": 865,
+          "end": 871
+        },
+        {
+          "value": "1.31",
+          "unit": "元/股",
+          "start": 886,
+          "end": 893
+        },
+        {
+          "value": "14.4",
+          "unit": "倍",
+          "start": 913,
+          "end": 918
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们维持公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1039,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1039,
+    "processed_ranges": [
+      [
+        0,
+        1039
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 7,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 16.135953,
+  "source_content_sha256": "fd368ebd09596914ed9b88bee3ea5da88cb6103cf1d2ed891c5ce12b91101546"
+}

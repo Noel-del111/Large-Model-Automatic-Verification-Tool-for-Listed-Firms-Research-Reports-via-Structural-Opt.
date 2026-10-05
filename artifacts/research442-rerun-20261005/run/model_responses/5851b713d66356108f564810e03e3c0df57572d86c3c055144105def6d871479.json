@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"根据2024年年报与2025年一季报，我们预计2027-2025年EPS分别为3.23/3.52/3.78元，当前股价对应PE分别为9/9/8倍，首次覆盖，给予“买入”投资评级。\"}], \"reason\": \"年份区间写作“2027-2025年”，起点2027晚于终点2025，时间顺序倒置。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2024年/2025Q1净利率分别同增1pct/2oct至7.79%/11.22%\"}], \"reason\": \"净利率同比增幅单位写作“oct”，不是百分比单位，应为“pct”。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:57:40.397416+00:00",
+    "request_sha256": "1c96d7790219a37390a24ce5ba79d8499eb329e70acf8aa49616e3a22d9b5e6e",
+    "input_token_estimate": 15068,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277212",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4d519d814ebc401ba1b8316d54416802",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3662,
+    "output_tokens": 9563,
+    "usage_source": "provider",
+    "duration_seconds": 35.987077,
+    "cost_cny": "0.041914"
+  },
+  "cache_request": {
+    "key": "5851b713d66356108f564810e03e3c0df57572d86c3c055144105def6d871479",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1c96d7790219a37390a24ce5ba79d8499eb329e70acf8aa49616e3a22d9b5e6e"
+  }
+}

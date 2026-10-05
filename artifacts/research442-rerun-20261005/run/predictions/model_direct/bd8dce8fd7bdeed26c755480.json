@@ -1,0 +1,387 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000359",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "A股股票代码应为6位数字，此处“603”不足6位，格式不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 20,
+          "end": 29,
+          "text": "雪峰科技(603)"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "雪峰科技(603)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 20,
+          "end": 29,
+          "text": "雪峰科技(603)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "097af32ae5bae3b3971588bc",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "民爆企业工业炸药产能通常以万吨/年计，11.95吨/年量纲过小，应为万吨/年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 236,
+          "end": 272,
+          "text": "公司工业炸药产能11.95吨/年，产能全部位于新疆，疆内市占率达22%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司工业炸药产能11.95吨/年，产能全部位于新疆，疆内市占率达22%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 236,
+          "end": 272,
+          "text": "公司工业炸药产能11.95吨/年，产能全部位于新疆，疆内市占率达22%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "58bf9bcedf3aff41b414ee6a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间写为“2024-2019年”，起点2024年晚于终点2019年，时间倒置。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 90,
+          "end": 172,
+          "text": "从煤炭保供基地（2024-2019年新疆原煤产量CAGR达17.9%）到煤化工高速发展，煤化工项目为疆煤提供消化渠道，逻辑体现为“煤化工->煤矿->民爆”逐级传导。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从煤炭保供基地（2024-2019年新疆原煤产量CAGR达17.9%）到煤化工高速发展，煤化工项目为疆煤提供消化渠道，逻辑体现为“煤化工->煤矿->民爆”逐级传导。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 90,
+          "end": 172,
+          "text": "从煤炭保供基地（2024-2019年新疆原煤产量CAGR达17.9%）到煤化工高速发展，煤化工项目为疆煤提供消化渠道，逻辑体现为“煤化工->煤矿->民爆”逐级传导。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fafbe4576472b905952d3841",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句连续重复出现两次，信息冗余，无新增含义。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "公司是疆内唯一硝酸铵生产企业，受益运费差、竞争格局优势明显。"
+        },
+        {
+          "text": "公司是疆内唯一硝酸铵生产企业，受益运费差、竞争格局优势明显。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "3be2a55eb4e9550165ca5468",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          995
+        ]
+      ],
+      "estimated_input_tokens": 5556,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:51:54.648473+00:00",
+        "request_sha256": "faf7008609556263b69040034595c782246660929d2ca66a40e5f6cd942cb6b6",
+        "input_token_estimate": 15491,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277635",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2eb8456153b041d889fd77e46caf4d4a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3687,
+        "output_tokens": 12643,
+        "usage_source": "provider",
+        "duration_seconds": 45.216745,
+        "cost_cny": "0.054259"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "雪峰科技(603)"
+          }
+        ],
+        "reason": "A股股票代码应为6位数字，此处“603”不足6位，格式不完整。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司工业炸药产能11.95吨/年，产能全部位于新疆，疆内市占率达22%。"
+          }
+        ],
+        "reason": "民爆企业工业炸药产能通常以万吨/年计，11.95吨/年量纲过小，应为万吨/年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "从煤炭保供基地（2024-2019年新疆原煤产量CAGR达17.9%）到煤化工高速发展，煤化工项目为疆煤提供消化渠道，逻辑体现为“煤化工->煤矿->民爆”逐级传导。"
+          }
+        ],
+        "reason": "时间区间写为“2024-2019年”，起点2024年晚于终点2019年，时间倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司是疆内唯一硝酸铵生产企业，受益运费差、竞争格局优势明显。"
+          },
+          {
+            "text": "公司是疆内唯一硝酸铵生产企业，受益运费差、竞争格局优势明显。"
+          }
+        ],
+        "reason": "同一句连续重复出现两次，信息冗余，无新增含义。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司是疆内唯一硝酸铵生产企业，受益运费差、竞争格局优势明显。"
+          },
+          {
+            "text": "公司是疆内唯一硝酸铵生产企业，受益运费差、竞争格局优势明显。"
+          }
+        ],
+        "reason": "同一句连续重复出现两次，信息冗余，无新增含义。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 490,
+      "end": 535,
+      "text": "2022年公司全资收购玉象胡杨，2024年玉象胡杨营收28.29亿元，净利润3.57亿元。",
+      "quantities": [
+        {
+          "value": "28.29",
+          "unit": "亿元",
+          "start": 517,
+          "end": 524
+        },
+        {
+          "value": "3.57",
+          "unit": "亿元",
+          "start": 528,
+          "end": 534
+        }
+      ],
+      "periods": [
+        "2022年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 490,
+      "end": 535,
+      "text": "2022年公司全资收购玉象胡杨，2024年玉象胡杨营收28.29亿元，净利润3.57亿元。",
+      "quantities": [
+        {
+          "value": "28.29",
+          "unit": "亿元",
+          "start": 517,
+          "end": 524
+        },
+        {
+          "value": "3.57",
+          "unit": "亿元",
+          "start": 528,
+          "end": 534
+        }
+      ],
+      "periods": [
+        "2022年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 824,
+      "end": 928,
+      "text": "我们预计公司2025-2027年归母净利润分别为7.04、8.69和10.11亿元，现价对应动态PE分别为14x、11x、10x，给以2025年20倍估值，目标价12.49元，首次覆盖，给予公司“买入”评级。",
+      "quantities": [
+        {
+          "value": "10.11",
+          "unit": "亿元",
+          "start": 858,
+          "end": 865
+        },
+        {
+          "value": "20",
+          "unit": "倍",
+          "start": 896,
+          "end": 899
+        },
+        {
+          "value": "12.49",
+          "unit": "元",
+          "start": 905,
+          "end": 911
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司",
+        "给予公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 995,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 995,
+    "processed_ranges": [
+      [
+        0,
+        995
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 45.239797,
+  "source_content_sha256": "ef78a11818ec9073f964ba986bb28412a3e14201187b9512928005978eb6fa5e"
+}

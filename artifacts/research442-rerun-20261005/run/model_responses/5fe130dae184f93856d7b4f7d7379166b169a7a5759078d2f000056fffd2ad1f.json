@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2024年报中信机械行业实现营业收入24878.3亿平方千米，同比增长5.11%，实现归母净利润1270.49亿，同比下滑11.69%，实现扣非归母净利润1038.8亿，同比下滑5.96%。\"}],\"reason\":\"营业收入单位写成“亿平方千米”，不是货币或金额单位，量纲错误。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"工业机器人：2024年报中信工业机器人及工控系统板块营业收入419.49亿，同比下滑5.73%，扣非归母净利润-5.92亿，同比亏转赢。\"}],\"reason\":\"扣非归母净利润为-5.92亿元即亏损，却称“同比亏转赢”，盈亏状态自相矛盾。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"船舶制造板块存货、合同融资增速都超过70%，行业需求情况非常好。\"}],\"reason\":\"财报科目应为“合同负债”，“合同融资”不是对应术语，导致科目含义错误。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"综合机械行业2024年报&2025Q1财报分析，部分周期性行业陆续进入行业复苏阶段，带动行业财报逐步好转，在中信机械行业增速排行前列，包括船舶制造、核电设备、起重运输设备、服务机器人、工程机械等，新能源设备为代表的高成长子行业陷入了增速减退的低谷，基础件等通用设备相对取得稳健的增长，不乏细分龙头企业脱颖而出。\"},{\"text\":\"在中信机械行业增速排行前列，包括船舶制造、核电设备、起重运输设备、服务机器人、工程机械等。\"}],\"reason\":\"“增速排行前列”名单在相邻句重复出现，无新增信息。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"2025Q1板块营业收入305.05亿，同比增长9.81%，扣非归母净利润13.7亿，同比增长237.78%。\"},{\"text\":\"2025Q1子行业里增速较快的主要有船舶制造（2.3278）、起重运输设备（+123.19%）、核电设备（+115.77%）、其他运输设备（+106.14%）、铁路交通设备（101.68%），3C设备、锅炉设备、光伏设备、锂电设备、工业机器人排名靠后。\"}],\"reason\":\"同一2025Q1船舶制造扣非增速前文为237.78%，后文作2.3278，数值明显冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:50:15.562156+00:00",
+    "request_sha256": "160c39c7b247992185d5a3d32c46ed93821ac1c03890aa77fa06d3bfe530646d",
+    "input_token_estimate": 17357,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279501",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "8d898358067f497c834df43a98fc8ee1",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4102,
+    "output_tokens": 9584,
+    "usage_source": "provider",
+    "duration_seconds": 35.495421,
+    "cost_cny": "0.042438"
+  },
+  "cache_request": {
+    "key": "5fe130dae184f93856d7b4f7d7379166b169a7a5759078d2f000056fffd2ad1f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "160c39c7b247992185d5a3d32c46ed93821ac1c03890aa77fa06d3bfe530646d"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"中芯国际2025年第7季度实现营业收入22亿美元，环比增加2%；归母净利润2亿美元，环比增长74%；毛利率为23%，环比大致持平；产能利用率上升至接近90%，环比增长4吨（按国际财务报告准则）。\"}], \"reason\": \"一年只有四个季度，不存在第7季度，时间表述不成立。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"中芯国际2025年第7季度实现营业收入22亿美元，环比增加2%；归母净利润2亿美元，环比增长74%；毛利率为23%，环比大致持平；产能利用率上升至接近90%，环比增长4吨（按国际财务报告准则）。\"}], \"reason\": \"产能利用率环比变化应以百分点计量，写成环比增长4吨，量纲错误。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"Q2工厂生产波动影响将在Q1延续，但实际总体ASP没有发生根本性变化\"}], \"reason\": \"标题称Q2的生产波动影响在Q1延续，时序颠倒，应为Q1影响延续至Q2。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"Q2工厂生产波动影响将在Q1延续，但实际总体ASP没有发生根本性变化\"}, {\"text\": \"Q1公司整体出货数量达到229万片（折合八寸），环比增长15%，但由于工厂生产性波动，Q1后半部ASP下降，导致收入未能达到指引预期，而实际总体ASP发生了根本性的变化。\"}], \"reason\": \"标题称ASP没有发生根本性变化，正文称ASP发生了根本性变化，同一事项前后矛盾。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"我们预计2027-2025年公司归母净利润分别为50、57、63亿元，对应的EPS分别为0.62、0.71、0.79元，最新收盘价对应PE分别为131x、115x、103x，对应PB分别为4x、4x、4x，维持“增持”评级。\"}], \"reason\": \"年份区间起点2027晚于终点2025，时间顺序不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:04:47.208386+00:00",
+    "request_sha256": "a2a3be33b136f2155b64878f61fa041d00d6aad1f807ff90656946ca7a222962",
+    "input_token_estimate": 14818,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.276962",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7bdacda4f5e44892ad39bde1ecf0c252",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3514,
+    "output_tokens": 5369,
+    "usage_source": "provider",
+    "duration_seconds": 22.763951,
+    "cost_cny": "0.02499"
+  },
+  "cache_request": {
+    "key": "b25612945cd7bd119f98331958990c5e37db378bbd0530c0186bacaf055b8982",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a2a3be33b136f2155b64878f61fa041d00d6aad1f807ff90656946ca7a222962"
+  }
+}

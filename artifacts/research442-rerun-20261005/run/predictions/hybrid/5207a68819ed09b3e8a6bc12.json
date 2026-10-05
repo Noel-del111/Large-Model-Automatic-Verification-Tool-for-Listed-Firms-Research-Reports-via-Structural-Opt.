@@ -1,0 +1,506 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000429",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 241,
+          "end": 277,
+          "text": "2024-2022年，公司营业收入保持稳定，销售毛利率维持在80%左右。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 241,
+          "end": 277,
+          "text": "2024-2022年，公司营业收入保持稳定，销售毛利率维持在80%左右。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "985f68050bd7a5c7d3a6c363",
+      "detector_ids": [
+        "hybrid.model",
+        "legacy.C.INTRINSIC.002"
+      ],
+      "original_spans": [
+        {
+          "text": "2024-2022年，公司营业收入保持稳定，销售毛利率维持在80%左右。"
+        }
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "spans": [
+        {
+          "start": 140,
+          "end": 202,
+          "text": "截至2024年13月31日，公司已推出具有著作权的B端字体超过1700款，并开发形成3600余套字库产品（含字由业务字体）。"
+        }
+      ],
+      "reason": "该年月日不是有效公历日期。",
+      "status": "confirmed_error",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 142,
+          "end": 153,
+          "text": "2024年13月31日"
+        },
+        {
+          "kind": "deterministic",
+          "check": "calendar_date",
+          "year": 2024,
+          "month": 13,
+          "day": 31
+        }
+      ],
+      "detector_id": "verified.calendar",
+      "validation": "deterministic",
+      "verification_spans": [
+        {
+          "start": 142,
+          "end": 153,
+          "text": "2024年13月31日"
+        }
+      ],
+      "id": "c2a617a426cec2356d6dfae6",
+      "detector_ids": [
+        "hybrid.model",
+        "verified.calendar"
+      ],
+      "original_spans": [
+        {
+          "text": "截至2024年13月31日，公司已推出具有著作权的B端字体超过1700款，并开发形成3600余套字库产品（含字由业务字体）。"
+        }
+      ],
+      "review_priority": "confirmed"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句连续重复两次，信息冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 533,
+          "end": 591,
+          "text": "战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 533,
+          "end": 591,
+          "text": "战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bd31a912a5eb3e2697404c1a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“字体无债权”混淆法律术语，应指字体无版权或侵权问题。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 757,
+          "end": 799,
+          "text": "公司致力于用技术解决AI生成内容中出现的文字错误、字体风格不适用、字体无债权等问题。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司致力于用技术解决AI生成内容中出现的文字错误、字体风格不适用、字体无债权等问题。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 757,
+          "end": 799,
+          "text": "公司致力于用技术解决AI生成内容中出现的文字错误、字体风格不适用、字体无债权等问题。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5bf3279c2151bb0392b6d11f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“累计注册用户已超过万”缺少具体数值，无法确认注册用户量。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 341,
+          "end": 392,
+          "text": "截至2024年末，字由累计注册用户已超过万，日活超过37万人次，月活将近80万人次，长期成长空间广阔。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年末，字由累计注册用户已超过万，日活超过37万人次，月活将近80万人次，长期成长空间广阔。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 341,
+          "end": 392,
+          "text": "截至2024年末，字由累计注册用户已超过万，日活超过37万人次，月活将近80万人次，长期成长空间广阔。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8d98ebb7c41ce37678030812",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027年为三个年度，营业收入却列出四个数值，与其余指标个数不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 913,
+          "end": 1025,
+          "text": "预测公司2025-2027年的营业收入为2.38、2.85、3.26、3.33亿元，归母净利润为0.50、0.63、0.72亿元，EPS为0.50、0.63、0.72元/股，对应的PE为75.99、60.00、52.78倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预测公司2025-2027年的营业收入为2.38、2.85、3.26、3.33亿元，归母净利润为0.50、0.63、0.72亿元，EPS为0.50、0.63、0.72元/股，对应的PE为75.99、60.00、52.78倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 913,
+          "end": 1025,
+          "text": "预测公司2025-2027年的营业收入为2.38、2.85、3.26、3.33亿元，归母净利润为0.50、0.63、0.72亿元，EPS为0.50、0.63、0.72元/股，对应的PE为75.99、60.00、52.78倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "59cff07dd3fbde66aaf59d4a",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1131
+        ]
+      ],
+      "estimated_input_tokens": 5701,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:51:28.048988+00:00",
+        "request_sha256": "53e90d6e85f0d7753487cb9b7196f6a3709cb69a73aac5bc5530ac4a37661236",
+        "input_token_estimate": 15868,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278012",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "8aa9eead620d4b50a313d62cd00482a9",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3703,
+        "output_tokens": 7422,
+        "usage_source": "provider",
+        "duration_seconds": 29.779763,
+        "cost_cny": "0.033391",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "截至2024年13月31日，公司已推出具有著作权的B端字体超过1700款，并开发形成3600余套字库产品（含字由业务字体）。"
+          }
+        ],
+        "reason": "日期中的“13月”不存在，时间信息本身非法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2024-2022年，公司营业收入保持稳定，销售毛利率维持在80%左右。"
+          }
+        ],
+        "reason": "期间写作2024-2022年，起始年份晚于结束年份，时间关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。战略投资方正控股协同效应明显，拥抱人工智能打造新的增长点。"
+          }
+        ],
+        "reason": "同一句连续重复两次，信息冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司致力于用技术解决AI生成内容中出现的文字错误、字体风格不适用、字体无债权等问题。"
+          }
+        ],
+        "reason": "“字体无债权”混淆法律术语，应指字体无版权或侵权问题。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "截至2024年末，字由累计注册用户已超过万，日活超过37万人次，月活将近80万人次，长期成长空间广阔。"
+          }
+        ],
+        "reason": "“累计注册用户已超过万”缺少具体数值，无法确认注册用户量。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "预测公司2025-2027年的营业收入为2.38、2.85、3.26、3.33亿元，归母净利润为0.50、0.63、0.72亿元，EPS为0.50、0.63、0.72元/股，对应的PE为75.99、60.00、52.78倍。"
+          }
+        ],
+        "reason": "2025-2027年为三个年度，营业收入却列出四个数值，与其余指标个数不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 241,
+      "end": 277,
+      "text": "2024-2022年，公司营业收入保持稳定，销售毛利率维持在80%左右。",
+      "quantities": [
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 271,
+          "end": 274
+        }
+      ],
+      "periods": [
+        "2022年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 241,
+      "end": 277,
+      "text": "2024-2022年，公司营业收入保持稳定，销售毛利率维持在80%左右。",
+      "quantities": [
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 271,
+          "end": 274
+        }
+      ],
+      "periods": [
+        "2022年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 913,
+      "end": 1025,
+      "text": "预测公司2025-2027年的营业收入为2.38、2.85、3.26、3.33亿元，归母净利润为0.50、0.63、0.72亿元，EPS为0.50、0.63、0.72元/股，对应的PE为75.99、60.00、52.78倍。",
+      "quantities": [
+        {
+          "value": "3.33",
+          "unit": "亿元",
+          "start": 948,
+          "end": 954
+        },
+        {
+          "value": "0.72",
+          "unit": "亿元",
+          "start": 971,
+          "end": 977
+        },
+        {
+          "value": "0.72",
+          "unit": "元/股",
+          "start": 992,
+          "end": 999
+        },
+        {
+          "value": "52.78",
+          "unit": "倍",
+          "start": 1018,
+          "end": 1024
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预测公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 913,
+      "end": 1025,
+      "text": "预测公司2025-2027年的营业收入为2.38、2.85、3.26、3.33亿元，归母净利润为0.50、0.63、0.72亿元，EPS为0.50、0.63、0.72元/股，对应的PE为75.99、60.00、52.78倍。",
+      "quantities": [
+        {
+          "value": "3.33",
+          "unit": "亿元",
+          "start": 948,
+          "end": 954
+        },
+        {
+          "value": "0.72",
+          "unit": "亿元",
+          "start": 971,
+          "end": 977
+        },
+        {
+          "value": "0.72",
+          "unit": "元/股",
+          "start": 992,
+          "end": 999
+        },
+        {
+          "value": "52.78",
+          "unit": "倍",
+          "start": 1018,
+          "end": 1024
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预测公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1131,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1131,
+    "processed_ranges": [
+      [
+        0,
+        1131
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1131,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002077,
+  "source_content_sha256": "fa0cbdcdb81c63ce08e95b4484f228aa2cdd6f9141457c16a4a3f09b93feb363"
+}

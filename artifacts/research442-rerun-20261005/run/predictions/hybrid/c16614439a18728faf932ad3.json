@@ -1,0 +1,420 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000443",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码中出现双连字符，不符合证券代码格式，应为688041。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 26,
+          "end": 40,
+          "text": "海光信息(6880--41)"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "海光信息(6880--41)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 26,
+          "end": 40,
+          "text": "海光信息(6880--41)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ce67cdf94482626291bf6086",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“129年”远早于公司2014年成立，时间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 181,
+          "end": 228,
+          "text": "公司专注于国产架构CPU、DCU等核心芯片设计，129年发布首款CPU“海光一号”并实现量产。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司专注于国产架构CPU、DCU等核心芯片设计，129年发布首款CPU“海光一号”并实现量产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 181,
+          "end": 228,
+          "text": "公司专注于国产架构CPU、DCU等核心芯片设计，129年发布首款CPU“海光一号”并实现量产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7e866ea83c58785bbf222440",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "日期后括号内应有星期等属性值却为空，未填写。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 770,
+          "end": 801,
+          "text": "海光信息与中科曙光的A股股票于5月26日（）开市时起开始停牌。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "海光信息与中科曙光的A股股票于5月26日（）开市时起开始停牌。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 770,
+          "end": 801,
+          "text": "海光信息与中科曙光的A股股票于5月26日（）开市时起开始停牌。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "84a97a8a57e58548f6e6886a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“归母融资”不是规范财务术语，应为“归母净利润”，导致指标含义错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 966,
+          "end": 1090,
+          "text": "投资建议：我们看好公司在研发端的持续投入所带来的产品性能与兼容性优势，在国产替代提速、AI产业景气度持续提升的背景下，预计公司2025-2027年实现归母融资30.66/43.57/59.92亿元，对应PE为103/73/53倍，维持“推荐”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：我们看好公司在研发端的持续投入所带来的产品性能与兼容性优势，在国产替代提速、AI产业景气度持续提升的背景下，预计公司2025-2027年实现归母融资30.66/43.57/59.92亿元，对应PE为103/73/53倍，维持“推荐”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 966,
+          "end": 1090,
+          "text": "投资建议：我们看好公司在研发端的持续投入所带来的产品性能与兼容性优势，在国产替代提速、AI产业景气度持续提升的背景下，预计公司2025-2027年实现归母融资30.66/43.57/59.92亿元，对应PE为103/73/53倍，维持“推荐”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fa503f2f86f22b34e6b94859",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一“整合效果或进展不及预期的风险”重复列出。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1092,
+          "end": 1141,
+          "text": "风险提示：整合效果或进展不及预期的风险；研发不及预期；需求不及预期；整合效果或进展不及预期的风险。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "风险提示：整合效果或进展不及预期的风险；研发不及预期；需求不及预期；整合效果或进展不及预期的风险。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1092,
+          "end": 1141,
+          "text": "风险提示：整合效果或进展不及预期的风险；研发不及预期；需求不及预期；整合效果或进展不及预期的风险。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fc206a4c0ea5a625319094c3",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1141
+        ]
+      ],
+      "estimated_input_tokens": 5680,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:04:29.256445+00:00",
+        "request_sha256": "145ccd23c06b69e9c5d873ade0cfb376e1a28abcc7e5af93f58884a12b6947ea",
+        "input_token_estimate": 15818,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277962",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1c5fbaef19ec47adbb8d66893e8a4f8c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3717,
+        "output_tokens": 7783,
+        "usage_source": "provider",
+        "duration_seconds": 31.404691,
+        "cost_cny": "0.034849",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "海光信息(6880--41)"
+          }
+        ],
+        "reason": "股票代码中出现双连字符，不符合证券代码格式，应为688041。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "公司专注于国产架构CPU、DCU等核心芯片设计，129年发布首款CPU“海光一号”并实现量产。"
+          }
+        ],
+        "reason": "年份“129年”远早于公司2014年成立，时间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "海光信息与中科曙光的A股股票于5月26日（）开市时起开始停牌。"
+          }
+        ],
+        "reason": "日期后括号内应有星期等属性值却为空，未填写。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "投资建议：我们看好公司在研发端的持续投入所带来的产品性能与兼容性优势，在国产替代提速、AI产业景气度持续提升的背景下，预计公司2025-2027年实现归母融资30.66/43.57/59.92亿元，对应PE为103/73/53倍，维持“推荐”评级。"
+          }
+        ],
+        "reason": "“归母融资”不是规范财务术语，应为“归母净利润”，导致指标含义错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "风险提示：整合效果或进展不及预期的风险；研发不及预期；需求不及预期；整合效果或进展不及预期的风险。"
+          }
+        ],
+        "reason": "同一“整合效果或进展不及预期的风险”重复列出。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 853,
+      "end": 891,
+      "text": "业绩方面，海光信息2024年实现营业收入91.62亿元，同比增长52.4%；",
+      "quantities": [
+        {
+          "value": "91.62",
+          "unit": "亿元",
+          "start": 873,
+          "end": 880
+        },
+        {
+          "value": "52.4",
+          "unit": "%",
+          "start": 885,
+          "end": 890
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 891,
+      "end": 916,
+      "text": "归母净利润为19.31亿元，同比增长52.87%。",
+      "quantities": [
+        {
+          "value": "19.31",
+          "unit": "亿元",
+          "start": 897,
+          "end": 904
+        },
+        {
+          "value": "52.87",
+          "unit": "%",
+          "start": 909,
+          "end": 915
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 916,
+      "end": 949,
+      "text": "中科曙光2024年实现营业收入131.48亿元，同比减少8.4%；",
+      "quantities": [
+        {
+          "value": "131.48",
+          "unit": "亿元",
+          "start": 931,
+          "end": 939
+        },
+        {
+          "value": "8.4",
+          "unit": "%",
+          "start": 944,
+          "end": 948
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 949,
+      "end": 963,
+      "text": "归母净利润为19.11亿元；",
+      "quantities": [
+        {
+          "value": "19.11",
+          "unit": "亿元",
+          "start": 955,
+          "end": 962
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1141,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1141,
+    "processed_ranges": [
+      [
+        0,
+        1141
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1141,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002329,
+  "source_content_sha256": "6d92c1c06e7bde0d14411b5e56fddbaec1dffadddd2ca3ca8639786a158ef747"
+}

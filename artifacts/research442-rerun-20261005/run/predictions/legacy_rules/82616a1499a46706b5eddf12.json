@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000507",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "371c7ce6f46c703183e7b14d",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 424,
+          "end": 502,
+          "text": "\n\n未来行业的全过程工程咨询化趋势显著\n\n根据住建部数据，2023-2021年我国工程造价咨询企业业务收入增速分别为14.00%、0.17%、-2.01%；"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 937,
+    "total_chars": 937,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001023,
+  "source_content_sha256": "cf907e0839be13474f881ebae027c150fa25d12283d7ce1760b9b004f3621491"
+}

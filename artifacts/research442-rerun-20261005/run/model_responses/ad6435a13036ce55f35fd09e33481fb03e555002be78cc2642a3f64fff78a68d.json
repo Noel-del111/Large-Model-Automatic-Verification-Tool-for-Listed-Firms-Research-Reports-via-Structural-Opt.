@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。\",\"start\":893,\"end\":958},{\"text\":\"尽管培训业务毛利率同比-5.24pct至9.87%，但②费率方面，24年公司三费率为28.05%/同比-10.77pct，其中销售/管理/财务费用率分别1.72%/14.83%/11.50%，同比-0.94pct/-4.56pct/-5.27pct。\",\"start\":959,\"end\":1082}],\"reason\":\"同一段落两次出现“尽管培训业务毛利率同比-5.24pct至9.87%”，信息重复，后一次无新增内容。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"尽管培训业务毛利率同比-5.24pct至9.87%，但整体结构优化套利部分成本波动，支撑公司毛利率稳中有升。\",\"start\":893,\"end\":958}],\"reason\":\"“套利”在金融中通常指无风险获利，此处用于描述成本波动被抵消，术语使用不当。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"2025Q1业绩实现重要拐点，正式进入盈利新阶段。\",\"start\":1266,\"end\":1288},{\"text\":\"扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。\",\"start\":1392,\"end\":1453}],\"reason\":\"前称已正式进入盈利新阶段，后又称2025年有望出现盈利拐点，同一条件下命题冲突。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"25Q1实现营收0.91亿元/同比+17.68%，归母净利润46.84万元，去年同期为-353.82万元，实现同比扭亏；扣非归母净利润6.32万元，去年同期为-433.82万元，2025年有望出现盈利拐点。25Q1毛利率32.40%/同比+5.68pct，三费率22.83%/同比-7.04pct，费用结构持续优化，净利率同比+5.20pct至0.60%。\",\"start\":1289,\"end\":1516}],\"reason\":\"归母净利润46.84万元除以营收0.91亿元约为0.51%，与原文净利率0.60%不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:59:29.617066+00:00",
+    "request_sha256": "bb37a1d05d9affa9dfc0c68cb39705ca0453159ba07d85b28ff0d9d060d287a2",
+    "input_token_estimate": 18197,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280341",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4bfc0a94c76b42eba777bade13a2dad6",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4406,
+    "output_tokens": 12679,
+    "usage_source": "provider",
+    "duration_seconds": 43.888259,
+    "cost_cny": "0.055122"
+  },
+  "cache_request": {
+    "key": "ad6435a13036ce55f35fd09e33481fb03e555002be78cc2642a3f64fff78a68d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "bb37a1d05d9affa9dfc0c68cb39705ca0453159ba07d85b28ff0d9d060d287a2"
+  }
+}

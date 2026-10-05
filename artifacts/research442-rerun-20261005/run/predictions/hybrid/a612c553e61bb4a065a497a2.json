@@ -1,0 +1,648 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000396",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码应六位，仅写“603”不完整，不符合证券代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 23,
+          "end": 32,
+          "text": "大元泵业(603)"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "大元泵业(603)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 23,
+          "end": 32,
+          "text": "大元泵业(603)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a69fd4b8b4de13f0503e24dc",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按2024年归母净利2.55亿元及预测值计算，同比增速约0.78%、18.68%、18.36%，与文中0.70%、18.82%、18.12%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1262,
+          "end": 1354,
+          "text": "预计公司2025-2027年营收分别为21.80、24.47、27.27亿元，；归母净利润分别为2.57、3.05、3.61亿元，同比增速分别为0.70%、18.82%、18.12%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司2025-2027年营收分别为21.80、24.47、27.27亿元，；归母净利润分别为2.57、3.05、3.61亿元，同比增速分别为0.70%、18.82%、18.12%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1262,
+          "end": 1354,
+          "text": "预计公司2025-2027年营收分别为21.80、24.47、27.27亿元，；归母净利润分别为2.57、3.05、3.61亿元，同比增速分别为0.70%、18.82%、18.12%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2ed32ec94ccf9675c21ac3dd",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1449
+        ]
+      ],
+      "estimated_input_tokens": 5885,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:24:05.308617+00:00",
+        "request_sha256": "fce44ae1b4098b9cefdffde486d064ea615493b20f4d2e79d1a0b4d0d6689a46",
+        "input_token_estimate": 16412,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278556",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "bbe7319c559e4f3ea72549422ec0cd79",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3958,
+        "output_tokens": 9807,
+        "usage_source": "provider",
+        "duration_seconds": 36.017004,
+        "cost_cny": "0.043186",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "大元泵业(603)"
+          }
+        ],
+        "reason": "股票代码应六位，仅写“603”不完整，不符合证券代码格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "预计公司2025-2027年营收分别为21.80、24.47、27.27亿元，；归母净利润分别为2.57、3.05、3.61亿元，同比增速分别为0.70%、18.82%、18.12%。"
+          }
+        ],
+        "reason": "按2024年归母净利2.55亿元及预测值计算，同比增速约0.78%、18.68%、18.36%，与文中0.70%、18.82%、18.12%不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 40,
+      "end": 88,
+      "text": "公司发布2024年年度报告与2025年一季报，2024年实现营收19.09亿元，同增1.57%；",
+      "quantities": [
+        {
+          "value": "19.09",
+          "unit": "亿元",
+          "start": 72,
+          "end": 79
+        },
+        {
+          "value": "1.57",
+          "unit": "%",
+          "start": 82,
+          "end": 87
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 88,
+      "end": 111,
+      "text": "实现归母净利润2.55亿元，同减10.55%；",
+      "quantities": [
+        {
+          "value": "2.55",
+          "unit": "亿元",
+          "start": 95,
+          "end": 101
+        },
+        {
+          "value": "10.55",
+          "unit": "%",
+          "start": 104,
+          "end": 110
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 111,
+      "end": 136,
+      "text": "实现扣非归母净利润2.08亿元，同减24.99%。",
+      "quantities": [
+        {
+          "value": "2.08",
+          "unit": "亿元",
+          "start": 120,
+          "end": 126
+        },
+        {
+          "value": "24.99",
+          "unit": "%",
+          "start": 129,
+          "end": 135
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 136,
+      "end": 164,
+      "text": "2025Q1公司实现营收3.80亿元，同增37.21%；",
+      "quantities": [
+        {
+          "value": "3.80",
+          "unit": "亿元",
+          "start": 148,
+          "end": 154
+        },
+        {
+          "value": "37.21",
+          "unit": "%",
+          "start": 157,
+          "end": 163
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 164,
+      "end": 186,
+      "text": "实现归母净利润0.39亿元，同减3.95%；",
+      "quantities": [
+        {
+          "value": "0.39",
+          "unit": "亿元",
+          "start": 171,
+          "end": 177
+        },
+        {
+          "value": "3.95",
+          "unit": "%",
+          "start": 180,
+          "end": 185
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 186,
+      "end": 210,
+      "text": "实现扣非归母净利润0.36亿元，同减8.01%。",
+      "quantities": [
+        {
+          "value": "0.36",
+          "unit": "亿元",
+          "start": 195,
+          "end": 201
+        },
+        {
+          "value": "8.01",
+          "unit": "%",
+          "start": 204,
+          "end": 209
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 351,
+      "end": 478,
+      "text": "2024年公司毛利率同减2.29pct至29.68%，其中民用类产品毛利率同减2.93pct至28.67%，商用类产品毛利率同减7.69pct至23.71%，工业类产品毛利率同增6.82pct至41.48%，配件毛利率同减14.65pct至30.85%。",
+      "quantities": [
+        {
+          "value": "29.68",
+          "unit": "%",
+          "start": 371,
+          "end": 377
+        },
+        {
+          "value": "28.67",
+          "unit": "%",
+          "start": 398,
+          "end": 404
+        },
+        {
+          "value": "23.71",
+          "unit": "%",
+          "start": 423,
+          "end": 429
+        },
+        {
+          "value": "41.48",
+          "unit": "%",
+          "start": 448,
+          "end": 454
+        },
+        {
+          "value": "30.85",
+          "unit": "%",
+          "start": 471,
+          "end": 477
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 351,
+      "end": 478,
+      "text": "2024年公司毛利率同减2.29pct至29.68%，其中民用类产品毛利率同减2.93pct至28.67%，商用类产品毛利率同减7.69pct至23.71%，工业类产品毛利率同增6.82pct至41.48%，配件毛利率同减14.65pct至30.85%。",
+      "quantities": [
+        {
+          "value": "29.68",
+          "unit": "%",
+          "start": 371,
+          "end": 377
+        },
+        {
+          "value": "28.67",
+          "unit": "%",
+          "start": 398,
+          "end": 404
+        },
+        {
+          "value": "23.71",
+          "unit": "%",
+          "start": 423,
+          "end": 429
+        },
+        {
+          "value": "41.48",
+          "unit": "%",
+          "start": 448,
+          "end": 454
+        },
+        {
+          "value": "30.85",
+          "unit": "%",
+          "start": 471,
+          "end": 477
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 351,
+      "end": 478,
+      "text": "2024年公司毛利率同减2.29pct至29.68%，其中民用类产品毛利率同减2.93pct至28.67%，商用类产品毛利率同减7.69pct至23.71%，工业类产品毛利率同增6.82pct至41.48%，配件毛利率同减14.65pct至30.85%。",
+      "quantities": [
+        {
+          "value": "29.68",
+          "unit": "%",
+          "start": 371,
+          "end": 377
+        },
+        {
+          "value": "28.67",
+          "unit": "%",
+          "start": 398,
+          "end": 404
+        },
+        {
+          "value": "23.71",
+          "unit": "%",
+          "start": 423,
+          "end": 429
+        },
+        {
+          "value": "41.48",
+          "unit": "%",
+          "start": 448,
+          "end": 454
+        },
+        {
+          "value": "30.85",
+          "unit": "%",
+          "start": 471,
+          "end": 477
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 351,
+      "end": 478,
+      "text": "2024年公司毛利率同减2.29pct至29.68%，其中民用类产品毛利率同减2.93pct至28.67%，商用类产品毛利率同减7.69pct至23.71%，工业类产品毛利率同增6.82pct至41.48%，配件毛利率同减14.65pct至30.85%。",
+      "quantities": [
+        {
+          "value": "29.68",
+          "unit": "%",
+          "start": 371,
+          "end": 377
+        },
+        {
+          "value": "28.67",
+          "unit": "%",
+          "start": 398,
+          "end": 404
+        },
+        {
+          "value": "23.71",
+          "unit": "%",
+          "start": 423,
+          "end": 429
+        },
+        {
+          "value": "41.48",
+          "unit": "%",
+          "start": 448,
+          "end": 454
+        },
+        {
+          "value": "30.85",
+          "unit": "%",
+          "start": 471,
+          "end": 477
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 351,
+      "end": 478,
+      "text": "2024年公司毛利率同减2.29pct至29.68%，其中民用类产品毛利率同减2.93pct至28.67%，商用类产品毛利率同减7.69pct至23.71%，工业类产品毛利率同增6.82pct至41.48%，配件毛利率同减14.65pct至30.85%。",
+      "quantities": [
+        {
+          "value": "29.68",
+          "unit": "%",
+          "start": 371,
+          "end": 377
+        },
+        {
+          "value": "28.67",
+          "unit": "%",
+          "start": 398,
+          "end": 404
+        },
+        {
+          "value": "23.71",
+          "unit": "%",
+          "start": 423,
+          "end": 429
+        },
+        {
+          "value": "41.48",
+          "unit": "%",
+          "start": 448,
+          "end": 454
+        },
+        {
+          "value": "30.85",
+          "unit": "%",
+          "start": 471,
+          "end": 477
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1096,
+      "end": 1164,
+      "text": "2024年公司液冷温控业务实现营业收入约0.9亿元，同增超80%，在客户端，中兴通讯、曙光数创、英维克、同飞股份等客户实现0到1的突破；",
+      "quantities": [
+        {
+          "value": "0.9",
+          "unit": "亿元",
+          "start": 1116,
+          "end": 1121
+        },
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 1125,
+          "end": 1128
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1262,
+      "end": 1302,
+      "text": "预计公司2025-2027年营收分别为21.80、24.47、27.27亿元，；",
+      "quantities": [
+        {
+          "value": "27.27",
+          "unit": "亿元",
+          "start": 1293,
+          "end": 1300
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1302,
+      "end": 1354,
+      "text": "归母净利润分别为2.57、3.05、3.61亿元，同比增速分别为0.70%、18.82%、18.12%。",
+      "quantities": [
+        {
+          "value": "3.61",
+          "unit": "亿元",
+          "start": 1320,
+          "end": 1326
+        },
+        {
+          "value": "0.70",
+          "unit": "%",
+          "start": 1334,
+          "end": 1339
+        },
+        {
+          "value": "18.82",
+          "unit": "%",
+          "start": 1340,
+          "end": 1346
+        },
+        {
+          "value": "18.12",
+          "unit": "%",
+          "start": 1347,
+          "end": 1353
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1449,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1449,
+    "processed_ranges": [
+      [
+        0,
+        1449
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1449,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 14,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002244,
+  "source_content_sha256": "013a700c27a9c4635a63ba0b000785bd55eb463ae551b19c9c88807ecbc5780c"
+}

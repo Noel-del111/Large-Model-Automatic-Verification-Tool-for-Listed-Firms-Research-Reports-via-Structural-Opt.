@@ -1,0 +1,497 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000446",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码应为六位数字，68-8格式不合法且不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 33,
+          "end": 43,
+          "text": "威高骨科(68-8)"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "威高骨科(68-8)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 33,
+          "end": 43,
+          "text": "威高骨科(68-8)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a672865a243e3765d150b899",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "2025-129年份不成立，应为2025-2029等合法区间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 324,
+          "end": 351,
+          "text": "2025-129年业绩考核目标的CAGR为18.1%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025-129年业绩考核目标的CAGR为18.1%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 324,
+          "end": 351,
+          "text": "2025-129年业绩考核目标的CAGR为18.1%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fe7b4c0c631a9606c3f71a8d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称市场覆盖率/份额大幅提升，此处又说快速失去市场份额，且与巩固龙头地位相互矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 921,
+          "end": 1002,
+          "text": "投资建议：公司是平台化发展的国产骨科龙头，实现脊柱、创伤、关节、运动医学的全面覆盖，积极开拓组织修复和脊柱微创业务，集采趋势下公司快速失去市场份额，巩固龙头地位。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：公司是平台化发展的国产骨科龙头，实现脊柱、创伤、关节、运动医学的全面覆盖，积极开拓组织修复和脊柱微创业务，集采趋势下公司快速失去市场份额，巩固龙头地位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 921,
+          "end": 1002,
+          "text": "投资建议：公司是平台化发展的国产骨科龙头，实现脊柱、创伤、关节、运动医学的全面覆盖，积极开拓组织修复和脊柱微创业务，集采趋势下公司快速失去市场份额，巩固龙头地位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1d53e0760fff1b85728ba9f2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "预测年份写成2027-25年，终点早于起点，时间区间不合法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1049,
+          "end": 1125,
+          "text": "预计2027-25年归母净利润为2.54/3.12/3.77亿元（2025-26年原为2.92/3.43亿），同比增长13.3%/23.2%/20.9%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2027-25年归母净利润为2.54/3.12/3.77亿元（2025-26年原为2.92/3.43亿），同比增长13.3%/23.2%/20.9%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1049,
+          "end": 1125,
+          "text": "预计2027-25年归母净利润为2.54/3.12/3.77亿元（2025-26年原为2.92/3.43亿），同比增长13.3%/23.2%/20.9%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e61e7787604dad61249f52cc",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1213
+        ]
+      ],
+      "estimated_input_tokens": 5674,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:07:43.409034+00:00",
+        "request_sha256": "2347fb1e8cc091dfc9557f02350420164f8e3be25227690be71ebdf1ca50ffc4",
+        "input_token_estimate": 15814,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277958",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "7b8da68307494f76903a0373b962c70b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3794,
+        "output_tokens": 10060,
+        "usage_source": "provider",
+        "duration_seconds": 40.496858,
+        "cost_cny": "0.044034"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "威高骨科(68-8)"
+          }
+        ],
+        "reason": "股票代码应为六位数字，68-8格式不合法且不完整。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025-129年业绩考核目标的CAGR为18.1%。"
+          }
+        ],
+        "reason": "2025-129年份不成立，应为2025-2029等合法区间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "投资建议：公司是平台化发展的国产骨科龙头，实现脊柱、创伤、关节、运动医学的全面覆盖，积极开拓组织修复和脊柱微创业务，集采趋势下公司快速失去市场份额，巩固龙头地位。"
+          }
+        ],
+        "reason": "前文称市场覆盖率/份额大幅提升，此处又说快速失去市场份额，且与巩固龙头地位相互矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "预计2027-25年归母净利润为2.54/3.12/3.77亿元（2025-26年原为2.92/3.43亿），同比增长13.3%/23.2%/20.9%"
+          }
+        ],
+        "reason": "预测年份写成2027-25年，终点早于起点，时间区间不合法。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 78,
+      "end": 207,
+      "text": "2024年公司实现营收14.53亿（+13.2%），归母净利2.24亿（+99.2%），扣非归母净利2.11亿（+95.4%），骨科耗材集采平稳执行，公司根据政策及市场形势主动调整经营策略，做好集采产品供应，积极推动标外产品入院销售，提高市占率和客户覆盖率。",
+      "quantities": [
+        {
+          "value": "+13.2",
+          "unit": "%",
+          "start": 96,
+          "end": 102
+        },
+        {
+          "value": "+99.2",
+          "unit": "%",
+          "start": 114,
+          "end": 120
+        },
+        {
+          "value": "+95.4",
+          "unit": "%",
+          "start": 134,
+          "end": 140
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 207,
+      "end": 305,
+      "text": "2025Q1公司实现营收2.90亿（-16.6%），归母净利0.52亿（+48.4%），收入下降主要是由于产品销售模式整合，但销售费用下降，叠加精细化管理所带来的经营效率提升，公司净利润增长明显。",
+      "quantities": [
+        {
+          "value": "-16.6",
+          "unit": "%",
+          "start": 225,
+          "end": 231
+        },
+        {
+          "value": "+48.4",
+          "unit": "%",
+          "start": 243,
+          "end": 249
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 207,
+      "end": 305,
+      "text": "2025Q1公司实现营收2.90亿（-16.6%），归母净利0.52亿（+48.4%），收入下降主要是由于产品销售模式整合，但销售费用下降，叠加精细化管理所带来的经营效率提升，公司净利润增长明显。",
+      "quantities": [
+        {
+          "value": "-16.6",
+          "unit": "%",
+          "start": 225,
+          "end": 231
+        },
+        {
+          "value": "+48.4",
+          "unit": "%",
+          "start": 243,
+          "end": 249
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 645,
+      "end": 693,
+      "text": "2024年公司毛利率为65.7%（-0.8pp），部分由于脊柱产品在去年一季度仍执行集采前价格。",
+      "quantities": [
+        {
+          "value": "65.7",
+          "unit": "%",
+          "start": 656,
+          "end": 661
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 854,
+      "end": 882,
+      "text": "净利率为15.7%（+6.9pp），盈利能力已显著改善。",
+      "quantities": [
+        {
+          "value": "15.7",
+          "unit": "%",
+          "start": 858,
+          "end": 863
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 882,
+      "end": 919,
+      "text": "2025年一季度毛利率为63.7%，净利率为18.1%，保持良好盈利趋势。",
+      "quantities": [
+        {
+          "value": "63.7",
+          "unit": "%",
+          "start": 894,
+          "end": 899
+        },
+        {
+          "value": "18.1",
+          "unit": "%",
+          "start": 904,
+          "end": 909
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 882,
+      "end": 919,
+      "text": "2025年一季度毛利率为63.7%，净利率为18.1%，保持良好盈利趋势。",
+      "quantities": [
+        {
+          "value": "63.7",
+          "unit": "%",
+          "start": 894,
+          "end": 899
+        },
+        {
+          "value": "18.1",
+          "unit": "%",
+          "start": 904,
+          "end": 909
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1002,
+      "end": 1180,
+      "text": "考虑公司销售模式调整及股权激励费用影响，下调2025-26年盈利预测，新增2027年盈利预测，预计2027-25年归母净利润为2.54/3.12/3.77亿元（2025-26年原为2.92/3.43亿），同比增长13.3%/23.2%/20.9%，当前股价对应PE为40.3/32.7/27.1倍，公司具备平台化成长潜力和抗风险属性，维持“优于大市”评级。",
+      "quantities": [
+        {
+          "value": "3.77",
+          "unit": "亿元",
+          "start": 1075,
+          "end": 1081
+        },
+        {
+          "value": "13.3",
+          "unit": "%",
+          "start": 1108,
+          "end": 1113
+        },
+        {
+          "value": "23.2",
+          "unit": "%",
+          "start": 1114,
+          "end": 1119
+        },
+        {
+          "value": "20.9",
+          "unit": "%",
+          "start": 1120,
+          "end": 1125
+        },
+        {
+          "value": "27.1",
+          "unit": "倍",
+          "start": 1145,
+          "end": 1150
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1213,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1213,
+    "processed_ranges": [
+      [
+        0,
+        1213
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 40.523063,
+  "source_content_sha256": "2aa8b78d9b592f60408fd6597e77bcf6dd177fd765ea38d882f308642cb0ed5f"
+}

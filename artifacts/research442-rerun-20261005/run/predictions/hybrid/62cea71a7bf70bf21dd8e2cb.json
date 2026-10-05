@@ -1,0 +1,527 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000330",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 420,
+          "end": 463,
+          "text": "百菌清市场价格已从2025年1月的1.8万元/吨上涨至2024年5月的2.9万元/吨；"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 420,
+          "end": 463,
+          "text": "百菌清市场价格已从2025年1月的1.8万元/吨上涨至2024年5月的2.9万元/吨；"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "5b86010f3a5aa079ae5e2dfd",
+      "detector_ids": [
+        "hybrid.model",
+        "legacy.C.INTRINSIC.002"
+      ],
+      "original_spans": [
+        {
+          "text": "百菌清市场价格已从2025年1月的1.8万元/吨上涨至2024年5月的2.9万元/吨；"
+        }
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "投资建议开头和结尾两次出现“维持“优于大市”评级”，信息重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 960,
+          "end": 1126,
+          "text": "投资建议：维持“优于大市”评级。我们看好公司多个主营产品涨价带来的利润弹性，以及公司未来与多个合作伙伴在农药创新领域的合作取得进展，预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：维持“优于大市”评级。我们看好公司多个主营产品涨价带来的利润弹性，以及公司未来与多个合作伙伴在农药创新领域的合作取得进展，预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 960,
+          "end": 1126,
+          "text": "投资建议：维持“优于大市”评级。我们看好公司多个主营产品涨价带来的利润弹性，以及公司未来与多个合作伙伴在农药创新领域的合作取得进展，预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4bf122651abbf977e6aedb01",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同句先称归母净利润同比增长31.11%，后称归母净利润下降，同一指标方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 98,
+          "end": 208,
+          "text": "公司2024年实现营业收入42.37亿元，同比增长0.32%；归母净利润为0.81亿元，同比增长31.11%；公司2024年归母净利润下降主要系受全球农化去库周期影响，多数农药产品价格下降，使得公司营收和毛/净利率下降。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2024年实现营业收入42.37亿元，同比增长0.32%；归母净利润为0.81亿元，同比增长31.11%；公司2024年归母净利润下降主要系受全球农化去库周期影响，多数农药产品价格下降，使得公司营收和毛/净利率下降。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 98,
+          "end": 208,
+          "text": "公司2024年实现营业收入42.37亿元，同比增长0.32%；归母净利润为0.81亿元，同比增长31.11%；公司2024年归母净利润下降主要系受全球农化去库周期影响，多数农药产品价格下降，使得公司营收和毛/净利率下降。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "064e9c31f832759ea009d28f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“下跌”与价格从2.35万元/吨升至2.5万元/吨的数值变化相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 381,
+          "end": 420,
+          "text": "2025年3月以来，代森锰锌的市场价格从2.35万元/吨下跌至2.5万元/吨；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年3月以来，代森锰锌的市场价格从2.35万元/吨下跌至2.5万元/吨；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 381,
+          "end": 420,
+          "text": "2025年3月以来，代森锰锌的市场价格从2.35万元/吨下跌至2.5万元/吨；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d46c6d69054d666b3f6c58d5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "产品涨价通常改善盈利，与“预计盈利水平恶化明显”矛盾，也与标题“归母净利润大幅改善”冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 532,
+          "end": 563,
+          "text": "2024年以来公司多个主营产品价格上涨，预计盈利水平恶化明显；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年以来公司多个主营产品价格上涨，预计盈利水平恶化明显；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 532,
+          "end": 563,
+          "text": "2024年以来公司多个主营产品价格上涨，预计盈利水平恶化明显；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bfddef0547ab31d392335ed6",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "归母净利润列出四个数值，而预测期间为2025-2027年三年，且EPS和PE均为三个数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1026,
+          "end": 1126,
+          "text": "预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1026,
+          "end": 1126,
+          "text": "预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6068043d6bc3e4278efc9465",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1126
+        ]
+      ],
+      "estimated_input_tokens": 5635,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:07:48.914378+00:00",
+        "request_sha256": "92c691c45ff08033eb23d41236948010fc1a7f50cc4e553b33914ff9820c8d78",
+        "input_token_estimate": 15697,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277841",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6e5aed40b3ac4c269298d79dec3e9ac0",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3746,
+        "output_tokens": 8139,
+        "usage_source": "provider",
+        "duration_seconds": 30.047286,
+        "cost_cny": "0.036302",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "投资建议：维持“优于大市”评级。我们看好公司多个主营产品涨价带来的利润弹性，以及公司未来与多个合作伙伴在农药创新领域的合作取得进展，预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。"
+          }
+        ],
+        "reason": "投资建议开头和结尾两次出现“维持“优于大市”评级”，信息重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司2024年实现营业收入42.37亿元，同比增长0.32%；归母净利润为0.81亿元，同比增长31.11%；公司2024年归母净利润下降主要系受全球农化去库周期影响，多数农药产品价格下降，使得公司营收和毛/净利率下降。"
+          }
+        ],
+        "reason": "同句先称归母净利润同比增长31.11%，后称归母净利润下降，同一指标方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025年3月以来，代森锰锌的市场价格从2.35万元/吨下跌至2.5万元/吨；"
+          }
+        ],
+        "reason": "“下跌”与价格从2.35万元/吨升至2.5万元/吨的数值变化相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "百菌清市场价格已从2025年1月的1.8万元/吨上涨至2024年5月的2.9万元/吨；"
+          }
+        ],
+        "reason": "起始时间2025年1月晚于终点2024年5月，时间顺序倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年以来公司多个主营产品价格上涨，预计盈利水平恶化明显；"
+          }
+        ],
+        "reason": "产品涨价通常改善盈利，与“预计盈利水平恶化明显”矛盾，也与标题“归母净利润大幅改善”冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。"
+          }
+        ],
+        "reason": "归母净利润列出四个数值，而预测期间为2025-2027年三年，且EPS和PE均为三个数值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 75,
+      "end": 129,
+      "text": "利民股份披露2024年年报及2025年一季报，公司2024年实现营业收入42.37亿元，同比增长0.32%；",
+      "quantities": [
+        {
+          "value": "42.37",
+          "unit": "亿元",
+          "start": 111,
+          "end": 118
+        },
+        {
+          "value": "0.32",
+          "unit": "%",
+          "start": 123,
+          "end": 128
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 129,
+      "end": 153,
+      "text": "归母净利润为0.81亿元，同比增长31.11%；",
+      "quantities": [
+        {
+          "value": "0.81",
+          "unit": "亿元",
+          "start": 135,
+          "end": 141
+        },
+        {
+          "value": "31.11",
+          "unit": "%",
+          "start": 146,
+          "end": 152
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 153,
+      "end": 208,
+      "text": "公司2024年归母净利润下降主要系受全球农化去库周期影响，多数农药产品价格下降，使得公司营收和毛/净利率下降。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "使得公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 153,
+      "end": 208,
+      "text": "公司2024年归母净利润下降主要系受全球农化去库周期影响，多数农药产品价格下降，使得公司营收和毛/净利率下降。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "使得公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 153,
+      "end": 208,
+      "text": "公司2024年归母净利润下降主要系受全球农化去库周期影响，多数农药产品价格下降，使得公司营收和毛/净利率下降。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "使得公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 238,
+      "end": 301,
+      "text": "2025年第一季度，受益于多个主营产品涨价，公司实现归母净利润1.08亿元，同比增长1373.23%，环比增长258.51%。",
+      "quantities": [
+        {
+          "value": "1.08",
+          "unit": "亿元",
+          "start": 269,
+          "end": 275
+        },
+        {
+          "value": "1373.23",
+          "unit": "%",
+          "start": 280,
+          "end": 288
+        },
+        {
+          "value": "258.51",
+          "unit": "%",
+          "start": 293,
+          "end": 300
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 976,
+      "end": 1126,
+      "text": "我们看好公司多个主营产品涨价带来的利润弹性，以及公司未来与多个合作伙伴在农药创新领域的合作取得进展，预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。",
+      "quantities": [
+        {
+          "value": "6.10",
+          "unit": "亿元",
+          "start": 1063,
+          "end": 1069
+        },
+        {
+          "value": "1.24",
+          "unit": "元",
+          "start": 1084,
+          "end": 1089
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们看好公司",
+        "以及公司",
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1126,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1126,
+    "processed_ranges": [
+      [
+        0,
+        1126
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1126,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 7,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001866,
+  "source_content_sha256": "1caee963265b321c8caced214879d4f434c91cc15b692fcb951f39596eb54c75"
+}

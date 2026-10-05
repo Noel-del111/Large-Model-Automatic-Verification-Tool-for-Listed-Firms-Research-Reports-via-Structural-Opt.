@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"事件:公司2025年6月1日发布2025年7月产销快报：\"}],\"reason\":\"2025年6月1日发布2025年7月产销快报，发布时间早于所述报告月份，时间关系冲突。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"长城汽车(60-16-33)\"}],\"reason\":\"A股股票代码应为6位数字，此处写成带连字符的“60-16-33”，不符合代码格式。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。\"}],\"reason\":\"汽车销量单位应为“万辆”，此处写成“万吨”，量纲错误。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"批发销量10.2万辆，同比+11.8%，环比+2.2%；1-5月累计批发45.9万辆，同比-0.5%。\"},{\"text\":\"其中，1）哈弗5.8万辆，同比+22.6%，环比+1.7%；1-5月累计批发25.9万辆，同比+2.8%。2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。3）皮卡1.6万辆，同比+2.7%，环比-11.4%；1-5月累计批发8.3万辆，同比+8.3%。4）欧拉0.2万辆，同比-67.3%，环比+9.1%；1-5月累计批发1.1万辆，同比-58.7%。5）坦克2.1万辆，同比+2.8%，环比+8.8%；1-5月累计批发8.2万辆，同比-8.8%。\"}],\"reason\":\"5月总批发销量10.2万辆，哈弗、魏牌、皮卡、欧拉、坦克5月销量相加为10.3万辆，合计与总量不一致。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"哈弗品牌6月启动“全系换新一口价”限时促销，覆盖燃油、插混及经典车型，包括哈弗猛龙燃油版、二代哈弗枭龙MAX等，将直接刺激销量增长__%。\"}],\"reason\":\"“销量增长__%”处明确需要数值，但原文留空，缺失具体增长比例。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:19:15.105015+00:00",
+    "request_sha256": "1c59748ea4ab9b1b71016c1d49c2f65db785895c4f4006033a1333162d8be4c8",
+    "input_token_estimate": 15949,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278093",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "132dbad407a34a9ca622476f714db938",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3933,
+    "output_tokens": 10556,
+    "usage_source": "provider",
+    "duration_seconds": 40.66053,
+    "cost_cny": "0.046157"
+  },
+  "cache_request": {
+    "key": "b003e626e1d83912384ee59ead8dc788e22d96738947d8e98cdaf885afa9e40c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1c59748ea4ab9b1b71016c1d49c2f65db785895c4f4006033a1333162d8be4c8"
+  }
+}

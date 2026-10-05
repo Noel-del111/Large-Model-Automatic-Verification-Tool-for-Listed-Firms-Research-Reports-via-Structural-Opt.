@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000359",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "174fcbb61f975cd39ccd91c6",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 88,
+          "end": 172,
+          "text": "\n\n从煤炭保供基地（2024-2019年新疆原煤产量CAGR达17.9%）到煤化工高速发展，煤化工项目为疆煤提供消化渠道，逻辑体现为“煤化工->煤矿->民爆”逐级传导。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 995,
+    "total_chars": 995,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001085,
+  "source_content_sha256": "ef78a11818ec9073f964ba986bb28412a3e14201187b9512928005978eb6fa5e"
+}

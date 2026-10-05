@@ -1,0 +1,497 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000421",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 962,
+          "end": 1060,
+          "text": "盈利预测与评级：我们预计公司2027-2025年归母净利润分别为58.8/64.2/71.7亿元，同比增速分别为+26.2%/+9.0%/+11.7%，当前股价对应的PE分别为14/13/12倍。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 962,
+          "end": 1060,
+          "text": "盈利预测与评级：我们预计公司2027-2025年归母净利润分别为58.8/64.2/71.7亿元，同比增速分别为+26.2%/+9.0%/+11.7%，当前股价对应的PE分别为14/13/12倍。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "8302904f6275ada8198d106e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“129年”在2024年年报语境下不成立，应为2024年或类似年份，时间信息非法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 237,
+          "end": 438,
+          "text": "129年是公司融入中国五矿体系和中国盐湖的开局之年，公司积极融入公司控股股东中国盐湖“三步走”发展战略，中国盐湖到2025年内完成整合优化，具备世界一流盐湖产业的雏形；到2030年形成1000万吨/年钾肥、20万吨/年锂盐、3万吨以上/年镁及镁基材料产能；到2035年初步构建以盐湖为核心的锂电全生命周期产业、绿色氢能循环利用产业、高端镁基材料产业、新型储能产业，成为中国最大、世界一流的盐湖产业集群。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "129年是公司融入中国五矿体系和中国盐湖的开局之年，公司积极融入公司控股股东中国盐湖“三步走”发展战略，中国盐湖到2025年内完成整合优化，具备世界一流盐湖产业的雏形；到2030年形成1000万吨/年钾肥、20万吨/年锂盐、3万吨以上/年镁及镁基材料产能；到2035年初步构建以盐湖为核心的锂电全生命周期产业、绿色氢能循环利用产业、高端镁基材料产业、新型储能产业，成为中国最大、世界一流的盐湖产业集群。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 237,
+          "end": 438,
+          "text": "129年是公司融入中国五矿体系和中国盐湖的开局之年，公司积极融入公司控股股东中国盐湖“三步走”发展战略，中国盐湖到2025年内完成整合优化，具备世界一流盐湖产业的雏形；到2030年形成1000万吨/年钾肥、20万吨/年锂盐、3万吨以上/年镁及镁基材料产能；到2035年初步构建以盐湖为核心的锂电全生命周期产业、绿色氢能循环利用产业、高端镁基材料产业、新型储能产业，成为中国最大、世界一流的盐湖产业集群。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b5eed8ec9f462d04ce3b92cf",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "预计期间起点2027年晚于终点2025年，时间区间倒置，与逐年预测顺序矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 970,
+          "end": 1060,
+          "text": "我们预计公司2027-2025年归母净利润分别为58.8/64.2/71.7亿元，同比增速分别为+26.2%/+9.0%/+11.7%，当前股价对应的PE分别为14/13/12倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司2027-2025年归母净利润分别为58.8/64.2/71.7亿元，同比增速分别为+26.2%/+9.0%/+11.7%，当前股价对应的PE分别为14/13/12倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 970,
+          "end": 1060,
+          "text": "我们预计公司2027-2025年归母净利润分别为58.8/64.2/71.7亿元，同比增速分别为+26.2%/+9.0%/+11.7%，当前股价对应的PE分别为14/13/12倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "887c5554762f1ecccd36f14f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027年仅3个年度，却列出32/17/13/20共4个PE数值，年份数量与数值个数不对应。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1060,
+          "end": 1177,
+          "text": "我们选取钾肥、锂矿和锂盐企业为可比公司，2025-2027年平均PE分别为32/17/13/20倍，公司作为国内钾肥龙头和盐湖提锂龙头，钾肥价格25年有望迎来企稳回升，锂盐新建4万吨产能释放有望贡献新增量，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们选取钾肥、锂矿和锂盐企业为可比公司，2025-2027年平均PE分别为32/17/13/20倍，公司作为国内钾肥龙头和盐湖提锂龙头，钾肥价格25年有望迎来企稳回升，锂盐新建4万吨产能释放有望贡献新增量，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1060,
+          "end": 1177,
+          "text": "我们选取钾肥、锂矿和锂盐企业为可比公司，2025-2027年平均PE分别为32/17/13/20倍，公司作为国内钾肥龙头和盐湖提锂龙头，钾肥价格25年有望迎来企稳回升，锂盐新建4万吨产能释放有望贡献新增量，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dd817ada9763ae2208c22a3d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1243
+        ]
+      ],
+      "estimated_input_tokens": 5805,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:44:27.973797+00:00",
+        "request_sha256": "fa992585e989319202ffc304c8cde30d9496abc01a41c07039db406fa2281326",
+        "input_token_estimate": 16152,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278296",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "0951c6cf0c354fe5b1327efd0a20af8a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3832,
+        "output_tokens": 7686,
+        "usage_source": "provider",
+        "duration_seconds": 30.487828,
+        "cost_cny": "0.034576",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "129年是公司融入中国五矿体系和中国盐湖的开局之年，公司积极融入公司控股股东中国盐湖“三步走”发展战略，中国盐湖到2025年内完成整合优化，具备世界一流盐湖产业的雏形；到2030年形成1000万吨/年钾肥、20万吨/年锂盐、3万吨以上/年镁及镁基材料产能；到2035年初步构建以盐湖为核心的锂电全生命周期产业、绿色氢能循环利用产业、高端镁基材料产业、新型储能产业，成为中国最大、世界一流的盐湖产业集群。"
+          }
+        ],
+        "reason": "年份“129年”在2024年年报语境下不成立，应为2024年或类似年份，时间信息非法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "我们预计公司2027-2025年归母净利润分别为58.8/64.2/71.7亿元，同比增速分别为+26.2%/+9.0%/+11.7%，当前股价对应的PE分别为14/13/12倍。"
+          }
+        ],
+        "reason": "预计期间起点2027年晚于终点2025年，时间区间倒置，与逐年预测顺序矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们选取钾肥、锂矿和锂盐企业为可比公司，2025-2027年平均PE分别为32/17/13/20倍，公司作为国内钾肥龙头和盐湖提锂龙头，钾肥价格25年有望迎来企稳回升，锂盐新建4万吨产能释放有望贡献新增量，首次覆盖，给予“买入”评级。"
+          }
+        ],
+        "reason": "2025-2027年仅3个年度，却列出32/17/13/20共4个PE数值，年份数量与数值个数不对应。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 63,
+      "end": 218,
+      "text": "公司依托青海察尔汗盐湖资源，成为中国最大的钾肥生产企业和盐湖提锂企业，截至2024年年报，公司拥有氯化钾产能500万吨和碳酸锂产能4万吨，实现盈利双轮驱动，2024年氯化钾和碳酸锂营收分别为117和31亿元，占总营收77%和20%，毛利分别为62和16亿元，占总毛利80%和20%，毛利率分别为53%和51%。",
+      "quantities": [
+        {
+          "value": "31",
+          "unit": "亿元",
+          "start": 162,
+          "end": 166
+        },
+        {
+          "value": "77",
+          "unit": "%",
+          "start": 171,
+          "end": 174
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 175,
+          "end": 178
+        },
+        {
+          "value": "16",
+          "unit": "亿元",
+          "start": 187,
+          "end": 191
+        },
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 196,
+          "end": 199
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 200,
+          "end": 203
+        },
+        {
+          "value": "53",
+          "unit": "%",
+          "start": 210,
+          "end": 213
+        },
+        {
+          "value": "51",
+          "unit": "%",
+          "start": 214,
+          "end": 217
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 63,
+      "end": 218,
+      "text": "公司依托青海察尔汗盐湖资源，成为中国最大的钾肥生产企业和盐湖提锂企业，截至2024年年报，公司拥有氯化钾产能500万吨和碳酸锂产能4万吨，实现盈利双轮驱动，2024年氯化钾和碳酸锂营收分别为117和31亿元，占总营收77%和20%，毛利分别为62和16亿元，占总毛利80%和20%，毛利率分别为53%和51%。",
+      "quantities": [
+        {
+          "value": "31",
+          "unit": "亿元",
+          "start": 162,
+          "end": 166
+        },
+        {
+          "value": "77",
+          "unit": "%",
+          "start": 171,
+          "end": 174
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 175,
+          "end": 178
+        },
+        {
+          "value": "16",
+          "unit": "亿元",
+          "start": 187,
+          "end": 191
+        },
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 196,
+          "end": 199
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 200,
+          "end": 203
+        },
+        {
+          "value": "53",
+          "unit": "%",
+          "start": 210,
+          "end": 213
+        },
+        {
+          "value": "51",
+          "unit": "%",
+          "start": 214,
+          "end": 217
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 63,
+      "end": 218,
+      "text": "公司依托青海察尔汗盐湖资源，成为中国最大的钾肥生产企业和盐湖提锂企业，截至2024年年报，公司拥有氯化钾产能500万吨和碳酸锂产能4万吨，实现盈利双轮驱动，2024年氯化钾和碳酸锂营收分别为117和31亿元，占总营收77%和20%，毛利分别为62和16亿元，占总毛利80%和20%，毛利率分别为53%和51%。",
+      "quantities": [
+        {
+          "value": "31",
+          "unit": "亿元",
+          "start": 162,
+          "end": 166
+        },
+        {
+          "value": "77",
+          "unit": "%",
+          "start": 171,
+          "end": 174
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 175,
+          "end": 178
+        },
+        {
+          "value": "16",
+          "unit": "亿元",
+          "start": 187,
+          "end": 191
+        },
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 196,
+          "end": 199
+        },
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 200,
+          "end": 203
+        },
+        {
+          "value": "53",
+          "unit": "%",
+          "start": 210,
+          "end": 213
+        },
+        {
+          "value": "51",
+          "unit": "%",
+          "start": 214,
+          "end": 217
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 962,
+      "end": 1060,
+      "text": "盈利预测与评级：我们预计公司2027-2025年归母净利润分别为58.8/64.2/71.7亿元，同比增速分别为+26.2%/+9.0%/+11.7%，当前股价对应的PE分别为14/13/12倍。",
+      "quantities": [
+        {
+          "value": "71.7",
+          "unit": "亿元",
+          "start": 1004,
+          "end": 1010
+        },
+        {
+          "value": "+26.2",
+          "unit": "%",
+          "start": 1018,
+          "end": 1024
+        },
+        {
+          "value": "+9.0",
+          "unit": "%",
+          "start": 1025,
+          "end": 1030
+        },
+        {
+          "value": "+11.7",
+          "unit": "%",
+          "start": 1031,
+          "end": 1037
+        },
+        {
+          "value": "12",
+          "unit": "倍",
+          "start": 1056,
+          "end": 1059
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1243,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1243,
+    "processed_ranges": [
+      [
+        0,
+        1243
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1243,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002144,
+  "source_content_sha256": "fb497d71545b913d3985f71e7f30484d31d76eb7550c431e239be0789c2a75b6"
+}

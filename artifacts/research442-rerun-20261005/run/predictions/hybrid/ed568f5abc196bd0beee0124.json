@@ -1,0 +1,350 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000483",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后的括号内股票代码为空，缺少必要标识。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 20,
+          "end": 26,
+          "text": "广州酒家()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "广州酒家()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 20,
+          "end": 26,
+          "text": "广州酒家()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cc41c734396a7700fd4341a0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“超”后缺少具体门店数量，无法得知实际规模。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 610,
+          "end": 627,
+          "text": "截至2024年底，已拥有超家门店。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年底，已拥有超家门店。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 610,
+          "end": 627,
+          "text": "截至2024年底，已拥有超家门店。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d65a8250a7fb40b6e80f5e43",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "食品制造35.70亿对应70%推算总营收51亿，餐饮14.55亿对应10%推算总营收145.5亿，两者矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 316,
+          "end": 407,
+          "text": "2024年公司食品制造业务收入已达35.70亿元，收入占比70%，包括月饼/速冻/其他，收入分别为16.36/10.30/9.04亿元；餐饮服务收入14.55亿元，收入占比为10%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司食品制造业务收入已达35.70亿元，收入占比70%，包括月饼/速冻/其他，收入分别为16.36/10.30/9.04亿元；餐饮服务收入14.55亿元，收入占比为10%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 316,
+          "end": 407,
+          "text": "2024年公司食品制造业务收入已达35.70亿元，收入占比70%，包括月饼/速冻/其他，收入分别为16.36/10.30/9.04亿元；餐饮服务收入14.55亿元，收入占比为10%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b4b44149f819ecc45fe28051",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "预计2025-2027年共三年，却列出四个同比增速数值，数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 940,
+          "end": 1021,
+          "text": "我们预计2025-2027年公司归母净利润为5.41/6.14/6.78亿元，同比增速分别为9.44%/13.62%/10.41%/5.44%，维持“增持”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计2025-2027年公司归母净利润为5.41/6.14/6.78亿元，同比增速分别为9.44%/13.62%/10.41%/5.44%，维持“增持”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 940,
+          "end": 1021,
+          "text": "我们预计2025-2027年公司归母净利润为5.41/6.14/6.78亿元，同比增速分别为9.44%/13.62%/10.41%/5.44%，维持“增持”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cccb507d599a3157617d9eb8",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1058
+        ]
+      ],
+      "estimated_input_tokens": 5639,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:39:02.717117+00:00",
+        "request_sha256": "ee97c78ae2072c80bcc8668e7c8ec4345bdca7ad4ac1517cb6629ff2ce9e49e5",
+        "input_token_estimate": 15707,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277851",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "11af2f43486642a896eb28671171d8cc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3705,
+        "output_tokens": 4600,
+        "usage_source": "provider",
+        "duration_seconds": 19.259715,
+        "cost_cny": "0.022105",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "广州酒家()"
+          }
+        ],
+        "reason": "公司名称后的括号内股票代码为空，缺少必要标识。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "截至2024年底，已拥有超家门店。"
+          }
+        ],
+        "reason": "“超”后缺少具体门店数量，无法得知实际规模。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2024年公司食品制造业务收入已达35.70亿元，收入占比70%，包括月饼/速冻/其他，收入分别为16.36/10.30/9.04亿元；餐饮服务收入14.55亿元，收入占比为10%。"
+          }
+        ],
+        "reason": "食品制造35.70亿对应70%推算总营收51亿，餐饮14.55亿对应10%推算总营收145.5亿，两者矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们预计2025-2027年公司归母净利润为5.41/6.14/6.78亿元，同比增速分别为9.44%/13.62%/10.41%/5.44%，维持“增持”评级。"
+          }
+        ],
+        "reason": "预计2025-2027年共三年，却列出四个同比增速数值，数量不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 719,
+      "end": 770,
+      "text": "同时加快境外市场布局，产品进入美国、加拿大、澳大利亚等地市场，2024年境外市场营收增长41.63%。",
+      "quantities": [
+        {
+          "value": "41.63",
+          "unit": "%",
+          "start": 763,
+          "end": 769
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 930,
+      "end": 1021,
+      "text": "盈利预测与投资评级：我们预计2025-2027年公司归母净利润为5.41/6.14/6.78亿元，同比增速分别为9.44%/13.62%/10.41%/5.44%，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "6.78",
+          "unit": "亿元",
+          "start": 972,
+          "end": 978
+        },
+        {
+          "value": "9.44",
+          "unit": "%",
+          "start": 986,
+          "end": 991
+        },
+        {
+          "value": "13.62",
+          "unit": "%",
+          "start": 992,
+          "end": 998
+        },
+        {
+          "value": "10.41",
+          "unit": "%",
+          "start": 999,
+          "end": 1005
+        },
+        {
+          "value": "5.44",
+          "unit": "%",
+          "start": 1006,
+          "end": 1011
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1058,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1058,
+    "processed_ranges": [
+      [
+        0,
+        1058
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1058,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00171,
+  "source_content_sha256": "d7ff76aed5a32bd90f57a9a148745440b7907e9f62d5aa56cb4ba630654140c4"
+}

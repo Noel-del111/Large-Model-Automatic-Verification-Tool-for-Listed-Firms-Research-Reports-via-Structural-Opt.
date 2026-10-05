@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"据劲仔官方视频号，2025年0月公司推出豆制品新品“爆香虎皮豆干”，包括经典香辣味与创新山胡椒味两种口味。\"}], \"reason\": \"月份写成“0月”，不符合日历中1至12月的合法取值。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"休闲豆干市场规模超百亿元，对标其他品类成长空间广阔，且农业农村部等三部门联合印发的《中国食物与营养发展纲要（）》明确鼓励加快休闲豆制品标准化、产业化发展，有望催化行业成长、并孵化出新的行业大单品。\"}], \"reason\": \"所引《中国食物与营养发展纲要》括号内应载明年份，但该数值位置为空。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"4）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。\"}, {\"text\": \"5）其他品类：积极布局魔芋产品，有望受益品类红利实现收入增长。\"}], \"reason\": \"同一“其他品类布局魔芋”信息连续以4）、5）两条重复列出，无新增内容。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"预计2025~2027年归母净利润分别同比+15.2%/19.4%/20.0%，EPS为0.74/0.89/1.07元，对应PE为20/17/14亿分，公司大单品产品力无虞，进行升级后更加优秀，维持“推荐”评级。\"}], \"reason\": \"市盈率（PE）常用“倍”作单位，“亿分”不是PE的合理量纲。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:42:48.626071+00:00",
+    "request_sha256": "7c72feed7d50bc115f4a2ce2e5e2add4ffe8d1179e31afd11e2e76f71b51eca0",
+    "input_token_estimate": 15854,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277998",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "98b212cb6cd0425790e8dce8ee1cb6cf",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3742,
+    "output_tokens": 6535,
+    "usage_source": "provider",
+    "duration_seconds": 27.696803,
+    "cost_cny": "0.029882"
+  },
+  "cache_request": {
+    "key": "ad4fa052faeaf9aae3d5da1d8750ca609237ef0c799907cf96a4688ff50395c0",
+    "purpose": "text_review.detect",
+    "messages_sha256": "7c72feed7d50bc115f4a2ce2e5e2add4ffe8d1179e31afd11e2e76f71b51eca0"
+  }
+}

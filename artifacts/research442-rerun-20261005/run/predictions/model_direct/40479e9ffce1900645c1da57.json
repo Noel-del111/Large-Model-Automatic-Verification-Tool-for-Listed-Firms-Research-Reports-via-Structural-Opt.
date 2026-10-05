@@ -1,0 +1,463 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000323",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "2025年4月31日不存在，4月只有30天。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 40,
+          "end": 205,
+          "text": "2025年5月26日晚间，杭州银行公告：公司股票自2025年4月31日至2025年5月26日期间已有15个交易日的收盘价不低于“杭银转债”当期转股价格11.35元/股的130%（含130%，即不低于18.76元/股），根据《杭州银行股份有限公司公开发行A股可转换公司债券募集说明书》的相关约定，已触发“杭银转债”的有条件赎回条款。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月26日晚间，杭州银行公告：公司股票自2025年4月31日至2025年5月26日期间已有15个交易日的收盘价不低于“杭银转债”当期转股价格11.35元/股的130%（含130%，即不低于18.76元/股），根据《杭州银行股份有限公司公开发行A股可转换公司债券募集说明书》的相关约定，已触发“杭银转债”的有条件赎回条款。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 40,
+          "end": 205,
+          "text": "2025年5月26日晚间，杭州银行公告：公司股票自2025年4月31日至2025年5月26日期间已有15个交易日的收盘价不低于“杭银转债”当期转股价格11.35元/股的130%（含130%，即不低于18.76元/股），根据《杭州银行股份有限公司公开发行A股可转换公司债券募集说明书》的相关约定，已触发“杭银转债”的有条件赎回条款。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5106ed4772c89438ff10c490",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "11.35元/股的130%应为14.755元/股，不是18.76元/股。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 40,
+          "end": 205,
+          "text": "2025年5月26日晚间，杭州银行公告：公司股票自2025年4月31日至2025年5月26日期间已有15个交易日的收盘价不低于“杭银转债”当期转股价格11.35元/股的130%（含130%，即不低于18.76元/股），根据《杭州银行股份有限公司公开发行A股可转换公司债券募集说明书》的相关约定，已触发“杭银转债”的有条件赎回条款。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月26日晚间，杭州银行公告：公司股票自2025年4月31日至2025年5月26日期间已有15个交易日的收盘价不低于“杭银转债”当期转股价格11.35元/股的130%（含130%，即不低于18.76元/股），根据《杭州银行股份有限公司公开发行A股可转换公司债券募集说明书》的相关约定，已触发“杭银转债”的有条件赎回条款。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 40,
+          "end": 205,
+          "text": "2025年5月26日晚间，杭州银行公告：公司股票自2025年4月31日至2025年5月26日期间已有15个交易日的收盘价不低于“杭银转债”当期转股价格11.35元/股的130%（含130%，即不低于18.76元/股），根据《杭州银行股份有限公司公开发行A股可转换公司债券募集说明书》的相关约定，已触发“杭银转债”的有条件赎回条款。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8b4781d15b045ae43a6ecf21",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“核心一级资本充足率%”缺少百分号前的具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 224,
+          "end": 268,
+          "text": "截止2025年一季度末，公司核心一级资本充足率%，杭银转债未转股余额为106.37亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截止2025年一季度末，公司核心一级资本充足率%，杭银转债未转股余额为106.37亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 224,
+          "end": 268,
+          "text": "截止2025年一季度末，公司核心一级资本充足率%，杭银转债未转股余额为106.37亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "51cb635646d4ee15643d6a66",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "拨备覆盖率530%且居上市银行首位，风险抵补能力应较强，与“严重不足”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 696,
+          "end": 735,
+          "text": "期末，公司期末拨备覆盖率降至530%，排在上市银行首位，风险抵补能力严重不足。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "期末，公司期末拨备覆盖率降至530%，排在上市银行首位，风险抵补能力严重不足。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 696,
+          "end": 735,
+          "text": "期末，公司期末拨备覆盖率降至530%，排在上市银行首位，风险抵补能力严重不足。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "86c81f5b900f04520bbf54a8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句子在相邻分句中完全重复，属于不必要重复。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "以杭州银行、江苏银行和成都银行为代表的受益逆周期政策加码的优质城商行有望跑出超额收益；"
+        },
+        {
+          "text": "以杭州银行、江苏银行和成都银行为代表的受益逆周期政策加码的优质城商行有望跑出超额收益；"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "096701621b4c15fe718d8cf8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "并列增长率中“5.2”缺少百分号，单位与其他两个增长率不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 478,
+          "end": 537,
+          "text": "期末总资产2.22万亿元，贷款总额1.00万亿元，存款总额为1.35万亿元，较年初分别增长5.2、6.2%和6.0%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "期末总资产2.22万亿元，贷款总额1.00万亿元，存款总额为1.35万亿元，较年初分别增长5.2、6.2%和6.0%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 478,
+          "end": 537,
+          "text": "期末总资产2.22万亿元，贷款总额1.00万亿元，存款总额为1.35万亿元，较年初分别增长5.2、6.2%和6.0%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "db3372fa1b82355d074a2c87",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1098
+        ]
+      ],
+      "estimated_input_tokens": 5658,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:54:13.272179+00:00",
+        "request_sha256": "39fe231be26430c3f8c1588c06399091e9bc313f06ef46bf08cc1bab753e51ef",
+        "input_token_estimate": 15755,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277899",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3cafdd44a749452a97acabc321bc5910",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3713,
+        "output_tokens": 5787,
+        "usage_source": "provider",
+        "duration_seconds": 23.983005,
+        "cost_cny": "0.026861"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年5月26日晚间，杭州银行公告：公司股票自2025年4月31日至2025年5月26日期间已有15个交易日的收盘价不低于“杭银转债”当期转股价格11.35元/股的130%（含130%，即不低于18.76元/股），根据《杭州银行股份有限公司公开发行A股可转换公司债券募集说明书》的相关约定，已触发“杭银转债”的有条件赎回条款。"
+          }
+        ],
+        "reason": "2025年4月31日不存在，4月只有30天。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2025年5月26日晚间，杭州银行公告：公司股票自2025年4月31日至2025年5月26日期间已有15个交易日的收盘价不低于“杭银转债”当期转股价格11.35元/股的130%（含130%，即不低于18.76元/股），根据《杭州银行股份有限公司公开发行A股可转换公司债券募集说明书》的相关约定，已触发“杭银转债”的有条件赎回条款。"
+          }
+        ],
+        "reason": "11.35元/股的130%应为14.755元/股，不是18.76元/股。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "截止2025年一季度末，公司核心一级资本充足率%，杭银转债未转股余额为106.37亿元。"
+          }
+        ],
+        "reason": "“核心一级资本充足率%”缺少百分号前的具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "期末，公司期末拨备覆盖率降至530%，排在上市银行首位，风险抵补能力严重不足。"
+          }
+        ],
+        "reason": "拨备覆盖率530%且居上市银行首位，风险抵补能力应较强，与“严重不足”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "以杭州银行、江苏银行和成都银行为代表的受益逆周期政策加码的优质城商行有望跑出超额收益；"
+          },
+          {
+            "text": "以杭州银行、江苏银行和成都银行为代表的受益逆周期政策加码的优质城商行有望跑出超额收益；"
+          }
+        ],
+        "reason": "同一句子在相邻分句中完全重复，属于不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "期末总资产2.22万亿元，贷款总额1.00万亿元，存款总额为1.35万亿元，较年初分别增长5.2、6.2%和6.0%。"
+          }
+        ],
+        "reason": "并列增长率中“5.2”缺少百分号，单位与其他两个增长率不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "以杭州银行、江苏银行和成都银行为代表的受益逆周期政策加码的优质城商行有望跑出超额收益；"
+          },
+          {
+            "text": "以杭州银行、江苏银行和成都银行为代表的受益逆周期政策加码的优质城商行有望跑出超额收益；"
+          }
+        ],
+        "reason": "同一句子在相邻分句中完全重复，属于不必要重复。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 353,
+      "end": 392,
+      "text": "2025年一季度营收同比增长2.22%，较2024年增速下降了7.4个百分点；",
+      "quantities": [
+        {
+          "value": "2.22",
+          "unit": "%",
+          "start": 367,
+          "end": 372
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 392,
+      "end": 428,
+      "text": "实现归母净利润同比增长17.3%，较2024年增速下降了0.8个百分点。",
+      "quantities": [
+        {
+          "value": "17.3",
+          "unit": "%",
+          "start": 403,
+          "end": 408
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 428,
+      "end": 468,
+      "text": "营收增速下降主要受其他非息收入同比下降拖累，一季度净利息收入同比增长了6.8%。",
+      "quantities": [
+        {
+          "value": "6.8",
+          "unit": "%",
+          "start": 463,
+          "end": 467
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "assets",
+      "metric_text": "总资产",
+      "start": 468,
+      "end": 537,
+      "text": "信贷延续了高增态势，期末总资产2.22万亿元，贷款总额1.00万亿元，存款总额为1.35万亿元，较年初分别增长5.2、6.2%和6.0%。",
+      "quantities": [
+        {
+          "value": "6.2",
+          "unit": "%",
+          "start": 527,
+          "end": 531
+        },
+        {
+          "value": "6.0",
+          "unit": "%",
+          "start": 532,
+          "end": 536
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1098,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1098,
+    "processed_ranges": [
+      [
+        0,
+        1098
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 24.010967,
+  "source_content_sha256": "29b9d068c9d847b9f8485e99dd05262e4398e9b97e4fe5e594f6233ffb6f8d12"
+}

@@ -1,0 +1,467 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000332",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "经营性净现金流写为“4.18亿分”，人民币金额单位应为“亿元”或“亿”，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 469,
+          "end": 538,
+          "text": "25Q1公司经营性净现金流4.18亿分（同比-1.95%），预付款余额11.95亿元（同比-31.61%），环比24Q4减少2.21亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1公司经营性净现金流4.18亿分（同比-1.95%），预付款余额11.95亿元（同比-31.61%），环比24Q4减少2.21亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 469,
+          "end": 538,
+          "text": "25Q1公司经营性净现金流4.18亿分（同比-1.95%），预付款余额11.95亿元（同比-31.61%），环比24Q4减少2.21亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f0fe16a120faefb1ab631b76",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "应收账款不能计提存货跌价准备，应计提坏账准备；存货跌价准备针对存货，术语使用错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 391,
+          "end": 469,
+          "text": "25Q1公司毛利率小幅下滑主要系行业周期性深度调整，主销名酒市场价格呈下降趋势，此外公司基于谨慎性原则对部分应收账款计提了存货跌价准备，导致净利润同比减少。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1公司毛利率小幅下滑主要系行业周期性深度调整，主销名酒市场价格呈下降趋势，此外公司基于谨慎性原则对部分应收账款计提了存货跌价准备，导致净利润同比减少。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 391,
+          "end": 469,
+          "text": "25Q1公司毛利率小幅下滑主要系行业周期性深度调整，主销名酒市场价格呈下降趋势，此外公司基于谨慎性原则对部分应收账款计提了存货跌价准备，导致净利润同比减少。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2dadb90abbfe382effee3b9d",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          877
+        ]
+      ],
+      "estimated_input_tokens": 5332,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:12:18.005749+00:00",
+        "request_sha256": "abbd41376b74a62078ee351ce9062c9dc7356dadfa1c3c4ad0524a060b180e06",
+        "input_token_estimate": 14879,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277023",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4d21818f94344783a02221fa61ceb6e1",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3589,
+        "output_tokens": 4923,
+        "usage_source": "provider",
+        "duration_seconds": 18.891063,
+        "cost_cny": "0.023281"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "25Q1公司经营性净现金流4.18亿分（同比-1.95%），预付款余额11.95亿元（同比-31.61%），环比24Q4减少2.21亿元。"
+          }
+        ],
+        "reason": "经营性净现金流写为“4.18亿分”，人民币金额单位应为“亿元”或“亿”，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "25Q1公司毛利率小幅下滑主要系行业周期性深度调整，主销名酒市场价格呈下降趋势，此外公司基于谨慎性原则对部分应收账款计提了存货跌价准备，导致净利润同比减少。"
+          }
+        ],
+        "reason": "应收账款不能计提存货跌价准备，应计提坏账准备；存货跌价准备针对存货，术语使用错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 40,
+      "end": 128,
+      "text": "事件：公司发布25年一季报，2025Q1公司营业收入/归母净利润/扣非归母净利润分别为28.52/0.85/0.75亿元（同比-31.01%/-34.19%/-41.27%）。",
+      "quantities": [
+        {
+          "value": "0.75",
+          "unit": "亿元",
+          "start": 94,
+          "end": 100
+        },
+        {
+          "value": "-31.01",
+          "unit": "%",
+          "start": 103,
+          "end": 110
+        },
+        {
+          "value": "-34.19",
+          "unit": "%",
+          "start": 111,
+          "end": 118
+        },
+        {
+          "value": "-41.27",
+          "unit": "%",
+          "start": 119,
+          "end": 126
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 40,
+      "end": 128,
+      "text": "事件：公司发布25年一季报，2025Q1公司营业收入/归母净利润/扣非归母净利润分别为28.52/0.85/0.75亿元（同比-31.01%/-34.19%/-41.27%）。",
+      "quantities": [
+        {
+          "value": "0.75",
+          "unit": "亿元",
+          "start": 94,
+          "end": 100
+        },
+        {
+          "value": "-31.01",
+          "unit": "%",
+          "start": 103,
+          "end": 110
+        },
+        {
+          "value": "-34.19",
+          "unit": "%",
+          "start": 111,
+          "end": 118
+        },
+        {
+          "value": "-41.27",
+          "unit": "%",
+          "start": 119,
+          "end": 126
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 40,
+      "end": 128,
+      "text": "事件：公司发布25年一季报，2025Q1公司营业收入/归母净利润/扣非归母净利润分别为28.52/0.85/0.75亿元（同比-31.01%/-34.19%/-41.27%）。",
+      "quantities": [
+        {
+          "value": "0.75",
+          "unit": "亿元",
+          "start": 94,
+          "end": 100
+        },
+        {
+          "value": "-31.01",
+          "unit": "%",
+          "start": 103,
+          "end": 110
+        },
+        {
+          "value": "-34.19",
+          "unit": "%",
+          "start": 111,
+          "end": 118
+        },
+        {
+          "value": "-41.27",
+          "unit": "%",
+          "start": 119,
+          "end": 126
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 156,
+      "end": 205,
+      "text": "25Q1公司营收端承压相对明显，预计主要系：①25Q1酒类流通行业整体仍处于调整期，需求相对偏弱；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 290,
+      "end": 391,
+      "text": "25Q1公司毛利率10.44%（同比-0.04pcts）、销售费用率4.67%（同比+0.01pcts）、管理费用率1.28%（同比+0.18pcts）、归母净利率2.99%（同比-0.15pcts）。",
+      "quantities": [
+        {
+          "value": "10.44",
+          "unit": "%",
+          "start": 299,
+          "end": 305
+        },
+        {
+          "value": "4.67",
+          "unit": "%",
+          "start": 324,
+          "end": 329
+        },
+        {
+          "value": "1.28",
+          "unit": "%",
+          "start": 348,
+          "end": 353
+        },
+        {
+          "value": "2.99",
+          "unit": "%",
+          "start": 372,
+          "end": 377
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 290,
+      "end": 391,
+      "text": "25Q1公司毛利率10.44%（同比-0.04pcts）、销售费用率4.67%（同比+0.01pcts）、管理费用率1.28%（同比+0.18pcts）、归母净利率2.99%（同比-0.15pcts）。",
+      "quantities": [
+        {
+          "value": "10.44",
+          "unit": "%",
+          "start": 299,
+          "end": 305
+        },
+        {
+          "value": "4.67",
+          "unit": "%",
+          "start": 324,
+          "end": 329
+        },
+        {
+          "value": "1.28",
+          "unit": "%",
+          "start": 348,
+          "end": 353
+        },
+        {
+          "value": "2.99",
+          "unit": "%",
+          "start": 372,
+          "end": 377
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 391,
+      "end": 469,
+      "text": "25Q1公司毛利率小幅下滑主要系行业周期性深度调整，主销名酒市场价格呈下降趋势，此外公司基于谨慎性原则对部分应收账款计提了存货跌价准备，导致净利润同比减少。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "此外公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 391,
+      "end": 469,
+      "text": "25Q1公司毛利率小幅下滑主要系行业周期性深度调整，主销名酒市场价格呈下降趋势，此外公司基于谨慎性原则对部分应收账款计提了存货跌价准备，导致净利润同比减少。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "此外公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 691,
+      "end": 831,
+      "text": "预计25-27年公司收入分别为99.10/106.70/111.92亿元，同比+4.71%/7.67%/4.89%，归母净利润分别为1.30/1.76/2.31亿元，同比+192.79%/34.94%/31.40%，对应PE分别为66.7/49.4/37.6X，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "111.92",
+          "unit": "亿元",
+          "start": 719,
+          "end": 727
+        },
+        {
+          "value": "+4.71",
+          "unit": "%",
+          "start": 730,
+          "end": 736
+        },
+        {
+          "value": "7.67",
+          "unit": "%",
+          "start": 737,
+          "end": 742
+        },
+        {
+          "value": "4.89",
+          "unit": "%",
+          "start": 743,
+          "end": 748
+        },
+        {
+          "value": "2.31",
+          "unit": "亿元",
+          "start": 767,
+          "end": 773
+        },
+        {
+          "value": "+192.79",
+          "unit": "%",
+          "start": 776,
+          "end": 784
+        },
+        {
+          "value": "34.94",
+          "unit": "%",
+          "start": 785,
+          "end": 791
+        },
+        {
+          "value": "31.40",
+          "unit": "%",
+          "start": 792,
+          "end": 798
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 877,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 877,
+    "processed_ranges": [
+      [
+        0,
+        877
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 18.913543,
+  "source_content_sha256": "312e3536dd6adf8a01572930d18f00b03e8317c009a27313c97a927b23955a42"
+}

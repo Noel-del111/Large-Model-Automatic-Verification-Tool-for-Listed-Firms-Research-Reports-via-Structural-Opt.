@@ -1,0 +1,750 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000489",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "2025年一季报不可能在2024年4月28日发布，发布日早于报告期，时间关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 54,
+          "end": 100,
+          "text": "微导纳米于2025年4月25日发布2024年年报，2024年4月28日发布2025年一季报："
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "微导纳米于2025年4月25日发布2024年年报，2024年4月28日发布2025年一季报："
+        }
+      ],
+      "spans": [
+        {
+          "start": 54,
+          "end": 100,
+          "text": "微导纳米于2025年4月25日发布2024年年报，2024年4月28日发布2025年一季报："
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3347634e8ec8b0440077f305",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“营业收入为亿元”缺少对应数值，未给出2024年营业收入金额。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 102,
+          "end": 202,
+          "text": "2024年，公司实现营业收入为亿元，同比上升60.74%；归母净利润为2.27亿元，同比下降16.16%；毛利率为39.99%，同比下降3.65pct；归母净利率为8.40%，同比减少7.70pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司实现营业收入为亿元，同比上升60.74%；归母净利润为2.27亿元，同比下降16.16%；毛利率为39.99%，同比下降3.65pct；归母净利率为8.40%，同比减少7.70pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 102,
+          "end": 202,
+          "text": "2024年，公司实现营业收入为亿元，同比上升60.74%；归母净利润为2.27亿元，同比下降16.16%；毛利率为39.99%，同比下降3.65pct；归母净利率为8.40%，同比减少7.70pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "edf22a60168c107c3ea9b75b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "占比由7.27%提升至12.14%是上升，与“呈逐年下降的趋势”在同一条件下矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 557,
+          "end": 603,
+          "text": "半导体设备收入占主营业务比重由2023年度的7.27%提升至12.14%，呈逐年下降的趋势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "半导体设备收入占主营业务比重由2023年度的7.27%提升至12.14%，呈逐年下降的趋势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 557,
+          "end": 603,
+          "text": "半导体设备收入占主营业务比重由2023年度的7.27%提升至12.14%，呈逐年下降的趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9749127eb0ef6ee4bdd8235e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "三个领域分项合计40.88+15.05+0.79=56.72亿元，不等于在手订单总额67.72亿元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 603,
+          "end": 682,
+          "text": "截至2024年12月31日，公司在手订单总额67.72亿元，其中光伏领域、半导体领域和新兴应用领域在手订单分别为40.88亿元、15.05亿元和0.79亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年12月31日，公司在手订单总额67.72亿元，其中光伏领域、半导体领域和新兴应用领域在手订单分别为40.88亿元、15.05亿元和0.79亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 603,
+          "end": 682,
+          "text": "截至2024年12月31日，公司在手订单总额67.72亿元，其中光伏领域、半导体领域和新兴应用领域在手订单分别为40.88亿元、15.05亿元和0.79亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0abd7ef61515d682cedfdc5a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "前文财务数据均以人民币亿元列示，此处经营现金流用万美元，且约-10亿美元与公司营收约27亿元规模不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 864,
+          "end": 958,
+          "text": "2024年，公司经营活动产生的现金流量净额为-99,989.87万美元，公司半导体业务持续快速发展，其收款节点相对滞后而前期垫付的资金需求较大，与此同时，采购原材料等原因导致支付款项增加。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司经营活动产生的现金流量净额为-99,989.87万美元，公司半导体业务持续快速发展，其收款节点相对滞后而前期垫付的资金需求较大，与此同时，采购原材料等原因导致支付款项增加。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 864,
+          "end": 958,
+          "text": "2024年，公司经营活动产生的现金流量净额为-99,989.87万美元，公司半导体业务持续快速发展，其收款节点相对滞后而前期垫付的资金需求较大，与此同时，采购原材料等原因导致支付款项增加。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "35ce6d11d3478e05715af1d4",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2081
+        ]
+      ],
+      "estimated_input_tokens": 6449,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:16:45.671596+00:00",
+        "request_sha256": "de89922c20638e25b2a89011186e7351dda184517445746fe99f4da42659339b",
+        "input_token_estimate": 17994,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280138",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "fe1ce7fb64ac4cef86d80574c262a6bf",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4229,
+        "output_tokens": 4980,
+        "usage_source": "provider",
+        "duration_seconds": 19.729573,
+        "cost_cny": "0.024149"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "微导纳米于2025年4月25日发布2024年年报，2024年4月28日发布2025年一季报："
+          }
+        ],
+        "reason": "2025年一季报不可能在2024年4月28日发布，发布日早于报告期，时间关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年，公司实现营业收入为亿元，同比上升60.74%；归母净利润为2.27亿元，同比下降16.16%；毛利率为39.99%，同比下降3.65pct；归母净利率为8.40%，同比减少7.70pct。"
+          }
+        ],
+        "reason": "“营业收入为亿元”缺少对应数值，未给出2024年营业收入金额。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "半导体设备收入占主营业务比重由2023年度的7.27%提升至12.14%，呈逐年下降的趋势。"
+          }
+        ],
+        "reason": "占比由7.27%提升至12.14%是上升，与“呈逐年下降的趋势”在同一条件下矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "截至2024年12月31日，公司在手订单总额67.72亿元，其中光伏领域、半导体领域和新兴应用领域在手订单分别为40.88亿元、15.05亿元和0.79亿元。"
+          }
+        ],
+        "reason": "三个领域分项合计40.88+15.05+0.79=56.72亿元，不等于在手订单总额67.72亿元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年，公司经营活动产生的现金流量净额为-99,989.87万美元，公司半导体业务持续快速发展，其收款节点相对滞后而前期垫付的资金需求较大，与此同时，采购原材料等原因导致支付款项增加。"
+          }
+        ],
+        "reason": "前文财务数据均以人民币亿元列示，此处经营现金流用万美元，且约-10亿美元与公司营收约27亿元规模不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 102,
+      "end": 131,
+      "text": "2024年，公司实现营业收入为亿元，同比上升60.74%；",
+      "quantities": [
+        {
+          "value": "60.74",
+          "unit": "%",
+          "start": 124,
+          "end": 130
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 131,
+      "end": 155,
+      "text": "归母净利润为2.27亿元，同比下降16.16%；",
+      "quantities": [
+        {
+          "value": "2.27",
+          "unit": "亿元",
+          "start": 137,
+          "end": 143
+        },
+        {
+          "value": "16.16",
+          "unit": "%",
+          "start": 148,
+          "end": 154
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 155,
+      "end": 178,
+      "text": "毛利率为39.99%，同比下降3.65pct；",
+      "quantities": [
+        {
+          "value": "39.99",
+          "unit": "%",
+          "start": 159,
+          "end": 165
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 178,
+      "end": 202,
+      "text": "归母净利率为8.40%，同比减少7.70pct。",
+      "quantities": [
+        {
+          "value": "8.40",
+          "unit": "%",
+          "start": 184,
+          "end": 189
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 204,
+      "end": 240,
+      "text": "2024年第四季度公司实现营业收入11.56亿元，同比提高75.58%；",
+      "quantities": [
+        {
+          "value": "11.56",
+          "unit": "亿元",
+          "start": 221,
+          "end": 228
+        },
+        {
+          "value": "75.58",
+          "unit": "%",
+          "start": 233,
+          "end": 239
+        }
+      ],
+      "periods": [
+        "2024年第四季度"
+      ],
+      "entity_mentions": [
+        "年第四季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 240,
+      "end": 264,
+      "text": "归母净利润为0.76亿元，同比下降34.14%；",
+      "quantities": [
+        {
+          "value": "0.76",
+          "unit": "亿元",
+          "start": 246,
+          "end": 252
+        },
+        {
+          "value": "34.14",
+          "unit": "%",
+          "start": 257,
+          "end": 263
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 264,
+      "end": 287,
+      "text": "毛利率为42.18%，同比下降3.44pct；",
+      "quantities": [
+        {
+          "value": "42.18",
+          "unit": "%",
+          "start": 268,
+          "end": 274
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 287,
+      "end": 310,
+      "text": "净利率为6.57%，同比下降10.95pct。",
+      "quantities": [
+        {
+          "value": "6.57",
+          "unit": "%",
+          "start": 291,
+          "end": 296
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 312,
+      "end": 348,
+      "text": "2025年第一季度公司实现营业收入5.10亿元，同比提高198.95%；",
+      "quantities": [
+        {
+          "value": "5.10",
+          "unit": "亿元",
+          "start": 329,
+          "end": 335
+        },
+        {
+          "value": "198.95",
+          "unit": "%",
+          "start": 340,
+          "end": 347
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": [
+        "年第一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 348,
+      "end": 375,
+      "text": "归母净利润为0.84亿元，同比上升2,253.57%；",
+      "quantities": [
+        {
+          "value": "0.84",
+          "unit": "亿元",
+          "start": 354,
+          "end": 360
+        },
+        {
+          "value": "2,253.57",
+          "unit": "%",
+          "start": 365,
+          "end": 374
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 375,
+      "end": 398,
+      "text": "毛利率为36.14%，同比下降6.76pct；",
+      "quantities": [
+        {
+          "value": "36.14",
+          "unit": "%",
+          "start": 379,
+          "end": 385
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 398,
+      "end": 422,
+      "text": "净利率为16.48%，同比上升14.39pct。",
+      "quantities": [
+        {
+          "value": "16.48",
+          "unit": "%",
+          "start": 402,
+          "end": 408
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 424,
+      "end": 510,
+      "text": "半导体业务快速发展，光伏周期下盈利承压，收入及毛利展现韧性2024年度，公司半导体设备收入3.27亿元，同比增长168.44%，毛利率27.68%，同比增长0.44pct；",
+      "quantities": [
+        {
+          "value": "3.27",
+          "unit": "亿元",
+          "start": 469,
+          "end": 475
+        },
+        {
+          "value": "168.44",
+          "unit": "%",
+          "start": 480,
+          "end": 487
+        },
+        {
+          "value": "27.68",
+          "unit": "%",
+          "start": 491,
+          "end": 497
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 510,
+      "end": 557,
+      "text": "光伏设备收入22.90亿元，同比增长52.94%，毛利率40.67%，同比下降3.14pct。",
+      "quantities": [
+        {
+          "value": "22.90",
+          "unit": "亿元",
+          "start": 516,
+          "end": 523
+        },
+        {
+          "value": "52.94",
+          "unit": "%",
+          "start": 528,
+          "end": 534
+        },
+        {
+          "value": "40.67",
+          "unit": "%",
+          "start": 538,
+          "end": 544
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 723,
+      "end": 812,
+      "text": "2024年，公司前期在手订单验收，半导体和光伏设备营业收入同比增长，但利润受以下两方面影响：1）由于公司规模的扩大以及研发投入的增加，研发费用2.67亿元，同比增长50.78%；",
+      "quantities": [
+        {
+          "value": "2.67",
+          "unit": "亿元",
+          "start": 794,
+          "end": 800
+        },
+        {
+          "value": "50.78",
+          "unit": "%",
+          "start": 805,
+          "end": 811
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "由于公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1585,
+      "end": 1757,
+      "text": "考虑光伏行业景气度下行影响订单及验收，我们调整预测公司2025-2027年营业收入分别为29.46/33.32/35.89亿元（25-26年前值为42.20/52.73亿元），归母净利润分别为2.88/4.40/4.97亿元（25-26年前值为5.26/7.25亿元），以当前总股本4.58亿股计算的摊薄EPS为0.63/0.96/1.09元。",
+      "quantities": [
+        {
+          "value": "35.89",
+          "unit": "亿元",
+          "start": 1641,
+          "end": 1648
+        },
+        {
+          "value": "52.73",
+          "unit": "亿元",
+          "start": 1664,
+          "end": 1671
+        },
+        {
+          "value": "4.97",
+          "unit": "亿元",
+          "start": 1691,
+          "end": 1697
+        },
+        {
+          "value": "7.25",
+          "unit": "亿元",
+          "start": 1712,
+          "end": 1718
+        },
+        {
+          "value": "1.09",
+          "unit": "元",
+          "start": 1751,
+          "end": 1756
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们调整预测公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1585,
+      "end": 1757,
+      "text": "考虑光伏行业景气度下行影响订单及验收，我们调整预测公司2025-2027年营业收入分别为29.46/33.32/35.89亿元（25-26年前值为42.20/52.73亿元），归母净利润分别为2.88/4.40/4.97亿元（25-26年前值为5.26/7.25亿元），以当前总股本4.58亿股计算的摊薄EPS为0.63/0.96/1.09元。",
+      "quantities": [
+        {
+          "value": "35.89",
+          "unit": "亿元",
+          "start": 1641,
+          "end": 1648
+        },
+        {
+          "value": "52.73",
+          "unit": "亿元",
+          "start": 1664,
+          "end": 1671
+        },
+        {
+          "value": "4.97",
+          "unit": "亿元",
+          "start": 1691,
+          "end": 1697
+        },
+        {
+          "value": "7.25",
+          "unit": "亿元",
+          "start": 1712,
+          "end": 1718
+        },
+        {
+          "value": "1.09",
+          "unit": "元",
+          "start": 1751,
+          "end": 1756
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们调整预测公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2081,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2081,
+    "processed_ranges": [
+      [
+        0,
+        2081
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 17,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 19.752703,
+  "source_content_sha256": "0a17e349a39a148cf1bdbded5801198b9f3818b6e33dd7cc2abc914bb39a2b4d"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"截至2025年5月29日，申万汽车板块近两周上涨0.86%，跑赢沪深300指数2.10个百分点，在申万31个行业中排名第35位；\"}],\"reason\":\"申万31个行业总数仅为31个，排名不可能为第35位，命题不能同时成立。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"（2）乘联分会崔东树：1-4月汽车行业收入32552元，同比增长7%；\"}],\"reason\":\"汽车行业1-4月收入规模巨大，32552元的量纲明显不合理，应为亿元或万元等。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"自今年3月底起，比亚迪已连续3个月开展限时“一口价”或限时补贴活动，以厂家补贴、现金补贴等方式间接降价。\"}],\"reason\":\"报告截止2025年5月29日，从3月底起不足3个月，与“已连续3个月”冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:35:19.747115+00:00",
+    "request_sha256": "836c0b851442c4be33730f5945b7c27a0ddcd2e405e38e592b31dc6c292be015",
+    "input_token_estimate": 15873,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278017",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9b35b2348afe4b2d852dc61f9930340f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3766,
+    "output_tokens": 7812,
+    "usage_source": "provider",
+    "duration_seconds": 31.201173,
+    "cost_cny": "0.035014"
+  },
+  "cache_request": {
+    "key": "d1df02005d983936933c66c522f8bd903255c04bb986b6345276e6dceecc7a64",
+    "purpose": "text_review.detect",
+    "messages_sha256": "836c0b851442c4be33730f5945b7c27a0ddcd2e405e38e592b31dc6c292be015"
+  }
+}

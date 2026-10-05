@@ -1,0 +1,509 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000395",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年”不是合理年份，与上下文2024年、25年时间线不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 591,
+          "end": 641,
+          "text": "129年公司棉籽业务受豆油豆粕等大宗商品行情波动等因素影响，主要产品价格下降，毛利率下降3.48%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "129年公司棉籽业务受豆油豆粕等大宗商品行情波动等因素影响，主要产品价格下降，毛利率下降3.48%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 591,
+          "end": 641,
+          "text": "129年公司棉籽业务受豆油豆粕等大宗商品行情波动等因素影响，主要产品价格下降，毛利率下降3.48%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f19c1346fa5a72ad0820c8bd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "晨光生物属植物提取行业，胰岛素并非其植物提取产品，术语使用与公司业务不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 753,
+          "end": 841,
+          "text": "晨光生物是一家专注于植物有效成分萃取、分离、纯化及应用的高科技企业，胰岛素、辣椒油树脂、叶黄素产销量位居世界重要位置，随着下游食品调味、医疗保健等需求趋势增长，公司望持续获益。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "晨光生物是一家专注于植物有效成分萃取、分离、纯化及应用的高科技企业，胰岛素、辣椒油树脂、叶黄素产销量位居世界重要位置，随着下游食品调味、医疗保健等需求趋势增长，公司望持续获益。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 753,
+          "end": 841,
+          "text": "晨光生物是一家专注于植物有效成分萃取、分离、纯化及应用的高科技企业，胰岛素、辣椒油树脂、叶黄素产销量位居世界重要位置，随着下游食品调味、医疗保健等需求趋势增长，公司望持续获益。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dac63a494343a5aa44ad9558",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "行情回暖、恢复顺价与“同比显著恶化”在同一条件下矛盾，不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 641,
+          "end": 674,
+          "text": "25年棉籽加工行情回暖，产品、原材料恢复至顺价状态，同比显著恶化。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25年棉籽加工行情回暖，产品、原材料恢复至顺价状态，同比显著恶化。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 641,
+          "end": 674,
+          "text": "25年棉籽加工行情回暖，产品、原材料恢复至顺价状态，同比显著恶化。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3e0b3a3e54f3795db9a190ef",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          981
+        ]
+      ],
+      "estimated_input_tokens": 5515,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:23:27.156732+00:00",
+        "request_sha256": "85403e97592def182c0c34374f132bbeee9bf882de866111e8b5af269880cb00",
+        "input_token_estimate": 15353,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277497",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "bfe5df18e7604947b3fdd341de2fd5ce",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3625,
+        "output_tokens": 5253,
+        "usage_source": "provider",
+        "duration_seconds": 21.109189,
+        "cost_cny": "0.024637"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "129年公司棉籽业务受豆油豆粕等大宗商品行情波动等因素影响，主要产品价格下降，毛利率下降3.48%。"
+          }
+        ],
+        "reason": "“129年”不是合理年份，与上下文2024年、25年时间线不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "晨光生物是一家专注于植物有效成分萃取、分离、纯化及应用的高科技企业，胰岛素、辣椒油树脂、叶黄素产销量位居世界重要位置，随着下游食品调味、医疗保健等需求趋势增长，公司望持续获益。"
+          }
+        ],
+        "reason": "晨光生物属植物提取行业，胰岛素并非其植物提取产品，术语使用与公司业务不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "25年棉籽加工行情回暖，产品、原材料恢复至顺价状态，同比显著恶化。"
+          }
+        ],
+        "reason": "行情回暖、恢复顺价与“同比显著恶化”在同一条件下矛盾，不能同时成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 42,
+      "end": 75,
+      "text": "2024年晨光生物实现营业收入69.94亿元，同比增长1.79%；",
+      "quantities": [
+        {
+          "value": "69.94",
+          "unit": "亿元",
+          "start": 57,
+          "end": 64
+        },
+        {
+          "value": "1.79",
+          "unit": "%",
+          "start": 69,
+          "end": 74
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 75,
+      "end": 98,
+      "text": "归母净利润0.94亿元，同比下降80.39%；",
+      "quantities": [
+        {
+          "value": "0.94",
+          "unit": "亿元",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "80.39",
+          "unit": "%",
+          "start": 91,
+          "end": 97
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 98,
+      "end": 123,
+      "text": "扣非归母净利润0.44亿元，同比下降87.95%。",
+      "quantities": [
+        {
+          "value": "0.44",
+          "unit": "亿元",
+          "start": 105,
+          "end": 111
+        },
+        {
+          "value": "87.95",
+          "unit": "%",
+          "start": 116,
+          "end": 122
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 123,
+      "end": 168,
+      "text": "利润下滑主要系：1）棉籽类业务主要产品价格及毛利率下降，并计提资产减值，导致较大经营亏损；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 168,
+      "end": 203,
+      "text": "2）植提板块主要产品如辣椒红、辣椒精、叶黄素等售价下降，致毛利率下降。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 203,
+      "end": 237,
+      "text": "25年Q1经营复苏，实现营业收入17.16亿元，同比微降0.92%；",
+      "quantities": [
+        {
+          "value": "17.16",
+          "unit": "亿元",
+          "start": 219,
+          "end": 226
+        },
+        {
+          "value": "0.92",
+          "unit": "%",
+          "start": 231,
+          "end": 236
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 237,
+      "end": 265,
+      "text": "实现归母净利润1.09亿元，同比大幅增长183.69%；",
+      "quantities": [
+        {
+          "value": "1.09",
+          "unit": "亿元",
+          "start": 244,
+          "end": 250
+        },
+        {
+          "value": "183.69",
+          "unit": "%",
+          "start": 257,
+          "end": 264
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 265,
+      "end": 290,
+      "text": "扣非归母净利润0.96亿元，同比增长97.83%。",
+      "quantities": [
+        {
+          "value": "0.96",
+          "unit": "亿元",
+          "start": 272,
+          "end": 278
+        },
+        {
+          "value": "97.83",
+          "unit": "%",
+          "start": 283,
+          "end": 289
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 290,
+      "end": 309,
+      "text": "25年Q1辣椒红的毛利率同比明显提高；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 547,
+      "end": 579,
+      "text": "25年以来，辣椒红、辣椒精毛利率处于正常水平，业务有望改善向好。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 579,
+      "end": 641,
+      "text": "（2）棉籽加工业务方面，129年公司棉籽业务受豆油豆粕等大宗商品行情波动等因素影响，主要产品价格下降，毛利率下降3.48%。",
+      "quantities": [
+        {
+          "value": "3.48",
+          "unit": "%",
+          "start": 635,
+          "end": 640
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 841,
+      "end": 954,
+      "text": "我们预计公司2025-2027年归母净利润分别为3.38亿元、4.47亿元、5.34亿元，EPS分别为0.70元、0.93元、1.1元，对应25、26、27年PE分别为16.27倍、12.3倍、10.29倍，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "3.38",
+          "unit": "亿元",
+          "start": 865,
+          "end": 871
+        },
+        {
+          "value": "4.47",
+          "unit": "亿元",
+          "start": 872,
+          "end": 878
+        },
+        {
+          "value": "5.34",
+          "unit": "亿元",
+          "start": 879,
+          "end": 885
+        },
+        {
+          "value": "0.70",
+          "unit": "元",
+          "start": 892,
+          "end": 897
+        },
+        {
+          "value": "0.93",
+          "unit": "元",
+          "start": 898,
+          "end": 903
+        },
+        {
+          "value": "1.1",
+          "unit": "元",
+          "start": 904,
+          "end": 908
+        },
+        {
+          "value": "16.27",
+          "unit": "倍",
+          "start": 925,
+          "end": 931
+        },
+        {
+          "value": "12.3",
+          "unit": "倍",
+          "start": 932,
+          "end": 937
+        },
+        {
+          "value": "10.29",
+          "unit": "倍",
+          "start": 938,
+          "end": 944
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 981,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 981,
+    "processed_ranges": [
+      [
+        0,
+        981
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 21.133105,
+  "source_content_sha256": "1430826bf6fd4c95d82138c41c7225b568cfed38ef59414494474e89846ea46a"
+}

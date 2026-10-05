@@ -1,0 +1,452 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000466",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129Q1”不是合法季度表述，无法对应有效报告期。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 49,
+          "end": 89,
+          "text": "智能监测传感器“小巨人”，129Q1实现归母净利润0.20亿元（+44.91%）"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "智能监测传感器“小巨人”，129Q1实现归母净利润0.20亿元（+44.91%）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 49,
+          "end": 89,
+          "text": "智能监测传感器“小巨人”，129Q1实现归母净利润0.20亿元（+44.91%）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f7a72d80a0e2ae39ad718062",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "归母净利润应以货币金额单位计量，“百万人次”是人数单位，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 334,
+          "end": 464,
+          "text": "我们维持2025-2026年盈利预测，新增2027年盈利预测，预计公司2025-2027年归母净利润分别为89/103/116百万人次，对应EPS分别为0.53/0.62/0.70元/股，对应当前股价PE分别为31.7/27.5/24.4倍，维持“增持”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们维持2025-2026年盈利预测，新增2027年盈利预测，预计公司2025-2027年归母净利润分别为89/103/116百万人次，对应EPS分别为0.53/0.62/0.70元/股，对应当前股价PE分别为31.7/27.5/24.4倍，维持“增持”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 334,
+          "end": 464,
+          "text": "我们维持2025-2026年盈利预测，新增2027年盈利预测，预计公司2025-2027年归母净利润分别为89/103/116百万人次，对应EPS分别为0.53/0.62/0.70元/股，对应当前股价PE分别为31.7/27.5/24.4倍，维持“增持”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "286e1eee259156c6bd3e003f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前句称水电发展长期向好，后句称将减少水电装机容量，同一段落内命题矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 490,
+          "end": 523,
+          "text": "1）能源领域：水电+核电+风电发展长期向好，有望驱动公司业绩增长。"
+        },
+        {
+          "kind": "source_text",
+          "start": 523,
+          "end": 580,
+          "text": "水电方面，根据《2030年前碳达峰行动方案》，“十四五”、“十五五”期间将分别减少水电装机容量4000万千瓦左右。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1）能源领域：水电+核电+风电发展长期向好，有望驱动公司业绩增长。"
+        },
+        {
+          "text": "水电方面，根据《2030年前碳达峰行动方案》，“十四五”、“十五五”期间将分别减少水电装机容量4000万千瓦左右。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 490,
+          "end": 523,
+          "text": "1）能源领域：水电+核电+风电发展长期向好，有望驱动公司业绩增长。"
+        },
+        {
+          "start": 523,
+          "end": 580,
+          "text": "水电方面，根据《2030年前碳达峰行动方案》，“十四五”、“十五五”期间将分别减少水电装机容量4000万千瓦左右。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ba5cdcbe5ea240f5f91303f5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "实施方案年份区间写为2027-2025年，起点晚于终点，期间关系倒置。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 640,
+          "end": 711,
+          "text": "根据《全国病险水库除险加固实施方案（2027-2025年）》，将实施200余座大中型水库和4800余座小型水库除险加固，预计投资350余亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据《全国病险水库除险加固实施方案（2027-2025年）》，将实施200余座大中型水库和4800余座小型水库除险加固，预计投资350余亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 640,
+          "end": 711,
+          "text": "根据《全国病险水库除险加固实施方案（2027-2025年）》，将实施200余座大中型水库和4800余座小型水库除险加固，预计投资350余亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "30ca02fd895e49d8172c9ec4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "两句内容完全相同，仅编号不同，属不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 849,
+          "end": 918,
+          "text": "2）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。"
+        },
+        {
+          "kind": "source_text",
+          "start": 919,
+          "end": 988,
+          "text": "3）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。"
+        },
+        {
+          "text": "3）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 849,
+          "end": 918,
+          "text": "2）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。"
+        },
+        {
+          "start": 919,
+          "end": 988,
+          "text": "3）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4344344b92378c4b9f65c99c",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1036
+        ]
+      ],
+      "estimated_input_tokens": 5594,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:22:51.438470+00:00",
+        "request_sha256": "98b865d28380ad36c3c08ea7b7812dcdb94994cb87a296c7bf5e0267423bc4a4",
+        "input_token_estimate": 15579,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277723",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d1f2c8cf943940228347862a3d19d931",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3663,
+        "output_tokens": 5130,
+        "usage_source": "provider",
+        "duration_seconds": 20.71469,
+        "cost_cny": "0.024183"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "智能监测传感器“小巨人”，129Q1实现归母净利润0.20亿元（+44.91%）"
+          }
+        ],
+        "reason": "“129Q1”不是合法季度表述，无法对应有效报告期。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "我们维持2025-2026年盈利预测，新增2027年盈利预测，预计公司2025-2027年归母净利润分别为89/103/116百万人次，对应EPS分别为0.53/0.62/0.70元/股，对应当前股价PE分别为31.7/27.5/24.4倍，维持“增持”评级。"
+          }
+        ],
+        "reason": "归母净利润应以货币金额单位计量，“百万人次”是人数单位，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "1）能源领域：水电+核电+风电发展长期向好，有望驱动公司业绩增长。"
+          },
+          {
+            "text": "水电方面，根据《2030年前碳达峰行动方案》，“十四五”、“十五五”期间将分别减少水电装机容量4000万千瓦左右。"
+          }
+        ],
+        "reason": "前句称水电发展长期向好，后句称将减少水电装机容量，同一段落内命题矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "根据《全国病险水库除险加固实施方案（2027-2025年）》，将实施200余座大中型水库和4800余座小型水库除险加固，预计投资350余亿元。"
+          }
+        ],
+        "reason": "实施方案年份区间写为2027-2025年，起点晚于终点，期间关系倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。"
+          },
+          {
+            "text": "3）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。"
+          }
+        ],
+        "reason": "两句内容完全相同，仅编号不同，属不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 49,
+      "end": 90,
+      "text": "智能监测传感器“小巨人”，129Q1实现归母净利润0.20亿元（+44.91%）\n",
+      "quantities": [
+        {
+          "value": "0.20",
+          "unit": "亿元",
+          "start": 74,
+          "end": 80
+        },
+        {
+          "value": "+44.91",
+          "unit": "%",
+          "start": 81,
+          "end": 88
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 177,
+      "end": 223,
+      "text": "2025Q1实现营收0.78亿元（+19.07%），归母净利0.20亿元（+44.91%）。",
+      "quantities": [
+        {
+          "value": "0.78",
+          "unit": "亿元",
+          "start": 187,
+          "end": 193
+        },
+        {
+          "value": "+19.07",
+          "unit": "%",
+          "start": 194,
+          "end": 201
+        },
+        {
+          "value": "0.20",
+          "unit": "亿元",
+          "start": 207,
+          "end": 213
+        },
+        {
+          "value": "+44.91",
+          "unit": "%",
+          "start": 214,
+          "end": 221
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 334,
+      "end": 464,
+      "text": "我们维持2025-2026年盈利预测，新增2027年盈利预测，预计公司2025-2027年归母净利润分别为89/103/116百万人次，对应EPS分别为0.53/0.62/0.70元/股，对应当前股价PE分别为31.7/27.5/24.4倍，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "0.70",
+          "unit": "元/股",
+          "start": 420,
+          "end": 427
+        },
+        {
+          "value": "24.4",
+          "unit": "倍",
+          "start": 449,
+          "end": 454
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1036,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1036,
+    "processed_ranges": [
+      [
+        0,
+        1036
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 20.741186,
+  "source_content_sha256": "a712c39d7245fe3fbc5f25e2b09d784d882ca21e53e35a4df9326fcada1834a9"
+}

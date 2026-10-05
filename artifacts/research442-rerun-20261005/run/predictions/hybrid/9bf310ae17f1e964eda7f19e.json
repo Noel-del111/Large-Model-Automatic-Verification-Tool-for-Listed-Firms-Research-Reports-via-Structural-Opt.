@@ -1,0 +1,416 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000597",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间起点2025.6.1晚于终点2025.5.26，先后关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 52,
+          "end": 78,
+          "text": "本周（2025.6.1-2025.5.26）市场回顾"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（2025.6.1-2025.5.26）市场回顾"
+        }
+      ],
+      "spans": [
+        {
+          "start": 52,
+          "end": 78,
+          "text": "本周（2025.6.1-2025.5.26）市场回顾"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b037f886b7a2a2bce4227867",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一信息连续重复两次，无新增含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 612,
+          "end": 670,
+          "text": "三星以1220万部的出货量稳居欧洲市场第一，同比小幅增长；三星以1220万部的出货量稳居欧洲市场第一，同比小幅增长。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "三星以1220万部的出货量稳居欧洲市场第一，同比小幅增长；三星以1220万部的出货量稳居欧洲市场第一，同比小幅增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 612,
+          "end": 670,
+          "text": "三星以1220万部的出货量稳居欧洲市场第一，同比小幅增长；三星以1220万部的出货量稳居欧洲市场第一，同比小幅增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a9db6527b3a16bf9adc025d6",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“市场销量的%”百分号前缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 473,
+          "end": 556,
+          "text": "1）三星电子2025Q1OLED电视在北美市场出货量和销量均位居榜首，25Q1，三星电子占据北美OLED电视市场销量的%，数量占据45.2%，同比增加14.3pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1）三星电子2025Q1OLED电视在北美市场出货量和销量均位居榜首，25Q1，三星电子占据北美OLED电视市场销量的%，数量占据45.2%，同比增加14.3pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 473,
+          "end": 556,
+          "text": "1）三星电子2025Q1OLED电视在北美市场出货量和销量均位居榜首，25Q1，三星电子占据北美OLED电视市场销量的%，数量占据45.2%，同比增加14.3pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "31c36a38e769d17d8ac038d0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收单位写成“亿分”，量纲错误，与净利润的美元单位及常理不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 797,
+          "end": 849,
+          "text": "英伟达FY2026Q1营收超出预期达到441亿分，同比增长69%，净利润为199亿美元，同比增长26%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "英伟达FY2026Q1营收超出预期达到441亿分，同比增长69%，净利润为199亿美元，同比增长26%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 797,
+          "end": 849,
+          "text": "英伟达FY2026Q1营收超出预期达到441亿分，同比增长69%，净利润为199亿美元，同比增长26%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b348a0ca4c417110318f63cf",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年”作为未来量产年份不成立，时间信息非法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 940,
+          "end": 966,
+          "text": "联电与英特尔合作开发的12nm制程将在129年量产。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "联电与英特尔合作开发的12nm制程将在129年量产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 940,
+          "end": 966,
+          "text": "联电与英特尔合作开发的12nm制程将在129年量产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f76b007f1bf592ae9768ab44",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1018
+        ]
+      ],
+      "estimated_input_tokens": 5537,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:50:13.904922+00:00",
+        "request_sha256": "3b8c91c151bf1354e3c4dc1a074b234b5cad10913539f405d96a51e660c820e6",
+        "input_token_estimate": 15417,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277561",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "5a439f3209c6438cacf45270a06f394c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3642,
+        "output_tokens": 6274,
+        "usage_source": "provider",
+        "duration_seconds": 26.36459,
+        "cost_cny": "0.028738",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "本周（2025.6.1-2025.5.26）市场回顾"
+          }
+        ],
+        "reason": "时间区间起点2025.6.1晚于终点2025.5.26，先后关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "三星以1220万部的出货量稳居欧洲市场第一，同比小幅增长；三星以1220万部的出货量稳居欧洲市场第一，同比小幅增长。"
+          }
+        ],
+        "reason": "同一信息连续重复两次，无新增含义。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "1）三星电子2025Q1OLED电视在北美市场出货量和销量均位居榜首，25Q1，三星电子占据北美OLED电视市场销量的%，数量占据45.2%，同比增加14.3pct。"
+          }
+        ],
+        "reason": "“市场销量的%”百分号前缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "英伟达FY2026Q1营收超出预期达到441亿分，同比增长69%，净利润为199亿美元，同比增长26%。"
+          }
+        ],
+        "reason": "营收单位写成“亿分”，量纲错误，与净利润的美元单位及常理不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "联电与英特尔合作开发的12nm制程将在129年量产。"
+          }
+        ],
+        "reason": "“129年”作为未来量产年份不成立，时间信息非法。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 243,
+      "end": 318,
+      "text": "3）英伟达映射指数本周上涨2.3%，英伟达一季度营收高于市场预期，同时，数据中心业务实现较大幅度增长，部分市场担忧得到缓解，带动英伟达供应链开始回暖。",
+      "quantities": [
+        {
+          "value": "2.3",
+          "unit": "%",
+          "start": 256,
+          "end": 260
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 795,
+      "end": 849,
+      "text": "1）英伟达FY2026Q1营收超出预期达到441亿分，同比增长69%，净利润为199亿美元，同比增长26%。",
+      "quantities": [
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 826,
+          "end": 829
+        },
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 845,
+          "end": 848
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 795,
+      "end": 849,
+      "text": "1）英伟达FY2026Q1营收超出预期达到441亿分，同比增长69%，净利润为199亿美元，同比增长26%。",
+      "quantities": [
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 826,
+          "end": 829
+        },
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 845,
+          "end": 848
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 849,
+      "end": 889,
+      "text": "数据中心业务同样超出预期，销售额同比增长73%至391亿美元，占总营收的88%。",
+      "quantities": [
+        {
+          "value": "73",
+          "unit": "%",
+          "start": 869,
+          "end": 872
+        },
+        {
+          "value": "88",
+          "unit": "%",
+          "start": 885,
+          "end": 888
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1018,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1018,
+    "processed_ranges": [
+      [
+        0,
+        1018
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1018,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001906,
+  "source_content_sha256": "bbbafca4cd66249e788cd21b039ef6803ded90ce234ce77df93036bccb58355f"
+}

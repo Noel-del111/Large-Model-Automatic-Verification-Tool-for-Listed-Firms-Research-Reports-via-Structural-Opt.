@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000346",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "85ee09678acab2bc09c15f8c",
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 930,
+          "end": 1040,
+          "text": "归母净利润为1.48/1.85/2.33亿元，同比增长26.20%/24.71%/26.17%，我们给予公司2025年预测归母净利35倍PE，对应目标市值51.8亿元，目标价57.05元/股，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "reason": "指标 pe 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.003"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1076,
+    "total_chars": 1076,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001125,
+  "source_content_sha256": "7c045248d9cee8b3ed957a3e25a377a26e2edaf5a6545a57b0ed2692c4387bc9"
+}

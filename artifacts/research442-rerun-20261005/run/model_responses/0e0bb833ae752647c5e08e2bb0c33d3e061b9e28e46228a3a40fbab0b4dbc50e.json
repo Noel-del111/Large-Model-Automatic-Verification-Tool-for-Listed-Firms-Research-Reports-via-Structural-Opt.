@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"本周铝价下跌，沪铝收于20070元/吨。\"}, {\"text\": \"本周现货铝价小幅上涨。\"}], \"reason\": \"同一周铝价先述下跌，后述现货铝价上涨，走势表述互斥。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"目前LME铝库37.73万吨，较上38.89万吨减少1.16吨。\"}], \"reason\": \"37.73万吨与38.89万吨相差1.16万吨，却写成减少1.16吨，量纲错误。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"中国方面，本周铝锭社会库存持续减少，目前库存54.9万吨，较上周58.76万吨减少5.8万吨。\"}], \"reason\": \"58.76万吨减54.9万吨应为3.86万吨，原文称减少5.8万吨，合计不成立。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"碳化钨粉在359元/千克，\"}, {\"text\": \"碳化钨粉价格361元/千克。\"}], \"reason\": \"同一截止时点，碳化钨粉价格先称359元/千克，后称361元/千克，数值冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:10:43.160060+00:00",
+    "request_sha256": "11b09f5d25b47a8c1a1c8325603fe10bc22fbcf246468d37c86a0902d01e8375",
+    "input_token_estimate": 17389,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279533",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2f451358513147608d41ebd9f5a53e56",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4106,
+    "output_tokens": 4005,
+    "usage_source": "provider",
+    "duration_seconds": 15.681941,
+    "cost_cny": "0.020126"
+  },
+  "cache_request": {
+    "key": "0e0bb833ae752647c5e08e2bb0c33d3e061b9e28e46228a3a40fbab0b4dbc50e",
+    "purpose": "text_review.detect",
+    "messages_sha256": "11b09f5d25b47a8c1a1c8325603fe10bc22fbcf246468d37c86a0902d01e8375"
+  }
+}

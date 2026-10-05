@@ -1,0 +1,548 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000317",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "预测年份区间写成2027-2025年，起点晚于终点，期间倒置。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 857,
+          "end": 921,
+          "text": "我们预计公司2027-2025年归母净利润分别为8.19/9.00/10.08亿元，对应PE11/10/9x，维持“增持”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司2027-2025年归母净利润分别为8.19/9.00/10.08亿元，对应PE11/10/9x，维持“增持”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 857,
+          "end": 921,
+          "text": "我们预计公司2027-2025年归母净利润分别为8.19/9.00/10.08亿元，对应PE11/10/9x，维持“增持”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0d42d5fe2dc659a637fee44f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "扣非归母净利同比增速后为空，缺少具体百分比数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 166,
+          "end": 231,
+          "text": "公司24Q4实现营收18.81亿元，同比-33.03%；归母净利润2.23亿元，同比-1.34%；扣非归母净利1.59亿元，同比。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司24Q4实现营收18.81亿元，同比-33.03%；归母净利润2.23亿元，同比-1.34%；扣非归母净利1.59亿元，同比。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 166,
+          "end": 231,
+          "text": "公司24Q4实现营收18.81亿元，同比-33.03%；归母净利润2.23亿元，同比-1.34%；扣非归母净利1.59亿元，同比。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dc30cc3a89b0246abe4ed3d4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "25Q1营收后分号前为空，缺少营收同比增速数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 257,
+          "end": 321,
+          "text": "公司25Q1实现营收19.65亿元，；归母净利润1.29亿元，同比-30.77%；扣非归母净利1.17亿元，同比-35.23%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司25Q1实现营收19.65亿元，；归母净利润1.29亿元，同比-30.77%；扣非归母净利1.17亿元，同比-35.23%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 257,
+          "end": 321,
+          "text": "公司25Q1实现营收19.65亿元，；归母净利润1.29亿元，同比-30.77%；扣非归母净利1.17亿元，同比-35.23%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b43d284aed1885c75c0ad9e0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称扣非净利润同比下滑，后文称收入下降导致利润增加，二者相互矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 446,
+          "end": 539,
+          "text": "利润端看，公司25Q1扣非归母净利润同比下滑35.23%，主要系公司参股企业约克空调分红减少3000万，高佳太阳能亏损等导致投资收益同比减少3600万，以及工程业务收入下降导致利润增加。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "利润端看，公司25Q1扣非归母净利润同比下滑35.23%，主要系公司参股企业约克空调分红减少3000万，高佳太阳能亏损等导致投资收益同比减少3600万，以及工程业务收入下降导致利润增加。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 446,
+          "end": 539,
+          "text": "利润端看，公司25Q1扣非归母净利润同比下滑35.23%，主要系公司参股企业约克空调分红减少3000万，高佳太阳能亏损等导致投资收益同比减少3600万，以及工程业务收入下降导致利润增加。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7b40d958afcbe1bc075ac6bc",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          960
+        ]
+      ],
+      "estimated_input_tokens": 5421,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:45:33.191029+00:00",
+        "request_sha256": "68919d642c360abf174d65b5e6fcc5af6efd66bcea2027f204d16ba4a30b4973",
+        "input_token_estimate": 15131,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277275",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "36c45b039d0d4550885221a205e547f1",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3650,
+        "output_tokens": 6826,
+        "usage_source": "provider",
+        "duration_seconds": 26.670063,
+        "cost_cny": "0.030954"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "我们预计公司2027-2025年归母净利润分别为8.19/9.00/10.08亿元，对应PE11/10/9x，维持“增持”评级。"
+          }
+        ],
+        "reason": "预测年份区间写成2027-2025年，起点晚于终点，期间倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "公司24Q4实现营收18.81亿元，同比-33.03%；归母净利润2.23亿元，同比-1.34%；扣非归母净利1.59亿元，同比。"
+          }
+        ],
+        "reason": "扣非归母净利同比增速后为空，缺少具体百分比数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "公司25Q1实现营收19.65亿元，；归母净利润1.29亿元，同比-30.77%；扣非归母净利1.17亿元，同比-35.23%。"
+          }
+        ],
+        "reason": "25Q1营收后分号前为空，缺少营收同比增速数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "利润端看，公司25Q1扣非归母净利润同比下滑35.23%，主要系公司参股企业约克空调分红减少3000万，高佳太阳能亏损等导致投资收益同比减少3600万，以及工程业务收入下降导致利润增加。"
+          }
+        ],
+        "reason": "前文称扣非净利润同比下滑，后文称收入下降导致利润增加，二者相互矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 67,
+      "end": 97,
+      "text": "公司2024年实现营收91.13亿元，YoY-13.31%；",
+      "quantities": [
+        {
+          "value": "91.13",
+          "unit": "亿元",
+          "start": 78,
+          "end": 85
+        },
+        {
+          "value": "-13.31",
+          "unit": "%",
+          "start": 89,
+          "end": 96
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 97,
+      "end": 119,
+      "text": "归母净利润7.04亿元，YoY-4.98%；",
+      "quantities": [
+        {
+          "value": "7.04",
+          "unit": "亿元",
+          "start": 102,
+          "end": 108
+        },
+        {
+          "value": "-4.98",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 143,
+      "end": 166,
+      "text": "毛利率为19.18%，同比上升0.86Pct。",
+      "quantities": [
+        {
+          "value": "19.18",
+          "unit": "%",
+          "start": 147,
+          "end": 153
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 166,
+      "end": 194,
+      "text": "公司24Q4实现营收18.81亿元，同比-33.03%；",
+      "quantities": [
+        {
+          "value": "18.81",
+          "unit": "亿元",
+          "start": 176,
+          "end": 183
+        },
+        {
+          "value": "-33.03",
+          "unit": "%",
+          "start": 186,
+          "end": 193
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 194,
+      "end": 215,
+      "text": "归母净利润2.23亿元，同比-1.34%；",
+      "quantities": [
+        {
+          "value": "2.23",
+          "unit": "亿元",
+          "start": 199,
+          "end": 205
+        },
+        {
+          "value": "-1.34",
+          "unit": "%",
+          "start": 208,
+          "end": 214
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 231,
+      "end": 255,
+      "text": "毛利率为30.97%，同比上升11.49Pct。",
+      "quantities": [
+        {
+          "value": "30.97",
+          "unit": "%",
+          "start": 235,
+          "end": 241
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 257,
+      "end": 276,
+      "text": "公司25Q1实现营收19.65亿元，；",
+      "quantities": [
+        {
+          "value": "19.65",
+          "unit": "亿元",
+          "start": 267,
+          "end": 274
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 276,
+      "end": 298,
+      "text": "归母净利润1.29亿元，同比-30.77%；",
+      "quantities": [
+        {
+          "value": "1.29",
+          "unit": "亿元",
+          "start": 281,
+          "end": 287
+        },
+        {
+          "value": "-30.77",
+          "unit": "%",
+          "start": 290,
+          "end": 297
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 321,
+      "end": 344,
+      "text": "毛利率为20.34%，同比上升4.26Pct。",
+      "quantities": [
+        {
+          "value": "20.34",
+          "unit": "%",
+          "start": 325,
+          "end": 331
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 346,
+      "end": 446,
+      "text": "业绩短期承压，主要系电站和市政工程业务承压和Q1季节性影响收入端看，公司25Q1营收同比下滑32.25%，主要系公司电站工程及市政工程业务收缩，营收下降，另外锅炉产品因出货季节性波动导致当期收入减少。",
+      "quantities": [
+        {
+          "value": "32.25",
+          "unit": "%",
+          "start": 392,
+          "end": 398
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "主要系公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 346,
+      "end": 446,
+      "text": "业绩短期承压，主要系电站和市政工程业务承压和Q1季节性影响收入端看，公司25Q1营收同比下滑32.25%，主要系公司电站工程及市政工程业务收缩，营收下降，另外锅炉产品因出货季节性波动导致当期收入减少。",
+      "quantities": [
+        {
+          "value": "32.25",
+          "unit": "%",
+          "start": 392,
+          "end": 398
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "主要系公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 446,
+      "end": 539,
+      "text": "利润端看，公司25Q1扣非归母净利润同比下滑35.23%，主要系公司参股企业约克空调分红减少3000万，高佳太阳能亏损等导致投资收益同比减少3600万，以及工程业务收入下降导致利润增加。",
+      "quantities": [
+        {
+          "value": "35.23",
+          "unit": "%",
+          "start": 468,
+          "end": 474
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "主要系公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 857,
+      "end": 921,
+      "text": "我们预计公司2027-2025年归母净利润分别为8.19/9.00/10.08亿元，对应PE11/10/9x，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "10.08",
+          "unit": "亿元",
+          "start": 891,
+          "end": 898
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 960,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 960,
+    "processed_ranges": [
+      [
+        0,
+        960
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 13,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 26.696577,
+  "source_content_sha256": "d3d92e0565a61447dc9e18b59f3a858cac372358d771bfac444d06ed3a3d6aa5"
+}

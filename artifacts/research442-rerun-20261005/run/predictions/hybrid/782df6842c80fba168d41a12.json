@@ -1,0 +1,241 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000674",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一“拉长久期与提前锁定收益”应对措施连续重复，且序号“四是”与“一是”内容完全相同。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 480,
+          "end": 624,
+          "text": "一是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；四是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "一是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；四是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 480,
+          "end": 624,
+          "text": "一是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；四是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "412e26780996aa9eac3874f2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“风险投资”后括号内应标注简称或名称，但括号为空，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 701,
+          "end": 780,
+          "text": "三是拓展多元化另类投资：战略性地增加对黄金、私募股权（PE）、风险投资（）、对冲基金、核心不动产等另类资产的配置比例，有助于提升整体组合的预期收益并分散风险。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "三是拓展多元化另类投资：战略性地增加对黄金、私募股权（PE）、风险投资（）、对冲基金、核心不动产等另类资产的配置比例，有助于提升整体组合的预期收益并分散风险。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 701,
+          "end": 780,
+          "text": "三是拓展多元化另类投资：战略性地增加对黄金、私募股权（PE）、风险投资（）、对冲基金、核心不动产等另类资产的配置比例，有助于提升整体组合的预期收益并分散风险。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e68bf7a131e8923fddcec119",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "保险资管篇风险提示出现“票房收入增速”，与保险资管业务无关，行业术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 965,
+          "end": 1003,
+          "text": "风险提示：票房收入增速不及预期；三方业务承压；长端利率下行；资本市场波动等。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "风险提示：票房收入增速不及预期；三方业务承压；长端利率下行；资本市场波动等。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 965,
+          "end": 1003,
+          "text": "风险提示：票房收入增速不及预期；三方业务承压；长端利率下行；资本市场波动等。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "67132c4db4f68bfb61f36328",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1003
+        ]
+      ],
+      "estimated_input_tokens": 5699,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:58:16.445843+00:00",
+        "request_sha256": "5e6d718808501bf629ee17b071b3bfc204da0688e44d566ba56511a33ab01566",
+        "input_token_estimate": 15804,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277948",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "5c0b0165ecd247b99c2ad9c0063ac813",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3633,
+        "output_tokens": 5787,
+        "usage_source": "provider",
+        "duration_seconds": 25.238222,
+        "cost_cny": "0.026781",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "一是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；四是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；"
+          }
+        ],
+        "reason": "同一“拉长久期与提前锁定收益”应对措施连续重复，且序号“四是”与“一是”内容完全相同。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "三是拓展多元化另类投资：战略性地增加对黄金、私募股权（PE）、风险投资（）、对冲基金、核心不动产等另类资产的配置比例，有助于提升整体组合的预期收益并分散风险。"
+          }
+        ],
+        "reason": "“风险投资”后括号内应标注简称或名称，但括号为空，非数值属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "风险提示：票房收入增速不及预期；三方业务承压；长端利率下行；资本市场波动等。"
+          }
+        ],
+        "reason": "保险资管篇风险提示出现“票房收入增速”，与保险资管业务无关，行业术语使用不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1003,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1003,
+    "processed_ranges": [
+      [
+        0,
+        1003
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1003,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001432,
+  "source_content_sha256": "56c555db2cc1b307d3d4e3a17d767359c67021d0e653b536fae5a81518c3abd9"
+}

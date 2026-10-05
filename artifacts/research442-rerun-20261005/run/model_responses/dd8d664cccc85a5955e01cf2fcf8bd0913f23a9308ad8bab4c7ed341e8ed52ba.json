@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2015-2024 年公司营业总收入由 10.97 亿元提升至 16.92 亿元， CAGR8.93%。\"}],\"reason\":\"10.97亿元增至16.92亿元，按9年计算CAGR约4.9%，非8.93%。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"车流量从 6670 万辆提升至 12553 万辆（ CAGR4.3%） 。\"}],\"reason\":\"6670万辆增至12553万辆，按9年计算CAGR约7.3%，非4.3%。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"公司高度重视投资者回报，2015-2024 年公司累计现金分红 31.08 元。\"}],\"reason\":\"累计现金分红通常以亿元计，31.08元与后续每股分红数额不匹配，单位缺失“亿”。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"我们预计公司 2027-2025 年归母净利润分别为 8.12/8.56/8.88 亿元， 同比增速分别为-15.0%/5.4%/3.8%， 当前股价对应的 PE 分别为 13.1/12.4//倍。\"}],\"reason\":\"预测年份区间写为2027-2025，起点晚于终点，时间区间不成立。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"当前股价对应的 PE 分别为 13.1/12.4//倍。\"}],\"reason\":\"PE对应三个预测年份，但“//”之间缺少一个数值。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"我们选取招商公路、 宁沪高速、 四川成渝为可比公司， 鉴于公司聚焦高速公路主业， 未来三年承诺可观现金分红， 鉴于公司聚焦高速公路主业， 未来三年承诺可观现金分红， 首次覆盖给予“买入” 评级。\"}],\"reason\":\"“鉴于公司聚焦高速公路主业，未来三年承诺可观现金分红”连续重复，无新增信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:10:58.891230+00:00",
+    "request_sha256": "a4bf5d8cb930469487587b330b9883c3bdd0389489c59d17cc5dfd987289e1ba",
+    "input_token_estimate": 15916,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27806",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c16d525a28ac4851a0278d2b6b722578",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3850,
+    "output_tokens": 8582,
+    "usage_source": "provider",
+    "duration_seconds": 33.220229,
+    "cost_cny": "0.038178"
+  },
+  "cache_request": {
+    "key": "dd8d664cccc85a5955e01cf2fcf8bd0913f23a9308ad8bab4c7ed341e8ed52ba",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a4bf5d8cb930469487587b330b9883c3bdd0389489c59d17cc5dfd987289e1ba"
+  }
+}

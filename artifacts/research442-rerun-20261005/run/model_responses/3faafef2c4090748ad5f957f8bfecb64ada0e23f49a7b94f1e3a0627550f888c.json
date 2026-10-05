@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"智能监测传感器“小巨人”，129Q1实现归母净利润0.20亿元（+44.91%）\"}], \"reason\": \"“129Q1”不是合法季度表述，无法对应有效报告期。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"我们维持2025-2026年盈利预测，新增2027年盈利预测，预计公司2025-2027年归母净利润分别为89/103/116百万人次，对应EPS分别为0.53/0.62/0.70元/股，对应当前股价PE分别为31.7/27.5/24.4倍，维持“增持”评级。\"}], \"reason\": \"归母净利润应以货币金额单位计量，“百万人次”是人数单位，量纲错误。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"1）能源领域：水电+核电+风电发展长期向好，有望驱动公司业绩增长。\"}, {\"text\": \"水电方面，根据《2030年前碳达峰行动方案》，“十四五”、“十五五”期间将分别减少水电装机容量4000万千瓦左右。\"}], \"reason\": \"前句称水电发展长期向好，后句称将减少水电装机容量，同一段落内命题矛盾。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"根据《全国病险水库除险加固实施方案（2027-2025年）》，将实施200余座大中型水库和4800余座小型水库除险加固，预计投资350余亿元。\"}], \"reason\": \"实施方案年份区间写为2027-2025年，起点晚于终点，期间关系倒置。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。\"}, {\"text\": \"3）产销&研发模式上，基恩士与公司均为轻资产运营&直销模式，直接根据客户需求定向进行产品研发，无中间代理商，盈利能力上公司尚存在追赶空间。\"}], \"reason\": \"两句内容完全相同，仅编号不同，属不必要重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:22:51.438470+00:00",
+    "request_sha256": "98b865d28380ad36c3c08ea7b7812dcdb94994cb87a296c7bf5e0267423bc4a4",
+    "input_token_estimate": 15579,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277723",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d1f2c8cf943940228347862a3d19d931",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3663,
+    "output_tokens": 5130,
+    "usage_source": "provider",
+    "duration_seconds": 20.71469,
+    "cost_cny": "0.024183"
+  },
+  "cache_request": {
+    "key": "3faafef2c4090748ad5f957f8bfecb64ada0e23f49a7b94f1e3a0627550f888c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "98b865d28380ad36c3c08ea7b7812dcdb94994cb87a296c7bf5e0267423bc4a4"
+  }
+}

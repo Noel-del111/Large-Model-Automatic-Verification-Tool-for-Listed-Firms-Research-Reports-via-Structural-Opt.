@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"巴比食品()\"}], \"reason\": \"股票代码位置括号内为空，缺少公司证券代码。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"25Q1营业收入/归母净利/扣非归母净利分别为3.70/0.37/0.39亿分（同比+4.45%/-6.13%/+3.33%）\"}], \"reason\": \"财务数据单位写作“亿分”，不是合法金额单位，应为“亿元”。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"Q1加盟店环比新增//环比减少210家、环比净增501家至5644家\"}], \"reason\": \"“环比新增”后缺少新增门店数量，无法核对净增与减少的关系。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"其中青露并表门店504家、巴比九江并表门店浔味来。\"}], \"reason\": \"“巴比九江并表门店浔味来”后缺少并表门店数量，信息不完整。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"Q1团餐收入同比+11.7%至9.31亿元，占比+1.6pct至25.2%，盒马、美团等新零售大客户增长迅速。\"}], \"reason\": \"团餐收入9.31亿元超过同期总营收3.70亿元，与占比25.2%矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:02:38.454067+00:00",
+    "request_sha256": "b31b720ede33509895ffecb8bedacf5917f98f1b41a7de307c0c0e956824243b",
+    "input_token_estimate": 15132,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277276",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "3651ef246dd146b8ade9053193a5e7d5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3753,
+    "output_tokens": 4882,
+    "usage_source": "provider",
+    "duration_seconds": 19.406842,
+    "cost_cny": "0.023281"
+  },
+  "cache_request": {
+    "key": "1500fcbdae33664a947acc834ad62e41ed92f944ab590bb9219507acc4db0d0f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b31b720ede33509895ffecb8bedacf5917f98f1b41a7de307c0c0e956824243b"
+  }
+}

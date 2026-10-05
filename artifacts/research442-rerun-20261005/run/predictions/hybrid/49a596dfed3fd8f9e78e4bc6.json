@@ -1,0 +1,241 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000203",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“4月执行价格上调元/吨”中上调金额缺失，仅有单位“元/吨”而无具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 469,
+          "end": 572,
+          "text": "聚酯化纤：截至2024年4月19日，PA66价格周环比持平，原料价格高位运行，成本面支撑稳定，己二酸价格小幅回落，己二胺按月定价，4月执行价格上调元/吨，天辰齐翔己二胺供应量增长，原料市场供应紧张稍有缓解。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "聚酯化纤：截至2024年4月19日，PA66价格周环比持平，原料价格高位运行，成本面支撑稳定，己二酸价格小幅回落，己二胺按月定价，4月执行价格上调元/吨，天辰齐翔己二胺供应量增长，原料市场供应紧张稍有缓解。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 469,
+          "end": 572,
+          "text": "聚酯化纤：截至2024年4月19日，PA66价格周环比持平，原料价格高位运行，成本面支撑稳定，己二酸价格小幅回落，己二胺按月定价，4月执行价格上调元/吨，天辰齐翔己二胺供应量增长，原料市场供应紧张稍有缓解。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "783395b0daf2b64fe6012d32",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "日期“2024年4月19”缺少“日”，不符合日期属性值的完整格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 721,
+          "end": 829,
+          "text": "截至2024年4月19，制冷剂周环比价格R22+2.08%，R32+3.45%，旺季及成本提振加持下，主流厂家定价探涨，下游终端空调市场旺季支撑明显，叠加出口市场逐步恢复，市场部分呈现供应偏紧情况，整体区间上行为主。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年4月19，制冷剂周环比价格R22+2.08%，R32+3.45%，旺季及成本提振加持下，主流厂家定价探涨，下游终端空调市场旺季支撑明显，叠加出口市场逐步恢复，市场部分呈现供应偏紧情况，整体区间上行为主。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 721,
+          "end": 829,
+          "text": "截至2024年4月19，制冷剂周环比价格R22+2.08%，R32+3.45%，旺季及成本提振加持下，主流厂家定价探涨，下游终端空调市场旺季支撑明显，叠加出口市场逐步恢复，市场部分呈现供应偏紧情况，整体区间上行为主。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "189a26cdc7d79369170eaa76",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "风险提示中“原油价格大幅波动”连续出现两次，同一信息不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1453,
+          "end": 1521,
+          "text": "风险提示：原油价格大幅波动；原油价格大幅波动；汇率波动；贸易摩擦持续恶化；地缘政治局势紧张升级；业绩不及预期；所引用数据资料的错误风险。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "风险提示：原油价格大幅波动；原油价格大幅波动；汇率波动；贸易摩擦持续恶化；地缘政治局势紧张升级；业绩不及预期；所引用数据资料的错误风险。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1453,
+          "end": 1521,
+          "text": "风险提示：原油价格大幅波动；原油价格大幅波动；汇率波动；贸易摩擦持续恶化；地缘政治局势紧张升级；业绩不及预期；所引用数据资料的错误风险。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "477ee285e68c5dd5352ea167",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1521
+        ]
+      ],
+      "estimated_input_tokens": 6032,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:03:26.043175+00:00",
+        "request_sha256": "c3a13388cba555f3f57944bfca5585f3c37defc2578fb6ade1fd4955c8eeaa30",
+        "input_token_estimate": 16788,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278932",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ca3f6702ffac4d94b3a04dac1a63119f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4000,
+        "output_tokens": 3077,
+        "usage_source": "provider",
+        "duration_seconds": 12.901669,
+        "cost_cny": "0.016308",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "聚酯化纤：截至2024年4月19日，PA66价格周环比持平，原料价格高位运行，成本面支撑稳定，己二酸价格小幅回落，己二胺按月定价，4月执行价格上调元/吨，天辰齐翔己二胺供应量增长，原料市场供应紧张稍有缓解。"
+          }
+        ],
+        "reason": "“4月执行价格上调元/吨”中上调金额缺失，仅有单位“元/吨”而无具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "截至2024年4月19，制冷剂周环比价格R22+2.08%，R32+3.45%，旺季及成本提振加持下，主流厂家定价探涨，下游终端空调市场旺季支撑明显，叠加出口市场逐步恢复，市场部分呈现供应偏紧情况，整体区间上行为主。"
+          }
+        ],
+        "reason": "日期“2024年4月19”缺少“日”，不符合日期属性值的完整格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "风险提示：原油价格大幅波动；原油价格大幅波动；汇率波动；贸易摩擦持续恶化；地缘政治局势紧张升级；业绩不及预期；所引用数据资料的错误风险。"
+          }
+        ],
+        "reason": "风险提示中“原油价格大幅波动”连续出现两次，同一信息不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1521,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1521,
+    "processed_ranges": [
+      [
+        0,
+        1521
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1521,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001585,
+  "source_content_sha256": "6dc9d62414efe2546162f29ba90e70cfecaa15d8db97780c92b2cc45f24aa21d"
+}

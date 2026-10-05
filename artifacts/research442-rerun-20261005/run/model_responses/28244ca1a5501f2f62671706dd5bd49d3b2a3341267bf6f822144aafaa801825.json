@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"公司较早布局国际市场，先后在马来西亚、美国等多个国家建设生产基地和销售中心，2024年公司海外营收25.35亿元，占总营收约69%，成为公司重要的融资来源。\"}], \"reason\": \"海外营收属于经营性收入，不是融资来源，术语使用混淆了营收与融资。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"16-24年，公司营收规模由5.06亿元增长至36.52亿元，CAGR约38%，多下游拓展+国际化驱动公司业绩保持高速增长。\"}], \"reason\": \"由5.06亿元增至36.52亿元、历经8年，年复合增速约28%，不是38%。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"我们预计27-24年公司医疗康护下游营收CAGR约30-35%。\"}], \"reason\": \"时间区间写成27-24年，终点早于起点，不能成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:06:49.460391+00:00",
+    "request_sha256": "103c6e02dfafd1c76110c68bbd479ee556270670bd0afcd542bb9ace6b97e251",
+    "input_token_estimate": 16237,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278381",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1e9957da07064d24ad0b92823ac623a0",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3759,
+    "output_tokens": 2942,
+    "usage_source": "provider",
+    "duration_seconds": 12.645775,
+    "cost_cny": "0.015527"
+  },
+  "cache_request": {
+    "key": "28244ca1a5501f2f62671706dd5bd49d3b2a3341267bf6f822144aafaa801825",
+    "purpose": "text_review.detect",
+    "messages_sha256": "103c6e02dfafd1c76110c68bbd479ee556270670bd0afcd542bb9ace6b97e251"
+  }
+}

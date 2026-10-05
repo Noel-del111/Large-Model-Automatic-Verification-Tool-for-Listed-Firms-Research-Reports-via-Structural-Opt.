@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"零售各细分板块中，本周钟表珠宝板块涨幅最大，129年年初至今钟表珠宝板块领跑。\",\"reason\":\"“129年年初至今”作为报告期时间不成立，且与周报上下文时间不符。\"}],\"reason\":\"“129年年初至今”作为报告期时间不成立，且与周报上下文时间不符。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。\",\"reason\":\"申万31个一级行业中排名不可能出现第40位，名次超出行业总数。\"}],\"reason\":\"申万31个一级行业中排名不可能出现第40位，名次超出行业总数。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"本周（5月26日-5月30日），商贸零售指数报收2125.05点，上涨0.69%，跑赢上证综指（本周下跌0.03%）0.71个百分点，板块表现在31个一级行业中位居第40位。\",\"reason\":\"商贸零售指数上涨0.69%，上证综指下跌0.03%，前者跑赢后者应为0.72个百分点，而非0.71个百分点。\"}],\"reason\":\"商贸零售指数上涨0.69%，上证综指下跌0.03%，前者跑赢后者应为0.72个百分点，而非0.71个百分点。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"投资主线四（医美）：关注具备差异化管线的医美产品厂商，重点推荐爱美客、科笛-B等，受益标的锦波生物等；5. 关注具备差异化管线的医美产品厂商\",\"reason\":\"末尾“5. 关注具备差异化管线的医美产品厂商”与投资主线四开头内容重复，属不必要重复。\"}],\"reason\":\"末尾“5. 关注具备差异化管线的医美产品厂商”与投资主线四开头内容重复，属不必要重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:20:03.382422+00:00",
+    "request_sha256": "271676524047b1b7e2584a9c2757f1274cb00fdc533e5519bef428ae49959963",
+    "input_token_estimate": 16215,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278359",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "6a11fa2af65e4ba8b9430d7023a92f79",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3831,
+    "output_tokens": 4518,
+    "usage_source": "provider",
+    "duration_seconds": 19.304375,
+    "cost_cny": "0.021903"
+  },
+  "cache_request": {
+    "key": "df7491a1482287ef9002ddbe105977f86dafc60bf6334f773a834fbc4472276c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "271676524047b1b7e2584a9c2757f1274cb00fdc533e5519bef428ae49959963"
+  }
+}

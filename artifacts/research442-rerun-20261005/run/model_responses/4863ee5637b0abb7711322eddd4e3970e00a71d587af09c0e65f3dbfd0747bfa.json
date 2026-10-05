@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"截至2025年Q1，42家上市券商总资产规模13.11万亿，较2024年年末+0.85万亿；净资产2.72万亿，较2026年年末+0.22万亿。\"}],\"reason\":\"2025Q1数据比较基准出现2026年年末，基准属于未来时间，与当前报告期先后关系矛盾。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2025年Q1，42家上市券商合计实现营业收入1259.30亿元，同比增加19.00%；净利润534.61亿分，同比增加74.93%。\"}],\"reason\":\"净利润单位写作“亿分”，应为“亿元”，单位量纲错误。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"2025Q1，我国GDP环绕比例增长5.4%，宏观经济整体稳中向好，迎来良好开局。\"}],\"reason\":\"“环绕比例增长”不是规范经济金融表达，应为“环比增长”等，术语使用错误。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。\"}],\"reason\":\"列举两个指数却给出三个跌幅数值，缺少第三个指数名称，非数值属性缺失。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"净利润前五的券商分别是国泰海通（125.09亿元）、、华泰证券（36.43亿元）、中国银河（30.16亿元）、广发证券（29.70亿元）。\"}],\"reason\":\"净利润前五列举中双顿号处缺少一家券商名称，非数值属性为空。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:57:46.180971+00:00",
+    "request_sha256": "94caa40636d840a37f9d667edf550ea26be5c336223e69f68176dfc85f4b7a53",
+    "input_token_estimate": 14536,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27668",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "5c2bc214804640f5bc78ba77edc53b7d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3486,
+    "output_tokens": 8831,
+    "usage_source": "provider",
+    "duration_seconds": 34.787125,
+    "cost_cny": "0.03881"
+  },
+  "cache_request": {
+    "key": "4863ee5637b0abb7711322eddd4e3970e00a71d587af09c0e65f3dbfd0747bfa",
+    "purpose": "text_review.detect",
+    "messages_sha256": "94caa40636d840a37f9d667edf550ea26be5c336223e69f68176dfc85f4b7a53"
+  }
+}

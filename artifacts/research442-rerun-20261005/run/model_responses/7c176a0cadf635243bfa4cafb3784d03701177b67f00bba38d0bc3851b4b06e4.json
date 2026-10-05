@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"自129年12月，ChatGPT掀起全球生成式AI发展浪潮，到今年年初DeepSeek厚积薄发、迅速突破，推动了国内AI技术的加速发展和应用场景的不断延伸，促使全球大模型训练与推理需求呈指数级增长。\"}], \"reason\": \"“129年12月”作为日期不成立，年份写法明显有误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"《数据中心综合能耗及其灵活性预测报告》指出，2024—2030年，全国数据中心用电量年均增速约为%。\"}], \"reason\": \"“约为%”中百分号前没有数字，关键增速数值缺失。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"2024年中国算力总规模已达到280EFLOPS（），其中智能算力规模达90EFLOPS，占比达32%。\"}], \"reason\": \"“280EFLOPS（）”括号内为空，缺少应标注的算力精度或类别属性值。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:26:13.828035+00:00",
+    "request_sha256": "ef44b9ec97c2edabbd3cdf37352926f213e3f5bb25bb788ff9bff4b38fa42e6a",
+    "input_token_estimate": 15498,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277642",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7283973d65464001a703a7cf63f70eaa",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3717,
+    "output_tokens": 4109,
+    "usage_source": "provider",
+    "duration_seconds": 16.311114,
+    "cost_cny": "0.020153"
+  },
+  "cache_request": {
+    "key": "7c176a0cadf635243bfa4cafb3784d03701177b67f00bba38d0bc3851b4b06e4",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ef44b9ec97c2edabbd3cdf37352926f213e3f5bb25bb788ff9bff4b38fa42e6a"
+  }
+}

@@ -1,0 +1,604 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000365",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "经销商数量不可能减少438万家，单位“万家”明显错误，应为“家”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 424,
+          "end": 496,
+          "text": "24年经销商数量净减少438万家至1336家，平均经销商规模同比-33.41%至105.88万元/家，24年单商规模降低是公司营收下降主要原因。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年经销商数量净减少438万家至1336家，平均经销商规模同比-33.41%至105.88万元/家，24年单商规模降低是公司营收下降主要原因。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 424,
+          "end": 496,
+          "text": "24年经销商数量净减少438万家至1336家，平均经销商规模同比-33.41%至105.88万元/家，24年单商规模降低是公司营收下降主要原因。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "04426761df4330b6b8aba9e4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "列出内参、酒鬼、湘泉、其他四类，但仅给出三个营业收入数值，其他营业收入缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 213,
+          "end": 280,
+          "text": "24年内参/酒鬼/湘泉/其他营业收入2.35/8.35/0.76亿元（-67.06%/-49.32%/+7.64%/-30.84%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年内参/酒鬼/湘泉/其他营业收入2.35/8.35/0.76亿元（-67.06%/-49.32%/+7.64%/-30.84%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 213,
+          "end": 280,
+          "text": "24年内参/酒鬼/湘泉/其他营业收入2.35/8.35/0.76亿元（-67.06%/-49.32%/+7.64%/-30.84%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "56abb7644e875502d6470276",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "括号内应为同比等数据但为空，明确数值位置缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 143,
+          "end": 176,
+          "text": "2025Q1公司收入/归母净利润分别为3.44/0.32亿元（）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1公司收入/归母净利润分别为3.44/0.32亿元（）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 143,
+          "end": 176,
+          "text": "2025Q1公司收入/归母净利润分别为3.44/0.32亿元（）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b3a8ec4c71dd6ec61d2372f6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "内参销量/吨价同比数据重复出现，且编号重复，属不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 330,
+          "end": 424,
+          "text": "分产品：①24年内参销量/吨价分别同比-56.09%/-24.99%；\n②24年内参销量/吨价分别同比-56.09%/-24.99%；②酒鬼系列销量/吨价同比-46.18%/-5.83%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分产品：①24年内参销量/吨价分别同比-56.09%/-24.99%；\n②24年内参销量/吨价分别同比-56.09%/-24.99%；②酒鬼系列销量/吨价同比-46.18%/-5.83%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 330,
+          "end": 424,
+          "text": "分产品：①24年内参销量/吨价分别同比-56.09%/-24.99%；\n②24年内参销量/吨价分别同比-56.09%/-24.99%；②酒鬼系列销量/吨价同比-46.18%/-5.83%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8b068461c71a0f665d77496e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1022
+        ]
+      ],
+      "estimated_input_tokens": 5322,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:57:20.210979+00:00",
+        "request_sha256": "b730aeb3ec2dd438d40472c110a078fca4ea7a5fd6b710e1edc8826f70c8cbf8",
+        "input_token_estimate": 14907,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277051",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "29dc1773c908491591527a26dffe59be",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3696,
+        "output_tokens": 6570,
+        "usage_source": "provider",
+        "duration_seconds": 25.921294,
+        "cost_cny": "0.029976",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "24年经销商数量净减少438万家至1336家，平均经销商规模同比-33.41%至105.88万元/家，24年单商规模降低是公司营收下降主要原因。"
+          }
+        ],
+        "reason": "经销商数量不可能减少438万家，单位“万家”明显错误，应为“家”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "24年内参/酒鬼/湘泉/其他营业收入2.35/8.35/0.76亿元（-67.06%/-49.32%/+7.64%/-30.84%）。"
+          }
+        ],
+        "reason": "列出内参、酒鬼、湘泉、其他四类，但仅给出三个营业收入数值，其他营业收入缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025Q1公司收入/归母净利润分别为3.44/0.32亿元（）。"
+          }
+        ],
+        "reason": "括号内应为同比等数据但为空，明确数值位置缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "分产品：①24年内参销量/吨价分别同比-56.09%/-24.99%；\n②24年内参销量/吨价分别同比-56.09%/-24.99%；②酒鬼系列销量/吨价同比-46.18%/-5.83%。"
+          }
+        ],
+        "reason": "内参销量/吨价同比数据重复出现，且编号重复，属不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 38,
+      "end": 91,
+      "text": "事件：2024年公司收入/归母净利润分别为14.23/0.12亿元（同比-49.70%/-97.72%）；",
+      "quantities": [
+        {
+          "value": "0.12",
+          "unit": "亿元",
+          "start": 65,
+          "end": 71
+        },
+        {
+          "value": "-49.70",
+          "unit": "%",
+          "start": 74,
+          "end": 81
+        },
+        {
+          "value": "-97.72",
+          "unit": "%",
+          "start": 82,
+          "end": 89
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 91,
+      "end": 143,
+      "text": "对应2024Q4收入/归母净利润分别为2.32/-0.44亿元（同比-66.20%/-163.67%）；",
+      "quantities": [
+        {
+          "value": "-0.44",
+          "unit": "亿元",
+          "start": 115,
+          "end": 122
+        },
+        {
+          "value": "-66.20",
+          "unit": "%",
+          "start": 125,
+          "end": 132
+        },
+        {
+          "value": "-163.67",
+          "unit": "%",
+          "start": 133,
+          "end": 141
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 143,
+      "end": 176,
+      "text": "2025Q1公司收入/归母净利润分别为3.44/0.32亿元（）。",
+      "quantities": [
+        {
+          "value": "0.32",
+          "unit": "亿元",
+          "start": 167,
+          "end": 173
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 213,
+      "end": 280,
+      "text": "24年内参/酒鬼/湘泉/其他营业收入2.35/8.35/0.76亿元（-67.06%/-49.32%/+7.64%/-30.84%）。",
+      "quantities": [
+        {
+          "value": "0.76",
+          "unit": "亿元",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "value": "-67.06",
+          "unit": "%",
+          "start": 248,
+          "end": 255
+        },
+        {
+          "value": "-49.32",
+          "unit": "%",
+          "start": 256,
+          "end": 263
+        },
+        {
+          "value": "+7.64",
+          "unit": "%",
+          "start": 264,
+          "end": 270
+        },
+        {
+          "value": "-30.84",
+          "unit": "%",
+          "start": 271,
+          "end": 278
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 280,
+      "end": 330,
+      "text": "量价角度，24年酒类销量/吨价分别-32.98%/-25.17%，营收下滑主要由销量&吨价下降影响。",
+      "quantities": [
+        {
+          "value": "-32.98",
+          "unit": "%",
+          "start": 297,
+          "end": 304
+        },
+        {
+          "value": "-25.17",
+          "unit": "%",
+          "start": 305,
+          "end": 312
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 424,
+      "end": 496,
+      "text": "24年经销商数量净减少438万家至1336家，平均经销商规模同比-33.41%至105.88万元/家，24年单商规模降低是公司营收下降主要原因。",
+      "quantities": [
+        {
+          "value": "-33.41",
+          "unit": "%",
+          "start": 456,
+          "end": 463
+        },
+        {
+          "value": "105.88",
+          "unit": "万元",
+          "start": 464,
+          "end": 472
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年单商规模降低是公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 524,
+      "end": 572,
+      "text": "24年公司毛利率/净利率分别同比变动-6.98/-18.48pcts至71.37%/0.88%；",
+      "quantities": [
+        {
+          "value": "71.37",
+          "unit": "%",
+          "start": 559,
+          "end": 565
+        },
+        {
+          "value": "0.88",
+          "unit": "%",
+          "start": 566,
+          "end": 571
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 524,
+      "end": 572,
+      "text": "24年公司毛利率/净利率分别同比变动-6.98/-18.48pcts至71.37%/0.88%；",
+      "quantities": [
+        {
+          "value": "71.37",
+          "unit": "%",
+          "start": 559,
+          "end": 565
+        },
+        {
+          "value": "0.88",
+          "unit": "%",
+          "start": 566,
+          "end": 571
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 645,
+      "end": 682,
+      "text": "毛利率下降主要系酒类销售收入中内参占比下降8.70pcts至16.65%。",
+      "quantities": [
+        {
+          "value": "16.65",
+          "unit": "%",
+          "start": 675,
+          "end": 681
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 682,
+      "end": 730,
+      "text": "25Q1公司毛利率/净利率分别同比变动-0.37/-5.64pcts至70.71%/9.22%；",
+      "quantities": [
+        {
+          "value": "70.71",
+          "unit": "%",
+          "start": 717,
+          "end": 723
+        },
+        {
+          "value": "9.22",
+          "unit": "%",
+          "start": 724,
+          "end": 729
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 682,
+      "end": 730,
+      "text": "25Q1公司毛利率/净利率分别同比变动-0.37/-5.64pcts至70.71%/9.22%；",
+      "quantities": [
+        {
+          "value": "70.71",
+          "unit": "%",
+          "start": 717,
+          "end": 723
+        },
+        {
+          "value": "9.22",
+          "unit": "%",
+          "start": 724,
+          "end": 729
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 856,
+      "end": 977,
+      "text": "预计25-27年公司收入分别为12.5/13.3/14.3亿元（25-26年前值15.8/17.4亿元），归母净利润分别为1.1/1.6/2.1亿元（25-26年前值1.3/1.7亿元），对应PE为122X/84X/64X，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "14.3",
+          "unit": "亿元",
+          "start": 881,
+          "end": 887
+        },
+        {
+          "value": "17.4",
+          "unit": "亿元",
+          "start": 901,
+          "end": 907
+        },
+        {
+          "value": "2.1",
+          "unit": "亿元",
+          "start": 925,
+          "end": 930
+        },
+        {
+          "value": "1.7",
+          "unit": "亿元",
+          "start": 943,
+          "end": 948
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1022,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1022,
+    "processed_ranges": [
+      [
+        0,
+        1022
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1022,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002237,
+  "source_content_sha256": "89633b7efbea6459e05c2f04028e64b89d57c6c04c106e755db08e7d9ed6cc74"
+}

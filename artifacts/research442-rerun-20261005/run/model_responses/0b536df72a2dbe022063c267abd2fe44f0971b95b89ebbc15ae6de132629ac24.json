@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"25Q1公司经营性净现金流4.18亿分（同比-1.95%），预付款余额11.95亿元（同比-31.61%），环比24Q4减少2.21亿元。\"}], \"reason\": \"经营性净现金流写为“4.18亿分”，人民币金额单位应为“亿元”或“亿”，单位错误。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"25Q1公司毛利率小幅下滑主要系行业周期性深度调整，主销名酒市场价格呈下降趋势，此外公司基于谨慎性原则对部分应收账款计提了存货跌价准备，导致净利润同比减少。\"}], \"reason\": \"应收账款不能计提存货跌价准备，应计提坏账准备；存货跌价准备针对存货，术语使用错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:12:18.005749+00:00",
+    "request_sha256": "abbd41376b74a62078ee351ce9062c9dc7356dadfa1c3c4ad0524a060b180e06",
+    "input_token_estimate": 14879,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277023",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4d21818f94344783a02221fa61ceb6e1",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3589,
+    "output_tokens": 4923,
+    "usage_source": "provider",
+    "duration_seconds": 18.891063,
+    "cost_cny": "0.023281"
+  },
+  "cache_request": {
+    "key": "0b536df72a2dbe022063c267abd2fe44f0971b95b89ebbc15ae6de132629ac24",
+    "purpose": "text_review.detect",
+    "messages_sha256": "abbd41376b74a62078ee351ce9062c9dc7356dadfa1c3c4ad0524a060b180e06"
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000631",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一期间、同一指标5G手机占比，开头为79.4%，后文为69.4%，且按出货量计算约为79.4%，两者冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 0,
+          "end": 44,
+          "text": "权威发布：2025年4月国内市场手机出货量2503.8万部，其中5G手机占比79.4%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 60,
+          "end": 146,
+          "text": "2025 年 4 月，国内市场手机出货量 2503.8 万部，同比增长 4.0%，其中，5G 手机 1988.9 万部，同比下降 1.7%，占同期手机出货量的 69.4%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "权威发布：2025年4月国内市场手机出货量2503.8万部，其中5G手机占比79.4%。"
+        },
+        {
+          "text": "2025 年 4 月，国内市场手机出货量 2503.8 万部，同比增长 4.0%，其中，5G 手机 1988.9 万部，同比下降 1.7%，占同期手机出货量的 69.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 0,
+          "end": 44,
+          "text": "权威发布：2025年4月国内市场手机出货量2503.8万部，其中5G手机占比79.4%。"
+        },
+        {
+          "start": 60,
+          "end": 146,
+          "text": "2025 年 4 月，国内市场手机出货量 2503.8 万部，同比增长 4.0%，其中，5G 手机 1988.9 万部，同比下降 1.7%，占同期手机出货量的 69.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cde0114914e2e80999a2f304",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "19款占50款的比例为38.0%，而非原文所写的48.0%，明确计算关系不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 239,
+          "end": 321,
+          "text": "2025 年 4 月，国内手机上市新机型 50 款，同比增长 47.1%，其中 5G 手机 19 款，同比下降 17.4%，占同期手机上市新机型数量的 48.0%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025 年 4 月，国内手机上市新机型 50 款，同比增长 47.1%，其中 5G 手机 19 款，同比下降 17.4%，占同期手机上市新机型数量的 48.0%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 239,
+          "end": 321,
+          "text": "2025 年 4 月，国内手机上市新机型 50 款，同比增长 47.1%，其中 5G 手机 19 款，同比下降 17.4%，占同期手机上市新机型数量的 48.0%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "957f55eab4c3d1e073372f51",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "时间区间写为“4-1月”，月份顺序倒置，常规应为“1-4月”，该期间表达本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 148,
+          "end": 237,
+          "text": "2025 年 4-1 月，国内市场手机出货量 9470.8 万部，同比增长 3.5%，其中， 5G 手机 8093.2 万部，同比增长 5.6%，占同期手机出货量的 85.5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025 年 4-1 月，国内市场手机出货量 9470.8 万部，同比增长 3.5%，其中， 5G 手机 8093.2 万部，同比增长 5.6%，占同期手机出货量的 85.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 148,
+          "end": 237,
+          "text": "2025 年 4-1 月，国内市场手机出货量 9470.8 万部，同比增长 3.5%，其中， 5G 手机 8093.2 万部，同比增长 5.6%，占同期手机出货量的 85.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "547f50a8f952d2559a957fee",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          856
+        ]
+      ],
+      "estimated_input_tokens": 5246,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:21:55.923849+00:00",
+        "request_sha256": "fcdc288c1c8c742c889b753905ccda8bcbdbf9bb3e77078a01b6d3d1627fb1e7",
+        "input_token_estimate": 14660,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.276804",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e6a7d3dd25be46e2853150580edea20d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3613,
+        "output_tokens": 3366,
+        "usage_source": "provider",
+        "duration_seconds": 13.222353,
+        "cost_cny": "0.017077",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "权威发布：2025年4月国内市场手机出货量2503.8万部，其中5G手机占比79.4%。"
+          },
+          {
+            "text": "2025 年 4 月，国内市场手机出货量 2503.8 万部，同比增长 4.0%，其中，5G 手机 1988.9 万部，同比下降 1.7%，占同期手机出货量的 69.4%。"
+          }
+        ],
+        "reason": "同一期间、同一指标5G手机占比，开头为79.4%，后文为69.4%，且按出货量计算约为79.4%，两者冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2025 年 4 月，国内手机上市新机型 50 款，同比增长 47.1%，其中 5G 手机 19 款，同比下降 17.4%，占同期手机上市新机型数量的 48.0%。"
+          }
+        ],
+        "reason": "19款占50款的比例为38.0%，而非原文所写的48.0%，明确计算关系不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025 年 4-1 月，国内市场手机出货量 9470.8 万部，同比增长 3.5%，其中， 5G 手机 8093.2 万部，同比增长 5.6%，占同期手机出货量的 85.5%。"
+          }
+        ],
+        "reason": "时间区间写为“4-1月”，月份顺序倒置，常规应为“1-4月”，该期间表达本身不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 856,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 856,
+    "processed_ranges": [
+      [
+        0,
+        856
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 856,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001617,
+  "source_content_sha256": "397a2c514a1f92b576bdd5203c55c6516fa924e312df36b22b55ca96bbc3a264"
+}

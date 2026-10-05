@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"5月沪深300指数上涨1.85%，通信(申万)指数上涨3.98%，跑赢大盘，在申万31个一级行业中排名第50。\",\n          \"start\": 56,\n          \"end\": 120\n        }\n      ],\n      \"reason\": \"申万一级行业共31个，排名却为第50，超出行业总数范围，数值矛盾。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"根据最新一季度财报显示，阿里、腾讯的Capex分别为246.12元/274.76元，同比+120.68%/+91.35%，环比-22.54%/-24.93%，资本开支环比下滑主要受到AI美对华AI芯片出口管制影响。\",\n          \"start\": 241,\n          \"end\": 354\n        }\n      ],\n      \"reason\": \"阿里、腾讯Capex数值后单位写为“元”，与资本开支通常以亿元或亿美元计量的口径不符。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"Oracle在5月计划斥资约400亿美元，用于购买英伟达GB200CPU芯片，支持得克萨斯州阿比林建设“星际之门”项目；马斯克近期宣布xAI计划将扩展GPU卡达100万张。\",\n          \"start\": 692,\n          \"end\": 797\n        }\n      ],\n      \"reason\": \"GB200是英伟达GPU产品，不是CPU，将“GB200CPU芯片”作为CPU购买对象属于术语误用。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"（1）英伟达一季度净利润同比增长26%，AI高景气度持续。\",\n          \"start\": 168,\n          \"end\": 204\n        },\n        {\n          \"text\": \"英伟达FY2026Q1整体收入同比增长69%；净利润同比增长26%；其中数据中心业务营收同比增长73%。\",\n          \"start\": 201,\n          \"end\": 259\n        }\n      ],\n      \"reason\": \"同一句中英伟达净利润同比增长26%重复出现，第一次概括与第二次列举冗余。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:32:18.296904+00:00",
+    "request_sha256": "4cd7a4e34f53be5539d1b0e68d24e263cea9c7a01273d8cec85ff10998fd6dae",
+    "input_token_estimate": 16111,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278255",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9ab6a1132b8247418d9369b58fac0fdf",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3808,
+    "output_tokens": 11349,
+    "usage_source": "provider",
+    "duration_seconds": 43.879832,
+    "cost_cny": "0.049204"
+  },
+  "cache_request": {
+    "key": "7e547f5056ba903e204d367e33364562f5d903eff55088b037a231a92ceac727",
+    "purpose": "text_review.detect",
+    "messages_sha256": "4cd7a4e34f53be5539d1b0e68d24e263cea9c7a01273d8cec85ff10998fd6dae"
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000549",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“14月末”不是合法的月份时点，结合上下文应为“4月末”，日期表述不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 945,
+          "end": 973,
+          "text": "14月末社融存量为424.00万亿元，同比+8.70%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "14月末社融存量为424.00万亿元，同比+8.70%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 945,
+          "end": 973,
+          "text": "14月末社融存量为424.00万亿元，同比+8.70%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "62966feb1e31218a2c1c183f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一“利率及信用利差”段落连续重复出现，内容完全相同，属于不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 643,
+          "end": 789,
+          "text": "3)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。"
+        },
+        {
+          "kind": "source_text",
+          "start": 789,
+          "end": 935,
+          "text": "4)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "3)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。"
+        },
+        {
+          "text": "4)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 643,
+          "end": 789,
+          "text": "3)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。"
+        },
+        {
+          "start": 789,
+          "end": 935,
+          "text": "4)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a79ced0c0a05f545cd27886e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "贷款、存款余额的单位应为“万亿元”，原文写成“万亿秒”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1016,
+          "end": 1068,
+          "text": "4月末中资银行贷款、存款余额分别为258.36、293.94万亿秒，同比分别+7.73%、+7.99%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月末中资银行贷款、存款余额分别为258.36、293.94万亿秒，同比分别+7.73%、+7.99%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1016,
+          "end": 1068,
+          "text": "4月末中资银行贷款、存款余额分别为258.36、293.94万亿秒，同比分别+7.73%、+7.99%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "39c7fdf2b5caee52f404b3b7",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1255
+        ]
+      ],
+      "estimated_input_tokens": 5596,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:14:08.002446+00:00",
+        "request_sha256": "e7114da08bfc1988088641cecb9ee0827be759b433a92408471a6cbf5a6fb4c5",
+        "input_token_estimate": 15634,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277778",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "75c7e2ea48684d67b966218bc29bb5e4",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3877,
+        "output_tokens": 7343,
+        "usage_source": "provider",
+        "duration_seconds": 28.843024,
+        "cost_cny": "0.033249",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "14月末社融存量为424.00万亿元，同比+8.70%；"
+          }
+        ],
+        "reason": "“14月末”不是合法的月份时点，结合上下文应为“4月末”，日期表述不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "3)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。"
+          },
+          {
+            "text": "4)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。"
+          }
+        ],
+        "reason": "同一“利率及信用利差”段落连续重复出现，内容完全相同，属于不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "10年期国债YTM为1.67%，周环比-4.96pct；"
+          }
+        ],
+        "reason": "国债收益率周环比变动通常以bp计，1.67%的收益率不可能一周下降4.96个百分点，单位“pct”疑为“bp”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "4月末中资银行贷款、存款余额分别为258.36、293.94万亿秒，同比分别+7.73%、+7.99%。"
+          }
+        ],
+        "reason": "贷款、存款余额的单位应为“万亿元”，原文写成“万亿秒”，量纲错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "10年期国债YTM为1.67%，周环比-4.96pct；"
+          }
+        ],
+        "reason": "国债收益率周环比变动通常以bp计，1.67%的收益率不可能一周下降4.96个百分点，单位“pct”疑为“bp”。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1255,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1255,
+    "processed_ranges": [
+      [
+        0,
+        1255
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1255,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001808,
+  "source_content_sha256": "e3c0b19cbd124b9af0c858af7b84eb1bbe63d1f83e6ead49e7857b9bb8c11296"
+}

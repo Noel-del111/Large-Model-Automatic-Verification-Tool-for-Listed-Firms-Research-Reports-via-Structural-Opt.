@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"总体来看，公司不同板块业务增长有所分化，呈现出制药装备好于医疗器械，海外收入高于国内收入的局面：\"}], \"reason\": \"前文显示国内收入95.93亿元、海外收入2.71亿元，海外收入不可能高于国内收入。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"其中国际化业务毛利率（47.69%）远低于国内业务毛利率（25.03%）。\"}], \"reason\": \"47.69%高于25.03%，与“远低于”的表述相反。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。\"}], \"reason\": \"收入金额单位应为亿元，此处误用“万吨”。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。\"}], \"reason\": \"列示四项产品却给出五个收入数字，项目与数值个数不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:03:47.579044+00:00",
+    "request_sha256": "f028e8f7f9e0df7fd5089cb98ad83c699fd2f44d784cdc9d2de9250d56ba4de7",
+    "input_token_estimate": 16510,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278654",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ccc16a20b620482cafb6388ea4f5f49f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3999,
+    "output_tokens": 8630,
+    "usage_source": "provider",
+    "duration_seconds": 33.00229,
+    "cost_cny": "0.038519"
+  },
+  "cache_request": {
+    "key": "665ad5357a285aae9887fc837667a2819148184ba3e26090da3b4e55c9ecf742",
+    "purpose": "text_review.detect",
+    "messages_sha256": "f028e8f7f9e0df7fd5089cb98ad83c699fd2f44d784cdc9d2de9250d56ba4de7"
+  }
+}

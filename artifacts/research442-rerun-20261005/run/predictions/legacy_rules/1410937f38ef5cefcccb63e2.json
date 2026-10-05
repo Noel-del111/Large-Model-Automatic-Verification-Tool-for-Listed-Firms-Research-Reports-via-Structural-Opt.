@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000385",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "1fa0e5a3d8edba84cbbe87db",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 1529,
+          "end": 1573,
+          "text": "此外，2023年9月，子公司骏创北美开始量产，2025-2024年属于产能设计爬坡阶段；"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 2074,
+    "total_chars": 2074,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001236,
+  "source_content_sha256": "4fec23379034962f9ee781d66462e353baf82868442eb040ca7dbfa47845b0b2"
+}

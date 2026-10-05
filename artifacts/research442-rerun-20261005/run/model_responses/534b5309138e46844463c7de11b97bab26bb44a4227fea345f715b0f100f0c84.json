@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"截至本周五（5月30日），布伦特、WTI油价分别为62.78、60.79万元/桶。\"}],\"reason\":\"原油价格单位应为美元/桶，不是万元/桶。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"布伦特原油期货结算价为62.78美元/桶，较上周下降2.00美元/桶（-3.09%）。布伦特原油期货结算价为62.78美元/桶，较上周下降2.00美元/桶（-3.09%）；\"}],\"reason\":\"同一布伦特原油价格信息连续重复，形成冗余。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"截至2025年05月30日当周，美国活跃钻机数量为台，较上周减少4台。\"}],\"reason\":\"美国活跃钻机数量缺失具体数值。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"截至2025年05月23日当周，美国汽油总体、车用汽油、柴油、航空煤油库存分别为22308.1、1496.3、  、4271.6万桶，较上周分别-244.1（-1.08%）、-133.1（-8.17%）、-72.4（-0.70%）、+60.7（+1.44%）万桶。\"}],\"reason\":\"柴油库存对应的数值位置为空。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"其中北美、南美地区分别增加2、1座，中东；全球海上浮式钻井平台数量为138座，较上周增加2座，其中非洲、其他地区分别增加2、1座，南美减少1座。\"}],\"reason\":\"中东地区之后缺少对应的增减数值。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"相关标的：中国海油/中国海洋石油（8.SH/0883.HK）、中国石油/中国石油股份（601857.SH/0857.HK）、中国石化/中国石油化工股份（600028.SH/0386.HK）、中海油服/中海油田服务（601808.SH/2883.HK）、海油工程（600583.SH）、中曼石油（603619.SH）等。\"}],\"reason\":\"中国海油A股代码“8.SH”不符合六位股票代码格式。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"风险因素：（1）中东地区巴以冲突等地缘政治因素对油价出现大幅度的对冲。\"}],\"reason\":\"“对冲”用于描述地缘政治因素对油价的影响不准确，通常应为冲击或影响。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:15:50.071730+00:00",
+    "request_sha256": "550f43a5d5797b86dd597bc169f8e1f1406a151d4489a4ae038c423757819c87",
+    "input_token_estimate": 16305,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278449",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9904a14358be4b06820d71ad588d3cb5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4032,
+    "output_tokens": 9969,
+    "usage_source": "provider",
+    "duration_seconds": 36.370652,
+    "cost_cny": "0.043908"
+  },
+  "cache_request": {
+    "key": "534b5309138e46844463c7de11b97bab26bb44a4227fea345f715b0f100f0c84",
+    "purpose": "text_review.detect",
+    "messages_sha256": "550f43a5d5797b86dd597bc169f8e1f1406a151d4489a4ae038c423757819c87"
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000672",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "正文连续两次出现完全相同的“OPEC+进一步计划7月增产。”表述，属不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 21,
+          "end": 36,
+          "text": "OPEC+进一步计划7月增产。"
+        },
+        {
+          "kind": "source_text",
+          "start": 37,
+          "end": 52,
+          "text": "OPEC+进一步计划7月增产。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "OPEC+进一步计划7月增产。",
+          "start": 21,
+          "end": 36
+        },
+        {
+          "text": "OPEC+进一步计划7月增产。",
+          "start": 37,
+          "end": 52
+        }
+      ],
+      "spans": [
+        {
+          "start": 21,
+          "end": 36,
+          "text": "OPEC+进一步计划7月增产。"
+        },
+        {
+          "start": 37,
+          "end": 52,
+          "text": "OPEC+进一步计划7月增产。"
+        }
+      ],
+      "warnings": [],
+      "id": "78767d7cac8c03da5009b87c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "石油产量增加应用“产量”或“供应量”，“套利”为金融交易术语，此处使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 96,
+          "end": 161,
+          "text": "5月31日，OPEC+表示同意将石油套利增加41.1万桶/日，为5月以来连续第三个月的计划增产，同时增产幅度与5、6月的幅度相当。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月31日，OPEC+表示同意将石油套利增加41.1万桶/日，为5月以来连续第三个月的计划增产，同时增产幅度与5、6月的幅度相当。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 96,
+          "end": 161,
+          "text": "5月31日，OPEC+表示同意将石油套利增加41.1万桶/日，为5月以来连续第三个月的计划增产，同时增产幅度与5、6月的幅度相当。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "96ea50a715fabff979838573",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "WTI原油期货结算价单位应为美元/桶，同段布伦特为美元/桶，此处写成美分/桶导致量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 319,
+          "end": 348,
+          "text": "WTI期货结算价为60.79美分/桶，周环比-1.20%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "WTI期货结算价为60.79美分/桶，周环比-1.20%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 319,
+          "end": 348,
+          "text": "WTI期货结算价为60.79美分/桶，周环比-1.20%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "245a7c07fb8eafe3714286a4",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1172
+        ]
+      ],
+      "estimated_input_tokens": 5582,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:56:27.815673+00:00",
+        "request_sha256": "94c14e5513ac92ca9b1b3cb5675ec031ec18b41d18cc4d29aa0923eafcbc4099",
+        "input_token_estimate": 15575,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277719",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "0adfca2773904671b9ec9be7998ad6d0",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3822,
+        "output_tokens": 7257,
+        "usage_source": "provider",
+        "duration_seconds": 28.095006,
+        "cost_cny": "0.03285"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "OPEC+进一步计划7月增产。",
+            "start": 21,
+            "end": 36
+          },
+          {
+            "text": "OPEC+进一步计划7月增产。",
+            "start": 37,
+            "end": 52
+          }
+        ],
+        "reason": "正文连续两次出现完全相同的“OPEC+进一步计划7月增产。”表述，属不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "5月31日，OPEC+表示同意将石油套利增加41.1万桶/日，为5月以来连续第三个月的计划增产，同时增产幅度与5、6月的幅度相当。"
+          }
+        ],
+        "reason": "石油产量增加应用“产量”或“供应量”，“套利”为金融交易术语，此处使用不当。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "WTI期货结算价为60.79美分/桶，周环比-1.20%。"
+          }
+        ],
+        "reason": "WTI原油期货结算价单位应为美元/桶，同段布伦特为美元/桶，此处写成美分/桶导致量纲错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1172,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1172,
+    "processed_ranges": [
+      [
+        0,
+        1172
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 28.122877,
+  "source_content_sha256": "77295ea51e142dc93c4f2981246b67d61efc83b161d488996194986f25a20b76"
+}

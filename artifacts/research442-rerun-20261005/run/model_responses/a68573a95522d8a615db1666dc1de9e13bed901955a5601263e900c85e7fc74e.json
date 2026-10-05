@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2025年4月，中国游戏市场规模为273.51亿元，同比增长21.93%，，主要由于长线产品受益于联动、新赛季等相关活动，收入显著提升，4月移动游戏市场规模为204.24万元，同比增长28.41%，长线产品表现较佳。\"}],\"reason\":\"移动游戏市场规模204.24万元，与中国游戏市场273.51亿元量级明显不符，应为亿元。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"接下来一周有5款新游将上线，网易游戏《》将于6.5上线。\"}],\"reason\":\"网易游戏对应的游戏名称缺失，书名号内为空。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"AI应用：海外方面，Claude聊天机器人推出语音模式；国内方面，昆仑万维上线天工超级智能体APP，通义千问团队发布QwenLong-L1-32B模型，腾讯开源混元语音数字人模型，DeepSeek R1模型完成小版本试升级，快手可灵AR上线2.1系列模型。\"}],\"reason\":\"前文称“可灵AI”，此处写“可灵AR”，AI与AR术语含义不同，造成产品指代错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:58:52.046131+00:00",
+    "request_sha256": "4f7863adb5b9588e12ba6b1db5e504dbf46ffa45a67fc0987d1dc97baf0fd7a3",
+    "input_token_estimate": 14696,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27684",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "214caa547b5c4df09c4d376bf54743a0",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3539,
+    "output_tokens": 8881,
+    "usage_source": "provider",
+    "duration_seconds": 34.357062,
+    "cost_cny": "0.039063"
+  },
+  "cache_request": {
+    "key": "a68573a95522d8a615db1666dc1de9e13bed901955a5601263e900c85e7fc74e",
+    "purpose": "text_review.detect",
+    "messages_sha256": "4f7863adb5b9588e12ba6b1db5e504dbf46ffa45a67fc0987d1dc97baf0fd7a3"
+  }
+}

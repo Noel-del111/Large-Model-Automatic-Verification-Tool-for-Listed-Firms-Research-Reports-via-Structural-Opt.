@@ -1,0 +1,94 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000460",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "21aee28ae1a6a1acb00d3634",
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 364,
+          "end": 517,
+          "text": "\n\nl收入增速逐季提速，海外布局领先，盈利能力逐步提高\n\n从产品结构上看，2024年分子砌块业务实现收入9.36亿元（-0.99%），毛利率为42%（+1.42pct），其中杂环化合物收入4.75亿元（+0.61%）、苯环化合物收入2.72亿元（-7.98%）、脂肪族类化合物1.89亿元（+6.39%）。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.003"
+    },
+    {
+      "id": "21aee28ae1a6a1acb00d3634",
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 364,
+          "end": 517,
+          "text": "\n\nl收入增速逐季提速，海外布局领先，盈利能力逐步提高\n\n从产品结构上看，2024年分子砌块业务实现收入9.36亿元（-0.99%），毛利率为42%（+1.42pct），其中杂环化合物收入4.75亿元（+0.61%）、苯环化合物收入2.72亿元（-7.98%）、脂肪族类化合物1.89亿元（+6.39%）。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.003"
+    },
+    {
+      "id": "21aee28ae1a6a1acb00d3634",
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 364,
+          "end": 517,
+          "text": "\n\nl收入增速逐季提速，海外布局领先，盈利能力逐步提高\n\n从产品结构上看，2024年分子砌块业务实现收入9.36亿元（-0.99%），毛利率为42%（+1.42pct），其中杂环化合物收入4.75亿元（+0.61%）、苯环化合物收入2.72亿元（-7.98%）、脂肪族类化合物1.89亿元（+6.39%）。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.003"
+    },
+    {
+      "id": "bf8e8d7505d7a842caa11d7a",
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 541,
+          "end": 646,
+          "text": "2024年科研试剂催化剂和配体业务实现收入1.66亿元（+13.35%），毛利率为37.56%（+1.31%），其中催化剂和配体收入1.15亿元（+9.3%）、活性小分子化合物收入0.5亿元（+23.86%）。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.003"
+    },
+    {
+      "id": "bf8e8d7505d7a842caa11d7a",
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 541,
+          "end": 646,
+          "text": "2024年科研试剂催化剂和配体业务实现收入1.66亿元（+13.35%），毛利率为37.56%（+1.31%），其中催化剂和配体收入1.15亿元（+9.3%）、活性小分子化合物收入0.5亿元（+23.86%）。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.003"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1323,
+    "total_chars": 1323,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001554,
+  "source_content_sha256": "e65a3825eb04c0aebc9a9c60c7de8c84312bbec3cffd2133bb5592fe477d5650"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"报告期内，公司销售生猪（生猪销售量：指对外销售+对集团内部屠宰企业销售）共计227.15万头，较去年同期增长49.40%；其中，对外销售203.44万头，对集团内部屠宰企业销售33.71万头。\"}],\"reason\":\"对外销售203.44万头加内部销售33.71万头等于237.15万头，与共计227.15万头不一致。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"经测算，公司对外出售生猪平均价格为1963-35元/头，毛猪销售均价为16.16元/公斤，同比上涨12.71%。\"}],\"reason\":\"平均价格“1963-35元/头”数字格式异常，连字符位置疑似应为小数点。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"经测算，公司2024年肉猪养殖综合成本约13.9元/斤，其中第4季度完全成本13.7元/公斤，较年初下降明显；25Q1单季度肉猪养殖综合成本为12.4元/公斤，环比上季度下降了1.3元，断奶仔猪成本270元/头，PSY29头，料肉比2.45，。\"}],\"reason\":\"2024年综合成本写13.9元/斤，后续同口径用元/公斤；13.9元/斤约27.8元/公斤，与13.7元/公斤矛盾。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"公司129年屠宰及猪副产品业务实现收入13.86亿元，同比+20.89%；毛利率为15.52%，较上年上升10.49个百分点。\"}],\"reason\":\"“129年”不是合法年份，应为2024年或24年。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"公司饲料销售60.05万吨，其中外销6.89万吨、向集团内部养殖企业销售60.16万吨；饲料业务实现营收2.92亿元，同比-41.31%；毛利率为22.33%，较上年增8.75个百分点。\"}],\"reason\":\"外销6.89万吨加内部销售60.16万吨等于67.05万吨，大于总销售60.05万吨，分项与合计矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:27:28.762207+00:00",
+    "request_sha256": "3ed60a9cf5accd27626a1eaff3f741cd049a05e5ad31d87318b3b6312677c13c",
+    "input_token_estimate": 15984,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278128",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "6e8953fdcfb94d10915619a46b77adef",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3871,
+    "output_tokens": 7501,
+    "usage_source": "provider",
+    "duration_seconds": 27.415165,
+    "cost_cny": "0.033875"
+  },
+  "cache_request": {
+    "key": "3b1ee4c5f8c2a48831c5e23b4eb53aed794903b11589e2b536490b19424dac33",
+    "purpose": "text_review.detect",
+    "messages_sha256": "3ed60a9cf5accd27626a1eaff3f741cd049a05e5ad31d87318b3b6312677c13c"
+  }
+}

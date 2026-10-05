@@ -1,0 +1,634 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000349",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后的股票代码括号内为空，缺少股票代码属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 19,
+          "end": 25,
+          "text": "海油发展()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "海油发展()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 19,
+          "end": 25,
+          "text": "海油发展()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "44c001bb0249a34f6e5bd58c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“129”不是有效年份，时间信息不成立，导致净产量目标年份表述错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 575,
+          "end": 657,
+          "text": "根据中国海油的经营规划，2025/129/2027年的净产量目标为760-780/780-800/810-830/810-850百万桶油当量，资本开支有望维持高位。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据中国海油的经营规划，2025/129/2027年的净产量目标为760-780/780-800/810-830/810-850百万桶油当量，资本开支有望维持高位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 575,
+          "end": 657,
+          "text": "根据中国海油的经营规划，2025/129/2027年的净产量目标为760-780/780-800/810-830/810-850百万桶油当量，资本开支有望维持高位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6efad9c3f850c155dea2357c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "193.76亿元增至525.17亿元，8年复合增长率约13.27%，原文17.27%计算不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 320,
+          "end": 407,
+          "text": "2016至2024年，公司营业收入从193.76亿元增长至525.17亿元，复合增长率达17.27%，归母净利润从6.22亿元增长至36.56亿元，复合增长率达24.78%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2016至2024年，公司营业收入从193.76亿元增长至525.17亿元，复合增长率达17.27%，归母净利润从6.22亿元增长至36.56亿元，复合增长率达24.78%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 320,
+          "end": 407,
+          "text": "2016至2024年，公司营业收入从193.76亿元增长至525.17亿元，复合增长率达17.27%，归母净利润从6.22亿元增长至36.56亿元，复合增长率达24.78%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "27f4d71efada0397acb307c1",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“投资为美元”前缺少具体投资金额数值，无法得知投资规模。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 738,
+          "end": 780,
+          "text": "预计全球海洋油气勘探开发投资为美元，同比增长5%，占全球油气勘探开发总投资的36%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计全球海洋油气勘探开发投资为美元，同比增长5%，占全球油气勘探开发总投资的36%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 738,
+          "end": 780,
+          "text": "预计全球海洋油气勘探开发投资为美元，同比增长5%，占全球油气勘探开发总投资的36%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9c5d598726913833a4994750",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "第二个“同比增长18.48%”前缺少指标名称（如归母净利润），业绩要素表述不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 407,
+          "end": 485,
+          "text": "2025年第一季度公司实现营收100.74亿元，同比增长9.42%，，同比增长18.48%，同时，公司的分红政策稳健持续，高股息潜力提升，长期投资价值凸显。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年第一季度公司实现营收100.74亿元，同比增长9.42%，，同比增长18.48%，同时，公司的分红政策稳健持续，高股息潜力提升，长期投资价值凸显。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 407,
+          "end": 485,
+          "text": "2025年第一季度公司实现营收100.74亿元，同比增长9.42%，，同比增长18.48%，同时，公司的分红政策稳健持续，高股息潜力提升，长期投资价值凸显。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d2bb2ff2ab017593391b7738",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“首次覆盖，给予买入评级”在同一报告内不必要地重复出现两次。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 121,
+          "end": 208,
+          "text": "未来随着海洋油气产量持续提升以及绿色低碳业务快速发展，公司盈利能力有望持续提升，看好公司“油气+新能源”双轮驱动下的发展战略，以及深海科技的发展前景，首次覆盖，给予买入评级。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1401,
+          "end": 1499,
+          "text": "预测公司2025-2027年归母净利润分别为42.39/48.35/54.69亿元，对应当前市值，PE分别为9.3/8.2/7.2倍，市净率分别为1.3/1.2/1.1倍，首次覆盖，给予买入评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "未来随着海洋油气产量持续提升以及绿色低碳业务快速发展，公司盈利能力有望持续提升，看好公司“油气+新能源”双轮驱动下的发展战略，以及深海科技的发展前景，首次覆盖，给予买入评级。"
+        },
+        {
+          "text": "预测公司2025-2027年归母净利润分别为42.39/48.35/54.69亿元，对应当前市值，PE分别为9.3/8.2/7.2倍，市净率分别为1.3/1.2/1.1倍，首次覆盖，给予买入评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 121,
+          "end": 208,
+          "text": "未来随着海洋油气产量持续提升以及绿色低碳业务快速发展，公司盈利能力有望持续提升，看好公司“油气+新能源”双轮驱动下的发展战略，以及深海科技的发展前景，首次覆盖，给予买入评级。"
+        },
+        {
+          "start": 1401,
+          "end": 1499,
+          "text": "预测公司2025-2027年归母净利润分别为42.39/48.35/54.69亿元，对应当前市值，PE分别为9.3/8.2/7.2倍，市净率分别为1.3/1.2/1.1倍，首次覆盖，给予买入评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9adbb4a23994a635ca80af9e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1559
+        ]
+      ],
+      "estimated_input_tokens": 6130,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:40:50.276209+00:00",
+        "request_sha256": "d84f540248084eeaa7ed9fdbae52844ecedec5ed48d1a823f3856e9f2b1cc03f",
+        "input_token_estimate": 17052,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279196",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "80e2067edf0540bb96722cd4e2d7e941",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3933,
+        "output_tokens": 7401,
+        "usage_source": "provider",
+        "duration_seconds": 29.626792,
+        "cost_cny": "0.033537",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "海油发展()"
+          }
+        ],
+        "reason": "公司名称后的股票代码括号内为空，缺少股票代码属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据中国海油的经营规划，2025/129/2027年的净产量目标为760-780/780-800/810-830/810-850百万桶油当量，资本开支有望维持高位。"
+          }
+        ],
+        "reason": "年份“129”不是有效年份，时间信息不成立，导致净产量目标年份表述错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2016至2024年，公司营业收入从193.76亿元增长至525.17亿元，复合增长率达17.27%，归母净利润从6.22亿元增长至36.56亿元，复合增长率达24.78%。"
+          }
+        ],
+        "reason": "193.76亿元增至525.17亿元，8年复合增长率约13.27%，原文17.27%计算不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "预计全球海洋油气勘探开发投资为美元，同比增长5%，占全球油气勘探开发总投资的36%。"
+          }
+        ],
+        "reason": "“投资为美元”前缺少具体投资金额数值，无法得知投资规模。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "2025年第一季度公司实现营收100.74亿元，同比增长9.42%，，同比增长18.48%，同时，公司的分红政策稳健持续，高股息潜力提升，长期投资价值凸显。"
+          }
+        ],
+        "reason": "第二个“同比增长18.48%”前缺少指标名称（如归母净利润），业绩要素表述不完整。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "未来随着海洋油气产量持续提升以及绿色低碳业务快速发展，公司盈利能力有望持续提升，看好公司“油气+新能源”双轮驱动下的发展战略，以及深海科技的发展前景，首次覆盖，给予买入评级。"
+          },
+          {
+            "text": "预测公司2025-2027年归母净利润分别为42.39/48.35/54.69亿元，对应当前市值，PE分别为9.3/8.2/7.2倍，市净率分别为1.3/1.2/1.1倍，首次覆盖，给予买入评级。"
+          }
+        ],
+        "reason": "“首次覆盖，给予买入评级”在同一报告内不必要地重复出现两次。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 269,
+      "end": 407,
+      "text": "公司实际控制人为中国海油集团，受益于中国海油油气产量持续提升，以及公司管理效率提升，经营业绩持续增长，2016至2024年，公司营业收入从193.76亿元增长至525.17亿元，复合增长率达17.27%，归母净利润从6.22亿元增长至36.56亿元，复合增长率达24.78%。",
+      "quantities": [
+        {
+          "value": "193.76",
+          "unit": "亿元",
+          "start": 338,
+          "end": 346
+        },
+        {
+          "value": "525.17",
+          "unit": "亿元",
+          "start": 349,
+          "end": 357
+        },
+        {
+          "value": "17.27",
+          "unit": "%",
+          "start": 364,
+          "end": 370
+        },
+        {
+          "value": "6.22",
+          "unit": "亿元",
+          "start": 377,
+          "end": 383
+        },
+        {
+          "value": "36.56",
+          "unit": "亿元",
+          "start": 386,
+          "end": 393
+        },
+        {
+          "value": "24.78",
+          "unit": "%",
+          "start": 400,
+          "end": 406
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "公司实际控制人为中国海油集团",
+        "以及公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 269,
+      "end": 407,
+      "text": "公司实际控制人为中国海油集团，受益于中国海油油气产量持续提升，以及公司管理效率提升，经营业绩持续增长，2016至2024年，公司营业收入从193.76亿元增长至525.17亿元，复合增长率达17.27%，归母净利润从6.22亿元增长至36.56亿元，复合增长率达24.78%。",
+      "quantities": [
+        {
+          "value": "193.76",
+          "unit": "亿元",
+          "start": 338,
+          "end": 346
+        },
+        {
+          "value": "525.17",
+          "unit": "亿元",
+          "start": 349,
+          "end": 357
+        },
+        {
+          "value": "17.27",
+          "unit": "%",
+          "start": 364,
+          "end": 370
+        },
+        {
+          "value": "6.22",
+          "unit": "亿元",
+          "start": 377,
+          "end": 383
+        },
+        {
+          "value": "36.56",
+          "unit": "亿元",
+          "start": 386,
+          "end": 393
+        },
+        {
+          "value": "24.78",
+          "unit": "%",
+          "start": 400,
+          "end": 406
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "公司实际控制人为中国海油集团",
+        "以及公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 407,
+      "end": 485,
+      "text": "2025年第一季度公司实现营收100.74亿元，同比增长9.42%，，同比增长18.48%，同时，公司的分红政策稳健持续，高股息潜力提升，长期投资价值凸显。",
+      "quantities": [
+        {
+          "value": "100.74",
+          "unit": "亿元",
+          "start": 422,
+          "end": 430
+        },
+        {
+          "value": "9.42",
+          "unit": "%",
+          "start": 435,
+          "end": 440
+        },
+        {
+          "value": "18.48",
+          "unit": "%",
+          "start": 446,
+          "end": 452
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": [
+        "年第一季度公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 875,
+      "end": 1021,
+      "text": "自2019年公司上市以来，公司能源技术服务板块及能源物流服务板块业务稳步增长，2019-2024年营收复合增长率分别达14%、6%，同时公司加大低碳环保、数字化技术研发力度，完善产业服务链条，将低碳环保数字化作为重要战略方向，2021-2024年低碳环保与数字化业务板块营收复合增长率达5%。",
+      "quantities": [
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 934,
+          "end": 937
+        },
+        {
+          "value": "6",
+          "unit": "%",
+          "start": 938,
+          "end": 940
+        },
+        {
+          "value": "5",
+          "unit": "%",
+          "start": 1018,
+          "end": 1020
+        }
+      ],
+      "periods": [
+        "2019年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "同时公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 875,
+      "end": 1021,
+      "text": "自2019年公司上市以来，公司能源技术服务板块及能源物流服务板块业务稳步增长，2019-2024年营收复合增长率分别达14%、6%，同时公司加大低碳环保、数字化技术研发力度，完善产业服务链条，将低碳环保数字化作为重要战略方向，2021-2024年低碳环保与数字化业务板块营收复合增长率达5%。",
+      "quantities": [
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 934,
+          "end": 937
+        },
+        {
+          "value": "6",
+          "unit": "%",
+          "start": 938,
+          "end": 940
+        },
+        {
+          "value": "5",
+          "unit": "%",
+          "start": 1018,
+          "end": 1020
+        }
+      ],
+      "periods": [
+        "2019年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "同时公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1354,
+      "end": 1499,
+      "text": "随着海洋深水油气田开发提速及低碳数字化业务规模化落地，公司低碳转型与核心油气业务协同效应凸显，预测公司2025-2027年归母净利润分别为42.39/48.35/54.69亿元，对应当前市值，PE分别为9.3/8.2/7.2倍，市净率分别为1.3/1.2/1.1倍，首次覆盖，给予买入评级。",
+      "quantities": [
+        {
+          "value": "54.69",
+          "unit": "亿元",
+          "start": 1435,
+          "end": 1442
+        },
+        {
+          "value": "7.2",
+          "unit": "倍",
+          "start": 1463,
+          "end": 1467
+        },
+        {
+          "value": "1.1",
+          "unit": "倍",
+          "start": 1482,
+          "end": 1486
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预测公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1559,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1559,
+    "processed_ranges": [
+      [
+        0,
+        1559
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1559,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002335,
+  "source_content_sha256": "04287587008491b7ad9fadac9d047f6a09db4dce70a902c19855a620b7b6bdf0"
+}

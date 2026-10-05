@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000327",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "e8ab91b4f20b9698d84b7bf4",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 370,
+          "end": 465,
+          "text": "会计成本方面，预计将摊销的总费用约2.35亿元，假设2025年6月中旬执行授予，则激励计划预计摊销费用在2028-2025年分别为7157.8/9995.4/4882.0/1497.5万元。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1034,
+    "total_chars": 1034,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001047,
+  "source_content_sha256": "60af2e20da2aefbaa2437a5e8b07f7d2d9f66430b7d660d0a7e054a2750eac47"
+}

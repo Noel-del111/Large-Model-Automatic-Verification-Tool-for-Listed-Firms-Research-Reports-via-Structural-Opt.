@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"我们预计27-25年归母净利润8.00/9.45/11.90亿元，YOY+62%/+18%/+26%。\"}], \"reason\": \"年份区间写成27-25年，起点2027晚于终点2025，且与所列净利润和YOY的年度顺序冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:47:49.093818+00:00",
+    "request_sha256": "ac4a7351511d694d7314f0ee49b4b76913168a612d884d33f93dd349a2fdc374",
+    "input_token_estimate": 15054,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277198",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "692b3618d8174014bc560c5c763f5f1b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3563,
+    "output_tokens": 5196,
+    "usage_source": "provider",
+    "duration_seconds": 22.138199,
+    "cost_cny": "0.024347"
+  },
+  "cache_request": {
+    "key": "b0082fdb0522cb086c5ac7c3fab011f0c2322e79de6cf0cb09f60d2bdfb9cc9f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ac4a7351511d694d7314f0ee49b4b76913168a612d884d33f93dd349a2fdc374"
+  }
+}

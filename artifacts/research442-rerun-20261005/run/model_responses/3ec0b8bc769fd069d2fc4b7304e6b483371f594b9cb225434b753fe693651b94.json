@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [{\"text\": \"英伟达于5月32日披露FY26Q1财报\"}],\n      \"reason\": \"5月没有32日，该披露日期不成立。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [{\"text\": \"GB300开始对云厂商送样，有望于下半年量产。GB300开始对云厂商送样，有望于下半年量产。\"}],\n      \"reason\": \"同一句话连续重复两次，未提供新增信息。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [{\"text\": \"光庭信息：公司于近日收到政府补助1358.78万平方米，占公司最近一期经审计归属于上市公司股东净利润的45.55%。\"}],\n      \"reason\": \"政府补助金额应以货币计量，却写作面积单位“万平方米”。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [{\"text\": \"本次权益变动后，兴森科技及其一致行动人兴森股权合计持有公司股份由11,600,070股减少至9,666,670股，占公司总股本的比例由6.00002%减少至2.99999%，不再是公司合计持股5%以上的股东。\"}],\n      \"reason\": \"总股本不变时，股数降为83.33%，持股比例应降至约5%，而非2.99999%。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [{\"text\": \"公司FY26Q2营业收入指引中枢为450亿美元，同比增长73%，环比增长14%，此指引已剔除H20带来的80亿美元收入减少，仍有环比加速增长。\"}],\n      \"reason\": \"Q2营收450亿较Q1的441亿仅增约2%，与所述环比增长14%不符。\"\n    },\n    {\n      \"error_type\": \"时间矛盾\",\n      \"spans\": [\n        {\"text\": \"供需端担忧已基本改善，GB300本季末量产可期。\"},\n        {\"text\": \"GB300开始对云厂商送样，有望于下半年量产。\"}\n      ],\n      \"reason\": \"前文称GB300本季末量产可期，后文又称有望下半年量产，时间冲突。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:55:13.911603+00:00",
+    "request_sha256": "c7d9e525c42975c08b90102a2fdf5a62334fadafa133b78e8c3eaf5e89854d43",
+    "input_token_estimate": 15090,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277234",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c9400b350cd74bb8afbbf3686ec2e132",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3545,
+    "output_tokens": 7539,
+    "usage_source": "provider",
+    "duration_seconds": 30.705394,
+    "cost_cny": "0.033701"
+  },
+  "cache_request": {
+    "key": "3ec0b8bc769fd069d2fc4b7304e6b483371f594b9cb225434b753fe693651b94",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c7d9e525c42975c08b90102a2fdf5a62334fadafa133b78e8c3eaf5e89854d43"
+  }
+}

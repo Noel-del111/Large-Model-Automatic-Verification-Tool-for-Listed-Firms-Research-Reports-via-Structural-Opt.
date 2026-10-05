@@ -1,0 +1,356 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000611",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“Q13末”不是合法季度编号，无法成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 725,
+          "end": 763,
+          "text": "GB300已于5月上旬在各大云服务器厂商送样，公司预计Q13末开始量产发货。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "GB300已于5月上旬在各大云服务器厂商送样，公司预计Q13末开始量产发货。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 725,
+          "end": 763,
+          "text": "GB300已于5月上旬在各大云服务器厂商送样，公司预计Q13末开始量产发货。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "30910b21608fdf0b7e329c94",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“实现左右的毛利率”缺少具体百分比数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 314,
+          "end": 333,
+          "text": "公司预计在今年末有望实现左右的毛利率。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司预计在今年末有望实现左右的毛利率。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 314,
+          "end": 333,
+          "text": "公司预计在今年末有望实现左右的毛利率。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3b04baab693a5a53d10603df",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "应为“分部业绩”，指各业务分部，写成“分布业绩”导致术语含义错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 335,
+          "end": 457,
+          "text": "分布业绩：数据中心收入391亿美元，YoY+73%，QoQ+10%；游戏和AIPC收入38亿美元，YoY+42%，QoQ+48%；专业可视化收入5.1亿美元，YoY+19%，环比持平；汽车和机器人收入5.7亿美元，YoY+72%，QoQ-1%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分布业绩：数据中心收入391亿美元，YoY+73%，QoQ+10%；游戏和AIPC收入38亿美元，YoY+42%，QoQ+48%；专业可视化收入5.1亿美元，YoY+19%，环比持平；汽车和机器人收入5.7亿美元，YoY+72%，QoQ-1%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 335,
+          "end": 457,
+          "text": "分布业绩：数据中心收入391亿美元，YoY+73%，QoQ+10%；游戏和AIPC收入38亿美元，YoY+42%，QoQ+48%；专业可视化收入5.1亿美元，YoY+19%，环比持平；汽车和机器人收入5.7亿美元，YoY+72%，QoQ-1%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1dd3319a07908c12e8f72b9a",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1130
+        ]
+      ],
+      "estimated_input_tokens": 5526,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:02:57.913052+00:00",
+        "request_sha256": "c5cca59d0dc3ab45ba5075e2866c454978b28b9bba455ae455c0be732db18287",
+        "input_token_estimate": 15427,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277571",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1dad09eedc0345d0859afe9d54ffb8cb",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3689,
+        "output_tokens": 7915,
+        "usage_source": "provider",
+        "duration_seconds": 30.382237,
+        "cost_cny": "0.035349",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "GB300已于5月上旬在各大云服务器厂商送样，公司预计Q13末开始量产发货。"
+          }
+        ],
+        "reason": "“Q13末”不是合法季度编号，无法成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "公司预计在今年末有望实现左右的毛利率。"
+          }
+        ],
+        "reason": "“实现左右的毛利率”缺少具体百分比数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "分布业绩：数据中心收入391亿美元，YoY+73%，QoQ+10%；游戏和AIPC收入38亿美元，YoY+42%，QoQ+48%；专业可视化收入5.1亿美元，YoY+19%，环比持平；汽车和机器人收入5.7亿美元，YoY+72%，QoQ-1%。"
+          }
+        ],
+        "reason": "应为“分部业绩”，指各业务分部，写成“分布业绩”导致术语含义错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 0,
+      "end": 43,
+      "text": "电子行业事项点评：英伟达FY26Q1业绩点评：营收超预期，Blackwell超算投产\n",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 113,
+      "end": 153,
+      "text": "非GAAP毛利率61%，，剔除H20影响后毛利率为71.3%，分析师预期71%；",
+      "quantities": [
+        {
+          "value": "61",
+          "unit": "%",
+          "start": 121,
+          "end": 124
+        },
+        {
+          "value": "71.3",
+          "unit": "%",
+          "start": 138,
+          "end": 143
+        },
+        {
+          "value": "71",
+          "unit": "%",
+          "start": 149,
+          "end": 152
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 113,
+      "end": 153,
+      "text": "非GAAP毛利率61%，，剔除H20影响后毛利率为71.3%，分析师预期71%；",
+      "quantities": [
+        {
+          "value": "61",
+          "unit": "%",
+          "start": 121,
+          "end": 124
+        },
+        {
+          "value": "71.3",
+          "unit": "%",
+          "start": 138,
+          "end": 143
+        },
+        {
+          "value": "71",
+          "unit": "%",
+          "start": 149,
+          "end": 152
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 153,
+      "end": 181,
+      "text": "净利润198.9亿美元，YoY+31%，QoQ-10%；",
+      "quantities": [
+        {
+          "value": "+31",
+          "unit": "%",
+          "start": 168,
+          "end": 172
+        },
+        {
+          "value": "-10",
+          "unit": "%",
+          "start": 176,
+          "end": 180
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 274,
+      "end": 314,
+      "text": "GAAP和非GAAP毛利率预计分别为71.8%和72.0%，上下浮动50个基点；",
+      "quantities": [
+        {
+          "value": "71.8",
+          "unit": "%",
+          "start": 292,
+          "end": 297
+        },
+        {
+          "value": "72.0",
+          "unit": "%",
+          "start": 298,
+          "end": 303
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1130,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1130,
+    "processed_ranges": [
+      [
+        0,
+        1130
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1130,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001946,
+  "source_content_sha256": "ba8cb435ee6458031a67e1e73d091dcb7ffbfc4ffe2c05b80ff7cda509ffb44d"
+}

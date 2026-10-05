@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000621",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“22025年”不成立，应为2025年，日期本身非法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 116,
+          "end": 242,
+          "text": "22025年5月中旬，总日均发电量同比增速+3.32%，其中火电日均发电量同比增速-0.27%，降幅环比大幅扩大，后期有望实现2025年2月下旬以来首次同比转正，而水电同比增速-14.37%，后续虽进入来水旺季，但考虑去年同期基数较高，增速或持续为负。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "22025年5月中旬，总日均发电量同比增速+3.32%，其中火电日均发电量同比增速-0.27%，降幅环比大幅扩大，后期有望实现2025年2月下旬以来首次同比转正，而水电同比增速-14.37%，后续虽进入来水旺季，但考虑去年同期基数较高，增速或持续为负。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 116,
+          "end": 242,
+          "text": "22025年5月中旬，总日均发电量同比增速+3.32%，其中火电日均发电量同比增速-0.27%，降幅环比大幅扩大，后期有望实现2025年2月下旬以来首次同比转正，而水电同比增速-14.37%，后续虽进入来水旺季，但考虑去年同期基数较高，增速或持续为负。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "213603f794cc306a318b260d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“2025年13月”中13月不是合法月份，时间表述不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 242,
+          "end": 382,
+          "text": "供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 242,
+          "end": 382,
+          "text": "供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "324b1ee593fe6836d2720793",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "投资建议第4条和第5条内容完全重复，属于不必要的冗余表述。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 845,
+          "end": 887,
+          "text": "4）煤电一体成长型标的，建议关注新集能源。5）煤电一体成长型标的，建议关注新集能源。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4）煤电一体成长型标的，建议关注新集能源。5）煤电一体成长型标的，建议关注新集能源。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 845,
+          "end": 887,
+          "text": "4）煤电一体成长型标的，建议关注新集能源。5）煤电一体成长型标的，建议关注新集能源。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d367573fccacca48d563f785",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "煤炭进口量通常以万吨计量，743万公斤仅为0.743万吨，单位量纲与全国进口规模明显不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 242,
+          "end": 382,
+          "text": "供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 242,
+          "end": 382,
+          "text": "供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fc784e805346ef896ccad919",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          923
+        ]
+      ],
+      "estimated_input_tokens": 5575,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:13:16.222683+00:00",
+        "request_sha256": "2e2b13a28b553c9945394b5c710f9ec5c2b024d8d75f221b8ed6d5113555f2ef",
+        "input_token_estimate": 15471,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277615",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "63b3c076c77f4fbe98e71a61ce033206",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3644,
+        "output_tokens": 5534,
+        "usage_source": "provider",
+        "duration_seconds": 23.343166,
+        "cost_cny": "0.02578"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "22025年5月中旬，总日均发电量同比增速+3.32%，其中火电日均发电量同比增速-0.27%，降幅环比大幅扩大，后期有望实现2025年2月下旬以来首次同比转正，而水电同比增速-14.37%，后续虽进入来水旺季，但考虑去年同期基数较高，增速或持续为负。"
+          }
+        ],
+        "reason": "年份“22025年”不成立，应为2025年，日期本身非法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。"
+          }
+        ],
+        "reason": "“2025年13月”中13月不是合法月份，时间表述不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "4）煤电一体成长型标的，建议关注新集能源。5）煤电一体成长型标的，建议关注新集能源。"
+          }
+        ],
+        "reason": "投资建议第4条和第5条内容完全重复，属于不必要的冗余表述。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "供给端则在低煤价下延续收缩态势，2025年13月全国原煤产量同比增速收窄，其中边际产能省份新疆、内蒙日均产量环比大幅下降21.2%和17.9%，煤炭进口量同比减少743万公斤，其中印尼进口同环比减量明显，持续跌价压力倒逼高成本煤矿减产，进口煤丧失价格优势，从而对煤价底部形成支撑。"
+          }
+        ],
+        "reason": "煤炭进口量通常以万吨计量，743万公斤仅为0.743万吨，单位量纲与全国进口规模明显不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 923,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 923,
+    "processed_ranges": [
+      [
+        0,
+        923
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.365976,
+  "source_content_sha256": "8cd62574cd4182b034c26f4abce5646c62ce2e9fe223aeff4837e76f052450e8"
+}

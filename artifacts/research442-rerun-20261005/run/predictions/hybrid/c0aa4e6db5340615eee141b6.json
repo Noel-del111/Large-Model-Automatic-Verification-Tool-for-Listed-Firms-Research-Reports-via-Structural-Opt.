@@ -1,0 +1,521 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000457",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "证券简称后的括号内股票代码为空，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 39,
+          "end": 45,
+          "text": "博彦科技()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "博彦科技()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 39,
+          "end": 45,
+          "text": "博彦科技()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "96020064f085a9562bcbf5d2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "新签合同金额应以金额单位计量，却写成万平方米，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 698,
+          "end": 740,
+          "text": "25 年一季度新业务开展延续向好趋势， 25 年新签合同金额约为 1.5 万平方米。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25 年一季度新业务开展延续向好趋势， 25 年新签合同金额约为 1.5 万平方米。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 698,
+          "end": 740,
+          "text": "25 年一季度新业务开展延续向好趋势， 25 年新签合同金额约为 1.5 万平方米。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "abf2c51246ed4d435b018557",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "原目标价10.95元上调至18.45元，涨幅约68.5%，与括号内+88%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 373,
+          "end": 464,
+          "text": "参考可比公司，给予公司 2025 年动态 PE 45 倍，上调目标价至 18.45 元（ 原为 10.95 元， 2024 年 PE 25 倍， +88%）， 维持“优于大市”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "参考可比公司，给予公司 2025 年动态 PE 45 倍，上调目标价至 18.45 元（ 原为 10.95 元， 2024 年 PE 25 倍， +88%）， 维持“优于大市”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 373,
+          "end": 464,
+          "text": "参考可比公司，给予公司 2025 年动态 PE 45 倍，上调目标价至 18.45 元（ 原为 10.95 元， 2024 年 PE 25 倍， +88%）， 维持“优于大市”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b37c4a0d6e651508a29a4432",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1201
+        ]
+      ],
+      "estimated_input_tokens": 5638,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:14:25.551483+00:00",
+        "request_sha256": "0bb0e690aa1d4028b483eb863735b2c6ead93d5ff8d357a92315887e46c75f7c",
+        "input_token_estimate": 15730,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277874",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "bc3acddefcea4568a8f6e7e58b9bcffe",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3801,
+        "output_tokens": 5587,
+        "usage_source": "provider",
+        "duration_seconds": 21.542057,
+        "cost_cny": "0.026149",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "博彦科技()"
+          }
+        ],
+        "reason": "证券简称后的括号内股票代码为空，非数值属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "25 年一季度新业务开展延续向好趋势， 25 年新签合同金额约为 1.5 万平方米。"
+          }
+        ],
+        "reason": "新签合同金额应以金额单位计量，却写成万平方米，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "参考可比公司，给予公司 2025 年动态 PE 45 倍，上调目标价至 18.45 元（ 原为 10.95 元， 2024 年 PE 25 倍， +88%）， 维持“优于大市”评级。"
+          }
+        ],
+        "reason": "原目标价10.95元上调至18.45元，涨幅约68.5%，与括号内+88%不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 156,
+      "end": 373,
+      "text": " 公司经营稳健， 在手订单充足， 25 年新业务逐步从投入期进入收获期， 我们预计公司 2025-2027 年营业收入分别为 74.15/80.26/87.75 亿元（ 25-26 年原预测为 78.67/89.73 亿元），归母净利润分别为 2.41/3.16/3.76 亿元（ 25-26 年原预测为 3.30/4.24亿元）， EPS 分别为 0.41/0.54/0.64 元（ 25-26 年原预测为 0.56/0.72元）。",
+      "quantities": [
+        {
+          "value": "87.75",
+          "unit": "亿元",
+          "start": 231,
+          "end": 239
+        },
+        {
+          "value": "89.73",
+          "unit": "亿元",
+          "start": 259,
+          "end": 267
+        },
+        {
+          "value": "3.76",
+          "unit": "亿元",
+          "start": 288,
+          "end": 295
+        },
+        {
+          "value": "4.24",
+          "unit": "亿元",
+          "start": 314,
+          "end": 320
+        },
+        {
+          "value": "0.64",
+          "unit": "元",
+          "start": 341,
+          "end": 347
+        },
+        {
+          "value": "0.72",
+          "unit": "元",
+          "start": 366,
+          "end": 371
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 156,
+      "end": 373,
+      "text": " 公司经营稳健， 在手订单充足， 25 年新业务逐步从投入期进入收获期， 我们预计公司 2025-2027 年营业收入分别为 74.15/80.26/87.75 亿元（ 25-26 年原预测为 78.67/89.73 亿元），归母净利润分别为 2.41/3.16/3.76 亿元（ 25-26 年原预测为 3.30/4.24亿元）， EPS 分别为 0.41/0.54/0.64 元（ 25-26 年原预测为 0.56/0.72元）。",
+      "quantities": [
+        {
+          "value": "87.75",
+          "unit": "亿元",
+          "start": 231,
+          "end": 239
+        },
+        {
+          "value": "89.73",
+          "unit": "亿元",
+          "start": 259,
+          "end": 267
+        },
+        {
+          "value": "3.76",
+          "unit": "亿元",
+          "start": 288,
+          "end": 295
+        },
+        {
+          "value": "4.24",
+          "unit": "亿元",
+          "start": 314,
+          "end": 320
+        },
+        {
+          "value": "0.64",
+          "unit": "元",
+          "start": 341,
+          "end": 347
+        },
+        {
+          "value": "0.72",
+          "unit": "元",
+          "start": 366,
+          "end": 371
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 486,
+      "end": 573,
+      "text": " 公司 2024 年实现营收 68.99亿元（ +4.50%），归母净利润 1.24 亿元（ -42.81%），归母净利润大幅下降主要系公司新业务投入加大及资产减值计提影响；",
+      "quantities": [
+        {
+          "value": "68.99",
+          "unit": "亿元",
+          "start": 501,
+          "end": 508
+        },
+        {
+          "value": "+4.50",
+          "unit": "%",
+          "start": 510,
+          "end": 516
+        },
+        {
+          "value": "1.24",
+          "unit": "亿元",
+          "start": 524,
+          "end": 531
+        },
+        {
+          "value": "-42.81",
+          "unit": "%",
+          "start": 533,
+          "end": 540
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "归母净利润大幅下降主要系公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 486,
+      "end": 573,
+      "text": " 公司 2024 年实现营收 68.99亿元（ +4.50%），归母净利润 1.24 亿元（ -42.81%），归母净利润大幅下降主要系公司新业务投入加大及资产减值计提影响；",
+      "quantities": [
+        {
+          "value": "68.99",
+          "unit": "亿元",
+          "start": 501,
+          "end": 508
+        },
+        {
+          "value": "+4.50",
+          "unit": "%",
+          "start": 510,
+          "end": 516
+        },
+        {
+          "value": "1.24",
+          "unit": "亿元",
+          "start": 524,
+          "end": 531
+        },
+        {
+          "value": "-42.81",
+          "unit": "%",
+          "start": 533,
+          "end": 540
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "归母净利润大幅下降主要系公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 486,
+      "end": 573,
+      "text": " 公司 2024 年实现营收 68.99亿元（ +4.50%），归母净利润 1.24 亿元（ -42.81%），归母净利润大幅下降主要系公司新业务投入加大及资产减值计提影响；",
+      "quantities": [
+        {
+          "value": "68.99",
+          "unit": "亿元",
+          "start": 501,
+          "end": 508
+        },
+        {
+          "value": "+4.50",
+          "unit": "%",
+          "start": 510,
+          "end": 516
+        },
+        {
+          "value": "1.24",
+          "unit": "亿元",
+          "start": 524,
+          "end": 531
+        },
+        {
+          "value": "-42.81",
+          "unit": "%",
+          "start": 533,
+          "end": 540
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "归母净利润大幅下降主要系公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 573,
+      "end": 655,
+      "text": " 25Q1 营收16.52 亿元（ +0.76%），归母净利润 0.72 亿元（ +271.83%）， 汇率变动引起的汇兑收益以及财政补贴增加对利润有显著提振作用。",
+      "quantities": [
+        {
+          "value": "16.52",
+          "unit": "亿元",
+          "start": 581,
+          "end": 589
+        },
+        {
+          "value": "+0.76",
+          "unit": "%",
+          "start": 591,
+          "end": 597
+        },
+        {
+          "value": "0.72",
+          "unit": "亿元",
+          "start": 605,
+          "end": 612
+        },
+        {
+          "value": "+271.83",
+          "unit": "%",
+          "start": 614,
+          "end": 622
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 573,
+      "end": 655,
+      "text": " 25Q1 营收16.52 亿元（ +0.76%），归母净利润 0.72 亿元（ +271.83%）， 汇率变动引起的汇兑收益以及财政补贴增加对利润有显著提振作用。",
+      "quantities": [
+        {
+          "value": "16.52",
+          "unit": "亿元",
+          "start": 581,
+          "end": 589
+        },
+        {
+          "value": "+0.76",
+          "unit": "%",
+          "start": 591,
+          "end": 597
+        },
+        {
+          "value": "0.72",
+          "unit": "亿元",
+          "start": 605,
+          "end": 612
+        },
+        {
+          "value": "+271.83",
+          "unit": "%",
+          "start": 614,
+          "end": 622
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1201,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1201,
+    "processed_ranges": [
+      [
+        0,
+        1201
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1201,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 7,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002377,
+  "source_content_sha256": "0e0724cacf0e8b0424164d2a989893cdd1f64a56121242c0635926d917d0720b"
+}

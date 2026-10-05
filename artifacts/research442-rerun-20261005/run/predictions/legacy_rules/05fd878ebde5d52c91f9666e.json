@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000375",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "83fc99b1d5d011a5aad2f8d5",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 1183,
+          "end": 1253,
+          "text": "预计公司2027-2025年归母净利润复合增速为39.1%，给予公司2025年20倍PE，对应目标价15.2元，首次覆盖，给予“买入”评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1299,
+    "total_chars": 1299,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.000823,
+  "source_content_sha256": "63d4129cc5ff54342c2d35f325227e7d8b89e289b6c5545f29d83bcd158bd263"
+}

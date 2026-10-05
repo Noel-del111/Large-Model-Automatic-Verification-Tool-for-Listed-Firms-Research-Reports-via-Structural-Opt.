@@ -1,0 +1,427 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000700",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "药品销售规模应以金额单位计量，原文却用“万吨”作量纲，单位明显错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 28,
+          "end": 114,
+          "text": "MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 28,
+          "end": 114,
+          "text": "MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0de4a71a3cf1799e2dfe8694",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“同比增长达%”百分号前无数值，应报的同比增幅数值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 28,
+          "end": 114,
+          "text": "MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 28,
+          "end": 114,
+          "text": "MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6c5a64a3513d05ac8f017ffe",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“下滑”与负数连用形成双重否定，字面等于增长，与下滑语义相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 114,
+          "end": 155,
+          "text": "当中处方药同比增长7.6%，而非处方药及双跨产品分别同比下滑-1.7%与-5.0%"
+        },
+        {
+          "kind": "source_text",
+          "start": 157,
+          "end": 197,
+          "text": "MAT25Q1，OTC药物市场规模超过1,968亿元人民币，同比下滑-1.7%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 322,
+          "end": 427,
+          "text": "实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "当中处方药同比增长7.6%，而非处方药及双跨产品分别同比下滑-1.7%与-5.0%"
+        },
+        {
+          "text": "MAT25Q1，OTC药物市场规模超过1,968亿元人民币，同比下滑-1.7%。"
+        },
+        {
+          "text": "实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名"
+        }
+      ],
+      "spans": [
+        {
+          "start": 114,
+          "end": 155,
+          "text": "当中处方药同比增长7.6%，而非处方药及双跨产品分别同比下滑-1.7%与-5.0%"
+        },
+        {
+          "start": 157,
+          "end": 197,
+          "text": "MAT25Q1，OTC药物市场规模超过1,968亿元人民币，同比下滑-1.7%。"
+        },
+        {
+          "start": 322,
+          "end": 427,
+          "text": "实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1c6dd975f4152dccde591625",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句两次列出中成药、西药市场份额63.9%和36.1%，并两次表述二者同比下降，信息重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 197,
+          "end": 320,
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        }
+      ],
+      "spans": [
+        {
+          "start": 197,
+          "end": 320,
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "397ec13adf6135e2eb1a30c0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "前文明确两类产品同比下滑，却称“中成药的涨幅波动更为明显”，下跌语境误用“涨幅”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 197,
+          "end": 320,
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        }
+      ],
+      "spans": [
+        {
+          "start": 197,
+          "end": 320,
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aedd434ada09c2bdb4a6f359",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称中成药和西药同比均下降，后文称西药较上一年度小幅增长，同一对象同比方向前后矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 197,
+          "end": 320,
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        },
+        {
+          "kind": "source_text",
+          "start": 322,
+          "end": 427,
+          "text": "实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        },
+        {
+          "text": "实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名"
+        }
+      ],
+      "spans": [
+        {
+          "start": 197,
+          "end": 320,
+          "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+        },
+        {
+          "start": 322,
+          "end": 427,
+          "text": "实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "455fe5a9335b32680f22c697",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          708
+        ]
+      ],
+      "estimated_input_tokens": 5246,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:15:16.385234+00:00",
+        "request_sha256": "f28241a5c6776ddd8543bfc7c052b02e072484aca9a48629c9277235feaec355",
+        "input_token_estimate": 14606,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27675",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "23fd1a97d5284379bf78f4a109d3855e",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3479,
+        "output_tokens": 12126,
+        "usage_source": "provider",
+        "duration_seconds": 51.548983,
+        "cost_cny": "0.051983",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。"
+          }
+        ],
+        "reason": "药品销售规模应以金额单位计量，原文却用“万吨”作量纲，单位明显错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "MAT25Q1实体零售药房药品销售规模达4,611万吨，同比增长达%；相比前两年一季度的15.5%与9.4%的同比增幅，2025Q1的同比增幅仅2.5%，同比增长大幅放缓。"
+          }
+        ],
+        "reason": "“同比增长达%”百分号前无数值，应报的同比增幅数值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "当中处方药同比增长7.6%，而非处方药及双跨产品分别同比下滑-1.7%与-5.0%"
+          },
+          {
+            "text": "MAT25Q1，OTC药物市场规模超过1,968亿元人民币，同比下滑-1.7%。"
+          },
+          {
+            "text": "实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名"
+          }
+        ],
+        "reason": "“下滑”与负数连用形成双重否定，字面等于增长，与下滑语义相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+          }
+        ],
+        "reason": "同一句两次列出中成药、西药市场份额63.9%和36.1%，并两次表述二者同比下降，信息重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+          }
+        ],
+        "reason": "前文明确两类产品同比下滑，却称“中成药的涨幅波动更为明显”，下跌语境误用“涨幅”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "中成药在OTC市场中占据63.9%的份额，西药占36.1%，两者同比均有小幅下滑，但中成药的涨幅波动更为明显；其中成药和西药的市场份额分别为63.9%和36.1%，两者同比均呈下降趋势；中成药中内科用药占绝对主导，西药则以消化道和新陈代谢药物为主"
+          },
+          {
+            "text": "实体零售OTC市场中成药占比接近64%，同比下滑-4.6%，西药与上一年度相比小幅增长;OTC中成药的构成相对集中在内科用药，其中扶正剂占比接近30%，当中的代表品种如六味地黄、阿胶、复方阿胶均为大众熟知的品名"
+          }
+        ],
+        "reason": "前文称中成药和西药同比均下降，后文称西药较上一年度小幅增长，同一对象同比方向前后矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 708,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 708,
+    "processed_ranges": [
+      [
+        0,
+        708
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 708,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001627,
+  "source_content_sha256": "878613db676a7286a40cd5bf0dc27033255b71a51760b2cf9dcfc3133992a13e"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"雪峰科技(603)\"}], \"reason\": \"A股股票代码应为6位数字，此处“603”不足6位，格式不完整。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"公司工业炸药产能11.95吨/年，产能全部位于新疆，疆内市占率达22%。\"}], \"reason\": \"民爆企业工业炸药产能通常以万吨/年计，11.95吨/年量纲过小，应为万吨/年。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"从煤炭保供基地（2024-2019年新疆原煤产量CAGR达17.9%）到煤化工高速发展，煤化工项目为疆煤提供消化渠道，逻辑体现为“煤化工->煤矿->民爆”逐级传导。\"}], \"reason\": \"时间区间写为“2024-2019年”，起点2024年晚于终点2019年，时间倒置。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"公司是疆内唯一硝酸铵生产企业，受益运费差、竞争格局优势明显。\"}, {\"text\": \"公司是疆内唯一硝酸铵生产企业，受益运费差、竞争格局优势明显。\"}], \"reason\": \"同一句连续重复出现两次，信息冗余，无新增含义。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:51:54.648473+00:00",
+    "request_sha256": "faf7008609556263b69040034595c782246660929d2ca66a40e5f6cd942cb6b6",
+    "input_token_estimate": 15491,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277635",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2eb8456153b041d889fd77e46caf4d4a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3687,
+    "output_tokens": 12643,
+    "usage_source": "provider",
+    "duration_seconds": 45.216745,
+    "cost_cny": "0.054259"
+  },
+  "cache_request": {
+    "key": "6fe31d62a23d232df1fb64dd4877eae86e47c5af8edb7e5d73b2dbbd94bde18c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "faf7008609556263b69040034595c782246660929d2ca66a40e5f6cd942cb6b6"
+  }
+}

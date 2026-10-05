@@ -1,0 +1,578 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000455",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一营收和净利润数据连续重复出现，属于不必要的冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 77,
+          "end": 192,
+          "text": "2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。\n2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。\n2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 77,
+          "end": 192,
+          "text": "2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。\n2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4357eef08a3f8a614073d286",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "三个业务营收对应四个同比增长率，多出101.12%无对应业务，数据不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 289,
+          "end": 375,
+          "text": "其中CMP抛光垫/CMP抛光液、清洗液/半导体显示材料业务分别实现营收7.16/2.15/4.02亿元，同比增长71.51%/178.89%/131.12%/101.12%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中CMP抛光垫/CMP抛光液、清洗液/半导体显示材料业务分别实现营收7.16/2.15/4.02亿元，同比增长71.51%/178.89%/131.12%/101.12%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 289,
+          "end": 375,
+          "text": "其中CMP抛光垫/CMP抛光液、清洗液/半导体显示材料业务分别实现营收7.16/2.15/4.02亿元，同比增长71.51%/178.89%/131.12%/101.12%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "79ac58d297ac613d101173cc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "4.62除以33.38约等于13.84%，与原文13.86%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 489,
+          "end": 540,
+          "text": "2024年，公司研发投入金额4.62亿元，较上年同期增长21.01%，占营业收入的比例为13.86%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司研发投入金额4.62亿元，较上年同期增长21.01%，占营业收入的比例为13.86%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 489,
+          "end": 540,
+          "text": "2024年，公司研发投入金额4.62亿元，较上年同期增长21.01%，占营业收入的比例为13.86%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9834a8f06912408e5c71c434",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "前后文均为CMP抛光垫，此处“ABC抛光垫”术语错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 775,
+          "end": 846,
+          "text": "2025年第一季度，公司ABC抛光垫实现产品销售收入2.2亿元，同比增长63.14%，环比增长13.83%，为逐季度持续放量打下了良好的基础。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年第一季度，公司ABC抛光垫实现产品销售收入2.2亿元，同比增长63.14%，环比增长13.83%，为逐季度持续放量打下了良好的基础。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 775,
+          "end": 846,
+          "text": "2025年第一季度，公司ABC抛光垫实现产品销售收入2.2亿元，同比增长63.14%，环比增长13.83%，为逐季度持续放量打下了良好的基础。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "640050ababcc9d0f84229b01",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "无氟光敏聚酰亚胺后括号为空，缺失应有的英文缩写。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1563,
+          "end": 1637,
+          "text": "持续进行无氟光敏聚酰亚胺（）、黑色像素定义层材料（BPDL）、薄膜封装低介电材料（Low Dk INK）等新一代OLED显示材料的创新研发及送样验证"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "持续进行无氟光敏聚酰亚胺（）、黑色像素定义层材料（BPDL）、薄膜封装低介电材料（Low Dk INK）等新一代OLED显示材料的创新研发及送样验证"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1563,
+          "end": 1637,
+          "text": "持续进行无氟光敏聚酰亚胺（）、黑色像素定义层材料（BPDL）、薄膜封装低介电材料（Low Dk INK）等新一代OLED显示材料的创新研发及送样验证"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2f65d95e41395e04c27a3c3e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2648
+        ]
+      ],
+      "estimated_input_tokens": 7086,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:12:49.336181+00:00",
+        "request_sha256": "272e9c27633839078495904b859abe191dc90a7b0e520847c440ba8cf0bd2c03",
+        "input_token_estimate": 19723,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281867",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d3ff9c13e2634d63a2b006523142868e",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4579,
+        "output_tokens": 5732,
+        "usage_source": "provider",
+        "duration_seconds": 22.78854,
+        "cost_cny": "0.027507"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。\n2024年，公司实现营收33.38亿元，同比增长25.14%；实现归母净利润5.21亿元，同比增长134.54%。"
+          }
+        ],
+        "reason": "同一营收和净利润数据连续重复出现，属于不必要的冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "其中CMP抛光垫/CMP抛光液、清洗液/半导体显示材料业务分别实现营收7.16/2.15/4.02亿元，同比增长71.51%/178.89%/131.12%/101.12%"
+          }
+        ],
+        "reason": "三个业务营收对应四个同比增长率，多出101.12%无对应业务，数据不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2024年，公司研发投入金额4.62亿元，较上年同期增长21.01%，占营业收入的比例为13.86%。"
+          }
+        ],
+        "reason": "4.62除以33.38约等于13.84%，与原文13.86%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "2025年第一季度，公司ABC抛光垫实现产品销售收入2.2亿元，同比增长63.14%，环比增长13.83%，为逐季度持续放量打下了良好的基础。"
+          }
+        ],
+        "reason": "前后文均为CMP抛光垫，此处“ABC抛光垫”术语错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "持续进行无氟光敏聚酰亚胺（）、黑色像素定义层材料（BPDL）、薄膜封装低介电材料（Low Dk INK）等新一代OLED显示材料的创新研发及送样验证"
+          }
+        ],
+        "reason": "无氟光敏聚酰亚胺后括号为空，缺失应有的英文缩写。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 77,
+      "end": 108,
+      "text": "2024年，公司实现营收33.38亿元，同比增长25.14%；",
+      "quantities": [
+        {
+          "value": "33.38",
+          "unit": "亿元",
+          "start": 89,
+          "end": 96
+        },
+        {
+          "value": "25.14",
+          "unit": "%",
+          "start": 101,
+          "end": 107
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 108,
+      "end": 134,
+      "text": "实现归母净利润5.21亿元，同比增长134.54%。",
+      "quantities": [
+        {
+          "value": "5.21",
+          "unit": "亿元",
+          "start": 115,
+          "end": 121
+        },
+        {
+          "value": "134.54",
+          "unit": "%",
+          "start": 126,
+          "end": 133
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 135,
+      "end": 166,
+      "text": "2024年，公司实现营收33.38亿元，同比增长25.14%；",
+      "quantities": [
+        {
+          "value": "33.38",
+          "unit": "亿元",
+          "start": 147,
+          "end": 154
+        },
+        {
+          "value": "25.14",
+          "unit": "%",
+          "start": 159,
+          "end": 165
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 166,
+      "end": 192,
+      "text": "实现归母净利润5.21亿元，同比增长134.54%。",
+      "quantities": [
+        {
+          "value": "5.21",
+          "unit": "亿元",
+          "start": 173,
+          "end": 179
+        },
+        {
+          "value": "134.54",
+          "unit": "%",
+          "start": 184,
+          "end": 191
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 192,
+      "end": 289,
+      "text": "2024年，公司半导体板块业务（含半导体材料业务及集成电路芯片设计和应用业务）实现主营业务收入15.2亿元（其中芯片业务收入已剔除内部抵消），同比增长77.40%，占公司总营业收入比例持续提升；",
+      "quantities": [
+        {
+          "value": "15.2",
+          "unit": "亿元",
+          "start": 239,
+          "end": 245
+        },
+        {
+          "value": "77.40",
+          "unit": "%",
+          "start": 267,
+          "end": 273
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "占公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 289,
+      "end": 435,
+      "text": "其中CMP抛光垫/CMP抛光液、清洗液/半导体显示材料业务分别实现营收7.16/2.15/4.02亿元，同比增长71.51%/178.89%/131.12%/101.12%，半导体先进封装材料业务方面，2024年，公司首次获得半导体封装PI、临时键合胶产品的采购订单，合计销售收入544万元。",
+      "quantities": [
+        {
+          "value": "4.02",
+          "unit": "亿元",
+          "start": 334,
+          "end": 340
+        },
+        {
+          "value": "71.51",
+          "unit": "%",
+          "start": 345,
+          "end": 351
+        },
+        {
+          "value": "178.89",
+          "unit": "%",
+          "start": 352,
+          "end": 359
+        },
+        {
+          "value": "131.12",
+          "unit": "%",
+          "start": 360,
+          "end": 367
+        },
+        {
+          "value": "101.12",
+          "unit": "%",
+          "start": 368,
+          "end": 375
+        },
+        {
+          "value": "544",
+          "unit": "万元",
+          "start": 429,
+          "end": 434
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 489,
+      "end": 540,
+      "text": "2024年，公司研发投入金额4.62亿元，较上年同期增长21.01%，占营业收入的比例为13.86%。",
+      "quantities": [
+        {
+          "value": "4.62",
+          "unit": "亿元",
+          "start": 503,
+          "end": 509
+        },
+        {
+          "value": "21.01",
+          "unit": "%",
+          "start": 517,
+          "end": 523
+        },
+        {
+          "value": "13.86",
+          "unit": "%",
+          "start": 533,
+          "end": 539
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2465,
+      "end": 2587,
+      "text": "我们预计公司2025/2026/2027年分别实现收入40.53/49.01/59.00亿元，实现归母净利润分别为7.01/9.59/12.90亿元，当前股价对应2025-2027年PE分别为37倍、27倍、20倍，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "59.00",
+          "unit": "亿元",
+          "start": 2504,
+          "end": 2511
+        },
+        {
+          "value": "12.90",
+          "unit": "亿元",
+          "start": 2532,
+          "end": 2539
+        },
+        {
+          "value": "37",
+          "unit": "倍",
+          "start": 2561,
+          "end": 2564
+        },
+        {
+          "value": "27",
+          "unit": "倍",
+          "start": 2565,
+          "end": 2568
+        },
+        {
+          "value": "20",
+          "unit": "倍",
+          "start": 2569,
+          "end": 2572
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2648,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2648,
+    "processed_ranges": [
+      [
+        0,
+        2648
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 22.812234,
+  "source_content_sha256": "9ccb3f37e9296459b4ef57b5efbf120e3f37658aab9c243d613d49f3db2558d4"
+}

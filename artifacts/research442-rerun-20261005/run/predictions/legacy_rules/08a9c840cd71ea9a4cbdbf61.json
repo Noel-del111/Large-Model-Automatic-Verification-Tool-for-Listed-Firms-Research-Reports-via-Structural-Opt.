@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000390",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "158e5e95d660a674d06eecc8",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 210,
+          "end": 357,
+          "text": "考虑到开特股份产能建设计划持续推进，我们维持2026-2025年、新增2027年盈利预测，预计开特股份在2025-2027年实现归母净利润1.68/2.09/2.45亿元，对应EPS为0.94/1.17/1.37/1.32元，当前股价对应PE为26.1/21.0/17.9X，维持“增持”评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 885,
+    "total_chars": 885,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.00106,
+  "source_content_sha256": "f85bef1fbded8ce82c57e33ff03eef30800f398e82d1b80898e6124d3186024d"
+}

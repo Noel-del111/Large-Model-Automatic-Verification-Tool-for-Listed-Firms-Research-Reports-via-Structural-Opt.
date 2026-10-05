@@ -1,0 +1,830 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000405",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "该句在相邻位置完全重复出现，属于不必要的冗余。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "2023年以来，营收增长呈现中枢下沉的态势：相比2022年，2023年、2024年的增长分别收窄了16.14和10.22个百分点。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "e583d24c405963cc980015c0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "该句在相邻段落中完全重复，属于不必要的冗余。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "2025年以来，葵花籽和坚果价格有所回落，预计公司后续季度的原料成本压力将会减缓。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "a7b4ab7572b19dc9c6fbc9b7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后的股票代码属性为空，缺少证券代码。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 24,
+          "end": 30,
+          "text": "洽洽食品()"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "洽洽食品()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 24,
+          "end": 30,
+          "text": "洽洽食品()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e4b2deaed31cca8bcdbb10d1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称葵花籽价格同比下跌，后文却称葵花籽和坚果价格同比上升是净利润下降主因，同一期间价格方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1360,
+          "end": 1406,
+          "text": "2025年一季度，葵花籽价格同比下跌，截至3月价格稳定在5950元/吨，同比下跌1.65%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1223,
+          "end": 1261,
+          "text": "同期净利润下降73.76%，主要原料葵花籽和坚果的价格同比上升是其主要原因。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年一季度，葵花籽价格同比下跌，截至3月价格稳定在5950元/吨，同比下跌1.65%。"
+        },
+        {
+          "text": "同期净利润下降73.76%，主要原料葵花籽和坚果的价格同比上升是其主要原因。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1360,
+          "end": 1406,
+          "text": "2025年一季度，葵花籽价格同比下跌，截至3月价格稳定在5950元/吨，同比下跌1.65%。"
+        },
+        {
+          "start": 1223,
+          "end": 1261,
+          "text": "同期净利润下降73.76%，主要原料葵花籽和坚果的价格同比上升是其主要原因。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bfd730b9bd11cb8e34a142d0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按22.99元除以1.58元约14.55倍，原文14.59倍有误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1662,
+          "end": 1770,
+          "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为1.58元、1.71元和1.91元，参照5月23日收盘价22.99元，对应的市盈率分别为14.59倍、13.45倍和12.06倍，给予公司“增持”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为1.58元、1.71元和1.91元，参照5月23日收盘价22.99元，对应的市盈率分别为14.59倍、13.45倍和12.06倍，给予公司“增持”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1662,
+          "end": 1770,
+          "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为1.58元、1.71元和1.91元，参照5月23日收盘价22.99元，对应的市盈率分别为14.59倍、13.45倍和12.06倍，给予公司“增持”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bc7cf30e10ad283b1e62cfe8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "季度期间写法不符合规范，如20242Q应为2024Q2或2024年二季度等。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 511,
+          "end": 569,
+          "text": "对照现金流来看，20242Q、20243Q、20244Q和2025-1Q，连续四个季度的销售商品获得现金流同比减少。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1166,
+          "end": 1223,
+          "text": "20251Q，公司收入同比减少13.76%，其中主要是季节性因素所致，具有偶然性，预计后续季度的收入增长将会企稳。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "对照现金流来看，20242Q、20243Q、20244Q和2025-1Q，连续四个季度的销售商品获得现金流同比减少。"
+        },
+        {
+          "text": "20251Q，公司收入同比减少13.76%，其中主要是季节性因素所致，具有偶然性，预计后续季度的收入增长将会企稳。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 511,
+          "end": 569,
+          "text": "对照现金流来看，20242Q、20243Q、20244Q和2025-1Q，连续四个季度的销售商品获得现金流同比减少。"
+        },
+        {
+          "start": 1166,
+          "end": 1223,
+          "text": "20251Q，公司收入同比减少13.76%，其中主要是季节性因素所致，具有偶然性，预计后续季度的收入增长将会企稳。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "976601f19da9c50f23ebad67",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1829
+        ]
+      ],
+      "estimated_input_tokens": 6192,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:31:38.336450+00:00",
+        "request_sha256": "29cb39b19efb65b92bbc3fb4c0545e0a1c1cd55325b1c805d374bb8c24ce7c1f",
+        "input_token_estimate": 17278,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279422",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4620ee55e3464a539642dc93939cc0c6",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4134,
+        "output_tokens": 10491,
+        "usage_source": "provider",
+        "duration_seconds": 39.908241,
+        "cost_cny": "0.046098"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2023年以来，营收增长呈现中枢下沉的态势：相比2022年，2023年、2024年的增长分别收窄了16.14和10.22个百分点。"
+          }
+        ],
+        "reason": "该句在相邻位置完全重复出现，属于不必要的冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025年以来，葵花籽和坚果价格有所回落，预计公司后续季度的原料成本压力将会减缓。"
+          }
+        ],
+        "reason": "该句在相邻段落中完全重复，属于不必要的冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "洽洽食品()"
+          }
+        ],
+        "reason": "公司名称后的股票代码属性为空，缺少证券代码。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025年一季度，葵花籽价格同比下跌，截至3月价格稳定在5950元/吨，同比下跌1.65%。"
+          },
+          {
+            "text": "同期净利润下降73.76%，主要原料葵花籽和坚果的价格同比上升是其主要原因。"
+          }
+        ],
+        "reason": "前文称葵花籽价格同比下跌，后文却称葵花籽和坚果价格同比上升是净利润下降主因，同一期间价格方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为1.58元、1.71元和1.91元，参照5月23日收盘价22.99元，对应的市盈率分别为14.59倍、13.45倍和12.06倍，给予公司“增持”评级。"
+          }
+        ],
+        "reason": "按22.99元除以1.58元约14.55倍，原文14.59倍有误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "对照现金流来看，20242Q、20243Q、20244Q和2025-1Q，连续四个季度的销售商品获得现金流同比减少。"
+          },
+          {
+            "text": "20251Q，公司收入同比减少13.76%，其中主要是季节性因素所致，具有偶然性，预计后续季度的收入增长将会企稳。"
+          }
+        ],
+        "reason": "季度期间写法不符合规范，如20242Q应为2024Q2或2024年二季度等。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2023年以来，营收增长呈现中枢下沉的态势：相比2022年，2023年、2024年的增长分别收窄了16.14和10.22个百分点。"
+          }
+        ],
+        "reason": "该句在相邻位置完全重复出现，属于不必要的冗余。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025年以来，葵花籽和坚果价格有所回落，预计公司后续季度的原料成本压力将会减缓。"
+          }
+        ],
+        "reason": "该句在相邻段落中完全重复，属于不必要的冗余。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 39,
+      "end": 90,
+      "text": "公司发布2024年年报以及2025年一季报：2024年，公司实现营收71.31亿元，同比增4.79%；",
+      "quantities": [
+        {
+          "value": "71.31",
+          "unit": "亿元",
+          "start": 73,
+          "end": 80
+        },
+        {
+          "value": "4.79",
+          "unit": "%",
+          "start": 84,
+          "end": 89
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 90,
+      "end": 115,
+      "text": "实现归母扣非净利润7.73亿元，同比增8.86%。",
+      "quantities": [
+        {
+          "value": "7.73",
+          "unit": "亿元",
+          "start": 99,
+          "end": 105
+        },
+        {
+          "value": "8.86",
+          "unit": "%",
+          "start": 109,
+          "end": 114
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 115,
+      "end": 149,
+      "text": "2025年一季度，公司实现营收15.71亿元，同比增-13.76%；",
+      "quantities": [
+        {
+          "value": "15.71",
+          "unit": "亿元",
+          "start": 130,
+          "end": 137
+        },
+        {
+          "value": "-13.76",
+          "unit": "%",
+          "start": 141,
+          "end": 148
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 149,
+      "end": 176,
+      "text": "实现归母扣非净利润0.58亿元，同比增-73.76%。",
+      "quantities": [
+        {
+          "value": "0.58",
+          "unit": "亿元",
+          "start": 158,
+          "end": 164
+        },
+        {
+          "value": "-73.76",
+          "unit": "%",
+          "start": 168,
+          "end": 175
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 198,
+      "end": 234,
+      "text": "2024年全年营收增长4.79%，增幅较2023年反弹5.92个百分点；",
+      "quantities": [
+        {
+          "value": "4.79",
+          "unit": "%",
+          "start": 209,
+          "end": 214
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 234,
+      "end": 269,
+      "text": "其中四季度营收同比增1.99%，较2023年同期反弹8.89个百分点。",
+      "quantities": [
+        {
+          "value": "1.99",
+          "unit": "%",
+          "start": 244,
+          "end": 249
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 269,
+      "end": 334,
+      "text": "2023年以来，营收增长呈现中枢下沉的态势：相比2022年，2023年、2024年的增长分别收窄了16.14和10.22个百分点。",
+      "quantities": [],
+      "periods": [
+        "2023年",
+        "2022年",
+        "2023年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 334,
+      "end": 399,
+      "text": "2023年以来，营收增长呈现中枢下沉的态势：相比2022年，2023年、2024年的增长分别收窄了16.14和10.22个百分点。",
+      "quantities": [],
+      "periods": [
+        "2023年",
+        "2022年",
+        "2023年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 399,
+      "end": 427,
+      "text": "2025年一季度，营收同比减少13.76%，录得负增长。",
+      "quantities": [
+        {
+          "value": "13.76",
+          "unit": "%",
+          "start": 414,
+          "end": 420
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 571,
+      "end": 596,
+      "text": "毛利率较2023年改善，但仍不及2022年的水平。",
+      "quantities": [],
+      "periods": [
+        "2023年",
+        "2022年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 596,
+      "end": 651,
+      "text": "2024年，公司的休闲食品整体录得毛利率28.73%，较2023年上升1.88个百分点，产品盈利出现显著改善。",
+      "quantities": [
+        {
+          "value": "28.73",
+          "unit": "%",
+          "start": 616,
+          "end": 622
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 651,
+      "end": 682,
+      "text": "但相比2022年，2024年的综合毛利率仍低3.19个百分点。",
+      "quantities": [],
+      "periods": [
+        "2022年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 682,
+      "end": 726,
+      "text": "拆分品类来看，葵花籽的盈利显著改善，录得毛利率29.68%，较上年上升4.45个百分点；",
+      "quantities": [
+        {
+          "value": "29.68",
+          "unit": "%",
+          "start": 705,
+          "end": 711
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 726,
+      "end": 756,
+      "text": "但是，坚果类的毛利率同比下降4.38个百分点至27.18%。",
+      "quantities": [
+        {
+          "value": "27.18",
+          "unit": "%",
+          "start": 749,
+          "end": 755
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1223,
+      "end": 1261,
+      "text": "同期净利润下降73.76%，主要原料葵花籽和坚果的价格同比上升是其主要原因。",
+      "quantities": [
+        {
+          "value": "73.76",
+          "unit": "%",
+          "start": 1230,
+          "end": 1236
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1598,
+      "end": 1660,
+      "text": "由于原料成本同比升高，2025年一季度公司的毛利率降至19.47%，同比下滑10.96个百分点，是一季度利润减少的主要原因。",
+      "quantities": [
+        {
+          "value": "19.47",
+          "unit": "%",
+          "start": 1625,
+          "end": 1631
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 1662,
+      "end": 1770,
+      "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为1.58元、1.71元和1.91元，参照5月23日收盘价22.99元，对应的市盈率分别为14.59倍、13.45倍和12.06倍，给予公司“增持”评级。",
+      "quantities": [
+        {
+          "value": "1.58",
+          "unit": "元",
+          "start": 1694,
+          "end": 1699
+        },
+        {
+          "value": "1.71",
+          "unit": "元",
+          "start": 1700,
+          "end": 1705
+        },
+        {
+          "value": "1.91",
+          "unit": "元",
+          "start": 1706,
+          "end": 1711
+        },
+        {
+          "value": "22.99",
+          "unit": "元",
+          "start": 1722,
+          "end": 1728
+        },
+        {
+          "value": "14.59",
+          "unit": "倍",
+          "start": 1738,
+          "end": 1744
+        },
+        {
+          "value": "13.45",
+          "unit": "倍",
+          "start": 1745,
+          "end": 1751
+        },
+        {
+          "value": "12.06",
+          "unit": "倍",
+          "start": 1752,
+          "end": 1758
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预测公司",
+        "给予公司"
+      ]
+    },
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 1662,
+      "end": 1770,
+      "text": "投资评级：我们预测公司2025、2026、2027年的每股收益为1.58元、1.71元和1.91元，参照5月23日收盘价22.99元，对应的市盈率分别为14.59倍、13.45倍和12.06倍，给予公司“增持”评级。",
+      "quantities": [
+        {
+          "value": "1.58",
+          "unit": "元",
+          "start": 1694,
+          "end": 1699
+        },
+        {
+          "value": "1.71",
+          "unit": "元",
+          "start": 1700,
+          "end": 1705
+        },
+        {
+          "value": "1.91",
+          "unit": "元",
+          "start": 1706,
+          "end": 1711
+        },
+        {
+          "value": "22.99",
+          "unit": "元",
+          "start": 1722,
+          "end": 1728
+        },
+        {
+          "value": "14.59",
+          "unit": "倍",
+          "start": 1738,
+          "end": 1744
+        },
+        {
+          "value": "13.45",
+          "unit": "倍",
+          "start": 1745,
+          "end": 1751
+        },
+        {
+          "value": "12.06",
+          "unit": "倍",
+          "start": 1752,
+          "end": 1758
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预测公司",
+        "给予公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1829,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1829,
+    "processed_ranges": [
+      [
+        0,
+        1829
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 18,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 39.933525,
+  "source_content_sha256": "cd246e9ee898102e1d500f00b0a90dcf4331e556f0055c9552a7fe09d841f94b"
+}

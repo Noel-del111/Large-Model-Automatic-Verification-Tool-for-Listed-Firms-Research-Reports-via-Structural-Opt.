@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2024年营收65.2平方/同比+10.5%，归母净利润1.9亿元/同比-41.9%；\"}], \"reason\": \"营收数值“65.2”后单位写成“平方”，应为“亿元”等货币单位，量纲错误。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2）分产品来看，时尚珠宝/传统黄金首饰/皮具收入分别同比-0.6%/+30%/-27%至29.7/29.5/2.7亿元，品牌授权费同比+23%至2.6亿元；时尚珠宝/传统黄金首饰的销售占比分别同比-5.1/+6.9pct至45.6%/45.3%。\"}], \"reason\": \"该段与紧邻前文“1）分产品来看”内容完全相同，属不必要重复。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"我们预计2025-27年净利润分别为4.85/5.76/6.81/4.81亿元，对应PE分别为21/18/15倍，维持“买入”评级。\"}], \"reason\": \"2025-27年只有三年，净利润却列出四个数值，对应PE仅三个，年份与数值数量不一致。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"继续深耕品牌印记类和IP系列产品，围绕“花丝”、“流行IP”三大差异化产品类别，加大传统黄金首饰的研发，推出了花丝系列、“梵华”系列、“臻金臻钻”系列、“三丽鸥”IP系列。\"}], \"reason\": \"称“三大差异化产品类别”，但仅列出“花丝”“流行IP”两项，数量表述与列举不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:36:56.733598+00:00",
+    "request_sha256": "41788a05c5a06ececeb425960bf040248a567928f58364a276904b90eb88ca3f",
+    "input_token_estimate": 16510,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278654",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "874aaa54446c459c961ed497f321627a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4099,
+    "output_tokens": 7468,
+    "usage_source": "provider",
+    "duration_seconds": 29.751494,
+    "cost_cny": "0.033971"
+  },
+  "cache_request": {
+    "key": "79eda3bcd55905136eca1c7d3e96d3c7448f077060a73e69bda20960d474be3f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "41788a05c5a06ececeb425960bf040248a567928f58364a276904b90eb88ca3f"
+  }
+}

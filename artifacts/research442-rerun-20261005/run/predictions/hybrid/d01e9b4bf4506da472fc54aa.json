@@ -1,0 +1,810 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000473",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "经营性现金流后仅写“-亿元”，缺少应填的具体金额数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1036,
+          "end": 1056,
+          "text": "经营性现金流-亿元，同比-463.23%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "经营性现金流-亿元，同比-463.23%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1036,
+          "end": 1056,
+          "text": "经营性现金流-亿元，同比-463.23%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "76ea89148eae380bfe5dca5c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "合同负债是金额指标，单位应为万元或亿元，不能以面积单位“万平方米”表示。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1057,
+          "end": 1090,
+          "text": "合同负债同比/环比-18.67%/-1.40%至9.36万平方米。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "合同负债同比/环比-18.67%/-1.40%至9.36万平方米。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1057,
+          "end": 1090,
+          "text": "合同负债同比/环比-18.67%/-1.40%至9.36万平方米。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ae06671d7738cfb226dcaa49",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "国内减少12家、国外减少4家合计减少16家，与总数减少13家冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 655,
+          "end": 721,
+          "text": "25Q1经销商数量同比减少13家至43家（国内减少12家，国外减少4家），经销商平均规模同比+34.43%至2092.72万元/家。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1经销商数量同比减少13家至43家（国内减少12家，国外减少4家），经销商平均规模同比+34.43%至2092.72万元/家。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 655,
+          "end": 721,
+          "text": "25Q1经销商数量同比减少13家至43家（国内减少12家，国外减少4家），经销商平均规模同比+34.43%至2092.72万元/家。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9db457367d3990661d3a24e9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“债权规模”用于描述经销商平均贡献收入，术语使用不当，应为“经销商平均规模”等。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 556,
+          "end": 603,
+          "text": "24年经销商数量增加6家至61家，经销商平均债权规模同比-7.02%至8242.88万元/家。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年经销商数量增加6家至61家，经销商平均债权规模同比-7.02%至8242.88万元/家。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 556,
+          "end": 603,
+          "text": "24年经销商数量增加6家至61家，经销商平均债权规模同比-7.02%至8242.88万元/家。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "885612b72559d30e42779888",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1378
+        ]
+      ],
+      "estimated_input_tokens": 5624,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:29:40.364959+00:00",
+        "request_sha256": "f611f3bb0274d108c8642e00d12f87ee677ea297019ad91f70c73c2eb49e833e",
+        "input_token_estimate": 15755,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277899",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4561e1348bcd4bf6b29d61810374c89e",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3936,
+        "output_tokens": 9828,
+        "usage_source": "provider",
+        "duration_seconds": 37.662794,
+        "cost_cny": "0.043248",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "经营性现金流-亿元，同比-463.23%"
+          }
+        ],
+        "reason": "经营性现金流后仅写“-亿元”，缺少应填的具体金额数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "合同负债同比/环比-18.67%/-1.40%至9.36万平方米。"
+          }
+        ],
+        "reason": "合同负债是金额指标，单位应为万元或亿元，不能以面积单位“万平方米”表示。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "25Q1经销商数量同比减少13家至43家（国内减少12家，国外减少4家），经销商平均规模同比+34.43%至2092.72万元/家。"
+          }
+        ],
+        "reason": "国内减少12家、国外减少4家合计减少16家，与总数减少13家冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "24年经销商数量增加6家至61家，经销商平均债权规模同比-7.02%至8242.88万元/家。"
+          }
+        ],
+        "reason": "“债权规模”用于描述经销商平均贡献收入，术语使用不当，应为“经销商平均规模”等。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 37,
+      "end": 112,
+      "text": "事件：2024A公司营业收入/归母净利润/扣非归母净利润分别为52.17/13.41/13.11亿元（同比+5.32%/+5.69%/+7.07%）；",
+      "quantities": [
+        {
+          "value": "13.11",
+          "unit": "亿元",
+          "start": 80,
+          "end": 87
+        },
+        {
+          "value": "+5.32",
+          "unit": "%",
+          "start": 90,
+          "end": 96
+        },
+        {
+          "value": "+5.69",
+          "unit": "%",
+          "start": 97,
+          "end": 103
+        },
+        {
+          "value": "+7.07",
+          "unit": "%",
+          "start": 104,
+          "end": 110
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "A公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 37,
+      "end": 112,
+      "text": "事件：2024A公司营业收入/归母净利润/扣非归母净利润分别为52.17/13.41/13.11亿元（同比+5.32%/+5.69%/+7.07%）；",
+      "quantities": [
+        {
+          "value": "13.11",
+          "unit": "亿元",
+          "start": 80,
+          "end": 87
+        },
+        {
+          "value": "+5.32",
+          "unit": "%",
+          "start": 90,
+          "end": 96
+        },
+        {
+          "value": "+5.69",
+          "unit": "%",
+          "start": 97,
+          "end": 103
+        },
+        {
+          "value": "+7.07",
+          "unit": "%",
+          "start": 104,
+          "end": 110
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "A公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 37,
+      "end": 112,
+      "text": "事件：2024A公司营业收入/归母净利润/扣非归母净利润分别为52.17/13.41/13.11亿元（同比+5.32%/+5.69%/+7.07%）；",
+      "quantities": [
+        {
+          "value": "13.11",
+          "unit": "亿元",
+          "start": 80,
+          "end": 87
+        },
+        {
+          "value": "+5.32",
+          "unit": "%",
+          "start": 90,
+          "end": 96
+        },
+        {
+          "value": "+5.69",
+          "unit": "%",
+          "start": 97,
+          "end": 103
+        },
+        {
+          "value": "+7.07",
+          "unit": "%",
+          "start": 104,
+          "end": 110
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "A公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 112,
+      "end": 183,
+      "text": "2025Q1公司营业收入/归母净利润/扣非归母净利润分别为9.59/1.90/1.90亿元（同比+2.74%/+2.15%/+23.63%）。",
+      "quantities": [
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 151,
+          "end": 157
+        },
+        {
+          "value": "+2.74",
+          "unit": "%",
+          "start": 160,
+          "end": 166
+        },
+        {
+          "value": "+2.15",
+          "unit": "%",
+          "start": 167,
+          "end": 173
+        },
+        {
+          "value": "+23.63",
+          "unit": "%",
+          "start": 174,
+          "end": 181
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 112,
+      "end": 183,
+      "text": "2025Q1公司营业收入/归母净利润/扣非归母净利润分别为9.59/1.90/1.90亿元（同比+2.74%/+2.15%/+23.63%）。",
+      "quantities": [
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 151,
+          "end": 157
+        },
+        {
+          "value": "+2.74",
+          "unit": "%",
+          "start": 160,
+          "end": 166
+        },
+        {
+          "value": "+2.15",
+          "unit": "%",
+          "start": 167,
+          "end": 173
+        },
+        {
+          "value": "+23.63",
+          "unit": "%",
+          "start": 174,
+          "end": 181
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 112,
+      "end": 183,
+      "text": "2025Q1公司营业收入/归母净利润/扣非归母净利润分别为9.59/1.90/1.90亿元（同比+2.74%/+2.15%/+23.63%）。",
+      "quantities": [
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 151,
+          "end": 157
+        },
+        {
+          "value": "+2.74",
+          "unit": "%",
+          "start": 160,
+          "end": 166
+        },
+        {
+          "value": "+2.15",
+          "unit": "%",
+          "start": 167,
+          "end": 173
+        },
+        {
+          "value": "+23.63",
+          "unit": "%",
+          "start": 174,
+          "end": 181
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 185,
+      "end": 214,
+      "text": "臻酿八号是营收增长主引擎，25Q1中档酒高基数下增速承压。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 214,
+      "end": 307,
+      "text": "24年高档/中档产品营业收入47.64/2.64亿元（同比+1.99%/+29.14%），高档白酒占比同比-1.06pcts至94.74%，24年天号陈延续放量势能带动中档产品占比提升。",
+      "quantities": [
+        {
+          "value": "2.64",
+          "unit": "亿元",
+          "start": 234,
+          "end": 240
+        },
+        {
+          "value": "+1.99",
+          "unit": "%",
+          "start": 243,
+          "end": 249
+        },
+        {
+          "value": "+29.14",
+          "unit": "%",
+          "start": 250,
+          "end": 257
+        },
+        {
+          "value": "94.74",
+          "unit": "%",
+          "start": 277,
+          "end": 283
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 425,
+      "end": 526,
+      "text": "25Q1公司酒类销量/吨价分别同比+18.95%/-13.23%，其中高档/中档产品营业收入8.51/0.49亿元（同比+6.71%/-34.21%），高档白酒占比同比+3.09个百分点至94.56%。",
+      "quantities": [
+        {
+          "value": "+18.95",
+          "unit": "%",
+          "start": 442,
+          "end": 449
+        },
+        {
+          "value": "-13.23",
+          "unit": "%",
+          "start": 450,
+          "end": 457
+        },
+        {
+          "value": "0.49",
+          "unit": "亿元",
+          "start": 476,
+          "end": 482
+        },
+        {
+          "value": "+6.71",
+          "unit": "%",
+          "start": 485,
+          "end": 491
+        },
+        {
+          "value": "-34.21",
+          "unit": "%",
+          "start": 492,
+          "end": 499
+        },
+        {
+          "value": "94.56",
+          "unit": "%",
+          "start": 519,
+          "end": 525
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 721,
+      "end": 788,
+      "text": "25Q1新渠道（电商、团购）/批发代理营收分别同比+184.44%/-20.44%，新渠道占比同比+20.27pcts至31.82%。",
+      "quantities": [
+        {
+          "value": "+184.44",
+          "unit": "%",
+          "start": 746,
+          "end": 754
+        },
+        {
+          "value": "-20.44",
+          "unit": "%",
+          "start": 755,
+          "end": 762
+        },
+        {
+          "value": "31.82",
+          "unit": "%",
+          "start": 781,
+          "end": 787
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 790,
+      "end": 823,
+      "text": "24年中档酒放量毛利率小幅下行，25Q1实际扣非归母净利润率提升。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 790,
+      "end": 823,
+      "text": "24年中档酒放量毛利率小幅下行，25Q1实际扣非归母净利润率提升。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 823,
+      "end": 871,
+      "text": "24年公司毛利率/净利率分别同比变动-0.40/+0.09pcts至82.76%/25.71%；",
+      "quantities": [
+        {
+          "value": "82.76",
+          "unit": "%",
+          "start": 857,
+          "end": 863
+        },
+        {
+          "value": "25.71",
+          "unit": "%",
+          "start": 864,
+          "end": 870
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 823,
+      "end": 871,
+      "text": "24年公司毛利率/净利率分别同比变动-0.40/+0.09pcts至82.76%/25.71%；",
+      "quantities": [
+        {
+          "value": "82.76",
+          "unit": "%",
+          "start": 857,
+          "end": 863
+        },
+        {
+          "value": "25.71",
+          "unit": "%",
+          "start": 864,
+          "end": 870
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 922,
+      "end": 945,
+      "text": "24年公司毛利率下降预计主要系中档酒占比提升。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 945,
+      "end": 992,
+      "text": "25Q1公司毛利率/净利率分别同比+1.50/-0.12pcts至81.97%/19.84%；",
+      "quantities": [
+        {
+          "value": "81.97",
+          "unit": "%",
+          "start": 978,
+          "end": 984
+        },
+        {
+          "value": "19.84",
+          "unit": "%",
+          "start": 985,
+          "end": 991
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 945,
+      "end": 992,
+      "text": "25Q1公司毛利率/净利率分别同比+1.50/-0.12pcts至81.97%/19.84%；",
+      "quantities": [
+        {
+          "value": "81.97",
+          "unit": "%",
+          "start": 978,
+          "end": 984
+        },
+        {
+          "value": "19.84",
+          "unit": "%",
+          "start": 985,
+          "end": 991
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1090,
+      "end": 1157,
+      "text": "25Q1毛利率提升主要系高档酒占比提升，费投精准化背景下销售费用率显著回落，考虑扣非归母净利率实际提升3.35pcts至19.85%。",
+      "quantities": [
+        {
+          "value": "19.85",
+          "unit": "%",
+          "start": 1150,
+          "end": 1156
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1090,
+      "end": 1157,
+      "text": "25Q1毛利率提升主要系高档酒占比提升，费投精准化背景下销售费用率显著回落，考虑扣非归母净利率实际提升3.35pcts至19.85%。",
+      "quantities": [
+        {
+          "value": "19.85",
+          "unit": "%",
+          "start": 1150,
+          "end": 1156
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1176,
+      "end": 1259,
+      "text": "考虑行业处于调整期，我们略调低盈利预测，预计25-27年公司收入分别为54.8/58.5/61.8亿元（25-26年前值为57.7/63.1亿元），归母净利润分别为\n",
+      "quantities": [
+        {
+          "value": "61.8",
+          "unit": "亿元",
+          "start": 1221,
+          "end": 1227
+        },
+        {
+          "value": "63.1",
+          "unit": "亿元",
+          "start": 1242,
+          "end": 1248
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1378,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1378,
+    "processed_ranges": [
+      [
+        0,
+        1378
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1378,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 20,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00278,
+  "source_content_sha256": "bff9ec73c02e0c099e64a0cc46dcdeb8926cdb1f4461f21f5820c23d3d6c2e8a"
+}

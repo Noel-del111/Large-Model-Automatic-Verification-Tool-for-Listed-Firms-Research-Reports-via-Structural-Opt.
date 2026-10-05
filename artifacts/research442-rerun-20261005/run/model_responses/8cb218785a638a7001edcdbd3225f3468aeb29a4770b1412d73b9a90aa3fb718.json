@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"投资建议：维持“”评级，上调目标价至147.19元。\"}], \"reason\": \"评级引号内为空，缺少具体评级名称，非数值属性值缺失。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"我们预计公司2025-2027（新增2027）年营收分别为15.98/21.37/27.55元（2025年原预测为18.11亿元）\"}], \"reason\": \"营收单位应为亿元，却写作元，与括号中2025年原预测18.11亿元的单位口径不符。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"对应目标价147.19元（原为124.82元，224年50x PS）\"}], \"reason\": \"年份“224年”不成立，缺少千位数字，应为2024年。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"全年实现营业收入万元，同比增长20.98%\"}], \"reason\": \"“营业收入”后直接接“万元”，明确数值位置为空，缺少具体金额。\"}, {\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。\"}], \"reason\": \"左括号后连续两个逗号且未见右括号闭合，标点格式损坏。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:17:42.628991+00:00",
+    "request_sha256": "daf7d48aa42dff423ce692156db4bc8f7603cf37571ebbf2101d9e9035af50e6",
+    "input_token_estimate": 15706,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27785",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b2af5c3ad1b547f9a2ed7bd5918bc696",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3719,
+    "output_tokens": 9064,
+    "usage_source": "provider",
+    "duration_seconds": 35.132787,
+    "cost_cny": "0.039975"
+  },
+  "cache_request": {
+    "key": "8cb218785a638a7001edcdbd3225f3468aeb29a4770b1412d73b9a90aa3fb718",
+    "purpose": "text_review.detect",
+    "messages_sha256": "daf7d48aa42dff423ce692156db4bc8f7603cf37571ebbf2101d9e9035af50e6"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"Robotaxi-5月28日，特斯拉计划于13月在美国得州奥斯汀启动Robotaxi试点服务。\"\n        }\n      ],\n      \"reason\": \"13月并非合法月份，时间信息不成立。\"\n    },\n    {\n      \"error_type\": \"属性值缺失错误\",\n      \"spans\": [\n        {\n          \"text\": \"AI基建-5月28日，工信部等三部门印发《》；\"\n        }\n      ],\n      \"reason\": \"书名号内文件名称缺失，属于非数值属性值为空。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"公司动态：人形机器人-5月29日，双林股份拟定增募资不超过15亿分。\"\n        }\n      ],\n      \"reason\": \"募资单位应为“元”，“15亿分”单位错误。\"\n    },\n    {\n      \"error_type\": \"格式错误\",\n      \"spans\": [\n        {\n          \"text\": \"事件前瞻：Robotaxi-特斯拉计划2025年6月12在奥斯汀推出Robotaxi。\"\n        }\n      ],\n      \"reason\": \"日期“2025年6月12”缺少“日”，不符合日期完整格式。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:47:18.008829+00:00",
+    "request_sha256": "cf6c27308da66fb1163bae401bf96cc43fbf14f2be3bfdf8160f7082528d883d",
+    "input_token_estimate": 17693,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279837",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "df3cf041b28847b698cac011e15705a8",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4155,
+    "output_tokens": 7749,
+    "usage_source": "provider",
+    "duration_seconds": 32.001961,
+    "cost_cny": "0.035151"
+  },
+  "cache_request": {
+    "key": "7ddec46789e5e925875fdcd2b3245646afc704d97878fd68147292d203751b31",
+    "purpose": "text_review.detect",
+    "messages_sha256": "cf6c27308da66fb1163bae401bf96cc43fbf14f2be3bfdf8160f7082528d883d"
+  }
+}

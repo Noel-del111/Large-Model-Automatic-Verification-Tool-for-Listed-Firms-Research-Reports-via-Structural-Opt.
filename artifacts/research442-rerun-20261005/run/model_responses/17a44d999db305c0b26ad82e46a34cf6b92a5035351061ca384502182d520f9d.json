@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"截至目前，30城新建商品房当年累计成交3270平方分米，同比+1%；\"}],\"reason\":\"房地产成交面积通常用平方米或万平方米，“平方分米”量纲明显过小，单位错误。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"2024年地产板块整体毛利率14.6，较上年下降2.4pct；净利率-8.3%，较上年下降7.7pct。\"}],\"reason\":\"毛利率14.6后缺少百分号，百分比数值格式不完整，与后文净利率-8.3%的写法不一致。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"价格方面，2025年5月，一线、强二线、弱二线、三线二手房价格月环比分别为-0.8%、-1.0%、-1.2%、-1.0%、-1.0%，跌幅保持在合理范围。\"}],\"reason\":\"四个价格类别对应五个环比数值，多出一个-1.0%无法归属，类别与数值数量不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:23:12.210630+00:00",
+    "request_sha256": "8008a4db603d595bbfb7340ebe3811ac96432e1865ac526bbcd2cced75206025",
+    "input_token_estimate": 15235,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277379",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "965d9ba40e93442cb9e58a711ae65ae6",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3605,
+    "output_tokens": 6631,
+    "usage_source": "provider",
+    "duration_seconds": 28.005917,
+    "cost_cny": "0.030129"
+  },
+  "cache_request": {
+    "key": "17a44d999db305c0b26ad82e46a34cf6b92a5035351061ca384502182d520f9d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "8008a4db603d595bbfb7340ebe3811ac96432e1865ac526bbcd2cced75206025"
+  }
+}

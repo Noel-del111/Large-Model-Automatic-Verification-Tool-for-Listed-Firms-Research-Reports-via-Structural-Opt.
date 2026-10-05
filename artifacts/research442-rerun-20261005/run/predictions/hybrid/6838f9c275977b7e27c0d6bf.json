@@ -1,0 +1,292 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000437",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "一年只有12个月，“2025年13月”不是合法日期。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 847,
+          "end": 918,
+          "text": "GLP-1R/GIPR双靶点的HDM1005，其肥胖适应症已在2025年13月完成全部受试者入组，2型糖尿病于2025年4月完成首例患者入组；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "GLP-1R/GIPR双靶点的HDM1005，其肥胖适应症已在2025年13月完成全部受试者入组，2型糖尿病于2025年4月完成首例患者入组；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 847,
+          "end": 918,
+          "text": "GLP-1R/GIPR双靶点的HDM1005，其肥胖适应症已在2025年13月完成全部受试者入组，2型糖尿病于2025年4月完成首例患者入组；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "63295ebe16396a8d8c1d0736",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "归母净利润35.1亿元后的括号为空，缺少应披露的同比增速数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 406,
+          "end": 458,
+          "text": "2024年公司收入419.1亿元，（同比+3.2%，以下均为同比口径）；实现归母净利润35.1亿元（）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司收入419.1亿元，（同比+3.2%，以下均为同比口径）；实现归母净利润35.1亿元（）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 406,
+          "end": 458,
+          "text": "2024年公司收入419.1亿元，（同比+3.2%，以下均为同比口径）；实现归母净利润35.1亿元（）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "68e6739d076dcfa59bb09f2b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027仅三年，却列四个归母净利润数值，与年份数及后文三年EPS/PE序列不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 254,
+          "end": 352,
+          "text": "我们预计2025-2027年归母净利润为40.61、47.16、55.37、25.37亿元，EPS为2.32/2.69/3.16元，对应PE为16.3/14.0/11.9倍，维持公司“买入”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计2025-2027年归母净利润为40.61、47.16、55.37、25.37亿元，EPS为2.32/2.69/3.16元，对应PE为16.3/14.0/11.9倍，维持公司“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 254,
+          "end": 352,
+          "text": "我们预计2025-2027年归母净利润为40.61、47.16、55.37、25.37亿元，EPS为2.32/2.69/3.16元，对应PE为16.3/14.0/11.9倍，维持公司“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "87057ec6ae77b5def26c546a",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1025
+        ]
+      ],
+      "estimated_input_tokens": 5459,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:59:08.941419+00:00",
+        "request_sha256": "aca5de30cf406b25fd2138e8294d09aa7699b4eb592fd1c117cc712c67e297c9",
+        "input_token_estimate": 15238,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277382",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "df74b3e534ef43e7809b0624775dc0de",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3673,
+        "output_tokens": 6194,
+        "usage_source": "provider",
+        "duration_seconds": 24.825509,
+        "cost_cny": "0.028449",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "GLP-1R/GIPR双靶点的HDM1005，其肥胖适应症已在2025年13月完成全部受试者入组，2型糖尿病于2025年4月完成首例患者入组；"
+          }
+        ],
+        "reason": "一年只有12个月，“2025年13月”不是合法日期。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年公司收入419.1亿元，（同比+3.2%，以下均为同比口径）；实现归母净利润35.1亿元（）。"
+          }
+        ],
+        "reason": "归母净利润35.1亿元后的括号为空，缺少应披露的同比增速数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们预计2025-2027年归母净利润为40.61、47.16、55.37、25.37亿元，EPS为2.32/2.69/3.16元，对应PE为16.3/14.0/11.9倍，维持公司“买入”评级。"
+          }
+        ],
+        "reason": "2025-2027仅三年，却列四个归母净利润数值，与年份数及后文三年EPS/PE序列不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 189,
+      "end": 352,
+      "text": "创新管线，公司差异化布局ADC和PROTAC赛道，并在降糖减重等代谢领域，全面布局口服小分子、双靶点及三靶点，创新管线步入收获期，我们预计2025-2027年归母净利润为40.61、47.16、55.37、25.37亿元，EPS为2.32/2.69/3.16元，对应PE为16.3/14.0/11.9倍，维持公司“买入”评级。",
+      "quantities": [
+        {
+          "value": "25.37",
+          "unit": "亿元",
+          "start": 292,
+          "end": 299
+        },
+        {
+          "value": "3.16",
+          "unit": "元",
+          "start": 314,
+          "end": 319
+        },
+        {
+          "value": "11.9",
+          "unit": "倍",
+          "start": 335,
+          "end": 340
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "维持公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 442,
+      "end": 458,
+      "text": "实现归母净利润35.1亿元（）。",
+      "quantities": [
+        {
+          "value": "35.1",
+          "unit": "亿元",
+          "start": 449,
+          "end": 455
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1025,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1025,
+    "processed_ranges": [
+      [
+        0,
+        1025
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1025,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001551,
+  "source_content_sha256": "01bb3766e3686c985667a5bf0ff01df93aa8ff206bce2a290e180e3af5e45b9b"
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000239",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "日期区间写成5月5日-1日，起点晚于终点，时间关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 128,
+          "end": 201,
+          "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 128,
+          "end": 201,
+          "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "87134b92caf9f9fa32435f1e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“流动量约人次”处缺少具体数值，只有单位人次。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 128,
+          "end": 201,
+          "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 128,
+          "end": 201,
+          "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aa5da72aef49bb112e12af1e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“20019年”年份不成立，应为2019年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 565,
+          "end": 618,
+          "text": "同时随着离岸人民币兑日元汇率的持续增长，去哪儿数据显示假期飞往日本的机票预订量较20019年增长六成以上。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "同时随着离岸人民币兑日元汇率的持续增长，去哪儿数据显示假期飞往日本的机票预订量较20019年增长六成以上。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 565,
+          "end": 618,
+          "text": "同时随着离岸人民币兑日元汇率的持续增长，去哪儿数据显示假期飞往日本的机票预订量较20019年增长六成以上。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "997c0177c3961ae7b75d9cdc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "“从去年五一恢复至3-4”中3-4后缺少单位“成”，与后文7-8成不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 366,
+          "end": 516,
+          "text": "我们分析国际航班运力的恢复（从去年五一恢复至3-4提升至今年7-8成）、供给丰富与价格回落（假期广之旅出境游产品数量较去年同比猛增150%，产品价格同比下降10%-20%）、多国免签利好、请三休九的拼假模式（根据广之旅快讯，选择节前出发人数与正日出发人数比例为3:1），均为出境人次恢复提速提供基础。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们分析国际航班运力的恢复（从去年五一恢复至3-4提升至今年7-8成）、供给丰富与价格回落（假期广之旅出境游产品数量较去年同比猛增150%，产品价格同比下降10%-20%）、多国免签利好、请三休九的拼假模式（根据广之旅快讯，选择节前出发人数与正日出发人数比例为3:1），均为出境人次恢复提速提供基础。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 366,
+          "end": 516,
+          "text": "我们分析国际航班运力的恢复（从去年五一恢复至3-4提升至今年7-8成）、供给丰富与价格回落（假期广之旅出境游产品数量较去年同比猛增150%，产品价格同比下降10%-20%）、多国免签利好、请三休九的拼假模式（根据广之旅快讯，选择节前出发人数与正日出发人数比例为3:1），均为出境人次恢复提速提供基础。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "957a492ed04ccf10cce68182",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1412
+        ]
+      ],
+      "estimated_input_tokens": 6043,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:25:15.758274+00:00",
+        "request_sha256": "182a3ccd3d8638e0c7f90336f840a6b46fcf5a7d86902322c4c2abd8e4962dfe",
+        "input_token_estimate": 16783,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278927",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "a03ee750ba8f46eea18e0d4cc2bc020e",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3953,
+        "output_tokens": 8160,
+        "usage_source": "provider",
+        "duration_seconds": 32.736659,
+        "cost_cny": "0.036593",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+          }
+        ],
+        "reason": "日期区间写成5月5日-1日，起点晚于终点，时间关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "根据央视网，5月5日-1日，全社会跨区域人员流动量约人次，日均超2.7亿人次，比2019年同期增长24.1%，预计超2023年同期，符合官方预测。"
+          }
+        ],
+        "reason": "“流动量约人次”处缺少具体数值，只有单位人次。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "同时随着离岸人民币兑日元汇率的持续增长，去哪儿数据显示假期飞往日本的机票预订量较20019年增长六成以上。"
+          }
+        ],
+        "reason": "“20019年”年份不成立，应为2019年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "我们分析国际航班运力的恢复（从去年五一恢复至3-4提升至今年7-8成）、供给丰富与价格回落（假期广之旅出境游产品数量较去年同比猛增150%，产品价格同比下降10%-20%）、多国免签利好、请三休九的拼假模式（根据广之旅快讯，选择节前出发人数与正日出发人数比例为3:1），均为出境人次恢复提速提供基础。"
+          }
+        ],
+        "reason": "“从去年五一恢复至3-4”中3-4后缺少单位“成”，与后文7-8成不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1412,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1412,
+    "processed_ranges": [
+      [
+        0,
+        1412
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1412,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001526,
+  "source_content_sha256": "8f9a36395dcfe6c8ab95ca0c387790bbfb8d8e243d6b0f01c528b446a4e76639"
+}

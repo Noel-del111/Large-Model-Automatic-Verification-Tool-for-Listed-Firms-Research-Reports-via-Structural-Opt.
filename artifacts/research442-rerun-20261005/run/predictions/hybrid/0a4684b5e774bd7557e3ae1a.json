@@ -1,0 +1,241 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000530",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“新能源渗透率%”的百分号前缺少具体数值，明确数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 34,
+          "end": 137,
+          "text": "本周数据：2025年5月第4周（5.19-5.25）乘用车销量39.9万辆，同比+12.1%，环比+2.6%；新能源乘用车销量22.2万辆，同比+20.4%，环比+2.0%；新能源渗透率%，环比-0.4%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周数据：2025年5月第4周（5.19-5.25）乘用车销量39.9万辆，同比+12.1%，环比+2.6%；新能源乘用车销量22.2万辆，同比+20.4%，环比+2.0%；新能源渗透率%，环比-0.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 34,
+          "end": 137,
+          "text": "本周数据：2025年5月第4周（5.19-5.25）乘用车销量39.9万辆，同比+12.1%，环比+2.6%；新能源乘用车销量22.2万辆，同比+20.4%，环比+2.0%；新能源渗透率%，环比-0.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5384eb7a3186096d9735c94b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间写成5月30日至5月26日，终点早于起点，起止先后关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 139,
+          "end": 219,
+          "text": "本周行情：汽车板块本周表现弱于市场。本周（5月30日-5月26日）A股汽车板块下跌2.90%。，在申万子行业中排名第30位，表现弱于沪深300（-1.49%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周行情：汽车板块本周表现弱于市场。本周（5月30日-5月26日）A股汽车板块下跌2.90%。，在申万子行业中排名第30位，表现弱于沪深300（-1.49%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 139,
+          "end": 219,
+          "text": "本周行情：汽车板块本周表现弱于市场。本周（5月30日-5月26日）A股汽车板块下跌2.90%。，在申万子行业中排名第30位，表现弱于沪深300（-1.49%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "02219e2a7aa8e7d03bc44194",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句“2025年超100城开放路权，政策强制赋能场景落地”连续重复出现，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 641,
+          "end": 693,
+          "text": "2025年超100城开放路权，政策强制赋能场景落地。2025年超100城开放路权，政策强制赋能场景落地。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年超100城开放路权，政策强制赋能场景落地。2025年超100城开放路权，政策强制赋能场景落地。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 641,
+          "end": 693,
+          "text": "2025年超100城开放路权，政策强制赋能场景落地。2025年超100城开放路权，政策强制赋能场景落地。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4f0f020b85313f9b99510267",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1552
+        ]
+      ],
+      "estimated_input_tokens": 6124,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:59:52.772532+00:00",
+        "request_sha256": "1d68ea1ade1107feb142ed47611e699db6315ad47fbd46cc41485dfd12c33b4f",
+        "input_token_estimate": 17032,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279176",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f1ef76d1908241a892f0137948ade146",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4049,
+        "output_tokens": 9138,
+        "usage_source": "provider",
+        "duration_seconds": 34.760187,
+        "cost_cny": "0.040601",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "本周数据：2025年5月第4周（5.19-5.25）乘用车销量39.9万辆，同比+12.1%，环比+2.6%；新能源乘用车销量22.2万辆，同比+20.4%，环比+2.0%；新能源渗透率%，环比-0.4%。"
+          }
+        ],
+        "reason": "“新能源渗透率%”的百分号前缺少具体数值，明确数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "本周行情：汽车板块本周表现弱于市场。本周（5月30日-5月26日）A股汽车板块下跌2.90%。，在申万子行业中排名第30位，表现弱于沪深300（-1.49%）。"
+          }
+        ],
+        "reason": "时间区间写成5月30日至5月26日，终点早于起点，起止先后关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025年超100城开放路权，政策强制赋能场景落地。2025年超100城开放路权，政策强制赋能场景落地。"
+          }
+        ],
+        "reason": "同一句“2025年超100城开放路权，政策强制赋能场景落地”连续重复出现，未增加新信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1552,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1552,
+    "processed_ranges": [
+      [
+        0,
+        1552
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1552,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001583,
+  "source_content_sha256": "602abc99d35d9da0e86e229a432784e56d69cd0d815ebf434dbe1792e8a592d2"
+}

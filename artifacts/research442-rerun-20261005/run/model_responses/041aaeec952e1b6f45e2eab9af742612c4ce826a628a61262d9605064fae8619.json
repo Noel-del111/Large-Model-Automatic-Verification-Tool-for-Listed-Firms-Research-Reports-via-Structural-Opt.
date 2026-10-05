@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"根据1120年12月30日制定的《深圳经济特区城市更新条例》，建筑物区分所有权的，应当经专有部分面积占比四分之三以上的物业权利人且占总人数四分之三以上的物业权利人同意。\"}], \"reason\": \"“1120年12月30日”年份不成立，应为2020年或2021年等真实年份。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"截至2022年底，深圳全市以自然村为单位的城中村单元共计2042个，城中村总楼栋约31.9万栋，总套（间）约591.3万，总建筑面积约2.2平，占全市建筑总量比重超过40%，居住人口占全市实有人口约60%。\"}], \"reason\": \"“总建筑面积约2.2平”面积单位错误，应为“亿平方米”等，否则数量级不合理。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"辖区建面和栋数前三甲为龙岗、宝安、龙华三区，栋数合计占比70.3%，建筑面积合计占比74.9%。\"}, {\"text\": \"其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。龙华栋数占比为11.5%，建筑面积占比15.4%。\"}], \"reason\": \"龙岗、宝安、龙华栋数占比30.5%+38.2%+11.5%=80.2%，与前述栋数合计占比70.3%不符。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。\"}], \"reason\": \"宝安栋数占比38.2%高于龙岗30.5%，龙岗不可能栋数占比最高、宝安第二。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"拆除新建类项目，意见征集门槛降低，从规划层面、搬迁实施、资金平衡及前服引入等方面为城中村改造项目落地提供保障支持。\"}, {\"text\": \"从规划层面、搬迁实施、资金平衡及前服引入等方面为城中村改造项目落地提供保障支持。\"}], \"reason\": \"同一总结句在前后不必要地重复出现。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:49:19.400629+00:00",
+    "request_sha256": "1cfa3ecedae5f5f3882bfcb27d35ed79718687a79c923f29e0dd7af50195f1c2",
+    "input_token_estimate": 21691,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.283835",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "20a3aec6e77b4331877db6116c4cd61c",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4847,
+    "output_tokens": 10152,
+    "usage_source": "provider",
+    "duration_seconds": 37.626437,
+    "cost_cny": "0.045455"
+  },
+  "cache_request": {
+    "key": "041aaeec952e1b6f45e2eab9af742612c4ce826a628a61262d9605064fae8619",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1cfa3ecedae5f5f3882bfcb27d35ed79718687a79c923f29e0dd7af50195f1c2"
+  }
+}

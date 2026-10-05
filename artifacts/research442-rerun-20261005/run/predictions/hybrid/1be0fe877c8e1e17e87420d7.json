@@ -1,0 +1,441 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000325",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "粤丰环保退市日期前称2025年6月2日，后称24年6月2日；且区间自24年7月7日至24年6月2日，结束早于开始。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 47,
+          "end": 79,
+          "text": "事件：2025年6月2日，公司发布公告粤丰环保从香港联交所退市。"
+        },
+        {
+          "kind": "source_text",
+          "start": 119,
+          "end": 183,
+          "text": "自24年7月7日瀚蓝环境启动私有化粤丰环保到24年6月2日粤丰环保从港交所退市，瀚蓝并购粤丰圆满落幕，25年6月起合并粤丰报表。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件：2025年6月2日，公司发布公告粤丰环保从香港联交所退市。"
+        },
+        {
+          "text": "自24年7月7日瀚蓝环境启动私有化粤丰环保到24年6月2日粤丰环保从港交所退市，瀚蓝并购粤丰圆满落幕，25年6月起合并粤丰报表。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 47,
+          "end": 79,
+          "text": "事件：2025年6月2日，公司发布公告粤丰环保从香港联交所退市。"
+        },
+        {
+          "start": 119,
+          "end": 183,
+          "text": "自24年7月7日瀚蓝环境启动私有化粤丰环保到24年6月2日粤丰环保从港交所退市，瀚蓝并购粤丰圆满落幕，25年6月起合并粤丰报表。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c8f59f93bbc2fa65042243f9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "垃圾焚烧规模应以吨/日为单位，平方米/日量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 183,
+          "end": 227,
+          "text": "1）规模扩张：并购后垃圾焚烧规模达到97590万平方米/日，国内行业排名前三、A股首位。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1）规模扩张：并购后垃圾焚烧规模达到97590万平方米/日，国内行业排名前三、A股首位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 183,
+          "end": 227,
+          "text": "1）规模扩张：并购后垃圾焚烧规模达到97590万平方米/日，国内行业排名前三、A股首位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3612b806c6dea1d65e2d93ca",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "数值从5.1%升至10.7%，却使用“降至”，下降表述与数值上升冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 633,
+          "end": 672,
+          "text": "参照并购创冠，其盈利能力持续提升，ROE从14年5.1%降至24年10.7%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "参照并购创冠，其盈利能力持续提升，ROE从14年5.1%降至24年10.7%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 633,
+          "end": 672,
+          "text": "参照并购创冠，其盈利能力持续提升，ROE从14年5.1%降至24年10.7%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8ace389d67b4b19ff8d9105e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一报告2025年归母净利润18.6/18.60一致，但对应PE分别10倍和11倍；2026年净利润21.2与21.17、PE 9与10也不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 276,
+          "end": 360,
+          "text": "此前参考粤丰环保24年可持续经营净利润，假设粤丰25Q2末并表，预计25-26年公司归母净利润18.6、21.2亿元，对应PE为10、9倍，粤丰实际并表时间较预期提前。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1470,
+          "end": 1534,
+          "text": "我们维持2025-2027年归母净利润预测18.60、21.17、22.14亿元，对应PE为11/10/9倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此前参考粤丰环保24年可持续经营净利润，假设粤丰25Q2末并表，预计25-26年公司归母净利润18.6、21.2亿元，对应PE为10、9倍，粤丰实际并表时间较预期提前。"
+        },
+        {
+          "text": "我们维持2025-2027年归母净利润预测18.60、21.17、22.14亿元，对应PE为11/10/9倍，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 276,
+          "end": 360,
+          "text": "此前参考粤丰环保24年可持续经营净利润，假设粤丰25Q2末并表，预计25-26年公司归母净利润18.6、21.2亿元，对应PE为10、9倍，粤丰实际并表时间较预期提前。"
+        },
+        {
+          "start": 1470,
+          "end": 1534,
+          "text": "我们维持2025-2027年归母净利润预测18.60、21.17、22.14亿元，对应PE为11/10/9倍，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e7ca20f55ee0028319c2f833",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "13.60亿港元按0.92汇率换算，无论乘除均约12.51或14.78亿元人民币，非15.51亿元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 371,
+          "end": 515,
+          "text": "24年瀚蓝环境剔除14号文影响后的经营性现金流净额33.15亿元，资本开支17.08亿元，简易自由现金流16.07亿元；24年粤丰环保剔除14号文影响后的经营性现金流净额18.67亿港元，资本开支5.07亿港元，简易自由现金流13.60亿港元（按0.92汇率换算约15.51亿元人民币）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年瀚蓝环境剔除14号文影响后的经营性现金流净额33.15亿元，资本开支17.08亿元，简易自由现金流16.07亿元；24年粤丰环保剔除14号文影响后的经营性现金流净额18.67亿港元，资本开支5.07亿港元，简易自由现金流13.60亿港元（按0.92汇率换算约15.51亿元人民币）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 371,
+          "end": 515,
+          "text": "24年瀚蓝环境剔除14号文影响后的经营性现金流净额33.15亿元，资本开支17.08亿元，简易自由现金流16.07亿元；24年粤丰环保剔除14号文影响后的经营性现金流净额18.67亿港元，资本开支5.07亿港元，简易自由现金流13.60亿港元（按0.92汇率换算约15.51亿元人民币）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "51484901b122a5de39ce33ce",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1566
+        ]
+      ],
+      "estimated_input_tokens": 6071,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:58:30.625884+00:00",
+        "request_sha256": "5617765c619a2a07319d2fa1e6e0db1038d216128115e5c3f710db3eadb9ee0a",
+        "input_token_estimate": 16903,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279047",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ffac0890686347ce841309e0787ae120",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4051,
+        "output_tokens": 9316,
+        "usage_source": "provider",
+        "duration_seconds": 34.113267,
+        "cost_cny": "0.041315",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "事件：2025年6月2日，公司发布公告粤丰环保从香港联交所退市。"
+          },
+          {
+            "text": "自24年7月7日瀚蓝环境启动私有化粤丰环保到24年6月2日粤丰环保从港交所退市，瀚蓝并购粤丰圆满落幕，25年6月起合并粤丰报表。"
+          }
+        ],
+        "reason": "粤丰环保退市日期前称2025年6月2日，后称24年6月2日；且区间自24年7月7日至24年6月2日，结束早于开始。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "1）规模扩张：并购后垃圾焚烧规模达到97590万平方米/日，国内行业排名前三、A股首位。"
+          }
+        ],
+        "reason": "垃圾焚烧规模应以吨/日为单位，平方米/日量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "参照并购创冠，其盈利能力持续提升，ROE从14年5.1%降至24年10.7%。"
+          }
+        ],
+        "reason": "数值从5.1%升至10.7%，却使用“降至”，下降表述与数值上升冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "此前参考粤丰环保24年可持续经营净利润，假设粤丰25Q2末并表，预计25-26年公司归母净利润18.6、21.2亿元，对应PE为10、9倍，粤丰实际并表时间较预期提前。"
+          },
+          {
+            "text": "我们维持2025-2027年归母净利润预测18.60、21.17、22.14亿元，对应PE为11/10/9倍，维持“买入”评级。"
+          }
+        ],
+        "reason": "同一报告2025年归母净利润18.6/18.60一致，但对应PE分别10倍和11倍；2026年净利润21.2与21.17、PE 9与10也不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "24年瀚蓝环境剔除14号文影响后的经营性现金流净额33.15亿元，资本开支17.08亿元，简易自由现金流16.07亿元；24年粤丰环保剔除14号文影响后的经营性现金流净额18.67亿港元，资本开支5.07亿港元，简易自由现金流13.60亿港元（按0.92汇率换算约15.51亿元人民币）。"
+          }
+        ],
+        "reason": "13.60亿港元按0.92汇率换算，无论乘除均约12.51或14.78亿元人民币，非15.51亿元。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 269,
+      "end": 360,
+      "text": "2）增厚盈利：此前参考粤丰环保24年可持续经营净利润，假设粤丰25Q2末并表，预计25-26年公司归母净利润18.6、21.2亿元，对应PE为10、9倍，粤丰实际并表时间较预期提前。",
+      "quantities": [
+        {
+          "value": "21.2",
+          "unit": "亿元",
+          "start": 328,
+          "end": 334
+        },
+        {
+          "value": "9",
+          "unit": "倍",
+          "start": 343,
+          "end": 345
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 269,
+      "end": 360,
+      "text": "2）增厚盈利：此前参考粤丰环保24年可持续经营净利润，假设粤丰25Q2末并表，预计25-26年公司归母净利润18.6、21.2亿元，对应PE为10、9倍，粤丰实际并表时间较预期提前。",
+      "quantities": [
+        {
+          "value": "21.2",
+          "unit": "亿元",
+          "start": 328,
+          "end": 334
+        },
+        {
+          "value": "9",
+          "unit": "倍",
+          "start": 343,
+          "end": 345
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1470,
+      "end": 1534,
+      "text": "我们维持2025-2027年归母净利润预测18.60、21.17、22.14亿元，对应PE为11/10/9倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "22.14",
+          "unit": "亿元",
+          "start": 1503,
+          "end": 1510
+        },
+        {
+          "value": "9",
+          "unit": "倍",
+          "start": 1522,
+          "end": 1524
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1566,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1566,
+    "processed_ranges": [
+      [
+        0,
+        1566
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1566,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001992,
+  "source_content_sha256": "2f2be31ec4477ee8e8b48c05677c0aa9d2600025b58ea1085825303877e2bee8"
+}

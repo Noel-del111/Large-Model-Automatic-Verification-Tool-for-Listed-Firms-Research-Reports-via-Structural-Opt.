@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"射频芯片业务技术突破持续落地，营业收入增长115.08%，产品订单与出货量快速放量，毛利率大幅转正至13.11%，成为业绩增长的重要引擎。\"}], \"reason\": \"该句在原文同一段中连续完整重复出现两次，属不必要的冗余表达。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"半导体硅片业务是公司最成熟、规模最大的板块，销售量同比增长62.91%，营收同比增长26.93%，达到亿元，进入头部厂商供应链。\"}], \"reason\": \"“达到亿元”前缺少具体营收数值，仅保留单位，数值信息缺失。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"2024年公司营业收入的大幅增加主要系2025年半导体行业景气度的见底回暖及公司加强市场拓展、调整产品结构，产品销量同比实现了大幅增长所致。\"}], \"reason\": \"将2024年营收增加归因于2025年行业景气度回暖，事件先后关系矛盾。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"实现归母净利润-2.66万亿美元，同比下降504.18%；扣非归母净利润-2.66万亿美元，同比下降152.04%。\"}], \"reason\": \"公司营收为30.92亿元，归母净利润及扣非净利润却标为“万亿美元”，量纲单位明显错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:50:40.319406+00:00",
+    "request_sha256": "a634d24311b66a065726fe5cdb1b6f09ebf4e8984de4c137772f8fd62198fa67",
+    "input_token_estimate": 17141,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279285",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "3ad371a489fb4870a013efa9cf0974e0",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3967,
+    "output_tokens": 5908,
+    "usage_source": "provider",
+    "duration_seconds": 23.501389,
+    "cost_cny": "0.027599"
+  },
+  "cache_request": {
+    "key": "ff61c41b0cb607396f0df7e64c2d7f2b8325f0425c89b4869bac23977dfdd2f7",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a634d24311b66a065726fe5cdb1b6f09ebf4e8984de4c137772f8fd62198fa67"
+  }
+}

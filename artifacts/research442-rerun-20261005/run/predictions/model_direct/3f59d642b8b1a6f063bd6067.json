@@ -1,0 +1,346 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000202",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "3月32日不是合法日期，时间信息不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 150,
+          "end": 173,
+          "text": "快递：快递市场管理办法发布，3月32日起施行。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "快递：快递市场管理办法发布，3月32日起施行。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 150,
+          "end": 173,
+          "text": "快递：快递市场管理办法发布，3月32日起施行。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c010b07e24b6e33627cd1d89",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "法规引用错误",
+      "reason": "法规规定未经用户同意不得擅自使用智能快件箱，原文误作“可擅自”，引用条款含义相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 327,
+          "end": 382,
+          "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 327,
+          "end": 382,
+          "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bf97b958f781d1d122a1aaba",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "旅客运输量应为6.9亿人次，原文漏“亿”，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 650,
+          "end": 676,
+          "text": "航空机场：2024年将力争完成旅客运输量6.9人次。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "航空机场：2024年将力争完成旅客运输量6.9人次。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 650,
+          "end": 676,
+          "text": "航空机场：2024年将力争完成旅客运输量6.9人次。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e53b7b618c4afb1d046bd5f9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“为万辆”前缺少具体数值，通行量数字缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1600,
+          "end": 1624,
+          "text": "上周全国高速公路货车通行量为万辆，同比+17%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "上周全国高速公路货车通行量为万辆，同比+17%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1600,
+          "end": 1624,
+          "text": "上周全国高速公路货车通行量为万辆，同比+17%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "96db2ec9917687b7f1eb511c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "同一报告内“本周”分别界定为1/2-1/5和1月1日-1月6日，时间范围冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 52,
+          "end": 104,
+          "text": "本周（1/2-1/5）交运指数下跌0.4%，沪深300指数下跌3.0%，跑赢大盘2.6%，排名8/29。"
+        },
+        {
+          "kind": "source_text",
+          "start": 676,
+          "end": 813,
+          "text": "本周（1月1日-1月6日）全国日均执飞航班量13619班，恢复至2019年97%（环比+1pct）；其中国内线日均11949班，为2019年105%（+2pct）；国际线日均1349班，为2019年66%（+6pct）；地区线日均320班，为2019年67%（-9pct）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（1/2-1/5）交运指数下跌0.4%，沪深300指数下跌3.0%，跑赢大盘2.6%，排名8/29。"
+        },
+        {
+          "text": "本周（1月1日-1月6日）全国日均执飞航班量13619班，恢复至2019年97%（环比+1pct）；其中国内线日均11949班，为2019年105%（+2pct）；国际线日均1349班，为2019年66%（+6pct）；地区线日均320班，为2019年67%（-9pct）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 52,
+          "end": 104,
+          "text": "本周（1/2-1/5）交运指数下跌0.4%，沪深300指数下跌3.0%，跑赢大盘2.6%，排名8/29。"
+        },
+        {
+          "start": 676,
+          "end": 813,
+          "text": "本周（1月1日-1月6日）全国日均执飞航班量13619班，恢复至2019年97%（环比+1pct）；其中国内线日均11949班，为2019年105%（+2pct）；国际线日均1349班，为2019年66%（+6pct）；地区线日均320班，为2019年67%（-9pct）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "83a4ddbb94d2e373c7c07dc3",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1786
+        ]
+      ],
+      "estimated_input_tokens": 6226,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:01:14.080345+00:00",
+        "request_sha256": "a458783d290308556be7686bbef7ec2ecdd5f665d599ec317f57ca24e32d64d0",
+        "input_token_estimate": 17347,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279491",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3c152f8371a040bc8828622e8d1d356a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4173,
+        "output_tokens": 7676,
+        "usage_source": "provider",
+        "duration_seconds": 29.601442,
+        "cost_cny": "0.034877"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "快递：快递市场管理办法发布，3月32日起施行。"
+          }
+        ],
+        "reason": "3月32日不是合法日期，时间信息不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "法规引用错误",
+        "spans": [
+          {
+            "text": "其中规定，保障快件安全，防止快件丢失、损毁、内件短少，不得抛扔、踩踏快件；未经用户同意可擅自使用智能快件箱等。"
+          }
+        ],
+        "reason": "法规规定未经用户同意不得擅自使用智能快件箱，原文误作“可擅自”，引用条款含义相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "航空机场：2024年将力争完成旅客运输量6.9人次。"
+          }
+        ],
+        "reason": "旅客运输量应为6.9亿人次，原文漏“亿”，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "上周全国高速公路货车通行量为万辆，同比+17%。"
+          }
+        ],
+        "reason": "“为万辆”前缺少具体数值，通行量数字缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "本周（1/2-1/5）交运指数下跌0.4%，沪深300指数下跌3.0%，跑赢大盘2.6%，排名8/29。"
+          },
+          {
+            "text": "本周（1月1日-1月6日）全国日均执飞航班量13619班，恢复至2019年97%（环比+1pct）；其中国内线日均11949班，为2019年105%（+2pct）；国际线日均1349班，为2019年66%（+6pct）；地区线日均320班，为2019年67%（-9pct）。"
+          }
+        ],
+        "reason": "同一报告内“本周”分别界定为1/2-1/5和1月1日-1月6日，时间范围冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1786,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1786,
+    "processed_ranges": [
+      [
+        0,
+        1786
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 29.628448,
+  "source_content_sha256": "1205fee54f0bfbb22ea4074d0e5865817ca4dfb413dda23382646f5a4f57086f"
+}

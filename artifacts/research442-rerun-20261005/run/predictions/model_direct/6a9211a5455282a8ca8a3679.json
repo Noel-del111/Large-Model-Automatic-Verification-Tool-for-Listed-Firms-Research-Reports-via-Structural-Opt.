@@ -1,0 +1,338 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000401",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "酒店改造项目与索道、交通设备升级并列，应为金额单位，却写成“1.75平方千米”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 39,
+          "end": 156,
+          "text": "事件：近期九华旅游（603199）发布定增预案，拟向包括公司控股股东文旅集团在内的不超过35名（含35名）特定投资者发行股票募资不超过5亿元，用于狮子峰索道（3.6亿）、酒店改造（1.75平方千米）及交通设备升级（0.65亿）等项目。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件：近期九华旅游（603199）发布定增预案，拟向包括公司控股股东文旅集团在内的不超过35名（含35名）特定投资者发行股票募资不超过5亿元，用于狮子峰索道（3.6亿）、酒店改造（1.75平方千米）及交通设备升级（0.65亿）等项目。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 39,
+          "end": 156,
+          "text": "事件：近期九华旅游（603199）发布定增预案，拟向包括公司控股股东文旅集团在内的不超过35名（含35名）特定投资者发行股票募资不超过5亿元，用于狮子峰索道（3.6亿）、酒店改造（1.75平方千米）及交通设备升级（0.65亿）等项目。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ac088aa9172c6a7c95f71dbb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "29.93%到30.40%是上升，原文用“减至”表示下降，与数字变化方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 242,
+          "end": 335,
+          "text": "公司控股股东文旅集团拟以现金方式认购股份总数不低于本次发行总股数的32%，认购价格不低于定价基准日前20个交易日公司A股股票交易均价的80%，其持股比例将从29.93%减至30.40%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司控股股东文旅集团拟以现金方式认购股份总数不低于本次发行总股数的32%，认购价格不低于定价基准日前20个交易日公司A股股票交易均价的80%，其持股比例将从29.93%减至30.40%。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 242,
+          "end": 335,
+          "text": "公司控股股东文旅集团拟以现金方式认购股份总数不低于本次发行总股数的32%，认购价格不低于定价基准日前20个交易日公司A股股票交易均价的80%，其持股比例将从29.93%减至30.40%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c0e5646156d3178d15683a7b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句内“通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度”重复出现，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 891,
+          "end": 1004,
+          "text": "聚龙大酒店和中心大酒店作为九华旅游旗下重要酒店资产，通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度，进而增强公司在旅游住宿市场的竞争力，提高酒店盈利能力，通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "聚龙大酒店和中心大酒店作为九华旅游旗下重要酒店资产，通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度，进而增强公司在旅游住宿市场的竞争力，提高酒店盈利能力，通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 891,
+          "end": 1004,
+          "text": "聚龙大酒店和中心大酒店作为九华旅游旗下重要酒店资产，通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度，进而增强公司在旅游住宿市场的竞争力，提高酒店盈利能力，通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a7f86914982f047fe3efc2bc",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按所列净利润计算，2026年同比约11.32%、2027年约11.44%，与原文11.62%、11.37%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1121,
+          "end": 1192,
+          "text": "投资建议：预计2025-2027年九华旅游将实现归母净利润2.12/2.36/2.63亿元，同比增速13.86%/11.62%/11.37%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：预计2025-2027年九华旅游将实现归母净利润2.12/2.36/2.63亿元，同比增速13.86%/11.62%/11.37%。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 1121,
+          "end": 1192,
+          "text": "投资建议：预计2025-2027年九华旅游将实现归母净利润2.12/2.36/2.63亿元，同比增速13.86%/11.62%/11.37%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "84f44772d2b25bafd02db51f",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1375
+        ]
+      ],
+      "estimated_input_tokens": 5976,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:28:56.565249+00:00",
+        "request_sha256": "ac32d8c63aee8cbba23f3ea4d6544ea307fef6ac2729496d3f833fcd7363b4f7",
+        "input_token_estimate": 16616,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27876",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ba1a6cc8bc3340ab9667c929ac931fbb",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3851,
+        "output_tokens": 5908,
+        "usage_source": "provider",
+        "duration_seconds": 23.171453,
+        "cost_cny": "0.027483"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "事件：近期九华旅游（603199）发布定增预案，拟向包括公司控股股东文旅集团在内的不超过35名（含35名）特定投资者发行股票募资不超过5亿元，用于狮子峰索道（3.6亿）、酒店改造（1.75平方千米）及交通设备升级（0.65亿）等项目。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "酒店改造项目与索道、交通设备升级并列，应为金额单位，却写成“1.75平方千米”，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司控股股东文旅集团拟以现金方式认购股份总数不低于本次发行总股数的32%，认购价格不低于定价基准日前20个交易日公司A股股票交易均价的80%，其持股比例将从29.93%减至30.40%。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "29.93%到30.40%是上升，原文用“减至”表示下降，与数字变化方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "聚龙大酒店和中心大酒店作为九华旅游旗下重要酒店资产，通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度，进而增强公司在旅游住宿市场的竞争力，提高酒店盈利能力，通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "同一句内“通过改造升级，将优化客房配置，改善住宿环境，提升游客满意度”重复出现，无新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "投资建议：预计2025-2027年九华旅游将实现归母净利润2.12/2.36/2.63亿元，同比增速13.86%/11.62%/11.37%。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "按所列净利润计算，2026年同比约11.32%、2027年约11.44%，与原文11.62%、11.37%不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1121,
+      "end": 1192,
+      "text": "投资建议：预计2025-2027年九华旅游将实现归母净利润2.12/2.36/2.63亿元，同比增速13.86%/11.62%/11.37%。",
+      "quantities": [
+        {
+          "value": "2.63",
+          "unit": "亿元",
+          "start": 1160,
+          "end": 1166
+        },
+        {
+          "value": "13.86",
+          "unit": "%",
+          "start": 1171,
+          "end": 1177
+        },
+        {
+          "value": "11.62",
+          "unit": "%",
+          "start": 1178,
+          "end": 1184
+        },
+        {
+          "value": "11.37",
+          "unit": "%",
+          "start": 1185,
+          "end": 1191
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1375,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1375,
+    "processed_ranges": [
+      [
+        0,
+        1375
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.194403,
+  "source_content_sha256": "58e0e19f95b8aeaf4b6d8100aa39c9a9cba889fd38a4c9d297f677a7aeddca20"
+}

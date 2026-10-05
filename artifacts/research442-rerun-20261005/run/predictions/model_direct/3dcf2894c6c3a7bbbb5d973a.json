@@ -1,0 +1,617 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000383",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "计算错误",
+      "reason": "营收YOY与所列营收数据计算不符；归母净利润YOY列出4个数值但仅对应3个年度净利润，且与所列净利润数据不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 106,
+          "end": 238,
+          "text": "公司2024-2022年分别实现营业收入40.67亿元/41.13亿元/55.42亿元，YOY依次为3.06%/1.12%/34.76%实现归母净利润1.54亿元/1.25亿元/1.66亿元，YOY依次为-44.40%/-18.89%/32.76%/25.21%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2024-2022年分别实现营业收入40.67亿元/41.13亿元/55.42亿元，YOY依次为3.06%/1.12%/34.76%实现归母净利润1.54亿元/1.25亿元/1.66亿元，YOY依次为-44.40%/-18.89%/32.76%/25.21%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 106,
+          "end": 238,
+          "text": "公司2024-2022年分别实现营业收入40.67亿元/41.13亿元/55.42亿元，YOY依次为3.06%/1.12%/34.76%实现归母净利润1.54亿元/1.25亿元/1.66亿元，YOY依次为-44.40%/-18.89%/32.76%/25.21%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9b7eaf1d658ee9d613f5df76",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "2022年2.19亿元到2024年7.14亿元为增长，不是“减至”，数字方向与表述矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 929,
+          "end": 961,
+          "text": "收入由2022年的2.19亿元显著减至2024年的7.14亿元；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "收入由2022年的2.19亿元显著减至2024年的7.14亿元；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 929,
+          "end": 961,
+          "text": "收入由2022年的2.19亿元显著减至2024年的7.14亿元；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "43364cec0bb3da47101f32fb",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“产量”后直接接“万吨”，缺少应报告的具体产量数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1034,
+          "end": 1073,
+          "text": "2024年产量万吨、较2023年同比增长94.87%、预计市占率将进一步提升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年产量万吨、较2023年同比增长94.87%、预计市占率将进一步提升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1034,
+          "end": 1073,
+          "text": "2024年产量万吨、较2023年同比增长94.87%、预计市占率将进一步提升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "17f9e1d42e6220aed8ff30f0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "累计转固金额写为“2.92元”，通常应为亿元，单位量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1186,
+          "end": 1216,
+          "text": "目前该项目已提前建设，截至2024年末、累计转固2.92元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前该项目已提前建设，截至2024年末、累计转固2.92元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1186,
+          "end": 1216,
+          "text": "目前该项目已提前建设，截至2024年末、累计转固2.92元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a25efd49f939480b19dae715",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号《》内文件名称空白，引用文件标题缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 653,
+          "end": 743,
+          "text": "据中国橡胶工业协会发布的《》，2022年与2023年公司尼龙帘子布国内市场占有率分别为12.72%、15.71%，相关产量在尼龙帘子布行业中排名第三、在尼龙6帘子布行业中排名第二。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据中国橡胶工业协会发布的《》，2022年与2023年公司尼龙帘子布国内市场占有率分别为12.72%、15.71%，相关产量在尼龙帘子布行业中排名第三、在尼龙6帘子布行业中排名第二。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 653,
+          "end": 743,
+          "text": "据中国橡胶工业协会发布的《》，2022年与2023年公司尼龙帘子布国内市场占有率分别为12.72%、15.71%，相关产量在尼龙帘子布行业中排名第三、在尼龙6帘子布行业中排名第二。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cb93121fbe83e87d4e7c404c",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1415
+        ]
+      ],
+      "estimated_input_tokens": 5908,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:11:53.444996+00:00",
+        "request_sha256": "50acc730b3ae691d2213edaeb5973fa76187375c2a1b6f19a77d4c61337e001c",
+        "input_token_estimate": 16454,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278598",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "7cd9758af5bb4aa8bc91741744cae706",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3934,
+        "output_tokens": 8400,
+        "usage_source": "provider",
+        "duration_seconds": 31.904381,
+        "cost_cny": "0.037534"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司2024-2022年分别实现营业收入40.67亿元/41.13亿元/55.42亿元，YOY依次为3.06%/1.12%/34.76%实现归母净利润1.54亿元/1.25亿元/1.66亿元，YOY依次为-44.40%/-18.89%/32.76%/25.21%。"
+          }
+        ],
+        "reason": "营收YOY与所列营收数据计算不符；归母净利润YOY列出4个数值但仅对应3个年度净利润，且与所列净利润数据不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "收入由2022年的2.19亿元显著减至2024年的7.14亿元；"
+          }
+        ],
+        "reason": "2022年2.19亿元到2024年7.14亿元为增长，不是“减至”，数字方向与表述矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年产量万吨、较2023年同比增长94.87%、预计市占率将进一步提升。"
+          }
+        ],
+        "reason": "“产量”后直接接“万吨”，缺少应报告的具体产量数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "目前该项目已提前建设，截至2024年末、累计转固2.92元。"
+          }
+        ],
+        "reason": "累计转固金额写为“2.92元”，通常应为亿元，单位量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "据中国橡胶工业协会发布的《》，2022年与2023年公司尼龙帘子布国内市场占有率分别为12.72%、15.71%，相关产量在尼龙帘子布行业中排名第三、在尼龙6帘子布行业中排名第二。"
+          }
+        ],
+        "reason": "书名号《》内文件名称空白，引用文件标题缺失。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 106,
+      "end": 238,
+      "text": "公司2024-2022年分别实现营业收入40.67亿元/41.13亿元/55.42亿元，YOY依次为3.06%/1.12%/34.76%实现归母净利润1.54亿元/1.25亿元/1.66亿元，YOY依次为-44.40%/-18.89%/32.76%/25.21%。",
+      "quantities": [
+        {
+          "value": "40.67",
+          "unit": "亿元",
+          "start": 126,
+          "end": 133
+        },
+        {
+          "value": "41.13",
+          "unit": "亿元",
+          "start": 134,
+          "end": 141
+        },
+        {
+          "value": "55.42",
+          "unit": "亿元",
+          "start": 142,
+          "end": 149
+        },
+        {
+          "value": "3.06",
+          "unit": "%",
+          "start": 156,
+          "end": 161
+        },
+        {
+          "value": "1.12",
+          "unit": "%",
+          "start": 162,
+          "end": 167
+        },
+        {
+          "value": "34.76",
+          "unit": "%",
+          "start": 168,
+          "end": 174
+        },
+        {
+          "value": "1.54",
+          "unit": "亿元",
+          "start": 181,
+          "end": 187
+        },
+        {
+          "value": "1.25",
+          "unit": "亿元",
+          "start": 188,
+          "end": 194
+        },
+        {
+          "value": "1.66",
+          "unit": "亿元",
+          "start": 195,
+          "end": 201
+        },
+        {
+          "value": "-44.40",
+          "unit": "%",
+          "start": 208,
+          "end": 215
+        },
+        {
+          "value": "-18.89",
+          "unit": "%",
+          "start": 216,
+          "end": 223
+        },
+        {
+          "value": "32.76",
+          "unit": "%",
+          "start": 224,
+          "end": 230
+        },
+        {
+          "value": "25.21",
+          "unit": "%",
+          "start": 231,
+          "end": 237
+        }
+      ],
+      "periods": [
+        "2022年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 106,
+      "end": 238,
+      "text": "公司2024-2022年分别实现营业收入40.67亿元/41.13亿元/55.42亿元，YOY依次为3.06%/1.12%/34.76%实现归母净利润1.54亿元/1.25亿元/1.66亿元，YOY依次为-44.40%/-18.89%/32.76%/25.21%。",
+      "quantities": [
+        {
+          "value": "40.67",
+          "unit": "亿元",
+          "start": 126,
+          "end": 133
+        },
+        {
+          "value": "41.13",
+          "unit": "亿元",
+          "start": 134,
+          "end": 141
+        },
+        {
+          "value": "55.42",
+          "unit": "亿元",
+          "start": 142,
+          "end": 149
+        },
+        {
+          "value": "3.06",
+          "unit": "%",
+          "start": 156,
+          "end": 161
+        },
+        {
+          "value": "1.12",
+          "unit": "%",
+          "start": 162,
+          "end": 167
+        },
+        {
+          "value": "34.76",
+          "unit": "%",
+          "start": 168,
+          "end": 174
+        },
+        {
+          "value": "1.54",
+          "unit": "亿元",
+          "start": 181,
+          "end": 187
+        },
+        {
+          "value": "1.25",
+          "unit": "亿元",
+          "start": 188,
+          "end": 194
+        },
+        {
+          "value": "1.66",
+          "unit": "亿元",
+          "start": 195,
+          "end": 201
+        },
+        {
+          "value": "-44.40",
+          "unit": "%",
+          "start": 208,
+          "end": 215
+        },
+        {
+          "value": "-18.89",
+          "unit": "%",
+          "start": 216,
+          "end": 223
+        },
+        {
+          "value": "32.76",
+          "unit": "%",
+          "start": 224,
+          "end": 230
+        },
+        {
+          "value": "25.21",
+          "unit": "%",
+          "start": 231,
+          "end": 237
+        }
+      ],
+      "periods": [
+        "2022年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 238,
+      "end": 314,
+      "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期变动-14.30%至-10.66%，归母净利润较上年同期变动-2.05%至10.83%。",
+      "quantities": [
+        {
+          "value": "-14.30",
+          "unit": "%",
+          "start": 272,
+          "end": 279
+        },
+        {
+          "value": "-10.66",
+          "unit": "%",
+          "start": 280,
+          "end": 287
+        },
+        {
+          "value": "-2.05",
+          "unit": "%",
+          "start": 300,
+          "end": 306
+        },
+        {
+          "value": "10.83",
+          "unit": "%",
+          "start": 307,
+          "end": 313
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "根据公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 238,
+      "end": 314,
+      "text": "根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期变动-14.30%至-10.66%，归母净利润较上年同期变动-2.05%至10.83%。",
+      "quantities": [
+        {
+          "value": "-14.30",
+          "unit": "%",
+          "start": 272,
+          "end": 279
+        },
+        {
+          "value": "-10.66",
+          "unit": "%",
+          "start": 280,
+          "end": 287
+        },
+        {
+          "value": "-2.05",
+          "unit": "%",
+          "start": 300,
+          "end": 306
+        },
+        {
+          "value": "10.83",
+          "unit": "%",
+          "start": 307,
+          "end": 313
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "根据公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1279,
+      "end": 1344,
+      "text": "从上述可比公司来看，2024年度可比公司的平均收入规模为53.37亿元、平均PE-TTM为11.17X、销售毛利率为14.76%；",
+      "quantities": [
+        {
+          "value": "53.37",
+          "unit": "亿元",
+          "start": 1307,
+          "end": 1314
+        },
+        {
+          "value": "14.76",
+          "unit": "%",
+          "start": 1337,
+          "end": 1343
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "从上述可比公司",
+        "年度可比公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1415,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1415,
+    "processed_ranges": [
+      [
+        0,
+        1415
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 31.927286,
+  "source_content_sha256": "90037652ffdd01c7f14cd02c4174d53cc875d884e386c5af5c90a03a8a9e8179"
+}

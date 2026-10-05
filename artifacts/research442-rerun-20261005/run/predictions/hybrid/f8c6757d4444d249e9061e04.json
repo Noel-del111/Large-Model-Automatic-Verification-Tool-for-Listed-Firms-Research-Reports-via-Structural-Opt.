@@ -1,0 +1,424 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000391",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "2025年6月1日发布2025年7月产销快报，发布时间早于所述报告月份，时间关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 42,
+          "end": 70,
+          "text": "事件:公司2025年6月1日发布2025年7月产销快报："
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件:公司2025年6月1日发布2025年7月产销快报："
+        }
+      ],
+      "spans": [
+        {
+          "start": 42,
+          "end": 70,
+          "text": "事件:公司2025年6月1日发布2025年7月产销快报："
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "95229d0c9e64addfbdebed87",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "A股股票代码应为6位数字，此处写成带连字符的“60-16-33”，不符合代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 26,
+          "end": 40,
+          "text": "长城汽车(60-16-33)"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "长城汽车(60-16-33)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 26,
+          "end": 40,
+          "text": "长城汽车(60-16-33)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "36a7ce99e650a22a998a3556",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "汽车销量单位应为“万辆”，此处写成“万吨”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 174,
+          "end": 226,
+          "text": "2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 174,
+          "end": 226,
+          "text": "2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4783fcd2ad36c5e7cda10c0c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "5月总批发销量10.2万辆，哈弗、魏牌、皮卡、欧拉、坦克5月销量相加为10.3万辆，合计与总量不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 70,
+          "end": 121,
+          "text": "批发销量10.2万辆，同比+11.8%，环比+2.2%；1-5月累计批发45.9万辆，同比-0.5%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 121,
+          "end": 373,
+          "text": "其中，1）哈弗5.8万辆，同比+22.6%，环比+1.7%；1-5月累计批发25.9万辆，同比+2.8%。2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。3）皮卡1.6万辆，同比+2.7%，环比-11.4%；1-5月累计批发8.3万辆，同比+8.3%。4）欧拉0.2万辆，同比-67.3%，环比+9.1%；1-5月累计批发1.1万辆，同比-58.7%。5）坦克2.1万辆，同比+2.8%，环比+8.8%；1-5月累计批发8.2万辆，同比-8.8%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "批发销量10.2万辆，同比+11.8%，环比+2.2%；1-5月累计批发45.9万辆，同比-0.5%。"
+        },
+        {
+          "text": "其中，1）哈弗5.8万辆，同比+22.6%，环比+1.7%；1-5月累计批发25.9万辆，同比+2.8%。2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。3）皮卡1.6万辆，同比+2.7%，环比-11.4%；1-5月累计批发8.3万辆，同比+8.3%。4）欧拉0.2万辆，同比-67.3%，环比+9.1%；1-5月累计批发1.1万辆，同比-58.7%。5）坦克2.1万辆，同比+2.8%，环比+8.8%；1-5月累计批发8.2万辆，同比-8.8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 70,
+          "end": 121,
+          "text": "批发销量10.2万辆，同比+11.8%，环比+2.2%；1-5月累计批发45.9万辆，同比-0.5%。"
+        },
+        {
+          "start": 121,
+          "end": 373,
+          "text": "其中，1）哈弗5.8万辆，同比+22.6%，环比+1.7%；1-5月累计批发25.9万辆，同比+2.8%。2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。3）皮卡1.6万辆，同比+2.7%，环比-11.4%；1-5月累计批发8.3万辆，同比+8.3%。4）欧拉0.2万辆，同比-67.3%，环比+9.1%；1-5月累计批发1.1万辆，同比-58.7%。5）坦克2.1万辆，同比+2.8%，环比+8.8%；1-5月累计批发8.2万辆，同比-8.8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ce00e84db431a9ea1880a770",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“销量增长__%”处明确需要数值，但原文留空，缺失具体增长比例。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 774,
+          "end": 843,
+          "text": "哈弗品牌6月启动“全系换新一口价”限时促销，覆盖燃油、插混及经典车型，包括哈弗猛龙燃油版、二代哈弗枭龙MAX等，将直接刺激销量增长__%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "哈弗品牌6月启动“全系换新一口价”限时促销，覆盖燃油、插混及经典车型，包括哈弗猛龙燃油版、二代哈弗枭龙MAX等，将直接刺激销量增长__%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 774,
+          "end": 843,
+          "text": "哈弗品牌6月启动“全系换新一口价”限时促销，覆盖燃油、插混及经典车型，包括哈弗猛龙燃油版、二代哈弗枭龙MAX等，将直接刺激销量增长__%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "16e02beada331f0aba7ae813",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1320
+        ]
+      ],
+      "estimated_input_tokens": 5708,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:19:15.105015+00:00",
+        "request_sha256": "1c59748ea4ab9b1b71016c1d49c2f65db785895c4f4006033a1333162d8be4c8",
+        "input_token_estimate": 15949,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278093",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "132dbad407a34a9ca622476f714db938",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3933,
+        "output_tokens": 10556,
+        "usage_source": "provider",
+        "duration_seconds": 40.66053,
+        "cost_cny": "0.046157",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "事件:公司2025年6月1日发布2025年7月产销快报："
+          }
+        ],
+        "reason": "2025年6月1日发布2025年7月产销快报，发布时间早于所述报告月份，时间关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "长城汽车(60-16-33)"
+          }
+        ],
+        "reason": "A股股票代码应为6位数字，此处写成带连字符的“60-16-33”，不符合代码格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。"
+          }
+        ],
+        "reason": "汽车销量单位应为“万辆”，此处写成“万吨”，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "批发销量10.2万辆，同比+11.8%，环比+2.2%；1-5月累计批发45.9万辆，同比-0.5%。"
+          },
+          {
+            "text": "其中，1）哈弗5.8万辆，同比+22.6%，环比+1.7%；1-5月累计批发25.9万辆，同比+2.8%。2）魏牌0.6万吨，同比+115.3%，环比+28.1%；1-5月累计批发2.4万辆，同比+43.5%。3）皮卡1.6万辆，同比+2.7%，环比-11.4%；1-5月累计批发8.3万辆，同比+8.3%。4）欧拉0.2万辆，同比-67.3%，环比+9.1%；1-5月累计批发1.1万辆，同比-58.7%。5）坦克2.1万辆，同比+2.8%，环比+8.8%；1-5月累计批发8.2万辆，同比-8.8%。"
+          }
+        ],
+        "reason": "5月总批发销量10.2万辆，哈弗、魏牌、皮卡、欧拉、坦克5月销量相加为10.3万辆，合计与总量不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "哈弗品牌6月启动“全系换新一口价”限时促销，覆盖燃油、插混及经典车型，包括哈弗猛龙燃油版、二代哈弗枭龙MAX等，将直接刺激销量增长__%。"
+          }
+        ],
+        "reason": "“销量增长__%”处明确需要数值，但原文留空，缺失具体增长比例。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1147,
+      "end": 1263,
+      "text": "我们预计2025-2027年营业收入为2,267.8/2,617.0/2,962.5亿元，归母净利润为140.9/163.0/182.4亿元，对应2025年6月3日收盘价22.46元/股，PE为14/12/11倍，维持“推荐”评级。",
+      "quantities": [
+        {
+          "value": "2,962.5",
+          "unit": "亿元",
+          "start": 1182,
+          "end": 1191
+        },
+        {
+          "value": "182.4",
+          "unit": "亿元",
+          "start": 1210,
+          "end": 1217
+        },
+        {
+          "value": "22.46",
+          "unit": "元/股",
+          "start": 1232,
+          "end": 1240
+        },
+        {
+          "value": "11",
+          "unit": "倍",
+          "start": 1250,
+          "end": 1253
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1147,
+      "end": 1263,
+      "text": "我们预计2025-2027年营业收入为2,267.8/2,617.0/2,962.5亿元，归母净利润为140.9/163.0/182.4亿元，对应2025年6月3日收盘价22.46元/股，PE为14/12/11倍，维持“推荐”评级。",
+      "quantities": [
+        {
+          "value": "2,962.5",
+          "unit": "亿元",
+          "start": 1182,
+          "end": 1191
+        },
+        {
+          "value": "182.4",
+          "unit": "亿元",
+          "start": 1210,
+          "end": 1217
+        },
+        {
+          "value": "22.46",
+          "unit": "元/股",
+          "start": 1232,
+          "end": 1240
+        },
+        {
+          "value": "11",
+          "unit": "倍",
+          "start": 1250,
+          "end": 1253
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1320,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1320,
+    "processed_ranges": [
+      [
+        0,
+        1320
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1320,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001724,
+  "source_content_sha256": "bb2499464031f3d357da469cfae3b8f3e98d790a1268699537c6b78d0f847567"
+}

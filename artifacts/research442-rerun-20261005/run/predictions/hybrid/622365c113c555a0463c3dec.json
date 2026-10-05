@@ -1,0 +1,682 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000428",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“达到亿元”前缺少具体营收数值，仅保留单位，数值信息缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 697,
+          "end": 761,
+          "text": "半导体硅片业务是公司最成熟、规模最大的板块，销售量同比增长62.91%，营收同比增长26.93%，达到亿元，进入头部厂商供应链。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "半导体硅片业务是公司最成熟、规模最大的板块，销售量同比增长62.91%，营收同比增长26.93%，达到亿元，进入头部厂商供应链。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 697,
+          "end": 761,
+          "text": "半导体硅片业务是公司最成熟、规模最大的板块，销售量同比增长62.91%，营收同比增长26.93%，达到亿元，进入头部厂商供应链。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c22c8180a529804faa770cda",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "将2024年营收增加归因于2025年行业景气度回暖，事件先后关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 319,
+          "end": 389,
+          "text": "2024年公司营业收入的大幅增加主要系2025年半导体行业景气度的见底回暖及公司加强市场拓展、调整产品结构，产品销量同比实现了大幅增长所致。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司营业收入的大幅增加主要系2025年半导体行业景气度的见底回暖及公司加强市场拓展、调整产品结构，产品销量同比实现了大幅增长所致。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 319,
+          "end": 389,
+          "text": "2024年公司营业收入的大幅增加主要系2025年半导体行业景气度的见底回暖及公司加强市场拓展、调整产品结构，产品销量同比实现了大幅增长所致。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "941268f5cb1e3cabd7f65c43",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "公司营收为30.92亿元，归母净利润及扣非净利润却标为“万亿美元”，量纲单位明显错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 95,
+          "end": 153,
+          "text": "实现归母净利润-2.66万亿美元，同比下降504.18%；扣非归母净利润-2.66万亿美元，同比下降152.04%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "实现归母净利润-2.66万亿美元，同比下降504.18%；扣非归母净利润-2.66万亿美元，同比下降152.04%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 95,
+          "end": 153,
+          "text": "实现归母净利润-2.66万亿美元，同比下降504.18%；扣非归母净利润-2.66万亿美元，同比下降152.04%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "79a3be3a699a4321632b58c0",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1598
+        ]
+      ],
+      "estimated_input_tokens": 6165,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:50:40.319406+00:00",
+        "request_sha256": "a634d24311b66a065726fe5cdb1b6f09ebf4e8984de4c137772f8fd62198fa67",
+        "input_token_estimate": 17141,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279285",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3ad371a489fb4870a013efa9cf0974e0",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3967,
+        "output_tokens": 5908,
+        "usage_source": "provider",
+        "duration_seconds": 23.501389,
+        "cost_cny": "0.027599",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "射频芯片业务技术突破持续落地，营业收入增长115.08%，产品订单与出货量快速放量，毛利率大幅转正至13.11%，成为业绩增长的重要引擎。"
+          }
+        ],
+        "reason": "该句在原文同一段中连续完整重复出现两次，属不必要的冗余表达。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "半导体硅片业务是公司最成熟、规模最大的板块，销售量同比增长62.91%，营收同比增长26.93%，达到亿元，进入头部厂商供应链。"
+          }
+        ],
+        "reason": "“达到亿元”前缺少具体营收数值，仅保留单位，数值信息缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2024年公司营业收入的大幅增加主要系2025年半导体行业景气度的见底回暖及公司加强市场拓展、调整产品结构，产品销量同比实现了大幅增长所致。"
+          }
+        ],
+        "reason": "将2024年营收增加归因于2025年行业景气度回暖，事件先后关系矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "实现归母净利润-2.66万亿美元，同比下降504.18%；扣非归母净利润-2.66万亿美元，同比下降152.04%。"
+          }
+        ],
+        "reason": "公司营收为30.92亿元，归母净利润及扣非净利润却标为“万亿美元”，量纲单位明显错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "射频芯片业务技术突破持续落地，营业收入增长115.08%，产品订单与出货量快速放量，毛利率大幅转正至13.11%，成为业绩增长的重要引擎。"
+          }
+        ],
+        "reason": "该句在原文同一段中连续完整重复出现两次，属不必要的冗余表达。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 62,
+      "end": 95,
+      "text": "2024年度公司实现营业收入30.92亿元，同比增长14.97%；",
+      "quantities": [
+        {
+          "value": "30.92",
+          "unit": "亿元",
+          "start": 76,
+          "end": 83
+        },
+        {
+          "value": "14.97",
+          "unit": "%",
+          "start": 88,
+          "end": 94
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": [
+        "年度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 95,
+      "end": 124,
+      "text": "实现归母净利润-2.66万亿美元，同比下降504.18%；",
+      "quantities": [
+        {
+          "value": "504.18",
+          "unit": "%",
+          "start": 116,
+          "end": 123
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 124,
+      "end": 153,
+      "text": "扣非归母净利润-2.66万亿美元，同比下降152.04%。",
+      "quantities": [
+        {
+          "value": "152.04",
+          "unit": "%",
+          "start": 145,
+          "end": 152
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 153,
+      "end": 185,
+      "text": "2025Q1公司实现营业收入8.20亿元，同比增长20.82%；",
+      "quantities": [
+        {
+          "value": "8.20",
+          "unit": "亿元",
+          "start": 167,
+          "end": 173
+        },
+        {
+          "value": "20.82",
+          "unit": "%",
+          "start": 178,
+          "end": 184
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 185,
+      "end": 205,
+      "text": "实现归母净利润-0.81亿元，同比增亏；",
+      "quantities": [
+        {
+          "value": "-0.81",
+          "unit": "亿元",
+          "start": 192,
+          "end": 199
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 205,
+      "end": 227,
+      "text": "实现扣非归母净利润-0.81亿元，同比增亏。",
+      "quantities": [
+        {
+          "value": "-0.81",
+          "unit": "亿元",
+          "start": 214,
+          "end": 221
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 256,
+      "end": 389,
+      "text": "2024年，公司全员攻坚克难，推动产能、技术、市场与良率实现显著提升，发展态势持续向好，营业收入创历史新高，市场份额持续扩大，2024年公司营业收入的大幅增加主要系2025年半导体行业景气度的见底回暖及公司加强市场拓展、调整产品结构，产品销量同比实现了大幅增长所致。",
+      "quantities": [],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "年半导体行业景气度的见底回暖及公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 256,
+      "end": 389,
+      "text": "2024年，公司全员攻坚克难，推动产能、技术、市场与良率实现显著提升，发展态势持续向好，营业收入创历史新高，市场份额持续扩大，2024年公司营业收入的大幅增加主要系2025年半导体行业景气度的见底回暖及公司加强市场拓展、调整产品结构，产品销量同比实现了大幅增长所致。",
+      "quantities": [],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年公司",
+        "年半导体行业景气度的见底回暖及公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 389,
+      "end": 507,
+      "text": "然而，由于欧美发达经济体受高利率与能源转型阵痛制约增速放缓，叠加地缘政治冲突及产业链重构加速，使得公司经营迎来多重挑战：产能扩张带来成本压力，产品降价导致毛利率大幅下降，公允价值变动损失导致利润减少，导致公司2024年盈利出现大幅下降。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "使得公司",
+        "导致公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 507,
+      "end": 567,
+      "text": "公司2025Q1营业收入的增长主要由于公司抓住细分市场需求、加强市场拓展、调整产品结构，主要产品销量同比实现了大幅增长；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "营业收入的增长主要由于公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 697,
+      "end": 761,
+      "text": "半导体硅片业务是公司最成熟、规模最大的板块，销售量同比增长62.91%，营收同比增长26.93%，达到亿元，进入头部厂商供应链。",
+      "quantities": [
+        {
+          "value": "62.91",
+          "unit": "%",
+          "start": 726,
+          "end": 732
+        },
+        {
+          "value": "26.93",
+          "unit": "%",
+          "start": 739,
+          "end": 745
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "半导体硅片业务是公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 761,
+      "end": 794,
+      "text": "但受制于固定成本增加及产能爬坡期成本上升，毛利率降至-1.82%；",
+      "quantities": [
+        {
+          "value": "-1.82",
+          "unit": "%",
+          "start": 787,
+          "end": 793
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 835,
+      "end": 904,
+      "text": "射频芯片业务技术突破持续落地，营业收入增长115.08%，产品订单与出货量快速放量，毛利率大幅转正至13.11%，成为业绩增长的重要引擎。",
+      "quantities": [
+        {
+          "value": "115.08",
+          "unit": "%",
+          "start": 856,
+          "end": 863
+        },
+        {
+          "value": "13.11",
+          "unit": "%",
+          "start": 885,
+          "end": 891
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 835,
+      "end": 904,
+      "text": "射频芯片业务技术突破持续落地，营业收入增长115.08%，产品订单与出货量快速放量，毛利率大幅转正至13.11%，成为业绩增长的重要引擎。",
+      "quantities": [
+        {
+          "value": "115.08",
+          "unit": "%",
+          "start": 856,
+          "end": 863
+        },
+        {
+          "value": "13.11",
+          "unit": "%",
+          "start": 885,
+          "end": 891
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 904,
+      "end": 973,
+      "text": "射频芯片业务技术突破持续落地，营业收入增长115.08%，产品订单与出货量快速放量，毛利率大幅转正至13.11%，成为业绩增长的重要引擎。",
+      "quantities": [
+        {
+          "value": "115.08",
+          "unit": "%",
+          "start": 925,
+          "end": 932
+        },
+        {
+          "value": "13.11",
+          "unit": "%",
+          "start": 954,
+          "end": 960
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 904,
+      "end": 973,
+      "text": "射频芯片业务技术突破持续落地，营业收入增长115.08%，产品订单与出货量快速放量，毛利率大幅转正至13.11%，成为业绩增长的重要引擎。",
+      "quantities": [
+        {
+          "value": "115.08",
+          "unit": "%",
+          "start": 925,
+          "end": 932
+        },
+        {
+          "value": "13.11",
+          "unit": "%",
+          "start": 954,
+          "end": 960
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 999,
+      "end": 1055,
+      "text": "公司持续加码研发投入，聚焦高附加值产品布局与关键技术攻关，2024年研发支出达2.9亿元，占营收比重9.39%。",
+      "quantities": [
+        {
+          "value": "2.9",
+          "unit": "亿元",
+          "start": 1038,
+          "end": 1043
+        },
+        {
+          "value": "9.39",
+          "unit": "%",
+          "start": 1049,
+          "end": 1054
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1435,
+      "end": 1557,
+      "text": "投资建议：由于产品价格下降导致公司利润承压，我们下调公司盈利预测，预计2025/2026年公司归母净利润从3.74/6.64亿元下调为0.89/1.80亿元，新增27年归母净利润预测为2.73亿元，但看好公司下游成长，因此维持公司“增持”评级。",
+      "quantities": [
+        {
+          "value": "6.64",
+          "unit": "亿元",
+          "start": 1493,
+          "end": 1499
+        },
+        {
+          "value": "1.80",
+          "unit": "亿元",
+          "start": 1507,
+          "end": 1513
+        },
+        {
+          "value": "2.73",
+          "unit": "亿元",
+          "start": 1527,
+          "end": 1533
+        }
+      ],
+      "periods": [
+        "2026年"
+      ],
+      "entity_mentions": [
+        "由于产品价格下降导致公司",
+        "我们下调公司",
+        "年公司",
+        "但看好公司",
+        "因此维持公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1435,
+      "end": 1557,
+      "text": "投资建议：由于产品价格下降导致公司利润承压，我们下调公司盈利预测，预计2025/2026年公司归母净利润从3.74/6.64亿元下调为0.89/1.80亿元，新增27年归母净利润预测为2.73亿元，但看好公司下游成长，因此维持公司“增持”评级。",
+      "quantities": [
+        {
+          "value": "6.64",
+          "unit": "亿元",
+          "start": 1493,
+          "end": 1499
+        },
+        {
+          "value": "1.80",
+          "unit": "亿元",
+          "start": 1507,
+          "end": 1513
+        },
+        {
+          "value": "2.73",
+          "unit": "亿元",
+          "start": 1527,
+          "end": 1533
+        }
+      ],
+      "periods": [
+        "2026年"
+      ],
+      "entity_mentions": [
+        "由于产品价格下降导致公司",
+        "我们下调公司",
+        "年公司",
+        "但看好公司",
+        "因此维持公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1598,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1598,
+    "processed_ranges": [
+      [
+        0,
+        1598
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1598,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 19,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002314,
+  "source_content_sha256": "ae8dfa03c0ee15060ccc0fb3c7fe969b3416aec97babeedcfb10bfdab4219a47"
+}

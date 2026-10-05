@@ -1,0 +1,522 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000338",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "自主产品收入占比从50.03%到75.07%是上升，却表述为“降低”，数字变化方向与文字相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 308,
+          "end": 362,
+          "text": "近5年，公司直销收入占比从50.78%下降至32.61%，自主产品收入占比从50.03%降低至75.07%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近5年，公司直销收入占比从50.78%下降至32.61%，自主产品收入占比从50.03%降低至75.07%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 308,
+          "end": 362,
+          "text": "近5年，公司直销收入占比从50.78%下降至32.61%，自主产品收入占比从50.03%降低至75.07%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "387b758f7ed81bb63f428d12",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "自主仪器收入1.58万亿与公司总营收25.49亿严重不符，单位应为亿而非万亿。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 450,
+          "end": 555,
+          "text": "其中免疫试剂10.29亿（+8.04%），生化试剂4.99亿（-13.53%），临检试剂2.14亿（+21.77%），自主仪器收入1.58万亿（+6.12%），公司在流水线和智慧化实验室解决方案的推进卓有成效。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中免疫试剂10.29亿（+8.04%），生化试剂4.99亿（-13.53%），临检试剂2.14亿（+21.77%），自主仪器收入1.58万亿（+6.12%），公司在流水线和智慧化实验室解决方案的推进卓有成效。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 450,
+          "end": 555,
+          "text": "其中免疫试剂10.29亿（+8.04%），生化试剂4.99亿（-13.53%），临检试剂2.14亿（+21.77%），自主仪器收入1.58万亿（+6.12%），公司在流水线和智慧化实验室解决方案的推进卓有成效。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "40ff4ee64888eef7ed2c0be4",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1302
+        ]
+      ],
+      "estimated_input_tokens": 5677,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:23:07.246725+00:00",
+        "request_sha256": "f96f8d1a2d25e6b6b83169388090b9b7b0d3e1bfff0076088de18605669a0d02",
+        "input_token_estimate": 15855,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277999",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "c8bab974e3cc4ea19d684453e4948397",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3842,
+        "output_tokens": 7996,
+        "usage_source": "provider",
+        "duration_seconds": 29.422951,
+        "cost_cny": "0.035826",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "近5年，公司直销收入占比从50.78%下降至32.61%，自主产品收入占比从50.03%降低至75.07%。"
+          }
+        ],
+        "reason": "自主产品收入占比从50.03%到75.07%是上升，却表述为“降低”，数字变化方向与文字相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "其中免疫试剂10.29亿（+8.04%），生化试剂4.99亿（-13.53%），临检试剂2.14亿（+21.77%），自主仪器收入1.58万亿（+6.12%），公司在流水线和智慧化实验室解决方案的推进卓有成效。"
+          }
+        ],
+        "reason": "自主仪器收入1.58万亿与公司总营收25.49亿严重不符，单位应为亿而非万亿。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 70,
+      "end": 203,
+      "text": "2024年公司实现营收25.49亿（-11.98%），归母净利润1.27亿（-59.44%），其中2024年第四季度实现营收6.01亿（-12.0%），归母净利润亏损1.55亿，公司正处于市场调整投入期和集采政策实施的过渡期，且2024年计提商誉减值损失0.94亿。",
+      "quantities": [
+        {
+          "value": "-11.98",
+          "unit": "%",
+          "start": 88,
+          "end": 95
+        },
+        {
+          "value": "-59.44",
+          "unit": "%",
+          "start": 108,
+          "end": 115
+        },
+        {
+          "value": "-12.0",
+          "unit": "%",
+          "start": 138,
+          "end": 144
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年第四季度",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 70,
+      "end": 203,
+      "text": "2024年公司实现营收25.49亿（-11.98%），归母净利润1.27亿（-59.44%），其中2024年第四季度实现营收6.01亿（-12.0%），归母净利润亏损1.55亿，公司正处于市场调整投入期和集采政策实施的过渡期，且2024年计提商誉减值损失0.94亿。",
+      "quantities": [
+        {
+          "value": "-11.98",
+          "unit": "%",
+          "start": 88,
+          "end": 95
+        },
+        {
+          "value": "-59.44",
+          "unit": "%",
+          "start": 108,
+          "end": 115
+        },
+        {
+          "value": "-12.0",
+          "unit": "%",
+          "start": 138,
+          "end": 144
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年第四季度",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 70,
+      "end": 203,
+      "text": "2024年公司实现营收25.49亿（-11.98%），归母净利润1.27亿（-59.44%），其中2024年第四季度实现营收6.01亿（-12.0%），归母净利润亏损1.55亿，公司正处于市场调整投入期和集采政策实施的过渡期，且2024年计提商誉减值损失0.94亿。",
+      "quantities": [
+        {
+          "value": "-11.98",
+          "unit": "%",
+          "start": 88,
+          "end": 95
+        },
+        {
+          "value": "-59.44",
+          "unit": "%",
+          "start": 108,
+          "end": 115
+        },
+        {
+          "value": "-12.0",
+          "unit": "%",
+          "start": 138,
+          "end": 144
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年第四季度",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 70,
+      "end": 203,
+      "text": "2024年公司实现营收25.49亿（-11.98%），归母净利润1.27亿（-59.44%），其中2024年第四季度实现营收6.01亿（-12.0%），归母净利润亏损1.55亿，公司正处于市场调整投入期和集采政策实施的过渡期，且2024年计提商誉减值损失0.94亿。",
+      "quantities": [
+        {
+          "value": "-11.98",
+          "unit": "%",
+          "start": 88,
+          "end": 95
+        },
+        {
+          "value": "-59.44",
+          "unit": "%",
+          "start": 108,
+          "end": 115
+        },
+        {
+          "value": "-12.0",
+          "unit": "%",
+          "start": 138,
+          "end": 144
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年第四季度",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 203,
+      "end": 252,
+      "text": "2025年一季度公司实现营收5.10亿（-17.22%），归母净利润0.24亿（-80.09%）。",
+      "quantities": [
+        {
+          "value": "-17.22",
+          "unit": "%",
+          "start": 223,
+          "end": 230
+        },
+        {
+          "value": "-80.09",
+          "unit": "%",
+          "start": 243,
+          "end": 250
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 203,
+      "end": 252,
+      "text": "2025年一季度公司实现营收5.10亿（-17.22%），归母净利润0.24亿（-80.09%）。",
+      "quantities": [
+        {
+          "value": "-17.22",
+          "unit": "%",
+          "start": 223,
+          "end": 230
+        },
+        {
+          "value": "-80.09",
+          "unit": "%",
+          "start": 243,
+          "end": 250
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 743,
+      "end": 808,
+      "text": "2024年公司综合毛利率为55.1%（-0.2pp），其中自主产品毛利率下降约4.77pp，自主试剂毛利率下降约2pp，基本可控；",
+      "quantities": [
+        {
+          "value": "55.1",
+          "unit": "%",
+          "start": 756,
+          "end": 761
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 743,
+      "end": 808,
+      "text": "2024年公司综合毛利率为55.1%（-0.2pp），其中自主产品毛利率下降约4.77pp，自主试剂毛利率下降约2pp，基本可控；",
+      "quantities": [
+        {
+          "value": "55.1",
+          "unit": "%",
+          "start": 756,
+          "end": 761
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 743,
+      "end": 808,
+      "text": "2024年公司综合毛利率为55.1%（-0.2pp），其中自主产品毛利率下降约4.77pp，自主试剂毛利率下降约2pp，基本可控；",
+      "quantities": [
+        {
+          "value": "55.1",
+          "unit": "%",
+          "start": 756,
+          "end": 761
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 808,
+      "end": 856,
+      "text": "近年来由于仪器销售波动较大，因此对整体毛利率的影响较为显著，2025Q1毛利率回升至56.8%。",
+      "quantities": [
+        {
+          "value": "56.8",
+          "unit": "%",
+          "start": 850,
+          "end": 855
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 808,
+      "end": 856,
+      "text": "近年来由于仪器销售波动较大，因此对整体毛利率的影响较为显著，2025Q1毛利率回升至56.8%。",
+      "quantities": [
+        {
+          "value": "56.8",
+          "unit": "%",
+          "start": 850,
+          "end": 855
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1027,
+      "end": 1154,
+      "text": "投资建议：考虑集采政策影响和公司处于战略转型期，下调2025-26年盈利预测，新增2027年盈利预测，预计2025-27年归母净利润2.73/3.54/4.24亿（2025-26年原为5.30/6.37亿），同比增速115.2%/29.7%/19.8%；",
+      "quantities": [
+        {
+          "value": "115.2",
+          "unit": "%",
+          "start": 1135,
+          "end": 1141
+        },
+        {
+          "value": "29.7",
+          "unit": "%",
+          "start": 1142,
+          "end": 1147
+        },
+        {
+          "value": "19.8",
+          "unit": "%",
+          "start": 1148,
+          "end": 1153
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑集采政策影响和公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1302,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1302,
+    "processed_ranges": [
+      [
+        0,
+        1302
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1302,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001932,
+  "source_content_sha256": "6c5ce543be8b0acf584779924e1712e605bf205e5fe00a9ae6e1be8f0d90d32b"
+}

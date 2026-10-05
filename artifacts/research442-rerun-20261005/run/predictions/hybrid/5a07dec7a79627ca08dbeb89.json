@@ -1,0 +1,548 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000490",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "研发费用率是比率，单位应为百分比，却写成“23.81万元”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 388,
+          "end": 444,
+          "text": "费用方面，2024年销售/管理/研发/财务费用率分别为24.64%/3.89%/23.81万元/-0.76%，。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "费用方面，2024年销售/管理/研发/财务费用率分别为24.64%/3.89%/23.81万元/-0.76%，。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 388,
+          "end": 444,
+          "text": "费用方面，2024年销售/管理/研发/财务费用率分别为24.64%/3.89%/23.81万元/-0.76%，。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2f3e59cb270e74dd3623a2bb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "荣誉称号名称为空引号，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 530,
+          "end": 559,
+          "text": "2009年被评为国家高新技术企业，2023年荣获“”称号。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2009年被评为国家高新技术企业，2023年荣获“”称号。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 530,
+          "end": 559,
+          "text": "2009年被评为国家高新技术企业，2023年荣获“”称号。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fbecffb5a9078e5b945e32c7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "2024年毛利率63.57%高于2025年一季度的62.70%，却称“回升”，比较方向与数值相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 282,
+          "end": 388,
+          "text": "盈利能力方面，2024年公司毛利率/净利率为63.57%/14.95%，同比下降0.66/5.57pct，主因研发增加和海外团队扩张导致费用率增长；2025年一季度毛利率/净利率回升至62.70%/21.61%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "盈利能力方面，2024年公司毛利率/净利率为63.57%/14.95%，同比下降0.66/5.57pct，主因研发增加和海外团队扩张导致费用率增长；2025年一季度毛利率/净利率回升至62.70%/21.61%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 282,
+          "end": 388,
+          "text": "盈利能力方面，2024年公司毛利率/净利率为63.57%/14.95%，同比下降0.66/5.57pct，主因研发增加和海外团队扩张导致费用率增长；2025年一季度毛利率/净利率回升至62.70%/21.61%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "36942d23fc2595c734577fa0",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1612
+        ]
+      ],
+      "estimated_input_tokens": 6132,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:44:53.931978+00:00",
+        "request_sha256": "62ba34ec37adad5d32ffcb80fc8f055c7773a99794927928ca728c1d92ecd817",
+        "input_token_estimate": 17069,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279213",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9853fb208ab048549fe5c3f27633a8cd",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3956,
+        "output_tokens": 6188,
+        "usage_source": "provider",
+        "duration_seconds": 24.30165,
+        "cost_cny": "0.028708",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "费用方面，2024年销售/管理/研发/财务费用率分别为24.64%/3.89%/23.81万元/-0.76%，。"
+          }
+        ],
+        "reason": "研发费用率是比率，单位应为百分比，却写成“23.81万元”，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2009年被评为国家高新技术企业，2023年荣获“”称号。"
+          }
+        ],
+        "reason": "荣誉称号名称为空引号，非数值属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "盈利能力方面，2024年公司毛利率/净利率为63.57%/14.95%，同比下降0.66/5.57pct，主因研发增加和海外团队扩张导致费用率增长；2025年一季度毛利率/净利率回升至62.70%/21.61%。"
+          }
+        ],
+        "reason": "2024年毛利率63.57%高于2025年一季度的62.70%，却称“回升”，比较方向与数值相反。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 75,
+      "end": 103,
+      "text": "公司2024年实现营收9.11亿元，同比下滑3.44%；",
+      "quantities": [
+        {
+          "value": "9.11",
+          "unit": "亿元",
+          "start": 86,
+          "end": 92
+        },
+        {
+          "value": "3.44",
+          "unit": "%",
+          "start": 97,
+          "end": 102
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 103,
+      "end": 152,
+      "text": "归母净利润1.36亿元，同比下滑29.66%，主要系技术研发、产品债权融资、海外市场投入增加所致。",
+      "quantities": [
+        {
+          "value": "1.36",
+          "unit": "亿元",
+          "start": 108,
+          "end": 114
+        },
+        {
+          "value": "29.66",
+          "unit": "%",
+          "start": 119,
+          "end": 125
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 152,
+      "end": 185,
+      "text": "单季度看，2024年四季度营收1.78亿元，同比下滑21.24%；",
+      "quantities": [
+        {
+          "value": "1.78",
+          "unit": "亿元",
+          "start": 167,
+          "end": 173
+        },
+        {
+          "value": "21.24",
+          "unit": "%",
+          "start": 178,
+          "end": 184
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 185,
+      "end": 210,
+      "text": "归母净利润0.04亿元，同比大幅下滑76.77%。",
+      "quantities": [
+        {
+          "value": "0.04",
+          "unit": "亿元",
+          "start": 190,
+          "end": 196
+        },
+        {
+          "value": "76.77",
+          "unit": "%",
+          "start": 203,
+          "end": 209
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 210,
+      "end": 241,
+      "text": "2025年第一季度实现营收2.68亿元，同比增长18.09%；",
+      "quantities": [
+        {
+          "value": "2.68",
+          "unit": "亿元",
+          "start": 223,
+          "end": 229
+        },
+        {
+          "value": "18.09",
+          "unit": "%",
+          "start": 234,
+          "end": 240
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 241,
+      "end": 282,
+      "text": "归母净利润0.58亿元，同比增长0.97%，半导体、汽车行业需求回暖带动营收增长。",
+      "quantities": [
+        {
+          "value": "0.58",
+          "unit": "亿元",
+          "start": 246,
+          "end": 252
+        },
+        {
+          "value": "0.97",
+          "unit": "%",
+          "start": 257,
+          "end": 262
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 241,
+      "end": 282,
+      "text": "归母净利润0.58亿元，同比增长0.97%，半导体、汽车行业需求回暖带动营收增长。",
+      "quantities": [
+        {
+          "value": "0.58",
+          "unit": "亿元",
+          "start": 246,
+          "end": 252
+        },
+        {
+          "value": "0.97",
+          "unit": "%",
+          "start": 257,
+          "end": 262
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 282,
+      "end": 356,
+      "text": "盈利能力方面，2024年公司毛利率/净利率为63.57%/14.95%，同比下降0.66/5.57pct，主因研发增加和海外团队扩张导致费用率增长；",
+      "quantities": [
+        {
+          "value": "63.57",
+          "unit": "%",
+          "start": 304,
+          "end": 310
+        },
+        {
+          "value": "14.95",
+          "unit": "%",
+          "start": 311,
+          "end": 317
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 282,
+      "end": 356,
+      "text": "盈利能力方面，2024年公司毛利率/净利率为63.57%/14.95%，同比下降0.66/5.57pct，主因研发增加和海外团队扩张导致费用率增长；",
+      "quantities": [
+        {
+          "value": "63.57",
+          "unit": "%",
+          "start": 304,
+          "end": 310
+        },
+        {
+          "value": "14.95",
+          "unit": "%",
+          "start": 311,
+          "end": 317
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 356,
+      "end": 388,
+      "text": "2025年一季度毛利率/净利率回升至62.70%/21.61%。",
+      "quantities": [
+        {
+          "value": "62.70",
+          "unit": "%",
+          "start": 374,
+          "end": 380
+        },
+        {
+          "value": "21.61",
+          "unit": "%",
+          "start": 381,
+          "end": 387
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 356,
+      "end": 388,
+      "text": "2025年一季度毛利率/净利率回升至62.70%/21.61%。",
+      "quantities": [
+        {
+          "value": "62.70",
+          "unit": "%",
+          "start": 374,
+          "end": 380
+        },
+        {
+          "value": "21.61",
+          "unit": "%",
+          "start": 381,
+          "end": 387
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1447,
+      "end": 1559,
+      "text": "我们预计2025年-2027年归属母公司净利润分别为1.81/2.42/3.00亿元，对应PE57/43/35倍，一年期合理估值为103.91-118.75元（对应2025年PE70-80x），首次覆盖给予“优于大市”评级。",
+      "quantities": [
+        {
+          "value": "3.00",
+          "unit": "亿元",
+          "start": 1483,
+          "end": 1489
+        },
+        {
+          "value": "35",
+          "unit": "倍",
+          "start": 1500,
+          "end": 1503
+        },
+        {
+          "value": "-118.75",
+          "unit": "元",
+          "start": 1518,
+          "end": 1526
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年归属母公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1612,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1612,
+    "processed_ranges": [
+      [
+        0,
+        1612
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1612,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002556,
+  "source_content_sha256": "737a18b50da38cde6d43dbb15fb4030d68f975486a814908d9db68836fdd2b0e"
+}

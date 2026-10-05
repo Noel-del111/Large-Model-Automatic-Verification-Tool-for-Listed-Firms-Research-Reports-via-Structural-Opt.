@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"近期宁德时代港股IPO募集353亿港元，约50%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建，一期项目已投入7亿欧元，规划产能为34GWH，预计将于2025年投入生产；二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。\"}], \"reason\": \"353亿港元的约50%应为176.5亿港元，原文括号内276亿港元，比例与金额对应不成立。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。\"}], \"reason\": \"二期项目预计2025年才开工建设，却称2024年投入生产，开工时间晚于投产时间。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。\"}], \"reason\": \"国内销量9.4万台加出口4.6万台等于14.0万台，与总销量13.0万台不符。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"【叉车】4月内/外销量分别同比-1%/+5%，出口\"}, {\"text\": \"4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。\"}], \"reason\": \"标题称外销量同比+5%，正文称出口同比增长18%，同一期间出口同比数值冲突。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"2025年4月，压路机/摊铺机/平地机销量分别为1713/200/756/222台，分别同比+36%/52%/22%，1-4月累计同比+30%/+38%/+20%。\"}], \"reason\": \"三个产品名称后列四个销量数值，且同比百分比只有三个，产品与销量、同比数量不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:57:42.953785+00:00",
+    "request_sha256": "7c13435538648049a09c1b35fc3cd40ba93216d6ea828232cd6bdbd439ae12db",
+    "input_token_estimate": 18211,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280355",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "6bc8e81a18ac4930b8941cffad6e0029",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4316,
+    "output_tokens": 8260,
+    "usage_source": "provider",
+    "duration_seconds": 32.806919,
+    "cost_cny": "0.037356"
+  },
+  "cache_request": {
+    "key": "9006223b5f3cf9c0dec9b9488f72ec4d514189171067d1dd4621ee205d308d76",
+    "purpose": "text_review.detect",
+    "messages_sha256": "7c13435538648049a09c1b35fc3cd40ba93216d6ea828232cd6bdbd439ae12db"
+  }
+}

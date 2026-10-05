@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "C module check result 1.0.0",
+  "type": "object",
+  "required": ["schema_version", "run_id", "created_at", "summary", "documents", "input_issues", "findings", "source_facts", "model_traces"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "run_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string"},
+    "summary": {
+      "type": "object",
+      "required": ["confirmed_error", "needs_review", "no_issue", "claims", "source_facts", "input_issues", "coverage", "complete"],
+      "properties": {
+        "confirmed_error": {"type": "integer", "minimum": 0},
+        "needs_review": {"type": "integer", "minimum": 0},
+        "no_issue": {"type": "integer", "minimum": 0},
+        "claims": {"type": "integer", "minimum": 0},
+        "source_facts": {"type": "integer", "minimum": 0},
+        "input_issues": {"type": "integer", "minimum": 0},
+        "coverage": {"const": "supported_claims_only"},
+        "complete": {"type": "boolean"}
+      }
+    },
+    "documents": {"type": "array", "minItems": 1},
+    "input_issues": {"type": "array"},
+    "model_traces": {"type": "array"},
+    "source_facts": {"type": "array", "items": {"$ref": "#/$defs/fact"}},
+    "findings": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/finding"}}
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": ["doc_id", "run_id", "sha256", "file", "block_id", "page", "bbox", "paragraph", "text", "char_start", "char_end", "quality"],
+      "properties": {
+        "doc_id": {"type": "string"}, "run_id": {"type": "string"}, "sha256": {"type": "string"},
+        "file": {"type": "string"}, "block_id": {"type": "string"}, "text": {"type": "string"},
+        "quality": {"type": "string"},
+        "notes": {"type": "array", "items": {"type": "string"}},
+        "page": {"type": ["integer", "null"], "minimum": 1},
+        "paragraph": {"type": ["integer", "null"], "minimum": 1},
+        "bbox": {"oneOf": [{"type": "null"}, {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}}]},
+        "char_start": {"type": ["integer", "null"], "minimum": 0},
+        "char_end": {"type": ["integer", "null"], "minimum": 0}
+      }
+    },
+    "fact": {
+      "type": "object",
+      "required": ["fact_id", "company", "metric", "value", "unit", "period", "basis", "scope", "currency", "text", "evidence", "warnings", "attributes"],
+      "properties": {
+        "fact_id": {"type": "string", "minLength": 1}, "company": {"type": "string"},
+        "metric": {"type": "string"}, "value": {"type": "string"}, "unit": {"type": "string"},
+        "period": {"type": "string"}, "basis": {"enum": ["before", "after", "change", "reported", "unknown"]},
+        "scope": {"enum": ["consolidated", "parent", "unknown"]}, "currency": {"type": "string"},
+        "text": {"type": "string"}, "warnings": {"type": "array", "items": {"type": "string"}},
+        "attributes": {"type": "object"}, "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": ["id", "status", "status_label", "claim", "error_type", "rule_id", "message", "suggestion", "suggested_value", "evidence", "calculation", "review_status"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "status": {"enum": ["confirmed_error", "needs_review", "no_issue"]},
+        "status_label": {"enum": ["已确认错误", "待人工确认", "未发现问题"]},
+        "claim": {"$ref": "#/$defs/fact"},
+        "error_type": {"type": "string"}, "rule_id": {"type": "string", "minLength": 1},
+        "message": {"type": "string", "minLength": 1}, "suggestion": {"type": "string"},
+        "suggested_value": {"type": ["string", "null"]},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/fact"}},
+        "calculation": {"type": "object"}, "review_status": {"const": "unreviewed"}
+      },
+      "allOf": [{"if": {"properties": {"status": {"enum": ["confirmed_error", "no_issue"]}}},
+                 "then": {"properties": {"evidence": {"minItems": 1}}}},
+                {"if": {"properties": {"status": {"const": "confirmed_error"}}},
+                 "then": {"properties": {"suggestion": {"minLength": 1}, "error_type": {"minLength": 1}}}}]
+    }
+  }
+}

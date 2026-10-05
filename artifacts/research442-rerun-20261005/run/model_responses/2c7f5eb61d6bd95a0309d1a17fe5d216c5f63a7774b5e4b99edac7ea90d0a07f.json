@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2025Q1，公司实现营收5549.92分，同比增长37.85%，归母净利润-51.94万元。\", \"start\": 175, \"end\": 226}], \"reason\": \"营收金额应以元或万元计量，写成“分”量纲错误，且数值明显不符。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"预计2027-2025年归母净利润为0.47/0.53（原0.42/0.49）/0.64亿元\", \"start\": 291, \"end\": 344}], \"reason\": \"预测年份区间写成2027-2025年，终点早于起点，时间顺序颠倒。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"国家近两年持续发布了鼓励大规模设备更新等政策，政策更加具象和落地，进一步加强了对国产商用汽车的支持，对公司具有积极影响。\", \"start\": 700, \"end\": 771}], \"reason\": \"公司为科学仪器企业，设备更新政策应支持国产科学仪器或设备，写成“国产商用汽车”与上下文业务不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:22:09.202876+00:00",
+    "request_sha256": "dbfb83df984e7e01ce2de60370a591895781bf141c1dc68a231a38758bcaa364",
+    "input_token_estimate": 15312,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277456",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ae0fee5458654964906e1e1372e3bf18",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3607,
+    "output_tokens": 3095,
+    "usage_source": "provider",
+    "duration_seconds": 13.47309,
+    "cost_cny": "0.015987"
+  },
+  "cache_request": {
+    "key": "2c7f5eb61d6bd95a0309d1a17fe5d216c5f63a7774b5e4b99edac7ea90d0a07f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "dbfb83df984e7e01ce2de60370a591895781bf141c1dc68a231a38758bcaa364"
+  }
+}

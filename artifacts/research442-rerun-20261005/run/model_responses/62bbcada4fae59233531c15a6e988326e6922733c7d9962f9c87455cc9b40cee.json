@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"据GMI数据，129年全球触觉传感器市场规模达164亿美元。\"}],\"reason\":\"年份“129年”并非合理公元年份，时间信息不成立，应写为2019或2029等。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"分下游看，2023年全球触觉传感器下游应用领域占比前三分别为制造业（%）、航天航空&国防（27%）、汽车行业（17%）。\"}],\"reason\":\"制造业占比只有百分号，缺少具体百分比数值。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"压电式传感器：原理为利用压电效应，即在外力作用下，某些特定材料内部会产生极化，形成不同的极距，并出现与材料表面相反的电荷。\"}],\"reason\":\"压电效应产生的是极化和极性电荷，不是“极距”，术语使用错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:31:13.157999+00:00",
+    "request_sha256": "5c89cff2342fec0cdaa54bd6e73c5fe4ea77b11bf0fa81849426abdf4e4a862c",
+    "input_token_estimate": 16373,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278517",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "391c8bbdadf648f9a74eff7feb6af024",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3788,
+    "output_tokens": 5761,
+    "usage_source": "provider",
+    "duration_seconds": 25.127078,
+    "cost_cny": "0.026832"
+  },
+  "cache_request": {
+    "key": "62bbcada4fae59233531c15a6e988326e6922733c7d9962f9c87455cc9b40cee",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5c89cff2342fec0cdaa54bd6e73c5fe4ea77b11bf0fa81849426abdf4e4a862c"
+  }
+}

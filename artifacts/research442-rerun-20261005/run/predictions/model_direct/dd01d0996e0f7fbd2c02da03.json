@@ -1,0 +1,328 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000583",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "无人车规模化应用数量用“吨”作单位，量纲错误，应为辆或台。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 448,
+          "end": 523,
+          "text": "根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000吨，为100多个细分场景的用户交付了上亿件订单，全行业日均配送量显著增加。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000吨，为100多个细分场景的用户交付了上亿件订单，全行业日均配送量显著增加。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 448,
+          "end": 523,
+          "text": "根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000吨，为100多个细分场景的用户交付了上亿件订单，全行业日均配送量显著增加。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9a8aeeda4344d58f6fc263c3",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "无人配送车属自动驾驶，称“组合辅助驾驶”与全程少量干预矛盾，术语不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 174,
+          "end": 276,
+          "text": "无人配送车指的是依靠搭载的激光雷达、摄像头等传感器和人工智能算法实现的组合辅助驾驶物流车辆，全程不需要或仅需少量人工干预，可运用于快递、外卖、商超、医药等场景，解决最后1公里至5公里的货件运输和配送问题。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "无人配送车指的是依靠搭载的激光雷达、摄像头等传感器和人工智能算法实现的组合辅助驾驶物流车辆，全程不需要或仅需少量人工干预，可运用于快递、外卖、商超、医药等场景，解决最后1公里至5公里的货件运输和配送问题。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 174,
+          "end": 276,
+          "text": "无人配送车指的是依靠搭载的激光雷达、摄像头等传感器和人工智能算法实现的组合辅助驾驶物流车辆，全程不需要或仅需少量人工干预，可运用于快递、外卖、商超、医药等场景，解决最后1公里至5公里的货件运输和配送问题。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "91547d8948a3d67bcf08478b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "7*24小时通常表示全天候不间断，与“间断运营”在同一条件矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 664,
+          "end": 714,
+          "text": "以新石器X3为例，可实现7*24小时间断运营，单次装载200-300件，单日配送单量可超过传统货车。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "以新石器X3为例，可实现7*24小时间断运营，单次装载200-300件，单日配送单量可超过传统货车。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 664,
+          "end": 714,
+          "text": "以新石器X3为例，可实现7*24小时间断运营，单次装载200-300件，单日配送单量可超过传统货车。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "774092eaf7cffeffc9b2c06c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "Robovan后括号内应为补充名称或说明，现为空，属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 716,
+          "end": 784,
+          "text": "投资建议：以Robovan（）为代表的无人物流、货运、环卫等应用场景正在日益成熟，我们重点推荐万马科技、侨银股份、锐明技术、虹软科技等。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：以Robovan（）为代表的无人物流、货运、环卫等应用场景正在日益成熟，我们重点推荐万马科技、侨银股份、锐明技术、虹软科技等。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 716,
+          "end": 784,
+          "text": "投资建议：以Robovan（）为代表的无人物流、货运、环卫等应用场景正在日益成熟，我们重点推荐万马科技、侨银股份、锐明技术、虹软科技等。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3ce3392e74d9615dab6e148e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一分句连用两个“已”，语义重复冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 356,
+          "end": 448,
+          "text": "根据顺丰速运2024年年报，顺丰已在全国范围内已投入超800台无人车，可完成封闭园区内最后一公里配送、楼宇最后100米配送、网点至下级站点最后三公里配送，以及分拨中心到网点的线路运输。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据顺丰速运2024年年报，顺丰已在全国范围内已投入超800台无人车，可完成封闭园区内最后一公里配送、楼宇最后100米配送、网点至下级站点最后三公里配送，以及分拨中心到网点的线路运输。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 356,
+          "end": 448,
+          "text": "根据顺丰速运2024年年报，顺丰已在全国范围内已投入超800台无人车，可完成封闭园区内最后一公里配送、楼宇最后100米配送、网点至下级站点最后三公里配送，以及分拨中心到网点的线路运输。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bb45f1fc70ffa7ed1b0bfb87",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          811
+        ]
+      ],
+      "estimated_input_tokens": 5407,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:40:26.642061+00:00",
+        "request_sha256": "1b185434c048f686ca3c0837b6e7ebacfe15397212a6c18725dafb3be381caa8",
+        "input_token_estimate": 15029,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277173",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ac093a6fccf74e1399e4fe440960c21f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3542,
+        "output_tokens": 6999,
+        "usage_source": "provider",
+        "duration_seconds": 28.103731,
+        "cost_cny": "0.031538"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000吨，为100多个细分场景的用户交付了上亿件订单，全行业日均配送量显著增加。"
+          }
+        ],
+        "reason": "无人车规模化应用数量用“吨”作单位，量纲错误，应为辆或台。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "无人配送车指的是依靠搭载的激光雷达、摄像头等传感器和人工智能算法实现的组合辅助驾驶物流车辆，全程不需要或仅需少量人工干预，可运用于快递、外卖、商超、医药等场景，解决最后1公里至5公里的货件运输和配送问题。"
+          }
+        ],
+        "reason": "无人配送车属自动驾驶，称“组合辅助驾驶”与全程少量干预矛盾，术语不当。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "以新石器X3为例，可实现7*24小时间断运营，单次装载200-300件，单日配送单量可超过传统货车。"
+          }
+        ],
+        "reason": "7*24小时通常表示全天候不间断，与“间断运营”在同一条件矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "投资建议：以Robovan（）为代表的无人物流、货运、环卫等应用场景正在日益成熟，我们重点推荐万马科技、侨银股份、锐明技术、虹软科技等。"
+          }
+        ],
+        "reason": "Robovan后括号内应为补充名称或说明，现为空，属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "根据顺丰速运2024年年报，顺丰已在全国范围内已投入超800台无人车，可完成封闭园区内最后一公里配送、楼宇最后100米配送、网点至下级站点最后三公里配送，以及分拨中心到网点的线路运输。"
+          }
+        ],
+        "reason": "同一分句连用两个“已”，语义重复冗余。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 811,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 811,
+    "processed_ranges": [
+      [
+        0,
+        811
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 28.125852,
+  "source_content_sha256": "fb5fd83182ecb4db61a0ec8a7ce628969ac17e6cbda10c1541213419063c34be"
+}

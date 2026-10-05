@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"中炬高新()\"}], \"reason\": \"股票代码字段括号内为空，缺少公司证券代码。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"公司2025年目标完成至少1起债权发行，补短板或空白，提升发展效率；实现不低于同行的营收增速等。\"}], \"reason\": \"“债权发行”应为“债券发行”，债权与债券含义不同。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"目前外部窜货和电商冲击均在减弱，目前外部窜货和电商冲击均在减弱，\"}], \"reason\": \"同一句“目前外部窜货和电商冲击均在减弱”连续重复，未提供新增信息。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"公司正在做三价管理（出厂价、、零售价），抓住主要产品，盯住重点场所及重点客户，加大费用投入过程管理，规范三价标准，为后续建立错位竞争打下基础。。\"}], \"reason\": \"“三价管理”括号内“出厂价、、零售价”中间为空，缺少一个价格类别名称。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"当前股价对应PE分别为17.4/16.1/14.9倍，公司当前PE18倍，维持公司“强烈推荐”评级。\"}], \"reason\": \"2025年预测净利润低于2024年，当前PE18倍下对应2025年PE应高于18倍，与17.4倍矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:17:15.232323+00:00",
+    "request_sha256": "19dcee4b0f6f5b9935f8bc774587427e6dd1f05107afe82be5d7a8f901a8f746",
+    "input_token_estimate": 16722,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278866",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "24998c00565e47c4a729ea477d8c6b5d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3960,
+    "output_tokens": 10838,
+    "usage_source": "provider",
+    "duration_seconds": 44.581684,
+    "cost_cny": "0.047312"
+  },
+  "cache_request": {
+    "key": "14074e8e0dcb2c1427db972bec14621187403de72676cc13599d2910519d8d01",
+    "purpose": "text_review.detect",
+    "messages_sha256": "19dcee4b0f6f5b9935f8bc774587427e6dd1f05107afe82be5d7a8f901a8f746"
+  }
+}

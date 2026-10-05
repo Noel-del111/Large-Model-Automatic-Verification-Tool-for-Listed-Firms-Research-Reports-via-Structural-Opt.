@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"截至2024年9月，公司在合成生物学领域已获得8项专利授权和10项专利写作处于受理状态，同时，公司合成生物车间正式投产运营。\"}],\"reason\":\"“专利写作”不是规范术语，应为“专利申请”或“专利受理”，影响含义。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2025年2月，公司产品通过美国FDA GRAS认证，可作为食品添加剂、膳食补充剂、食品添加剂使用，可在美国食品、饮料市场上销售。\"}],\"reason\":\"同句两次出现“食品添加剂”，属不必要重复。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"4）麦角硫因——正在积极研发。\"}],\"reason\":\"该句在下一行被完整重复一次，属冗余语句。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"4、盈利预测&投资建议：由于公司因项目公司管理团队在考核期内未达业绩指标，公司根据协议约定提前终止了工业大麻雾化项目合作，我们调整公司盈利预测，预计公司25-24年营收20.81/24.80/29.96亿元（25-26年前值24.09/29.15亿元），归母净利润2.13/2.88/3.96亿元（25-26年前值2.63/3.46亿元），对应EPS0.29/0.39/0.53元/股。\"}],\"reason\":\"“25-24年”起止年份倒置，起点晚于终点，时间关系矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:25:28.735215+00:00",
+    "request_sha256": "10f2f9992f97400a6edafb24aa6720beeb019dcd12a3537e9507b6b6f7dfc845",
+    "input_token_estimate": 17067,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279211",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b16a6565169641359a80d5c9829c7747",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3952,
+    "output_tokens": 11330,
+    "usage_source": "provider",
+    "duration_seconds": 42.825095,
+    "cost_cny": "0.049272"
+  },
+  "cache_request": {
+    "key": "639cb1e76701419f6bcfd08c55753e57695147a5b4a78cffaa95e42bdba0d112",
+    "purpose": "text_review.detect",
+    "messages_sha256": "10f2f9992f97400a6edafb24aa6720beeb019dcd12a3537e9507b6b6f7dfc845"
+  }
+}

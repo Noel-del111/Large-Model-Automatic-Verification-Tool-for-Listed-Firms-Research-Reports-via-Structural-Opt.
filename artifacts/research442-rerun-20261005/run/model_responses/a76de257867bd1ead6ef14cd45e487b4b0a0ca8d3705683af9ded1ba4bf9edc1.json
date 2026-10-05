@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。\"}], \"reason\": \"同一营收金额及增速表述连续重复，无新增信息。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"2025年6月0日，中信银行AIC正式获批筹建，成为第二家获批AIC的股份行，显示了相关监管对其综合实力的认可。\"}], \"reason\": \"6月没有0日，该日期本身不成立。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。\"}], \"reason\": \"设立全资子公司出资100元不合理，单位应为亿元而非元。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。\"}], \"reason\": \"公司名称后括号内容为空，缺失应填写的非数值属性。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"我们维持其盈利预测，预计2025-2027年归母净利润分别为688/711/718亿元，YoY分别为+0.36%/+3.30%/+1.01%/+2.01%；当前股价对应2025-2027年PB分别为0.62/0.59/0.54倍，维持“买入”评级。\"}], \"reason\": \"2025-2027三年归母净利润对应四个YoY数值，期间与数值个数不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:01:49.097489+00:00",
+    "request_sha256": "eb42be89331da16a5b1bd7c570d3b7bf43174f78275337f77ccdab3491c0e15a",
+    "input_token_estimate": 15302,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277446",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "283a9eea11934d8dbd64ab2238fd563c",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3665,
+    "output_tokens": 7513,
+    "usage_source": "provider",
+    "duration_seconds": 29.527241,
+    "cost_cny": "0.033717"
+  },
+  "cache_request": {
+    "key": "a76de257867bd1ead6ef14cd45e487b4b0a0ca8d3705683af9ded1ba4bf9edc1",
+    "purpose": "text_review.detect",
+    "messages_sha256": "eb42be89331da16a5b1bd7c570d3b7bf43174f78275337f77ccdab3491c0e15a"
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000537",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "一年只有12个月，“25年13月”不是合法月份，时间信息不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 518,
+          "end": 563,
+          "text": "预计25年13月起，存量备案但未开工绿氢氨醇项目将加速动工，带动上游制氢设备商的需求爆发。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计25年13月起，存量备案但未开工绿氢氨醇项目将加速动工，带动上游制氢设备商的需求爆发。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 518,
+          "end": 563,
+          "text": "预计25年13月起，存量备案但未开工绿氢氨醇项目将加速动工，带动上游制氢设备商的需求爆发。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dabe7a4dc9d9faab8a358410",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“达GW”前缺少应填的具体数值，招标量无法读取。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 563,
+          "end": 619,
+          "text": "我们预计2025年国内电解槽招标量达GW，招标倾向于央国企下属及相关合作企业，重点推荐已具备项目经验的设备企业。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计2025年国内电解槽招标量达GW，招标倾向于央国企下属及相关合作企业，重点推荐已具备项目经验的设备企业。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 563,
+          "end": 619,
+          "text": "我们预计2025年国内电解槽招标量达GW，招标倾向于央国企下属及相关合作企业，重点推荐已具备项目经验的设备企业。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d8e7f63cbbf14e79c77b238c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "绿醇产能用“克”作单位明显错误，与万吨级需求比较也不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 341,
+          "end": 404,
+          "text": "当前落地绿醇产能仅20余克，而目前已投入运营的甲醇动力船舶对甲醇燃料需求约93万吨，存在绿醇燃料供不应求赚取绿色溢价的窗口期。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "当前落地绿醇产能仅20余克，而目前已投入运营的甲醇动力船舶对甲醇燃料需求约93万吨，存在绿醇燃料供不应求赚取绿色溢价的窗口期。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 341,
+          "end": 404,
+          "text": "当前落地绿醇产能仅20余克，而目前已投入运营的甲醇动力船舶对甲醇燃料需求约93万吨，存在绿醇燃料供不应求赚取绿色溢价的窗口期。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1fbbf530d0ee5a5c8b9f6878",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“（注：）”后无任何注释内容，注释属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 730,
+          "end": 755,
+          "text": "重点推荐：华电科工、华光环能、吉电股份等。（注：）"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "重点推荐：华电科工、华光环能、吉电股份等。（注：）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 730,
+          "end": 755,
+          "text": "重点推荐：华电科工、华光环能、吉电股份等。（注：）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7279e92a8d74059c07163f64",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          800
+        ]
+      ],
+      "estimated_input_tokens": 5455,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:06:19.626510+00:00",
+        "request_sha256": "d3f67a3de27d7a6642062758440e24b8ecd923ae3eefc18ec69992cf226ba331",
+        "input_token_estimate": 15142,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277286",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f4058bf22da648479cf0cf6a6263d21d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3531,
+        "output_tokens": 6547,
+        "usage_source": "provider",
+        "duration_seconds": 26.479799,
+        "cost_cny": "0.029719",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "预计25年13月起，存量备案但未开工绿氢氨醇项目将加速动工，带动上游制氢设备商的需求爆发。"
+          }
+        ],
+        "reason": "一年只有12个月，“25年13月”不是合法月份，时间信息不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "我们预计2025年国内电解槽招标量达GW，招标倾向于央国企下属及相关合作企业，重点推荐已具备项目经验的设备企业。"
+          }
+        ],
+        "reason": "“达GW”前缺少应填的具体数值，招标量无法读取。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "当前落地绿醇产能仅20余克，而目前已投入运营的甲醇动力船舶对甲醇燃料需求约93万吨，存在绿醇燃料供不应求赚取绿色溢价的窗口期。"
+          }
+        ],
+        "reason": "绿醇产能用“克”作单位明显错误，与万吨级需求比较也不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "重点推荐：华电科工、华光环能、吉电股份等。（注：）"
+          }
+        ],
+        "reason": "“（注：）”后无任何注释内容，注释属性值为空。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 800,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 800,
+    "processed_ranges": [
+      [
+        0,
+        800
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 800,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001299,
+  "source_content_sha256": "95fe04db6004a0489fe60ff99ad46abb5f54789ef6d7bd2c3972e33502be73c5"
+}

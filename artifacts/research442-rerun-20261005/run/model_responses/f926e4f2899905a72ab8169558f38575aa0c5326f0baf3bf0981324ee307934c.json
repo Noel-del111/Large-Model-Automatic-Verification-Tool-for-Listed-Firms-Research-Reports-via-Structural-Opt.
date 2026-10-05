@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。\"\n        }\n      ],\n      \"reason\": \"期间写为‘4-1月’，起止月份倒置，应为‘1-4月’。\"\n    },\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"2024年4-1月博彩毛收入达759亿澳门元，恢复至1019年同期的76.1%。\"\n        }\n      ],\n      \"reason\": \"‘1019年’与上下文多处‘2019年’同期比较冲突，年份数字错误。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"其中，过夜旅客数量128万人次，占比46.9%，与2019年同期基本持平。\"\n        }\n      ],\n      \"reason\": \"过夜旅客128万除以入境旅客272万约47.1%，与46.9%不符。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"持续推荐金沙中国有限公司，公司是澳门博彩行业龙头，博彩桌、酒店、购物中心等供给均为行业第一，对应24年盈利预期，当下PE估值10倍，EV为9倍，估值较低，具备配置价值。\"\n        }\n      ],\n      \"reason\": \"EV为企业价值，不是倍数，表述‘EV为9倍’混淆了EV与EV/EBITDA等估值倍数。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:36:17.119298+00:00",
+    "request_sha256": "9340486463539e51a27d55d890bfe167ba67603f38802104376137d84bbc79c9",
+    "input_token_estimate": 15094,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277238",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "692f203aef904b9f84570ef450c15c94",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3575,
+    "output_tokens": 6249,
+    "usage_source": "provider",
+    "duration_seconds": 25.495434,
+    "cost_cny": "0.028571"
+  },
+  "cache_request": {
+    "key": "f926e4f2899905a72ab8169558f38575aa0c5326f0baf3bf0981324ee307934c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "9340486463539e51a27d55d890bfe167ba67603f38802104376137d84bbc79c9"
+  }
+}

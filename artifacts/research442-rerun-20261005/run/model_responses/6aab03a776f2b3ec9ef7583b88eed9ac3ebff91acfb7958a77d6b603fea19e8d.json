@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"吉卡昔替尼获批上市，国产首个骨髓纤维化JAK抑制剂\"},{\"text\":\"本次获得批准的适应症是“用于中危或高危原发性骨髓纤维化（PMF）、真性红细胞增多症继发性骨髓纤维化（PPV-MF）和原发性血小板增多症继发性骨纤维化（PET-MF）的成人患者，治疗疾病相关脾肿大或疾病相关症状”，这是盐酸吉卡昔替尼片首个获批的临床适应症盐酸吉卡昔替尼片并非首个获批用于治疗骨髓纤维化的国产JAK抑制剂类创新药物。\"}],\"reason\":\"标题称国产首个骨髓纤维化JAK抑制剂，正文又称并非首个获批用于治疗骨髓纤维化的国产JAK抑制剂类创新药物，同一事实前后矛盾。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"另外，治疗芦可替尼不耐受的MF患者IIb期临床试验结果显示24吨时SVR35达43.2%；芦可替尼难治或复发的骨髓纤维化II期临床试验结果显示24周时SVR35达32.4%。\"}],\"reason\":\"药物疗效时间单位应为“周”，“24吨”中“吨”是重量单位，明显误用。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"盐酸吉卡昔替尼已被纳入《中国临床肿瘤学会（）恶性血液病诊疗指南2024》中骨髓纤维化一线分层治疗的I级推荐、二线及进展期治疗的推荐，尤其是在骨髓纤维化（MF）相关贫血患者的一线治疗中，被列为I级推荐的首选。\"}],\"reason\":\"指南名称中“中国临床肿瘤学会”后的括号为空，缺失应填写的学会英文缩写等属性值。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"预计公司2025~2027年收入分别9.0/16.5/24.1亿元，分别同比增长68.7%/83.2%/46.2%，归母净利润分别为0.7/5.3/10.2亿元，分别同比增长152.6%/630.1%/93.1%，对应估值为392X/54X/28X。\"}],\"reason\":\"2026年归母净利润5.3亿元较2025年0.7亿元增长约657.1%，与所列同比增长630.1%不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:02:30.383524+00:00",
+    "request_sha256": "bcee22f8ef528478e56b670c35fd3a378c64fdfa2cfad2bc43047c99c52ce4c0",
+    "input_token_estimate": 16946,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27909",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "e607467b94494f039a786ec5c08312b4",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4041,
+    "output_tokens": 9078,
+    "usage_source": "provider",
+    "duration_seconds": 35.261099,
+    "cost_cny": "0.040353"
+  },
+  "cache_request": {
+    "key": "6aab03a776f2b3ec9ef7583b88eed9ac3ebff91acfb7958a77d6b603fea19e8d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "bcee22f8ef528478e56b670c35fd3a378c64fdfa2cfad2bc43047c99c52ce4c0"
+  }
+}

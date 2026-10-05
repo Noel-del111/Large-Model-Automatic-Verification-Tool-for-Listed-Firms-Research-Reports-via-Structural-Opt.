@@ -1,0 +1,241 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000676",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "日期区间起点5月30日晚于终点5月24日，时间先后关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 53,
+          "end": 76,
+          "text": "2025.5.30-5.24（后文均简称本周）"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025.5.30-5.24（后文均简称本周）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 53,
+          "end": 76,
+          "text": "2025.5.30-5.24（后文均简称本周）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9440f5ec49e10852659a739c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万31个一级行业仅31个，排名不可能为第35位，与行业总数矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 108,
+          "end": 141,
+          "text": "申万公用板块涨跌幅-0.18%，涨跌幅在31个行业中排名第35位。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "申万公用板块涨跌幅-0.18%，涨跌幅在31个行业中排名第35位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 108,
+          "end": 141,
+          "text": "申万公用板块涨跌幅-0.18%，涨跌幅在31个行业中排名第35位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "01bc639de7fb6036cab9a755",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "设备数量单位写成“台吨”，量纲不成立，应为台/套等。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 574,
+          "end": 602,
+          "text": "拟配备电极制造、装配、检测及PACK等设备约1452台吨"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "拟配备电极制造、装配、检测及PACK等设备约1452台吨"
+        }
+      ],
+      "spans": [
+        {
+          "start": 574,
+          "end": 602,
+          "text": "拟配备电极制造、装配、检测及PACK等设备约1452台吨"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c458e0cab033d3690dc8948e",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1256
+        ]
+      ],
+      "estimated_input_tokens": 5863,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:00:11.771614+00:00",
+        "request_sha256": "d3a02959838709176f17c234eebde5b119ba85aaf071b0fc1fbe3400725df111",
+        "input_token_estimate": 16301,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278445",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "db84ff32425c466c9ee16e07feae014c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3861,
+        "output_tokens": 7423,
+        "usage_source": "provider",
+        "duration_seconds": 35.156992,
+        "cost_cny": "0.033553",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2025.5.30-5.24（后文均简称本周）"
+          }
+        ],
+        "reason": "日期区间起点5月30日晚于终点5月24日，时间先后关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "申万公用板块涨跌幅-0.18%，涨跌幅在31个行业中排名第35位。"
+          }
+        ],
+        "reason": "申万31个一级行业仅31个，排名不可能为第35位，与行业总数矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "拟配备电极制造、装配、检测及PACK等设备约1452台吨"
+          }
+        ],
+        "reason": "设备数量单位写成“台吨”，量纲不成立，应为台/套等。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1256,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1256,
+    "processed_ranges": [
+      [
+        0,
+        1256
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1256,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001564,
+  "source_content_sha256": "ebfa0647b5da6f6cf03d83973e2db463cc79f419dcb9a13c1fae2c9c91376f56"
+}

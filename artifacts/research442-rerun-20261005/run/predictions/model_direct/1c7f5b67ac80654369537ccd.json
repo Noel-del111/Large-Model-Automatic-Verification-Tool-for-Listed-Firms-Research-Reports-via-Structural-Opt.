@@ -1,0 +1,563 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000512",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%等信息在前后文重复出现。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 39,
+          "end": 124,
+          "text": "事件概述：公司发布5月产销快报，5月新能源汽车批发销售38.2万辆，同比+15.3%，环比+0.6%；新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 194,
+          "end": 247,
+          "text": "公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件概述：公司发布5月产销快报，5月新能源汽车批发销售38.2万辆，同比+15.3%，环比+0.6%；新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%。"
+        },
+        {
+          "text": "公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 39,
+          "end": 124,
+          "text": "事件概述：公司发布5月产销快报，5月新能源汽车批发销售38.2万辆，同比+15.3%，环比+0.6%；新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%。"
+        },
+        {
+          "start": 194,
+          "end": 247,
+          "text": "公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "988e8e09da5521b487e48817",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一出口/海外销量8.9万辆且“再创新高”的表述在相邻段落重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 194,
+          "end": 247,
+          "text": "公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。"
+        },
+        {
+          "kind": "source_text",
+          "start": 421,
+          "end": 455,
+          "text": "受益海外车型上量及区域拓展，5月新能源出口销量8.9万辆，再创新高；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。"
+        },
+        {
+          "text": "受益海外车型上量及区域拓展，5月新能源出口销量8.9万辆，再创新高；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 194,
+          "end": 247,
+          "text": "公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。"
+        },
+        {
+          "start": 421,
+          "end": 455,
+          "text": "受益海外车型上量及区域拓展，5月新能源出口销量8.9万辆，再创新高；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9cb8c770da1f5831fd284741",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "列举海外工厂布局地点时，“乌兹别克”重复出现，表述冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 665,
+          "end": 749,
+          "text": "今年公司将加大海外市场投入，积极布局巴西、乌兹别克、匈牙利、乌兹别克、土耳其、印尼布局工厂，同时加速出口，出海有望在欧洲、东南亚、澳新迎来快速发展，出海亦有望提振盈利。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "今年公司将加大海外市场投入，积极布局巴西、乌兹别克、匈牙利、乌兹别克、土耳其、印尼布局工厂，同时加速出口，出海有望在欧洲、东南亚、澳新迎来快速发展，出海亦有望提振盈利。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 665,
+          "end": 749,
+          "text": "今年公司将加大海外市场投入，积极布局巴西、乌兹别克、匈牙利、乌兹别克、土耳其、印尼布局工厂，同时加速出口，出海有望在欧洲、东南亚、澳新迎来快速发展，出海亦有望提振盈利。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aa55372bb726f8b42f05cb01",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "销量单位应为“辆”，却写成“平方分米”，属于量纲单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 320,
+          "end": 404,
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 320,
+          "end": 404,
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "07e3abcf265d1395c25ebfdd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "腾势、方程豹、仰望销量合计约2.85万辆，与后文“3.68万”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 124,
+          "end": 177,
+          "text": "分品牌看，5月王朝海洋、腾势、方程豹、仰望销量分别34.8万辆、15,806辆、12,592辆、139辆。"
+        },
+        {
+          "kind": "source_text",
+          "start": 320,
+          "end": 404,
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分品牌看，5月王朝海洋、腾势、方程豹、仰望销量分别34.8万辆、15,806辆、12,592辆、139辆。"
+        },
+        {
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 124,
+          "end": 177,
+          "text": "分品牌看，5月王朝海洋、腾势、方程豹、仰望销量分别34.8万辆、15,806辆、12,592辆、139辆。"
+        },
+        {
+          "start": 320,
+          "end": 404,
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8116e126f8795abce822ae1d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "3.68万占37.7万的比例约为9.76%，并非原文所称的11%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 320,
+          "end": 404,
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 320,
+          "end": 404,
+          "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6a63b22eb5fc7d2879b04bf6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "仅列4、5月两个月份，却给出1.5、1.6、1.2万辆三个销量数字，期间与数值无法对应。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 766,
+          "end": 886,
+          "text": "2025年为公司的高端化产品大年，腾势N9已于2025年3月上市，定位六座大型SUV，售价38.98-44.98万元，全系标配易三方技术，舒适度、豪华属性强，带动腾势品牌4、5月实现1.5、1.6、1.2万辆销量，后续有望带动整体盈利向上。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年为公司的高端化产品大年，腾势N9已于2025年3月上市，定位六座大型SUV，售价38.98-44.98万元，全系标配易三方技术，舒适度、豪华属性强，带动腾势品牌4、5月实现1.5、1.6、1.2万辆销量，后续有望带动整体盈利向上。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 766,
+          "end": 886,
+          "text": "2025年为公司的高端化产品大年，腾势N9已于2025年3月上市，定位六座大型SUV，售价38.98-44.98万元，全系标配易三方技术，舒适度、豪华属性强，带动腾势品牌4、5月实现1.5、1.6、1.2万辆销量，后续有望带动整体盈利向上。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6b95e84e031805be202ee3c8",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1235
+        ]
+      ],
+      "estimated_input_tokens": 5686,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:05:57.067133+00:00",
+        "request_sha256": "410a02f481ab66be2c3a306b001d7bfc54d30abebe915c7fce365c8ad7aad7f8",
+        "input_token_estimate": 15860,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278004",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "086b292ade6941da9055831a5f145577",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3845,
+        "output_tokens": 10292,
+        "usage_source": "provider",
+        "duration_seconds": 39.959502,
+        "cost_cny": "0.045013"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "事件概述：公司发布5月产销快报，5月新能源汽车批发销售38.2万辆，同比+15.3%，环比+0.6%；新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%。"
+          },
+          {
+            "text": "公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。"
+          }
+        ],
+        "reason": "新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%等信息在前后文重复出现。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司5月新能源乘用车批发销售37.7万辆，同比+14.1%，环比+1.2%，海外销量8.9万辆，再创新高。"
+          },
+          {
+            "text": "受益海外车型上量及区域拓展，5月新能源出口销量8.9万辆，再创新高；"
+          }
+        ],
+        "reason": "同一出口/海外销量8.9万辆且“再创新高”的表述在相邻段落重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "今年公司将加大海外市场投入，积极布局巴西、乌兹别克、匈牙利、乌兹别克、土耳其、印尼布局工厂，同时加速出口，出海有望在欧洲、东南亚、澳新迎来快速发展，出海亦有望提振盈利。"
+          }
+        ],
+        "reason": "列举海外工厂布局地点时，“乌兹别克”重复出现，表述冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+          }
+        ],
+        "reason": "销量单位应为“辆”，却写成“平方分米”，属于量纲单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "分品牌看，5月王朝海洋、腾势、方程豹、仰望销量分别34.8万辆、15,806辆、12,592辆、139辆。"
+          },
+          {
+            "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+          }
+        ],
+        "reason": "腾势、方程豹、仰望销量合计约2.85万辆，与后文“3.68万”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "分品牌看，王朝海洋销量34.8万辆，秦PLUS DM-i5.0、海豹06等新车型贡献核心增量；腾势/仰望/方程豹销量3.68万平方分米，占比11%，高端化战略成效显著。"
+          }
+        ],
+        "reason": "3.68万占37.7万的比例约为9.76%，并非原文所称的11%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025年为公司的高端化产品大年，腾势N9已于2025年3月上市，定位六座大型SUV，售价38.98-44.98万元，全系标配易三方技术，舒适度、豪华属性强，带动腾势品牌4、5月实现1.5、1.6、1.2万辆销量，后续有望带动整体盈利向上。"
+          }
+        ],
+        "reason": "仅列4、5月两个月份，却给出1.5、1.6、1.2万辆三个销量数字，期间与数值无法对应。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1008,
+      "end": 1194,
+      "text": "投资建议：我们看好公司技术驱动产品力与品牌力向上，引领智驾平权，加速出海，同时高端化稳步推进，预计2025-2027年营收为9,908.1/11,889.7/13,970.4亿元，归母净利润552.0/649.7/746.7亿元，EPS18.16/21.38/24.57元，对应2025年5月30日352.30元/股收盘价，PE分别为19/16/14倍，维持“推荐”评级。",
+      "quantities": [
+        {
+          "value": "13,970.4",
+          "unit": "亿元",
+          "start": 1087,
+          "end": 1097
+        },
+        {
+          "value": "746.7",
+          "unit": "亿元",
+          "start": 1115,
+          "end": 1122
+        },
+        {
+          "value": "24.57",
+          "unit": "元",
+          "start": 1138,
+          "end": 1144
+        },
+        {
+          "value": "352.30",
+          "unit": "元/股",
+          "start": 1157,
+          "end": 1166
+        },
+        {
+          "value": "14",
+          "unit": "倍",
+          "start": 1181,
+          "end": 1184
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们看好公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1008,
+      "end": 1194,
+      "text": "投资建议：我们看好公司技术驱动产品力与品牌力向上，引领智驾平权，加速出海，同时高端化稳步推进，预计2025-2027年营收为9,908.1/11,889.7/13,970.4亿元，归母净利润552.0/649.7/746.7亿元，EPS18.16/21.38/24.57元，对应2025年5月30日352.30元/股收盘价，PE分别为19/16/14倍，维持“推荐”评级。",
+      "quantities": [
+        {
+          "value": "13,970.4",
+          "unit": "亿元",
+          "start": 1087,
+          "end": 1097
+        },
+        {
+          "value": "746.7",
+          "unit": "亿元",
+          "start": 1115,
+          "end": 1122
+        },
+        {
+          "value": "24.57",
+          "unit": "元",
+          "start": 1138,
+          "end": 1144
+        },
+        {
+          "value": "352.30",
+          "unit": "元/股",
+          "start": 1157,
+          "end": 1166
+        },
+        {
+          "value": "14",
+          "unit": "倍",
+          "start": 1181,
+          "end": 1184
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们看好公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1235,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1235,
+    "processed_ranges": [
+      [
+        0,
+        1235
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 39.989178,
+  "source_content_sha256": "9eb84f200f7e092b296658057250c775c791b698fed92b673d43ea1832b5ad24"
+}

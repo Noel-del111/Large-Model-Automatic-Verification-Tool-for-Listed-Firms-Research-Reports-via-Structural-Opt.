@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"NL003境内生产药品注册上市许可申请于2024年13月15日获得受理；NL002位于III期临床。\"}],\"reason\":\"2024年13月15日中的月份为13，日期本身不成立。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"我国眼科用药市场规模从2013年的117.2亿元增长至2022年的213.2亿元，CAGR为8.87%。\"}],\"reason\":\"按2013至2022年9年复合增长计算，117.2亿元增至213.2亿元的CAGR约6.9%，不是8.87%。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"诺思兰德(10-1)\"}],\"reason\":\"股票代码“10-1”不符合证券代码的常规数字格式。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:45:15.701513+00:00",
+    "request_sha256": "17d1f338fcb8a74ceb3081c23f5d73f7e0ab713179c0241cb1d502ae96b94791",
+    "input_token_estimate": 15416,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27756",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f0ed962d87b14f13bd1495554dfc72fd",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3645,
+    "output_tokens": 6465,
+    "usage_source": "provider",
+    "duration_seconds": 25.962057,
+    "cost_cny": "0.029505"
+  },
+  "cache_request": {
+    "key": "72736dec009cae45ee006aeb0e599f20c622fe607b26c5ce0250a3b68f6d7945",
+    "purpose": "text_review.detect",
+    "messages_sha256": "17d1f338fcb8a74ceb3081c23f5d73f7e0ab713179c0241cb1d502ae96b94791"
+  }
+}

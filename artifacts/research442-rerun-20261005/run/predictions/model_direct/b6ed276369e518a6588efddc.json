@@ -1,0 +1,597 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000508",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "该句与紧邻前句内容重复，均表达专利及新产品营收增长且占比提升，属不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 510,
+          "end": 552,
+          "text": "专利产品和新产品营收规模同比有较好增长，正往专利产品和新产品占比不断提升的方向发展。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "专利产品和新产品营收规模同比有较好增长，正往专利产品和新产品占比不断提升的方向发展。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 510,
+          "end": 552,
+          "text": "专利产品和新产品营收规模同比有较好增长，正往专利产品和新产品占比不断提升的方向发展。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "671c8db8d1b880ffee3306f0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "研发费用率同比增加数值缺失，'同比增加pct'中未填具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 298,
+          "end": 375,
+          "text": "2025Q1，销售费用率为38.11%，同比增长3.55pct；管理费用率为6.62%，同比增长0.05pct；研发费用率为10.18%，同比增加pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1，销售费用率为38.11%，同比增长3.55pct；管理费用率为6.62%，同比增长0.05pct；研发费用率为10.18%，同比增加pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 298,
+          "end": 375,
+          "text": "2025Q1，销售费用率为38.11%，同比增长3.55pct；管理费用率为6.62%，同比增长0.05pct；研发费用率为10.18%，同比增加pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "50d189201d8cb0cb97895af2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "报告期为2024年报和2025年一季报，却写预计23年NDA，预计时间已过，与当前报告时间矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 876,
+          "end": 963,
+          "text": "3个项目处于III期临床阶段：S086（慢性心衰，已完成入组）、PCSK9单抗（已完成入组，预计23年NDA）、SAL0130（一项III期已完成入组，另一项正在开展入组）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "3个项目处于III期临床阶段：S086（慢性心衰，已完成入组）、PCSK9单抗（已完成入组，预计23年NDA）、SAL0130（一项III期已完成入组，另一项正在开展入组）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 876,
+          "end": 963,
+          "text": "3个项目处于III期临床阶段：S086（慢性心衰，已完成入组）、PCSK9单抗（已完成入组，预计23年NDA）、SAL0130（一项III期已完成入组，另一项正在开展入组）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e137b5fbeccd69c2fbda2a88",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1163
+        ]
+      ],
+      "estimated_input_tokens": 5639,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:01:51.602942+00:00",
+        "request_sha256": "7522569e70183cb4471a02825bae65f79ef81fc92df042022756d744cbbd1592",
+        "input_token_estimate": 15722,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277866",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f73c015dcead46b9a99ed1f0349537cc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3732,
+        "output_tokens": 7267,
+        "usage_source": "provider",
+        "duration_seconds": 31.684297,
+        "cost_cny": "0.0328"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "专利产品和新产品营收规模同比有较好增长，正往专利产品和新产品占比不断提升的方向发展。"
+          }
+        ],
+        "reason": "该句与紧邻前句内容重复，均表达专利及新产品营收增长且占比提升，属不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025Q1，销售费用率为38.11%，同比增长3.55pct；管理费用率为6.62%，同比增长0.05pct；研发费用率为10.18%，同比增加pct。"
+          }
+        ],
+        "reason": "研发费用率同比增加数值缺失，'同比增加pct'中未填具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "3个项目处于III期临床阶段：S086（慢性心衰，已完成入组）、PCSK9单抗（已完成入组，预计23年NDA）、SAL0130（一项III期已完成入组，另一项正在开展入组）。"
+          }
+        ],
+        "reason": "报告期为2024年报和2025年一季报，却写预计23年NDA，预计时间已过，与当前报告时间矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 38,
+      "end": 123,
+      "text": "公司发布2024年年报和2025年第一季度报告，2024年实现营业收入40.12亿元，同比增长19.22%，归母净利润6.02亿元，同比增长3.71%，盈利水平稳健提升；",
+      "quantities": [
+        {
+          "value": "40.12",
+          "unit": "亿元",
+          "start": 73,
+          "end": 80
+        },
+        {
+          "value": "19.22",
+          "unit": "%",
+          "start": 85,
+          "end": 91
+        },
+        {
+          "value": "6.02",
+          "unit": "亿元",
+          "start": 97,
+          "end": 103
+        },
+        {
+          "value": "3.71",
+          "unit": "%",
+          "start": 108,
+          "end": 113
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年第一季度",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 38,
+      "end": 123,
+      "text": "公司发布2024年年报和2025年第一季度报告，2024年实现营业收入40.12亿元，同比增长19.22%，归母净利润6.02亿元，同比增长3.71%，盈利水平稳健提升；",
+      "quantities": [
+        {
+          "value": "40.12",
+          "unit": "亿元",
+          "start": 73,
+          "end": 80
+        },
+        {
+          "value": "19.22",
+          "unit": "%",
+          "start": 85,
+          "end": 91
+        },
+        {
+          "value": "6.02",
+          "unit": "亿元",
+          "start": 97,
+          "end": 103
+        },
+        {
+          "value": "3.71",
+          "unit": "%",
+          "start": 108,
+          "end": 113
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年第一季度",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 123,
+      "end": 176,
+      "text": "2025年第一季度的营业收入为10.62亿元，同比下降2.64%，归母净利润为2亿元，同比增长0.03%。",
+      "quantities": [
+        {
+          "value": "10.62",
+          "unit": "亿元",
+          "start": 138,
+          "end": 145
+        },
+        {
+          "value": "2.64",
+          "unit": "%",
+          "start": 150,
+          "end": 155
+        },
+        {
+          "value": "2",
+          "unit": "亿元",
+          "start": 162,
+          "end": 165
+        },
+        {
+          "value": "0.03",
+          "unit": "%",
+          "start": 170,
+          "end": 175
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 123,
+      "end": 176,
+      "text": "2025年第一季度的营业收入为10.62亿元，同比下降2.64%，归母净利润为2亿元，同比增长0.03%。",
+      "quantities": [
+        {
+          "value": "10.62",
+          "unit": "亿元",
+          "start": 138,
+          "end": 145
+        },
+        {
+          "value": "2.64",
+          "unit": "%",
+          "start": 150,
+          "end": 155
+        },
+        {
+          "value": "2",
+          "unit": "亿元",
+          "start": 162,
+          "end": 165
+        },
+        {
+          "value": "0.03",
+          "unit": "%",
+          "start": 170,
+          "end": 175
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 400,
+      "end": 458,
+      "text": "2025Q1营业收入同比略有下降，造成收入同比下降的原因主要是受到仿制药政策影响，相关产品收入占营收比重进一步降低。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 400,
+      "end": 458,
+      "text": "2025Q1营业收入同比略有下降，造成收入同比下降的原因主要是受到仿制药政策影响，相关产品收入占营收比重进一步降低。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 596,
+      "end": 650,
+      "text": "分板块看，2024年制剂营收31.92亿元（+20.43%），原料及中间体营收4.12亿元（-0.37%）。",
+      "quantities": [
+        {
+          "value": "31.92",
+          "unit": "亿元",
+          "start": 610,
+          "end": 617
+        },
+        {
+          "value": "+20.43",
+          "unit": "%",
+          "start": 618,
+          "end": 625
+        },
+        {
+          "value": "4.12",
+          "unit": "亿元",
+          "start": 635,
+          "end": 641
+        },
+        {
+          "value": "-0.37",
+          "unit": "%",
+          "start": 642,
+          "end": 648
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 596,
+      "end": 650,
+      "text": "分板块看，2024年制剂营收31.92亿元（+20.43%），原料及中间体营收4.12亿元（-0.37%）。",
+      "quantities": [
+        {
+          "value": "31.92",
+          "unit": "亿元",
+          "start": 610,
+          "end": 617
+        },
+        {
+          "value": "+20.43",
+          "unit": "%",
+          "start": 618,
+          "end": 625
+        },
+        {
+          "value": "4.12",
+          "unit": "亿元",
+          "start": 635,
+          "end": 641
+        },
+        {
+          "value": "-0.37",
+          "unit": "%",
+          "start": 642,
+          "end": 648
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 762,
+      "end": 800,
+      "text": "研发方面，公司2024年全年研发投入10.17亿元，占营收比重25.35%。",
+      "quantities": [
+        {
+          "value": "10.17",
+          "unit": "亿元",
+          "start": 780,
+          "end": 787
+        },
+        {
+          "value": "25.35",
+          "unit": "%",
+          "start": 793,
+          "end": 799
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1012,
+      "end": 1051,
+      "text": "预计公司2025-2027年营业收入为45.38、54.23、62.46亿元；",
+      "quantities": [
+        {
+          "value": "62.46",
+          "unit": "亿元",
+          "start": 1043,
+          "end": 1050
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1051,
+      "end": 1126,
+      "text": "考虑到市场竞争激烈，将2025-2026年的归母净利润从7.13和8.77亿元下调至6.62和7.83亿元，预计2027年的归母净利润为9.02亿元。",
+      "quantities": [
+        {
+          "value": "8.77",
+          "unit": "亿元",
+          "start": 1084,
+          "end": 1090
+        },
+        {
+          "value": "7.83",
+          "unit": "亿元",
+          "start": 1098,
+          "end": 1104
+        },
+        {
+          "value": "9.02",
+          "unit": "亿元",
+          "start": 1119,
+          "end": 1125
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1051,
+      "end": 1126,
+      "text": "考虑到市场竞争激烈，将2025-2026年的归母净利润从7.13和8.77亿元下调至6.62和7.83亿元，预计2027年的归母净利润为9.02亿元。",
+      "quantities": [
+        {
+          "value": "8.77",
+          "unit": "亿元",
+          "start": 1084,
+          "end": 1090
+        },
+        {
+          "value": "7.83",
+          "unit": "亿元",
+          "start": 1098,
+          "end": 1104
+        },
+        {
+          "value": "9.02",
+          "unit": "亿元",
+          "start": 1119,
+          "end": 1125
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1163,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1163,
+    "processed_ranges": [
+      [
+        0,
+        1163
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 31.71957,
+  "source_content_sha256": "ba445da5e5218892e8da8e42b3bff56181319df3e64da2e02b68ef6d13dc261c"
+}

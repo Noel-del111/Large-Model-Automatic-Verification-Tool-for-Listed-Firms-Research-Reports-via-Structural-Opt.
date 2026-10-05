@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"从行业整体看，选取同花顺统计的申万轨交设备板块数据，2024年营业总收入同比增长；2021-2024年归母净利润增速略有波动。\"}],\"reason\":\"“营业总收入同比增长”后缺少具体增速数值，未给出百分比。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"2025年4-1月，全国铁路发送旅客14.6亿人次、同比增长5.9%。\"}],\"reason\":\"时间区间写成4-1月，起止月份倒置，不符合时间书写。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2025年4月，国铁集团发布招标公告，分别招标时速350公里复兴号智能动车组（8辆编组），数量33组；时速350公里复兴号智能高寒动车组（8辆编组），；时速350公里复兴号配置动车组（16辆编组），数量20组（10列）。\"}],\"reason\":\"智能高寒动车组后的招标数量为空，缺失必要数值。\"},{\"error_type\":\"法规引用错误\",\"spans\":[{\"text\":\"2024年9月，国家铁路局印发《》，明确老旧内燃机车报废年限为30年。\"}],\"reason\":\"印发的法规名称空缺，无法核验具体引用文件。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2024年，国铁集团分别于5月、11月进行50公里复兴号动车组招标，分别招标165组和80组；\"}],\"reason\":\"复兴号动车组招标时速通常为350公里，“50公里”单位及数值不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:13:29.461476+00:00",
+    "request_sha256": "7c7cc99f3636c99578bad73c3c362f790bb6a43fe0cdf6401bf0babad8fed14f",
+    "input_token_estimate": 16455,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278599",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "157cda88608f413fb67d018efb8df9e8",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3877,
+    "output_tokens": 10360,
+    "usage_source": "provider",
+    "duration_seconds": 40.113712,
+    "cost_cny": "0.045317"
+  },
+  "cache_request": {
+    "key": "aa81650fead38e42391ff28868da8bca34b88450bc71046a4a8fdfd8b67960aa",
+    "purpose": "text_review.detect",
+    "messages_sha256": "7c7cc99f3636c99578bad73c3c362f790bb6a43fe0cdf6401bf0babad8fed14f"
+  }
+}

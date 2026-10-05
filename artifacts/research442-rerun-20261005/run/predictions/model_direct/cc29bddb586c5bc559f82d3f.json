@@ -1,0 +1,1741 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000570",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "食品饮料行业营收量纲应为亿元，“元”使3266.07元明显错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 84,
+          "end": 244,
+          "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+          "start": 101,
+          "end": 262
+        }
+      ],
+      "spans": [
+        {
+          "start": 84,
+          "end": 244,
+          "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "431281bb75208032caba5130",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“下降pcts”前缺少具体百分点数值，营收增速较2024Q1下降幅度未给出。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 84,
+          "end": 244,
+          "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+          "start": 101,
+          "end": 262
+        }
+      ],
+      "spans": [
+        {
+          "start": 84,
+          "end": 244,
+          "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "637418d0e2a61d87776d78f6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "前文按“零食、啤酒和调味发酵品”顺序列示啤酒营收增速为30.96%，后文称啤酒营收同比+3.73%，同期同指标冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 320,
+          "end": 426,
+          "text": "零食、啤酒和调味发酵品营收增速位居前列，营收增速分别为20.96%、30.96%、3.73%、3.46%；啤酒、调味发酵品和肉制品归母净利润增速排名前三，归母净利润增速分别为10.89%、7.31%和7.30%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1425,
+          "end": 1502,
+          "text": "2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "零食、啤酒和调味发酵品营收增速位居前列，营收增速分别为20.96%、30.96%、3.73%、3.46%；啤酒、调味发酵品和肉制品归母净利润增速排名前三，归母净利润增速分别为10.89%、7.31%和7.30%。",
+          "start": 523,
+          "end": 640
+        },
+        {
+          "text": "2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。",
+          "start": 1741,
+          "end": 1840
+        }
+      ],
+      "spans": [
+        {
+          "start": 320,
+          "end": 426,
+          "text": "零食、啤酒和调味发酵品营收增速位居前列，营收增速分别为20.96%、30.96%、3.73%、3.46%；啤酒、调味发酵品和肉制品归母净利润增速排名前三，归母净利润增速分别为10.89%、7.31%和7.30%。"
+        },
+        {
+          "start": 1425,
+          "end": 1502,
+          "text": "2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "24cfb03f8386ef852639d006",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2434
+        ]
+      ],
+      "estimated_input_tokens": 6859,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:22:26.903872+00:00",
+        "request_sha256": "914c99c7cee0c3af80ae1bc9bd4b06a55eb2e3f29be4a35cd66e4cbc60b5191a",
+        "input_token_estimate": 19101,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281245",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "7762970776fb4120abde3a643516407b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4565,
+        "output_tokens": 10296,
+        "usage_source": "provider",
+        "duration_seconds": 40.292658,
+        "cost_cny": "0.045749"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+            "start": 101,
+            "end": 262
+          }
+        ],
+        "reason": "食品饮料行业营收量纲应为亿元，“元”使3266.07元明显错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+            "start": 101,
+            "end": 262
+          }
+        ],
+        "reason": "“下降pcts”前缺少具体百分点数值，营收增速较2024Q1下降幅度未给出。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "零食、啤酒和调味发酵品营收增速位居前列，营收增速分别为20.96%、30.96%、3.73%、3.46%；啤酒、调味发酵品和肉制品归母净利润增速排名前三，归母净利润增速分别为10.89%、7.31%和7.30%。",
+            "start": 523,
+            "end": 640
+          },
+          {
+            "text": "2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。",
+            "start": 1741,
+            "end": 1840
+          }
+        ],
+        "reason": "前文按“零食、啤酒和调味发酵品”顺序列示啤酒营收增速为30.96%，后文称啤酒营收同比+3.73%，同期同指标冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 0,
+      "end": 49,
+      "text": "食品饮料行业2025Q1业绩综述报告：业绩增速明显放缓，啤酒、调味品、肉制品、白酒营收利润双增长\n",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 84,
+      "end": 244,
+      "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+      "quantities": [
+        {
+          "value": "3266.07",
+          "unit": "元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "+2.46",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "815.05",
+          "unit": "亿元",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "value": "+0.28",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 84,
+      "end": 244,
+      "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+      "quantities": [
+        {
+          "value": "3266.07",
+          "unit": "元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "+2.46",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "815.05",
+          "unit": "亿元",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "value": "+0.28",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 84,
+      "end": 244,
+      "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+      "quantities": [
+        {
+          "value": "3266.07",
+          "unit": "元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "+2.46",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "815.05",
+          "unit": "亿元",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "value": "+0.28",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 84,
+      "end": 244,
+      "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+      "quantities": [
+        {
+          "value": "3266.07",
+          "unit": "元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "+2.46",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "815.05",
+          "unit": "亿元",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "value": "+0.28",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 84,
+      "end": 244,
+      "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+      "quantities": [
+        {
+          "value": "3266.07",
+          "unit": "元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "+2.46",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "815.05",
+          "unit": "亿元",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "value": "+0.28",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 84,
+      "end": 244,
+      "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+      "quantities": [
+        {
+          "value": "3266.07",
+          "unit": "元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "+2.46",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "815.05",
+          "unit": "亿元",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "value": "+0.28",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 84,
+      "end": 244,
+      "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+      "quantities": [
+        {
+          "value": "3266.07",
+          "unit": "元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "+2.46",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "815.05",
+          "unit": "亿元",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "value": "+0.28",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 84,
+      "end": 244,
+      "text": "2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。",
+      "quantities": [
+        {
+          "value": "3266.07",
+          "unit": "元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "+2.46",
+          "unit": "%",
+          "start": 112,
+          "end": 118
+        },
+        {
+          "value": "815.05",
+          "unit": "亿元",
+          "start": 125,
+          "end": 133
+        },
+        {
+          "value": "+0.28",
+          "unit": "%",
+          "start": 137,
+          "end": 143
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 320,
+      "end": 373,
+      "text": "零食、啤酒和调味发酵品营收增速位居前列，营收增速分别为20.96%、30.96%、3.73%、3.46%；",
+      "quantities": [
+        {
+          "value": "20.96",
+          "unit": "%",
+          "start": 347,
+          "end": 353
+        },
+        {
+          "value": "30.96",
+          "unit": "%",
+          "start": 354,
+          "end": 360
+        },
+        {
+          "value": "3.73",
+          "unit": "%",
+          "start": 361,
+          "end": 366
+        },
+        {
+          "value": "3.46",
+          "unit": "%",
+          "start": 367,
+          "end": 372
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 320,
+      "end": 373,
+      "text": "零食、啤酒和调味发酵品营收增速位居前列，营收增速分别为20.96%、30.96%、3.73%、3.46%；",
+      "quantities": [
+        {
+          "value": "20.96",
+          "unit": "%",
+          "start": 347,
+          "end": 353
+        },
+        {
+          "value": "30.96",
+          "unit": "%",
+          "start": 354,
+          "end": 360
+        },
+        {
+          "value": "3.73",
+          "unit": "%",
+          "start": 361,
+          "end": 366
+        },
+        {
+          "value": "3.46",
+          "unit": "%",
+          "start": 367,
+          "end": 372
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 373,
+      "end": 426,
+      "text": "啤酒、调味发酵品和肉制品归母净利润增速排名前三，归母净利润增速分别为10.89%、7.31%和7.30%。",
+      "quantities": [
+        {
+          "value": "10.89",
+          "unit": "%",
+          "start": 407,
+          "end": 413
+        },
+        {
+          "value": "7.31",
+          "unit": "%",
+          "start": 414,
+          "end": 419
+        },
+        {
+          "value": "7.30",
+          "unit": "%",
+          "start": 420,
+          "end": 425
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 373,
+      "end": 426,
+      "text": "啤酒、调味发酵品和肉制品归母净利润增速排名前三，归母净利润增速分别为10.89%、7.31%和7.30%。",
+      "quantities": [
+        {
+          "value": "10.89",
+          "unit": "%",
+          "start": 407,
+          "end": 413
+        },
+        {
+          "value": "7.31",
+          "unit": "%",
+          "start": 414,
+          "end": 419
+        },
+        {
+          "value": "7.30",
+          "unit": "%",
+          "start": 420,
+          "end": 425
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 475,
+      "end": 663,
+      "text": "2025年一季度白酒/啤酒/其他酒类/调味发酵品/肉制品的毛利率和净利率均同比提升，其中毛利率同比为白酒+0.33pcts/啤酒+2.01pcts/其他酒类+1.40pcts/调味发酵品+1.65pcts/肉制品+0.19pcts，净利率同比为白酒+0.27pcts/啤酒+1.03pcts/其他酒类+0.56pcts/调味发酵品+0.63pcts/肉制品+0.83pcts；",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 475,
+      "end": 663,
+      "text": "2025年一季度白酒/啤酒/其他酒类/调味发酵品/肉制品的毛利率和净利率均同比提升，其中毛利率同比为白酒+0.33pcts/啤酒+2.01pcts/其他酒类+1.40pcts/调味发酵品+1.65pcts/肉制品+0.19pcts，净利率同比为白酒+0.27pcts/啤酒+1.03pcts/其他酒类+0.56pcts/调味发酵品+0.63pcts/肉制品+0.83pcts；",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 475,
+      "end": 663,
+      "text": "2025年一季度白酒/啤酒/其他酒类/调味发酵品/肉制品的毛利率和净利率均同比提升，其中毛利率同比为白酒+0.33pcts/啤酒+2.01pcts/其他酒类+1.40pcts/调味发酵品+1.65pcts/肉制品+0.19pcts，净利率同比为白酒+0.27pcts/啤酒+1.03pcts/其他酒类+0.56pcts/调味发酵品+0.63pcts/肉制品+0.83pcts；",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 475,
+      "end": 663,
+      "text": "2025年一季度白酒/啤酒/其他酒类/调味发酵品/肉制品的毛利率和净利率均同比提升，其中毛利率同比为白酒+0.33pcts/啤酒+2.01pcts/其他酒类+1.40pcts/调味发酵品+1.65pcts/肉制品+0.19pcts，净利率同比为白酒+0.27pcts/啤酒+1.03pcts/其他酒类+0.56pcts/调味发酵品+0.63pcts/肉制品+0.83pcts；",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 663,
+      "end": 735,
+      "text": "乳制品/软饮料毛利率提升，但净利率下降，其中毛利率同比+1.23pcts/+2.18pcts，净利率同比-2.07pcts/-1.26pcts；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 663,
+      "end": 735,
+      "text": "乳制品/软饮料毛利率提升，但净利率下降，其中毛利率同比+1.23pcts/+2.18pcts，净利率同比-2.07pcts/-1.26pcts；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 663,
+      "end": 735,
+      "text": "乳制品/软饮料毛利率提升，但净利率下降，其中毛利率同比+1.23pcts/+2.18pcts，净利率同比-2.07pcts/-1.26pcts；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 663,
+      "end": 735,
+      "text": "乳制品/软饮料毛利率提升，但净利率下降，其中毛利率同比+1.23pcts/+2.18pcts，净利率同比-2.07pcts/-1.26pcts；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 735,
+      "end": 783,
+      "text": "预加工食品毛利率下降，但净利率提升，毛利率同比-0.54pcts，净利率同比+0.22pcts；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 735,
+      "end": 783,
+      "text": "预加工食品毛利率下降，但净利率提升，毛利率同比-0.54pcts，净利率同比+0.22pcts；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 735,
+      "end": 783,
+      "text": "预加工食品毛利率下降，但净利率提升，毛利率同比-0.54pcts，净利率同比+0.22pcts；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 735,
+      "end": 783,
+      "text": "预加工食品毛利率下降，但净利率提升，毛利率同比-0.54pcts，净利率同比+0.22pcts；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 783,
+      "end": 854,
+      "text": "休闲零食/保健品毛利率和净利率均有所下降，毛利率同比-8.28pcts/-9.05pcts，净利率同比-3.23pcts/-4.36pcts。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 783,
+      "end": 854,
+      "text": "休闲零食/保健品毛利率和净利率均有所下降，毛利率同比-8.28pcts/-9.05pcts，净利率同比-3.23pcts/-4.36pcts。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 783,
+      "end": 854,
+      "text": "休闲零食/保健品毛利率和净利率均有所下降，毛利率同比-8.28pcts/-9.05pcts，净利率同比-3.23pcts/-4.36pcts。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 783,
+      "end": 854,
+      "text": "休闲零食/保健品毛利率和净利率均有所下降，毛利率同比-8.28pcts/-9.05pcts，净利率同比-3.23pcts/-4.36pcts。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 905,
+      "end": 980,
+      "text": "2025年一季度白酒业绩增速降低，营收、归母净利润同比增速分别为+1.68%/+2.26%，较去年同期增速减少12.99pcts、13.49pcts。",
+      "quantities": [
+        {
+          "value": "+1.68",
+          "unit": "%",
+          "start": 937,
+          "end": 943
+        },
+        {
+          "value": "+2.26",
+          "unit": "%",
+          "start": 944,
+          "end": 950
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 905,
+      "end": 980,
+      "text": "2025年一季度白酒业绩增速降低，营收、归母净利润同比增速分别为+1.68%/+2.26%，较去年同期增速减少12.99pcts、13.49pcts。",
+      "quantities": [
+        {
+          "value": "+1.68",
+          "unit": "%",
+          "start": 937,
+          "end": 943
+        },
+        {
+          "value": "+2.26",
+          "unit": "%",
+          "start": 944,
+          "end": 950
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1012,
+      "end": 1085,
+      "text": "贵州茅台、五粮液和泸州老窖2025Q1营收同比+10.54%/+6.05%/+1.78%，归母净利润同比+11.56%/+5.8%/+0.41%。",
+      "quantities": [
+        {
+          "value": "+10.54",
+          "unit": "%",
+          "start": 1035,
+          "end": 1042
+        },
+        {
+          "value": "+6.05",
+          "unit": "%",
+          "start": 1043,
+          "end": 1049
+        },
+        {
+          "value": "+1.78",
+          "unit": "%",
+          "start": 1050,
+          "end": 1056
+        },
+        {
+          "value": "+11.56",
+          "unit": "%",
+          "start": 1064,
+          "end": 1071
+        },
+        {
+          "value": "+5.8",
+          "unit": "%",
+          "start": 1072,
+          "end": 1077
+        },
+        {
+          "value": "+0.41",
+          "unit": "%",
+          "start": 1078,
+          "end": 1084
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1012,
+      "end": 1085,
+      "text": "贵州茅台、五粮液和泸州老窖2025Q1营收同比+10.54%/+6.05%/+1.78%，归母净利润同比+11.56%/+5.8%/+0.41%。",
+      "quantities": [
+        {
+          "value": "+10.54",
+          "unit": "%",
+          "start": 1035,
+          "end": 1042
+        },
+        {
+          "value": "+6.05",
+          "unit": "%",
+          "start": 1043,
+          "end": 1049
+        },
+        {
+          "value": "+1.78",
+          "unit": "%",
+          "start": 1050,
+          "end": 1056
+        },
+        {
+          "value": "+11.56",
+          "unit": "%",
+          "start": 1064,
+          "end": 1071
+        },
+        {
+          "value": "+5.8",
+          "unit": "%",
+          "start": 1072,
+          "end": 1077
+        },
+        {
+          "value": "+0.41",
+          "unit": "%",
+          "start": 1078,
+          "end": 1084
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1085,
+      "end": 1209,
+      "text": "次高端白酒企业业绩明显下滑，行业分化加剧，2025年一季度营收/归母净利润增速分别为-10.63%/-14.76%，其中今世缘、山西汾酒、水井坊业绩相对较好，营收和归母净利润均保持正增长，而舍得酒业、酒鬼酒和洋河股份营收和归母净利润均出现大幅下降。",
+      "quantities": [
+        {
+          "value": "-10.63",
+          "unit": "%",
+          "start": 1127,
+          "end": 1134
+        },
+        {
+          "value": "-14.76",
+          "unit": "%",
+          "start": 1135,
+          "end": 1142
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1085,
+      "end": 1209,
+      "text": "次高端白酒企业业绩明显下滑，行业分化加剧，2025年一季度营收/归母净利润增速分别为-10.63%/-14.76%，其中今世缘、山西汾酒、水井坊业绩相对较好，营收和归母净利润均保持正增长，而舍得酒业、酒鬼酒和洋河股份营收和归母净利润均出现大幅下降。",
+      "quantities": [
+        {
+          "value": "-10.63",
+          "unit": "%",
+          "start": 1127,
+          "end": 1134
+        },
+        {
+          "value": "-14.76",
+          "unit": "%",
+          "start": 1135,
+          "end": 1142
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1085,
+      "end": 1209,
+      "text": "次高端白酒企业业绩明显下滑，行业分化加剧，2025年一季度营收/归母净利润增速分别为-10.63%/-14.76%，其中今世缘、山西汾酒、水井坊业绩相对较好，营收和归母净利润均保持正增长，而舍得酒业、酒鬼酒和洋河股份营收和归母净利润均出现大幅下降。",
+      "quantities": [
+        {
+          "value": "-10.63",
+          "unit": "%",
+          "start": 1127,
+          "end": 1134
+        },
+        {
+          "value": "-14.76",
+          "unit": "%",
+          "start": 1135,
+          "end": 1142
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1085,
+      "end": 1209,
+      "text": "次高端白酒企业业绩明显下滑，行业分化加剧，2025年一季度营收/归母净利润增速分别为-10.63%/-14.76%，其中今世缘、山西汾酒、水井坊业绩相对较好，营收和归母净利润均保持正增长，而舍得酒业、酒鬼酒和洋河股份营收和归母净利润均出现大幅下降。",
+      "quantities": [
+        {
+          "value": "-10.63",
+          "unit": "%",
+          "start": 1127,
+          "end": 1134
+        },
+        {
+          "value": "-14.76",
+          "unit": "%",
+          "start": 1135,
+          "end": 1142
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1085,
+      "end": 1209,
+      "text": "次高端白酒企业业绩明显下滑，行业分化加剧，2025年一季度营收/归母净利润增速分别为-10.63%/-14.76%，其中今世缘、山西汾酒、水井坊业绩相对较好，营收和归母净利润均保持正增长，而舍得酒业、酒鬼酒和洋河股份营收和归母净利润均出现大幅下降。",
+      "quantities": [
+        {
+          "value": "-10.63",
+          "unit": "%",
+          "start": 1127,
+          "end": 1134
+        },
+        {
+          "value": "-14.76",
+          "unit": "%",
+          "start": 1135,
+          "end": 1142
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1085,
+      "end": 1209,
+      "text": "次高端白酒企业业绩明显下滑，行业分化加剧，2025年一季度营收/归母净利润增速分别为-10.63%/-14.76%，其中今世缘、山西汾酒、水井坊业绩相对较好，营收和归母净利润均保持正增长，而舍得酒业、酒鬼酒和洋河股份营收和归母净利润均出现大幅下降。",
+      "quantities": [
+        {
+          "value": "-10.63",
+          "unit": "%",
+          "start": 1127,
+          "end": 1134
+        },
+        {
+          "value": "-14.76",
+          "unit": "%",
+          "start": 1135,
+          "end": 1142
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1209,
+      "end": 1340,
+      "text": "中低端白酒出现分化，整体业绩略有下滑，2025年一季度营收/归母净利润增速分别为-2.18%/-1.03%，11家公司中，有5家公司（古井贡酒、皇台酒业、老白干酒、金徽酒、口子窖）营收和归母净利润同比正增长，其中古井贡酒营收和归母净利润均取得10%以上较高增长。",
+      "quantities": [
+        {
+          "value": "-2.18",
+          "unit": "%",
+          "start": 1249,
+          "end": 1255
+        },
+        {
+          "value": "-1.03",
+          "unit": "%",
+          "start": 1256,
+          "end": 1262
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1330,
+          "end": 1333
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "家公司",
+        "家公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1209,
+      "end": 1340,
+      "text": "中低端白酒出现分化，整体业绩略有下滑，2025年一季度营收/归母净利润增速分别为-2.18%/-1.03%，11家公司中，有5家公司（古井贡酒、皇台酒业、老白干酒、金徽酒、口子窖）营收和归母净利润同比正增长，其中古井贡酒营收和归母净利润均取得10%以上较高增长。",
+      "quantities": [
+        {
+          "value": "-2.18",
+          "unit": "%",
+          "start": 1249,
+          "end": 1255
+        },
+        {
+          "value": "-1.03",
+          "unit": "%",
+          "start": 1256,
+          "end": 1262
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1330,
+          "end": 1333
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "家公司",
+        "家公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1209,
+      "end": 1340,
+      "text": "中低端白酒出现分化，整体业绩略有下滑，2025年一季度营收/归母净利润增速分别为-2.18%/-1.03%，11家公司中，有5家公司（古井贡酒、皇台酒业、老白干酒、金徽酒、口子窖）营收和归母净利润同比正增长，其中古井贡酒营收和归母净利润均取得10%以上较高增长。",
+      "quantities": [
+        {
+          "value": "-2.18",
+          "unit": "%",
+          "start": 1249,
+          "end": 1255
+        },
+        {
+          "value": "-1.03",
+          "unit": "%",
+          "start": 1256,
+          "end": 1262
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1330,
+          "end": 1333
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "家公司",
+        "家公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1209,
+      "end": 1340,
+      "text": "中低端白酒出现分化，整体业绩略有下滑，2025年一季度营收/归母净利润增速分别为-2.18%/-1.03%，11家公司中，有5家公司（古井贡酒、皇台酒业、老白干酒、金徽酒、口子窖）营收和归母净利润同比正增长，其中古井贡酒营收和归母净利润均取得10%以上较高增长。",
+      "quantities": [
+        {
+          "value": "-2.18",
+          "unit": "%",
+          "start": 1249,
+          "end": 1255
+        },
+        {
+          "value": "-1.03",
+          "unit": "%",
+          "start": 1256,
+          "end": 1262
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1330,
+          "end": 1333
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "家公司",
+        "家公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1209,
+      "end": 1340,
+      "text": "中低端白酒出现分化，整体业绩略有下滑，2025年一季度营收/归母净利润增速分别为-2.18%/-1.03%，11家公司中，有5家公司（古井贡酒、皇台酒业、老白干酒、金徽酒、口子窖）营收和归母净利润同比正增长，其中古井贡酒营收和归母净利润均取得10%以上较高增长。",
+      "quantities": [
+        {
+          "value": "-2.18",
+          "unit": "%",
+          "start": 1249,
+          "end": 1255
+        },
+        {
+          "value": "-1.03",
+          "unit": "%",
+          "start": 1256,
+          "end": 1262
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1330,
+          "end": 1333
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "家公司",
+        "家公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1209,
+      "end": 1340,
+      "text": "中低端白酒出现分化，整体业绩略有下滑，2025年一季度营收/归母净利润增速分别为-2.18%/-1.03%，11家公司中，有5家公司（古井贡酒、皇台酒业、老白干酒、金徽酒、口子窖）营收和归母净利润同比正增长，其中古井贡酒营收和归母净利润均取得10%以上较高增长。",
+      "quantities": [
+        {
+          "value": "-2.18",
+          "unit": "%",
+          "start": 1249,
+          "end": 1255
+        },
+        {
+          "value": "-1.03",
+          "unit": "%",
+          "start": 1256,
+          "end": 1262
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1330,
+          "end": 1333
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "家公司",
+        "家公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1425,
+      "end": 1502,
+      "text": "2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。",
+      "quantities": [
+        {
+          "value": "+3.73",
+          "unit": "%",
+          "start": 1443,
+          "end": 1449
+        },
+        {
+          "value": "+10.89",
+          "unit": "%",
+          "start": 1450,
+          "end": 1457
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1425,
+      "end": 1502,
+      "text": "2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。",
+      "quantities": [
+        {
+          "value": "+3.73",
+          "unit": "%",
+          "start": 1443,
+          "end": 1449
+        },
+        {
+          "value": "+10.89",
+          "unit": "%",
+          "start": 1450,
+          "end": 1457
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1425,
+      "end": 1502,
+      "text": "2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。",
+      "quantities": [
+        {
+          "value": "+3.73",
+          "unit": "%",
+          "start": 1443,
+          "end": 1449
+        },
+        {
+          "value": "+10.89",
+          "unit": "%",
+          "start": 1450,
+          "end": 1457
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1425,
+      "end": 1502,
+      "text": "2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。",
+      "quantities": [
+        {
+          "value": "+3.73",
+          "unit": "%",
+          "start": 1443,
+          "end": 1449
+        },
+        {
+          "value": "+10.89",
+          "unit": "%",
+          "start": 1450,
+          "end": 1457
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1546,
+      "end": 1590,
+      "text": "其中龙头里面珠江啤酒、燕京啤酒业绩表现相对较好，营收正增长，归母净利润同比增长超25%。",
+      "quantities": [
+        {
+          "value": "25",
+          "unit": "%",
+          "start": 1586,
+          "end": 1589
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1546,
+      "end": 1590,
+      "text": "其中龙头里面珠江啤酒、燕京啤酒业绩表现相对较好，营收正增长，归母净利润同比增长超25%。",
+      "quantities": [
+        {
+          "value": "25",
+          "unit": "%",
+          "start": 1586,
+          "end": 1589
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1590,
+      "end": 1660,
+      "text": "预计在提振内需政策拉动下，2025年行业营收能恢复正增长，同时产品结构升级、成本红利还将继续提升啤酒公司的盈利能力，净利润将仍能保持正增长。",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "成本红利还将继续提升啤酒公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1590,
+      "end": 1660,
+      "text": "预计在提振内需政策拉动下，2025年行业营收能恢复正增长，同时产品结构升级、成本红利还将继续提升啤酒公司的盈利能力，净利润将仍能保持正增长。",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "成本红利还将继续提升啤酒公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1763,
+      "end": 1797,
+      "text": "软饮料中，东鹏饮料和泉阳泉的营收和归母净利润均取得30%以上高增长；",
+      "quantities": [
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 1788,
+          "end": 1791
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1763,
+      "end": 1797,
+      "text": "软饮料中，东鹏饮料和泉阳泉的营收和归母净利润均取得30%以上高增长；",
+      "quantities": [
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 1788,
+          "end": 1791
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1797,
+      "end": 1848,
+      "text": "休闲零食中，有友食品、盐津铺子、西麦食品和立高食品表现亮眼，营收和归母净利润均取得10%以上较高增长；",
+      "quantities": [
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1838,
+          "end": 1841
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1797,
+      "end": 1848,
+      "text": "休闲零食中，有友食品、盐津铺子、西麦食品和立高食品表现亮眼，营收和归母净利润均取得10%以上较高增长；",
+      "quantities": [
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 1838,
+          "end": 1841
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1848,
+      "end": 1912,
+      "text": "调味品中，莲花控股营收和归母净利润均实现35%以上高增长，另外日辰股份也在营收取得增长的情况下，归母净利润实现35%以上高增长；",
+      "quantities": [
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1868,
+          "end": 1871
+        },
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1903,
+          "end": 1906
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1848,
+      "end": 1912,
+      "text": "调味品中，莲花控股营收和归母净利润均实现35%以上高增长，另外日辰股份也在营收取得增长的情况下，归母净利润实现35%以上高增长；",
+      "quantities": [
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1868,
+          "end": 1871
+        },
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1903,
+          "end": 1906
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1848,
+      "end": 1912,
+      "text": "调味品中，莲花控股营收和归母净利润均实现35%以上高增长，另外日辰股份也在营收取得增长的情况下，归母净利润实现35%以上高增长；",
+      "quantities": [
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1868,
+          "end": 1871
+        },
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1903,
+          "end": 1906
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1848,
+      "end": 1912,
+      "text": "调味品中，莲花控股营收和归母净利润均实现35%以上高增长，另外日辰股份也在营收取得增长的情况下，归母净利润实现35%以上高增长；",
+      "quantities": [
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1868,
+          "end": 1871
+        },
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1903,
+          "end": 1906
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1912,
+      "end": 1954,
+      "text": "肉制品中，光明肉业和华统股份在营收取得增长的情况下，归母净利润实现65%以上高增长；",
+      "quantities": [
+        {
+          "value": "65",
+          "unit": "%",
+          "start": 1945,
+          "end": 1948
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1912,
+      "end": 1954,
+      "text": "肉制品中，光明肉业和华统股份在营收取得增长的情况下，归母净利润实现65%以上高增长；",
+      "quantities": [
+        {
+          "value": "65",
+          "unit": "%",
+          "start": 1945,
+          "end": 1948
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1954,
+      "end": 2001,
+      "text": "预加工食品中，盖世食品、五芳斋和春雪食品在营收增长的基础上，归母净利润实现15%以上较高增长；",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 1991,
+          "end": 1994
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1954,
+      "end": 2001,
+      "text": "预加工食品中，盖世食品、五芳斋和春雪食品在营收增长的基础上，归母净利润实现15%以上较高增长；",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 1991,
+          "end": 1994
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2434,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2434,
+    "processed_ranges": [
+      [
+        0,
+        2434
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 65,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 40.316967,
+  "source_content_sha256": "2a1ce761ae99b8ee881756079f5a8a0526bdeccb77ce0b599eddf79919599704"
+}

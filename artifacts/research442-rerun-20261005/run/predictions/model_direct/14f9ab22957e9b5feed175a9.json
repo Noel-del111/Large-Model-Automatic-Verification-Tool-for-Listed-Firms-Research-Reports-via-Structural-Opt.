@@ -1,0 +1,196 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000588",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年”不是合法年份，年份不成立，无法指代实际年度。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 786,
+          "end": 830,
+          "text": "129年长江电力股息率3.09%，股息率常年高于10年期国债收益率，具备较优配置性价比。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "129年长江电力股息率3.09%，股息率常年高于10年期国债收益率，具备较优配置性价比。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 786,
+          "end": 830,
+          "text": "129年长江电力股息率3.09%，股息率常年高于10年期国债收益率，具备较优配置性价比。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6644e1c4383672d72b3fa810",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "期间起点2031年晚于终点2025年，时间区间关系冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 830,
+          "end": 883,
+          "text": "核电：核电运营商装机规模成长性确定，2031-2025年中国核电在运装机容量年复合增长率达7%，中国广核。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "核电：核电运营商装机规模成长性确定，2031-2025年中国核电在运装机容量年复合增长率达7%，中国广核。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 830,
+          "end": 883,
+          "text": "核电：核电运营商装机规模成长性确定，2031-2025年中国核电在运装机容量年复合增长率达7%，中国广核。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "da8c9340c9e99623b47fa892",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1184
+        ]
+      ],
+      "estimated_input_tokens": 5843,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:44:11.084358+00:00",
+        "request_sha256": "5b18fc3d1b08ceb4a710bb7095afded325555a6780a350f15b214eeceb47a67c",
+        "input_token_estimate": 16225,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278369",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1d6e620998794c6387a1b76a004637d0",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3770,
+        "output_tokens": 4129,
+        "usage_source": "provider",
+        "duration_seconds": 16.844282,
+        "cost_cny": "0.020286"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "129年长江电力股息率3.09%，股息率常年高于10年期国债收益率，具备较优配置性价比。"
+          }
+        ],
+        "reason": "“129年”不是合法年份，年份不成立，无法指代实际年度。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "核电：核电运营商装机规模成长性确定，2031-2025年中国核电在运装机容量年复合增长率达7%，中国广核。"
+          }
+        ],
+        "reason": "期间起点2031年晚于终点2025年，时间区间关系冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1184,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1184,
+    "processed_ranges": [
+      [
+        0,
+        1184
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 16.865425,
+  "source_content_sha256": "8ba4cf0f6b174ec40d3e973dec9f96699c6c1a37bdd23b68dd04fa8158a82c02"
+}

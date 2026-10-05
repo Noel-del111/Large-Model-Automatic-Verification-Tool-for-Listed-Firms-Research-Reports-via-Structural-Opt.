@@ -1,0 +1,302 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000707",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“为%”前没有数字，当周成交额占比的具体数值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 364,
+          "end": 385,
+          "text": "当周成交额占比为%，环比-0.24pct；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "当周成交额占比为%，环比-0.24pct；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 364,
+          "end": 385,
+          "text": "当周成交额占比为%，环比-0.24pct；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "00bf18b36ffab3b9efea1a15",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "沪市两融业务余额写成“9132.48元”，量纲应为亿元级别，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 474,
+          "end": 503,
+          "text": "沪市两融业务余额合计为9132.48元，环比-0.06%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "沪市两融业务余额合计为9132.48元，环比-0.06%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 474,
+          "end": 503,
+          "text": "沪市两融业务余额合计为9132.48元，环比-0.06%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "423e8ec3737b60c408881ba9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "列示5家保险公司，却给出6个PB估值数值，数值个数与对象数量不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 639,
+          "end": 704,
+          "text": "中国人寿、中国平安、中国太保、中国人保、新华保险PB估值为2.03x、1.03x、1.26x、1.31x、1.97x、2.06x；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中国人寿、中国平安、中国太保、中国人保、新华保险PB估值为2.03x、1.03x、1.26x、1.31x、1.97x、2.06x；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 639,
+          "end": 704,
+          "text": "中国人寿、中国平安、中国太保、中国人保、新华保险PB估值为2.03x、1.03x、1.26x、1.31x、1.97x、2.06x；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "73882699f3e62a9306f3b6a6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "推荐标的第3）项与第2）项文字完全重复，属于同一信息不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 844,
+          "end": 889,
+          "text": "2）保险板块，建议关注纯寿险标的【中国人寿】、科技有望充分赋能业务发展的标的【众安在线】。"
+        },
+        {
+          "kind": "source_text",
+          "start": 890,
+          "end": 935,
+          "text": "3）保险板块，建议关注纯寿险标的【中国人寿】、科技有望充分赋能业务发展的标的【众安在线】。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）保险板块，建议关注纯寿险标的【中国人寿】、科技有望充分赋能业务发展的标的【众安在线】。"
+        },
+        {
+          "text": "3）保险板块，建议关注纯寿险标的【中国人寿】、科技有望充分赋能业务发展的标的【众安在线】。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 844,
+          "end": 889,
+          "text": "2）保险板块，建议关注纯寿险标的【中国人寿】、科技有望充分赋能业务发展的标的【众安在线】。"
+        },
+        {
+          "start": 890,
+          "end": 935,
+          "text": "3）保险板块，建议关注纯寿险标的【中国人寿】、科技有望充分赋能业务发展的标的【众安在线】。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d997eda07753a6ff25c4454f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          966
+        ]
+      ],
+      "estimated_input_tokens": 5390,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:18:17.088563+00:00",
+        "request_sha256": "8d48c9aec9a7a5c45721d66e412e5d54332acb4ec1d9415e3be59ab6cda503d1",
+        "input_token_estimate": 15038,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277182",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "81d76a7d7d694079a524eddb707f2962",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3696,
+        "output_tokens": 5721,
+        "usage_source": "provider",
+        "duration_seconds": 22.950164,
+        "cost_cny": "0.02658"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "当周成交额占比为%，环比-0.24pct；"
+          }
+        ],
+        "reason": "“为%”前没有数字，当周成交额占比的具体数值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "沪市两融业务余额合计为9132.48元，环比-0.06%；"
+          }
+        ],
+        "reason": "沪市两融业务余额写成“9132.48元”，量纲应为亿元级别，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "中国人寿、中国平安、中国太保、中国人保、新华保险PB估值为2.03x、1.03x、1.26x、1.31x、1.97x、2.06x；"
+          }
+        ],
+        "reason": "列示5家保险公司，却给出6个PB估值数值，数值个数与对象数量不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2）保险板块，建议关注纯寿险标的【中国人寿】、科技有望充分赋能业务发展的标的【众安在线】。"
+          },
+          {
+            "text": "3）保险板块，建议关注纯寿险标的【中国人寿】、科技有望充分赋能业务发展的标的【众安在线】。"
+          }
+        ],
+        "reason": "推荐标的第3）项与第2）项文字完全重复，属于同一信息不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 966,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 966,
+    "processed_ranges": [
+      [
+        0,
+        966
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 22.976315,
+  "source_content_sha256": "872e3733a2c1b63f628ea38d1536930f095fef1ddde034c09218d255495205cd"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000355",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "a87af5efb0e7eeeb56a47d39",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 1230,
+          "end": 1292,
+          "text": "结合前文针对记忆枕市场规模的测算，我们预计2027-2025年水星家纺记忆枕销售额有望从1.14亿元大幅提升至6.44亿元。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1447,
+    "total_chars": 1447,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.000866,
+  "source_content_sha256": "dc64a59bc48ec310c2d5f77049f3fd5c150bec6df7b3e2e14b951c64987fd70b"
+}

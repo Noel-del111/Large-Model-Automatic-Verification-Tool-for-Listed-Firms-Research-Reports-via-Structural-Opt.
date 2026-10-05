@@ -1,0 +1,564 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000345",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 271,
+          "end": 432,
+          "text": "2）业绩端主要由铜加工产品贡献：公司吨毛利较为稳定，2019-2009年期间吨毛利处于3000-4500元/吨，伴随体量扩张，公司归母净利从1.8亿增长至10.6亿，CAGR为20%，2020-2024年，受行业竞争加剧，吨毛利在2000-3000元/吨波动，截至2024年底公司归母净利7亿元，其中铜加工贡献毛利87%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 271,
+          "end": 432,
+          "text": "2）业绩端主要由铜加工产品贡献：公司吨毛利较为稳定，2019-2009年期间吨毛利处于3000-4500元/吨，伴随体量扩张，公司归母净利从1.8亿增长至10.6亿，CAGR为20%，2020-2024年，受行业竞争加剧，吨毛利在2000-3000元/吨波动，截至2024年底公司归母净利7亿元，其中铜加工贡献毛利87%。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "2efc2ffba4a0eec11d47be86",
+      "detector_ids": [
+        "hybrid.model",
+        "legacy.C.INTRINSIC.002"
+      ],
+      "original_spans": [
+        {
+          "text": "2）业绩端主要由铜加工产品贡献：公司吨毛利较为稳定，2019-2009年期间吨毛利处于3000-4500元/吨，伴随体量扩张，公司归母净利从1.8亿增长至10.6亿，CAGR为20%，2020-2024年，受行业竞争加剧，吨毛利在2000-3000元/吨波动，截至2024年底公司归母净利7亿元，其中铜加工贡献毛利87%。"
+        }
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "2024年没有13月，日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 715,
+          "end": 764,
+          "text": "截至2024年13月，紫铜及黄铜管消耗量分别为92/55万吨，合计消耗147万吨，yoy+18%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年13月，紫铜及黄铜管消耗量分别为92/55万吨，合计消耗147万吨，yoy+18%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 715,
+          "end": 764,
+          "text": "截至2024年13月，紫铜及黄铜管消耗量分别为92/55万吨，合计消耗147万吨，yoy+18%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "25cd4b97d39a2dd8c843f949",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "14.8万吨到100.6万吨按2009-2024年15年计，CAGR约13.6%，并非19%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 150,
+          "end": 271,
+          "text": "1)营收随规模增长稳健提升：2009-2024年营收CAGR为19%，增速稳健，与公司铜加工行业销售量增长匹配，铜加工行业销售量从14.8万吨增长至100.6万吨，CAGR为19%，2024年公司铜加工行业和贸易营收占比分别为71%/29%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1)营收随规模增长稳健提升：2009-2024年营收CAGR为19%，增速稳健，与公司铜加工行业销售量增长匹配，铜加工行业销售量从14.8万吨增长至100.6万吨，CAGR为19%，2024年公司铜加工行业和贸易营收占比分别为71%/29%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 150,
+          "end": 271,
+          "text": "1)营收随规模增长稳健提升：2009-2024年营收CAGR为19%，增速稳健，与公司铜加工行业销售量增长匹配，铜加工行业销售量从14.8万吨增长至100.6万吨，CAGR为19%，2024年公司铜加工行业和贸易营收占比分别为71%/29%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "52955c8ec1ab423a0a074dd6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "2024年吨加工费用“元/吨”，2021年高点却用“万元/吨”，比较单位不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 764,
+          "end": 884,
+          "text": "公司铜箔产品伴随下游新能源汽车发展需求稳健，但现阶段产能过剩，吨毛利下降抑制产量释放，截至2024年12月中国4.5μm/6μm铜箔吨加工费分别为3.25/1.9元/吨，较2021年高点7.65/4.5万元/吨降幅较大，抑制产量进一步释放。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司铜箔产品伴随下游新能源汽车发展需求稳健，但现阶段产能过剩，吨毛利下降抑制产量释放，截至2024年12月中国4.5μm/6μm铜箔吨加工费分别为3.25/1.9元/吨，较2021年高点7.65/4.5万元/吨降幅较大，抑制产量进一步释放。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 764,
+          "end": 884,
+          "text": "公司铜箔产品伴随下游新能源汽车发展需求稳健，但现阶段产能过剩，吨毛利下降抑制产量释放，截至2024年12月中国4.5μm/6μm铜箔吨加工费分别为3.25/1.9元/吨，较2021年高点7.65/4.5万元/吨降幅较大，抑制产量进一步释放。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b9de466e9d06ef163875af26",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "2024年产量2125万吨，按近5年CAGR3%反推五年前约1833万吨，低于2000万吨，与“稳定在2000万吨以上”冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 459,
+          "end": 517,
+          "text": "1）2024年铜箔/铜管材产量增速为铜材产品增速前二，中国铜加工材产量近5年稳定在2000万吨以上，CAGR为3%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1）2024年铜箔/铜管材产量增速为铜材产品增速前二，中国铜加工材产量近5年稳定在2000万吨以上，CAGR为3%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 459,
+          "end": 517,
+          "text": "1）2024年铜箔/铜管材产量增速为铜材产品增速前二，中国铜加工材产量近5年稳定在2000万吨以上，CAGR为3%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b82a7075bff082a32edde460",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1536
+        ]
+      ],
+      "estimated_input_tokens": 5994,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:33:47.353077+00:00",
+        "request_sha256": "991b4548db8804c04c3189b219b8f338ec6c645f000303e9a36327e217ea5646",
+        "input_token_estimate": 16701,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278845",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4ad36e168c6642f1ac1f9423b96cd41a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3990,
+        "output_tokens": 11440,
+        "usage_source": "provider",
+        "duration_seconds": 44.80207,
+        "cost_cny": "0.04975",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2）业绩端主要由铜加工产品贡献：公司吨毛利较为稳定，2019-2009年期间吨毛利处于3000-4500元/吨，伴随体量扩张，公司归母净利从1.8亿增长至10.6亿，CAGR为20%，2020-2024年，受行业竞争加剧，吨毛利在2000-3000元/吨波动，截至2024年底公司归母净利7亿元，其中铜加工贡献毛利87%。"
+          }
+        ],
+        "reason": "时间区间写成2019-2009年，起始年份晚于结束年份，期间关系冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "截至2024年13月，紫铜及黄铜管消耗量分别为92/55万吨，合计消耗147万吨，yoy+18%。"
+          }
+        ],
+        "reason": "2024年没有13月，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "1)营收随规模增长稳健提升：2009-2024年营收CAGR为19%，增速稳健，与公司铜加工行业销售量增长匹配，铜加工行业销售量从14.8万吨增长至100.6万吨，CAGR为19%，2024年公司铜加工行业和贸易营收占比分别为71%/29%。"
+          }
+        ],
+        "reason": "14.8万吨到100.6万吨按2009-2024年15年计，CAGR约13.6%，并非19%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司铜箔产品伴随下游新能源汽车发展需求稳健，但现阶段产能过剩，吨毛利下降抑制产量释放，截至2024年12月中国4.5μm/6μm铜箔吨加工费分别为3.25/1.9元/吨，较2021年高点7.65/4.5万元/吨降幅较大，抑制产量进一步释放。"
+          }
+        ],
+        "reason": "2024年吨加工费用“元/吨”，2021年高点却用“万元/吨”，比较单位不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "1）2024年铜箔/铜管材产量增速为铜材产品增速前二，中国铜加工材产量近5年稳定在2000万吨以上，CAGR为3%。"
+          }
+        ],
+        "reason": "2024年产量2125万吨，按近5年CAGR3%反推五年前约1833万吨，低于2000万吨，与“稳定在2000万吨以上”冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 150,
+      "end": 271,
+      "text": "1)营收随规模增长稳健提升：2009-2024年营收CAGR为19%，增速稳健，与公司铜加工行业销售量增长匹配，铜加工行业销售量从14.8万吨增长至100.6万吨，CAGR为19%，2024年公司铜加工行业和贸易营收占比分别为71%/29%。",
+      "quantities": [
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 181,
+          "end": 184
+        },
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 237,
+          "end": 240
+        },
+        {
+          "value": "71",
+          "unit": "%",
+          "start": 263,
+          "end": 266
+        },
+        {
+          "value": "29",
+          "unit": "%",
+          "start": 267,
+          "end": 270
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "与公司",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 150,
+      "end": 271,
+      "text": "1)营收随规模增长稳健提升：2009-2024年营收CAGR为19%，增速稳健，与公司铜加工行业销售量增长匹配，铜加工行业销售量从14.8万吨增长至100.6万吨，CAGR为19%，2024年公司铜加工行业和贸易营收占比分别为71%/29%。",
+      "quantities": [
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 181,
+          "end": 184
+        },
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 237,
+          "end": 240
+        },
+        {
+          "value": "71",
+          "unit": "%",
+          "start": 263,
+          "end": 266
+        },
+        {
+          "value": "29",
+          "unit": "%",
+          "start": 267,
+          "end": 270
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "与公司",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 150,
+      "end": 271,
+      "text": "1)营收随规模增长稳健提升：2009-2024年营收CAGR为19%，增速稳健，与公司铜加工行业销售量增长匹配，铜加工行业销售量从14.8万吨增长至100.6万吨，CAGR为19%，2024年公司铜加工行业和贸易营收占比分别为71%/29%。",
+      "quantities": [
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 181,
+          "end": 184
+        },
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 237,
+          "end": 240
+        },
+        {
+          "value": "71",
+          "unit": "%",
+          "start": 263,
+          "end": 266
+        },
+        {
+          "value": "29",
+          "unit": "%",
+          "start": 267,
+          "end": 270
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "与公司",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 886,
+      "end": 1002,
+      "text": "铜管业务规模优势显著，积极出海全球，铜箔吨毛利有望触底回升：1）铜管业务规模优势明显，充足产能保障公司全球供应链保供能力：公司核心产品铜管产品2024年对公司营收贡献超一半，毛利贡献超80%，毛利率为4.9%，产能92万吨全球领先。",
+      "quantities": [
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 978,
+          "end": 981
+        },
+        {
+          "value": "4.9",
+          "unit": "%",
+          "start": 986,
+          "end": 990
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "充足产能保障公司",
+        "年对公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 886,
+      "end": 1002,
+      "text": "铜管业务规模优势显著，积极出海全球，铜箔吨毛利有望触底回升：1）铜管业务规模优势明显，充足产能保障公司全球供应链保供能力：公司核心产品铜管产品2024年对公司营收贡献超一半，毛利贡献超80%，毛利率为4.9%，产能92万吨全球领先。",
+      "quantities": [
+        {
+          "value": "80",
+          "unit": "%",
+          "start": 978,
+          "end": 981
+        },
+        {
+          "value": "4.9",
+          "unit": "%",
+          "start": 986,
+          "end": 990
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "充足产能保障公司",
+        "年对公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1002,
+      "end": 1091,
+      "text": "2）积极出海推动全球业务增长，美国、印度市场蓄势待发：公司持续加快海外制造基地的建设，2024年公司铜加工行业海外营收贡献41%，毛利贡献接近47%，海外毛利率高于国内3pct。",
+      "quantities": [
+        {
+          "value": "41",
+          "unit": "%",
+          "start": 1063,
+          "end": 1066
+        },
+        {
+          "value": "47",
+          "unit": "%",
+          "start": 1073,
+          "end": 1076
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1002,
+      "end": 1091,
+      "text": "2）积极出海推动全球业务增长，美国、印度市场蓄势待发：公司持续加快海外制造基地的建设，2024年公司铜加工行业海外营收贡献41%，毛利贡献接近47%，海外毛利率高于国内3pct。",
+      "quantities": [
+        {
+          "value": "41",
+          "unit": "%",
+          "start": 1063,
+          "end": 1066
+        },
+        {
+          "value": "47",
+          "unit": "%",
+          "start": 1073,
+          "end": 1076
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1536,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1536,
+    "processed_ranges": [
+      [
+        0,
+        1536
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1536,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 7,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00231,
+  "source_content_sha256": "9a243f5fdc472c34fe61d945e431c94b71202173cbc6437773eb70f7cdcb42e6"
+}

@@ -1,0 +1,657 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000488",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "管理费用是金额，单位应为亿元，却写成体积单位“亿立方分米”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 335,
+          "end": 389,
+          "text": "④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 335,
+          "end": 389,
+          "text": "④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "941e1026921f6ce23706209c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "研发费用后直接接单位“亿元”，缺少具体金额数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 335,
+          "end": 389,
+          "text": "④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 335,
+          "end": 389,
+          "text": "④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "92ce674bc8360797a975f8fa",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "汽车类、工业类、模具类、其他类营收合计43.49亿元，与前述全年营业收入44.09亿元相差0.60亿元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 65,
+          "end": 140,
+          "text": "①2024年公司实现营业收入44.09亿元，同比-8.79%；归母净利润4.16亿，同比-41.71%；扣非归母净利润3.58亿，同比-46.76%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 412,
+          "end": 542,
+          "text": "2024年，汽车类营收37.79亿元，同比-10.87%，销量同比-16.2%。主要产品销量呈现下滑趋势。工业类营收0.80亿元，同比+8.54%，销量同比+23.97%；模具类营收1.68亿元，同比-29.05%；其他类营收3.22亿元，同比+46.05%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "①2024年公司实现营业收入44.09亿元，同比-8.79%；归母净利润4.16亿，同比-41.71%；扣非归母净利润3.58亿，同比-46.76%。"
+        },
+        {
+          "text": "2024年，汽车类营收37.79亿元，同比-10.87%，销量同比-16.2%。主要产品销量呈现下滑趋势。工业类营收0.80亿元，同比+8.54%，销量同比+23.97%；模具类营收1.68亿元，同比-29.05%；其他类营收3.22亿元，同比+46.05%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 65,
+          "end": 140,
+          "text": "①2024年公司实现营业收入44.09亿元，同比-8.79%；归母净利润4.16亿，同比-41.71%；扣非归母净利润3.58亿，同比-46.76%。"
+        },
+        {
+          "start": 412,
+          "end": 542,
+          "text": "2024年，汽车类营收37.79亿元，同比-10.87%，销量同比-16.2%。主要产品销量呈现下滑趋势。工业类营收0.80亿元，同比+8.54%，销量同比+23.97%；模具类营收1.68亿元，同比-29.05%；其他类营收3.22亿元，同比+46.05%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "05e73cd40aa0041372fb40e0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文数据已显示24年营收和利润同比回落，此处“回落态势受阻”意即回落被阻止，与事实矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 37,
+          "end": 63,
+          "text": "24年业绩呈现回落态势受阻，25Q1期间业绩显著承压"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年业绩呈现回落态势受阻，25Q1期间业绩显著承压"
+        }
+      ],
+      "spans": [
+        {
+          "start": 37,
+          "end": 63,
+          "text": "24年业绩呈现回落态势受阻，25Q1期间业绩显著承压"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e6ff14ae9f762cd82dfa501b",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1331
+        ]
+      ],
+      "estimated_input_tokens": 5793,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:43:21.265999+00:00",
+        "request_sha256": "193b5a4b5f0ddcd523534b16f6361e7b3f57df3f09bf5bc11dc920fa819a148b",
+        "input_token_estimate": 16178,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278322",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "35c504257fdf473397364d5e3d963bfa",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3832,
+        "output_tokens": 12729,
+        "usage_source": "provider",
+        "duration_seconds": 48.927722,
+        "cost_cny": "0.054748"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。"
+          }
+        ],
+        "reason": "管理费用是金额，单位应为亿元，却写成体积单位“亿立方分米”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。"
+          }
+        ],
+        "reason": "研发费用后直接接单位“亿元”，缺少具体金额数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "①2024年公司实现营业收入44.09亿元，同比-8.79%；归母净利润4.16亿，同比-41.71%；扣非归母净利润3.58亿，同比-46.76%。"
+          },
+          {
+            "text": "2024年，汽车类营收37.79亿元，同比-10.87%，销量同比-16.2%。主要产品销量呈现下滑趋势。工业类营收0.80亿元，同比+8.54%，销量同比+23.97%；模具类营收1.68亿元，同比-29.05%；其他类营收3.22亿元，同比+46.05%。"
+          }
+        ],
+        "reason": "汽车类、工业类、模具类、其他类营收合计43.49亿元，与前述全年营业收入44.09亿元相差0.60亿元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "24年业绩呈现回落态势受阻，25Q1期间业绩显著承压"
+          }
+        ],
+        "reason": "前文数据已显示24年营收和利润同比回落，此处“回落态势受阻”意即回落被阻止，与事实矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 65,
+      "end": 96,
+      "text": "①2024年公司实现营业收入44.09亿元，同比-8.79%；",
+      "quantities": [
+        {
+          "value": "44.09",
+          "unit": "亿元",
+          "start": 79,
+          "end": 86
+        },
+        {
+          "value": "-8.79",
+          "unit": "%",
+          "start": 89,
+          "end": 95
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 96,
+      "end": 117,
+      "text": "归母净利润4.16亿，同比-41.71%；",
+      "quantities": [
+        {
+          "value": "-41.71",
+          "unit": "%",
+          "start": 109,
+          "end": 116
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 117,
+      "end": 140,
+      "text": "扣非归母净利润3.58亿，同比-46.76%。",
+      "quantities": [
+        {
+          "value": "-46.76",
+          "unit": "%",
+          "start": 132,
+          "end": 139
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 140,
+      "end": 172,
+      "text": "②2025Q1公司实现营业收入10.46亿元，同比-8.12%；",
+      "quantities": [
+        {
+          "value": "10.46",
+          "unit": "亿元",
+          "start": 155,
+          "end": 162
+        },
+        {
+          "value": "-8.12",
+          "unit": "%",
+          "start": 165,
+          "end": 171
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 172,
+      "end": 194,
+      "text": "归母净利润0.96亿元，同比-39.15%；",
+      "quantities": [
+        {
+          "value": "0.96",
+          "unit": "亿元",
+          "start": 177,
+          "end": 183
+        },
+        {
+          "value": "-39.15",
+          "unit": "%",
+          "start": 186,
+          "end": 193
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 194,
+      "end": 218,
+      "text": "扣非归母净利润0.81亿元，同比-42.67%。",
+      "quantities": [
+        {
+          "value": "0.81",
+          "unit": "亿元",
+          "start": 201,
+          "end": 207
+        },
+        {
+          "value": "-42.67",
+          "unit": "%",
+          "start": 210,
+          "end": 217
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 218,
+      "end": 250,
+      "text": "③公司2024年基本每股收益0.45元/股，同比-41.56%；",
+      "quantities": [
+        {
+          "value": "0.45",
+          "unit": "元/股",
+          "start": 232,
+          "end": 239
+        },
+        {
+          "value": "-41.56",
+          "unit": "%",
+          "start": 242,
+          "end": 249
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 277,
+      "end": 308,
+      "text": "2025Q1公司基本每股收益0.1元/股，同比-41.18%；",
+      "quantities": [
+        {
+          "value": "0.1",
+          "unit": "元/股",
+          "start": 291,
+          "end": 297
+        },
+        {
+          "value": "-41.18",
+          "unit": "%",
+          "start": 300,
+          "end": 307
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 412,
+      "end": 452,
+      "text": "2024年，汽车类营收37.79亿元，同比-10.87%，销量同比-16.2%。",
+      "quantities": [
+        {
+          "value": "37.79",
+          "unit": "亿元",
+          "start": 423,
+          "end": 430
+        },
+        {
+          "value": "-10.87",
+          "unit": "%",
+          "start": 433,
+          "end": 440
+        },
+        {
+          "value": "-16.2",
+          "unit": "%",
+          "start": 445,
+          "end": 451
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 465,
+      "end": 498,
+      "text": "工业类营收0.80亿元，同比+8.54%，销量同比+23.97%；",
+      "quantities": [
+        {
+          "value": "0.80",
+          "unit": "亿元",
+          "start": 470,
+          "end": 476
+        },
+        {
+          "value": "+8.54",
+          "unit": "%",
+          "start": 479,
+          "end": 485
+        },
+        {
+          "value": "+23.97",
+          "unit": "%",
+          "start": 490,
+          "end": 497
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 498,
+      "end": 520,
+      "text": "模具类营收1.68亿元，同比-29.05%；",
+      "quantities": [
+        {
+          "value": "1.68",
+          "unit": "亿元",
+          "start": 503,
+          "end": 509
+        },
+        {
+          "value": "-29.05",
+          "unit": "%",
+          "start": 512,
+          "end": 519
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 520,
+      "end": 542,
+      "text": "其他类营收3.22亿元，同比+46.05%。",
+      "quantities": [
+        {
+          "value": "3.22",
+          "unit": "亿元",
+          "start": 525,
+          "end": 531
+        },
+        {
+          "value": "+46.05",
+          "unit": "%",
+          "start": 534,
+          "end": 541
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1096,
+      "end": 1286,
+      "text": "盈利预测与投资建议：考虑到公司25Q1归母净利润有所下滑以及行业竞争带来的价格波动的影响，我们下调盈利预测，预计公司2025-2027年实现归母净利润5.25/6.35/7.88亿元（25、26年前值为10.31/12.59亿元），当前市值对应25-27年P/E22.20/18.35/14.78倍，但长期看好公司三大工艺技术优势+新兴产业布局带动业绩增长前景，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "7.88",
+          "unit": "亿元",
+          "start": 1181,
+          "end": 1187
+        },
+        {
+          "value": "12.59",
+          "unit": "亿元",
+          "start": 1203,
+          "end": 1210
+        },
+        {
+          "value": "14.78",
+          "unit": "倍",
+          "start": 1239,
+          "end": 1245
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑到公司",
+        "预计公司",
+        "但长期看好公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1096,
+      "end": 1286,
+      "text": "盈利预测与投资建议：考虑到公司25Q1归母净利润有所下滑以及行业竞争带来的价格波动的影响，我们下调盈利预测，预计公司2025-2027年实现归母净利润5.25/6.35/7.88亿元（25、26年前值为10.31/12.59亿元），当前市值对应25-27年P/E22.20/18.35/14.78倍，但长期看好公司三大工艺技术优势+新兴产业布局带动业绩增长前景，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "7.88",
+          "unit": "亿元",
+          "start": 1181,
+          "end": 1187
+        },
+        {
+          "value": "12.59",
+          "unit": "亿元",
+          "start": 1203,
+          "end": 1210
+        },
+        {
+          "value": "14.78",
+          "unit": "倍",
+          "start": 1239,
+          "end": 1245
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑到公司",
+        "预计公司",
+        "但长期看好公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1331,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1331,
+    "processed_ranges": [
+      [
+        0,
+        1331
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 14,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 48.956446,
+  "source_content_sha256": "e46cabe1bfbf98e17d3e2f6a7d923181dfd45f47b61e35099d51bfffaaca8444"
+}

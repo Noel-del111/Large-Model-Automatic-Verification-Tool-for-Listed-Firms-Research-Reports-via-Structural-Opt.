@@ -1,0 +1,153 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000580",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间写作“5月30日-5月26日”，结束日期早于开始日期，先后关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 53,
+          "end": 144,
+          "text": "5月30日-5月26日，食品饮料指数跌幅为1.1%，一级子行业排名第24，与沪深300基本持平，子行业中软饮料（+9.3%）、其他酒类（+7.1%）、啤酒（+3.2%）表现相对领先。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月30日-5月26日，食品饮料指数跌幅为1.1%，一级子行业排名第24，与沪深300基本持平，子行业中软饮料（+9.3%）、其他酒类（+7.1%）、啤酒（+3.2%）表现相对领先。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 53,
+          "end": 144,
+          "text": "5月30日-5月26日，食品饮料指数跌幅为1.1%，一级子行业排名第24，与沪深300基本持平，子行业中软饮料（+9.3%）、其他酒类（+7.1%）、啤酒（+3.2%）表现相对领先。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dc5bdc96ef1a17cac1d6438d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1027
+        ]
+      ],
+      "estimated_input_tokens": 5702,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:39:10.226185+00:00",
+        "request_sha256": "103ee73d34fbfc08b6ccb559449129fb2358e29b95ee33cfdd27cfbc2093a685",
+        "input_token_estimate": 15832,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277976",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9d1164dd4f4a4c5fb8ca5d07e434567a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3696,
+        "output_tokens": 5213,
+        "usage_source": "provider",
+        "duration_seconds": 22.89132,
+        "cost_cny": "0.024548",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "5月30日-5月26日，食品饮料指数跌幅为1.1%，一级子行业排名第24，与沪深300基本持平，子行业中软饮料（+9.3%）、其他酒类（+7.1%）、啤酒（+3.2%）表现相对领先。"
+          }
+        ],
+        "reason": "时间区间写作“5月30日-5月26日”，结束日期早于开始日期，先后关系矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1027,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1027,
+    "processed_ranges": [
+      [
+        0,
+        1027
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1027,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001358,
+  "source_content_sha256": "8c4502108b47978faca18eb46cb442863aaea98257fdfdb3735aeb70cc79feae"
+}

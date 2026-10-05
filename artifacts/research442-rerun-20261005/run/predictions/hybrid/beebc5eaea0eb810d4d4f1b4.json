@@ -1,0 +1,476 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000413",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "2026年13月不存在，日期非法；且与后文“下半年”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 417,
+          "end": 474,
+          "text": "5月20日，维谛公众号披露，为响应英伟达下一代规划，计划于2026年13月下半年正式推出800VDC电源产品系列。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月20日，维谛公众号披露，为响应英伟达下一代规划，计划于2026年13月下半年正式推出800VDC电源产品系列。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 417,
+          "end": 474,
+          "text": "5月20日，维谛公众号披露，为响应英伟达下一代规划，计划于2026年13月下半年正式推出800VDC电源产品系列。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bd7cd54d3b3b758cf9fc3f4e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“提升 pct”中间缺少具体提升数值，无法核验。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 283,
+          "end": 316,
+          "text": "受益于交付容量大幅增长，数据中心电源在营收中占比同比提升 pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "受益于交付容量大幅增长，数据中心电源在营收中占比同比提升 pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 283,
+          "end": 316,
+          "text": "受益于交付容量大幅增长，数据中心电源在营收中占比同比提升 pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1e9e9c50ec9dd7d561cbbfc2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "列举项目名称时出现两个连续顿号，缺少一个业务名称，却对应四个占比。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 219,
+          "end": 283,
+          "text": "2024年，公司数据中心电源、电力操作电源系统、、技术服务维护在营收中占比分别为34.1%、24.4%、15.6%、19.9%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司数据中心电源、电力操作电源系统、、技术服务维护在营收中占比分别为34.1%、24.4%、15.6%、19.9%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 219,
+          "end": 283,
+          "text": "2024年，公司数据中心电源、电力操作电源系统、、技术服务维护在营收中占比分别为34.1%、24.4%、15.6%、19.9%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "90a19cfe3c7c3c531cd0d9c1",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1047
+        ]
+      ],
+      "estimated_input_tokens": 5543,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:39:33.175032+00:00",
+        "request_sha256": "78423b75467bf76ebfc2094c5ad1ae2f96a0fa10d8ba18a32f04aca17e412093",
+        "input_token_estimate": 15450,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277594",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "139eeb5806df4b7198bd49ca39fe11da",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3655,
+        "output_tokens": 5465,
+        "usage_source": "provider",
+        "duration_seconds": 20.580751,
+        "cost_cny": "0.025515",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "5月20日，维谛公众号披露，为响应英伟达下一代规划，计划于2026年13月下半年正式推出800VDC电源产品系列。"
+          }
+        ],
+        "reason": "2026年13月不存在，日期非法；且与后文“下半年”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "受益于交付容量大幅增长，数据中心电源在营收中占比同比提升 pct。"
+          }
+        ],
+        "reason": "“提升 pct”中间缺少具体提升数值，无法核验。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2024年，公司数据中心电源、电力操作电源系统、、技术服务维护在营收中占比分别为34.1%、24.4%、15.6%、19.9%；"
+          }
+        ],
+        "reason": "列举项目名称时出现两个连续顿号，缺少一个业务名称，却对应四个占比。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 66,
+      "end": 91,
+      "text": "2024年实现营收19.6亿元，同比+26.1%；",
+      "quantities": [
+        {
+          "value": "19.6",
+          "unit": "亿元",
+          "start": 75,
+          "end": 81
+        },
+        {
+          "value": "+26.1",
+          "unit": "%",
+          "start": 84,
+          "end": 90
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 91,
+      "end": 114,
+      "text": "实现归母净利润1.1亿元，同比+178.5%。",
+      "quantities": [
+        {
+          "value": "1.1",
+          "unit": "亿元",
+          "start": 98,
+          "end": 103
+        },
+        {
+          "value": "+178.5",
+          "unit": "%",
+          "start": 106,
+          "end": 113
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 114,
+      "end": 152,
+      "text": "2025年Q1，实现营业收入3.9亿元，同比+11.1%，环比-50.4%；",
+      "quantities": [
+        {
+          "value": "3.9",
+          "unit": "亿元",
+          "start": 128,
+          "end": 133
+        },
+        {
+          "value": "+11.1",
+          "unit": "%",
+          "start": 136,
+          "end": 142
+        },
+        {
+          "value": "-50.4",
+          "unit": "%",
+          "start": 145,
+          "end": 151
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 152,
+      "end": 183,
+      "text": "实现归母净利润0.2亿元，同比+84.3%，环比-14.2%。",
+      "quantities": [
+        {
+          "value": "0.2",
+          "unit": "亿元",
+          "start": 159,
+          "end": 164
+        },
+        {
+          "value": "+84.3",
+          "unit": "%",
+          "start": 167,
+          "end": 173
+        },
+        {
+          "value": "-14.2",
+          "unit": "%",
+          "start": 176,
+          "end": 182
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 219,
+      "end": 283,
+      "text": "2024年，公司数据中心电源、电力操作电源系统、、技术服务维护在营收中占比分别为34.1%、24.4%、15.6%、19.9%；",
+      "quantities": [
+        {
+          "value": "34.1",
+          "unit": "%",
+          "start": 259,
+          "end": 264
+        },
+        {
+          "value": "24.4",
+          "unit": "%",
+          "start": 265,
+          "end": 270
+        },
+        {
+          "value": "15.6",
+          "unit": "%",
+          "start": 271,
+          "end": 276
+        },
+        {
+          "value": "19.9",
+          "unit": "%",
+          "start": 277,
+          "end": 282
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 562,
+      "end": 594,
+      "text": "2024年，公司电力电源实现营收4.79亿元，同比+20.5%；",
+      "quantities": [
+        {
+          "value": "4.79",
+          "unit": "亿元",
+          "start": 578,
+          "end": 584
+        },
+        {
+          "value": "+20.5",
+          "unit": "%",
+          "start": 587,
+          "end": 593
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 594,
+      "end": 617,
+      "text": "通信电源实现营收3.06亿元，同比-4.5%。",
+      "quantities": [
+        {
+          "value": "3.06",
+          "unit": "亿元",
+          "start": 602,
+          "end": 608
+        },
+        {
+          "value": "-4.5",
+          "unit": "%",
+          "start": 611,
+          "end": 616
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 694,
+      "end": 725,
+      "text": "2024年公司外销产品实现营收0.3亿元，同比+257.9%。",
+      "quantities": [
+        {
+          "value": "0.3",
+          "unit": "亿元",
+          "start": 709,
+          "end": 714
+        },
+        {
+          "value": "+257.9",
+          "unit": "%",
+          "start": 717,
+          "end": 724
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 764,
+      "end": 824,
+      "text": "2025年公司将持续推进海外业务的扩张与深耕，重点推动通信电源、数据中心电源等优势产品的海外市场开拓，海外营收高速增长\n",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1047,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1047,
+    "processed_ranges": [
+      [
+        0,
+        1047
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1047,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00192,
+  "source_content_sha256": "b90ca4d7cbe57bae878c39fbdf235004482fc93d5dd2fa503cf2400bca9d158f"
+}

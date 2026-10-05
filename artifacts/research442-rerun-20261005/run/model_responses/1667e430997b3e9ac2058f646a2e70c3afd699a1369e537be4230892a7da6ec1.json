@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"属性值缺失错误\",\n      \"spans\": [\n        {\n          \"text\": \"海油发展()\"\n        }\n      ],\n      \"reason\": \"公司名称后的股票代码括号内为空，缺少股票代码属性值。\"\n    },\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"根据中国海油的经营规划，2025/129/2027年的净产量目标为760-780/780-800/810-830/810-850百万桶油当量，资本开支有望维持高位。\"\n        }\n      ],\n      \"reason\": \"年份“129”不是有效年份，时间信息不成立，导致净产量目标年份表述错误。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"2016至2024年，公司营业收入从193.76亿元增长至525.17亿元，复合增长率达17.27%，归母净利润从6.22亿元增长至36.56亿元，复合增长率达24.78%。\"\n        }\n      ],\n      \"reason\": \"193.76亿元增至525.17亿元，8年复合增长率约13.27%，原文17.27%计算不成立。\"\n    },\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"预计全球海洋油气勘探开发投资为美元，同比增长5%，占全球油气勘探开发总投资的36%。\"\n        }\n      ],\n      \"reason\": \"“投资为美元”前缺少具体投资金额数值，无法得知投资规模。\"\n    },\n    {\n      \"error_type\": \"金融要素缺失\",\n      \"spans\": [\n        {\n          \"text\": \"2025年第一季度公司实现营收100.74亿元，同比增长9.42%，，同比增长18.48%，同时，公司的分红政策稳健持续，高股息潜力提升，长期投资价值凸显。\"\n        }\n      ],\n      \"reason\": \"第二个“同比增长18.48%”前缺少指标名称（如归母净利润），业绩要素表述不完整。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"未来随着海洋油气产量持续提升以及绿色低碳业务快速发展，公司盈利能力有望持续提升，看好公司“油气+新能源”双轮驱动下的发展战略，以及深海科技的发展前景，首次覆盖，给予买入评级。\"\n        },\n        {\n          \"text\": \"预测公司2025-2027年归母净利润分别为42.39/48.35/54.69亿元，对应当前市值，PE分别为9.3/8.2/7.2倍，市净率分别为1.3/1.2/1.1倍，首次覆盖，给予买入评级。\"\n        }\n      ],\n      \"reason\": \"“首次覆盖，给予买入评级”在同一报告内不必要地重复出现两次。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:40:50.276209+00:00",
+    "request_sha256": "d84f540248084eeaa7ed9fdbae52844ecedec5ed48d1a823f3856e9f2b1cc03f",
+    "input_token_estimate": 17052,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279196",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "80e2067edf0540bb96722cd4e2d7e941",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3933,
+    "output_tokens": 7401,
+    "usage_source": "provider",
+    "duration_seconds": 29.626792,
+    "cost_cny": "0.033537"
+  },
+  "cache_request": {
+    "key": "1667e430997b3e9ac2058f646a2e70c3afd699a1369e537be4230892a7da6ec1",
+    "purpose": "text_review.detect",
+    "messages_sha256": "d84f540248084eeaa7ed9fdbae52844ecedec5ed48d1a823f3856e9f2b1cc03f"
+  }
+}

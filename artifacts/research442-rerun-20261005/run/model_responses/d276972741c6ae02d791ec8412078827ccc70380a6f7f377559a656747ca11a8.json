@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2025年3月20日，海关总署发布2025年4月电力设备出口数据。\"}],\"reason\":\"发布日期早于数据所属月份，4月数据尚未产生，事件先后冲突。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2025年4月，电力设备出口表现稳健，4月合计出口金额为78.93千瓦，环比增长27.44%，同比增长52.84%，1-4月累计出口金额达到261.34亿元，同比增长35.63%。\"}],\"reason\":\"出口金额单位应为亿元，却写成千瓦，量纲错误。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"2025年4月，我国对亚洲、非洲、欧洲、北美的变压器出口金额分别为13.87、5.05、7.85、4.04、5.23亿元，分别同比+18.00%、+143.73%、+53.41%，+28.78%，我国对各地区变压器出口均实现同比高增长，其中非洲地区表现亮眼，从今年2月份以来，非洲出口金额持续增长，4月出口金额创新高。\"}],\"reason\":\"列举亚洲、非洲、欧洲、北美四个地区，却给出五个出口金额，地区与金额数量不一致。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"亚洲和欧洲市场增速较高，自2月以来持续回升，非洲市场整体企稳，同环比回归增长趋势。\"}],\"reason\":\"同一句话在电表分地区段落连续出现两次，信息重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:08:36.057980+00:00",
+    "request_sha256": "fe6ce6f8a6b7e7e5d0df542ab87e46db0a8861e2014d7485e47d24d1a40db930",
+    "input_token_estimate": 17786,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27993",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c48a3a038e224ecca85ca0eeb117594e",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4270,
+    "output_tokens": 10377,
+    "usage_source": "provider",
+    "duration_seconds": 43.190254,
+    "cost_cny": "0.045778"
+  },
+  "cache_request": {
+    "key": "d276972741c6ae02d791ec8412078827ccc70380a6f7f377559a656747ca11a8",
+    "purpose": "text_review.detect",
+    "messages_sha256": "fe6ce6f8a6b7e7e5d0df542ab87e46db0a8861e2014d7485e47d24d1a40db930"
+  }
+}

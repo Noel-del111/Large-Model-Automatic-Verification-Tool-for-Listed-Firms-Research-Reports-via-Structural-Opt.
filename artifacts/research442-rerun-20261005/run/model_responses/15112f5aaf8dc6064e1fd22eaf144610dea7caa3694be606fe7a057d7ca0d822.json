@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"125年4月新能源车销123万辆，同增44%，淡季不淡，同环比+44%/-0.9%，渗透率47.3%，同环比+11.3pct/+4.9pct；\"\n        }\n      ],\n      \"reason\": \"“125年4月”年份不合法，缺少“20”，无法构成有效日期。\"\n    },\n    {\n      \"error_type\": \"时间矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"产业链排产3-4月受关税冲击，有所下调，6-5月小幅回暖，美国恢复正常发货，尚未抢装（由于前期已抢装半年），增量来自国内动力和欧洲及新兴市场储能。\"\n        }\n      ],\n      \"reason\": \"“6-5月”起点在终点之后，时间区间顺序颠倒，不能成立。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"由于需求相对平稳，产业链价格继续底部盘整，碳酸锂跌至近6万公顷/吨，中游加工费短期难再涨，加速产能出清。\"\n        }\n      ],\n      \"reason\": \"碳酸锂价格单位“公顷/吨”错误，公顷是面积单位，不能用于价格量纲。\"\n    },\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"全球看，25年销量预计2055万辆，同增22%，26年预计2448万辆，同增18%，26-30年复合增速维持10-15%。\"\n        }\n      ],\n      \"reason\": \"25年2055万辆按18%增长，26年应约2425万辆，与2448万辆冲突。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"投资建议：行业稳健增长，估值底部，具备业绩支撑，首推格局和盈利不稳定龙头电池（宁德时代、比亚迪、亿纬锂能）、结构件（科达利）；\"\n        }\n      ],\n      \"reason\": \"“首推”表示推荐，却又称“盈利不稳定”，推荐理由与负面定性矛盾。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:10:14.895458+00:00",
+    "request_sha256": "9b99eb935195cd3b7aeac9dfba4e689b2f7ce363a0f2a44fa0d1dd7252aaa8ad",
+    "input_token_estimate": 15969,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278113",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c38d9309a5fa4dbcacac28eb75ab7409",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3845,
+    "output_tokens": 10032,
+    "usage_source": "provider",
+    "duration_seconds": 40.18948,
+    "cost_cny": "0.043973"
+  },
+  "cache_request": {
+    "key": "15112f5aaf8dc6064e1fd22eaf144610dea7caa3694be606fe7a057d7ca0d822",
+    "purpose": "text_review.detect",
+    "messages_sha256": "9b99eb935195cd3b7aeac9dfba4e689b2f7ce363a0f2a44fa0d1dd7252aaa8ad"
+  }
+}

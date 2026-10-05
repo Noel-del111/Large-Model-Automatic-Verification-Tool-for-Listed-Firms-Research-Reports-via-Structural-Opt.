@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000572",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“129年”并非合理公元年份，时间信息不成立，应写为2019或2029等。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 346,
+          "end": 376,
+          "text": "据GMI数据，129年全球触觉传感器市场规模达164亿美元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据GMI数据，129年全球触觉传感器市场规模达164亿美元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 346,
+          "end": 376,
+          "text": "据GMI数据，129年全球触觉传感器市场规模达164亿美元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5e1828ef5e99697607c0885b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "制造业占比只有百分号，缺少具体百分比数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 376,
+          "end": 436,
+          "text": "分下游看，2023年全球触觉传感器下游应用领域占比前三分别为制造业（%）、航天航空&国防（27%）、汽车行业（17%）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "分下游看，2023年全球触觉传感器下游应用领域占比前三分别为制造业（%）、航天航空&国防（27%）、汽车行业（17%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 376,
+          "end": 436,
+          "text": "分下游看，2023年全球触觉传感器下游应用领域占比前三分别为制造业（%）、航天航空&国防（27%）、汽车行业（17%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1808980bf447f515ca6425c2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "压电效应产生的是极化和极性电荷，不是“极距”，术语使用错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 692,
+          "end": 753,
+          "text": "压电式传感器：原理为利用压电效应，即在外力作用下，某些特定材料内部会产生极化，形成不同的极距，并出现与材料表面相反的电荷。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "压电式传感器：原理为利用压电效应，即在外力作用下，某些特定材料内部会产生极化，形成不同的极距，并出现与材料表面相反的电荷。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 692,
+          "end": 753,
+          "text": "压电式传感器：原理为利用压电效应，即在外力作用下，某些特定材料内部会产生极化，形成不同的极距，并出现与材料表面相反的电荷。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "46cf81df9c64d74bc16d1612",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1222
+        ]
+      ],
+      "estimated_input_tokens": 5901,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:31:13.157999+00:00",
+        "request_sha256": "5c89cff2342fec0cdaa54bd6e73c5fe4ea77b11bf0fa81849426abdf4e4a862c",
+        "input_token_estimate": 16373,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278517",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "391c8bbdadf648f9a74eff7feb6af024",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3788,
+        "output_tokens": 5761,
+        "usage_source": "provider",
+        "duration_seconds": 25.127078,
+        "cost_cny": "0.026832"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "据GMI数据，129年全球触觉传感器市场规模达164亿美元。"
+          }
+        ],
+        "reason": "年份“129年”并非合理公元年份，时间信息不成立，应写为2019或2029等。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "分下游看，2023年全球触觉传感器下游应用领域占比前三分别为制造业（%）、航天航空&国防（27%）、汽车行业（17%）。"
+          }
+        ],
+        "reason": "制造业占比只有百分号，缺少具体百分比数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "压电式传感器：原理为利用压电效应，即在外力作用下，某些特定材料内部会产生极化，形成不同的极距，并出现与材料表面相反的电荷。"
+          }
+        ],
+        "reason": "压电效应产生的是极化和极性电荷，不是“极距”，术语使用错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1222,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1222,
+    "processed_ranges": [
+      [
+        0,
+        1222
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.153051,
+  "source_content_sha256": "b2c7866a06b16b0fe633ee7635231a58dee26ab73147eda1730fda142bd7f061"
+}

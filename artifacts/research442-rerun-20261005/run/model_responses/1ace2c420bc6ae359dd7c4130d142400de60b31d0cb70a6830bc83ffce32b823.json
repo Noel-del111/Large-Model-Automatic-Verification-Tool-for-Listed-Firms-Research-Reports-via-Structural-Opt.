@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"地瓜机器人完成1亿美元A轮天使投资：2025年5月28日，地平线机器人-W（9660.HK）旗下地瓜机器人宣布完成1亿美元A轮融资。\"}],\"reason\":\"标题称“A轮天使投资”，正文仅称“A轮融资”，天使投资与A轮融资属不同融资阶段，术语混用。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"1. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。\\n2. 并网型项目应按照“以荷定源”原则科学确定新能源电源类型和装机规模。\"}],\"reason\":\"第1条与第2条内容完全相同，属于不必要的重复。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"项目整体新能源年自发自用电量占总可用发电量的比例应不低于%，占总用电量的比例应不低于30%，并不断提高自发自用比例，2030年前不低于35%。\"}],\"reason\":\"“应不低于%”中百分号前缺少具体数值。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"当地时间5月29日，特斯拉在社交平台发文称，SpaceX将于2027年发射携带特斯拉Optimus人形机器人的星舰前往火星。特斯拉CEO马斯克表示，明年年底，SpaceX将发射携带特斯拉Optimus人形机器人的星舰前往火星\"}],\"reason\":\"同一事件先称2027年发射，后称明年年底发射，两个时间表述冲突。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"按照轨道周期计算，将在129年抵达火星。\"}],\"reason\":\"火星旅行抵达时间不可能长达129年，单位“年”量纲明显异常。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:46:09.863907+00:00",
+    "request_sha256": "53c76461ae97a8b98737d8501599ae84c604f655185412e29400d9f04d1bf541",
+    "input_token_estimate": 18351,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280495",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4109886504af48998f6328cfdbec5957",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4349,
+    "output_tokens": 6786,
+    "usage_source": "provider",
+    "duration_seconds": 28.109863,
+    "cost_cny": "0.031493"
+  },
+  "cache_request": {
+    "key": "1ace2c420bc6ae359dd7c4130d142400de60b31d0cb70a6830bc83ffce32b823",
+    "purpose": "text_review.detect",
+    "messages_sha256": "53c76461ae97a8b98737d8501599ae84c604f655185412e29400d9f04d1bf541"
+  }
+}

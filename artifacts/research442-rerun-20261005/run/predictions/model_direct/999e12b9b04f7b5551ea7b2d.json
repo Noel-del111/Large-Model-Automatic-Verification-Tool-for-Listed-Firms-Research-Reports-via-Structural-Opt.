@@ -1,0 +1,258 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000268",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "全社会跨区域人员流动量同比减少2.1%，但后文所列各类出行方式日均客运量均较2023年同期正增长，同一期间的口径下总量与分项方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 146,
+          "end": 208,
+          "text": "全社会跨区域人员流动量达13.6亿人次，日均超2.7亿人次，同比减少2.1%，较2019年同期增长23.7%，符合节前预期。"
+        },
+        {
+          "kind": "source_text",
+          "start": 219,
+          "end": 324,
+          "text": "1）与2023年同期相比，各类出行方式的客运量在高基数下实现小幅正增长。五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "全社会跨区域人员流动量达13.6亿人次，日均超2.7亿人次，同比减少2.1%，较2019年同期增长23.7%，符合节前预期。"
+        },
+        {
+          "text": "1）与2023年同期相比，各类出行方式的客运量在高基数下实现小幅正增长。五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 146,
+          "end": 208,
+          "text": "全社会跨区域人员流动量达13.6亿人次，日均超2.7亿人次，同比减少2.1%，较2019年同期增长23.7%，符合节前预期。"
+        },
+        {
+          "start": 219,
+          "end": 324,
+          "text": "1）与2023年同期相比，各类出行方式的客运量在高基数下实现小幅正增长。五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9db1cbfb492ee8b77ca4531d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "上下文讨论航班管家、民航客运及国内国际航线，此处应为“民航市场”，“军航”指军事航空，术语错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 576,
+          "end": 587,
+          "text": "3）军航市场量升价跌。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "3）军航市场量升价跌。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 576,
+          "end": 587,
+          "text": "3）军航市场量升价跌。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "12836a8bc46a11bb0193d11f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "列举家电、汽车、家具三个类别，却给出四个同比增长率，类别数量与数值数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 883,
+          "end": 946,
+          "text": "商品消费方面，各地以旧换新活动带动之下，重点零售企业家电/汽车/家具销售额分别同比增长7.9%/4.8%/4.6%/5.4%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "商品消费方面，各地以旧换新活动带动之下，重点零售企业家电/汽车/家具销售额分别同比增长7.9%/4.8%/4.6%/5.4%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 883,
+          "end": 946,
+          "text": "商品消费方面，各地以旧换新活动带动之下，重点零售企业家电/汽车/家具销售额分别同比增长7.9%/4.8%/4.6%/5.4%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "91a68c0892d95b0ba9ed7107",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2591
+        ]
+      ],
+      "estimated_input_tokens": 7153,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:56:00.182863+00:00",
+        "request_sha256": "959d00eca6b6870f544b78f0be69cae41b351b4f5f2ccd15f945722d063b1178",
+        "input_token_estimate": 19882,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.282026",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4c44018257f8474cbfea6e3ddc453fbe",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4637,
+        "output_tokens": 5718,
+        "usage_source": "provider",
+        "duration_seconds": 22.982133,
+        "cost_cny": "0.027509"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "全社会跨区域人员流动量达13.6亿人次，日均超2.7亿人次，同比减少2.1%，较2019年同期增长23.7%，符合节前预期。"
+          },
+          {
+            "text": "1）与2023年同期相比，各类出行方式的客运量在高基数下实现小幅正增长。五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%。"
+          }
+        ],
+        "reason": "全社会跨区域人员流动量同比减少2.1%，但后文所列各类出行方式日均客运量均较2023年同期正增长，同一期间的口径下总量与分项方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "3）军航市场量升价跌。"
+          }
+        ],
+        "reason": "上下文讨论航班管家、民航客运及国内国际航线，此处应为“民航市场”，“军航”指军事航空，术语错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "商品消费方面，各地以旧换新活动带动之下，重点零售企业家电/汽车/家具销售额分别同比增长7.9%/4.8%/4.6%/5.4%；"
+          }
+        ],
+        "reason": "列举家电、汽车、家具三个类别，却给出四个同比增长率，类别数量与数值数量不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2591,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2591,
+    "processed_ranges": [
+      [
+        0,
+        2591
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.009606,
+  "source_content_sha256": "5f01d26c6a090e13300928efe93b8dc9026d7c6f1875bee10e61dd79ce7ecfb4"
+}

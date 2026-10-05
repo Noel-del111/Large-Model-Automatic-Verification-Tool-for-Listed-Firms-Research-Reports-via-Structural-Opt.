@@ -1,0 +1,286 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000681",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "该句在“外观设计”下连续出现两次，信息完全重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 64,
+          "end": 89,
+          "text": "家族化设计语言：车长近5m、车宽近2m、轴距3m。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "家族化设计语言：车长近5m、车宽近2m、轴距3m。",
+          "start": 64,
+          "end": 89
+        }
+      ],
+      "spans": [
+        {
+          "start": 64,
+          "end": 89,
+          "text": "家族化设计语言：车长近5m、车宽近2m、轴距3m。"
+        }
+      ],
+      "warnings": [],
+      "id": "2d56632882cd6396beb8efa5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“10-80%最快分钟”中缺少具体充电分钟数，只有单位“分钟”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 569,
+          "end": 633,
+          "text": "充电技术：全系采用800V碳化硅高压平台，Max版本支持5.2C最大充电倍率，10-80%最快分钟，最快15分钟充电620km。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "充电技术：全系采用800V碳化硅高压平台，Max版本支持5.2C最大充电倍率，10-80%最快分钟，最快15分钟充电620km。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 569,
+          "end": 633,
+          "text": "充电技术：全系采用800V碳化硅高压平台，Max版本支持5.2C最大充电倍率，10-80%最快分钟，最快15分钟充电620km。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "59a4d1a6897bb856b40c6a58",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "投资语境下应为“核心标的”，“抵押品”是担保物术语，含义错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 871,
+          "end": 913,
+          "text": "电动化和智能化的优质赛道核心抵押品，如华阳集团、德赛西威、瑞可达、科博达、伯特利等；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "电动化和智能化的优质赛道核心抵押品，如华阳集团、德赛西威、瑞可达、科博达、伯特利等；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 871,
+          "end": 913,
+          "text": "电动化和智能化的优质赛道核心抵押品，如华阳集团、德赛西威、瑞可达、科博达、伯特利等；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aaaecfc0f5e079fac14d6de2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "并列连词“和”后缺少组合成员名称，列举不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 987,
+          "end": 1016,
+          "text": "本周重点关注组合：比亚迪、理想汽车、拓普集团、德赛西威和。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周重点关注组合：比亚迪、理想汽车、拓普集团、德赛西威和。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 987,
+          "end": 1016,
+          "text": "本周重点关注组合：比亚迪、理想汽车、拓普集团、德赛西威和。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "41757831c58c6d19d12923f6",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1076
+        ]
+      ],
+      "estimated_input_tokens": 5606,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:04:22.924043+00:00",
+        "request_sha256": "ed6c54199c9af2b031b3644795f4155dc0db3869a7e44aea28d772182931dbc2",
+        "input_token_estimate": 15638,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277782",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d6a95c95c5ab4ab88baad325c4c7ced7",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3752,
+        "output_tokens": 5546,
+        "usage_source": "provider",
+        "duration_seconds": 24.229637,
+        "cost_cny": "0.025936"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "家族化设计语言：车长近5m、车宽近2m、轴距3m。",
+            "start": 64,
+            "end": 89
+          }
+        ],
+        "reason": "该句在“外观设计”下连续出现两次，信息完全重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "充电技术：全系采用800V碳化硅高压平台，Max版本支持5.2C最大充电倍率，10-80%最快分钟，最快15分钟充电620km。"
+          }
+        ],
+        "reason": "“10-80%最快分钟”中缺少具体充电分钟数，只有单位“分钟”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "电动化和智能化的优质赛道核心抵押品，如华阳集团、德赛西威、瑞可达、科博达、伯特利等；"
+          }
+        ],
+        "reason": "投资语境下应为“核心标的”，“抵押品”是担保物术语，含义错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "本周重点关注组合：比亚迪、理想汽车、拓普集团、德赛西威和。"
+          }
+        ],
+        "reason": "并列连词“和”后缺少组合成员名称，列举不完整。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1076,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1076,
+    "processed_ranges": [
+      [
+        0,
+        1076
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 24.255164,
+  "source_content_sha256": "e4d099fb13658d9bc182271d40daea542e9637b0d02f7913e46b0f0986fd7575"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000694",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "e78868d7dcd18f2891c44e6e",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 185,
+          "end": 251,
+          "text": "食饮板块2023-2021年平均分红率56.87%，食品饮料行业承压运行，营收增速放缓，净利增速放缓，2024年分红率48.81%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1279,
+    "total_chars": 1279,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001023,
+  "source_content_sha256": "ad52c8cbc80f6f1b73e41d1ea62da7146123e9c8a3727bee92ce054db341ba21"
+}

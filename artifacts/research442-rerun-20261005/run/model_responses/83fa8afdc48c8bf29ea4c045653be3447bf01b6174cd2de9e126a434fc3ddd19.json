@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"市场回顾：本周（2025.5.30-2025.5.26），沪深300指数下跌1.08%，计算机指数上涨1.77%。\"}],\"reason\":\"时间区间写作2025.5.30-2025.5.26，终点早于起点，先后关系冲突。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"新版DeepSeek R1针对“幻觉”问题进行了优化，更新后的模型在改写润色、总结摘要、阅读理解等场景中，幻觉率降低了左右。\"}],\"reason\":\"“幻觉率降低了左右”缺少具体降低数值，无法判断实际幅度。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"E系列首款车型E6正式售价19800分，同时创新推出行业颠覆性的FSD（完全智能驾驶）月度订阅服务，低至1800元/月，开启智能物流新时代。\"}],\"reason\":\"无人物流车售价以“分”为单位，19800分仅合198元，与车型售价明显不符。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"AI算力端推荐海光信息、中科曙光、淳中科技、浪潮信息、神州数码、浪潮信息、神州数码等，受益融资包括优刻得、青云科技、首都在线、寒武纪、紫光股份、景嘉微、安博通、云天励飞、远东股份、海兰信、普天科技等。\"}],\"reason\":\"“受益融资包括”应为“受益标的包括”，此处误用“融资”一词，含义错误。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"AI算力端推荐海光信息、中科曙光、淳中科技、浪潮信息、神州数码、浪潮信息、神州数码等，受益融资包括优刻得、青云科技、首都在线、寒武纪、紫光股份、景嘉微、安博通、云天励飞、远东股份、海兰信、普天科技等。\"}],\"reason\":\"推荐名单中“浪潮信息、神州数码”连续重复出现，同一信息不必要地重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:07:59.362489+00:00",
+    "request_sha256": "d08467b395f7b6fe68acfe25f488657f039e65ce3ecb8952277f7b5734c04051",
+    "input_token_estimate": 15905,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278049",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d1bcfafe24cd4f1f93342c169e747bc2",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3764,
+    "output_tokens": 6636,
+    "usage_source": "provider",
+    "duration_seconds": 25.771168,
+    "cost_cny": "0.030308"
+  },
+  "cache_request": {
+    "key": "83fa8afdc48c8bf29ea4c045653be3447bf01b6174cd2de9e126a434fc3ddd19",
+    "purpose": "text_review.detect",
+    "messages_sha256": "d08467b395f7b6fe68acfe25f488657f039e65ce3ecb8952277f7b5734c04051"
+  }
+}

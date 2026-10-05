@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"根据钢联数据，截至5月23日，商品猪出栏均重124.13吨、周环比上涨0.01%，宰后均重93.03kg、周环比下跌0.03%。\"}],\"reason\":\"生猪出栏均重通常以公斤计量，124.13吨为单位错误，应为124.13kg。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"根据wind截至5月23日数据，自繁自养头均养殖利润48.21元/头，利润较前一周环比减少 元/头，外购仔猪头均养殖利润亏损16.06元/头，利润较前一周环比减少64.26元/头。\"}],\"reason\":\"自繁自养利润环比减少的数值缺失，原文仅有空格和“元/头”单位。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:12:02.312853+00:00",
+    "request_sha256": "5a4042a92d388bf8a8013c3974aab8dcfb42308a3e0db4b90c7f9ea3a1ba8c0b",
+    "input_token_estimate": 15775,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277919",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7bb9578f87f64bd3abec2735bc8ef927",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3821,
+    "output_tokens": 3866,
+    "usage_source": "provider",
+    "duration_seconds": 15.848185,
+    "cost_cny": "0.019285"
+  },
+  "cache_request": {
+    "key": "a608cad1b3cf2056a479521af9ed2509ae6e310af8b4606aca7cff0f090846f7",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5a4042a92d388bf8a8013c3974aab8dcfb42308a3e0db4b90c7f9ea3a1ba8c0b"
+  }
+}

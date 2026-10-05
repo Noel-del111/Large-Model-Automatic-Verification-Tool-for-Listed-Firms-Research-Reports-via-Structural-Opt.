@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"劲仔食品()\"}], \"reason\": \"公司名称后括号内股票代码为空，非数值属性值缺失。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"公司实际控制人有战略思路，24年发布新的“三年倍增，再造一个劲仔”的战略计划，要求至23年公司业绩再翻一番。\"}], \"reason\": \"24年发布战略却要求至23年完成，目标年份早于发布年份，时间关系冲突。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"预测129年公司实现销售收入增长17.4%，实现归母净利润增长14.3%，对应EPS0.74元，当前动态PE估值19.5倍。\"}], \"reason\": \"“129年”不是有效年份，年份书写明显错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:36:22.674394+00:00",
+    "request_sha256": "00627fdec7e48d5cbe0db481c65aec983f31cca0da6cf3f21e89e1c433b72293",
+    "input_token_estimate": 15079,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277223",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "5b3dce7bca984d3f9aa7bb94397fade6",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3512,
+    "output_tokens": 3455,
+    "usage_source": "provider",
+    "duration_seconds": 14.860236,
+    "cost_cny": "0.017332"
+  },
+  "cache_request": {
+    "key": "755aafab81473b78d9999e3064dbb3dabb6ce7cfa3b29877e2ffb486ea1e5909",
+    "purpose": "text_review.detect",
+    "messages_sha256": "00627fdec7e48d5cbe0db481c65aec983f31cca0da6cf3f21e89e1c433b72293"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"裕太微()\"}],\"reason\":\"股票代码位置为空，缺少公司证券代码等必要属性值。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"公司2024年实现营业收入3.96亿元，同比增长44.86%；实现归属于上市公司股东的净利润-2.02亿分，同比增亏；归属于上市公司股东的扣除非经常性损益的净利润-2.32亿元，同比增亏。\"}],\"reason\":\"归母净利润单位写成“亿分”，应为“亿元”，单位量纲错误。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产，原有的网通以太网物理层芯片、网通以太网交换机芯片、网通以太网网卡芯片和车载以太网物理层芯片均已实现规模量产。\"}],\"reason\":\"同一量产量信息连续重复一次，没有新增含义。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"预测公司2027-2025年收入分别为5.56、8.06、12.34亿元，EPS分别为-2.25、-1.42、0.09元，当前股价对应PE分别为-42、-67、1016倍，公司是中国境内极少数实现千兆以太网物理层芯片以及2.5G以太网物理层芯片大规模出货的企业，积极研发投入拓展产品线，并积极布局机器人应用领域，首次覆盖，给予“增持”投资评级。\"}],\"reason\":\"预测年份区间写成2027-2025年，起点晚于终点，时间区间不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:30:37.868008+00:00",
+    "request_sha256": "e4cd666b6f6bb8f954c963d2b423e6347093fc2d4cb363065c019ec79dc6c053",
+    "input_token_estimate": 15841,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277985",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "48d87bca1a504fe08fa306a720e3ccfd",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3698,
+    "output_tokens": 6828,
+    "usage_source": "provider",
+    "duration_seconds": 26.923124,
+    "cost_cny": "0.03101"
+  },
+  "cache_request": {
+    "key": "f7239a442155ef8f4ff7dca4b53fc3d8f1979841a9d11fde714162fa78137266",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e4cd666b6f6bb8f954c963d2b423e6347093fc2d4cb363065c019ec79dc6c053"
+  }
+}

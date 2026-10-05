@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"格式错误\",\n      \"spans\": [\n        {\n          \"text\": \"帝科股份(3008-42)\"\n        }\n      ],\n      \"reason\": \"股票代码应为六位数字，此处写成“3008-42”，不符合证券代码格式。\"\n    },\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"公司营收稳定增长，2024年总营收亿元，归母净利润接近3.6亿元，近三年毛利率维持在10%左右。\"\n        }\n      ],\n      \"reason\": \"“2024年总营收”后直接接“亿元”，缺少应报告的具体数值。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"毛利率11.14%、9.38%，YOY+2.3pct、-1.8pct；\"\n        }\n      ],\n      \"reason\": \"23年毛利率11.14%下降1.8pct应为9.34%，与所列24年毛利率9.38%不一致。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"债权费用率在期间费用率中占比最高，公司23、24年债权费用率分别是3.2%、3.1%。\"\n        }\n      ],\n      \"reason\": \"“债权费用率”不是规范财务指标，期间费用率中对应项目通常表述为财务费用率。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:56:55.971235+00:00",
+    "request_sha256": "a194a29b328b295632d2a9085a04f57ea109bc4196a85e954f16643ce0abd0c8",
+    "input_token_estimate": 15340,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277484",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "613cf95a0a4f4e1d9de41e6bd09e60c2",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3681,
+    "output_tokens": 7293,
+    "usage_source": "provider",
+    "duration_seconds": 26.91463,
+    "cost_cny": "0.032853"
+  },
+  "cache_request": {
+    "key": "027f57c29b15eb4428ebbf2d04326e1e640b4f4766026eea88224572b33ef736",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a194a29b328b295632d2a9085a04f57ea109bc4196a85e954f16643ce0abd0c8"
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000581",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "4月没有31日，该日期不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 352,
+          "end": 385,
+          "text": "中共中央政治局4月31日召开会议，分析研究当前经济形势和经济工作。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中共中央政治局4月31日召开会议，分析研究当前经济形势和经济工作。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 352,
+          "end": 385,
+          "text": "中共中央政治局4月31日召开会议，分析研究当前经济形势和经济工作。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ab690f31af5577b72da203f8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“同比增长%”中百分号前缺少具体增速数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 158,
+          "end": 219,
+          "text": "2025年一季度，中国GDP现价当季值为318758亿人民币元，按不变价格计算，当季同比增长%，我国经济保持稳健增长态势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年一季度，中国GDP现价当季值为318758亿人民币元，按不变价格计算，当季同比增长%，我国经济保持稳健增长态势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 158,
+          "end": 219,
+          "text": "2025年一季度，中国GDP现价当季值为318758亿人民币元，按不变价格计算，当季同比增长%，我国经济保持稳健增长态势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "42bc6c55fe373fccb78ad857",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内协议名称空缺，签署文件名称缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 730,
+          "end": 807,
+          "text": "双方签署《》，同意在2025年5月14日前互相暂停24%的加征关税90天，保留10%关税，并取消部分此前加征的关税及非关税反制措施，同时建立后续协商机制。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "双方签署《》，同意在2025年5月14日前互相暂停24%的加征关税90天，保留10%关税，并取消部分此前加征的关税及非关税反制措施，同时建立后续协商机制。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 730,
+          "end": 807,
+          "text": "双方签署《》，同意在2025年5月14日前互相暂停24%的加征关税90天，保留10%关税，并取消部分此前加征的关税及非关税反制措施，同时建立后续协商机制。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "afbe6197b50efbf58e427841",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "生产指数低于50%且较上月下降，不能同时称景气水平显著回升。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 531,
+          "end": 582,
+          "text": "其中，2025年4月份，制造业生产指数为49.8%，较上月下降2.8个百分点，制造业景气水平显著回升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，2025年4月份，制造业生产指数为49.8%，较上月下降2.8个百分点，制造业景气水平显著回升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 531,
+          "end": 582,
+          "text": "其中，2025年4月份，制造业生产指数为49.8%，较上月下降2.8个百分点，制造业景气水平显著回升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ec1e419c3ca69f77659cc265",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "反倾销程序应称“终裁”或“裁定”，不宜称为“仲裁”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1744,
+          "end": 1790,
+          "text": "2025年2月，欧盟发布对中国生柴反倾销的肯定性仲裁，决定征收10%-35.6%的反倾销税。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年2月，欧盟发布对中国生柴反倾销的肯定性仲裁，决定征收10%-35.6%的反倾销税。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1744,
+          "end": 1790,
+          "text": "2025年2月，欧盟发布对中国生柴反倾销的肯定性仲裁，决定征收10%-35.6%的反倾销税。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "30e447c88d1fdd69b69653ee",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2187
+        ]
+      ],
+      "estimated_input_tokens": 6815,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:23:54.841076+00:00",
+        "request_sha256": "58e886544e85b9631d5a0f613768bdf754206abd9f6ec25f7599ae7cbae70879",
+        "input_token_estimate": 18918,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281062",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9da3ababaaf84ac5ae6b338d87b21143",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4361,
+        "output_tokens": 13923,
+        "usage_source": "provider",
+        "duration_seconds": 52.724199,
+        "cost_cny": "0.060053"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "中共中央政治局4月31日召开会议，分析研究当前经济形势和经济工作。"
+          }
+        ],
+        "reason": "4月没有31日，该日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025年一季度，中国GDP现价当季值为318758亿人民币元，按不变价格计算，当季同比增长%，我国经济保持稳健增长态势。"
+          }
+        ],
+        "reason": "“同比增长%”中百分号前缺少具体增速数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "双方签署《》，同意在2025年5月14日前互相暂停24%的加征关税90天，保留10%关税，并取消部分此前加征的关税及非关税反制措施，同时建立后续协商机制。"
+          }
+        ],
+        "reason": "书名号内协议名称空缺，签署文件名称缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "其中，2025年4月份，制造业生产指数为49.8%，较上月下降2.8个百分点，制造业景气水平显著回升。"
+          }
+        ],
+        "reason": "生产指数低于50%且较上月下降，不能同时称景气水平显著回升。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "2025年2月，欧盟发布对中国生柴反倾销的肯定性仲裁，决定征收10%-35.6%的反倾销税。"
+          }
+        ],
+        "reason": "反倾销程序应称“终裁”或“裁定”，不宜称为“仲裁”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2187,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2187,
+    "processed_ranges": [
+      [
+        0,
+        2187
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 52.746624,
+  "source_content_sha256": "c9fc2a4351d71cd41e0e3439475a3a9b0e366fd8a6f02f7356df06065efca470"
+}

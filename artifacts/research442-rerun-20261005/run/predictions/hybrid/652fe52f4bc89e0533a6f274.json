@@ -1,0 +1,259 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000615",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "重仓持股市值占比应以百分比表示，“18.81亿分”不是合理单位，疑为“%”误写。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 154,
+          "end": 238,
+          "text": "大消费板块重仓持股市值占比有所下降，重仓持股市值占重仓持股总市值的比例为18.81亿分（环比-0.33pcts），超配比例回落，为5.83%（环比-0.13pcts）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "大消费板块重仓持股市值占比有所下降，重仓持股市值占重仓持股总市值的比例为18.81亿分（环比-0.33pcts），超配比例回落，为5.83%（环比-0.13pcts）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 154,
+          "end": 238,
+          "text": "大消费板块重仓持股市值占比有所下降，重仓持股市值占重仓持股总市值的比例为18.81亿分（环比-0.33pcts），超配比例回落，为5.83%（环比-0.13pcts）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4d28a5c9166c666163906a33",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“食品饮料行业重仓比例环比”后缺少具体的环比变化数值，无法核验其升降幅度。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 344,
+          "end": 375,
+          "text": "其中，食品饮料行业重仓比例环比，在全部一级行业中上升至第二名；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，食品饮料行业重仓比例环比，在全部一级行业中上升至第二名；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 344,
+          "end": 375,
+          "text": "其中，食品饮料行业重仓比例环比，在全部一级行业中上升至第二名；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6cf43a83a26a01024318d014",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一报告对全市场TOP20中大消费板块席位数量，前文称4个，后文称5个，存在冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 446,
+          "end": 499,
+          "text": "全市场个股持仓TOP20中大消费板块占据4个席位，增加1个席位，大消费板块中食品饮料个股重仓比例分化明显。"
+        },
+        {
+          "kind": "source_text",
+          "start": 499,
+          "end": 575,
+          "text": "2025Q1全市场基金重仓比例TOP20个股中大消费板块占据5个席位，其中食品饮料占据3席（贵州茅台、五粮液、山西汾酒），家用电器占据1席（美的集团）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "全市场个股持仓TOP20中大消费板块占据4个席位，增加1个席位，大消费板块中食品饮料个股重仓比例分化明显。"
+        },
+        {
+          "text": "2025Q1全市场基金重仓比例TOP20个股中大消费板块占据5个席位，其中食品饮料占据3席（贵州茅台、五粮液、山西汾酒），家用电器占据1席（美的集团）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 446,
+          "end": 499,
+          "text": "全市场个股持仓TOP20中大消费板块占据4个席位，增加1个席位，大消费板块中食品饮料个股重仓比例分化明显。"
+        },
+        {
+          "start": 499,
+          "end": 575,
+          "text": "2025Q1全市场基金重仓比例TOP20个股中大消费板块占据5个席位，其中食品饮料占据3席（贵州茅台、五粮液、山西汾酒），家用电器占据1席（美的集团）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "660a883efc4641787ae0eeac",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1819
+        ]
+      ],
+      "estimated_input_tokens": 6485,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:07:18.125127+00:00",
+        "request_sha256": "aaa74da9a4f911cf61c700bc151fecea209d116a62e97e23b587a0a52e387ea3",
+        "input_token_estimate": 17994,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280138",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9674408bd4a1481eabcc9959e4493923",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4162,
+        "output_tokens": 6973,
+        "usage_source": "provider",
+        "duration_seconds": 25.23366,
+        "cost_cny": "0.032054",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "大消费板块重仓持股市值占比有所下降，重仓持股市值占重仓持股总市值的比例为18.81亿分（环比-0.33pcts），超配比例回落，为5.83%（环比-0.13pcts）。"
+          }
+        ],
+        "reason": "重仓持股市值占比应以百分比表示，“18.81亿分”不是合理单位，疑为“%”误写。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "其中，食品饮料行业重仓比例环比，在全部一级行业中上升至第二名；"
+          }
+        ],
+        "reason": "“食品饮料行业重仓比例环比”后缺少具体的环比变化数值，无法核验其升降幅度。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "全市场个股持仓TOP20中大消费板块占据4个席位，增加1个席位，大消费板块中食品饮料个股重仓比例分化明显。"
+          },
+          {
+            "text": "2025Q1全市场基金重仓比例TOP20个股中大消费板块占据5个席位，其中食品饮料占据3席（贵州茅台、五粮液、山西汾酒），家用电器占据1席（美的集团）。"
+          }
+        ],
+        "reason": "同一报告对全市场TOP20中大消费板块席位数量，前文称4个，后文称5个，存在冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1819,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1819,
+    "processed_ranges": [
+      [
+        0,
+        1819
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1819,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001647,
+  "source_content_sha256": "51030fb1dde62a3988cf5a8e90bb5303799c44da1c969a8465edb068a8a72c8d"
+}

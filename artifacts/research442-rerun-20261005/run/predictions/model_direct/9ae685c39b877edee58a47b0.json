@@ -1,0 +1,349 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000419",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "营业收入预测年份区间写成2027年-2025年，起止倒置，时间区间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 905,
+          "end": 1090,
+          "text": "维持2027年-2025年营业收入预测至161.92/175.60/191.35亿元，同比+7.04%/+8.45%/+8.97%，维持2025年-2027年归母净利润预测至16.22/17.69/19.51亿元，同比+9.25%/9.05%/10.28%，对应三年EPS分别为5.53/6.03/6.65元，对应当前股价PE分别为15/14/13倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "维持2027年-2025年营业收入预测至161.92/175.60/191.35亿元，同比+7.04%/+8.45%/+8.97%，维持2025年-2027年归母净利润预测至16.22/17.69/19.51亿元，同比+9.25%/9.05%/10.28%，对应三年EPS分别为5.53/6.03/6.65元，对应当前股价PE分别为15/14/13倍，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 905,
+          "end": 1090,
+          "text": "维持2027年-2025年营业收入预测至161.92/175.60/191.35亿元，同比+7.04%/+8.45%/+8.97%，维持2025年-2027年归母净利润预测至16.22/17.69/19.51亿元，同比+9.25%/9.05%/10.28%，对应三年EPS分别为5.53/6.03/6.65元，对应当前股价PE分别为15/14/13倍，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "695dd46549972f3a3ac020cd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "风险提示中“食品安全风险”连续重复列出，同一信息不必要地重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1099,
+          "end": 1132,
+          "text": "食品安全风险；食品安全风险；市场竞争加剧风险；原材料价格波动风险。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "食品安全风险；食品安全风险；市场竞争加剧风险；原材料价格波动风险。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1099,
+          "end": 1132,
+          "text": "食品安全风险；食品安全风险；市场竞争加剧风险；原材料价格波动风险。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fa6fe9ff7d794aea7b9f41ec",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1132
+        ]
+      ],
+      "estimated_input_tokens": 5710,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:43:10.236419+00:00",
+        "request_sha256": "f3d6358e27e94840971dad7082d2fbd9ed497d4e5a4139d4b5adbbbdf1958cf0",
+        "input_token_estimate": 15905,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278049",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "14a104a7c4aa4444bf374e7ca5c046a5",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3775,
+        "output_tokens": 4273,
+        "usage_source": "provider",
+        "duration_seconds": 18.190971,
+        "cost_cny": "0.020867"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "维持2027年-2025年营业收入预测至161.92/175.60/191.35亿元，同比+7.04%/+8.45%/+8.97%，维持2025年-2027年归母净利润预测至16.22/17.69/19.51亿元，同比+9.25%/9.05%/10.28%，对应三年EPS分别为5.53/6.03/6.65元，对应当前股价PE分别为15/14/13倍，维持“买入”评级。"
+          }
+        ],
+        "reason": "营业收入预测年份区间写成2027年-2025年，起止倒置，时间区间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "食品安全风险；食品安全风险；市场竞争加剧风险；原材料价格波动风险。"
+          }
+        ],
+        "reason": "风险提示中“食品安全风险”连续重复列出，同一信息不必要地重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 905,
+      "end": 1090,
+      "text": "维持2027年-2025年营业收入预测至161.92/175.60/191.35亿元，同比+7.04%/+8.45%/+8.97%，维持2025年-2027年归母净利润预测至16.22/17.69/19.51亿元，同比+9.25%/9.05%/10.28%，对应三年EPS分别为5.53/6.03/6.65元，对应当前股价PE分别为15/14/13倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "191.35",
+          "unit": "亿元",
+          "start": 939,
+          "end": 947
+        },
+        {
+          "value": "+7.04",
+          "unit": "%",
+          "start": 950,
+          "end": 956
+        },
+        {
+          "value": "+8.45",
+          "unit": "%",
+          "start": 957,
+          "end": 963
+        },
+        {
+          "value": "+8.97",
+          "unit": "%",
+          "start": 964,
+          "end": 970
+        },
+        {
+          "value": "19.51",
+          "unit": "亿元",
+          "start": 1004,
+          "end": 1011
+        },
+        {
+          "value": "+9.25",
+          "unit": "%",
+          "start": 1014,
+          "end": 1020
+        },
+        {
+          "value": "9.05",
+          "unit": "%",
+          "start": 1021,
+          "end": 1026
+        },
+        {
+          "value": "10.28",
+          "unit": "%",
+          "start": 1027,
+          "end": 1033
+        },
+        {
+          "value": "6.65",
+          "unit": "元",
+          "start": 1054,
+          "end": 1059
+        },
+        {
+          "value": "13",
+          "unit": "倍",
+          "start": 1077,
+          "end": 1080
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年",
+        "2025年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 905,
+      "end": 1090,
+      "text": "维持2027年-2025年营业收入预测至161.92/175.60/191.35亿元，同比+7.04%/+8.45%/+8.97%，维持2025年-2027年归母净利润预测至16.22/17.69/19.51亿元，同比+9.25%/9.05%/10.28%，对应三年EPS分别为5.53/6.03/6.65元，对应当前股价PE分别为15/14/13倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "191.35",
+          "unit": "亿元",
+          "start": 939,
+          "end": 947
+        },
+        {
+          "value": "+7.04",
+          "unit": "%",
+          "start": 950,
+          "end": 956
+        },
+        {
+          "value": "+8.45",
+          "unit": "%",
+          "start": 957,
+          "end": 963
+        },
+        {
+          "value": "+8.97",
+          "unit": "%",
+          "start": 964,
+          "end": 970
+        },
+        {
+          "value": "19.51",
+          "unit": "亿元",
+          "start": 1004,
+          "end": 1011
+        },
+        {
+          "value": "+9.25",
+          "unit": "%",
+          "start": 1014,
+          "end": 1020
+        },
+        {
+          "value": "9.05",
+          "unit": "%",
+          "start": 1021,
+          "end": 1026
+        },
+        {
+          "value": "10.28",
+          "unit": "%",
+          "start": 1027,
+          "end": 1033
+        },
+        {
+          "value": "6.65",
+          "unit": "元",
+          "start": 1054,
+          "end": 1059
+        },
+        {
+          "value": "13",
+          "unit": "倍",
+          "start": 1077,
+          "end": 1080
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2025年",
+        "2025年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1132,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1132,
+    "processed_ranges": [
+      [
+        0,
+        1132
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 18.213549,
+  "source_content_sha256": "b5acf9b24e1485619f2439c1ab32ea58490de78f9dc388d08bb6a95c3adfcacc"
+}

@@ -1,0 +1,214 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000630",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "法规名称后括号内为空，缺少文号等非数值属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 44,
+          "end": 87,
+          "text": "事件：2025年5月23日，国家能源局南方监管局发布《南方区域电力市场运行规则（）》。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件：2025年5月23日，国家能源局南方监管局发布《南方区域电力市场运行规则（）》。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 44,
+          "end": 87,
+          "text": "事件：2025年5月23日，国家能源局南方监管局发布《南方区域电力市场运行规则（）》。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7dee0a472c65d572deb2a427",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一分配内容以不同编号重复出现，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 337,
+          "end": 400,
+          "text": "2阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。"
+        },
+        {
+          "kind": "source_text",
+          "start": 401,
+          "end": 464,
+          "text": "3阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。"
+        },
+        {
+          "text": "3阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 337,
+          "end": 400,
+          "text": "2阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。"
+        },
+        {
+          "start": 401,
+          "end": 464,
+          "text": "3阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ed41d900b40733becb6ade1c",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          828
+        ]
+      ],
+      "estimated_input_tokens": 5487,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:21:08.518046+00:00",
+        "request_sha256": "af71900f40071c54d29b261d9c544a4f3784068ed7f337fae825c2aff7ed0482",
+        "input_token_estimate": 15240,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277384",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b468ef72a2df458bab0719e596edf5c1",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3542,
+        "output_tokens": 6835,
+        "usage_source": "provider",
+        "duration_seconds": 30.506932,
+        "cost_cny": "0.030882"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "事件：2025年5月23日，国家能源局南方监管局发布《南方区域电力市场运行规则（）》。"
+          }
+        ],
+        "reason": "法规名称后括号内为空，缺少文号等非数值属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。"
+          },
+          {
+            "text": "3阻塞盈余的分配：初期可采用分配方式处理阻塞盈余，待条件成熟时，可通过市场化方式拍卖输电权，由输电权拥有者获取相应的阻塞收入。"
+          }
+        ],
+        "reason": "同一分配内容以不同编号重复出现，无新增信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 828,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 828,
+    "processed_ranges": [
+      [
+        0,
+        828
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 30.537821,
+  "source_content_sha256": "a8ae7683a5262b6354a8ef1126ab8ea12dfd56724ac545229499c90c8912d162"
+}

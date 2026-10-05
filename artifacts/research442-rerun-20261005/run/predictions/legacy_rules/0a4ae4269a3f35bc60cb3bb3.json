@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000339",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "afc36d2f149dae2c59554210",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 418,
+          "end": 556,
+          "text": "我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 992,
+    "total_chars": 992,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001052,
+  "source_content_sha256": "fb07014742987d8a458c22208549bcfd0912f054208fb2c4e67e1a890c03dc3b"
+}

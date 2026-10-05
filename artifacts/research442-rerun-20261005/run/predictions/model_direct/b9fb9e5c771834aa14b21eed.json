@@ -1,0 +1,383 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000653",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一国信化工价格指数数据在前后两段完全重复，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "据我们编制的国信化工价格指数，截至2025年5月29日，国信化工氟化工价格指数、国信化工制冷剂价格指数分别报1205.10、1799.47点，分别较4月底-0.90%、+0.35%。"
+        },
+        {
+          "text": "据我们编制的国信化工价格指数，截至2025年5月29日，国信化工氟化工价格指数、国信化工制冷剂价格指数分别报1205.10、1799.47点，分别较4月底-0.90%、+0.35%。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "cfcca0bacb88e4201270f72f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "R22报价使用“分/吨”，与同段其他产品“元/吨”单位不一致，应为元/吨。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 559,
+          "end": 744,
+          "text": "内贸价格方面，根据百川盈孚、卓创咨询，本月R22维持报价36000分/吨；R134a报价提升至47500元/吨，较上月+500元/吨；R125维持报价46000元/吨；R32报价提升至49000元/吨，较上月+1000元/吨；R410a维持报价48000元/吨；R152a维持报价28000元/吨；R142b维持报价30000元/吨；R143a维持报价46000元/吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "内贸价格方面，根据百川盈孚、卓创咨询，本月R22维持报价36000分/吨；R134a报价提升至47500元/吨，较上月+500元/吨；R125维持报价46000元/吨；R32报价提升至49000元/吨，较上月+1000元/吨；R410a维持报价48000元/吨；R152a维持报价28000元/吨；R142b维持报价30000元/吨；R143a维持报价46000元/吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 559,
+          "end": 744,
+          "text": "内贸价格方面，根据百川盈孚、卓创咨询，本月R22维持报价36000分/吨；R134a报价提升至47500元/吨，较上月+500元/吨；R125维持报价46000元/吨；R32报价提升至49000元/吨，较上月+1000元/吨；R410a维持报价48000元/吨；R152a维持报价28000元/吨；R142b维持报价30000元/吨；R143a维持报价46000元/吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "39c6a0ffadbcd7a0331ca605",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按内贸价与出口均价计算，R32价差7115、R22价差11423、R134a价差5259、R125/R143价差14501，均与所列价差不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 829,
+          "end": 974,
+          "text": "具体来看，2025年4月R32出口均价为41885元/吨，与内贸价差为6815元/吨；R22出口均价为24577元/吨，与内贸价差9923元/吨；R134a出口均价为42241元/吨，与内贸价差为4009元/吨；R125/R143系列出口均价为31499元/吨，与内贸价差14751元/吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "具体来看，2025年4月R32出口均价为41885元/吨，与内贸价差为6815元/吨；R22出口均价为24577元/吨，与内贸价差9923元/吨；R134a出口均价为42241元/吨，与内贸价差为4009元/吨；R125/R143系列出口均价为31499元/吨，与内贸价差14751元/吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 829,
+          "end": 974,
+          "text": "具体来看，2025年4月R32出口均价为41885元/吨，与内贸价差为6815元/吨；R22出口均价为24577元/吨，与内贸价差9923元/吨；R134a出口均价为42241元/吨，与内贸价差为4009元/吨；R125/R143系列出口均价为31499元/吨，与内贸价差14751元/吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5cafb93fc4700ce7c935c128",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "国家方案名称括号内为空，缺少应标注的年份（2025-2030年）。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1023,
+          "end": 1080,
+          "text": "2025年4月23日，生态环境部发布《中国履行<关于消耗臭氧层物质的蒙特利尔议定书>国家方案()》，主要目标包括："
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4月23日，生态环境部发布《中国履行<关于消耗臭氧层物质的蒙特利尔议定书>国家方案()》，主要目标包括："
+        }
+      ],
+      "spans": [
+        {
+          "start": 1023,
+          "end": 1080,
+          "text": "2025年4月23日，生态环境部发布《中国履行<关于消耗臭氧层物质的蒙特利尔议定书>国家方案()》，主要目标包括："
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0277acc29c834d5b20e4f714",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "7月内销排产数值位置为空，只有单位“万台”和同比增速。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1546,
+          "end": 1629,
+          "text": "排产方面，据产业在线家用空调内销排产报告显示，2025年6月排产1366万台，同比+29.3%；7月排产 万台，同比+22.8%；8月排产694万台，同比-9.2%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "排产方面，据产业在线家用空调内销排产报告显示，2025年6月排产1366万台，同比+29.3%；7月排产 万台，同比+22.8%；8月排产694万台，同比-9.2%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1546,
+          "end": 1629,
+          "text": "排产方面，据产业在线家用空调内销排产报告显示，2025年6月排产1366万台，同比+29.3%；7月排产 万台，同比+22.8%；8月排产694万台，同比-9.2%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8f396a258e07931d3bfe9d9b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“传动旺季”应为“传统旺季”，此处用词错误导致行业季节表述不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 431,
+          "end": 473,
+          "text": "二季度受夏季高温天气驱动，制冷剂消费进入传动旺季，在低库存背景下交易活跃度逐步提升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "二季度受夏季高温天气驱动，制冷剂消费进入传动旺季，在低库存背景下交易活跃度逐步提升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 431,
+          "end": 473,
+          "text": "二季度受夏季高温天气驱动，制冷剂消费进入传动旺季，在低库存背景下交易活跃度逐步提升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "988fd591adba3c5fd9a1d09a",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2256
+        ]
+      ],
+      "estimated_input_tokens": 6605,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:40:10.115899+00:00",
+        "request_sha256": "cfe5b1c1829958883744a5329c6e63a6d86ecfd48353812cf412bc29940e979e",
+        "input_token_estimate": 18425,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280569",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ca3db02df64e412ea3d6530c56d7dd1f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4498,
+        "output_tokens": 10563,
+        "usage_source": "provider",
+        "duration_seconds": 40.113678,
+        "cost_cny": "0.04675"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "据我们编制的国信化工价格指数，截至2025年5月29日，国信化工氟化工价格指数、国信化工制冷剂价格指数分别报1205.10、1799.47点，分别较4月底-0.90%、+0.35%。"
+          },
+          {
+            "text": "据我们编制的国信化工价格指数，截至2025年5月29日，国信化工氟化工价格指数、国信化工制冷剂价格指数分别报1205.10、1799.47点，分别较4月底-0.90%、+0.35%。"
+          }
+        ],
+        "reason": "同一国信化工价格指数数据在前后两段完全重复，未增加新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "内贸价格方面，根据百川盈孚、卓创咨询，本月R22维持报价36000分/吨；R134a报价提升至47500元/吨，较上月+500元/吨；R125维持报价46000元/吨；R32报价提升至49000元/吨，较上月+1000元/吨；R410a维持报价48000元/吨；R152a维持报价28000元/吨；R142b维持报价30000元/吨；R143a维持报价46000元/吨。"
+          }
+        ],
+        "reason": "R22报价使用“分/吨”，与同段其他产品“元/吨”单位不一致，应为元/吨。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "具体来看，2025年4月R32出口均价为41885元/吨，与内贸价差为6815元/吨；R22出口均价为24577元/吨，与内贸价差9923元/吨；R134a出口均价为42241元/吨，与内贸价差为4009元/吨；R125/R143系列出口均价为31499元/吨，与内贸价差14751元/吨。"
+          }
+        ],
+        "reason": "按内贸价与出口均价计算，R32价差7115、R22价差11423、R134a价差5259、R125/R143价差14501，均与所列价差不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2025年4月23日，生态环境部发布《中国履行<关于消耗臭氧层物质的蒙特利尔议定书>国家方案()》，主要目标包括："
+          }
+        ],
+        "reason": "国家方案名称括号内为空，缺少应标注的年份（2025-2030年）。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "排产方面，据产业在线家用空调内销排产报告显示，2025年6月排产1366万台，同比+29.3%；7月排产 万台，同比+22.8%；8月排产694万台，同比-9.2%。"
+          }
+        ],
+        "reason": "7月内销排产数值位置为空，只有单位“万台”和同比增速。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "二季度受夏季高温天气驱动，制冷剂消费进入传动旺季，在低库存背景下交易活跃度逐步提升。"
+          }
+        ],
+        "reason": "“传动旺季”应为“传统旺季”，此处用词错误导致行业季节表述不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "据我们编制的国信化工价格指数，截至2025年5月29日，国信化工氟化工价格指数、国信化工制冷剂价格指数分别报1205.10、1799.47点，分别较4月底-0.90%、+0.35%。"
+          },
+          {
+            "text": "据我们编制的国信化工价格指数，截至2025年5月29日，国信化工氟化工价格指数、国信化工制冷剂价格指数分别报1205.10、1799.47点，分别较4月底-0.90%、+0.35%。"
+          }
+        ],
+        "reason": "同一国信化工价格指数数据在前后两段完全重复，未增加新信息。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 2256,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 2256,
+    "processed_ranges": [
+      [
+        0,
+        2256
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 40.136533,
+  "source_content_sha256": "8fcc777af7f570895683201a00d5639a38f1a2550d2765258eb2ae31b1d812d8"
+}

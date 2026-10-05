@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"周行情：本周（2025.5.26-2025.5.30）上证综指下跌0.03元，深证成指下跌0.91%，创业板指下跌1.40%。\"}],\"reason\":\"上证综指为指数，涨跌幅不应使用货币单位“元”，应使用点或百分比。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"建议关注：臻镭科技（）等。\"}],\"reason\":\"臻镭科技后括号为空，缺少股票代码或其他必要属性值。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。\"}],\"reason\":\"该句与此前“已完成小版本升级、当前版本为DeepSeek-R1-0528”重复表达同一信息。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"据悉，DeepSeek-R1-0528目前已完成版本迭代，最新版本仍为DeepSeek-R1-0528。\"},{\"text\":\"同时，DeepSeek方面还蒸馏DeepSeek-R1-0530的思维链后训练Qwen3-8B Base，得到了DeepSeek-R1-0528-Qwen3-8B。\"}],\"reason\":\"前文称最新版本仍为0528，后文却出现版本号更晚的0530作为蒸馏来源，版本逻辑矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:18:40.089987+00:00",
+    "request_sha256": "e12c81272cd1b518ae7616443327cedf2e19a740fba394c035eceb19dd636dd9",
+    "input_token_estimate": 15391,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277535",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f6dff6f76bd945579dfcdfd36c59ad7d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3695,
+    "output_tokens": 6002,
+    "usage_source": "provider",
+    "duration_seconds": 24.067228,
+    "cost_cny": "0.027703"
+  },
+  "cache_request": {
+    "key": "e562837820c29c119cb04d61b86e6b009e17a1dcbfe9586bc90410ed92e0cb8d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e12c81272cd1b518ae7616443327cedf2e19a740fba394c035eceb19dd636dd9"
+  }
+}

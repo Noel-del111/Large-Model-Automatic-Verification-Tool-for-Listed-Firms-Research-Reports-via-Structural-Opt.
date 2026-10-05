@@ -1,0 +1,286 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000579",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "该句在下一段紧接着原样重复出现一次，同一信息不必要地重复。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "工艺设备端，谐波减速器属于精密加工，主流采用滚齿或插齿工艺，设备依赖于进口。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "f1c9e09c8ee77fd506bd3a56",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "价格单位写成g/台，g不是价格单位，应为万元/台等标准货币单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 747,
+          "end": 761,
+          "text": "主流型号谐波价格1-2g/台"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "主流型号谐波价格1-2g/台"
+        }
+      ],
+      "spans": [
+        {
+          "start": 747,
+          "end": 761,
+          "text": "主流型号谐波价格1-2g/台"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7d25423831ba468f847c6f3d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按单机谐波用量10个、人形销量超万台计算，谐波需求约为10万个，与600万台严重不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 382,
+          "end": 462,
+          "text": "人形机器人单机谐波用量平均10个+，在特斯拉、Figure AI等引领下，2027年全球人形销量或超万台，对应谐波需求600万台，叠加传统需求总量达880万台。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "人形机器人单机谐波用量平均10个+，在特斯拉、Figure AI等引领下，2027年全球人形销量或超万台，对应谐波需求600万台，叠加传统需求总量达880万台。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 382,
+          "end": 462,
+          "text": "人形机器人单机谐波用量平均10个+，在特斯拉、Figure AI等引领下，2027年全球人形销量或超万台，对应谐波需求600万台，叠加传统需求总量达880万台。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5f9ea3620310918758352cbc",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "模糊语言",
+      "reason": "未说明维持的对象是毛利率、成本占比还是其他指标，百分比含义不明确。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 803,
+          "end": 818,
+          "text": "规模化后，可维持25-35%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "规模化后，可维持25-35%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 803,
+          "end": 818,
+          "text": "规模化后，可维持25-35%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4cc5752385704e1f239309a1",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1113
+        ]
+      ],
+      "estimated_input_tokens": 5742,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:37:54.278674+00:00",
+        "request_sha256": "b84c53750b732da04661f7b356495c5f704dbc1b033659ec1a47e4027e1b503c",
+        "input_token_estimate": 15944,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278088",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1324d4e784c447d4ae558dc1ba59056d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3775,
+        "output_tokens": 7053,
+        "usage_source": "provider",
+        "duration_seconds": 29.838756,
+        "cost_cny": "0.031987"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "工艺设备端，谐波减速器属于精密加工，主流采用滚齿或插齿工艺，设备依赖于进口。"
+          }
+        ],
+        "reason": "该句在下一段紧接着原样重复出现一次，同一信息不必要地重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "主流型号谐波价格1-2g/台"
+          }
+        ],
+        "reason": "价格单位写成g/台，g不是价格单位，应为万元/台等标准货币单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "人形机器人单机谐波用量平均10个+，在特斯拉、Figure AI等引领下，2027年全球人形销量或超万台，对应谐波需求600万台，叠加传统需求总量达880万台。"
+          }
+        ],
+        "reason": "按单机谐波用量10个、人形销量超万台计算，谐波需求约为10万个，与600万台严重不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "模糊语言",
+        "spans": [
+          {
+            "text": "规模化后，可维持25-35%。"
+          }
+        ],
+        "reason": "未说明维持的对象是毛利率、成本占比还是其他指标，百分比含义不明确。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "工艺设备端，谐波减速器属于精密加工，主流采用滚齿或插齿工艺，设备依赖于进口。"
+          }
+        ],
+        "reason": "该句在下一段紧接着原样重复出现一次，同一信息不必要地重复。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1113,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1113,
+    "processed_ranges": [
+      [
+        0,
+        1113
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 29.86033,
+  "source_content_sha256": "25f35d3ef0f72939c7ed2e1c3e5df4f13570cd99fc7c78341e4b1efcd46e31b8"
+}

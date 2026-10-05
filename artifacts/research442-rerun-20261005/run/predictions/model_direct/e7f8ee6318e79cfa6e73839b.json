@@ -1,0 +1,328 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000594",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "交易金额应使用美元等货币单位，写成“公斤”导致量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 54,
+          "end": 74,
+          "text": "继三生制药达成一项超60亿公斤的交易之后"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "继三生制药达成一项超60亿公斤的交易之后"
+        }
+      ],
+      "spans": [
+        {
+          "start": 54,
+          "end": 74,
+          "text": "继三生制药达成一项超60亿公斤的交易之后"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8f1e2ff955587612fcf0d5c7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "一年只有四个季度，“2025年5季度”不是合法时间表述。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2889,
+          "end": 2921,
+          "text": "2025年5季度，美国市场礼来的替尔泊肽处方量已超过司美格鲁肽。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5季度，美国市场礼来的替尔泊肽处方量已超过司美格鲁肽。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2889,
+          "end": 2921,
+          "text": "2025年5季度，美国市场礼来的替尔泊肽处方量已超过司美格鲁肽。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "46be8252ce85d66686f858c5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "时间区间写成“6-3个月”，起点晚于终点，期间倒置不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1894,
+          "end": 1969,
+          "text": "患者在 6-3 个月内 SELENA-SLEDAI 疾病活动度评分降至 0 分，关节炎、脱发、血管炎等临床症状完全缓解，补体水平及关键抗体指标恢复正常"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "患者在 6-3 个月内 SELENA-SLEDAI 疾病活动度评分降至 0 分，关节炎、脱发、血管炎等临床症状完全缓解，补体水平及关键抗体指标恢复正常"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1894,
+          "end": 1969,
+          "text": "患者在 6-3 个月内 SELENA-SLEDAI 疾病活动度评分降至 0 分，关节炎、脱发、血管炎等临床症状完全缓解，补体水平及关键抗体指标恢复正常"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "13ee1906ae7a4b6eae2aa958",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "完成首次第4周评估的为5例，其中4例占比应为80%，原文75%不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1541,
+          "end": 1641,
+          "text": "8例至少经过三线治疗后的R/R MM患者，5例患者已完成首次第4周的疗效评估，其中3例（60%）总体疗效评估达到严格的完全缓解/完全缓解（sCR/CR），4例（75%）获得骨髓微小残留病（MRD）阴性"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "8例至少经过三线治疗后的R/R MM患者，5例患者已完成首次第4周的疗效评估，其中3例（60%）总体疗效评估达到严格的完全缓解/完全缓解（sCR/CR），4例（75%）获得骨髓微小残留病（MRD）阴性"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1541,
+          "end": 1641,
+          "text": "8例至少经过三线治疗后的R/R MM患者，5例患者已完成首次第4周的疗效评估，其中3例（60%）总体疗效评估达到严格的完全缓解/完全缓解（sCR/CR），4例（75%）获得骨髓微小残留病（MRD）阴性"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cb904bb1abaadce3f792e625",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一签订协议获得授权事项连续重复，未提供新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 3103,
+          "end": 3172,
+          "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 3103,
+          "end": 3172,
+          "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4c00b3cffd92788a100aeb32",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          4606
+        ]
+      ],
+      "estimated_input_tokens": 8885,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:28:06.548466+00:00",
+        "request_sha256": "c38baa22c97a81ed1bd0fba8758226cf1c79ddfd17980e7fd226092dd4f2a0ae",
+        "input_token_estimate": 24771,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.286915",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "cc37adc751ba44fbb5ba251e02592f0f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 5897,
+        "output_tokens": 11342,
+        "usage_source": "provider",
+        "duration_seconds": 41.341506,
+        "cost_cny": "0.051265"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "继三生制药达成一项超60亿公斤的交易之后"
+          }
+        ],
+        "reason": "交易金额应使用美元等货币单位，写成“公斤”导致量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年5季度，美国市场礼来的替尔泊肽处方量已超过司美格鲁肽。"
+          }
+        ],
+        "reason": "一年只有四个季度，“2025年5季度”不是合法时间表述。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "患者在 6-3 个月内 SELENA-SLEDAI 疾病活动度评分降至 0 分，关节炎、脱发、血管炎等临床症状完全缓解，补体水平及关键抗体指标恢复正常"
+          }
+        ],
+        "reason": "时间区间写成“6-3个月”，起点晚于终点，期间倒置不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "8例至少经过三线治疗后的R/R MM患者，5例患者已完成首次第4周的疗效评估，其中3例（60%）总体疗效评估达到严格的完全缓解/完全缓解（sCR/CR），4例（75%）获得骨髓微小残留病（MRD）阴性"
+          }
+        ],
+        "reason": "完成首次第4周评估的为5例，其中4例占比应为80%，原文75%不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+          }
+        ],
+        "reason": "同一签订协议获得授权事项连续重复，未提供新增信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 4606,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 4606,
+    "processed_ranges": [
+      [
+        0,
+        4606
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 41.368056,
+  "source_content_sha256": "48a7e8bd487c1ac7b270fd9167714c3abea10616a3b524c6b3acedfe1f7c56cf"
+}

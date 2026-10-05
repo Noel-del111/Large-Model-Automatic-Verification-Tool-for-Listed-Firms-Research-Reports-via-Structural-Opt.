@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000517",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "日期“2025年5月0日”不存在，5月没有0日。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 38,
+          "end": 106,
+          "text": "行情回顾：截至2025年5月0日，中信基础化工行业近两周上涨0.2%，跑赢沪深300指数1.44个百分点，在中信30个行业中排名第45。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "行情回顾：截至2025年5月0日，中信基础化工行业近两周上涨0.2%，跑赢沪深300指数1.44个百分点，在中信30个行业中排名第45。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 38,
+          "end": 106,
+          "text": "行情回顾：截至2025年5月0日，中信基础化工行业近两周上涨0.2%，跑赢沪深300指数1.44个百分点，在中信30个行业中排名第45。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bb4ed92be3b58bee417209f6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "中信一级行业共30个，排名第45超出行业总数，名次不可能。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 38,
+          "end": 106,
+          "text": "行情回顾：截至2025年5月0日，中信基础化工行业近两周上涨0.2%，跑赢沪深300指数1.44个百分点，在中信30个行业中排名第45。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "行情回顾：截至2025年5月0日，中信基础化工行业近两周上涨0.2%，跑赢沪深300指数1.44个百分点，在中信30个行业中排名第45。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 38,
+          "end": 106,
+          "text": "行情回顾：截至2025年5月0日，中信基础化工行业近两周上涨0.2%，跑赢沪深300指数1.44个百分点，在中信30个行业中排名第45。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c0893f34ae78036794c8ce9a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "声称“涨跌幅前五的板块”，但实际只列出四个板块，缺少一个板块信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 108,
+          "end": 269,
+          "text": "具体到中信基础化工行业的三级子行业，从最近两周表现来看，涨跌幅前五的板块依次是农药（9.4%）、、橡胶助剂（6.93%）、其他塑料制品（2.75%）、膜材料（1.94%），涨跌幅排名后五位的板块依次是碳纤维（-8.37%）、日用化学品（-2.82%）、氯碱（-2.58%）、有机硅（-2.48%）、氟化工（-2.31%）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "具体到中信基础化工行业的三级子行业，从最近两周表现来看，涨跌幅前五的板块依次是农药（9.4%）、、橡胶助剂（6.93%）、其他塑料制品（2.75%）、膜材料（1.94%），涨跌幅排名后五位的板块依次是碳纤维（-8.37%）、日用化学品（-2.82%）、氯碱（-2.58%）、有机硅（-2.48%）、氟化工（-2.31%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 108,
+          "end": 269,
+          "text": "具体到中信基础化工行业的三级子行业，从最近两周表现来看，涨跌幅前五的板块依次是农药（9.4%）、、橡胶助剂（6.93%）、其他塑料制品（2.75%）、膜材料（1.94%），涨跌幅排名后五位的板块依次是碳纤维（-8.37%）、日用化学品（-2.82%）、氯碱（-2.58%）、有机硅（-2.48%）、氟化工（-2.31%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4d06a3d179bd176f6414580d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "环比-5.03%表示下降，与“连续两个季度环比增长”直接冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 534,
+          "end": 595,
+          "text": "另一方面，中信基础化工板块今年一季度末的在建工程规模同比-8.61%，环比-5.03%，在建工程规模连续两个季度环比增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "另一方面，中信基础化工板块今年一季度末的在建工程规模同比-8.61%，环比-5.03%，在建工程规模连续两个季度环比增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 534,
+          "end": 595,
+          "text": "另一方面，中信基础化工板块今年一季度末的在建工程规模同比-8.61%，环比-5.03%，在建工程规模连续两个季度环比增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d93787cbb2b9c61bd16f4d23",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1135
+        ]
+      ],
+      "estimated_input_tokens": 5705,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:48:46.331600+00:00",
+        "request_sha256": "62bafb6763b14e4b550fa03f3254fd04f33e18180577dfef2b6edad29796d0ca",
+        "input_token_estimate": 15870,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278014",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "bacb4241842846c682fc58b1764268ed",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3754,
+        "output_tokens": 6539,
+        "usage_source": "provider",
+        "duration_seconds": 26.360077,
+        "cost_cny": "0.02991"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "行情回顾：截至2025年5月0日，中信基础化工行业近两周上涨0.2%，跑赢沪深300指数1.44个百分点，在中信30个行业中排名第45。"
+          }
+        ],
+        "reason": "日期“2025年5月0日”不存在，5月没有0日。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "行情回顾：截至2025年5月0日，中信基础化工行业近两周上涨0.2%，跑赢沪深300指数1.44个百分点，在中信30个行业中排名第45。"
+          }
+        ],
+        "reason": "中信一级行业共30个，排名第45超出行业总数，名次不可能。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "具体到中信基础化工行业的三级子行业，从最近两周表现来看，涨跌幅前五的板块依次是农药（9.4%）、、橡胶助剂（6.93%）、其他塑料制品（2.75%）、膜材料（1.94%），涨跌幅排名后五位的板块依次是碳纤维（-8.37%）、日用化学品（-2.82%）、氯碱（-2.58%）、有机硅（-2.48%）、氟化工（-2.31%）。"
+          }
+        ],
+        "reason": "声称“涨跌幅前五的板块”，但实际只列出四个板块，缺少一个板块信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "另一方面，中信基础化工板块今年一季度末的在建工程规模同比-8.61%，环比-5.03%，在建工程规模连续两个季度环比增长。"
+          }
+        ],
+        "reason": "环比-5.03%表示下降，与“连续两个季度环比增长”直接冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1135,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1135,
+    "processed_ranges": [
+      [
+        0,
+        1135
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 26.384194,
+  "source_content_sha256": "423a2647a05cffa10145a17c9add60c7540172776734fbb44ad54cbf82074cb6"
+}

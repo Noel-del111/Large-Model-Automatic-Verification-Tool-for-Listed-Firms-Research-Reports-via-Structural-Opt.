@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"5月公司新能源批发销量为9.5万辆，同比+69.9%；1-5月累计批发35.1万辆，同比+46.9%。\"}], \"reason\": \"前文已列示相同5月及1-5月新能源批发销量数据，此处不必要重复。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"随着全球化思路清晰、步伐坚定的持续推进，公司将加速拓展海外市场\"}], \"reason\": \"前文已有“公司全球化思路清晰、步伐坚定”的相同表述，此处重复。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"其中泰国布局的全球“右舵生产基地”产能在2025Q1实现投产，首期产能10万辆，二期后总产能将增加至辆。\"}], \"reason\": \"“增加至辆”前缺少应填写的总产能数值。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"投资建议：我们看好公司电动智能转型，叠加华为智能化赋能，维持盈利预测，预计2025-2027年收入分别为1,896/2,095/2,335亿元，归母净利润分别为88.7/107.6/127.2亿元，EPS分别为0.89/1.09/1.28平米，对应2025年6月3日12.59元/股的收盘价，PE分别为14/12/10倍，维持“推荐”评级。\"}], \"reason\": \"EPS单位应为元/股或元，原文写成“平米”，单位量纲错误。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"同时公司规划加速深蓝全球化布局，投放更多全球化产品，2025全球年销目标为50万台（国内30万台，海外10万台）。\"}], \"reason\": \"括号内国内30万台加海外10万台合计40万台，与全球目标50万台不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:30:34.848421+00:00",
+    "request_sha256": "e84e11a835250aa0a80703a456383165f14b2741b345dadd6b8d86f8db2256e6",
+    "input_token_estimate": 16151,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278295",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "e29351509a754c93a8f237ed15708b50",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3965,
+    "output_tokens": 10021,
+    "usage_source": "provider",
+    "duration_seconds": 38.260508,
+    "cost_cny": "0.044049"
+  },
+  "cache_request": {
+    "key": "256b15893ef39b9ce6b0326f0dd8d621ec3f1eda4b09c0d5f3958ed561d9fad0",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e84e11a835250aa0a80703a456383165f14b2741b345dadd6b8d86f8db2256e6"
+  }
+}

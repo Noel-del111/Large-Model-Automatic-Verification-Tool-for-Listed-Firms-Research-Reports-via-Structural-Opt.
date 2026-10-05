@@ -1,0 +1,764 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000432",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "相邻两句重复相同PE表述，无新增信息，构成冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1169,
+          "end": 1194,
+          "text": "当前股价对应PE为30.7/24.8/20.1X。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1194,
+          "end": 1230,
+          "text": "当前股价对应PE为30.7/24.8/20.1X，维持“优于大市”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "当前股价对应PE为30.7/24.8/20.1X。"
+        },
+        {
+          "text": "当前股价对应PE为30.7/24.8/20.1X，维持“优于大市”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1169,
+          "end": 1194,
+          "text": "当前股价对应PE为30.7/24.8/20.1X。"
+        },
+        {
+          "start": 1194,
+          "end": 1230,
+          "text": "当前股价对应PE为30.7/24.8/20.1X，维持“优于大市”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "45a33fc1718d0a008d5c4667",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份区间写成“2027-25年”，终点早于起点，时间范围不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1093,
+          "end": 1168,
+          "text": "预计2027-25年归母净利润为4.69/5.78/7.17亿（2025-26年原为5.18/6.37亿），同比增长20.7%/23.4%/23.9%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2027-25年归母净利润为4.69/5.78/7.17亿（2025-26年原为5.18/6.37亿），同比增长20.7%/23.4%/23.9%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1093,
+          "end": 1168,
+          "text": "预计2027-25年归母净利润为4.69/5.78/7.17亿（2025-26年原为5.18/6.37亿），同比增长20.7%/23.4%/23.9%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b65ee5cad193b8928604ad29",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "产品名称括号内为空，非数值属性值缺失，无法识别获批产品的具体名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 931,
+          "end": 994,
+          "text": "有晶体眼人工晶状体（）已于2025年1月获批上市，龙晶®PR成功填补了国产眼内镜产品的空白，有“薄、精、大、稳”四大设计优势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "有晶体眼人工晶状体（）已于2025年1月获批上市，龙晶®PR成功填补了国产眼内镜产品的空白，有“薄、精、大、稳”四大设计优势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 931,
+          "end": 994,
+          "text": "有晶体眼人工晶状体（）已于2025年1月获批上市，龙晶®PR成功填补了国产眼内镜产品的空白，有“薄、精、大、稳”四大设计优势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3014f8414b47aa52fd1b17d3",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“套利”为金融交易术语，用于描述销量放量与集采降价关系不当，应表达抵消或对冲含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 352,
+          "end": 386,
+          "text": "人工晶体销售放量套利集采降价影响，视力保健业务收入占比提升至30%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "人工晶体销售放量套利集采降价影响，视力保健业务收入占比提升至30%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 352,
+          "end": 386,
+          "text": "人工晶体销售放量套利集采降价影响，视力保健业务收入占比提升至30%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "43383d278e2179eff7b46860",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "毛利率数值后接“浓度”，金融指标表述错误，应为“66.23%（-9.78pp）”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 713,
+          "end": 766,
+          "text": "2024年毛利率为66.23%浓度（-9.78pp），主要受相对低毛利率的隐形眼镜产品收入占比提升的影响。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年毛利率为66.23%浓度（-9.78pp），主要受相对低毛利率的隐形眼镜产品收入占比提升的影响。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 713,
+          "end": 766,
+          "text": "2024年毛利率为66.23%浓度（-9.78pp），主要受相对低毛利率的隐形眼镜产品收入占比提升的影响。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a1dafcad4f9e3570a668eaa8",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1262
+        ]
+      ],
+      "estimated_input_tokens": 5660,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:54:50.375240+00:00",
+        "request_sha256": "d1bd143d37da199065eca0fec0e11a7cfc24476a7a629a0105872bbd4a835b3f",
+        "input_token_estimate": 15810,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277954",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3937c2d2fc4741e1856f18c00038fb16",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3853,
+        "output_tokens": 7200,
+        "usage_source": "provider",
+        "duration_seconds": 27.200806,
+        "cost_cny": "0.032653"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "当前股价对应PE为30.7/24.8/20.1X。"
+          },
+          {
+            "text": "当前股价对应PE为30.7/24.8/20.1X，维持“优于大市”评级。"
+          }
+        ],
+        "reason": "相邻两句重复相同PE表述，无新增信息，构成冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "预计2027-25年归母净利润为4.69/5.78/7.17亿（2025-26年原为5.18/6.37亿），同比增长20.7%/23.4%/23.9%"
+          }
+        ],
+        "reason": "年份区间写成“2027-25年”，终点早于起点，时间范围不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "有晶体眼人工晶状体（）已于2025年1月获批上市，龙晶®PR成功填补了国产眼内镜产品的空白，有“薄、精、大、稳”四大设计优势。"
+          }
+        ],
+        "reason": "产品名称括号内为空，非数值属性值缺失，无法识别获批产品的具体名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "人工晶体销售放量套利集采降价影响，视力保健业务收入占比提升至30%。"
+          }
+        ],
+        "reason": "“套利”为金融交易术语，用于描述销量放量与集采降价关系不当，应表达抵消或对冲含义。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "2024年毛利率为66.23%浓度（-9.78pp），主要受相对低毛利率的隐形眼镜产品收入占比提升的影响。"
+          }
+        ],
+        "reason": "毛利率数值后接“浓度”，金融指标表述错误，应为“66.23%（-9.78pp）”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 69,
+      "end": 116,
+      "text": "2024年公司实现营收14.10亿（+48.24%），归母净利润3.88亿（+27.77%）；",
+      "quantities": [
+        {
+          "value": "+48.24",
+          "unit": "%",
+          "start": 87,
+          "end": 94
+        },
+        {
+          "value": "+27.77",
+          "unit": "%",
+          "start": 107,
+          "end": 114
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 69,
+      "end": 116,
+      "text": "2024年公司实现营收14.10亿（+48.24%），归母净利润3.88亿（+27.77%）；",
+      "quantities": [
+        {
+          "value": "+48.24",
+          "unit": "%",
+          "start": 87,
+          "end": 94
+        },
+        {
+          "value": "+27.77",
+          "unit": "%",
+          "start": 107,
+          "end": 114
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 116,
+      "end": 224,
+      "text": "其中24Q4收入3.35亿（+18.26%），归母净利润0.71亿（+36.15%），以隐形眼镜产品为主的视力保健业务毛利率相对较低，且该业务仍处于产能扩张期及合格率提升期，单位成本偏高，从而影响公司整体净利润增速。",
+      "quantities": [
+        {
+          "value": "+18.26",
+          "unit": "%",
+          "start": 130,
+          "end": 137
+        },
+        {
+          "value": "+36.15",
+          "unit": "%",
+          "start": 150,
+          "end": 157
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "从而影响公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 116,
+      "end": 224,
+      "text": "其中24Q4收入3.35亿（+18.26%），归母净利润0.71亿（+36.15%），以隐形眼镜产品为主的视力保健业务毛利率相对较低，且该业务仍处于产能扩张期及合格率提升期，单位成本偏高，从而影响公司整体净利润增速。",
+      "quantities": [
+        {
+          "value": "+18.26",
+          "unit": "%",
+          "start": 130,
+          "end": 137
+        },
+        {
+          "value": "+36.15",
+          "unit": "%",
+          "start": 150,
+          "end": 157
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "从而影响公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 116,
+      "end": 224,
+      "text": "其中24Q4收入3.35亿（+18.26%），归母净利润0.71亿（+36.15%），以隐形眼镜产品为主的视力保健业务毛利率相对较低，且该业务仍处于产能扩张期及合格率提升期，单位成本偏高，从而影响公司整体净利润增速。",
+      "quantities": [
+        {
+          "value": "+18.26",
+          "unit": "%",
+          "start": 130,
+          "end": 137
+        },
+        {
+          "value": "+36.15",
+          "unit": "%",
+          "start": 150,
+          "end": 157
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "从而影响公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 224,
+      "end": 350,
+      "text": "2025Q1公司实现收入3.57亿（+15.07%），归母净利润0.93亿（-10.05%），多重因素导致公司25Q1业绩增长承压：2024Q1暂未受到人工晶体国采影响，角膜塑形镜出厂价格略下调导致业绩增长贡献有所减弱，隐形眼镜业务板块尚处于培育阶段。",
+      "quantities": [
+        {
+          "value": "+15.07",
+          "unit": "%",
+          "start": 242,
+          "end": 249
+        },
+        {
+          "value": "-10.05",
+          "unit": "%",
+          "start": 262,
+          "end": 269
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "多重因素导致公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 462,
+      "end": 558,
+      "text": "2）“普诺瞳”角膜塑形镜收入2.36亿（+8.03%），销量同比增长2.40%，公司积极丰富产品布局，推出了多种规格的离焦框架镜和离焦软镜等防控产品，使得近视防控产品营收实现20.79%增长。",
+      "quantities": [
+        {
+          "value": "+8.03",
+          "unit": "%",
+          "start": 482,
+          "end": 488
+        },
+        {
+          "value": "2.40",
+          "unit": "%",
+          "start": 496,
+          "end": 501
+        },
+        {
+          "value": "20.79",
+          "unit": "%",
+          "start": 549,
+          "end": 555
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 558,
+      "end": 638,
+      "text": "3）隐形眼镜收入4.26亿（+211.84%），销量同比增长241.11%，公司加大隐形眼镜产线建设和市场投入，核心子公司天眼收入1.96亿，净利润0.08亿；",
+      "quantities": [
+        {
+          "value": "+211.84",
+          "unit": "%",
+          "start": 572,
+          "end": 580
+        },
+        {
+          "value": "241.11",
+          "unit": "%",
+          "start": 588,
+          "end": 595
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "核心子公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 638,
+      "end": 658,
+      "text": "优你康收入1.48亿，净利润0.12亿；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 658,
+      "end": 678,
+      "text": "美悦瞳收入0.86亿，净利润0.02亿。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 680,
+      "end": 713,
+      "text": "毛净利率受产品结构变化影响，首款国产眼内镜龙晶于25年初获批上市。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 713,
+      "end": 766,
+      "text": "2024年毛利率为66.23%浓度（-9.78pp），主要受相对低毛利率的隐形眼镜产品收入占比提升的影响。",
+      "quantities": [
+        {
+          "value": "66.23",
+          "unit": "%",
+          "start": 722,
+          "end": 728
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 713,
+      "end": 766,
+      "text": "2024年毛利率为66.23%浓度（-9.78pp），主要受相对低毛利率的隐形眼镜产品收入占比提升的影响。",
+      "quantities": [
+        {
+          "value": "66.23",
+          "unit": "%",
+          "start": 722,
+          "end": 728
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 766,
+      "end": 909,
+      "text": "销售费用率14.12%（-5.17pp），管理费用率12.12%（+0.03pp），研发费用率7.60%（-2.24pp），财务费用率1.22%（+0.92pp），净利率为27.45%（-2.62pp），2025Q1净利率为25.14%，环比2024年四季度的24.81%已经开始提升。",
+      "quantities": [
+        {
+          "value": "14.12",
+          "unit": "%",
+          "start": 771,
+          "end": 777
+        },
+        {
+          "value": "12.12",
+          "unit": "%",
+          "start": 792,
+          "end": 798
+        },
+        {
+          "value": "7.60",
+          "unit": "%",
+          "start": 813,
+          "end": 818
+        },
+        {
+          "value": "1.22",
+          "unit": "%",
+          "start": 833,
+          "end": 838
+        },
+        {
+          "value": "27.45",
+          "unit": "%",
+          "start": 852,
+          "end": 858
+        },
+        {
+          "value": "25.14",
+          "unit": "%",
+          "start": 878,
+          "end": 884
+        },
+        {
+          "value": "24.81",
+          "unit": "%",
+          "start": 896,
+          "end": 902
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 766,
+      "end": 909,
+      "text": "销售费用率14.12%（-5.17pp），管理费用率12.12%（+0.03pp），研发费用率7.60%（-2.24pp），财务费用率1.22%（+0.92pp），净利率为27.45%（-2.62pp），2025Q1净利率为25.14%，环比2024年四季度的24.81%已经开始提升。",
+      "quantities": [
+        {
+          "value": "14.12",
+          "unit": "%",
+          "start": 771,
+          "end": 777
+        },
+        {
+          "value": "12.12",
+          "unit": "%",
+          "start": 792,
+          "end": 798
+        },
+        {
+          "value": "7.60",
+          "unit": "%",
+          "start": 813,
+          "end": 818
+        },
+        {
+          "value": "1.22",
+          "unit": "%",
+          "start": 833,
+          "end": 838
+        },
+        {
+          "value": "27.45",
+          "unit": "%",
+          "start": 852,
+          "end": 858
+        },
+        {
+          "value": "25.14",
+          "unit": "%",
+          "start": 878,
+          "end": 884
+        },
+        {
+          "value": "24.81",
+          "unit": "%",
+          "start": 896,
+          "end": 902
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1032,
+      "end": 1194,
+      "text": "考虑隐形眼镜业务盈利水平改善情况和消费眼科产品受宏观经济环境的影响，下调2025-26年盈利预测，新增2027年盈利预测，预计2027-25年归母净利润为4.69/5.78/7.17亿（2025-26年原为5.18/6.37亿），同比增长20.7%/23.4%/23.9%，当前股价对应PE为30.7/24.8/20.1X。",
+      "quantities": [
+        {
+          "value": "20.7",
+          "unit": "%",
+          "start": 1151,
+          "end": 1156
+        },
+        {
+          "value": "23.4",
+          "unit": "%",
+          "start": 1157,
+          "end": 1162
+        },
+        {
+          "value": "23.9",
+          "unit": "%",
+          "start": 1163,
+          "end": 1168
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1262,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1262,
+    "processed_ranges": [
+      [
+        0,
+        1262
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 16,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 27.224691,
+  "source_content_sha256": "fcb7fbbfff31034a02ef92db8a5479ef937f43f26bbbf53e1d9caa31c688db81"
+}

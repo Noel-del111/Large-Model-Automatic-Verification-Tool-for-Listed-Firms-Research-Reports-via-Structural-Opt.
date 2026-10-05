@@ -1,0 +1,796 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000366",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "股票代码位置为空，缺少公司证券代码。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 21,
+          "end": 27,
+          "text": "万达电影()"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "万达电影()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 21,
+          "end": 27,
+          "text": "万达电影()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "930b0174592b77b04816d560",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "SKU数量位置为空，缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 472,
+          "end": 502,
+          "text": "30家“时光里”艺术品商店落地，SKU超 个，吸引年轻客群。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "30家“时光里”艺术品商店落地，SKU超 个，吸引年轻客群。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 472,
+          "end": 502,
+          "text": "30家“时光里”艺术品商店落地，SKU超 个，吸引年轻客群。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fa202b4dcf88fc7b50690a3c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "《我的阿勒泰》（豆瓣8.9分）连续重复两次，信息冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 863,
+          "end": 949,
+          "text": "电视剧方面，2024年公司主投的《追风者》（央视收视破2.5%）、《我的阿勒泰》（豆瓣8.9分）、《我的阿勒泰》（豆瓣8.9分）获口碑与奖项双丰收，展现了精品剧集制作能力。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "电视剧方面，2024年公司主投的《追风者》（央视收视破2.5%）、《我的阿勒泰》（豆瓣8.9分）、《我的阿勒泰》（豆瓣8.9分）获口碑与奖项双丰收，展现了精品剧集制作能力。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 863,
+          "end": 949,
+          "text": "电视剧方面，2024年公司主投的《追风者》（央视收视破2.5%）、《我的阿勒泰》（豆瓣8.9分）、《我的阿勒泰》（豆瓣8.9分）获口碑与奖项双丰收，展现了精品剧集制作能力。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a38a4d55a973d4fdca2ae788",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内游戏名称缺失，无法识别具体公测游戏。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1006,
+          "end": 1066,
+          "text": "子公司互爱互动海外收入占比提升至62%，《》国内公测超预期，新增《JOJO的奇幻冒险》等IP储备，营收同比增长超50%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "子公司互爱互动海外收入占比提升至62%，《》国内公测超预期，新增《JOJO的奇幻冒险》等IP储备，营收同比增长超50%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1006,
+          "end": 1066,
+          "text": "子公司互爱互动海外收入占比提升至62%，《》国内公测超预期，新增《JOJO的奇幻冒险》等IP储备，营收同比增长超50%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bae846a29c0de00064d8542e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027三个年份却给出四个营收数值，且同比增速仅三个，数值与年份不对应。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1569,
+          "end": 1745,
+          "text": "我们预测公司2025-2027年营业收入分别为150.81/162.88/171.02/151.02亿元（25/26前值为182.44/201.71亿元），同比增速分别为22%/8%/5%，归母净利润分别为11.23/13.48/14.41亿元（25/26前值为17.46/20.92亿元），25-27年PE分别为21/18/17倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预测公司2025-2027年营业收入分别为150.81/162.88/171.02/151.02亿元（25/26前值为182.44/201.71亿元），同比增速分别为22%/8%/5%，归母净利润分别为11.23/13.48/14.41亿元（25/26前值为17.46/20.92亿元），25-27年PE分别为21/18/17倍，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1569,
+          "end": 1745,
+          "text": "我们预测公司2025-2027年营业收入分别为150.81/162.88/171.02/151.02亿元（25/26前值为182.44/201.71亿元），同比增速分别为22%/8%/5%，归母净利润分别为11.23/13.48/14.41亿元（25/26前值为17.46/20.92亿元），25-27年PE分别为21/18/17倍，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1640acd10c419d20b416c761",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "儒意星辰被称关联方而非子公司，但后文称万达电影通过其合计持股，持股主体归属矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1160,
+          "end": 1366,
+          "text": "2025年5月12日万达电影发布公告，披露全资子公司影时光将与关联方儒意星辰共同投资52TOYS（北京乐自天成文化发展股份有限公司），影时光以6,898.97万元收购乐自天成3.69%股份，儒意星辰以5,174.23万元收购2.77%股份；双方另分别增资1,329.60万元（0.31%股权）、997.20万元（0.23%股权），本次股权转让和增资完成后，万达电影通过影时光、儒意星辰合计持有乐自天成7%的股权。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月12日万达电影发布公告，披露全资子公司影时光将与关联方儒意星辰共同投资52TOYS（北京乐自天成文化发展股份有限公司），影时光以6,898.97万元收购乐自天成3.69%股份，儒意星辰以5,174.23万元收购2.77%股份；双方另分别增资1,329.60万元（0.31%股权）、997.20万元（0.23%股权），本次股权转让和增资完成后，万达电影通过影时光、儒意星辰合计持有乐自天成7%的股权。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1160,
+          "end": 1366,
+          "text": "2025年5月12日万达电影发布公告，披露全资子公司影时光将与关联方儒意星辰共同投资52TOYS（北京乐自天成文化发展股份有限公司），影时光以6,898.97万元收购乐自天成3.69%股份，儒意星辰以5,174.23万元收购2.77%股份；双方另分别增资1,329.60万元（0.31%股权）、997.20万元（0.23%股权），本次股权转让和增资完成后，万达电影通过影时光、儒意星辰合计持有乐自天成7%的股权。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7b6895f84720db68b7873b76",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1798
+        ]
+      ],
+      "estimated_input_tokens": 6191,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:58:21.015106+00:00",
+        "request_sha256": "4ed94370a4e1cd442cb8d27c071d230534edaa0d2ad4347e3d56fa566cbb7997",
+        "input_token_estimate": 17286,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27943",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b9454ef5a00f4d309a9eb9f7b246daba",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4133,
+        "output_tokens": 7951,
+        "usage_source": "provider",
+        "duration_seconds": 30.980357,
+        "cost_cny": "0.035937"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "万达电影()"
+          }
+        ],
+        "reason": "股票代码位置为空，缺少公司证券代码。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "30家“时光里”艺术品商店落地，SKU超 个，吸引年轻客群。"
+          }
+        ],
+        "reason": "SKU数量位置为空，缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "电视剧方面，2024年公司主投的《追风者》（央视收视破2.5%）、《我的阿勒泰》（豆瓣8.9分）、《我的阿勒泰》（豆瓣8.9分）获口碑与奖项双丰收，展现了精品剧集制作能力。"
+          }
+        ],
+        "reason": "《我的阿勒泰》（豆瓣8.9分）连续重复两次，信息冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "子公司互爱互动海外收入占比提升至62%，《》国内公测超预期，新增《JOJO的奇幻冒险》等IP储备，营收同比增长超50%。"
+          }
+        ],
+        "reason": "书名号内游戏名称缺失，无法识别具体公测游戏。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们预测公司2025-2027年营业收入分别为150.81/162.88/171.02/151.02亿元（25/26前值为182.44/201.71亿元），同比增速分别为22%/8%/5%，归母净利润分别为11.23/13.48/14.41亿元（25/26前值为17.46/20.92亿元），25-27年PE分别为21/18/17倍，维持“买入”评级。"
+          }
+        ],
+        "reason": "2025-2027三个年份却给出四个营收数值，且同比增速仅三个，数值与年份不对应。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025年5月12日万达电影发布公告，披露全资子公司影时光将与关联方儒意星辰共同投资52TOYS（北京乐自天成文化发展股份有限公司），影时光以6,898.97万元收购乐自天成3.69%股份，儒意星辰以5,174.23万元收购2.77%股份；双方另分别增资1,329.60万元（0.31%股权）、997.20万元（0.23%股权），本次股权转让和增资完成后，万达电影通过影时光、儒意星辰合计持有乐自天成7%的股权。"
+          }
+        ],
+        "reason": "儒意星辰被称关联方而非子公司，但后文称万达电影通过其合计持股，持股主体归属矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 70,
+      "end": 104,
+      "text": "2024年，公司实现营业收入123.62亿元，同比下降15.44%；",
+      "quantities": [
+        {
+          "value": "123.62",
+          "unit": "亿元",
+          "start": 84,
+          "end": 92
+        },
+        {
+          "value": "15.44",
+          "unit": "%",
+          "start": 97,
+          "end": 103
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 104,
+      "end": 132,
+      "text": "归母净利润-9.40亿元，扣非归母净利-10.99亿元；",
+      "quantities": [
+        {
+          "value": "-9.40",
+          "unit": "亿元",
+          "start": 109,
+          "end": 116
+        },
+        {
+          "value": "-10.99",
+          "unit": "亿元",
+          "start": 123,
+          "end": 131
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 132,
+      "end": 145,
+      "text": "基本每股收益-0.43元。",
+      "quantities": [
+        {
+          "value": "-0.43",
+          "unit": "元",
+          "start": 138,
+          "end": 144
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 145,
+      "end": 181,
+      "text": "2025年一季度，公司实现营业收入47.09亿元，同比增加23.23%；",
+      "quantities": [
+        {
+          "value": "47.09",
+          "unit": "亿元",
+          "start": 162,
+          "end": 169
+        },
+        {
+          "value": "23.23",
+          "unit": "%",
+          "start": 174,
+          "end": 180
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 181,
+      "end": 207,
+      "text": "归母净利润8.30亿元，同比大幅增长154.72%；",
+      "quantities": [
+        {
+          "value": "8.30",
+          "unit": "亿元",
+          "start": 186,
+          "end": 192
+        },
+        {
+          "value": "154.72",
+          "unit": "%",
+          "start": 199,
+          "end": 206
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 207,
+      "end": 233,
+      "text": "扣非归母净利润8.16亿元，同比增长165.72%。",
+      "quantities": [
+        {
+          "value": "8.16",
+          "unit": "亿元",
+          "start": 214,
+          "end": 220
+        },
+        {
+          "value": "165.72",
+          "unit": "%",
+          "start": 225,
+          "end": 232
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 595,
+      "end": 635,
+      "text": "2024年，公司电影制作及发行业务实现营业收入6.2亿元，同比增长85.49%；",
+      "quantities": [
+        {
+          "value": "6.2",
+          "unit": "亿元",
+          "start": 618,
+          "end": 623
+        },
+        {
+          "value": "85.49",
+          "unit": "%",
+          "start": 628,
+          "end": 634
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 635,
+      "end": 668,
+      "text": "电视剧制作及发行业务实现营业收入3.4亿元，同比减少54.01%。",
+      "quantities": [
+        {
+          "value": "3.4",
+          "unit": "亿元",
+          "start": 651,
+          "end": 656
+        },
+        {
+          "value": "54.01",
+          "unit": "%",
+          "start": 661,
+          "end": 667
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1006,
+      "end": 1066,
+      "text": "子公司互爱互动海外收入占比提升至62%，《》国内公测超预期，新增《JOJO的奇幻冒险》等IP储备，营收同比增长超50%。",
+      "quantities": [
+        {
+          "value": "62",
+          "unit": "%",
+          "start": 1022,
+          "end": 1025
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 1062,
+          "end": 1065
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "子公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1404,
+      "end": 1450,
+      "text": "52TOYS为中国IP玩具行业的领先品牌，2024年度收入约6.3亿元，净利润约0.3亿元。",
+      "quantities": [
+        {
+          "value": "6.3",
+          "unit": "亿元",
+          "start": 1434,
+          "end": 1439
+        },
+        {
+          "value": "0.3",
+          "unit": "亿元",
+          "start": 1444,
+          "end": 1449
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1519,
+      "end": 1745,
+      "text": "投资建议：考虑到25年整体电影大盘情况，以及儒意内容业务注入，叠加潮玩布局，有望实现营收利润双增长，我们预测公司2025-2027年营业收入分别为150.81/162.88/171.02/151.02亿元（25/26前值为182.44/201.71亿元），同比增速分别为22%/8%/5%，归母净利润分别为11.23/13.48/14.41亿元（25/26前值为17.46/20.92亿元），25-27年PE分别为21/18/17倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "151.02",
+          "unit": "亿元",
+          "start": 1613,
+          "end": 1621
+        },
+        {
+          "value": "201.71",
+          "unit": "亿元",
+          "start": 1637,
+          "end": 1645
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 1654,
+          "end": 1657
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 1658,
+          "end": 1660
+        },
+        {
+          "value": "5",
+          "unit": "%",
+          "start": 1661,
+          "end": 1663
+        },
+        {
+          "value": "14.41",
+          "unit": "亿元",
+          "start": 1684,
+          "end": 1691
+        },
+        {
+          "value": "20.92",
+          "unit": "亿元",
+          "start": 1706,
+          "end": 1713
+        },
+        {
+          "value": "17",
+          "unit": "倍",
+          "start": 1732,
+          "end": 1735
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预测公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1519,
+      "end": 1745,
+      "text": "投资建议：考虑到25年整体电影大盘情况，以及儒意内容业务注入，叠加潮玩布局，有望实现营收利润双增长，我们预测公司2025-2027年营业收入分别为150.81/162.88/171.02/151.02亿元（25/26前值为182.44/201.71亿元），同比增速分别为22%/8%/5%，归母净利润分别为11.23/13.48/14.41亿元（25/26前值为17.46/20.92亿元），25-27年PE分别为21/18/17倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "151.02",
+          "unit": "亿元",
+          "start": 1613,
+          "end": 1621
+        },
+        {
+          "value": "201.71",
+          "unit": "亿元",
+          "start": 1637,
+          "end": 1645
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 1654,
+          "end": 1657
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 1658,
+          "end": 1660
+        },
+        {
+          "value": "5",
+          "unit": "%",
+          "start": 1661,
+          "end": 1663
+        },
+        {
+          "value": "14.41",
+          "unit": "亿元",
+          "start": 1684,
+          "end": 1691
+        },
+        {
+          "value": "20.92",
+          "unit": "亿元",
+          "start": 1706,
+          "end": 1713
+        },
+        {
+          "value": "17",
+          "unit": "倍",
+          "start": 1732,
+          "end": 1735
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预测公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1519,
+      "end": 1745,
+      "text": "投资建议：考虑到25年整体电影大盘情况，以及儒意内容业务注入，叠加潮玩布局，有望实现营收利润双增长，我们预测公司2025-2027年营业收入分别为150.81/162.88/171.02/151.02亿元（25/26前值为182.44/201.71亿元），同比增速分别为22%/8%/5%，归母净利润分别为11.23/13.48/14.41亿元（25/26前值为17.46/20.92亿元），25-27年PE分别为21/18/17倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "151.02",
+          "unit": "亿元",
+          "start": 1613,
+          "end": 1621
+        },
+        {
+          "value": "201.71",
+          "unit": "亿元",
+          "start": 1637,
+          "end": 1645
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 1654,
+          "end": 1657
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 1658,
+          "end": 1660
+        },
+        {
+          "value": "5",
+          "unit": "%",
+          "start": 1661,
+          "end": 1663
+        },
+        {
+          "value": "14.41",
+          "unit": "亿元",
+          "start": 1684,
+          "end": 1691
+        },
+        {
+          "value": "20.92",
+          "unit": "亿元",
+          "start": 1706,
+          "end": 1713
+        },
+        {
+          "value": "17",
+          "unit": "倍",
+          "start": 1732,
+          "end": 1735
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预测公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1798,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1798,
+    "processed_ranges": [
+      [
+        0,
+        1798
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 13,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 31.005215,
+  "source_content_sha256": "5f9d0804c640d15ccb8f940551777ffabf116776d7f246b82b4007ebab80ef82"
+}

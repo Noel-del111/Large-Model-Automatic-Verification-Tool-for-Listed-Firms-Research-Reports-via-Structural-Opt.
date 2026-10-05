@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"以出口至全球的数据口径来看，热泵单2023年13月份出口额、出口量分别为3.9亿、6.3万台，同比分别-40%、-36%，年初至今出口额、出口量同比分别-4%、-16%。\"}],\"reason\":\"一年只有12个月，不存在2023年13月份，日期不成立。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2023年12/04至12/31洗地机线上销售额共亿元，同比+19.98%；销量24.99万台，同比+60.39%。\"}],\"reason\":\"洗地机线上销售额仅写“共亿元”，未给出具体金额数值。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"以出口至欧洲的数据口径来看，单11月份出口额、出口量分别为1.9亿、，同比分别-64%、-62%，年初至今出口额、出口量分别-13%、-31%。\"}],\"reason\":\"欧洲出口量位置只有“1.9亿、”，逗号后缺失出口量数值。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"上周扫地机线上销额1.21亿元，同比从+50.57%上升24.11pct至+84.68%；\"}],\"reason\":\"同比从+50.57%上升24.11pct应为+74.68%，不是+84.68%。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"销量5.13万台，同比从+57.09%上升14.64pct至+91.73%；\"}],\"reason\":\"同比从+57.09%上升14.64pct应为+71.73%，不是+91.73%。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:34:32.204578+00:00",
+    "request_sha256": "e452629210901ae557f2db3634336d3d7dfaeeebb056ae229b5476ba7df33d53",
+    "input_token_estimate": 15551,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277695",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7a71140d94a1400a81de6902b9e1a711",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3783,
+    "output_tokens": 8117,
+    "usage_source": "provider",
+    "duration_seconds": 31.374757,
+    "cost_cny": "0.036251"
+  },
+  "cache_request": {
+    "key": "4eaf6705c0840c2be37f117fef30bd2ebf36bce8c812ef1d2a2693d380cf182d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e452629210901ae557f2db3634336d3d7dfaeeebb056ae229b5476ba7df33d53"
+  }
+}

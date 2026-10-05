@@ -1,0 +1,408 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000606",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“0月”不是合法月份，无法对应真实统计期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 110,
+          "end": 155,
+          "text": "板块0月累计下跌1.02%，跑输沪深300指数3.36个百分点，在申万行业中排名第31名；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "板块0月累计下跌1.02%，跑输沪深300指数3.36个百分点，在申万行业中排名第31名；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 110,
+          "end": 155,
+          "text": "板块0月累计下跌1.02%，跑输沪深300指数3.36个百分点，在申万行业中排名第31名；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "db5a96a38c4a2ce546665fe8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同一季度收入不可能既创历史新高又同比下降47.4%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 276,
+          "end": 323,
+          "text": "小米集团：2025年第一季度集团总收入为人民币1,113亿元，创历史新高，同比下降47.4%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "小米集团：2025年第一季度集团总收入为人民币1,113亿元，创历史新高，同比下降47.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 276,
+          "end": 323,
+          "text": "小米集团：2025年第一季度集团总收入为人民币1,113亿元，创历史新高，同比下降47.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "968fb6d7243d57a76e692436",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“人民币”与“亿元”之间缺少应报告的具体收入金额。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 330,
+          "end": 357,
+          "text": "手机×AIoT分部收入为人民币亿元，同比增长22.8%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "手机×AIoT分部收入为人民币亿元，同比增长22.8%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 330,
+          "end": 357,
+          "text": "手机×AIoT分部收入为人民币亿元，同比增长22.8%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5cf142ece1d98b9d309406a2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收单位应为美元，却写成“亿次”，与后文美元预期不可比。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 886,
+          "end": 925,
+          "text": "周观点：英伟达公布FY26Q1业绩，营收441亿次，超市场预期的433亿美元；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "周观点：英伟达公布FY26Q1业绩，营收441亿次，超市场预期的433亿美元；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 886,
+          "end": 925,
+          "text": "周观点：英伟达公布FY26Q1业绩，营收441亿次，超市场预期的433亿美元；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "92ed309527318ccce994179c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "项目名称后的括号内为空，缺失应有的项目英文名或补充属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 484,
+          "end": 506,
+          "text": "OpenAI宣布了“星际之门阿联酋”（）项目"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "OpenAI宣布了“星际之门阿联酋”（）项目"
+        }
+      ],
+      "spans": [
+        {
+          "start": 484,
+          "end": 506,
+          "text": "OpenAI宣布了“星际之门阿联酋”（）项目"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9ae63b2a6ee75f55bcac39d6",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1226
+        ]
+      ],
+      "estimated_input_tokens": 5675,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:58:43.239996+00:00",
+        "request_sha256": "5fc627d809b13b5ccf207e10cd5998368e2f3d105fe68d7c28749b019c88ba83",
+        "input_token_estimate": 15834,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277978",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "78db5e6806a24206aa1615cf558b4ead",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3740,
+        "output_tokens": 6559,
+        "usage_source": "provider",
+        "duration_seconds": 25.653124,
+        "cost_cny": "0.029976"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "板块0月累计下跌1.02%，跑输沪深300指数3.36个百分点，在申万行业中排名第31名；"
+          }
+        ],
+        "reason": "“0月”不是合法月份，无法对应真实统计期间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "小米集团：2025年第一季度集团总收入为人民币1,113亿元，创历史新高，同比下降47.4%。"
+          }
+        ],
+        "reason": "同一季度收入不可能既创历史新高又同比下降47.4%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "手机×AIoT分部收入为人民币亿元，同比增长22.8%"
+          }
+        ],
+        "reason": "“人民币”与“亿元”之间缺少应报告的具体收入金额。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "周观点：英伟达公布FY26Q1业绩，营收441亿次，超市场预期的433亿美元；"
+          }
+        ],
+        "reason": "营收单位应为美元，却写成“亿次”，与后文美元预期不可比。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "OpenAI宣布了“星际之门阿联酋”（）项目"
+          }
+        ],
+        "reason": "项目名称后的括号内为空，缺失应有的项目英文名或补充属性值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 386,
+      "end": 424,
+      "text": "本季度，集团经调整净利润为人民币107亿元，创历史新高，同比增长64.5%。",
+      "quantities": [
+        {
+          "value": "107",
+          "unit": "亿元",
+          "start": 402,
+          "end": 407
+        },
+        {
+          "value": "64.5",
+          "unit": "%",
+          "start": 418,
+          "end": 423
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 886,
+      "end": 925,
+      "text": "周观点：英伟达公布FY26Q1业绩，营收441亿次，超市场预期的433亿美元；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1010,
+      "end": 1043,
+      "text": "非GAAP毛利率61%，若剔除H20影响，毛利率将达到71.3%。",
+      "quantities": [
+        {
+          "value": "61",
+          "unit": "%",
+          "start": 1018,
+          "end": 1021
+        },
+        {
+          "value": "71.3",
+          "unit": "%",
+          "start": 1037,
+          "end": 1042
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1010,
+      "end": 1043,
+      "text": "非GAAP毛利率61%，若剔除H20影响，毛利率将达到71.3%。",
+      "quantities": [
+        {
+          "value": "61",
+          "unit": "%",
+          "start": 1018,
+          "end": 1021
+        },
+        {
+          "value": "71.3",
+          "unit": "%",
+          "start": 1037,
+          "end": 1042
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1226,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1226,
+    "processed_ranges": [
+      [
+        0,
+        1226
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.677074,
+  "source_content_sha256": "9ee3f3b959089bb70c0286185068eac3fa4443ec30ae81db7e9d5ef5981275cf"
+}

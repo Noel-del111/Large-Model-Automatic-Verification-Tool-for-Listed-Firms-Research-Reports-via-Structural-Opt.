@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"20255.19-6.1期间国信社服板块涨幅居前股票为希教国际控股、宇华教育、奈雪的茶、中国东方教育、KEEP、东方甄选、国旅联合、中教控股、同程旅行。\"}], \"reason\": \"时间“20255.19-6.1”年份写成20255，日期格式不成立，应为2025年5月19日至6月1日。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。\"}], \"reason\": \"“仅新增家”缺少具体数值，未说明2025年前5月新增机构数量。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2025年以来K12教培机构扩张进入新阶段，网点快速扩张环比逐步放缓，聚焦已有网点爬坡。2025年以来K12教培机构扩张进入新阶段，网点快速扩张环比逐步放缓。\"}], \"reason\": \"同一信息“2025年以来K12教培机构扩张进入新阶段，网点快速扩张环比逐步放缓”重复出现，未增加新含义。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"目前经济环境和市场风格下建议对冲同程旅行、携程集团-S、美团-W、蜜雪集团、亚朵、中国东方教育、学大教育、北京人力、科锐国际、九华旅游等。\"}], \"reason\": \"“对冲”是风险管理术语，不能直接接一篮子股票表示推荐配置，应改为“关注”或“配置”。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:05:09.047275+00:00",
+    "request_sha256": "f0f744a5e5f08fd12566485e00d3c303ef64017bc95273514afe366536ea1bc4",
+    "input_token_estimate": 16773,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278917",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c33cff174d694898aa163ac2089c6571",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3951,
+    "output_tokens": 7014,
+    "usage_source": "provider",
+    "duration_seconds": 28.348408,
+    "cost_cny": "0.032007"
+  },
+  "cache_request": {
+    "key": "c8dc504c29e888441f8702e6b3a104bb1f3c18c787337f53d274afb571291798",
+    "purpose": "text_review.detect",
+    "messages_sha256": "f0f744a5e5f08fd12566485e00d3c303ef64017bc95273514afe366536ea1bc4"
+  }
+}

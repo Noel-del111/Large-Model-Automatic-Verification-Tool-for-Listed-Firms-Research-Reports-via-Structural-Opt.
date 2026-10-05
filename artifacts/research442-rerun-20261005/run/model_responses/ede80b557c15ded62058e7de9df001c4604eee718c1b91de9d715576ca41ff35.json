@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"依托特斯拉的纯视觉解决方案实现自动驾驶，预计制造成本低于3厘米。\"}], \"reason\": \"制造成本应以货币单位计量，原文使用长度单位“厘米”，量纲错误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"2025年5月21日，文远知行发布2025年一季度财报，Robotaxi收入万元人民币，占总收入比例大幅提升至22.3%。\"}], \"reason\": \"“Robotaxi收入万元人民币”中缺少具体金额数值，明确数值位置为空。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"2024年10月11日，特斯拉在“”发布会上发布了名为Cybercab的双门Robotaxi，Cybercab没有方向盘和踏板，预计在2026年之前大规模量产。\"}], \"reason\": \"“特斯拉在“”发布会上”引号内为空，发布会名称属性值缺失。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"预计公司25-27年的EPS分别为0.72/1.05/1.25/3.25元。\"}], \"reason\": \"25-27年为三个年度，却列出四个EPS数值，同一指标与期间不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:42:16.718834+00:00",
+    "request_sha256": "157b57125604d074d6cbd52ea3ae8a104dd3916eb543c2e4bbacfa691c5091a8",
+    "input_token_estimate": 15241,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277385",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9aa5a73c4822470dbdb339b1489635b5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3575,
+    "output_tokens": 4771,
+    "usage_source": "provider",
+    "duration_seconds": 19.905099,
+    "cost_cny": "0.022659"
+  },
+  "cache_request": {
+    "key": "ede80b557c15ded62058e7de9df001c4604eee718c1b91de9d715576ca41ff35",
+    "purpose": "text_review.detect",
+    "messages_sha256": "157b57125604d074d6cbd52ea3ae8a104dd3916eb543c2e4bbacfa691c5091a8"
+  }
+}

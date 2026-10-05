@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000650",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "申万31个行业总数仅为31个，排名不可能为第35位，命题不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 53,
+          "end": 117,
+          "text": "截至2025年5月29日，申万汽车板块近两周上涨0.86%，跑赢沪深300指数2.10个百分点，在申万31个行业中排名第35位；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2025年5月29日，申万汽车板块近两周上涨0.86%，跑赢沪深300指数2.10个百分点，在申万31个行业中排名第35位；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 53,
+          "end": 117,
+          "text": "截至2025年5月29日，申万汽车板块近两周上涨0.86%，跑赢沪深300指数2.10个百分点，在申万31个行业中排名第35位；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a44e9c79213d64d22f434a4d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "汽车行业1-4月收入规模巨大，32552元的量纲明显不合理，应为亿元或万元等。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 435,
+          "end": 470,
+          "text": "（2）乘联分会崔东树：1-4月汽车行业收入32552元，同比增长7%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "（2）乘联分会崔东树：1-4月汽车行业收入32552元，同比增长7%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 435,
+          "end": 470,
+          "text": "（2）乘联分会崔东树：1-4月汽车行业收入32552元，同比增长7%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "06d85b64617e692191e1f878",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "报告截止2025年5月29日，从3月底起不足3个月，与“已连续3个月”冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 743,
+          "end": 795,
+          "text": "自今年3月底起，比亚迪已连续3个月开展限时“一口价”或限时补贴活动，以厂家补贴、现金补贴等方式间接降价。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "自今年3月底起，比亚迪已连续3个月开展限时“一口价”或限时补贴活动，以厂家补贴、现金补贴等方式间接降价。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 743,
+          "end": 795,
+          "text": "自今年3月底起，比亚迪已连续3个月开展限时“一口价”或限时补贴活动，以厂家补贴、现金补贴等方式间接降价。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c2aaf653542090abcee0f644",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1192
+        ]
+      ],
+      "estimated_input_tokens": 5696,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:35:19.747115+00:00",
+        "request_sha256": "836c0b851442c4be33730f5945b7c27a0ddcd2e405e38e592b31dc6c292be015",
+        "input_token_estimate": 15873,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278017",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9b35b2348afe4b2d852dc61f9930340f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3766,
+        "output_tokens": 7812,
+        "usage_source": "provider",
+        "duration_seconds": 31.201173,
+        "cost_cny": "0.035014"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "截至2025年5月29日，申万汽车板块近两周上涨0.86%，跑赢沪深300指数2.10个百分点，在申万31个行业中排名第35位；"
+          }
+        ],
+        "reason": "申万31个行业总数仅为31个，排名不可能为第35位，命题不能同时成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "（2）乘联分会崔东树：1-4月汽车行业收入32552元，同比增长7%；"
+          }
+        ],
+        "reason": "汽车行业1-4月收入规模巨大，32552元的量纲明显不合理，应为亿元或万元等。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "自今年3月底起，比亚迪已连续3个月开展限时“一口价”或限时补贴活动，以厂家补贴、现金补贴等方式间接降价。"
+          }
+        ],
+        "reason": "报告截止2025年5月29日，从3月底起不足3个月，与“已连续3个月”冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1192,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1192,
+    "processed_ranges": [
+      [
+        0,
+        1192
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 31.235637,
+  "source_content_sha256": "775704d1e18e3f3441147ef3d240d12349f8b6882796709b4dd18d6d10989ff3"
+}

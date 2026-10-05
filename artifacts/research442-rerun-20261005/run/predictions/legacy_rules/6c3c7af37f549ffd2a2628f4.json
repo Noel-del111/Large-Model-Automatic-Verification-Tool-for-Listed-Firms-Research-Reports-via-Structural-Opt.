@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000354",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "1eb5b6f66ec560989fd72978",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 210,
+          "end": 322,
+          "text": "预计2027-2025年归母净利润为16.74/20.05/24.19亿元（前值16.32/19.70/23.39亿元），对应2025-2027年EPS为1.66/1.99/2.41元（前值1.62/1.96/2.33元）。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1014,
+    "total_chars": 1014,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.000894,
+  "source_content_sha256": "8de820de09bf7ab0601d92ba8f18fe36f3acc5ee699b24f9c8ba14362af7d1f3"
+}

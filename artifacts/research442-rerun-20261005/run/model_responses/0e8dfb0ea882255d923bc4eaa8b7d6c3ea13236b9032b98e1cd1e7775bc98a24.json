@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2025年5月30日至5月26日，上证综指下跌0.03%，深证成指下跌0.91%，创业板指下跌1.40%。\"}],\"reason\":\"时间区间起点5月30日晚于终点5月26日，先后关系冲突。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"申万轻工制造上涨0.14%，相较沪深300指数+1.23pct，在31个申万一级行业指数中排名35；\"}],\"reason\":\"申万一级行业共31个，排名35超出行业总数，数值矛盾。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。\"}],\"reason\":\"指数涨幅单位应为百分比或pct，误用为万平方米。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"申万纺织服饰上涨1.55万平方米，相较沪深300指数+2.64pct，在32个申万一级行业指数中排名8。\"}],\"reason\":\"前文称申万一级行业31个，此处称32个，行业总数前后不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:36:42.664844+00:00",
+    "request_sha256": "c322d10c85e87c1b5965681522447a323b16414584e7e441e0dc0b1dda1ded03",
+    "input_token_estimate": 22812,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.284956",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9c148c28d944453f9f7f8f52b7c3a312",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 5740,
+    "output_tokens": 9977,
+    "usage_source": "provider",
+    "duration_seconds": 36.397604,
+    "cost_cny": "0.045648"
+  },
+  "cache_request": {
+    "key": "0e8dfb0ea882255d923bc4eaa8b7d6c3ea13236b9032b98e1cd1e7775bc98a24",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c322d10c85e87c1b5965681522447a323b16414584e7e441e0dc0b1dda1ded03"
+  }
+}

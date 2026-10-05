@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2022-2015年，公司总营收/归母净利润CAGR分别为31.3%/42.3%，22年为公司业绩巅峰期。\"}],\"reason\":\"时间区间起点2022年晚于终点2015年，先后关系冲突。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"公司坚定围绕“1+3”的产品策略，25年推出定价2000元以上的超高端“内参大师酒15年”、次高端核心品类“”，以及锚定下沉市场的“妙品”，持续完善高中低全价位段产品体系。\"}],\"reason\":\"“次高端核心品类”后引号内为空，缺失应列示的产品名称。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"风险提示：食品安全风险，食品安全风险，市场竞争加剧，品牌价值受损，省内市场不能稳固。\"}],\"reason\":\"风险列表中“食品安全风险”连续重复出现，未提供新增信息。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"24年毛利率同比-7.0pct，主因高端系列价格溢价叠加低端湘泉占比提升。\"}],\"reason\":\"价格溢价通常提升毛利率，却与毛利率同比下降7.0pct的方向矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:21:16.655409+00:00",
+    "request_sha256": "83e649711672cdedf211259b0cdcb68149e196190fd367f821ceb61b90dbc483",
+    "input_token_estimate": 15489,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277633",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "88cac58a0a1642f08cfc438ea3b4f99d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3728,
+    "output_tokens": 7717,
+    "usage_source": "provider",
+    "duration_seconds": 30.073269,
+    "cost_cny": "0.034596"
+  },
+  "cache_request": {
+    "key": "b3c270ca63b0e4f8ec9a61e4d58d0ed67df380b185c44bc41f0aafebe446b259",
+    "purpose": "text_review.detect",
+    "messages_sha256": "83e649711672cdedf211259b0cdcb68149e196190fd367f821ceb61b90dbc483"
+  }
+}

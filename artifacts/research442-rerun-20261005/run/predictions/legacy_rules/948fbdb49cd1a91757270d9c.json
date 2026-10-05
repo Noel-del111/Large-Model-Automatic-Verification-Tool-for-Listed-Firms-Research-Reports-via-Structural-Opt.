@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000374",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "99bbc7ecd51939fabec2ada8",
+      "error_type": "数值不一致错误",
+      "spans": [
+        {
+          "start": 271,
+          "end": 324,
+          "text": "分产品来看，阀门及零件、铸件及锻件分别实现收入60.72、亿元，同比增速分别为13.69%、-8.34%。"
+        }
+      ],
+      "reason": "研报中列举对象数与数值个数不一致：对象 3 个、数值 2 个，需人工核对。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.001"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1127,
+    "total_chars": 1127,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001142,
+  "source_content_sha256": "8e53e5bcbc54c574ab0e831144ccef635ad06f93f7f8beac27a19e032906ded3"
+}

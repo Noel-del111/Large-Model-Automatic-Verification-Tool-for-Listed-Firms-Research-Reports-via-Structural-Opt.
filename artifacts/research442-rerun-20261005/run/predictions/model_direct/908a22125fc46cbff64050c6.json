@@ -1,0 +1,288 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000609",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 289,
+          "end": 332,
+          "text": "根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000立方厘米。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000立方厘米。",
+          "reason": "无人车规模化应用数量用体积单位“立方厘米”计量，单位与数量对象不符。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 289,
+          "end": 332,
+          "text": "根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000立方厘米。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "13cdc394d5b98a1fbf437c75",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 972,
+          "end": 1013,
+          "text": "订单量有望大幅增长，截至2025年Q13，九识智能、新石器等厂商在手订单均超万台。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "订单量有望大幅增长，截至2025年Q13，九识智能、新石器等厂商在手订单均超万台。",
+          "reason": "“Q13”不是合法季度表示，一年通常只有四个季度。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 972,
+          "end": 1013,
+          "text": "订单量有望大幅增长，截至2025年Q13，九识智能、新石器等厂商在手订单均超万台。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5e39548279a49d854ecb25e0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 903,
+          "end": 932,
+          "text": "4）专注L4技术泛场景应用的公司，如文远知行、小马智行等。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4）专注L4技术泛场景应用的公司，如文远知行、小马智行等。",
+          "reason": "与前面已列出的第3）条内容完全相同，属不必要重复。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 903,
+          "end": 932,
+          "text": "4）专注L4技术泛场景应用的公司，如文远知行、小马智行等。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "48b78609c480ea20a42f9964",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 705,
+          "end": 819,
+          "text": "根据36氪，公路物流年运费规模高达7万亿元，覆盖三轮车、面包车、卡车等海量车型，营运车辆多达2000万辆，假设仅考虑自动驾驶服务订阅费部分收入2000元/月，即2.4万/年，则每年仅自动驾驶服务市场空间就可达到接近7000亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据36氪，公路物流年运费规模高达7万亿元，覆盖三轮车、面包车、卡车等海量车型，营运车辆多达2000万辆，假设仅考虑自动驾驶服务订阅费部分收入2000元/月，即2.4万/年，则每年仅自动驾驶服务市场空间就可达到接近7000亿元。",
+          "reason": "按2000万辆×2.4万元/年计算为4800亿元，与“接近7000亿元”不符。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 705,
+          "end": 819,
+          "text": "根据36氪，公路物流年运费规模高达7万亿元，覆盖三轮车、面包车、卡车等海量车型，营运车辆多达2000万辆，假设仅考虑自动驾驶服务订阅费部分收入2000元/月，即2.4万/年，则每年仅自动驾驶服务市场空间就可达到接近7000亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "829d474a0c37424ad1b28811",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1222
+        ]
+      ],
+      "estimated_input_tokens": 5876,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:01:30.336482+00:00",
+        "request_sha256": "1f7d66bcadd550983ac9663ff8322eeec0f5d1e4a8318824d5d661aff5dbb5ba",
+        "input_token_estimate": 16309,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278453",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ab26b49ee7174b6b8a52163373eb284b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3793,
+        "output_tokens": 5012,
+        "usage_source": "provider",
+        "duration_seconds": 18.712112,
+        "cost_cny": "0.023841"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000立方厘米。",
+            "reason": "无人车规模化应用数量用体积单位“立方厘米”计量，单位与数量对象不符。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "订单量有望大幅增长，截至2025年Q13，九识智能、新石器等厂商在手订单均超万台。",
+            "reason": "“Q13”不是合法季度表示，一年通常只有四个季度。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "4）专注L4技术泛场景应用的公司，如文远知行、小马智行等。",
+            "reason": "与前面已列出的第3）条内容完全相同，属不必要重复。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "根据36氪，公路物流年运费规模高达7万亿元，覆盖三轮车、面包车、卡车等海量车型，营运车辆多达2000万辆，假设仅考虑自动驾驶服务订阅费部分收入2000元/月，即2.4万/年，则每年仅自动驾驶服务市场空间就可达到接近7000亿元。",
+            "reason": "按2000万辆×2.4万元/年计算为4800亿元，与“接近7000亿元”不符。"
+          }
+        ]
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1222,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1222,
+    "processed_ranges": [
+      [
+        0,
+        1222
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 18.737234,
+  "source_content_sha256": "2d685c06015a4fcb7c36859758252cbe94939037ff9b67e7204bbddba8ab9562"
+}

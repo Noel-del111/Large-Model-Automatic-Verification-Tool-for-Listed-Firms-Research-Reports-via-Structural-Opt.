@@ -1,0 +1,331 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000417",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "制造成本应以货币单位计量，原文使用长度单位“厘米”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 539,
+          "end": 571,
+          "text": "依托特斯拉的纯视觉解决方案实现自动驾驶，预计制造成本低于3厘米。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "依托特斯拉的纯视觉解决方案实现自动驾驶，预计制造成本低于3厘米。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 539,
+          "end": 571,
+          "text": "依托特斯拉的纯视觉解决方案实现自动驾驶，预计制造成本低于3厘米。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f50ccb205140a60e34872b2e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“Robotaxi收入万元人民币”中缺少具体金额数值，明确数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 571,
+          "end": 632,
+          "text": "2025年5月21日，文远知行发布2025年一季度财报，Robotaxi收入万元人民币，占总收入比例大幅提升至22.3%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月21日，文远知行发布2025年一季度财报，Robotaxi收入万元人民币，占总收入比例大幅提升至22.3%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 571,
+          "end": 632,
+          "text": "2025年5月21日，文远知行发布2025年一季度财报，Robotaxi收入万元人民币，占总收入比例大幅提升至22.3%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0170877774d1115e2a6ff799",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“特斯拉在“”发布会上”引号内为空，发布会名称属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 459,
+          "end": 539,
+          "text": "2024年10月11日，特斯拉在“”发布会上发布了名为Cybercab的双门Robotaxi，Cybercab没有方向盘和踏板，预计在2026年之前大规模量产。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年10月11日，特斯拉在“”发布会上发布了名为Cybercab的双门Robotaxi，Cybercab没有方向盘和踏板，预计在2026年之前大规模量产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 459,
+          "end": 539,
+          "text": "2024年10月11日，特斯拉在“”发布会上发布了名为Cybercab的双门Robotaxi，Cybercab没有方向盘和踏板，预计在2026年之前大规模量产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6868c7a44c26173db32eecc4",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "25-27年为三个年度，却列出四个EPS数值，同一指标与期间不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 855,
+          "end": 893,
+          "text": "预计公司25-27年的EPS分别为0.72/1.05/1.25/3.25元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司25-27年的EPS分别为0.72/1.05/1.25/3.25元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 855,
+          "end": 893,
+          "text": "预计公司25-27年的EPS分别为0.72/1.05/1.25/3.25元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "594c72ec1755b1d125f4f094",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          931
+        ]
+      ],
+      "estimated_input_tokens": 5466,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:42:16.718834+00:00",
+        "request_sha256": "157b57125604d074d6cbd52ea3ae8a104dd3916eb543c2e4bbacfa691c5091a8",
+        "input_token_estimate": 15241,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277385",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9aa5a73c4822470dbdb339b1489635b5",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3575,
+        "output_tokens": 4771,
+        "usage_source": "provider",
+        "duration_seconds": 19.905099,
+        "cost_cny": "0.022659"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "依托特斯拉的纯视觉解决方案实现自动驾驶，预计制造成本低于3厘米。"
+          }
+        ],
+        "reason": "制造成本应以货币单位计量，原文使用长度单位“厘米”，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025年5月21日，文远知行发布2025年一季度财报，Robotaxi收入万元人民币，占总收入比例大幅提升至22.3%。"
+          }
+        ],
+        "reason": "“Robotaxi收入万元人民币”中缺少具体金额数值，明确数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2024年10月11日，特斯拉在“”发布会上发布了名为Cybercab的双门Robotaxi，Cybercab没有方向盘和踏板，预计在2026年之前大规模量产。"
+          }
+        ],
+        "reason": "“特斯拉在“”发布会上”引号内为空，发布会名称属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "预计公司25-27年的EPS分别为0.72/1.05/1.25/3.25元。"
+          }
+        ],
+        "reason": "25-27年为三个年度，却列出四个EPS数值，同一指标与期间不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 87,
+      "end": 111,
+      "text": "归母净利润0.05亿元，同比增长237.89%；",
+      "quantities": [
+        {
+          "value": "0.05",
+          "unit": "亿元",
+          "start": 92,
+          "end": 98
+        },
+        {
+          "value": "237.89",
+          "unit": "%",
+          "start": 103,
+          "end": 110
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 111,
+      "end": 139,
+      "text": "扣非后的归母净利润0.05亿元，同比增长573.36%。",
+      "quantities": [
+        {
+          "value": "0.05",
+          "unit": "亿元",
+          "start": 120,
+          "end": 126
+        },
+        {
+          "value": "573.36",
+          "unit": "%",
+          "start": 131,
+          "end": 138
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 931,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 931,
+    "processed_ranges": [
+      [
+        0,
+        931
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 19.928809,
+  "source_content_sha256": "6962912a7f6fa648783369b6b834ee1d449135999427c84d5dd60a18c3c758aa"
+}

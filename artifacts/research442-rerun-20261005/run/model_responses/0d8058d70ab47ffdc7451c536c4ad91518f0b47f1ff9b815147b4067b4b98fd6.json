@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。\"\n        }\n      ],\n      \"reason\": \"时间范围起始日（3月27日）晚于结束日（3月26日），期间关系冲突。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。\"\n        }\n      ],\n      \"reason\": \"有色金属板块涨9.35%，较上证涨0.53%应领先8.82个百分点，较沪深300涨1.40%应领先7.95个百分点，与文中8.81和6.94不符。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"行情回顾：2024年3月27日至3月26日，沪深300指数上涨1.40%，上证指数上涨0.53%，有色金属板块上涨9.35%，有色金属指数领先大盘8.81个百分点，领先沪深300指数6.94个百分点，在申万31个一级子行业中排名第41位，排名靠前。\"\n        }\n      ],\n      \"reason\": \"申万一级子行业共31个，排名第41位不可能，且与“排名靠前”自相矛盾。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"2024年3月，新能源汽车销量88.3辆，环比大幅上升85.12%；动力电池装车量35GWh，比上年同期上升25.99%，环比大幅上升94.44%。\"\n        }\n      ],\n      \"reason\": \"新能源汽车销量通常以万辆计，88.3辆数量级过小，应为“万辆”。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"从宏观经济发展的大背景来看，目前全球经济增速下滑迹象明显，美元指数持续震荡，十年期美国国债实际收益率下降，黄金价格中枢抬升明显，中长期继续看好金价中枢上涨。\"\n        },\n        {\n          \"text\": \"目前全球经济增速下滑迹象明显，美联储距离降息时点越来越近，美元指数持续震荡，十年期美国国债实际收益率下降，在长期通胀预期较为平稳的情况下美债实际收益率未来向上空间有限，叠加全球主要发达国家经济体通胀处于较高水平，黄金价格中枢有望持续抬升。\"\n        }\n      ],\n      \"reason\": \"“美元指数持续震荡，十年期美国国债实际收益率下降”等宏观描述在板块情况和投资建议中重复出现。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:20:33.933121+00:00",
+    "request_sha256": "21d3d15de17183c06bec852dd371751cc5d0a86e29834bc6294af359127ccb88",
+    "input_token_estimate": 11871,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.274015",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "11d1af51de7f4faf92fead6244ceb519",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 2771,
+    "output_tokens": 7486,
+    "usage_source": "provider",
+    "duration_seconds": 28.439469,
+    "cost_cny": "0.032715"
+  },
+  "cache_request": {
+    "key": "0d8058d70ab47ffdc7451c536c4ad91518f0b47f1ff9b815147b4067b4b98fd6",
+    "purpose": "text_review.detect",
+    "messages_sha256": "21d3d15de17183c06bec852dd371751cc5d0a86e29834bc6294af359127ccb88"
+  }
+}

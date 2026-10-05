@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"工艺设备端，谐波减速器属于精密加工，主流采用滚齿或插齿工艺，设备依赖于进口。\"\n        }\n      ],\n      \"reason\": \"该句在下一段紧接着原样重复出现一次，同一信息不必要地重复。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"主流型号谐波价格1-2g/台\"\n        }\n      ],\n      \"reason\": \"价格单位写成g/台，g不是价格单位，应为万元/台等标准货币单位。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"人形机器人单机谐波用量平均10个+，在特斯拉、Figure AI等引领下，2027年全球人形销量或超万台，对应谐波需求600万台，叠加传统需求总量达880万台。\"\n        }\n      ],\n      \"reason\": \"按单机谐波用量10个、人形销量超万台计算，谐波需求约为10万个，与600万台严重不符。\"\n    },\n    {\n      \"error_type\": \"模糊语言\",\n      \"spans\": [\n        {\n          \"text\": \"规模化后，可维持25-35%。\"\n        }\n      ],\n      \"reason\": \"未说明维持的对象是毛利率、成本占比还是其他指标，百分比含义不明确。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:37:54.278674+00:00",
+    "request_sha256": "b84c53750b732da04661f7b356495c5f704dbc1b033659ec1a47e4027e1b503c",
+    "input_token_estimate": 15944,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278088",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1324d4e784c447d4ae558dc1ba59056d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3775,
+    "output_tokens": 7053,
+    "usage_source": "provider",
+    "duration_seconds": 29.838756,
+    "cost_cny": "0.031987"
+  },
+  "cache_request": {
+    "key": "89b74f732ed81d95c74ff5c5fa69154ab357a7f9d40b638f7c580baaea711e7f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b84c53750b732da04661f7b356495c5f704dbc1b033659ec1a47e4027e1b503c"
+  }
+}

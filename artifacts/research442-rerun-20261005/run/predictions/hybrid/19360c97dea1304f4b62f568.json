@@ -1,0 +1,544 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000344",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“2025年0月”中的月份为0，日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 748,
+          "end": 803,
+          "text": "2025年0月，公司与“深智城产投”合作设立合资公司“爱施德智城”，拟投资智慧终端、人工智能、低空经济等产业。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年0月，公司与“深智城产投”合作设立合资公司“爱施德智城”，拟投资智慧终端、人工智能、低空经济等产业。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 748,
+          "end": 803,
+          "text": "2025年0月，公司与“深智城产投”合作设立合资公司“爱施德智城”，拟投资智慧终端、人工智能、低空经济等产业。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c7da284259a814ce9ab4c6f4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一分句“公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道”连续重复一次，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 583,
+          "end": 665,
+          "text": "同时，公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道，公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道，已成为荣耀品牌在中国香港、泰国、越南的独家代理商。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "同时，公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道，公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道，已成为荣耀品牌在中国香港、泰国、越南的独家代理商。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 583,
+          "end": 665,
+          "text": "同时，公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道，公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道，已成为荣耀品牌在中国香港、泰国、越南的独家代理商。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4328c49f9f31dc247af6fdbe",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“深成交（）”括号内为空，应补充的证券代码等属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 863,
+          "end": 884,
+          "text": "此外，深智城集团拥有深成交（）等优质资产。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此外，深智城集团拥有深成交（）等优质资产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 863,
+          "end": 884,
+          "text": "此外，深智城集团拥有深成交（）等优质资产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "644c49c0e3a89d27115e652f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1360
+        ]
+      ],
+      "estimated_input_tokens": 5855,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:32:04.657146+00:00",
+        "request_sha256": "988030495711eb21828017962d59c2444df61ecaafcbbf229a3b3352927486d2",
+        "input_token_estimate": 16339,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278483",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e07b20db897440d29133f447a1d48b5c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3877,
+        "output_tokens": 5987,
+        "usage_source": "provider",
+        "duration_seconds": 23.784484,
+        "cost_cny": "0.027825",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年0月，公司与“深智城产投”合作设立合资公司“爱施德智城”，拟投资智慧终端、人工智能、低空经济等产业。"
+          }
+        ],
+        "reason": "“2025年0月”中的月份为0，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "同时，公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道，公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道，已成为荣耀品牌在中国香港、泰国、越南的独家代理商。"
+          }
+        ],
+        "reason": "同一分句“公司持续完善在东南亚、拉美、中东、非洲等的本地化渠道”连续重复一次，未增加新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "此外，深智城集团拥有深成交（）等优质资产。"
+          }
+        ],
+        "reason": "“深成交（）”括号内为空，应补充的证券代码等属性值缺失。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 79,
+      "end": 119,
+      "text": "2）业绩方面，公司2024年度实现营业收入658.21亿元，同比-28.58%；",
+      "quantities": [
+        {
+          "value": "658.21",
+          "unit": "亿元",
+          "start": 100,
+          "end": 108
+        },
+        {
+          "value": "-28.58",
+          "unit": "%",
+          "start": 111,
+          "end": 118
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 119,
+      "end": 141,
+      "text": "归母净利润5.81亿元，同比-11.26%。",
+      "quantities": [
+        {
+          "value": "5.81",
+          "unit": "亿元",
+          "start": 124,
+          "end": 130
+        },
+        {
+          "value": "-11.26",
+          "unit": "%",
+          "start": 133,
+          "end": 140
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 141,
+      "end": 198,
+      "text": "2025年第一季度，实现营业收入127.37亿元，同比-41.18%，归母净利润1.26亿元，同比-24.89%。",
+      "quantities": [
+        {
+          "value": "127.37",
+          "unit": "亿元",
+          "start": 157,
+          "end": 165
+        },
+        {
+          "value": "-41.18",
+          "unit": "%",
+          "start": 168,
+          "end": 175
+        },
+        {
+          "value": "1.26",
+          "unit": "亿元",
+          "start": 181,
+          "end": 187
+        },
+        {
+          "value": "-24.89",
+          "unit": "%",
+          "start": 190,
+          "end": 197
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 141,
+      "end": 198,
+      "text": "2025年第一季度，实现营业收入127.37亿元，同比-41.18%，归母净利润1.26亿元，同比-24.89%。",
+      "quantities": [
+        {
+          "value": "127.37",
+          "unit": "亿元",
+          "start": 157,
+          "end": 165
+        },
+        {
+          "value": "-41.18",
+          "unit": "%",
+          "start": 168,
+          "end": 175
+        },
+        {
+          "value": "1.26",
+          "unit": "亿元",
+          "start": 181,
+          "end": 187
+        },
+        {
+          "value": "-24.89",
+          "unit": "%",
+          "start": 190,
+          "end": 197
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 229,
+      "end": 311,
+      "text": "公司积极贯彻“极致运营”理念，持续优化业务结构，主动收缩低毛利业务占比，推动经营效率和盈利质量稳步提升，2024年实现综合毛利率4.26%，同比提升1.14pct；",
+      "quantities": [
+        {
+          "value": "4.26",
+          "unit": "%",
+          "start": 293,
+          "end": 298
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 311,
+      "end": 364,
+      "text": "其中，数字化分销毛利率4.37%，同比+1.47pct，数字化零售毛利率3.51%，同比+0.48pct。",
+      "quantities": [
+        {
+          "value": "4.37",
+          "unit": "%",
+          "start": 322,
+          "end": 327
+        },
+        {
+          "value": "3.51",
+          "unit": "%",
+          "start": 347,
+          "end": 352
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 311,
+      "end": 364,
+      "text": "其中，数字化分销毛利率4.37%，同比+1.47pct，数字化零售毛利率3.51%，同比+0.48pct。",
+      "quantities": [
+        {
+          "value": "4.37",
+          "unit": "%",
+          "start": 322,
+          "end": 327
+        },
+        {
+          "value": "3.51",
+          "unit": "%",
+          "start": 347,
+          "end": 352
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "debt_ratio",
+      "metric_text": "资产负债率",
+      "start": 364,
+      "end": 435,
+      "text": "此外，2024年公司应收账款同比降32.30%，财务费用同比降51.72%，资产负债率同比降3.15pct，进一步聚焦核心业务，激发资产活力。",
+      "quantities": [
+        {
+          "value": "32.30",
+          "unit": "%",
+          "start": 381,
+          "end": 387
+        },
+        {
+          "value": "51.72",
+          "unit": "%",
+          "start": 395,
+          "end": 401
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1088,
+      "end": 1239,
+      "text": "投资建议：鉴于外部环境变化及公司业务调整，我们调整并更新公司25-27年营收至753.6/814.6/907.3亿元（25-26年前值1078.6/1160.9亿元），归母净利润6.66/7.65/9.23亿元（25-26年前值8.21/9.74亿元），对应EPS为0.54/0.62/0.74元/股。",
+      "quantities": [
+        {
+          "value": "907.3",
+          "unit": "亿元",
+          "start": 1139,
+          "end": 1146
+        },
+        {
+          "value": "1160.9",
+          "unit": "亿元",
+          "start": 1162,
+          "end": 1170
+        },
+        {
+          "value": "9.23",
+          "unit": "亿元",
+          "start": 1187,
+          "end": 1193
+        },
+        {
+          "value": "9.74",
+          "unit": "亿元",
+          "start": 1207,
+          "end": 1213
+        },
+        {
+          "value": "0.74",
+          "unit": "元/股",
+          "start": 1231,
+          "end": 1238
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "鉴于外部环境变化及公司",
+        "我们调整并更新公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1088,
+      "end": 1239,
+      "text": "投资建议：鉴于外部环境变化及公司业务调整，我们调整并更新公司25-27年营收至753.6/814.6/907.3亿元（25-26年前值1078.6/1160.9亿元），归母净利润6.66/7.65/9.23亿元（25-26年前值8.21/9.74亿元），对应EPS为0.54/0.62/0.74元/股。",
+      "quantities": [
+        {
+          "value": "907.3",
+          "unit": "亿元",
+          "start": 1139,
+          "end": 1146
+        },
+        {
+          "value": "1160.9",
+          "unit": "亿元",
+          "start": 1162,
+          "end": 1170
+        },
+        {
+          "value": "9.23",
+          "unit": "亿元",
+          "start": 1187,
+          "end": 1193
+        },
+        {
+          "value": "9.74",
+          "unit": "亿元",
+          "start": 1207,
+          "end": 1213
+        },
+        {
+          "value": "0.74",
+          "unit": "元/股",
+          "start": 1231,
+          "end": 1238
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "鉴于外部环境变化及公司",
+        "我们调整并更新公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1360,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1360,
+    "processed_ranges": [
+      [
+        0,
+        1360
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1360,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 10,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001996,
+  "source_content_sha256": "c8372403b11d27d31f3b346ae9d3f08795ba47d66e62cc2c879cdb8bfc02d7db"
+}

@@ -1,0 +1,313 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000394",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "计算错误",
+      "reason": "353亿港元的90%应约为317.7亿港元，而非276亿港元，百分比与金额不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 192,
+          "end": 284,
+          "text": "宁德时代港股IPO募集353亿港元，主要投向匈牙利产能建设，先导有望充分受益：约90%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建设。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "宁德时代港股IPO募集353亿港元，主要投向匈牙利产能建设，先导有望充分受益：约90%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建设。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 192,
+          "end": 284,
+          "text": "宁德时代港股IPO募集353亿港元，主要投向匈牙利产能建设，先导有望充分受益：约90%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建设。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "404897906fe89e6c36e42956",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027年为三年，归母净利润列出四个数值，与后文PE仅三个数值不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 932,
+          "end": 1014,
+          "text": "我们预计公司2025-2027年归母净利润分别为10.57/17.02/22.28/21.28亿元，当前股价对应动态PE分别为31/19/15倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司2025-2027年归母净利润分别为10.57/17.02/22.28/21.28亿元，当前股价对应动态PE分别为31/19/15倍，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 932,
+          "end": 1014,
+          "text": "我们预计公司2025-2027年归母净利润分别为10.57/17.02/22.28/21.28亿元，当前股价对应动态PE分别为31/19/15倍，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e0301070515ff74c827f7f82",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“本土宁德授权（）产能”中括号内应填被授权方或主体等属性值，但为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 470,
+          "end": 524,
+          "text": "（2）北美地区：24年3月公布了ABF20GWH的订单，随着美国关税加剧，本土宁德授权（）产能有望加速落地。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "（2）北美地区：24年3月公布了ABF20GWH的订单，随着美国关税加剧，本土宁德授权（）产能有望加速落地。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 470,
+          "end": 524,
+          "text": "（2）北美地区：24年3月公布了ABF20GWH的订单，随着美国关税加剧，本土宁德授权（）产能有望加速落地。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2db4670976edf130130cca61",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "A股股票代码通常为6位数字，此处仅3位，不符合代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 20,
+          "end": 29,
+          "text": "先导智能(305)"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "先导智能(305)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 20,
+          "end": 29,
+          "text": "先导智能(305)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9006f622c29977a36c47987f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1040
+        ]
+      ],
+      "estimated_input_tokens": 5555,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:22:08.372295+00:00",
+        "request_sha256": "3a8cf8505022433714fca8fd834c7ed5785ffdd7f34dcd95ed58d768221f47d6",
+        "input_token_estimate": 15473,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277617",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "28e4995dda8342c3b37e858cc90c9d03",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3668,
+        "output_tokens": 9106,
+        "usage_source": "provider",
+        "duration_seconds": 36.623334,
+        "cost_cny": "0.040092",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "宁德时代港股IPO募集353亿港元，主要投向匈牙利产能建设，先导有望充分受益：约90%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建设。"
+          }
+        ],
+        "reason": "353亿港元的90%应约为317.7亿港元，而非276亿港元，百分比与金额不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们预计公司2025-2027年归母净利润分别为10.57/17.02/22.28/21.28亿元，当前股价对应动态PE分别为31/19/15倍，维持“买入”评级。"
+          }
+        ],
+        "reason": "2025-2027年为三年，归母净利润列出四个数值，与后文PE仅三个数值不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "（2）北美地区：24年3月公布了ABF20GWH的订单，随着美国关税加剧，本土宁德授权（）产能有望加速落地。"
+          }
+        ],
+        "reason": "“本土宁德授权（）产能”中括号内应填被授权方或主体等属性值，但为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "先导智能(305)"
+          }
+        ],
+        "reason": "A股股票代码通常为6位数字，此处仅3位，不符合代码格式。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 922,
+      "end": 1014,
+      "text": "盈利预测与投资评级：我们预计公司2025-2027年归母净利润分别为10.57/17.02/22.28/21.28亿元，当前股价对应动态PE分别为31/19/15倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "21.28",
+          "unit": "亿元",
+          "start": 974,
+          "end": 981
+        },
+        {
+          "value": "15",
+          "unit": "倍",
+          "start": 1001,
+          "end": 1004
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1040,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1040,
+    "processed_ranges": [
+      [
+        0,
+        1040
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1040,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001762,
+  "source_content_sha256": "45780a92adb5e6d693d8133215de90d136973c329945196db142d0307c6739c5"
+}

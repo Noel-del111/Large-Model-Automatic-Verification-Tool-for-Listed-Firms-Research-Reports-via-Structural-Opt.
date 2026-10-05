@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"申万通信板块近2周（5/29-5/16）累计上涨0.89%\"}, {\"text\": \"申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨\"}], \"reason\": \"同一近两周区间一处写5/29-5/16，起点晚于终点，与后文5/16-5/29顺序矛盾。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"涨幅在31个申万一级行业中位列位；\"}], \"reason\": \"“位列位”缺少具体名次，未给出排名数值。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"申万通信板块的6个三级子板块近2周（5/16-5/29）整体上涨，涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。\"}], \"reason\": \"称6个三级子板块整体上涨，但列表中SW通信工程及服务(-0.55%)和SW通信应用增值服务(-1.06%)为下跌。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"涨幅从高到低依次为：SW其他通信设备（+4.17%）＜SW通信终端及配件（+2.17%）＞SW通信网络设备及器件（+1.09%）＞SW通信线缆及配套（+0.62%）＞SW通信工程及服务（-0.55%）＞SW通信应用增值服务（-1.06%）。\"}], \"reason\": \"从高到低排列，但+4.17%与+2.17%之间用“＜”，与高到低排序矛盾。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"中国移动：公司2024年全年派息率为73元。\"}], \"reason\": \"派息率是比例指标，应使用百分比表示，此处单位写为“元”错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:10:55.139425+00:00",
+    "request_sha256": "ad2b207910dbd4e73c3019e3196ec8862db130695717983333be7e629adf3614",
+    "input_token_estimate": 15197,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277341",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "6c8e1f24ef214e5cb75922bae5dff21f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3590,
+    "output_tokens": 8187,
+    "usage_source": "provider",
+    "duration_seconds": 33.833289,
+    "cost_cny": "0.036338"
+  },
+  "cache_request": {
+    "key": "75f2e1a7168b3760d4eedcefd1116bd4ab53d6e502c5030a480568902e258f1a",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ad2b207910dbd4e73c3019e3196ec8862db130695717983333be7e629adf3614"
+  }
+}

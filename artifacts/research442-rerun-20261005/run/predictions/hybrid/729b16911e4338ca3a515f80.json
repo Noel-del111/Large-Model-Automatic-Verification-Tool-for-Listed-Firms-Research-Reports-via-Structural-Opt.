@@ -1,0 +1,592 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000465",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收金额应以元或万元计量，写成“分”量纲错误，且数值明显不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 171,
+          "end": 218,
+          "text": "2025Q1，公司实现营收5549.92分，同比增长37.85%，归母净利润-51.94万元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1，公司实现营收5549.92分，同比增长37.85%，归母净利润-51.94万元。",
+          "start": 175,
+          "end": 226
+        }
+      ],
+      "spans": [
+        {
+          "start": 171,
+          "end": 218,
+          "text": "2025Q1，公司实现营收5549.92分，同比增长37.85%，归母净利润-51.94万元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3d08da5d2540c9ba5f1258cf",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "预测年份区间写成2027-2025年，终点早于起点，时间顺序颠倒。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 277,
+          "end": 323,
+          "text": "预计2027-2025年归母净利润为0.47/0.53（原0.42/0.49）/0.64亿元"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2027-2025年归母净利润为0.47/0.53（原0.42/0.49）/0.64亿元",
+          "start": 291,
+          "end": 344
+        }
+      ],
+      "spans": [
+        {
+          "start": 277,
+          "end": 323,
+          "text": "预计2027-2025年归母净利润为0.47/0.53（原0.42/0.49）/0.64亿元"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "11b2f46982e761c9dbb5a74f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "公司为科学仪器企业，设备更新政策应支持国产科学仪器或设备，写成“国产商用汽车”与上下文业务不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 809,
+          "end": 869,
+          "text": "国家近两年持续发布了鼓励大规模设备更新等政策，政策更加具象和落地，进一步加强了对国产商用汽车的支持，对公司具有积极影响。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "国家近两年持续发布了鼓励大规模设备更新等政策，政策更加具象和落地，进一步加强了对国产商用汽车的支持，对公司具有积极影响。",
+          "start": 700,
+          "end": 771
+        }
+      ],
+      "spans": [
+        {
+          "start": 809,
+          "end": 869,
+          "text": "国家近两年持续发布了鼓励大规模设备更新等政策，政策更加具象和落地，进一步加强了对国产商用汽车的支持，对公司具有积极影响。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1fd495b64a1fcaa509a5fcce",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          968
+        ]
+      ],
+      "estimated_input_tokens": 5502,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:22:09.202876+00:00",
+        "request_sha256": "dbfb83df984e7e01ce2de60370a591895781bf141c1dc68a231a38758bcaa364",
+        "input_token_estimate": 15312,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277456",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ae0fee5458654964906e1e1372e3bf18",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3607,
+        "output_tokens": 3095,
+        "usage_source": "provider",
+        "duration_seconds": 13.47309,
+        "cost_cny": "0.015987",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2025Q1，公司实现营收5549.92分，同比增长37.85%，归母净利润-51.94万元。",
+            "start": 175,
+            "end": 226
+          }
+        ],
+        "reason": "营收金额应以元或万元计量，写成“分”量纲错误，且数值明显不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "预计2027-2025年归母净利润为0.47/0.53（原0.42/0.49）/0.64亿元",
+            "start": 291,
+            "end": 344
+          }
+        ],
+        "reason": "预测年份区间写成2027-2025年，终点早于起点，时间顺序颠倒。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "国家近两年持续发布了鼓励大规模设备更新等政策，政策更加具象和落地，进一步加强了对国产商用汽车的支持，对公司具有积极影响。",
+            "start": 700,
+            "end": 771
+          }
+        ],
+        "reason": "公司为科学仪器企业，设备更新政策应支持国产科学仪器或设备，写成“国产商用汽车”与上下文业务不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 0,
+      "end": 39,
+      "text": "北交所信息更新：下游拓展+色谱光谱系列支撑增长，2025Q1营收同比+38%\n",
+      "quantities": [
+        {
+          "value": "+38",
+          "unit": "%",
+          "start": 34,
+          "end": 38
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 54,
+      "end": 171,
+      "text": "2024年营收3.10亿元，同比-9%，归母净利润1307万元，2025Q1情况向好公司发布2024年报与2025年一季报，2024年，公司实现营收3.10亿元，同比下滑9.06%，归母净利润1307.17万元，同比下滑70.99%；",
+      "quantities": [
+        {
+          "value": "3.10",
+          "unit": "亿元",
+          "start": 61,
+          "end": 67
+        },
+        {
+          "value": "-9",
+          "unit": "%",
+          "start": 70,
+          "end": 73
+        },
+        {
+          "value": "1307",
+          "unit": "万元",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "value": "3.10",
+          "unit": "亿元",
+          "start": 128,
+          "end": 134
+        },
+        {
+          "value": "9.06",
+          "unit": "%",
+          "start": 139,
+          "end": 144
+        },
+        {
+          "value": "1307.17",
+          "unit": "万元",
+          "start": 150,
+          "end": 159
+        },
+        {
+          "value": "70.99",
+          "unit": "%",
+          "start": 164,
+          "end": 170
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "情况向好公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 54,
+      "end": 171,
+      "text": "2024年营收3.10亿元，同比-9%，归母净利润1307万元，2025Q1情况向好公司发布2024年报与2025年一季报，2024年，公司实现营收3.10亿元，同比下滑9.06%，归母净利润1307.17万元，同比下滑70.99%；",
+      "quantities": [
+        {
+          "value": "3.10",
+          "unit": "亿元",
+          "start": 61,
+          "end": 67
+        },
+        {
+          "value": "-9",
+          "unit": "%",
+          "start": 70,
+          "end": 73
+        },
+        {
+          "value": "1307",
+          "unit": "万元",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "value": "3.10",
+          "unit": "亿元",
+          "start": 128,
+          "end": 134
+        },
+        {
+          "value": "9.06",
+          "unit": "%",
+          "start": 139,
+          "end": 144
+        },
+        {
+          "value": "1307.17",
+          "unit": "万元",
+          "start": 150,
+          "end": 159
+        },
+        {
+          "value": "70.99",
+          "unit": "%",
+          "start": 164,
+          "end": 170
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "情况向好公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 54,
+      "end": 171,
+      "text": "2024年营收3.10亿元，同比-9%，归母净利润1307万元，2025Q1情况向好公司发布2024年报与2025年一季报，2024年，公司实现营收3.10亿元，同比下滑9.06%，归母净利润1307.17万元，同比下滑70.99%；",
+      "quantities": [
+        {
+          "value": "3.10",
+          "unit": "亿元",
+          "start": 61,
+          "end": 67
+        },
+        {
+          "value": "-9",
+          "unit": "%",
+          "start": 70,
+          "end": 73
+        },
+        {
+          "value": "1307",
+          "unit": "万元",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "value": "3.10",
+          "unit": "亿元",
+          "start": 128,
+          "end": 134
+        },
+        {
+          "value": "9.06",
+          "unit": "%",
+          "start": 139,
+          "end": 144
+        },
+        {
+          "value": "1307.17",
+          "unit": "万元",
+          "start": 150,
+          "end": 159
+        },
+        {
+          "value": "70.99",
+          "unit": "%",
+          "start": 164,
+          "end": 170
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "情况向好公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 54,
+      "end": 171,
+      "text": "2024年营收3.10亿元，同比-9%，归母净利润1307万元，2025Q1情况向好公司发布2024年报与2025年一季报，2024年，公司实现营收3.10亿元，同比下滑9.06%，归母净利润1307.17万元，同比下滑70.99%；",
+      "quantities": [
+        {
+          "value": "3.10",
+          "unit": "亿元",
+          "start": 61,
+          "end": 67
+        },
+        {
+          "value": "-9",
+          "unit": "%",
+          "start": 70,
+          "end": 73
+        },
+        {
+          "value": "1307",
+          "unit": "万元",
+          "start": 79,
+          "end": 85
+        },
+        {
+          "value": "3.10",
+          "unit": "亿元",
+          "start": 128,
+          "end": 134
+        },
+        {
+          "value": "9.06",
+          "unit": "%",
+          "start": 139,
+          "end": 144
+        },
+        {
+          "value": "1307.17",
+          "unit": "万元",
+          "start": 150,
+          "end": 159
+        },
+        {
+          "value": "70.99",
+          "unit": "%",
+          "start": 164,
+          "end": 170
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "情况向好公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 171,
+      "end": 218,
+      "text": "2025Q1，公司实现营收5549.92分，同比增长37.85%，归母净利润-51.94万元。",
+      "quantities": [
+        {
+          "value": "37.85",
+          "unit": "%",
+          "start": 197,
+          "end": 203
+        },
+        {
+          "value": "-51.94",
+          "unit": "万元",
+          "start": 209,
+          "end": 217
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 171,
+      "end": 218,
+      "text": "2025Q1，公司实现营收5549.92分，同比增长37.85%，归母净利润-51.94万元。",
+      "quantities": [
+        {
+          "value": "37.85",
+          "unit": "%",
+          "start": 197,
+          "end": 203
+        },
+        {
+          "value": "-51.94",
+          "unit": "万元",
+          "start": 209,
+          "end": 217
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 218,
+      "end": 382,
+      "text": "看好公司多项科学仪器新产品达行业领先水平，国产替代工作积极进行，我们上调2025-2026年并新增2027年盈利预测，预计2027-2025年归母净利润为0.47/0.53（原0.42/0.49）/0.64亿元，对应EPS为0.55/0.62/0.75元/股，对应当前股价PE为31.2/27.8/23.0倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "0.64",
+          "unit": "亿元",
+          "start": 317,
+          "end": 323
+        },
+        {
+          "value": "0.75",
+          "unit": "元/股",
+          "start": 340,
+          "end": 347
+        },
+        {
+          "value": "23.0",
+          "unit": "倍",
+          "start": 367,
+          "end": 372
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "看好公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 968,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 968,
+    "processed_ranges": [
+      [
+        0,
+        968
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 968,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002157,
+  "source_content_sha256": "44954aca819e24dbdbdc321b7dd237d1aaea7aaf403f62107bf2df40d3b01d8b"
+}

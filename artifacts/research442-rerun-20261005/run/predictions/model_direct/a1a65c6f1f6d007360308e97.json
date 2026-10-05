@@ -1,0 +1,587 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000209",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份为5月时日期不可能为33日，该日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 108,
+          "end": 136,
+          "text": "5月33日，Solaredge公布2024年一季度业绩。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月33日，Solaredge公布2024年一季度业绩。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 108,
+          "end": 136,
+          "text": "5月33日，Solaredge公布2024年一季度业绩。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5dd8ac34828ced29cb68f5d0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "24Q1的GAAP毛利率数值未写出，百分比前为空，无法判断具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 296,
+          "end": 335,
+          "text": "公司GAAP毛利率连续两个季度为负，23Q4/24Q1分别为-17.9%和%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司GAAP毛利率连续两个季度为负，23Q4/24Q1分别为-17.9%和%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 296,
+          "end": 335,
+          "text": "公司GAAP毛利率连续两个季度为负，23Q4/24Q1分别为-17.9%和%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "df6b63c77c8079b63b7513a3",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "同一电池平均售价指标前后分别用人民币元和美元计价，单位不一致且未说明换算。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 924,
+          "end": 961,
+          "text": "公司24Q1电池平均售价0.38元/Wh（23Q4为0.40美元/Wh）；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司24Q1电池平均售价0.38元/Wh（23Q4为0.40美元/Wh）；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 924,
+          "end": 961,
+          "text": "公司24Q1电池平均售价0.38元/Wh（23Q4为0.40美元/Wh）；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6f78fd1bc2eaf54ce29bcf6b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "非太阳能业务毛利率从-2.2%升至47.2%，却称大幅减少、降幅较大，数值变化方向与文字描述相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 369,
+          "end": 420,
+          "text": "其中太阳能业务由正转负（4.0%→-3.5%），非太阳能业务毛利率大幅减少（-2.2%→47.2%）。"
+        },
+        {
+          "kind": "source_text",
+          "start": 420,
+          "end": 493,
+          "text": "公司非太阳能业务毛利率降幅较大，主要原因是电池产品结构发生变化，单相电池占比增加，单相电池产品使用的电芯为前期价格较高的库存，导致毛利率降幅较大。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中太阳能业务由正转负（4.0%→-3.5%），非太阳能业务毛利率大幅减少（-2.2%→47.2%）。"
+        },
+        {
+          "text": "公司非太阳能业务毛利率降幅较大，主要原因是电池产品结构发生变化，单相电池占比增加，单相电池产品使用的电芯为前期价格较高的库存，导致毛利率降幅较大。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 369,
+          "end": 420,
+          "text": "其中太阳能业务由正转负（4.0%→-3.5%），非太阳能业务毛利率大幅减少（-2.2%→47.2%）。"
+        },
+        {
+          "start": 420,
+          "end": 493,
+          "text": "公司非太阳能业务毛利率降幅较大，主要原因是电池产品结构发生变化，单相电池占比增加，单相电池产品使用的电芯为前期价格较高的库存，导致毛利率降幅较大。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "193af7891c6ab20ca089940a",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1990
+        ]
+      ],
+      "estimated_input_tokens": 6513,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:08:19.018728+00:00",
+        "request_sha256": "e4b8ccd5d24105c1dcb889d31ff111e19372e1efe900a09d8d66b8193b637981",
+        "input_token_estimate": 18113,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280257",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9572117618674be9b0501832eda9a70a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4225,
+        "output_tokens": 5847,
+        "usage_source": "provider",
+        "duration_seconds": 22.047876,
+        "cost_cny": "0.027613"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "5月33日，Solaredge公布2024年一季度业绩。"
+          }
+        ],
+        "reason": "月份为5月时日期不可能为33日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "公司GAAP毛利率连续两个季度为负，23Q4/24Q1分别为-17.9%和%；"
+          }
+        ],
+        "reason": "24Q1的GAAP毛利率数值未写出，百分比前为空，无法判断具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司24Q1电池平均售价0.38元/Wh（23Q4为0.40美元/Wh）；"
+          }
+        ],
+        "reason": "同一电池平均售价指标前后分别用人民币元和美元计价，单位不一致且未说明换算。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "其中太阳能业务由正转负（4.0%→-3.5%），非太阳能业务毛利率大幅减少（-2.2%→47.2%）。"
+          },
+          {
+            "text": "公司非太阳能业务毛利率降幅较大，主要原因是电池产品结构发生变化，单相电池占比增加，单相电池产品使用的电芯为前期价格较高的库存，导致毛利率降幅较大。"
+          }
+        ],
+        "reason": "非太阳能业务毛利率从-2.2%升至47.2%，却称大幅减少、降幅较大，数值变化方向与文字描述相反。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 166,
+      "end": 204,
+      "text": "公司第一季度实现营收2.04亿美元，同/环比分别减少78.4%/35.3%；",
+      "quantities": [
+        {
+          "value": "78.4",
+          "unit": "%",
+          "start": 192,
+          "end": 197
+        },
+        {
+          "value": "35.3",
+          "unit": "%",
+          "start": 198,
+          "end": 203
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 296,
+      "end": 335,
+      "text": "公司GAAP毛利率连续两个季度为负，23Q4/24Q1分别为-17.9%和%；",
+      "quantities": [
+        {
+          "value": "-17.9",
+          "unit": "%",
+          "start": 326,
+          "end": 332
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 335,
+      "end": 420,
+      "text": "非GAAP毛利率下降程度较大，环比由正转负（3.3%→-6.5%），其中太阳能业务由正转负（4.0%→-3.5%），非太阳能业务毛利率大幅减少（-2.2%→47.2%）。",
+      "quantities": [
+        {
+          "value": "3.3",
+          "unit": "%",
+          "start": 357,
+          "end": 361
+        },
+        {
+          "value": "-6.5",
+          "unit": "%",
+          "start": 362,
+          "end": 367
+        },
+        {
+          "value": "4.0",
+          "unit": "%",
+          "start": 381,
+          "end": 385
+        },
+        {
+          "value": "-3.5",
+          "unit": "%",
+          "start": 386,
+          "end": 391
+        },
+        {
+          "value": "-2.2",
+          "unit": "%",
+          "start": 407,
+          "end": 412
+        },
+        {
+          "value": "47.2",
+          "unit": "%",
+          "start": 413,
+          "end": 418
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 335,
+      "end": 420,
+      "text": "非GAAP毛利率下降程度较大，环比由正转负（3.3%→-6.5%），其中太阳能业务由正转负（4.0%→-3.5%），非太阳能业务毛利率大幅减少（-2.2%→47.2%）。",
+      "quantities": [
+        {
+          "value": "3.3",
+          "unit": "%",
+          "start": 357,
+          "end": 361
+        },
+        {
+          "value": "-6.5",
+          "unit": "%",
+          "start": 362,
+          "end": 367
+        },
+        {
+          "value": "4.0",
+          "unit": "%",
+          "start": 381,
+          "end": 385
+        },
+        {
+          "value": "-3.5",
+          "unit": "%",
+          "start": 386,
+          "end": 391
+        },
+        {
+          "value": "-2.2",
+          "unit": "%",
+          "start": 407,
+          "end": 412
+        },
+        {
+          "value": "47.2",
+          "unit": "%",
+          "start": 413,
+          "end": 418
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1097,
+      "end": 1161,
+      "text": "公司预计第二季度收入2.50-2.80亿美元，环比增长23%-37%（纯季节因素下，公司Q2营收水平通常比Q1高15-20%）；",
+      "quantities": [
+        {
+          "value": "23",
+          "unit": "%",
+          "start": 1124,
+          "end": 1127
+        },
+        {
+          "value": "-37",
+          "unit": "%",
+          "start": 1127,
+          "end": 1131
+        },
+        {
+          "value": "-20",
+          "unit": "%",
+          "start": 1155,
+          "end": 1159
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1161,
+      "end": 1179,
+      "text": "非GAAP毛利率在-4%到0%之间。",
+      "quantities": [
+        {
+          "value": "-4",
+          "unit": "%",
+          "start": 1170,
+          "end": 1173
+        },
+        {
+          "value": "0",
+          "unit": "%",
+          "start": 1174,
+          "end": 1176
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1179,
+      "end": 1215,
+      "text": "预计太阳能业务收入2.25-2.55亿美元，毛利率在-3%到+1%之间。",
+      "quantities": [
+        {
+          "value": "-3",
+          "unit": "%",
+          "start": 1205,
+          "end": 1208
+        },
+        {
+          "value": "+1",
+          "unit": "%",
+          "start": 1209,
+          "end": 1212
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1215,
+      "end": 1275,
+      "text": "公司毛利率从2023年第三季度开始逐季下滑严重，主要由于前期业务扩张产生大量固定成本，收入规模的下降导致毛利率持续下降。",
+      "quantities": [],
+      "periods": [
+        "2023年第三季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1215,
+      "end": 1275,
+      "text": "公司毛利率从2023年第三季度开始逐季下滑严重，主要由于前期业务扩张产生大量固定成本，收入规模的下降导致毛利率持续下降。",
+      "quantities": [],
+      "periods": [
+        "2023年第三季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1315,
+      "end": 1369,
+      "text": "公司预计随着后续产品销量增加和库存消耗，毛利率有望逐步恢复，长期毛利率目标在25-27%（不含IRA补贴）。",
+      "quantities": [
+        {
+          "value": "-27",
+          "unit": "%",
+          "start": 1355,
+          "end": 1359
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1315,
+      "end": 1369,
+      "text": "公司预计随着后续产品销量增加和库存消耗，毛利率有望逐步恢复，长期毛利率目标在25-27%（不含IRA补贴）。",
+      "quantities": [
+        {
+          "value": "-27",
+          "unit": "%",
+          "start": 1355,
+          "end": 1359
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1626,
+      "end": 1707,
+      "text": "另一方面，国内企业成本控制能力较海外竞争者更优，一季度国内多家户用逆变器/户储企业毛利率在35%以上，成本优势下，国内企业对个别市场的降价风险也具备一定抵御能力。",
+      "quantities": [
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1671,
+          "end": 1674
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1990,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1990,
+    "processed_ranges": [
+      [
+        0,
+        1990
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 22.072181,
+  "source_content_sha256": "d3d4a2e4116562d10b6e04f31fd1b6fa4a50ecff28de6b57b1cba6fa38feb4c0"
+}

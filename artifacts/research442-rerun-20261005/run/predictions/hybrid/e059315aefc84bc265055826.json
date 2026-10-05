@@ -1,0 +1,856 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000399",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码通常为六位数字，此处仅写“688”，不符合证券代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 20,
+          "end": 29,
+          "text": "骄成超声(688)"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "骄成超声(688)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 20,
+          "end": 29,
+          "text": "骄成超声(688)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "76ceb5540a3c7b56b9fce549",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "主营收入单位写成“毫克”，质量单位不能用于收入金额，应为元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 164,
+          "end": 266,
+          "text": "24年Q4：主营收入1.76亿毫克，环比+7%；归母净利0.65亿元，环比+330%；扣非归母净利0.53亿元，环比+589%；毛利率69.7%，环比+16pct；净利率36.8%，环比+27.7pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年Q4：主营收入1.76亿毫克，环比+7%；归母净利0.65亿元，环比+330%；扣非归母净利0.53亿元，环比+589%；毛利率69.7%，环比+16pct；净利率36.8%，环比+27.7pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 164,
+          "end": 266,
+          "text": "24年Q4：主营收入1.76亿毫克，环比+7%；归母净利0.65亿元，环比+330%；扣非归母净利0.53亿元，环比+589%；毛利率69.7%，环比+16pct；净利率36.8%，环比+27.7pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "88cc8c17a6628499d105efc2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "收入数值后连续两个逗号，缺少本应填写的同比等数值字段。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 735,
+          "end": 786,
+          "text": "其他：新能源电池超声波收入1.51亿元，，毛利率48.43%，同比-8.34pct，下游锂电扩产放缓；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其他：新能源电池超声波收入1.51亿元，，毛利率48.43%，同比-8.34pct，下游锂电扩产放缓；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 735,
+          "end": 786,
+          "text": "其他：新能源电池超声波收入1.51亿元，，毛利率48.43%，同比-8.34pct，下游锂电扩产放缓；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aaa541b0d195cbbf142e43ae",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称配件毛利率75.93%、同比+13.61pct，后文却称毛利率进一步降低，同一指标升降矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 436,
+          "end": 545,
+          "text": "1）配件业务实现收入1.84亿元，同比增长70.45%，毛利率75.93%，同比+13.61pct；主要系市场上存量的公司设备增多+新能源客户稼动率回升。针对焊头、底模、裁刀等进行工艺改进和成本管控，毛利率进一步降低。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1）配件业务实现收入1.84亿元，同比增长70.45%，毛利率75.93%，同比+13.61pct；主要系市场上存量的公司设备增多+新能源客户稼动率回升。针对焊头、底模、裁刀等进行工艺改进和成本管控，毛利率进一步降低。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 436,
+          "end": 545,
+          "text": "1）配件业务实现收入1.84亿元，同比增长70.45%，毛利率75.93%，同比+13.61pct；主要系市场上存量的公司设备增多+新能源客户稼动率回升。针对焊头、底模、裁刀等进行工艺改进和成本管控，毛利率进一步降低。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2c5b7bf71172c1519987da8d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“配件受益于耗材属性逐步进入迭代周期”在相邻列表项中重复出现，没有新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 889,
+          "end": 985,
+          "text": "线束+配件贡献业绩成长，半导体贡献增量。1）配件受益于耗材属性逐步进入迭代周期；\n2）配件受益于耗材属性逐步进入迭代周期；2）半导体端公司布局半导体晶圆、2.5D/3D封装、面板级封装等产品。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "线束+配件贡献业绩成长，半导体贡献增量。1）配件受益于耗材属性逐步进入迭代周期；\n2）配件受益于耗材属性逐步进入迭代周期；2）半导体端公司布局半导体晶圆、2.5D/3D封装、面板级封装等产品。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 889,
+          "end": 985,
+          "text": "线束+配件贡献业绩成长，半导体贡献增量。1）配件受益于耗材属性逐步进入迭代周期；\n2）配件受益于耗材属性逐步进入迭代周期；2）半导体端公司布局半导体晶圆、2.5D/3D封装、面板级封装等产品。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c0952be8ce0781c659a95095",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "称配件领域缩量导致利润下滑，却上调盈利预测，且与前文配件收入增长矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1011,
+          "end": 1111,
+          "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1011,
+          "end": 1111,
+          "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c11bf9cf43fb5cbc26b5671d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "预测期间“25-133年”不成立，年份区间异常，无法对应正常盈利预测年限。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1011,
+          "end": 1111,
+          "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1011,
+          "end": 1111,
+          "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b415ecdd3d5e2834bb126021",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "24年全年扣非归母净利0.4亿元，但Q4单季扣非归母净利0.53亿元，单季超过全年总额，数值冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 37,
+          "end": 142,
+          "text": "24年：主营收入5.85亿元，同比+11.3%；归母净利0.86亿元，同比+29%；扣非归母净利0.4亿元，同比+11.9%；毛利率56.89%，同比-0.09pct；净利率14.52%，同比+2.24pct。"
+        },
+        {
+          "kind": "source_text",
+          "start": 164,
+          "end": 266,
+          "text": "24年Q4：主营收入1.76亿毫克，环比+7%；归母净利0.65亿元，环比+330%；扣非归母净利0.53亿元，环比+589%；毛利率69.7%，环比+16pct；净利率36.8%，环比+27.7pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年：主营收入5.85亿元，同比+11.3%；归母净利0.86亿元，同比+29%；扣非归母净利0.4亿元，同比+11.9%；毛利率56.89%，同比-0.09pct；净利率14.52%，同比+2.24pct。"
+        },
+        {
+          "text": "24年Q4：主营收入1.76亿毫克，环比+7%；归母净利0.65亿元，环比+330%；扣非归母净利0.53亿元，环比+589%；毛利率69.7%，环比+16pct；净利率36.8%，环比+27.7pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 37,
+          "end": 142,
+          "text": "24年：主营收入5.85亿元，同比+11.3%；归母净利0.86亿元，同比+29%；扣非归母净利0.4亿元，同比+11.9%；毛利率56.89%，同比-0.09pct；净利率14.52%，同比+2.24pct。"
+        },
+        {
+          "start": 164,
+          "end": 266,
+          "text": "24年Q4：主营收入1.76亿毫克，环比+7%；归母净利0.65亿元，环比+330%；扣非归母净利0.53亿元，环比+589%；毛利率69.7%，环比+16pct；净利率36.8%，环比+27.7pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "924618b2f4df08f60b902474",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1183
+        ]
+      ],
+      "estimated_input_tokens": 5580,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:26:48.333042+00:00",
+        "request_sha256": "764e559544dc07c07539f3e9f4efa871eafdddf8aaa3f76b3698c919952f6651",
+        "input_token_estimate": 15586,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27773",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "dab93560eb334856a6791fc7a0bcf7ab",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3815,
+        "output_tokens": 9894,
+        "usage_source": "provider",
+        "duration_seconds": 37.238253,
+        "cost_cny": "0.043391",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "骄成超声(688)"
+          }
+        ],
+        "reason": "股票代码通常为六位数字，此处仅写“688”，不符合证券代码格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "24年Q4：主营收入1.76亿毫克，环比+7%；归母净利0.65亿元，环比+330%；扣非归母净利0.53亿元，环比+589%；毛利率69.7%，环比+16pct；净利率36.8%，环比+27.7pct。"
+          }
+        ],
+        "reason": "主营收入单位写成“毫克”，质量单位不能用于收入金额，应为元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "其他：新能源电池超声波收入1.51亿元，，毛利率48.43%，同比-8.34pct，下游锂电扩产放缓；"
+          }
+        ],
+        "reason": "收入数值后连续两个逗号，缺少本应填写的同比等数值字段。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "1）配件业务实现收入1.84亿元，同比增长70.45%，毛利率75.93%，同比+13.61pct；主要系市场上存量的公司设备增多+新能源客户稼动率回升。针对焊头、底模、裁刀等进行工艺改进和成本管控，毛利率进一步降低。"
+          }
+        ],
+        "reason": "前文称配件毛利率75.93%、同比+13.61pct，后文却称毛利率进一步降低，同一指标升降矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "线束+配件贡献业绩成长，半导体贡献增量。1）配件受益于耗材属性逐步进入迭代周期；\n2）配件受益于耗材属性逐步进入迭代周期；2）半导体端公司布局半导体晶圆、2.5D/3D封装、面板级封装等产品。"
+          }
+        ],
+        "reason": "“配件受益于耗材属性逐步进入迭代周期”在相邻列表项中重复出现，没有新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。"
+          }
+        ],
+        "reason": "称配件领域缩量导致利润下滑，却上调盈利预测，且与前文配件收入增长矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。"
+          }
+        ],
+        "reason": "预测期间“25-133年”不成立，年份区间异常，无法对应正常盈利预测年限。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "24年：主营收入5.85亿元，同比+11.3%；归母净利0.86亿元，同比+29%；扣非归母净利0.4亿元，同比+11.9%；毛利率56.89%，同比-0.09pct；净利率14.52%，同比+2.24pct。"
+          },
+          {
+            "text": "24年Q4：主营收入1.76亿毫克，环比+7%；归母净利0.65亿元，环比+330%；扣非归母净利0.53亿元，环比+589%；毛利率69.7%，环比+16pct；净利率36.8%，环比+27.7pct。"
+          }
+        ],
+        "reason": "24年全年扣非归母净利0.4亿元，但Q4单季扣非归母净利0.53亿元，单季超过全年总额，数值冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 37,
+      "end": 61,
+      "text": "24年：主营收入5.85亿元，同比+11.3%；",
+      "quantities": [
+        {
+          "value": "5.85",
+          "unit": "亿元",
+          "start": 45,
+          "end": 51
+        },
+        {
+          "value": "+11.3",
+          "unit": "%",
+          "start": 54,
+          "end": 60
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 100,
+      "end": 121,
+      "text": "毛利率56.89%，同比-0.09pct；",
+      "quantities": [
+        {
+          "value": "56.89",
+          "unit": "%",
+          "start": 103,
+          "end": 109
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 121,
+      "end": 142,
+      "text": "净利率14.52%，同比+2.24pct。",
+      "quantities": [
+        {
+          "value": "14.52",
+          "unit": "%",
+          "start": 124,
+          "end": 130
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 164,
+      "end": 188,
+      "text": "24年Q4：主营收入1.76亿毫克，环比+7%；",
+      "quantities": [
+        {
+          "value": "+7",
+          "unit": "%",
+          "start": 184,
+          "end": 187
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 228,
+      "end": 246,
+      "text": "毛利率69.7%，环比+16pct；",
+      "quantities": [
+        {
+          "value": "69.7",
+          "unit": "%",
+          "start": 231,
+          "end": 236
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 246,
+      "end": 266,
+      "text": "净利率36.8%，环比+27.7pct。",
+      "quantities": [
+        {
+          "value": "36.8",
+          "unit": "%",
+          "start": 249,
+          "end": 254
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 312,
+      "end": 358,
+      "text": "归母净利润0.24亿元，同比大增（24年Q1仅0.01亿），扣非净利润0.2亿元，同比扭亏；",
+      "quantities": [
+        {
+          "value": "0.24",
+          "unit": "亿元",
+          "start": 317,
+          "end": 323
+        },
+        {
+          "value": "0.2",
+          "unit": "亿元",
+          "start": 347,
+          "end": 352
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 312,
+      "end": 358,
+      "text": "归母净利润0.24亿元，同比大增（24年Q1仅0.01亿），扣非净利润0.2亿元，同比扭亏；",
+      "quantities": [
+        {
+          "value": "0.24",
+          "unit": "亿元",
+          "start": 317,
+          "end": 323
+        },
+        {
+          "value": "0.2",
+          "unit": "亿元",
+          "start": 347,
+          "end": 352
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 358,
+      "end": 387,
+      "text": "毛利率64.9%，同比+9.3pct，环比-4.7pct；",
+      "quantities": [
+        {
+          "value": "64.9",
+          "unit": "%",
+          "start": 361,
+          "end": 366
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 387,
+      "end": 414,
+      "text": "净利率15.8%，同比+15pct，环比-21pct。",
+      "quantities": [
+        {
+          "value": "15.8",
+          "unit": "%",
+          "start": 390,
+          "end": 395
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 436,
+      "end": 486,
+      "text": "1）配件业务实现收入1.84亿元，同比增长70.45%，毛利率75.93%，同比+13.61pct；",
+      "quantities": [
+        {
+          "value": "1.84",
+          "unit": "亿元",
+          "start": 446,
+          "end": 452
+        },
+        {
+          "value": "70.45",
+          "unit": "%",
+          "start": 457,
+          "end": 463
+        },
+        {
+          "value": "75.93",
+          "unit": "%",
+          "start": 467,
+          "end": 473
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 547,
+      "end": 654,
+      "text": "2）线束连接器超声波设备业务实现收入0.81亿元，同比+352.37%，毛利率59.71%，同比+11.41pct，公司快速抢占新能源汽车高低压线束、充电桩等市场，与安费诺、中航光电、沪光等国内外知名客户良好合作。",
+      "quantities": [
+        {
+          "value": "0.81",
+          "unit": "亿元",
+          "start": 565,
+          "end": 571
+        },
+        {
+          "value": "+352.37",
+          "unit": "%",
+          "start": 574,
+          "end": 582
+        },
+        {
+          "value": "59.71",
+          "unit": "%",
+          "start": 586,
+          "end": 592
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 656,
+      "end": 709,
+      "text": "3）半导体超声波设备实现收入0.47亿元，同比+195.66%，毛利率56.65%，同比-2.08pct。",
+      "quantities": [
+        {
+          "value": "0.47",
+          "unit": "亿元",
+          "start": 670,
+          "end": 676
+        },
+        {
+          "value": "+195.66",
+          "unit": "%",
+          "start": 679,
+          "end": 687
+        },
+        {
+          "value": "56.65",
+          "unit": "%",
+          "start": 691,
+          "end": 697
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 735,
+      "end": 786,
+      "text": "其他：新能源电池超声波收入1.51亿元，，毛利率48.43%，同比-8.34pct，下游锂电扩产放缓；",
+      "quantities": [
+        {
+          "value": "1.51",
+          "unit": "亿元",
+          "start": 748,
+          "end": 754
+        },
+        {
+          "value": "48.43",
+          "unit": "%",
+          "start": 759,
+          "end": 765
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 786,
+      "end": 835,
+      "text": "非金属超声波设备收入0.12亿元，同比+11.61%，毛利率44.66%，同比-11.87pct。",
+      "quantities": [
+        {
+          "value": "0.12",
+          "unit": "亿元",
+          "start": 796,
+          "end": 802
+        },
+        {
+          "value": "+11.61",
+          "unit": "%",
+          "start": 805,
+          "end": 812
+        },
+        {
+          "value": "44.66",
+          "unit": "%",
+          "start": 816,
+          "end": 822
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 835,
+      "end": 881,
+      "text": "服务及其他收入1.08亿元，同比+128.80%，毛利率35.73%，同比+2.51pct。",
+      "quantities": [
+        {
+          "value": "1.08",
+          "unit": "亿元",
+          "start": 842,
+          "end": 848
+        },
+        {
+          "value": "+128.80",
+          "unit": "%",
+          "start": 851,
+          "end": 859
+        },
+        {
+          "value": "35.73",
+          "unit": "%",
+          "start": 863,
+          "end": 869
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1011,
+      "end": 1111,
+      "text": "由于公司在设备配件领域显著缩量导致利润下滑，我们上调此前盈利预测，预计公司25-133年归母净利润1.5（前值0.9）/2.2（前值1.3）/3.8亿元，当前市值对应PE分别为40X、26X、15X。",
+      "quantities": [
+        {
+          "value": "3.8",
+          "unit": "亿元",
+          "start": 1082,
+          "end": 1087
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "由于公司",
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1183,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1183,
+    "processed_ranges": [
+      [
+        0,
+        1183
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1183,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 17,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002291,
+  "source_content_sha256": "3e4d3f524516be24c5977bcb4faa09f635e581dff51de9d0527c5772f2aff945"
+}

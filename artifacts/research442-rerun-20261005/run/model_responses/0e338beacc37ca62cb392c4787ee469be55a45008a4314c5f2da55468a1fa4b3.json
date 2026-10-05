@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。三花和拓普的发展轨迹很好地展示了中国高端制造业的发展进程。\"}],\"reason\":\"同一发展轨迹结论连续重复，未增加新信息。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。\"}],\"reason\":\"190年代不是合法年代，应为1990年代或20世纪90年代。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"两家公司成立于190年代，通过持续的研发投入和并购拓展，从国内制造商成长为全球市场领导者，并由低附加值产品供应商恶化为负增值低端代工模式。\"}],\"reason\":\"前称成长为全球市场领导者，后称恶化为负增值低端代工模式，同一发展轨迹不能同时成立。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"中国制造业通过自主研发和众筹促进技术突破，推动整条供应链的国产替代趋势，从低级供应商逐步提升至一级供应商，再到整车厂；\"}],\"reason\":\"众筹是融资方式，不是技术突破方式；低级供应商非规范供应链层级术语。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"特斯拉在2024年10月的“”活动中展示了新一代人型机器人Optimus\"}],\"reason\":\"活动名称的引号内为空，关键属性值缺失。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2025年9月至2024年3月间，发生了几件对高端制造领域产生震撼影响的事件：\"}],\"reason\":\"起止时间倒置，2025年9月晚于2024年3月，期间不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:42:48.488408+00:00",
+    "request_sha256": "35279f78860e49073bb1f4e145d0f2478d3b74ac869ed48351686d6f0746149d",
+    "input_token_estimate": 18458,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280602",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2f2ce7f2fb644744975f02b1257cbbe9",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4105,
+    "output_tokens": 8118,
+    "usage_source": "provider",
+    "duration_seconds": 32.719135,
+    "cost_cny": "0.036577"
+  },
+  "cache_request": {
+    "key": "0e338beacc37ca62cb392c4787ee469be55a45008a4314c5f2da55468a1fa4b3",
+    "purpose": "text_review.detect",
+    "messages_sha256": "35279f78860e49073bb1f4e145d0f2478d3b74ac869ed48351686d6f0746149d"
+  }
+}

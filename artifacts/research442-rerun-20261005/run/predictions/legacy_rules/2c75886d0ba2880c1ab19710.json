@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000345",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "a3fe17a0988885de40d86286",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 271,
+          "end": 432,
+          "text": "2）业绩端主要由铜加工产品贡献：公司吨毛利较为稳定，2019-2009年期间吨毛利处于3000-4500元/吨，伴随体量扩张，公司归母净利从1.8亿增长至10.6亿，CAGR为20%，2020-2024年，受行业竞争加剧，吨毛利在2000-3000元/吨波动，截至2024年底公司归母净利7亿元，其中铜加工贡献毛利87%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1536,
+    "total_chars": 1536,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001067,
+  "source_content_sha256": "9a243f5fdc472c34fe61d945e431c94b71202173cbc6437773eb70f7cdcb42e6"
+}

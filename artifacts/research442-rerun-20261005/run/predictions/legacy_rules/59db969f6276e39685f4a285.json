@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000448",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "e51e97a1e059ce1efa4f879f",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 210,
+          "end": 360,
+          "text": "公司特种橡胶材料项目将于2026逐步释放产能并形成收入，我们维持2026-2025年盈利预测，新增2027年盈利预测，预计2025-2027年归母净利润分别为0.53/0.71/0.83/0.32亿元，EPS分别为0.44/0.59/0.69元，当前股价对应PE分别为58.5/43.7/37.1倍。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 911,
+    "total_chars": 911,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001025,
+  "source_content_sha256": "72ed5f21a4e6ae37d995ac3361ecac42a029eecb99012c29726ff6ef4669bc34"
+}

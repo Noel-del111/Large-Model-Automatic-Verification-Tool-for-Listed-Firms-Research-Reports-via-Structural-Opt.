@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。\"}], \"reason\": \"月份为0月，不符合日历月份取值，时间信息不成立。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"交易状况：本周开始签订0月订单，成交中枢松动下行，拉晶厂谨慎采购，成交量依然不足，实际成交价约35亿元/万吨。\"}], \"reason\": \"多晶硅价格通常以万元/吨报价，此处写成亿元/万吨，量纲错误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"库存动态：截止本周，多晶硅整体库存约吨以上，下游采购速度放缓，多晶硅整体库存水位短期内仍有继续增长趋势。\"}], \"reason\": \"“约吨以上”缺少具体库存数值，无法判断库存量级。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"结合近期市场趋势及企业排产情况，认为6月多晶硅企业即将开始产能置换，月度融资整体维持稳定，后续多晶硅月度产量将会再度下调并维持在较低水平。\"}], \"reason\": \"多晶硅生产语境中“月度融资”非产量或排产指标，术语使用不当。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:57:22.949172+00:00",
+    "request_sha256": "c946cd849cb8661a04aedadd131f365cc71cd8d04b1b1177c9868268780589ef",
+    "input_token_estimate": 14710,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.276854",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "0f72cffee4e44f409ffad4bb70afff93",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3485,
+    "output_tokens": 3927,
+    "usage_source": "provider",
+    "duration_seconds": 17.388078,
+    "cost_cny": "0.019193"
+  },
+  "cache_request": {
+    "key": "4f384d2cb13c301788207e08f57aa69def658836b8c4900c35d0995b0cc7f985",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c946cd849cb8661a04aedadd131f365cc71cd8d04b1b1177c9868268780589ef"
+  }
+}

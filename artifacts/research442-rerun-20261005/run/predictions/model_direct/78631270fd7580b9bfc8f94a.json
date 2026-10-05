@@ -1,0 +1,1800 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000216",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“实现营业收入亿元”中缺少面板板块第一季度营业收入的具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1586,
+          "end": 1694,
+          "text": "面板板块2024年第一季度实现营业收入亿元，同比+11.8%；归母净利润-1.0亿元，同比+96.5%；销售毛利率为12.1%，同环比+3.4/-1.7pct；销售净利率为-0.1%，同环比+2.4/+6.8pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "面板板块2024年第一季度实现营业收入亿元，同比+11.8%；归母净利润-1.0亿元，同比+96.5%；销售毛利率为12.1%，同环比+3.4/-1.7pct；销售净利率为-0.1%，同环比+2.4/+6.8pct。",
+          "start": 1808,
+          "end": 1951
+        }
+      ],
+      "spans": [
+        {
+          "start": 1586,
+          "end": 1694,
+          "text": "面板板块2024年第一季度实现营业收入亿元，同比+11.8%；归母净利润-1.0亿元，同比+96.5%；销售毛利率为12.1%，同环比+3.4/-1.7pct；销售净利率为-0.1%，同环比+2.4/+6.8pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c9753f627eeea5c2e5249f87",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "算力产业链硬件通常为服务器、交换机、PCB等，电视机不属于算力硬件，术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 312,
+          "end": 376,
+          "text": "我们认为，三个方向值得持续关注：（1）AI大模型发展带来成长机遇，算力产业链持续受益，服务器、电视机、PCB等硬件有望持续受益。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们认为，三个方向值得持续关注：（1）AI大模型发展带来成长机遇，算力产业链持续受益，服务器、电视机、PCB等硬件有望持续受益。",
+          "start": 431,
+          "end": 498
+        }
+      ],
+      "spans": [
+        {
+          "start": 312,
+          "end": 376,
+          "text": "我们认为，三个方向值得持续关注：（1）AI大模型发展带来成长机遇，算力产业链持续受益，服务器、电视机、PCB等硬件有望持续受益。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9b84b30a60ab5c68a7a6d2ea",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“激化”与“受益”搭配不当，应为“催化”等表示促进的词语，导致含义错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2565,
+          "end": 2613,
+          "text": "投资评级：电子行业创新动能强劲，今年受益于AI、国产替代、消费复苏等激化，我们持续看好其成长性。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资评级：电子行业创新动能强劲，今年受益于AI、国产替代、消费复苏等激化，我们持续看好其成长性。",
+          "start": 2534,
+          "end": 2586
+        }
+      ],
+      "spans": [
+        {
+          "start": 2565,
+          "end": 2613,
+          "text": "投资评级：电子行业创新动能强劲，今年受益于AI、国产替代、消费复苏等激化，我们持续看好其成长性。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "31c5ebd591d844c60743a2a4",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2651
+        ]
+      ],
+      "estimated_input_tokens": 6858,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:51:26.688865+00:00",
+        "request_sha256": "17de842948a51aa5fdd015ed1d535e56f3c334ed57ceb76706a25e03eb8c7427",
+        "input_token_estimate": 19162,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281306",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "595f7bccfb9f4d65b4fe2f22018c9a10",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4608,
+        "output_tokens": 8575,
+        "usage_source": "provider",
+        "duration_seconds": 33.314559,
+        "cost_cny": "0.038908"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "面板板块2024年第一季度实现营业收入亿元，同比+11.8%；归母净利润-1.0亿元，同比+96.5%；销售毛利率为12.1%，同环比+3.4/-1.7pct；销售净利率为-0.1%，同环比+2.4/+6.8pct。",
+            "start": 1808,
+            "end": 1951
+          }
+        ],
+        "reason": "“实现营业收入亿元”中缺少面板板块第一季度营业收入的具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "我们认为，三个方向值得持续关注：（1）AI大模型发展带来成长机遇，算力产业链持续受益，服务器、电视机、PCB等硬件有望持续受益。",
+            "start": 431,
+            "end": 498
+          }
+        ],
+        "reason": "算力产业链硬件通常为服务器、交换机、PCB等，电视机不属于算力硬件，术语使用不当。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "投资评级：电子行业创新动能强劲，今年受益于AI、国产替代、消费复苏等激化，我们持续看好其成长性。",
+            "start": 2534,
+            "end": 2586
+          }
+        ],
+        "reason": "“激化”与“受益”搭配不当，应为“催化”等表示促进的词语，导致含义错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 147,
+      "end": 216,
+      "text": "整体来看，2023年全年电子行业实现营业收入30523.62亿元，同比下滑2.0%，实现归母净利润1003.58亿元，同比下滑33.3%。",
+      "quantities": [
+        {
+          "value": "30523.62",
+          "unit": "亿元",
+          "start": 169,
+          "end": 179
+        },
+        {
+          "value": "2.0",
+          "unit": "%",
+          "start": 184,
+          "end": 188
+        },
+        {
+          "value": "1003.58",
+          "unit": "亿元",
+          "start": 196,
+          "end": 205
+        },
+        {
+          "value": "33.3",
+          "unit": "%",
+          "start": 210,
+          "end": 215
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 147,
+      "end": 216,
+      "text": "整体来看，2023年全年电子行业实现营业收入30523.62亿元，同比下滑2.0%，实现归母净利润1003.58亿元，同比下滑33.3%。",
+      "quantities": [
+        {
+          "value": "30523.62",
+          "unit": "亿元",
+          "start": 169,
+          "end": 179
+        },
+        {
+          "value": "2.0",
+          "unit": "%",
+          "start": 184,
+          "end": 188
+        },
+        {
+          "value": "1003.58",
+          "unit": "亿元",
+          "start": 196,
+          "end": 205
+        },
+        {
+          "value": "33.3",
+          "unit": "%",
+          "start": 210,
+          "end": 215
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 216,
+      "end": 288,
+      "text": "24Q1单季度实现营收7318.62亿元，同比增长14.2%，实现归母净利润271.05亿元，同比增长75.7%，一季度电子行业基本面复苏明显。",
+      "quantities": [
+        {
+          "value": "7318.62",
+          "unit": "亿元",
+          "start": 227,
+          "end": 236
+        },
+        {
+          "value": "14.2",
+          "unit": "%",
+          "start": 241,
+          "end": 246
+        },
+        {
+          "value": "271.05",
+          "unit": "亿元",
+          "start": 254,
+          "end": 262
+        },
+        {
+          "value": "75.7",
+          "unit": "%",
+          "start": 267,
+          "end": 272
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 216,
+      "end": 288,
+      "text": "24Q1单季度实现营收7318.62亿元，同比增长14.2%，实现归母净利润271.05亿元，同比增长75.7%，一季度电子行业基本面复苏明显。",
+      "quantities": [
+        {
+          "value": "7318.62",
+          "unit": "亿元",
+          "start": 227,
+          "end": 236
+        },
+        {
+          "value": "14.2",
+          "unit": "%",
+          "start": 241,
+          "end": 246
+        },
+        {
+          "value": "271.05",
+          "unit": "亿元",
+          "start": 254,
+          "end": 262
+        },
+        {
+          "value": "75.7",
+          "unit": "%",
+          "start": 267,
+          "end": 272
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 459,
+      "end": 493,
+      "text": "2023年全年半导体板块实现营业收入4959.8亿元，同比增长1%；",
+      "quantities": [
+        {
+          "value": "4959.8",
+          "unit": "亿元",
+          "start": 477,
+          "end": 485
+        },
+        {
+          "value": "1",
+          "unit": "%",
+          "start": 490,
+          "end": 492
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 493,
+      "end": 516,
+      "text": "实现归母净利润314.3亿元，同比下降48%。",
+      "quantities": [
+        {
+          "value": "314.3",
+          "unit": "亿元",
+          "start": 500,
+          "end": 507
+        },
+        {
+          "value": "48",
+          "unit": "%",
+          "start": 512,
+          "end": 515
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 569,
+      "end": 604,
+      "text": "24Q1实现营业收入1113.4亿元，同比增长23%，环比下降11%；",
+      "quantities": [
+        {
+          "value": "1113.4",
+          "unit": "亿元",
+          "start": 579,
+          "end": 587
+        },
+        {
+          "value": "23",
+          "unit": "%",
+          "start": 592,
+          "end": 595
+        },
+        {
+          "value": "11",
+          "unit": "%",
+          "start": 600,
+          "end": 603
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 604,
+      "end": 633,
+      "text": "实现归母净利润57.7亿元，同比增长51%，环比下降8%。",
+      "quantities": [
+        {
+          "value": "57.7",
+          "unit": "亿元",
+          "start": 611,
+          "end": 617
+        },
+        {
+          "value": "51",
+          "unit": "%",
+          "start": 622,
+          "end": 625
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 630,
+          "end": 632
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 656,
+      "end": 753,
+      "text": "个股方面，存储模组和半导体设备2023年及24Q1表现良好，存储模组受益于存储价格上涨及低价库存积累带来的业绩弹性，江波龙/德明利/佰维存储24Q1营收分别同比增长201%/169%/306%；",
+      "quantities": [
+        {
+          "value": "201",
+          "unit": "%",
+          "start": 738,
+          "end": 742
+        },
+        {
+          "value": "169",
+          "unit": "%",
+          "start": 743,
+          "end": 747
+        },
+        {
+          "value": "306",
+          "unit": "%",
+          "start": 748,
+          "end": 752
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 753,
+      "end": 817,
+      "text": "半导体设备受益于晶圆厂加快验证导入，国产化进程提速，北方华创/中微公司/拓荆科技24Q1营收分别同比增长51%/31%/17%。",
+      "quantities": [
+        {
+          "value": "51",
+          "unit": "%",
+          "start": 805,
+          "end": 808
+        },
+        {
+          "value": "31",
+          "unit": "%",
+          "start": 809,
+          "end": 812
+        },
+        {
+          "value": "17",
+          "unit": "%",
+          "start": 813,
+          "end": 816
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "中微公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 817,
+      "end": 935,
+      "text": "IC设计企业在经历2023年需求疲软及产业链去库存影响下，24Q1业绩全面企稳，圣邦股份/艾为电子/晶晨股份/恒玄科技24Q1营收分别同比增长42%/102%/33%/70%，消费类需求率先复苏，工业、通信、汽车等终端需求有望持续回暖。",
+      "quantities": [
+        {
+          "value": "42",
+          "unit": "%",
+          "start": 888,
+          "end": 891
+        },
+        {
+          "value": "102",
+          "unit": "%",
+          "start": 892,
+          "end": 896
+        },
+        {
+          "value": "33",
+          "unit": "%",
+          "start": 897,
+          "end": 900
+        },
+        {
+          "value": "70",
+          "unit": "%",
+          "start": 901,
+          "end": 904
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 985,
+      "end": 1021,
+      "text": "2023年全年消费电子板块实现营业收入13742.7亿元，同比下降2%；",
+      "quantities": [
+        {
+          "value": "13742.7",
+          "unit": "亿元",
+          "start": 1004,
+          "end": 1013
+        },
+        {
+          "value": "2",
+          "unit": "%",
+          "start": 1018,
+          "end": 1020
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1021,
+      "end": 1043,
+      "text": "实现归母净利润573.0亿元，同比提升1%。",
+      "quantities": [
+        {
+          "value": "573.0",
+          "unit": "亿元",
+          "start": 1028,
+          "end": 1035
+        },
+        {
+          "value": "1",
+          "unit": "%",
+          "start": 1040,
+          "end": 1042
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1073,
+      "end": 1108,
+      "text": "24Q1实现营业收入3322.9亿元，同比增长14%，环比下降19%；",
+      "quantities": [
+        {
+          "value": "3322.9",
+          "unit": "亿元",
+          "start": 1083,
+          "end": 1091
+        },
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 1096,
+          "end": 1099
+        },
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 1104,
+          "end": 1107
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1108,
+      "end": 1132,
+      "text": "实现归母净利润134.9亿元，同比增长50%，。",
+      "quantities": [
+        {
+          "value": "134.9",
+          "unit": "亿元",
+          "start": 1115,
+          "end": 1122
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 1127,
+          "end": 1130
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1132,
+      "end": 1187,
+      "text": "品牌消费电子24Q1分别实现营业收入/归母净利润288.7/22.9亿元，分别同比+54.8%/+89.5%。",
+      "quantities": [
+        {
+          "value": "22.9",
+          "unit": "亿元",
+          "start": 1162,
+          "end": 1168
+        },
+        {
+          "value": "+54.8",
+          "unit": "%",
+          "start": 1173,
+          "end": 1179
+        },
+        {
+          "value": "+89.5",
+          "unit": "%",
+          "start": 1180,
+          "end": 1186
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1132,
+      "end": 1187,
+      "text": "品牌消费电子24Q1分别实现营业收入/归母净利润288.7/22.9亿元，分别同比+54.8%/+89.5%。",
+      "quantities": [
+        {
+          "value": "22.9",
+          "unit": "亿元",
+          "start": 1162,
+          "end": 1168
+        },
+        {
+          "value": "+54.8",
+          "unit": "%",
+          "start": 1173,
+          "end": 1179
+        },
+        {
+          "value": "+89.5",
+          "unit": "%",
+          "start": 1180,
+          "end": 1186
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1187,
+      "end": 1251,
+      "text": "消费电子零部件及组装方面，24Q1分别实现营业收入/归母净利润3034.3/112.1亿元，分别同比+11.4%/+43.6%。",
+      "quantities": [
+        {
+          "value": "112.1",
+          "unit": "亿元",
+          "start": 1225,
+          "end": 1232
+        },
+        {
+          "value": "+11.4",
+          "unit": "%",
+          "start": 1237,
+          "end": 1243
+        },
+        {
+          "value": "+43.6",
+          "unit": "%",
+          "start": 1244,
+          "end": 1250
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1187,
+      "end": 1251,
+      "text": "消费电子零部件及组装方面，24Q1分别实现营业收入/归母净利润3034.3/112.1亿元，分别同比+11.4%/+43.6%。",
+      "quantities": [
+        {
+          "value": "112.1",
+          "unit": "亿元",
+          "start": 1225,
+          "end": 1232
+        },
+        {
+          "value": "+11.4",
+          "unit": "%",
+          "start": 1237,
+          "end": 1243
+        },
+        {
+          "value": "+43.6",
+          "unit": "%",
+          "start": 1244,
+          "end": 1250
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1308,
+      "end": 1359,
+      "text": "工业富联24Q1实现营收1186.9亿元，同比增长12%，实现归母净利润41.8亿元，同比增长34%。",
+      "quantities": [
+        {
+          "value": "1186.9",
+          "unit": "亿元",
+          "start": 1320,
+          "end": 1328
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 1333,
+          "end": 1336
+        },
+        {
+          "value": "41.8",
+          "unit": "亿元",
+          "start": 1344,
+          "end": 1350
+        },
+        {
+          "value": "34",
+          "unit": "%",
+          "start": 1355,
+          "end": 1358
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1308,
+      "end": 1359,
+      "text": "工业富联24Q1实现营收1186.9亿元，同比增长12%，实现归母净利润41.8亿元，同比增长34%。",
+      "quantities": [
+        {
+          "value": "1186.9",
+          "unit": "亿元",
+          "start": 1320,
+          "end": 1328
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 1333,
+          "end": 1336
+        },
+        {
+          "value": "41.8",
+          "unit": "亿元",
+          "start": 1344,
+          "end": 1350
+        },
+        {
+          "value": "34",
+          "unit": "%",
+          "start": 1355,
+          "end": 1358
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1359,
+      "end": 1408,
+      "text": "沪电股份24Q1实现营收25.8亿元，同比增长38%，实现归母净利润5.1亿元，同比增长157%。",
+      "quantities": [
+        {
+          "value": "25.8",
+          "unit": "亿元",
+          "start": 1371,
+          "end": 1377
+        },
+        {
+          "value": "38",
+          "unit": "%",
+          "start": 1382,
+          "end": 1385
+        },
+        {
+          "value": "5.1",
+          "unit": "亿元",
+          "start": 1393,
+          "end": 1398
+        },
+        {
+          "value": "157",
+          "unit": "%",
+          "start": 1403,
+          "end": 1407
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1359,
+      "end": 1408,
+      "text": "沪电股份24Q1实现营收25.8亿元，同比增长38%，实现归母净利润5.1亿元，同比增长157%。",
+      "quantities": [
+        {
+          "value": "25.8",
+          "unit": "亿元",
+          "start": 1371,
+          "end": 1377
+        },
+        {
+          "value": "38",
+          "unit": "%",
+          "start": 1382,
+          "end": 1385
+        },
+        {
+          "value": "5.1",
+          "unit": "亿元",
+          "start": 1393,
+          "end": 1398
+        },
+        {
+          "value": "157",
+          "unit": "%",
+          "start": 1403,
+          "end": 1407
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1437,
+      "end": 1475,
+      "text": "2023年全年光学光电子板块实现营业收入6813.3亿元，同比下降0.1%；",
+      "quantities": [
+        {
+          "value": "6813.3",
+          "unit": "亿元",
+          "start": 1457,
+          "end": 1465
+        },
+        {
+          "value": "0.1",
+          "unit": "%",
+          "start": 1470,
+          "end": 1474
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1475,
+      "end": 1491,
+      "text": "实现归母净利润-138.0亿元。",
+      "quantities": [
+        {
+          "value": "-138.0",
+          "unit": "亿元",
+          "start": 1482,
+          "end": 1490
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1491,
+      "end": 1518,
+      "text": "24Q1实现营业收入1667.4亿元，同比增长13%；",
+      "quantities": [
+        {
+          "value": "1667.4",
+          "unit": "亿元",
+          "start": 1501,
+          "end": 1509
+        },
+        {
+          "value": "13",
+          "unit": "%",
+          "start": 1514,
+          "end": 1517
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1518,
+      "end": 1540,
+      "text": "实现归母净利润8.6亿元，同比增长131%。",
+      "quantities": [
+        {
+          "value": "8.6",
+          "unit": "亿元",
+          "start": 1525,
+          "end": 1530
+        },
+        {
+          "value": "131",
+          "unit": "%",
+          "start": 1535,
+          "end": 1539
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1586,
+      "end": 1617,
+      "text": "面板板块2024年第一季度实现营业收入亿元，同比+11.8%；",
+      "quantities": [
+        {
+          "value": "+11.8",
+          "unit": "%",
+          "start": 1610,
+          "end": 1616
+        }
+      ],
+      "periods": [
+        "2024年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1617,
+      "end": 1638,
+      "text": "归母净利润-1.0亿元，同比+96.5%；",
+      "quantities": [
+        {
+          "value": "-1.0",
+          "unit": "亿元",
+          "start": 1622,
+          "end": 1628
+        },
+        {
+          "value": "+96.5",
+          "unit": "%",
+          "start": 1631,
+          "end": 1637
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1638,
+      "end": 1666,
+      "text": "销售毛利率为12.1%，同环比+3.4/-1.7pct；",
+      "quantities": [
+        {
+          "value": "12.1",
+          "unit": "%",
+          "start": 1644,
+          "end": 1649
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1666,
+      "end": 1694,
+      "text": "销售净利率为-0.1%，同环比+2.4/+6.8pct。",
+      "quantities": [
+        {
+          "value": "-0.1",
+          "unit": "%",
+          "start": 1672,
+          "end": 1677
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1694,
+      "end": 1737,
+      "text": "LED方面，2024年第一季度LED板块实现营业收入213.5亿元，同比+10.8%；",
+      "quantities": [
+        {
+          "value": "213.5",
+          "unit": "亿元",
+          "start": 1720,
+          "end": 1727
+        },
+        {
+          "value": "+10.8",
+          "unit": "%",
+          "start": 1730,
+          "end": 1736
+        }
+      ],
+      "periods": [
+        "2024年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1737,
+      "end": 1757,
+      "text": "归母净利润6.2亿元，同比+25.2%。",
+      "quantities": [
+        {
+          "value": "6.2",
+          "unit": "亿元",
+          "start": 1742,
+          "end": 1747
+        },
+        {
+          "value": "+25.2",
+          "unit": "%",
+          "start": 1750,
+          "end": 1756
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1757,
+      "end": 1806,
+      "text": "盈利能力方面，2024年第一季度LED板块销售毛利率为21.8%，同环比-0.8/+0.8pct；",
+      "quantities": [
+        {
+          "value": "21.8",
+          "unit": "%",
+          "start": 1784,
+          "end": 1789
+        }
+      ],
+      "periods": [
+        "2024年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1806,
+      "end": 1833,
+      "text": "销售净利率为2.9%，同环比+0.3/+4.0pct。",
+      "quantities": [
+        {
+          "value": "2.9",
+          "unit": "%",
+          "start": 1812,
+          "end": 1816
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1883,
+      "end": 1916,
+      "text": "2023年全年元件板块实现营业收入2399.5亿元，同比下降3%；",
+      "quantities": [
+        {
+          "value": "2399.5",
+          "unit": "亿元",
+          "start": 1900,
+          "end": 1908
+        },
+        {
+          "value": "3",
+          "unit": "%",
+          "start": 1913,
+          "end": 1915
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1916,
+      "end": 1979,
+      "text": "实现归母净利润175.8亿元，同比下降22%，2023年元件板块景气度低迷，下游处于去库存阶段，23Q3开始下游需求有所回暖。",
+      "quantities": [
+        {
+          "value": "175.8",
+          "unit": "亿元",
+          "start": 1923,
+          "end": 1930
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 1935,
+          "end": 1938
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1979,
+      "end": 2009,
+      "text": "24Q1元件板块实现营业收入598.7亿元，同比增长14%；",
+      "quantities": [
+        {
+          "value": "1",
+          "unit": "元",
+          "start": 1982,
+          "end": 1984
+        },
+        {
+          "value": "598.7",
+          "unit": "亿元",
+          "start": 1993,
+          "end": 2000
+        },
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 2005,
+          "end": 2008
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2009,
+      "end": 2069,
+      "text": "实现归母净利润46.5亿元，同比增长32%，一季度伴随库存去化产生的补库动作以及实质性需求回暖，元件板块业绩端改善明显。",
+      "quantities": [
+        {
+          "value": "46.5",
+          "unit": "亿元",
+          "start": 2016,
+          "end": 2022
+        },
+        {
+          "value": "32",
+          "unit": "%",
+          "start": 2027,
+          "end": 2030
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 2099,
+      "end": 2154,
+      "text": "被动元件方面，24Q1分别实现营业收入/归母净利润98.3/12.4亿元，分别同比+11.4%/+15.5%。",
+      "quantities": [
+        {
+          "value": "12.4",
+          "unit": "亿元",
+          "start": 2129,
+          "end": 2135
+        },
+        {
+          "value": "+11.4",
+          "unit": "%",
+          "start": 2140,
+          "end": 2146
+        },
+        {
+          "value": "+15.5",
+          "unit": "%",
+          "start": 2147,
+          "end": 2153
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2099,
+      "end": 2154,
+      "text": "被动元件方面，24Q1分别实现营业收入/归母净利润98.3/12.4亿元，分别同比+11.4%/+15.5%。",
+      "quantities": [
+        {
+          "value": "12.4",
+          "unit": "亿元",
+          "start": 2129,
+          "end": 2135
+        },
+        {
+          "value": "+11.4",
+          "unit": "%",
+          "start": 2140,
+          "end": 2146
+        },
+        {
+          "value": "+15.5",
+          "unit": "%",
+          "start": 2147,
+          "end": 2153
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 2154,
+      "end": 2211,
+      "text": "印刷电路板方面，24Q1分别实现营业收入/归母净利润500.4/34.1亿元，分别同比+15.1%/+39.2%。",
+      "quantities": [
+        {
+          "value": "34.1",
+          "unit": "亿元",
+          "start": 2186,
+          "end": 2192
+        },
+        {
+          "value": "+15.1",
+          "unit": "%",
+          "start": 2197,
+          "end": 2203
+        },
+        {
+          "value": "+39.2",
+          "unit": "%",
+          "start": 2204,
+          "end": 2210
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2154,
+      "end": 2211,
+      "text": "印刷电路板方面，24Q1分别实现营业收入/归母净利润500.4/34.1亿元，分别同比+15.1%/+39.2%。",
+      "quantities": [
+        {
+          "value": "34.1",
+          "unit": "亿元",
+          "start": 2186,
+          "end": 2192
+        },
+        {
+          "value": "+15.1",
+          "unit": "%",
+          "start": 2197,
+          "end": 2203
+        },
+        {
+          "value": "+39.2",
+          "unit": "%",
+          "start": 2204,
+          "end": 2210
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 2240,
+      "end": 2275,
+      "text": "2023年全年电子化学品板块实现营业收入578.2亿元，同比提升3%；",
+      "quantities": [
+        {
+          "value": "578.2",
+          "unit": "亿元",
+          "start": 2260,
+          "end": 2267
+        },
+        {
+          "value": "3",
+          "unit": "%",
+          "start": 2272,
+          "end": 2274
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2275,
+      "end": 2340,
+      "text": "实现归母净利润49.2亿元，同比下降19%，23H1在半导体行业需求下行压力下，电子化学品业绩端有所承压，23Q3起逐步开始修复。",
+      "quantities": [
+        {
+          "value": "49.2",
+          "unit": "亿元",
+          "start": 2282,
+          "end": 2288
+        },
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 2293,
+          "end": 2296
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 2340,
+      "end": 2373,
+      "text": "24Q1电子化学品板块实现营业收入146.7亿元，同比增长23%；",
+      "quantities": [
+        {
+          "value": "146.7",
+          "unit": "亿元",
+          "start": 2357,
+          "end": 2364
+        },
+        {
+          "value": "23",
+          "unit": "%",
+          "start": 2369,
+          "end": 2372
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2373,
+      "end": 2395,
+      "text": "实现归母净利润14.1亿元，同比增长41%。",
+      "quantities": [
+        {
+          "value": "14.1",
+          "unit": "亿元",
+          "start": 2380,
+          "end": 2386
+        },
+        {
+          "value": "41",
+          "unit": "%",
+          "start": 2391,
+          "end": 2394
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 2395,
+      "end": 2455,
+      "text": "个股方面，安集科技24Q1营收3.8亿元，同比+41%、环比+11%，归母净利润1.1亿元，同比+38%、环比+20%；",
+      "quantities": [
+        {
+          "value": "3.8",
+          "unit": "亿元",
+          "start": 2410,
+          "end": 2415
+        },
+        {
+          "value": "+41",
+          "unit": "%",
+          "start": 2418,
+          "end": 2422
+        },
+        {
+          "value": "+11",
+          "unit": "%",
+          "start": 2425,
+          "end": 2429
+        },
+        {
+          "value": "1.1",
+          "unit": "亿元",
+          "start": 2435,
+          "end": 2440
+        },
+        {
+          "value": "+38",
+          "unit": "%",
+          "start": 2443,
+          "end": 2447
+        },
+        {
+          "value": "+20",
+          "unit": "%",
+          "start": 2450,
+          "end": 2454
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2395,
+      "end": 2455,
+      "text": "个股方面，安集科技24Q1营收3.8亿元，同比+41%、环比+11%，归母净利润1.1亿元，同比+38%、环比+20%；",
+      "quantities": [
+        {
+          "value": "3.8",
+          "unit": "亿元",
+          "start": 2410,
+          "end": 2415
+        },
+        {
+          "value": "+41",
+          "unit": "%",
+          "start": 2418,
+          "end": 2422
+        },
+        {
+          "value": "+11",
+          "unit": "%",
+          "start": 2425,
+          "end": 2429
+        },
+        {
+          "value": "1.1",
+          "unit": "亿元",
+          "start": 2435,
+          "end": 2440
+        },
+        {
+          "value": "+38",
+          "unit": "%",
+          "start": 2443,
+          "end": 2447
+        },
+        {
+          "value": "+20",
+          "unit": "%",
+          "start": 2450,
+          "end": 2454
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 2455,
+      "end": 2511,
+      "text": "鼎龙股份24Q1营收7.1亿元，同比+30%、环比-11%，归母净利润0.8亿元，同比+135%、环比+78%；",
+      "quantities": [
+        {
+          "value": "7.1",
+          "unit": "亿元",
+          "start": 2465,
+          "end": 2470
+        },
+        {
+          "value": "+30",
+          "unit": "%",
+          "start": 2473,
+          "end": 2477
+        },
+        {
+          "value": "-11",
+          "unit": "%",
+          "start": 2480,
+          "end": 2484
+        },
+        {
+          "value": "0.8",
+          "unit": "亿元",
+          "start": 2490,
+          "end": 2495
+        },
+        {
+          "value": "+135",
+          "unit": "%",
+          "start": 2498,
+          "end": 2503
+        },
+        {
+          "value": "+78",
+          "unit": "%",
+          "start": 2506,
+          "end": 2510
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2455,
+      "end": 2511,
+      "text": "鼎龙股份24Q1营收7.1亿元，同比+30%、环比-11%，归母净利润0.8亿元，同比+135%、环比+78%；",
+      "quantities": [
+        {
+          "value": "7.1",
+          "unit": "亿元",
+          "start": 2465,
+          "end": 2470
+        },
+        {
+          "value": "+30",
+          "unit": "%",
+          "start": 2473,
+          "end": 2477
+        },
+        {
+          "value": "-11",
+          "unit": "%",
+          "start": 2480,
+          "end": 2484
+        },
+        {
+          "value": "0.8",
+          "unit": "亿元",
+          "start": 2490,
+          "end": 2495
+        },
+        {
+          "value": "+135",
+          "unit": "%",
+          "start": 2498,
+          "end": 2503
+        },
+        {
+          "value": "+78",
+          "unit": "%",
+          "start": 2506,
+          "end": 2510
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 2511,
+      "end": 2563,
+      "text": "国瓷材料24Q1营收8.3亿元，同比+5%、环比-23%，归母净利润1.3亿元，同比+8%、环比+4%。",
+      "quantities": [
+        {
+          "value": "8.3",
+          "unit": "亿元",
+          "start": 2521,
+          "end": 2526
+        },
+        {
+          "value": "+5",
+          "unit": "%",
+          "start": 2529,
+          "end": 2532
+        },
+        {
+          "value": "-23",
+          "unit": "%",
+          "start": 2535,
+          "end": 2539
+        },
+        {
+          "value": "1.3",
+          "unit": "亿元",
+          "start": 2545,
+          "end": 2550
+        },
+        {
+          "value": "+8",
+          "unit": "%",
+          "start": 2553,
+          "end": 2556
+        },
+        {
+          "value": "+4",
+          "unit": "%",
+          "start": 2559,
+          "end": 2562
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2511,
+      "end": 2563,
+      "text": "国瓷材料24Q1营收8.3亿元，同比+5%、环比-23%，归母净利润1.3亿元，同比+8%、环比+4%。",
+      "quantities": [
+        {
+          "value": "8.3",
+          "unit": "亿元",
+          "start": 2521,
+          "end": 2526
+        },
+        {
+          "value": "+5",
+          "unit": "%",
+          "start": 2529,
+          "end": 2532
+        },
+        {
+          "value": "-23",
+          "unit": "%",
+          "start": 2535,
+          "end": 2539
+        },
+        {
+          "value": "1.3",
+          "unit": "亿元",
+          "start": 2545,
+          "end": 2550
+        },
+        {
+          "value": "+8",
+          "unit": "%",
+          "start": 2553,
+          "end": 2556
+        },
+        {
+          "value": "+4",
+          "unit": "%",
+          "start": 2559,
+          "end": 2562
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2651,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2651,
+    "processed_ranges": [
+      [
+        0,
+        2651
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 53,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 33.340069,
+  "source_content_sha256": "c700f1566f7e3fddf9b25daccf336f9abc9a541129f37722c6e5efe2d6e5ebef"
+}

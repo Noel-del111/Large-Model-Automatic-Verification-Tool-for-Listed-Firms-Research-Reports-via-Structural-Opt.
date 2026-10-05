@@ -1,0 +1,288 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000521",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 185,
+          "end": 354,
+          "text": "近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。",
+          "reason": "同一长句中“如泰康发起成立稳行私募基金（首期规模120亿）”连续出现两次，未增加新信息。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 185,
+          "end": 354,
+          "text": "近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "55dc3f26d605025026d94096",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 185,
+          "end": 354,
+          "text": "近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。",
+          "reason": "“阳光和远私募（总规模亿）”中总规模数值空缺，仅剩单位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 185,
+          "end": 354,
+          "text": "近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "19552b9e73e0b258cd4484a8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 71,
+          "end": 157,
+          "text": "根据财联社报道，平安资管近期获批成立恒毅持盈(深圳)私募基金管理有限公司，注册资本3亿分，将作为基金管理人向平安人寿定向发行契约型私募证券投资基金，首期基金规模300亿元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据财联社报道，平安资管近期获批成立恒毅持盈(深圳)私募基金管理有限公司，注册资本3亿分，将作为基金管理人向平安人寿定向发行契约型私募证券投资基金，首期基金规模300亿元。",
+          "reason": "注册资本单位写成“分”，私募基金管理公司注册资本应为“元”。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 71,
+          "end": 157,
+          "text": "根据财联社报道，平安资管近期获批成立恒毅持盈(深圳)私募基金管理有限公司，注册资本3亿分，将作为基金管理人向平安人寿定向发行契约型私募证券投资基金，首期基金规模300亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f596e9b70f06943b672a0766",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 625,
+          "end": 657,
+          "text": "内地企业赴港上市热度不减，有望满足企业债权需求并提升港股流动性。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "内地企业赴港上市热度不减，有望满足企业债权需求并提升港股流动性。",
+          "reason": "企业赴港上市属于股权融资，称“满足企业债权需求”误用了融资性质术语。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 625,
+          "end": 657,
+          "text": "内地企业赴港上市热度不减，有望满足企业债权需求并提升港股流动性。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "05c9115cf9b8157445ce27c9",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1315
+        ]
+      ],
+      "estimated_input_tokens": 5995,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:52:39.912370+00:00",
+        "request_sha256": "9391e8a49482f1a5e1e3e8f38e707caaa2331ec0d8b646ea2b3bfd72e03c09df",
+        "input_token_estimate": 16654,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278798",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9fee4e39f09a4d12bf64d37167cf3c7a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3815,
+        "output_tokens": 7601,
+        "usage_source": "provider",
+        "duration_seconds": 30.670733,
+        "cost_cny": "0.034219"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。",
+            "reason": "同一长句中“如泰康发起成立稳行私募基金（首期规模120亿）”连续出现两次，未增加新信息。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "近期先资持续推进险资长期投资试点，如泰康发起成立稳行私募基金（首期规模120亿）和阳光保险发起成立阳光和远私募（总规模亿），如泰康发起成立稳行私募基金（首期规模120亿），有望聚焦境内市场和中国香港市场的优质上市公司，在合理管控风险的前提下实现基金的中长期稳健增值，利率中枢下行背景下权益投资有望贡献投资收益弹性，更好地实现资产负债匹配。",
+            "reason": "“阳光和远私募（总规模亿）”中总规模数值空缺，仅剩单位。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "根据财联社报道，平安资管近期获批成立恒毅持盈(深圳)私募基金管理有限公司，注册资本3亿分，将作为基金管理人向平安人寿定向发行契约型私募证券投资基金，首期基金规模300亿元。",
+            "reason": "注册资本单位写成“分”，私募基金管理公司注册资本应为“元”。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "内地企业赴港上市热度不减，有望满足企业债权需求并提升港股流动性。",
+            "reason": "企业赴港上市属于股权融资，称“满足企业债权需求”误用了融资性质术语。"
+          }
+        ]
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1315,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1315,
+    "processed_ranges": [
+      [
+        0,
+        1315
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 30.693657,
+  "source_content_sha256": "e27d3d4f6e61d08426bc9d10d8ccd8e2ba4a70a488d84915284b009aeeb07082"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"土地出让面积26351㎡，规划建筑面积57972.2平方分米，容积率2.2，起始价9.79亿元，起始楼面价16893元/㎡。\"}], \"reason\": \"建筑面积单位应为平方米，写成平方分米使面积缩小100倍，与容积率2.2及楼面价计算明显矛盾。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"个股跌幅较大的为南国置业、粤宏远A、中国国贸、深振业A、招商积余，跌幅分别为-5.02%/-1.89%/-1.64%/-1.13%/-1.10%/+2.03%。\"}], \"reason\": \"标注为跌幅却出现+2.03%的正值，且列示5家公司却给出6个跌幅数值，与“跌幅”定义及一一对应关系矛盾。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"该债券的发行人为上海地产（集团）有限公司，计划发行总额为人民币，类型为资产支持证券(ABS)，并由申万宏源资管作为承销商负责推广。\"}], \"reason\": \"正文“计划发行总额为人民币”后直接接“类型”，缺少具体金额，标题虽有28.01亿元但正文未给出。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"【中海宏洋地产集团】浦东金桥公告，杜少雄因工作调动，辞去公司董事、副董事长、战略委员会委员职务，同时辞去总经理职务。\"}], \"reason\": \"公告标签为中海宏洋地产集团，正文却以浦东金桥为公告主体并提及其高管辞职，两者主体不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:31:04.846379+00:00",
+    "request_sha256": "ec6f9d7b7e2e62d552baa6f0eb509a2c59c07de9c2b20ab78621da0c37feee9c",
+    "input_token_estimate": 15804,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277948",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "242ffee170e1420baa0345178798ada2",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3819,
+    "output_tokens": 9267,
+    "usage_source": "provider",
+    "duration_seconds": 38.391397,
+    "cost_cny": "0.040887"
+  },
+  "cache_request": {
+    "key": "64b79430f32ecd72b975006e6ce32aff4c7cb136ac78087a71a63d04e0e2a9a6",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ec6f9d7b7e2e62d552baa6f0eb509a2c59c07de9c2b20ab78621da0c37feee9c"
+  }
+}

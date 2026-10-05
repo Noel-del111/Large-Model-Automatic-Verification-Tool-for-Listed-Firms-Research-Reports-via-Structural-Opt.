@@ -1,0 +1,642 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000322",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "spans": [
+        {
+          "start": 435,
+          "end": 509,
+          "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+        }
+      ],
+      "reason": "该年月日不是有效公历日期。",
+      "status": "confirmed_error",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 437,
+          "end": 448,
+          "text": "2024年12月32日"
+        },
+        {
+          "kind": "deterministic",
+          "check": "calendar_date",
+          "year": 2024,
+          "month": 12,
+          "day": 32
+        }
+      ],
+      "detector_id": "verified.calendar",
+      "validation": "deterministic",
+      "verification_spans": [
+        {
+          "start": 437,
+          "end": 448,
+          "text": "2024年12月32日"
+        }
+      ],
+      "id": "f5e7f8af6590721f9110fef3",
+      "detector_ids": [
+        "hybrid.model",
+        "verified.calendar"
+      ],
+      "original_spans": [
+        {
+          "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+        }
+      ],
+      "review_priority": "confirmed"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "净资产4.69元与资产总额7.47亿元量纲不一致，应为亿元级单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 435,
+          "end": 509,
+          "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 435,
+          "end": 509,
+          "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f34b90885d59ea2f80312989",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“冶炼金吨”前缺少具体产量数值，指标不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 728,
+          "end": 754,
+          "text": "2024年主要产品产量：冶炼金吨，电解银0.81吨。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年主要产品产量：冶炼金吨，电解银0.81吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 728,
+          "end": 754,
+          "text": "2024年主要产品产量：冶炼金吨，电解银0.81吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cab3a0c6c859f030bdf4314d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "前文为收购49.33625%股权，此处误写为债权，股权与债权性质不同。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 365,
+          "end": 393,
+          "text": "公司拟收购黄金集团持有的内蒙金陶49.33625%债权。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司拟收购黄金集团持有的内蒙金陶49.33625%债权。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 365,
+          "end": 393,
+          "text": "公司拟收购黄金集团持有的内蒙金陶49.33625%债权。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f25d96043f0c83de22901847",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1161
+        ]
+      ],
+      "estimated_input_tokens": 5630,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:52:00.061133+00:00",
+        "request_sha256": "4850a93c8d55c49900bbd13d6d5edbba501358a128237f2b1bc02de408465ba6",
+        "input_token_estimate": 15702,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277846",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d373e6f0bad5475d9268aff235f8998b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3764,
+        "output_tokens": 5440,
+        "usage_source": "provider",
+        "duration_seconds": 21.534974,
+        "cost_cny": "0.025524",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+          }
+        ],
+        "reason": "2024年12月没有32日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。"
+          }
+        ],
+        "reason": "净资产4.69元与资产总额7.47亿元量纲不一致，应为亿元级单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年主要产品产量：冶炼金吨，电解银0.81吨。"
+          }
+        ],
+        "reason": "“冶炼金吨”前缺少具体产量数值，指标不完整。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司拟收购黄金集团持有的内蒙金陶49.33625%债权。"
+          }
+        ],
+        "reason": "前文为收购49.33625%股权，此处误写为债权，股权与债权性质不同。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 435,
+      "end": 509,
+      "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。",
+      "quantities": [
+        {
+          "value": "7.47",
+          "unit": "亿元",
+          "start": 461,
+          "end": 467
+        },
+        {
+          "value": "4.69",
+          "unit": "元",
+          "start": 472,
+          "end": 477
+        },
+        {
+          "value": "7.61",
+          "unit": "亿元",
+          "start": 491,
+          "end": 497
+        },
+        {
+          "value": "1.74",
+          "unit": "亿元",
+          "start": 502,
+          "end": 508
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 435,
+      "end": 509,
+      "text": "截至2024年12月32日，内蒙金陶经审计资产总额为7.47亿元，净资产为4.69元，2024年度实现营业收入为7.61亿元，净利润为1.74亿元。",
+      "quantities": [
+        {
+          "value": "7.47",
+          "unit": "亿元",
+          "start": 461,
+          "end": 467
+        },
+        {
+          "value": "4.69",
+          "unit": "元",
+          "start": 472,
+          "end": 477
+        },
+        {
+          "value": "7.61",
+          "unit": "亿元",
+          "start": 491,
+          "end": 497
+        },
+        {
+          "value": "1.74",
+          "unit": "亿元",
+          "start": 502,
+          "end": 508
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 595,
+      "end": 671,
+      "text": "截至2024年12月31日，河北大白阳经审计资产总额为2.35亿元，净资产为1.15亿元，2024年度实现营业收入为1.53亿元，净利润为0.33亿元。",
+      "quantities": [
+        {
+          "value": "2.35",
+          "unit": "亿元",
+          "start": 622,
+          "end": 628
+        },
+        {
+          "value": "1.15",
+          "unit": "亿元",
+          "start": 633,
+          "end": 639
+        },
+        {
+          "value": "1.53",
+          "unit": "亿元",
+          "start": 653,
+          "end": 659
+        },
+        {
+          "value": "0.33",
+          "unit": "亿元",
+          "start": 664,
+          "end": 670
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 595,
+      "end": 671,
+      "text": "截至2024年12月31日，河北大白阳经审计资产总额为2.35亿元，净资产为1.15亿元，2024年度实现营业收入为1.53亿元，净利润为0.33亿元。",
+      "quantities": [
+        {
+          "value": "2.35",
+          "unit": "亿元",
+          "start": 622,
+          "end": 628
+        },
+        {
+          "value": "1.15",
+          "unit": "亿元",
+          "start": 633,
+          "end": 639
+        },
+        {
+          "value": "1.53",
+          "unit": "亿元",
+          "start": 653,
+          "end": 659
+        },
+        {
+          "value": "0.33",
+          "unit": "亿元",
+          "start": 664,
+          "end": 670
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 754,
+      "end": 828,
+      "text": "截至2024年12月31日，辽宁天利经审计资产总额为4.9亿元，净资产为1.80亿元，2024年度实现营业收入为6.96亿元，净利润为0.10亿元。",
+      "quantities": [
+        {
+          "value": "4.9",
+          "unit": "亿元",
+          "start": 780,
+          "end": 785
+        },
+        {
+          "value": "1.80",
+          "unit": "亿元",
+          "start": 790,
+          "end": 796
+        },
+        {
+          "value": "6.96",
+          "unit": "亿元",
+          "start": 810,
+          "end": 816
+        },
+        {
+          "value": "0.10",
+          "unit": "亿元",
+          "start": 821,
+          "end": 827
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 754,
+      "end": 828,
+      "text": "截至2024年12月31日，辽宁天利经审计资产总额为4.9亿元，净资产为1.80亿元，2024年度实现营业收入为6.96亿元，净利润为0.10亿元。",
+      "quantities": [
+        {
+          "value": "4.9",
+          "unit": "亿元",
+          "start": 780,
+          "end": 785
+        },
+        {
+          "value": "1.80",
+          "unit": "亿元",
+          "start": 790,
+          "end": 796
+        },
+        {
+          "value": "6.96",
+          "unit": "亿元",
+          "start": 810,
+          "end": 816
+        },
+        {
+          "value": "0.10",
+          "unit": "亿元",
+          "start": 821,
+          "end": 827
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 921,
+      "end": 1002,
+      "text": "截至2024年12月31日，辽宁金凤经审计合并资产总额为1.49亿元，净资产为0.64亿元，2024年度实现合并营业收入为1.16亿元，合并净利润为0.25亿元。",
+      "quantities": [
+        {
+          "value": "1.49",
+          "unit": "亿元",
+          "start": 949,
+          "end": 955
+        },
+        {
+          "value": "0.64",
+          "unit": "亿元",
+          "start": 960,
+          "end": 966
+        },
+        {
+          "value": "1.16",
+          "unit": "亿元",
+          "start": 982,
+          "end": 988
+        },
+        {
+          "value": "0.25",
+          "unit": "亿元",
+          "start": 995,
+          "end": 1001
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 921,
+      "end": 1002,
+      "text": "截至2024年12月31日，辽宁金凤经审计合并资产总额为1.49亿元，净资产为0.64亿元，2024年度实现合并营业收入为1.16亿元，合并净利润为0.25亿元。",
+      "quantities": [
+        {
+          "value": "1.49",
+          "unit": "亿元",
+          "start": 949,
+          "end": 955
+        },
+        {
+          "value": "0.64",
+          "unit": "亿元",
+          "start": 960,
+          "end": 966
+        },
+        {
+          "value": "1.16",
+          "unit": "亿元",
+          "start": 982,
+          "end": 988
+        },
+        {
+          "value": "0.25",
+          "unit": "亿元",
+          "start": 995,
+          "end": 1001
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1011,
+      "end": 1133,
+      "text": "我们预计2025-2027年，随着金价中枢稳健上移，公司黄金产销量稳中有升，预计归母净利润为47.45/62.45/73.51亿元，YOY为40.13%/31.61%/17.71%，对应PE为14.20/10.79/9.17，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "73.51",
+          "unit": "亿元",
+          "start": 1069,
+          "end": 1076
+        },
+        {
+          "value": "40.13",
+          "unit": "%",
+          "start": 1081,
+          "end": 1087
+        },
+        {
+          "value": "31.61",
+          "unit": "%",
+          "start": 1088,
+          "end": 1094
+        },
+        {
+          "value": "17.71",
+          "unit": "%",
+          "start": 1095,
+          "end": 1101
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1161,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1161,
+    "processed_ranges": [
+      [
+        0,
+        1161
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1161,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002559,
+  "source_content_sha256": "ccf307ddf50d43a6b14cb22daef2dc9d2c9a96e369844d270248c8aba5a615a1"
+}

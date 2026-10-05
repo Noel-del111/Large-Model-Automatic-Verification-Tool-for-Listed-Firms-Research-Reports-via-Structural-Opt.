@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"事件：2025年6月2日，公司发布公告粤丰环保从香港联交所退市。\"}, {\"text\": \"自24年7月7日瀚蓝环境启动私有化粤丰环保到24年6月2日粤丰环保从港交所退市，瀚蓝并购粤丰圆满落幕，25年6月起合并粤丰报表。\"}], \"reason\": \"粤丰环保退市日期前称2025年6月2日，后称24年6月2日；且区间自24年7月7日至24年6月2日，结束早于开始。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"1）规模扩张：并购后垃圾焚烧规模达到97590万平方米/日，国内行业排名前三、A股首位。\"}], \"reason\": \"垃圾焚烧规模应以吨/日为单位，平方米/日量纲错误。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"参照并购创冠，其盈利能力持续提升，ROE从14年5.1%降至24年10.7%。\"}], \"reason\": \"数值从5.1%升至10.7%，却使用“降至”，下降表述与数值上升冲突。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"此前参考粤丰环保24年可持续经营净利润，假设粤丰25Q2末并表，预计25-26年公司归母净利润18.6、21.2亿元，对应PE为10、9倍，粤丰实际并表时间较预期提前。\"}, {\"text\": \"我们维持2025-2027年归母净利润预测18.60、21.17、22.14亿元，对应PE为11/10/9倍，维持“买入”评级。\"}], \"reason\": \"同一报告2025年归母净利润18.6/18.60一致，但对应PE分别10倍和11倍；2026年净利润21.2与21.17、PE 9与10也不一致。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"24年瀚蓝环境剔除14号文影响后的经营性现金流净额33.15亿元，资本开支17.08亿元，简易自由现金流16.07亿元；24年粤丰环保剔除14号文影响后的经营性现金流净额18.67亿港元，资本开支5.07亿港元，简易自由现金流13.60亿港元（按0.92汇率换算约15.51亿元人民币）。\"}], \"reason\": \"13.60亿港元按0.92汇率换算，无论乘除均约12.51或14.78亿元人民币，非15.51亿元。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:58:30.625884+00:00",
+    "request_sha256": "5617765c619a2a07319d2fa1e6e0db1038d216128115e5c3f710db3eadb9ee0a",
+    "input_token_estimate": 16903,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279047",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ffac0890686347ce841309e0787ae120",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4051,
+    "output_tokens": 9316,
+    "usage_source": "provider",
+    "duration_seconds": 34.113267,
+    "cost_cny": "0.041315"
+  },
+  "cache_request": {
+    "key": "057c19a344788718b0d6e6b044d74ac57dbe275adc73f494167ed36caed8a9a4",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5617765c619a2a07319d2fa1e6e0db1038d216128115e5c3f710db3eadb9ee0a"
+  }
+}

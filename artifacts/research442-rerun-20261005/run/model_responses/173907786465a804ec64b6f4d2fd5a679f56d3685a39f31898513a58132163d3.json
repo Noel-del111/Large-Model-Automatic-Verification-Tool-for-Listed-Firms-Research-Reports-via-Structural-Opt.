@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"钙钛矿属于第三代锂离子电池，在性能和特点上具备诸多优势。\"}], \"reason\": \"钙钛矿属于太阳能电池，不是锂离子电池，术语类别错误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"根据极电自建的户外电站数据，钙钛矿组件阵列每天早晨比同地区晶硅组件阵列平均早启动约25分钟，晚上晚关断约20分钟，每天工作时长多出分钟左右，拥有优秀的弱光效应。\"}], \"reason\": \"“多出分钟左右”缺少具体数值，关键时长数值为空。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"目前钙钛矿设备投资较高，中性预测下，2026年钙钛矿设备市场空间有望达到112元。\"}], \"reason\": \"设备市场空间应为货币金额，单位“元”与后文“112亿元”矛盾，应为亿元。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"根据我们测算，效率提升至22%、25%、28%时，单瓦理想成本有望降至0.52、0.82、0.72、0.64元/W。\"}], \"reason\": \"三个效率值对应四个成本值，数量不匹配，且效率提升时成本未按预期单调下降。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"钙钛矿制备路线尚无明确答案，技术路线百花齐放，技术实力强的厂商有望充分受益。\"}, {\"text\": \"其他环节中镀膜和涂布均有自身技术特点，技术路线百花齐放。\"}], \"reason\": \"同一“技术路线百花齐放”信息在相邻句内不必要重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:30:46.806019+00:00",
+    "request_sha256": "2ad30ba90d0acb8429a93f29e99eb0f2dad6a388b0c927f53f6eb46c2646234b",
+    "input_token_estimate": 16281,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278425",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d79848b416134c30be88416ee79143d8",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3844,
+    "output_tokens": 5964,
+    "usage_source": "provider",
+    "duration_seconds": 24.525121,
+    "cost_cny": "0.0277"
+  },
+  "cache_request": {
+    "key": "173907786465a804ec64b6f4d2fd5a679f56d3685a39f31898513a58132163d3",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2ad30ba90d0acb8429a93f29e99eb0f2dad6a388b0c927f53f6eb46c2646234b"
+  }
+}

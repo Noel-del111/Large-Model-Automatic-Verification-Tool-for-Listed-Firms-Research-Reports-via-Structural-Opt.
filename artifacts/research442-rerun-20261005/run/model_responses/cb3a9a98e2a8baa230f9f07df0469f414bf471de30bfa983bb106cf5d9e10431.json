@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"公司2024-2022年分别实现营业收入40.67亿元/41.13亿元/55.42亿元，YOY依次为3.06%/1.12%/34.76%实现归母净利润1.54亿元/1.25亿元/1.66亿元，YOY依次为-44.40%/-18.89%/32.76%/25.21%。\"}],\"reason\":\"营收YOY与所列营收数据计算不符；归母净利润YOY列出4个数值但仅对应3个年度净利润，且与所列净利润数据不符。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"收入由2022年的2.19亿元显著减至2024年的7.14亿元；\"}],\"reason\":\"2022年2.19亿元到2024年7.14亿元为增长，不是“减至”，数字方向与表述矛盾。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年产量万吨、较2023年同比增长94.87%、预计市占率将进一步提升。\"}],\"reason\":\"“产量”后直接接“万吨”，缺少应报告的具体产量数值。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"目前该项目已提前建设，截至2024年末、累计转固2.92元。\"}],\"reason\":\"累计转固金额写为“2.92元”，通常应为亿元，单位量纲错误。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"据中国橡胶工业协会发布的《》，2022年与2023年公司尼龙帘子布国内市场占有率分别为12.72%、15.71%，相关产量在尼龙帘子布行业中排名第三、在尼龙6帘子布行业中排名第二。\"}],\"reason\":\"书名号《》内文件名称空白，引用文件标题缺失。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:11:53.444996+00:00",
+    "request_sha256": "50acc730b3ae691d2213edaeb5973fa76187375c2a1b6f19a77d4c61337e001c",
+    "input_token_estimate": 16454,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278598",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7cd9758af5bb4aa8bc91741744cae706",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3934,
+    "output_tokens": 8400,
+    "usage_source": "provider",
+    "duration_seconds": 31.904381,
+    "cost_cny": "0.037534"
+  },
+  "cache_request": {
+    "key": "cb3a9a98e2a8baa230f9f07df0469f414bf471de30bfa983bb106cf5d9e10431",
+    "purpose": "text_review.detect",
+    "messages_sha256": "50acc730b3ae691d2213edaeb5973fa76187375c2a1b6f19a77d4c61337e001c"
+  }
+}

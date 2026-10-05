@@ -1,0 +1,659 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000441",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "股票代码位置括号内为空，缺少公司证券代码。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 16,
+          "end": 22,
+          "text": "巴比食品()"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "巴比食品()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 16,
+          "end": 22,
+          "text": "巴比食品()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4f7e9490ddc6c1931bbea993",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "财务数据单位写作“亿分”，不是合法金额单位，应为“亿元”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 40,
+          "end": 103,
+          "text": "25Q1营业收入/归母净利/扣非归母净利分别为3.70/0.37/0.39亿分（同比+4.45%/-6.13%/+3.33%）"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q1营业收入/归母净利/扣非归母净利分别为3.70/0.37/0.39亿分（同比+4.45%/-6.13%/+3.33%）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 40,
+          "end": 103,
+          "text": "25Q1营业收入/归母净利/扣非归母净利分别为3.70/0.37/0.39亿分（同比+4.45%/-6.13%/+3.33%）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5efe1fb1fa1a9f03b1dfd24e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“环比新增”后缺少新增门店数量，无法核对净增与减少的关系。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 179,
+          "end": 213,
+          "text": "Q1加盟店环比新增//环比减少210家、环比净增501家至5644家"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Q1加盟店环比新增//环比减少210家、环比净增501家至5644家"
+        }
+      ],
+      "spans": [
+        {
+          "start": 179,
+          "end": 213,
+          "text": "Q1加盟店环比新增//环比减少210家、环比净增501家至5644家"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "06604b7db8750a5ecdb20155",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“巴比九江并表门店浔味来”后缺少并表门店数量，信息不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 214,
+          "end": 239,
+          "text": "其中青露并表门店504家、巴比九江并表门店浔味来。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中青露并表门店504家、巴比九江并表门店浔味来。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 214,
+          "end": 239,
+          "text": "其中青露并表门店504家、巴比九江并表门店浔味来。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "40b77ad3bcd761e94a035711",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "团餐收入9.31亿元超过同期总营收3.70亿元，与占比25.2%矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 246,
+          "end": 301,
+          "text": "Q1团餐收入同比+11.7%至9.31亿元，占比+1.6pct至25.2%，盒马、美团等新零售大客户增长迅速。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Q1团餐收入同比+11.7%至9.31亿元，占比+1.6pct至25.2%，盒马、美团等新零售大客户增长迅速。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 246,
+          "end": 301,
+          "text": "Q1团餐收入同比+11.7%至9.31亿元，占比+1.6pct至25.2%，盒马、美团等新零售大客户增长迅速。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ab52e59cb25a31d7ef1d5769",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1017
+        ]
+      ],
+      "estimated_input_tokens": 5417,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:02:38.454067+00:00",
+        "request_sha256": "b31b720ede33509895ffecb8bedacf5917f98f1b41a7de307c0c0e956824243b",
+        "input_token_estimate": 15132,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277276",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3651ef246dd146b8ade9053193a5e7d5",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3753,
+        "output_tokens": 4882,
+        "usage_source": "provider",
+        "duration_seconds": 19.406842,
+        "cost_cny": "0.023281"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "巴比食品()"
+          }
+        ],
+        "reason": "股票代码位置括号内为空，缺少公司证券代码。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "25Q1营业收入/归母净利/扣非归母净利分别为3.70/0.37/0.39亿分（同比+4.45%/-6.13%/+3.33%）"
+          }
+        ],
+        "reason": "财务数据单位写作“亿分”，不是合法金额单位，应为“亿元”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "Q1加盟店环比新增//环比减少210家、环比净增501家至5644家"
+          }
+        ],
+        "reason": "“环比新增”后缺少新增门店数量，无法核对净增与减少的关系。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "其中青露并表门店504家、巴比九江并表门店浔味来。"
+          }
+        ],
+        "reason": "“巴比九江并表门店浔味来”后缺少并表门店数量，信息不完整。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "Q1团餐收入同比+11.7%至9.31亿元，占比+1.6pct至25.2%，盒马、美团等新零售大客户增长迅速。"
+          }
+        ],
+        "reason": "团餐收入9.31亿元超过同期总营收3.70亿元，与占比25.2%矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 24,
+      "end": 104,
+      "text": "事件：公司发布2025年一季报，25Q1营业收入/归母净利/扣非归母净利分别为3.70/0.37/0.39亿分（同比+4.45%/-6.13%/+3.33%）\n",
+      "quantities": [
+        {
+          "value": "+4.45",
+          "unit": "%",
+          "start": 82,
+          "end": 88
+        },
+        {
+          "value": "-6.13",
+          "unit": "%",
+          "start": 89,
+          "end": 95
+        },
+        {
+          "value": "+3.33",
+          "unit": "%",
+          "start": 96,
+          "end": 102
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 130,
+      "end": 239,
+      "text": "品牌门店：Q1特许加盟/直营收入分别为2.65/0.05亿元（同比+2.75%/-10.16%），Q1加盟店环比新增//环比减少210家、环比净增501家至5644家，其中青露并表门店504家、巴比九江并表门店浔味来。",
+      "quantities": [
+        {
+          "value": "0.05",
+          "unit": "亿元",
+          "start": 154,
+          "end": 160
+        },
+        {
+          "value": "+2.75",
+          "unit": "%",
+          "start": 163,
+          "end": 169
+        },
+        {
+          "value": "-10.16",
+          "unit": "%",
+          "start": 170,
+          "end": 177
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 452,
+      "end": 528,
+      "text": "25Q1扣非净利率同比-0.1pct至10.5%、净利率-1.3pct，其中：1）毛利率同/环比-0.4/-2.0pct，系武汉工厂投产后折旧摊销增加；",
+      "quantities": [
+        {
+          "value": "10.5",
+          "unit": "%",
+          "start": 471,
+          "end": 476
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 452,
+      "end": 528,
+      "text": "25Q1扣非净利率同比-0.1pct至10.5%、净利率-1.3pct，其中：1）毛利率同/环比-0.4/-2.0pct，系武汉工厂投产后折旧摊销增加；",
+      "quantities": [
+        {
+          "value": "10.5",
+          "unit": "%",
+          "start": 471,
+          "end": 476
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 452,
+      "end": 528,
+      "text": "25Q1扣非净利率同比-0.1pct至10.5%、净利率-1.3pct，其中：1）毛利率同/环比-0.4/-2.0pct，系武汉工厂投产后折旧摊销增加；",
+      "quantities": [
+        {
+          "value": "10.5",
+          "unit": "%",
+          "start": 471,
+          "end": 476
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 776,
+      "end": 980,
+      "text": "结合一季报，考虑非经常性损益带来的影响，我们调整盈利预测，预计25-27年公司收入增速为10%/9%/8%，总营收为18.5/20.1/21.7亿元（25-27年前值为18.7/20.6/22.2亿元），归母净利润增速分别为-3.9%/+10.3%/+11.3%，归母净利润为2.7/2.9/3.3亿元（25-27年前值为2.8/3.1/3.5亿元），对应PE分别为18X/16X/14X，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 820,
+          "end": 823
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 824,
+          "end": 826
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 827,
+          "end": 829
+        },
+        {
+          "value": "21.7",
+          "unit": "亿元",
+          "start": 844,
+          "end": 850
+        },
+        {
+          "value": "22.2",
+          "unit": "亿元",
+          "start": 870,
+          "end": 876
+        },
+        {
+          "value": "-3.9",
+          "unit": "%",
+          "start": 888,
+          "end": 893
+        },
+        {
+          "value": "+10.3",
+          "unit": "%",
+          "start": 894,
+          "end": 900
+        },
+        {
+          "value": "+11.3",
+          "unit": "%",
+          "start": 901,
+          "end": 907
+        },
+        {
+          "value": "3.3",
+          "unit": "亿元",
+          "start": 922,
+          "end": 927
+        },
+        {
+          "value": "3.5",
+          "unit": "亿元",
+          "start": 945,
+          "end": 950
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 776,
+      "end": 980,
+      "text": "结合一季报，考虑非经常性损益带来的影响，我们调整盈利预测，预计25-27年公司收入增速为10%/9%/8%，总营收为18.5/20.1/21.7亿元（25-27年前值为18.7/20.6/22.2亿元），归母净利润增速分别为-3.9%/+10.3%/+11.3%，归母净利润为2.7/2.9/3.3亿元（25-27年前值为2.8/3.1/3.5亿元），对应PE分别为18X/16X/14X，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 820,
+          "end": 823
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 824,
+          "end": 826
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 827,
+          "end": 829
+        },
+        {
+          "value": "21.7",
+          "unit": "亿元",
+          "start": 844,
+          "end": 850
+        },
+        {
+          "value": "22.2",
+          "unit": "亿元",
+          "start": 870,
+          "end": 876
+        },
+        {
+          "value": "-3.9",
+          "unit": "%",
+          "start": 888,
+          "end": 893
+        },
+        {
+          "value": "+10.3",
+          "unit": "%",
+          "start": 894,
+          "end": 900
+        },
+        {
+          "value": "+11.3",
+          "unit": "%",
+          "start": 901,
+          "end": 907
+        },
+        {
+          "value": "3.3",
+          "unit": "亿元",
+          "start": 922,
+          "end": 927
+        },
+        {
+          "value": "3.5",
+          "unit": "亿元",
+          "start": 945,
+          "end": 950
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 776,
+      "end": 980,
+      "text": "结合一季报，考虑非经常性损益带来的影响，我们调整盈利预测，预计25-27年公司收入增速为10%/9%/8%，总营收为18.5/20.1/21.7亿元（25-27年前值为18.7/20.6/22.2亿元），归母净利润增速分别为-3.9%/+10.3%/+11.3%，归母净利润为2.7/2.9/3.3亿元（25-27年前值为2.8/3.1/3.5亿元），对应PE分别为18X/16X/14X，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 820,
+          "end": 823
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 824,
+          "end": 826
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 827,
+          "end": 829
+        },
+        {
+          "value": "21.7",
+          "unit": "亿元",
+          "start": 844,
+          "end": 850
+        },
+        {
+          "value": "22.2",
+          "unit": "亿元",
+          "start": 870,
+          "end": 876
+        },
+        {
+          "value": "-3.9",
+          "unit": "%",
+          "start": 888,
+          "end": 893
+        },
+        {
+          "value": "+10.3",
+          "unit": "%",
+          "start": 894,
+          "end": 900
+        },
+        {
+          "value": "+11.3",
+          "unit": "%",
+          "start": 901,
+          "end": 907
+        },
+        {
+          "value": "3.3",
+          "unit": "亿元",
+          "start": 922,
+          "end": 927
+        },
+        {
+          "value": "3.5",
+          "unit": "亿元",
+          "start": 945,
+          "end": 950
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1017,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1017,
+    "processed_ranges": [
+      [
+        0,
+        1017
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 19.432135,
+  "source_content_sha256": "7369d495793b7291cd87c3d7f344dc0e75d12b7d2b46da8351f92fc7b5c9bec5"
+}

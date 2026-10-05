@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"5月23日，129年第九届世界无人机大会在深圳举行。\"}], \"reason\": \"年份“129年”不构成合法公元年份，应写实际年份。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"5月23日，前4月智能机器人销售额同比大增超成；\"}], \"reason\": \"“超成”缺少具体成数，数值位置为空。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"5月20日，浙江省人民政府印发《》。\"}], \"reason\": \"书名号内文件名称缺失，非数值属性值为空。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"5月21日，小鹏汽车将于2023年内推出面向工业和商业场景的人形机器人；\"}], \"reason\": \"报告时间为2025年5月，所述“2023年内推出”已成为过去，时间关系冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:26:11.619507+00:00",
+    "request_sha256": "686bd0be8789a9a2290452f5a2a05c39179865bd19b99287074c3fa6fc4e77a1",
+    "input_token_estimate": 17692,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279836",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c69ff703158b455c8c62cd9499e39830",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4176,
+    "output_tokens": 6473,
+    "usage_source": "provider",
+    "duration_seconds": 24.911986,
+    "cost_cny": "0.030068"
+  },
+  "cache_request": {
+    "key": "7ca6c9f82284efb71cd411447cc869e4f299345961f54fe711e6d259f46fb4ce",
+    "purpose": "text_review.detect",
+    "messages_sha256": "686bd0be8789a9a2290452f5a2a05c39179865bd19b99287074c3fa6fc4e77a1"
+  }
+}

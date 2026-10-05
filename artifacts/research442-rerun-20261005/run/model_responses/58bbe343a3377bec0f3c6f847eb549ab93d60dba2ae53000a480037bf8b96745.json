@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"当周（2023年12月30日-2024年01月05日）全国各类型银行共发行理财产品 只，环比减少123只。\"}],\"reason\":\"“共发行理财产品 只”中明确数量位置为空，未给出具体发行只数。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"当周发行固定收益类产品数量435只，较上周少发产品125只；\"},{\"text\":\"在当周新发的480只固定收益类产品中，来自理财子公司的产品最多，为189只，相比上周减少73只。\"}],\"reason\":\"同一周固定收益类产品发行量先写435只，后又写新发480只，同一对象同期数值冲突。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"当周，净值数据有效的产品数量为14914只，净值回落的数量为2603只，净值回落产品占比27.45%。\"}],\"reason\":\"2603÷14914≈17.45%，与文中27.45%不符，占比计算不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:12:36.941540+00:00",
+    "request_sha256": "3817e9ac0cf6873978e4ee4b26a000bd7bbf5d9e99a4d34f1c22b51770c79594",
+    "input_token_estimate": 11717,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.273861",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4e5af15b3f204bafb00f18f9a7fa202b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 2736,
+    "output_tokens": 3031,
+    "usage_source": "provider",
+    "duration_seconds": 12.347304,
+    "cost_cny": "0.01486"
+  },
+  "cache_request": {
+    "key": "58bbe343a3377bec0f3c6f847eb549ab93d60dba2ae53000a480037bf8b96745",
+    "purpose": "text_review.detect",
+    "messages_sha256": "3817e9ac0cf6873978e4ee4b26a000bd7bbf5d9e99a4d34f1c22b51770c79594"
+  }
+}

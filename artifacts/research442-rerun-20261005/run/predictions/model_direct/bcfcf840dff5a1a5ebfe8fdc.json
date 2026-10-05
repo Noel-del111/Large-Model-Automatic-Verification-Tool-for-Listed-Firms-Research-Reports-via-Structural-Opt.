@@ -1,0 +1,196 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000698",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一装置运行参数中“百万安培”与“一百万亿安培”量级冲突，后者远超前者。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 79,
+          "end": 186,
+          "text": "近日，中核集团核工业西南物理研究院宣布，新一代人造太阳“中国环流三号”实现了百万安培亿度高约束模式（H模）运行，等离子体电流达到一百万亿安培，离子温度达到1亿度，综合参数聚变三乘积再创新高，达到10的20次方量级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近日，中核集团核工业西南物理研究院宣布，新一代人造太阳“中国环流三号”实现了百万安培亿度高约束模式（H模）运行，等离子体电流达到一百万亿安培，离子温度达到1亿度，综合参数聚变三乘积再创新高，达到10的20次方量级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 79,
+          "end": 186,
+          "text": "近日，中核集团核工业西南物理研究院宣布，新一代人造太阳“中国环流三号”实现了百万安培亿度高约束模式（H模）运行，等离子体电流达到一百万亿安培，离子温度达到1亿度，综合参数聚变三乘积再创新高，达到10的20次方量级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8ca5ae0b917f8d495334ddbb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“平顶s”前缺少平顶持续时间的具体数值，仅有单位“s”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 441,
+          "end": 520,
+          "text": "技术突破：环向场（TF）线圈成功实现150kA电流、平顶s的稳定通流，对应装置大半径0.6米处的磁场强度达1.2T，同步验证了磁体线圈达到工程满负荷运行参数。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "技术突破：环向场（TF）线圈成功实现150kA电流、平顶s的稳定通流，对应装置大半径0.6米处的磁场强度达1.2T，同步验证了磁体线圈达到工程满负荷运行参数。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 441,
+          "end": 520,
+          "text": "技术突破：环向场（TF）线圈成功实现150kA电流、平顶s的稳定通流，对应装置大半径0.6米处的磁场强度达1.2T，同步验证了磁体线圈达到工程满负荷运行参数。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7b631ae093a7b7d2db803009",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          858
+        ]
+      ],
+      "estimated_input_tokens": 5478,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:14:39.890697+00:00",
+        "request_sha256": "fc78737c6e3c200aadbd115d16cc6ae10eff38f4b6103000848e5d053fad618d",
+        "input_token_estimate": 15240,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277384",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6e5ca7b1426644c59ff8d4d2a292b460",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3601,
+        "output_tokens": 8429,
+        "usage_source": "provider",
+        "duration_seconds": 36.446016,
+        "cost_cny": "0.037317"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "近日，中核集团核工业西南物理研究院宣布，新一代人造太阳“中国环流三号”实现了百万安培亿度高约束模式（H模）运行，等离子体电流达到一百万亿安培，离子温度达到1亿度，综合参数聚变三乘积再创新高，达到10的20次方量级。"
+          }
+        ],
+        "reason": "同一装置运行参数中“百万安培”与“一百万亿安培”量级冲突，后者远超前者。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "技术突破：环向场（TF）线圈成功实现150kA电流、平顶s的稳定通流，对应装置大半径0.6米处的磁场强度达1.2T，同步验证了磁体线圈达到工程满负荷运行参数。"
+          }
+        ],
+        "reason": "“平顶s”前缺少平顶持续时间的具体数值，仅有单位“s”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 858,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 858,
+    "processed_ranges": [
+      [
+        0,
+        858
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 36.471834,
+  "source_content_sha256": "0585e44bfd7636abf79a0b03d19a6a64bda3b82ea5bb43543bb62cb1614a70c3"
+}

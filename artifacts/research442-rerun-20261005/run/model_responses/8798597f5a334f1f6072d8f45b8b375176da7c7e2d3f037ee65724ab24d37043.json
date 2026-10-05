@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。\"}],\"reason\":\"“中证REITs（）指数”括号内为空，缺失指数类别“收盘”。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。\"}],\"reason\":\"全收益指数数值“1090.07”后连续两个逗号，中间缺少同比数值。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"本周REITs市场交易规模成交量达5.41亿份，同比增长58.65%；成交额达23.81亿分，同比增长74.69%；区间换手率2.79%，同比增长1.45%。\"}],\"reason\":\"成交额单位写成“亿分”，应为“亿元”。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。\"},{\"text\":\"2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。\"}],\"reason\":\"第22周与第21周的中证REITs指数、全收益指数及同比环比数值完全相同，期间标注与数据冲突。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。\"}],\"reason\":\"报告期为2025年第21周，却写“2024年年初至今累计上涨”，年份与报告期矛盾。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"华能国际电力以公司全资附属公司华能青岛热电有限公司拥有的的华能董家口热电联产项目及新上锅炉项目作为基础设施公募REIT的底层资产申请，于上交所公开发行并上市公开募集基础设施证券投资基金。\"}],\"reason\":\"“拥有的的”连续重复“的”，多余字符。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"中金中国绿发商业REIT首次发行拟投资的基础设施资产为领秀城贵和购物中心，领秀城贵和购物中心位于山东省济南市市中区，合计建筑面积达到20.09万平方米。\"}],\"reason\":\"“领秀城贵和购物中心”连续重复出现，信息冗余。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:51:24.602606+00:00",
+    "request_sha256": "b4d724996f807bb7f2eee141c2a44bba8cc999f5b328904c6af42f6f84fa6a87",
+    "input_token_estimate": 15920,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278064",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b28a69e7b1df4f4192dadeb1f9b37df9",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3867,
+    "output_tokens": 11892,
+    "usage_source": "provider",
+    "duration_seconds": 47.455899,
+    "cost_cny": "0.051435"
+  },
+  "cache_request": {
+    "key": "8798597f5a334f1f6072d8f45b8b375176da7c7e2d3f037ee65724ab24d37043",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b4d724996f807bb7f2eee141c2a44bba8cc999f5b328904c6af42f6f84fa6a87"
+  }
+}

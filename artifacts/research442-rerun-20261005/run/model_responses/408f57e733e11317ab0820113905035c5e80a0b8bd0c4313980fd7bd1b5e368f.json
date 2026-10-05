@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"2025年5月30-26日\"}], \"reason\": \"起止日期为5月30日至5月26日，终点早于起点，期间不成立。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"与申万31个一级行业指数涨跌幅排名比较中排名第32\"}], \"reason\": \"申万一级行业共31个，排名第32超出总数范围。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"具身智能指数成分股合计成交量达144.4亿吨\"}], \"reason\": \"股票成交量单位通常为股或手，用“亿吨”表示成交量单位错误。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"宇树科技合作的《》在杭举办\"}], \"reason\": \"合作名称在书名号内为空，非数值属性值缺失。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:24:00.531667+00:00",
+    "request_sha256": "2408014e60b3288d888820a3a88724cfa6826ba900694ecfa7a37fea4039f124",
+    "input_token_estimate": 16499,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278643",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "bfa558bb728643d6b489902107875cf4",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3910,
+    "output_tokens": 5051,
+    "usage_source": "provider",
+    "duration_seconds": 21.141509,
+    "cost_cny": "0.024114"
+  },
+  "cache_request": {
+    "key": "408f57e733e11317ab0820113905035c5e80a0b8bd0c4313980fd7bd1b5e368f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2408014e60b3288d888820a3a88724cfa6826ba900694ecfa7a37fea4039f124"
+  }
+}

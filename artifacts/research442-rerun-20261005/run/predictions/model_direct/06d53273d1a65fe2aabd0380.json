@@ -1,0 +1,563 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000380",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 429,
+          "end": 487,
+          "text": "5月0日，苹果向渠道商下发了调价通知，宣布iPhone16ProMax、iPhone16Pro将降价，降幅超过千元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月0日，苹果向渠道商下发了调价通知，宣布iPhone16ProMax、iPhone16Pro将降价，降幅超过千元。",
+          "reason": "“5月0日”不是合法日期，每月无0日。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 429,
+          "end": 487,
+          "text": "5月0日，苹果向渠道商下发了调价通知，宣布iPhone16ProMax、iPhone16Pro将降价，降幅超过千元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "af7a258fc207bcd0798bfb7c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一信息不必要地重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1304,
+          "end": 1406,
+          "text": "苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；",
+          "reason": "同一信息连续重复一次，未增添新内容。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1304,
+          "end": 1406,
+          "text": "苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e6203f71752fb40b88c5e9bd",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "明确的计算关系不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 221,
+          "end": 379,
+          "text": "公司应收账款较2023年同期减少5.63亿元，同比下降32.30%，财务费用降低8,025.18万元，降幅达51.72%，负债总额同比下降10.45%，资产负债率从48.70%降低至45.55%，下降5.15个百分点；通过优化业务合作，聚焦核心业务与优势领域，公司全年毛利率从2023年的3.25%提升至4.40%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司应收账款较2023年同期减少5.63亿元，同比下降32.30%，财务费用降低8,025.18万元，降幅达51.72%，负债总额同比下降10.45%，资产负债率从48.70%降低至45.55%，下降5.15个百分点；通过优化业务合作，聚焦核心业务与优势领域，公司全年毛利率从2023年的3.25%提升至4.40%。",
+          "reason": "48.70%减45.55%等于3.15个百分点，不是5.15个百分点。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 221,
+          "end": 379,
+          "text": "公司应收账款较2023年同期减少5.63亿元，同比下降32.30%，财务费用降低8,025.18万元，降幅达51.72%，负债总额同比下降10.45%，资产负债率从48.70%降低至45.55%，下降5.15个百分点；通过优化业务合作，聚焦核心业务与优势领域，公司全年毛利率从2023年的3.25%提升至4.40%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "587d400665afa8efd8471c1d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同一条件下命题不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1843,
+          "end": 1873,
+          "text": "公司积极布局AI算力服务业务，未来将不会对业绩造成任何影响。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司积极布局AI算力服务业务，未来将不会对业绩造成任何影响。",
+          "reason": "积极布局并开启第二增长曲线，却称不会对业绩造成影响，前后矛盾。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1843,
+          "end": 1873,
+          "text": "公司积极布局AI算力服务业务，未来将不会对业绩造成任何影响。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7a10b62dbe8eaf381132a1fe",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "年份区间倒置。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1881,
+          "end": 2044,
+          "text": "预测公司2027-2025年收入分别为711.52、782.67、853.12亿元，EPS分别为0.54、0.66、0.71元，当前股价对应PE分别为21.4、17.6、16.4倍，苹果手机降价叠加国补，有望提升手机销售量，并且为新一代iPhone17系列预热，公司布局AI算力业务，有望为公司业绩赋能，给予“买入”投资评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预测公司2027-2025年收入分别为711.52、782.67、853.12亿元，EPS分别为0.54、0.66、0.71元，当前股价对应PE分别为21.4、17.6、16.4倍，苹果手机降价叠加国补，有望提升手机销售量，并且为新一代iPhone17系列预热，公司布局AI算力业务，有望为公司业绩赋能，给予“买入”投资评级。",
+          "reason": "年份区间写成2027-2025，终点早于起点，时间关系冲突。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1881,
+          "end": 2044,
+          "text": "预测公司2027-2025年收入分别为711.52、782.67、853.12亿元，EPS分别为0.54、0.66、0.71元，当前股价对应PE分别为21.4、17.6、16.4倍，苹果手机降价叠加国补，有望提升手机销售量，并且为新一代iPhone17系列预热，公司布局AI算力业务，有望为公司业绩赋能，给予“买入”投资评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ffa48f3142f9fc50d2631c37",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "金融术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2080,
+          "end": 2097,
+          "text": "国内互联网大厂资本开资不及预期风险"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "国内互联网大厂资本开资不及预期风险",
+          "reason": "标准术语为“资本开支”或“资本支出”，“资本开资”使用不当。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2080,
+          "end": 2097,
+          "text": "国内互联网大厂资本开资不及预期风险"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "093564171f44a35eae1d57ac",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2098
+        ]
+      ],
+      "estimated_input_tokens": 6448,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:53:16.170680+00:00",
+        "request_sha256": "ccc21f5fd6f1023e857a237da9d8f4eac1653b4eaba84af6d9e53d4472eb0824",
+        "input_token_estimate": 18027,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280171",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "989a46554b1e460584d3c192ab6cb33d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4245,
+        "output_tokens": 9295,
+        "usage_source": "provider",
+        "duration_seconds": 35.030679,
+        "cost_cny": "0.041425"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "5月0日，苹果向渠道商下发了调价通知，宣布iPhone16ProMax、iPhone16Pro将降价，降幅超过千元。",
+            "reason": "“5月0日”不是合法日期，每月无0日。"
+          }
+        ],
+        "reason": "日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；苹果业务板块O2O销量持续提升；Coodoo通过流量运营策略优化，线上即时零售销售额同比增长超50%；",
+            "reason": "同一信息连续重复一次，未增添新内容。"
+          }
+        ],
+        "reason": "同一信息不必要地重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司应收账款较2023年同期减少5.63亿元，同比下降32.30%，财务费用降低8,025.18万元，降幅达51.72%，负债总额同比下降10.45%，资产负债率从48.70%降低至45.55%，下降5.15个百分点；通过优化业务合作，聚焦核心业务与优势领域，公司全年毛利率从2023年的3.25%提升至4.40%。",
+            "reason": "48.70%减45.55%等于3.15个百分点，不是5.15个百分点。"
+          }
+        ],
+        "reason": "明确的计算关系不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司积极布局AI算力服务业务，未来将不会对业绩造成任何影响。",
+            "reason": "积极布局并开启第二增长曲线，却称不会对业绩造成影响，前后矛盾。"
+          }
+        ],
+        "reason": "同一条件下命题不能同时成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "预测公司2027-2025年收入分别为711.52、782.67、853.12亿元，EPS分别为0.54、0.66、0.71元，当前股价对应PE分别为21.4、17.6、16.4倍，苹果手机降价叠加国补，有望提升手机销售量，并且为新一代iPhone17系列预热，公司布局AI算力业务，有望为公司业绩赋能，给予“买入”投资评级。",
+            "reason": "年份区间写成2027-2025，终点早于起点，时间关系冲突。"
+          }
+        ],
+        "reason": "年份区间倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "国内互联网大厂资本开资不及预期风险",
+            "reason": "标准术语为“资本开支”或“资本支出”，“资本开资”使用不当。"
+          }
+        ],
+        "reason": "金融术语使用不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 55,
+      "end": 110,
+      "text": "公司发布2024年年报以及2025年一季报：2024年全年实现营业收入658.21亿元，同比下降28.58%；",
+      "quantities": [
+        {
+          "value": "658.21",
+          "unit": "亿元",
+          "start": 90,
+          "end": 98
+        },
+        {
+          "value": "28.58",
+          "unit": "%",
+          "start": 103,
+          "end": 109
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 110,
+      "end": 133,
+      "text": "归母净利润5.81亿元，同比下降11.26%；",
+      "quantities": [
+        {
+          "value": "5.81",
+          "unit": "亿元",
+          "start": 115,
+          "end": 121
+        },
+        {
+          "value": "11.26",
+          "unit": "%",
+          "start": 126,
+          "end": 132
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 133,
+      "end": 168,
+      "text": "2025年第一季度实现营业收入127.37亿元，同比下降41.18%；",
+      "quantities": [
+        {
+          "value": "127.37",
+          "unit": "亿元",
+          "start": 148,
+          "end": 156
+        },
+        {
+          "value": "41.18",
+          "unit": "%",
+          "start": 161,
+          "end": 167
+        }
+      ],
+      "periods": [
+        "2025年第一季度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 168,
+      "end": 191,
+      "text": "归母净利润1.26亿元，同比下降24.89%。",
+      "quantities": [
+        {
+          "value": "1.26",
+          "unit": "亿元",
+          "start": 173,
+          "end": 179
+        },
+        {
+          "value": "24.89",
+          "unit": "%",
+          "start": 184,
+          "end": 190
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "debt_ratio",
+      "metric_text": "资产负债率",
+      "start": 221,
+      "end": 330,
+      "text": "公司应收账款较2023年同期减少5.63亿元，同比下降32.30%，财务费用降低8,025.18万元，降幅达51.72%，负债总额同比下降10.45%，资产负债率从48.70%降低至45.55%，下降5.15个百分点；",
+      "quantities": [
+        {
+          "value": "5.63",
+          "unit": "亿元",
+          "start": 237,
+          "end": 243
+        },
+        {
+          "value": "32.30",
+          "unit": "%",
+          "start": 248,
+          "end": 254
+        },
+        {
+          "value": "8,025.18",
+          "unit": "万元",
+          "start": 261,
+          "end": 271
+        },
+        {
+          "value": "51.72",
+          "unit": "%",
+          "start": 275,
+          "end": 281
+        },
+        {
+          "value": "10.45",
+          "unit": "%",
+          "start": 290,
+          "end": 296
+        },
+        {
+          "value": "48.70",
+          "unit": "%",
+          "start": 303,
+          "end": 309
+        },
+        {
+          "value": "45.55",
+          "unit": "%",
+          "start": 312,
+          "end": 318
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 330,
+      "end": 379,
+      "text": "通过优化业务合作，聚焦核心业务与优势领域，公司全年毛利率从2023年的3.25%提升至4.40%。",
+      "quantities": [
+        {
+          "value": "3.25",
+          "unit": "%",
+          "start": 365,
+          "end": 370
+        },
+        {
+          "value": "4.40",
+          "unit": "%",
+          "start": 373,
+          "end": 378
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2098,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2098,
+    "processed_ranges": [
+      [
+        0,
+        2098
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 35.057828,
+  "source_content_sha256": "c1c656f32ac13b26928553960165c2330e5548976d5b5adde7a907186dd4a25d"
+}

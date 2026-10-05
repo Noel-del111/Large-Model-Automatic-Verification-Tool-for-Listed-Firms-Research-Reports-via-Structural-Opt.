@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"一是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；四是拉长久期与提前锁定收益：积极地配置长久期利率债和高信用等级的非标资产（如优质基础设施债权计划），承担一定流动性风险（如地方债）换取收益溢价；\"}], \"reason\": \"同一“拉长久期与提前锁定收益”应对措施连续重复，且序号“四是”与“一是”内容完全相同。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"三是拓展多元化另类投资：战略性地增加对黄金、私募股权（PE）、风险投资（）、对冲基金、核心不动产等另类资产的配置比例，有助于提升整体组合的预期收益并分散风险。\"}], \"reason\": \"“风险投资”后括号内应标注简称或名称，但括号为空，非数值属性值缺失。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"风险提示：票房收入增速不及预期；三方业务承压；长端利率下行；资本市场波动等。\"}], \"reason\": \"保险资管篇风险提示出现“票房收入增速”，与保险资管业务无关，行业术语使用不当。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:58:16.445843+00:00",
+    "request_sha256": "5e6d718808501bf629ee17b071b3bfc204da0688e44d566ba56511a33ab01566",
+    "input_token_estimate": 15804,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277948",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "5c0b0165ecd247b99c2ad9c0063ac813",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3633,
+    "output_tokens": 5787,
+    "usage_source": "provider",
+    "duration_seconds": 25.238222,
+    "cost_cny": "0.026781"
+  },
+  "cache_request": {
+    "key": "5f9334225a837784bfe4119e0d970dadb76b9e70072dad6d6dee250cc6e78a47",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5e6d718808501bf629ee17b071b3bfc204da0688e44d566ba56511a33ab01566"
+  }
+}

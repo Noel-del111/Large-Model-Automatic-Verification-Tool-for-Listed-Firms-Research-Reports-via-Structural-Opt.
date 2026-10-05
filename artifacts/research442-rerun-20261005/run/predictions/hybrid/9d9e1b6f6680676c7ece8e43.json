@@ -1,0 +1,336 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000333",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "两句话实质报告同一业务收入及增速，构成不必要的重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 41,
+          "end": 79,
+          "text": "公司2024年半导体和泛半导体领域业务收入达到5100万，较上年增加82%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 79,
+          "end": 121,
+          "text": "公司2024年度在半导体和泛半导体板块实现营业收入5,100万元，同比增幅达82%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司2024年半导体和泛半导体领域业务收入达到5100万，较上年增加82%。"
+        },
+        {
+          "text": "公司2024年度在半导体和泛半导体板块实现营业收入5,100万元，同比增幅达82%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 41,
+          "end": 79,
+          "text": "公司2024年半导体和泛半导体领域业务收入达到5100万，较上年增加82%。"
+        },
+        {
+          "start": 79,
+          "end": 121,
+          "text": "公司2024年度在半导体和泛半导体板块实现营业收入5,100万元，同比增幅达82%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a6795c89bc864d91968c1f43",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收金额单位误用体积单位“升”，应为“元”或“万元”等货币单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 121,
+          "end": 172,
+          "text": "其中半导体业务包括光刻、封测等场景，实现营收约1770万升，产品形态包括应用于成熟制程的平行光源系统；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中半导体业务包括光刻、封测等场景，实现营收约1770万升，产品形态包括应用于成熟制程的平行光源系统；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 121,
+          "end": 172,
+          "text": "其中半导体业务包括光刻、封测等场景，实现营收约1770万升，产品形态包括应用于成熟制程的平行光源系统；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3fca7c5432e5c5b897487387",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1522
+        ]
+      ],
+      "estimated_input_tokens": 6145,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:14:04.834801+00:00",
+        "request_sha256": "b6f96ae7d7cc9a82da1cdcfbe768a160023984902ea9fcc92ebb081374668798",
+        "input_token_estimate": 17071,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279215",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "67ac3c07598c49518bfe6bfb61465cfe",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3943,
+        "output_tokens": 3623,
+        "usage_source": "provider",
+        "duration_seconds": 14.873826,
+        "cost_cny": "0.018435",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司2024年半导体和泛半导体领域业务收入达到5100万，较上年增加82%。"
+          },
+          {
+            "text": "公司2024年度在半导体和泛半导体板块实现营业收入5,100万元，同比增幅达82%。"
+          }
+        ],
+        "reason": "两句话实质报告同一业务收入及增速，构成不必要的重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "其中半导体业务包括光刻、封测等场景，实现营收约1770万升，产品形态包括应用于成熟制程的平行光源系统；"
+          }
+        ],
+        "reason": "营收金额单位误用体积单位“升”，应为“元”或“万元”等货币单位。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 79,
+      "end": 121,
+      "text": "公司2024年度在半导体和泛半导体板块实现营业收入5,100万元，同比增幅达82%。",
+      "quantities": [
+        {
+          "value": "5,100",
+          "unit": "万元",
+          "start": 104,
+          "end": 111
+        },
+        {
+          "value": "82",
+          "unit": "%",
+          "start": 117,
+          "end": 120
+        }
+      ],
+      "periods": [
+        "2024年度"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 121,
+      "end": 172,
+      "text": "其中半导体业务包括光刻、封测等场景，实现营收约1770万升，产品形态包括应用于成熟制程的平行光源系统；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 483,
+      "end": 643,
+      "text": "2024年，公司实现营收4.16亿元，同比增长14.32%，其中，受益于国内飞秒紫外远心场镜等智能制造、泛半导体领域产品表现良好以及境外销售增长，公司激光光学领域收入2.69亿元，同比增长22.17%，其中适用于高密度柔性小型化的PCB精密激光微加工镜头较上年度实现突破，成功为客户实现进口替代，订单金额较上年大幅增加；",
+      "quantities": [
+        {
+          "value": "4.16",
+          "unit": "亿元",
+          "start": 495,
+          "end": 501
+        },
+        {
+          "value": "14.32",
+          "unit": "%",
+          "start": 506,
+          "end": 512
+        },
+        {
+          "value": "2.69",
+          "unit": "亿元",
+          "start": 566,
+          "end": 572
+        },
+        {
+          "value": "22.17",
+          "unit": "%",
+          "start": 577,
+          "end": 583
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 924,
+      "end": 965,
+      "text": "同时公司新拓展消费级光学市场，2024年，公司AR/VR业务实现营收约550万元。",
+      "quantities": [
+        {
+          "value": "550",
+          "unit": "万元",
+          "start": 959,
+          "end": 964
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "同时公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1347,
+      "end": 1429,
+      "text": "我们预计公司2025/2026/2027年分别实现收入5.4/7.0/9.1亿元，实现归母净利润分别为0.45/0.65/0.85亿元，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "9.1",
+          "unit": "亿元",
+          "start": 1382,
+          "end": 1387
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 1408,
+          "end": 1414
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1522,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1522,
+    "processed_ranges": [
+      [
+        0,
+        1522
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1522,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002055,
+  "source_content_sha256": "a7f4ae893eea560174487aa9d553c25276cb134f7cf4c107f864a58a280ae4f0"
+}

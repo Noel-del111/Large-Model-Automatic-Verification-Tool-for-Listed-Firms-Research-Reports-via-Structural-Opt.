@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000吨，为100多个细分场景的用户交付了上亿件订单，全行业日均配送量显著增加。\"}],\"reason\":\"无人车规模化应用数量用“吨”作单位，量纲错误，应为辆或台。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"无人配送车指的是依靠搭载的激光雷达、摄像头等传感器和人工智能算法实现的组合辅助驾驶物流车辆，全程不需要或仅需少量人工干预，可运用于快递、外卖、商超、医药等场景，解决最后1公里至5公里的货件运输和配送问题。\"}],\"reason\":\"无人配送车属自动驾驶，称“组合辅助驾驶”与全程少量干预矛盾，术语不当。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"以新石器X3为例，可实现7*24小时间断运营，单次装载200-300件，单日配送单量可超过传统货车。\"}],\"reason\":\"7*24小时通常表示全天候不间断，与“间断运营”在同一条件矛盾。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"投资建议：以Robovan（）为代表的无人物流、货运、环卫等应用场景正在日益成熟，我们重点推荐万马科技、侨银股份、锐明技术、虹软科技等。\"}],\"reason\":\"Robovan后括号内应为补充名称或说明，现为空，属性值缺失。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"根据顺丰速运2024年年报，顺丰已在全国范围内已投入超800台无人车，可完成封闭园区内最后一公里配送、楼宇最后100米配送、网点至下级站点最后三公里配送，以及分拨中心到网点的线路运输。\"}],\"reason\":\"同一分句连用两个“已”，语义重复冗余。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:40:26.642061+00:00",
+    "request_sha256": "1b185434c048f686ca3c0837b6e7ebacfe15397212a6c18725dafb3be381caa8",
+    "input_token_estimate": 15029,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277173",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ac093a6fccf74e1399e4fe440960c21f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3542,
+    "output_tokens": 6999,
+    "usage_source": "provider",
+    "duration_seconds": 28.103731,
+    "cost_cny": "0.031538"
+  },
+  "cache_request": {
+    "key": "e8a245f55857855ca2576bd5f8f0627ce6f00e62706f1a327e994549691cd5ab",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1b185434c048f686ca3c0837b6e7ebacfe15397212a6c18725dafb3be381caa8"
+  }
+}

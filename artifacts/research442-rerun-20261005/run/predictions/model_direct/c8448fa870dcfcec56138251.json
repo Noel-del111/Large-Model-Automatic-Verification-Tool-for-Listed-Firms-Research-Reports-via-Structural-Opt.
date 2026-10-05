@@ -1,0 +1,302 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000525",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "正文首句与正文第一段末句重复表达稳定币正在成为连接传统金融与加密世界的桥梁。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 32,
+          "end": 53,
+          "text": "稳定币正在成为连接传统金融与加密世界的桥梁"
+        },
+        {
+          "kind": "source_text",
+          "start": 138,
+          "end": 159,
+          "text": "目前正在成为连接传统金融与加密世界的桥梁。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "稳定币正在成为连接传统金融与加密世界的桥梁"
+        },
+        {
+          "text": "目前正在成为连接传统金融与加密世界的桥梁。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 32,
+          "end": 53,
+          "text": "稳定币正在成为连接传统金融与加密世界的桥梁"
+        },
+        {
+          "start": 138,
+          "end": 159,
+          "text": "目前正在成为连接传统金融与加密世界的桥梁。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5b8644a4a3848f312c58aeb5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "纽约证券交易所后的括号内应为股票代码等属性值，但原文为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 715,
+          "end": 763,
+          "text": "稳定币巨头Circle预计于6月5日在美国纽约证券交易所（）上市，这将是稳定币领域的首个IPO。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "稳定币巨头Circle预计于6月5日在美国纽约证券交易所（）上市，这将是稳定币领域的首个IPO。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 715,
+          "end": 763,
+          "text": "稳定币巨头Circle预计于6月5日在美国纽约证券交易所（）上市，这将是稳定币领域的首个IPO。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8fd73c3be887eea5c5e7332f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "USDC作为稳定币，市值约609美元不合量级，应为约609亿美元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 917,
+          "end": 956,
+          "text": "截至2025年4月，USDC已成为全球第二大美元挂钩稳定币，市值约609美元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2025年4月，USDC已成为全球第二大美元挂钩稳定币，市值约609美元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 917,
+          "end": 956,
+          "text": "截至2025年4月，USDC已成为全球第二大美元挂钩稳定币，市值约609美元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a19b991fc1cf87bea65436b5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“业务入为美元”缺少应报告的业务收入数值，无法核验占比。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 956,
+          "end": 999,
+          "text": "Circle报告称，截至2024年底，其稳定币相关业务入为美元，占总收入的99.1%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Circle报告称，截至2024年底，其稳定币相关业务入为美元，占总收入的99.1%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 956,
+          "end": 999,
+          "text": "Circle报告称，截至2024年底，其稳定币相关业务入为美元，占总收入的99.1%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d4341764e8eb2f879346ee92",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1330
+        ]
+      ],
+      "estimated_input_tokens": 5822,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:56:02.037813+00:00",
+        "request_sha256": "a18c486a25a312bac36af9c2a67ea669b3f4e338c8a23b1342e8b02c720e804b",
+        "input_token_estimate": 16211,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278355",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1999936479df47cc967cd4b2efa8c0fa",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3773,
+        "output_tokens": 5370,
+        "usage_source": "provider",
+        "duration_seconds": 22.172221,
+        "cost_cny": "0.025253"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "稳定币正在成为连接传统金融与加密世界的桥梁"
+          },
+          {
+            "text": "目前正在成为连接传统金融与加密世界的桥梁。"
+          }
+        ],
+        "reason": "正文首句与正文第一段末句重复表达稳定币正在成为连接传统金融与加密世界的桥梁。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "稳定币巨头Circle预计于6月5日在美国纽约证券交易所（）上市，这将是稳定币领域的首个IPO。"
+          }
+        ],
+        "reason": "纽约证券交易所后的括号内应为股票代码等属性值，但原文为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "截至2025年4月，USDC已成为全球第二大美元挂钩稳定币，市值约609美元。"
+          }
+        ],
+        "reason": "USDC作为稳定币，市值约609美元不合量级，应为约609亿美元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "Circle报告称，截至2024年底，其稳定币相关业务入为美元，占总收入的99.1%。"
+          }
+        ],
+        "reason": "“业务入为美元”缺少应报告的业务收入数值，无法核验占比。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1330,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1330,
+    "processed_ranges": [
+      [
+        0,
+        1330
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 22.196139,
+  "source_content_sha256": "5073bad3d30a48c6293a16a4a3303ec7d7495cc8480052b8f2f0afdb48d3cd37"
+}

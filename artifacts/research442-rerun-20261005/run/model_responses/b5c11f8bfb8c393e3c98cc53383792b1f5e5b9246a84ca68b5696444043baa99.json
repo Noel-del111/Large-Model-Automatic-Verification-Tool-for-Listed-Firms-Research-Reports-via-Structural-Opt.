@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"隆基绿能(601)\"}],\"reason\":\"股票代码应为6位数字，此处仅写“601”，代码位数不完整。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"公司作为BC技术领先企业，HPBC1.0产线正在全部升级为N型HPBC2.0技术，已投产电池良率达到左右。\"}],\"reason\":\"“良率达到左右”缺少具体百分比数值，关键指标为空。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"预计到2025年6月底，BC二代产能将增加到35GW，到2025年底产能进一步增加到50GW。到2025年底产能进一步增加到50GW。\"}],\"reason\":\"“到2025年底产能进一步增加到50GW”连续重复，未提供新增信息。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"我们预计公司2025-2027年EPS分别为-0.28/0.32/0.60，对应公司5月30日收盘价，2025-2027年PE分别为-51.0/45.3/23.9/12.9，维持“买入-B”评级。\"}],\"reason\":\"2025-2027年仅三年，PE却列出四个数值，数值个数与年份不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:54:55.386872+00:00",
+    "request_sha256": "4c728c68002225ab64eaf3d321350368f341653784a6cb90c63e5f452f855e13",
+    "input_token_estimate": 14758,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.276902",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d495e7b08da045aba97482c588d3309b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3590,
+    "output_tokens": 4466,
+    "usage_source": "provider",
+    "duration_seconds": 18.472594,
+    "cost_cny": "0.021454"
+  },
+  "cache_request": {
+    "key": "b5c11f8bfb8c393e3c98cc53383792b1f5e5b9246a84ca68b5696444043baa99",
+    "purpose": "text_review.detect",
+    "messages_sha256": "4c728c68002225ab64eaf3d321350368f341653784a6cb90c63e5f452f855e13"
+  }
+}

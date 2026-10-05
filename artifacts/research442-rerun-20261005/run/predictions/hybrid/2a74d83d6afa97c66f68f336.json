@@ -1,0 +1,493 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000524",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "5月没有32日，该披露日期不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 78,
+          "end": 97,
+          "text": "英伟达于5月32日披露FY26Q1财报"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "英伟达于5月32日披露FY26Q1财报"
+        }
+      ],
+      "spans": [
+        {
+          "start": 78,
+          "end": 97,
+          "text": "英伟达于5月32日披露FY26Q1财报"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3488c319b837fd5e225618e7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句话连续重复两次，未提供新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 281,
+          "end": 327,
+          "text": "GB300开始对云厂商送样，有望于下半年量产。GB300开始对云厂商送样，有望于下半年量产。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "GB300开始对云厂商送样，有望于下半年量产。GB300开始对云厂商送样，有望于下半年量产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 281,
+          "end": 327,
+          "text": "GB300开始对云厂商送样，有望于下半年量产。GB300开始对云厂商送样，有望于下半年量产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6290ca25d77de88161cd1e2a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "政府补助金额应以货币计量，却写作面积单位“万平方米”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 624,
+          "end": 682,
+          "text": "光庭信息：公司于近日收到政府补助1358.78万平方米，占公司最近一期经审计归属于上市公司股东净利润的45.55%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "光庭信息：公司于近日收到政府补助1358.78万平方米，占公司最近一期经审计归属于上市公司股东净利润的45.55%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 624,
+          "end": 682,
+          "text": "光庭信息：公司于近日收到政府补助1358.78万平方米，占公司最近一期经审计归属于上市公司股东净利润的45.55%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ef8974c4d4ed396b6ec86938",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "总股本不变时，股数降为83.33%，持股比例应降至约5%，而非2.99999%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 749,
+          "end": 853,
+          "text": "本次权益变动后，兴森科技及其一致行动人兴森股权合计持有公司股份由11,600,070股减少至9,666,670股，占公司总股本的比例由6.00002%减少至2.99999%，不再是公司合计持股5%以上的股东。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本次权益变动后，兴森科技及其一致行动人兴森股权合计持有公司股份由11,600,070股减少至9,666,670股，占公司总股本的比例由6.00002%减少至2.99999%，不再是公司合计持股5%以上的股东。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 749,
+          "end": 853,
+          "text": "本次权益变动后，兴森科技及其一致行动人兴森股权合计持有公司股份由11,600,070股减少至9,666,670股，占公司总股本的比例由6.00002%减少至2.99999%，不再是公司合计持股5%以上的股东。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "be9e1611a6fed5dec4359728",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "Q2营收450亿较Q1的441亿仅增约2%，与所述环比增长14%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 327,
+          "end": 398,
+          "text": "公司FY26Q2营业收入指引中枢为450亿美元，同比增长73%，环比增长14%，此指引已剔除H20带来的80亿美元收入减少，仍有环比加速增长。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司FY26Q2营业收入指引中枢为450亿美元，同比增长73%，环比增长14%，此指引已剔除H20带来的80亿美元收入减少，仍有环比加速增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 327,
+          "end": 398,
+          "text": "公司FY26Q2营业收入指引中枢为450亿美元，同比增长73%，环比增长14%，此指引已剔除H20带来的80亿美元收入减少，仍有环比加速增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c6e572bea6d474cbb48721e9",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          884
+        ]
+      ],
+      "estimated_input_tokens": 5422,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:55:13.911603+00:00",
+        "request_sha256": "c7d9e525c42975c08b90102a2fdf5a62334fadafa133b78e8c3eaf5e89854d43",
+        "input_token_estimate": 15090,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277234",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "c9400b350cd74bb8afbbf3686ec2e132",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3545,
+        "output_tokens": 7539,
+        "usage_source": "provider",
+        "duration_seconds": 30.705394,
+        "cost_cny": "0.033701",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "英伟达于5月32日披露FY26Q1财报"
+          }
+        ],
+        "reason": "5月没有32日，该披露日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "GB300开始对云厂商送样，有望于下半年量产。GB300开始对云厂商送样，有望于下半年量产。"
+          }
+        ],
+        "reason": "同一句话连续重复两次，未提供新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "光庭信息：公司于近日收到政府补助1358.78万平方米，占公司最近一期经审计归属于上市公司股东净利润的45.55%。"
+          }
+        ],
+        "reason": "政府补助金额应以货币计量，却写作面积单位“万平方米”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "本次权益变动后，兴森科技及其一致行动人兴森股权合计持有公司股份由11,600,070股减少至9,666,670股，占公司总股本的比例由6.00002%减少至2.99999%，不再是公司合计持股5%以上的股东。"
+          }
+        ],
+        "reason": "总股本不变时，股数降为83.33%，持股比例应降至约5%，而非2.99999%。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司FY26Q2营业收入指引中枢为450亿美元，同比增长73%，环比增长14%，此指引已剔除H20带来的80亿美元收入减少，仍有环比加速增长。"
+          }
+        ],
+        "reason": "Q2营收450亿较Q1的441亿仅增约2%，与所述环比增长14%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "供需端担忧已基本改善，GB300本季末量产可期。"
+          },
+          {
+            "text": "GB300开始对云厂商送样，有望于下半年量产。"
+          }
+        ],
+        "reason": "前文称GB300本季末量产可期，后文又称有望下半年量产，时间冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "供需端担忧已基本改善，GB300本季末量产可期。"
+          },
+          {
+            "text": "GB300开始对云厂商送样，有望于下半年量产。"
+          }
+        ],
+        "reason": "前文称GB300本季末量产可期，后文又称有望下半年量产，时间冲突。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 78,
+      "end": 178,
+      "text": "英伟达于5月32日披露FY26Q1财报，公司FY26Q1实现营业收入441亿美元，同比增长69%，环比增长12%，略超一致预期，Non-GAAP毛利率71.3%，略超一致预期，剔除H20出口管制影响。",
+      "quantities": [
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 123,
+          "end": 126
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 131,
+          "end": 134
+        },
+        {
+          "value": "71.3",
+          "unit": "%",
+          "start": 153,
+          "end": 158
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 78,
+      "end": 178,
+      "text": "英伟达于5月32日披露FY26Q1财报，公司FY26Q1实现营业收入441亿美元，同比增长69%，环比增长12%，略超一致预期，Non-GAAP毛利率71.3%，略超一致预期，剔除H20出口管制影响。",
+      "quantities": [
+        {
+          "value": "69",
+          "unit": "%",
+          "start": 123,
+          "end": 126
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 131,
+          "end": 134
+        },
+        {
+          "value": "71.3",
+          "unit": "%",
+          "start": 153,
+          "end": 158
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 178,
+      "end": 304,
+      "text": "分业务来看，公司FY26Q1数据中心业务实现营业收入391亿美元，同比增长73%，环比增长10%，略低于一致预期，由Hopper向Blackwel平台的迭代已基本完成，Blackwell贡献约70%的收入，GB300开始对云厂商送样，有望于下半年量产。",
+      "quantities": [
+        {
+          "value": "73",
+          "unit": "%",
+          "start": 215,
+          "end": 218
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 223,
+          "end": 226
+        },
+        {
+          "value": "70",
+          "unit": "%",
+          "start": 274,
+          "end": 277
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 327,
+      "end": 398,
+      "text": "公司FY26Q2营业收入指引中枢为450亿美元，同比增长73%，环比增长14%，此指引已剔除H20带来的80亿美元收入减少，仍有环比加速增长。",
+      "quantities": [
+        {
+          "value": "73",
+          "unit": "%",
+          "start": 355,
+          "end": 358
+        },
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 363,
+          "end": 366
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 624,
+      "end": 682,
+      "text": "光庭信息：公司于近日收到政府补助1358.78万平方米，占公司最近一期经审计归属于上市公司股东净利润的45.55%。",
+      "quantities": [
+        {
+          "value": "45.55",
+          "unit": "%",
+          "start": 675,
+          "end": 681
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "占公司最近一期经审计归属于上市公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 884,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 884,
+    "processed_ranges": [
+      [
+        0,
+        884
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 884,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00175,
+  "source_content_sha256": "1c084109d6161f0161c9f594243a0df5acf609af4e02292c3a3d2b86b5f7fcbf"
+}

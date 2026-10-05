@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"本周（20250526-2025530）板块行情\"}], \"reason\": \"日期2025530不符合YYYYMMDD八位格式，应为20250530。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"25 年 4 月中国共出口约 21.39 kW 的光伏组件，同比增加 2%；\"}], \"reason\": \"光伏组件出口量单位应为GW，此处写成kW，与标题21.39GW及后文83.29GW矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:20:59.619470+00:00",
+    "request_sha256": "cd0ec32894c5cbd0a576fffb4ba2f66627bde6f01ff07946518d41b6f0d523d1",
+    "input_token_estimate": 15309,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277453",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9e5f6ccea88941cda57af50a3a837bbc",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3703,
+    "output_tokens": 12626,
+    "usage_source": "provider",
+    "duration_seconds": 44.982061,
+    "cost_cny": "0.054207"
+  },
+  "cache_request": {
+    "key": "da3ab5d1d88c5d4944460833cf507bdfb01468e6d37abdc7b7ec7ee6cfeb1257",
+    "purpose": "text_review.detect",
+    "messages_sha256": "cd0ec32894c5cbd0a576fffb4ba2f66627bde6f01ff07946518d41b6f0d523d1"
+  }
+}

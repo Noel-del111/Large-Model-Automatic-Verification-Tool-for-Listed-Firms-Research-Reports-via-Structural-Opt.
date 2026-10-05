@@ -1,0 +1,207 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000657",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "“5月26-22日”区间起点晚于终点，日期范围倒置，时间关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 229,
+          "end": 350,
+          "text": "另外，垂直领域AI应用继续迭代推新，5月26-22日举行的深圳文博会上，盛天网络旗下AI音乐社交产品“给麦”App新版本吸引了大量专业观众、音乐爱好者与行业合作伙伴的深度关注与体验，其功能包含AI原声生成、图片写歌及新上线的AI虚拟人播客等；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "另外，垂直领域AI应用继续迭代推新，5月26-22日举行的深圳文博会上，盛天网络旗下AI音乐社交产品“给麦”App新版本吸引了大量专业观众、音乐爱好者与行业合作伙伴的深度关注与体验，其功能包含AI原声生成、图片写歌及新上线的AI虚拟人播客等；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 229,
+          "end": 350,
+          "text": "另外，垂直领域AI应用继续迭代推新，5月26-22日举行的深圳文博会上，盛天网络旗下AI音乐社交产品“给麦”App新版本吸引了大量专业观众、音乐爱好者与行业合作伙伴的深度关注与体验，其功能包含AI原声生成、图片写歌及新上线的AI虚拟人播客等；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8e4eced7dac36cb50e773fe7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句连续重复出现两次，第二次未增加新信息，属冗余表述。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "我们认为，大模型能力的持续升级与开源，叠加垂直领域Agent等AI应用产品的迭代推新，将助力AI应用商业化空间不断打开，并拉动推理算力需求，建议继续布局AI。"
+        },
+        {
+          "text": "我们认为，大模型能力的持续升级与开源，叠加垂直领域Agent等AI应用产品的迭代推新，将助力AI应用商业化空间不断打开，并拉动推理算力需求，建议继续布局AI。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "df2629836f4d1002911fbb9e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1521
+        ]
+      ],
+      "estimated_input_tokens": 6048,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:40:45.709538+00:00",
+        "request_sha256": "970d75e1d5666506b5507227839c08264e4ff97d96316c8ebfa15ab542b0d07f",
+        "input_token_estimate": 16848,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278992",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "47a12220d7fd41eba6b20a252dee581a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3979,
+        "output_tokens": 8066,
+        "usage_source": "provider",
+        "duration_seconds": 34.350822,
+        "cost_cny": "0.036243"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "另外，垂直领域AI应用继续迭代推新，5月26-22日举行的深圳文博会上，盛天网络旗下AI音乐社交产品“给麦”App新版本吸引了大量专业观众、音乐爱好者与行业合作伙伴的深度关注与体验，其功能包含AI原声生成、图片写歌及新上线的AI虚拟人播客等；"
+          }
+        ],
+        "reason": "“5月26-22日”区间起点晚于终点，日期范围倒置，时间关系矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "我们认为，大模型能力的持续升级与开源，叠加垂直领域Agent等AI应用产品的迭代推新，将助力AI应用商业化空间不断打开，并拉动推理算力需求，建议继续布局AI。"
+          },
+          {
+            "text": "我们认为，大模型能力的持续升级与开源，叠加垂直领域Agent等AI应用产品的迭代推新，将助力AI应用商业化空间不断打开，并拉动推理算力需求，建议继续布局AI。"
+          }
+        ],
+        "reason": "同一句连续重复出现两次，第二次未增加新信息，属冗余表述。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "我们认为，大模型能力的持续升级与开源，叠加垂直领域Agent等AI应用产品的迭代推新，将助力AI应用商业化空间不断打开，并拉动推理算力需求，建议继续布局AI。"
+          },
+          {
+            "text": "我们认为，大模型能力的持续升级与开源，叠加垂直领域Agent等AI应用产品的迭代推新，将助力AI应用商业化空间不断打开，并拉动推理算力需求，建议继续布局AI。"
+          }
+        ],
+        "reason": "同一句连续重复出现两次，第二次未增加新信息，属冗余表述。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1521,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1521,
+    "processed_ranges": [
+      [
+        0,
+        1521
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 34.377476,
+  "source_content_sha256": "dc7d39e5f2d09b160cd317ca23146f231d41655dd8de6e0dfe3775b55f351704"
+}

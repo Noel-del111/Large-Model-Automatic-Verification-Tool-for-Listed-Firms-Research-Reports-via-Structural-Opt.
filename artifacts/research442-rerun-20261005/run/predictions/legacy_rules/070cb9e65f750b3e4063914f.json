@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000685",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "f2e3a7d875a9d06ed0115c12",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 913,
+          "end": 1026,
+          "text": "据前瞻产业研究院援引360ResearchReports预测，2027-2021年全球氯虫苯甲酰胺市场规模复合增长率为4.4%，而我国氯虫苯甲酰胺市场才进入成长期，在中间体、原药、制剂的产能都将进入加速发展阶段，市场潜力较大。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1124,
+    "total_chars": 1124,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.000689,
+  "source_content_sha256": "0c614adce62c3b0aa5efd4852dd434fdb7c23a2a36cb0f4d81bdbf29d6dae26d"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"行业25Q1两年维度首度同比转正，工控公司主业处于弱复苏，但关税短期有扰动，全面培育机器人第二增长曲线。\"}, {\"text\": \"25Q1工控行业整体进入深度衰退，其中多数传统行业复苏延续，新能源相关拖累明显减弱。\"}], \"reason\": \"同一25Q1期间，前句称首度同比转正且弱复苏，后句称整体进入深度衰退，二者不能同时成立。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"25年前4月制造业固定资产投资完成额累计同比+8.8%，25年月制造业规模以上工业增加值当月同比+6.6%。\"}], \"reason\": \"“25年月”缺少具体月份，不能构成合法时间表述。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"其中大/中/小型企业PMI指数分别49.2/48.8/48.7，环比分别-2.0/-1.1/-0.9/+0.6pct，整体处于疲弱状态。\"}], \"reason\": \"大/中/小型企业仅三类，环比却列出四个数值，多出的+0.6pct无法对应任何类型。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"我们预计全年工控OEM市场同比0~5%增长，内资公司依旧靠替代日系品牌实现稳健增长。\"}], \"reason\": \"该句在第一段末尾和月度跟踪末尾完全重复，未提供新增信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:49:39.406148+00:00",
+    "request_sha256": "8292c6d299d8ae9f5739f247d26bb7b4ff1b403ff978b1668114eb78e02b19be",
+    "input_token_estimate": 16166,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27831",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1a65408f2cbe45909555956b8f0e30a3",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3880,
+    "output_tokens": 9053,
+    "usage_source": "provider",
+    "duration_seconds": 36.48233,
+    "cost_cny": "0.040092"
+  },
+  "cache_request": {
+    "key": "752703e29cb5f2ccf8f582b1fdecfa80fb1087b8568d5311a1f9b8adb9337a3c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "8292c6d299d8ae9f5739f247d26bb7b4ff1b403ff978b1668114eb78e02b19be"
+  }
+}

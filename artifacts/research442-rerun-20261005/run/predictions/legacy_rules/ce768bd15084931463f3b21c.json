@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000331",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "dde7a252f6d99625ac87761d",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 485,
+          "end": 644,
+          "text": "区别于航空速运业务，公司综合物流解决方案依托自身能力建设与海外核心供应商合作，可实现跨境物流的全流程服务，2024年营收占比达52%，其中跨境电商及产地直达业务收入增幅较大：（1）跨境电商解决方案：2024-2019年收入CAGR为71%，2024年跨境电商货量同比增长48%，预计未来将持续受益于跨境电商出口高景气；"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 973,
+    "total_chars": 973,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.000983,
+  "source_content_sha256": "8590a935f69e00c7397e961c5576ac71d7074ff91859d315f75b054a79477b81"
+}

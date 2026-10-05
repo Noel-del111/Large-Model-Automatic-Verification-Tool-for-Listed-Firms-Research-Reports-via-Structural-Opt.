@@ -1,0 +1,396 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000423",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“224年”不成立，应为2024年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 77,
+          "end": 100,
+          "text": "根据芯思想研究院发布的224年全球委外封测榜单"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据芯思想研究院发布的224年全球委外封测榜单"
+        }
+      ],
+      "spans": [
+        {
+          "start": 77,
+          "end": 100,
+          "text": "根据芯思想研究院发布的224年全球委外封测榜单"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a25d457a1b994104240a3e7d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“固定资产投资”后缺少数值，仅剩单位“元”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 716,
+          "end": 744,
+          "text": "2025年计划固定资产投资元，主要用于扩大先进技术产能。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年计划固定资产投资元，主要用于扩大先进技术产能。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 716,
+          "end": 744,
+          "text": "2025年计划固定资产投资元，主要用于扩大先进技术产能。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "93ce8fa79fdcc509a881a4d7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内文件名称缺失，无法核验公告来源。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 745,
+          "end": 761,
+          "text": "根据公司2025年1月18日《》"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据公司2025年1月18日《》"
+        }
+      ],
+      "spans": [
+        {
+          "start": 745,
+          "end": 761,
+          "text": "根据公司2025年1月18日《》"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4770c8bffe33ceced62d8f26",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收单位“亿分”错误，应为“亿元”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 274,
+          "end": 298,
+          "text": "公司在2025年Q1淡季仍实现营收93.35亿分"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司在2025年Q1淡季仍实现营收93.35亿分"
+        }
+      ],
+      "spans": [
+        {
+          "start": 274,
+          "end": 298,
+          "text": "公司在2025年Q1淡季仍实现营收93.35亿分"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0c472aa4947e4c14a3c1ac1a",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1846
+        ]
+      ],
+      "estimated_input_tokens": 6443,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:46:05.862399+00:00",
+        "request_sha256": "d22882a5d48d205c4adb7aab77c133b54ac44cd8b42756eb0e8add17cbe44988",
+        "input_token_estimate": 17894,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280038",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "77920b5e0bbd4e0499591bc38bab2bfb",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4079,
+        "output_tokens": 7122,
+        "usage_source": "provider",
+        "duration_seconds": 28.859321,
+        "cost_cny": "0.032567",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据芯思想研究院发布的224年全球委外封测榜单"
+          }
+        ],
+        "reason": "年份“224年”不成立，应为2024年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025年计划固定资产投资元，主要用于扩大先进技术产能。"
+          }
+        ],
+        "reason": "“固定资产投资”后缺少数值，仅剩单位“元”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "根据公司2025年1月18日《》"
+          }
+        ],
+        "reason": "书名号内文件名称缺失，无法核验公告来源。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司在2025年Q1淡季仍实现营收93.35亿分"
+          }
+        ],
+        "reason": "营收单位“亿分”错误，应为“亿元”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 77,
+      "end": 146,
+      "text": "根据芯思想研究院发布的224年全球委外封测榜单，长电科技营收规模在全球前十大OSAT厂商中排名第三，中国大陆第一，为全球封测龙头企业之一。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 219,
+      "end": 372,
+      "text": "另一方面，半导体周期复苏，根据美国半导体行业协会数据，全球半导体销售额同比增速自2023年11月以来开始回正，公司在2025年Q1淡季仍实现营收93.35亿分，同比增长36.44%，封测行业贴近下游，稼动率充分反应下游景气度变化，我们认为下游需求的逐步复苏，或将带来公司稼动率中枢的提升以及盈利能力的修复。",
+      "quantities": [
+        {
+          "value": "36.44",
+          "unit": "%",
+          "start": 303,
+          "end": 309
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "或将带来公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1014,
+      "end": 1059,
+      "text": "2024年，公司在汽车板块实现了快速增长，全年营收同比增长20.5%，远高于行业平均增速。",
+      "quantities": [
+        {
+          "value": "20.5",
+          "unit": "%",
+          "start": 1043,
+          "end": 1048
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1540,
+      "end": 1564,
+      "text": "从2025年起，晟碟将全年为公司贡献营收及利润。",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "晟碟将全年为公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1616,
+      "end": 1727,
+      "text": "盈利预测与评级：我们预计公司2025-2027年归母净利润分别为20.78/29.00/39.67亿元，同比增速分别为29.11%/39.56%/36.77%，当前股价对应的PE分别为28.23/20.23/14.79倍。",
+      "quantities": [
+        {
+          "value": "39.67",
+          "unit": "亿元",
+          "start": 1660,
+          "end": 1667
+        },
+        {
+          "value": "29.11",
+          "unit": "%",
+          "start": 1675,
+          "end": 1681
+        },
+        {
+          "value": "39.56",
+          "unit": "%",
+          "start": 1682,
+          "end": 1688
+        },
+        {
+          "value": "36.77",
+          "unit": "%",
+          "start": 1689,
+          "end": 1695
+        },
+        {
+          "value": "14.79",
+          "unit": "倍",
+          "start": 1720,
+          "end": 1726
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1846,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1846,
+    "processed_ranges": [
+      [
+        0,
+        1846
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1846,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002506,
+  "source_content_sha256": "801dfb090ad3e5b941c275291afb21b661a7c957d8055cc0c03917a0842b1fe1"
+}

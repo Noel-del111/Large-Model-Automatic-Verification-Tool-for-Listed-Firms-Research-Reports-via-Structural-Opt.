@@ -1,0 +1,398 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000614",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值不一致错误",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 55,
+          "end": 114,
+          "text": "上周医药生物板块收益率为2.21%，板块相对沪深300收益率为3.30%，在31个一级子行业指数中涨跌幅排名第35位。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "上周医药生物板块收益率为2.21%，板块相对沪深300收益率为3.30%，在31个一级子行业指数中涨跌幅排名第35位。",
+          "reason": "共31个一级子行业，排名第35位超出可能范围，名次与总数矛盾。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 55,
+          "end": 114,
+          "text": "上周医药生物板块收益率为2.21%，板块相对沪深300收益率为3.30%，在31个一级子行业指数中涨跌幅排名第35位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8e365572203762d59b5856fe",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 114,
+          "end": 202,
+          "text": "6个子板块中，化学制药周收益率排名第一，涨跌幅为%（相对沪深300收益率为4.91%）；周收益率排名第六的为医药商业，涨跌幅为-0.39%（相对沪深300收益率为0.69%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "6个子板块中，化学制药周收益率排名第一，涨跌幅为%（相对沪深300收益率为4.91%）；周收益率排名第六的为医药商业，涨跌幅为-0.39%（相对沪深300收益率为0.69%）。",
+          "reason": "化学制药周涨跌幅的百分号前无具体数值，数值缺失。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 114,
+          "end": 202,
+          "text": "6个子板块中，化学制药周收益率排名第一，涨跌幅为%（相对沪深300收益率为4.91%）；周收益率排名第六的为医药商业，涨跌幅为-0.39%（相对沪深300收益率为0.69%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c0b3ca889681a3abb2037c4b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 204,
+          "end": 295,
+          "text": "周观点：上周化学制药板块涨幅领先，5月30日至6月3日2025年美国临床肿瘤学会（）年会在美国芝加哥举行，本届年会中国专家的发言数量再创新高，ASCO的召开进一步推动创新药投资热情。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "周观点：上周化学制药板块涨幅领先，5月30日至6月3日2025年美国临床肿瘤学会（）年会在美国芝加哥举行，本届年会中国专家的发言数量再创新高，ASCO的召开进一步推动创新药投资热情。",
+          "reason": "“美国临床肿瘤学会”后括号内应为ASCO或年会简称，却为空，非数值属性值缺失。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 204,
+          "end": 295,
+          "text": "周观点：上周化学制药板块涨幅领先，5月30日至6月3日2025年美国临床肿瘤学会（）年会在美国芝加哥举行，本届年会中国专家的发言数量再创新高，ASCO的召开进一步推动创新药投资热情。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b30f933d12fadd73fd50e8e9",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1647,
+          "end": 1713,
+          "text": "创新药主线：①商业化快速放量的创新药标的，建议关注信达生物、百济神州、云顶新耀、再鼎医药、康方生物、科伦博泰、再鼎医药、荣昌生物等；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "创新药主线：①商业化快速放量的创新药标的，建议关注信达生物、百济神州、云顶新耀、再鼎医药、康方生物、科伦博泰、再鼎医药、荣昌生物等；",
+          "reason": "同一推荐标的名单中“再鼎医药”重复出现两次，属不必要重复。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1647,
+          "end": 1713,
+          "text": "创新药主线：①商业化快速放量的创新药标的，建议关注信达生物、百济神州、云顶新耀、再鼎医药、康方生物、科伦博泰、再鼎医药、荣昌生物等；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5239edf1140abc6441ec926a",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1829
+        ]
+      ],
+      "estimated_input_tokens": 6437,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:06:23.666022+00:00",
+        "request_sha256": "5b5b36ddc9e013db0efb29f765f3f79e86fab19550c77bc207b5c653e1053be0",
+        "input_token_estimate": 17913,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280057",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "286e0a5ada66472dbb38ddd69d480631",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4224,
+        "output_tokens": 5454,
+        "usage_source": "provider",
+        "duration_seconds": 21.433193,
+        "cost_cny": "0.02604",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "上周医药生物板块收益率为2.21%，板块相对沪深300收益率为3.30%，在31个一级子行业指数中涨跌幅排名第35位。",
+            "reason": "共31个一级子行业，排名第35位超出可能范围，名次与总数矛盾。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "6个子板块中，化学制药周收益率排名第一，涨跌幅为%（相对沪深300收益率为4.91%）；周收益率排名第六的为医药商业，涨跌幅为-0.39%（相对沪深300收益率为0.69%）。",
+            "reason": "化学制药周涨跌幅的百分号前无具体数值，数值缺失。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "周观点：上周化学制药板块涨幅领先，5月30日至6月3日2025年美国临床肿瘤学会（）年会在美国芝加哥举行，本届年会中国专家的发言数量再创新高，ASCO的召开进一步推动创新药投资热情。",
+            "reason": "“美国临床肿瘤学会”后括号内应为ASCO或年会简称，却为空，非数值属性值缺失。"
+          }
+        ]
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "创新药主线：①商业化快速放量的创新药标的，建议关注信达生物、百济神州、云顶新耀、再鼎医药、康方生物、科伦博泰、再鼎医药、荣昌生物等；",
+            "reason": "同一推荐标的名单中“再鼎医药”重复出现两次，属不必要重复。"
+          }
+        ]
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1253,
+      "end": 1353,
+      "text": "我们预估2024-2027年间归母净利润CAGR约达145%，一方面系公司依靠厂牌首推等高毛利业务提升综合毛利率，另一方面系公司规模效应以及精细化管理带来销售费用率等下降，从而提升公司整体净利率水平。",
+      "quantities": [
+        {
+          "value": "145",
+          "unit": "%",
+          "start": 1279,
+          "end": 1283
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "一方面系公司",
+        "另一方面系公司",
+        "从而提升公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1253,
+      "end": 1353,
+      "text": "我们预估2024-2027年间归母净利润CAGR约达145%，一方面系公司依靠厂牌首推等高毛利业务提升综合毛利率，另一方面系公司规模效应以及精细化管理带来销售费用率等下降，从而提升公司整体净利率水平。",
+      "quantities": [
+        {
+          "value": "145",
+          "unit": "%",
+          "start": 1279,
+          "end": 1283
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "一方面系公司",
+        "另一方面系公司",
+        "从而提升公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 1253,
+      "end": 1353,
+      "text": "我们预估2024-2027年间归母净利润CAGR约达145%，一方面系公司依靠厂牌首推等高毛利业务提升综合毛利率，另一方面系公司规模效应以及精细化管理带来销售费用率等下降，从而提升公司整体净利率水平。",
+      "quantities": [
+        {
+          "value": "145",
+          "unit": "%",
+          "start": 1279,
+          "end": 1283
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "一方面系公司",
+        "另一方面系公司",
+        "从而提升公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1387,
+      "end": 1465,
+      "text": "②康臣药业，近3年公司归母净利润增速均在14%以上，且近3年ROE维持在21%以上，近3年股息率维持在7%以上，2025年PE约8倍（ifind一致预期）。",
+      "quantities": [
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 1407,
+          "end": 1410
+        },
+        {
+          "value": "21",
+          "unit": "%",
+          "start": 1423,
+          "end": 1426
+        },
+        {
+          "value": "7",
+          "unit": "%",
+          "start": 1438,
+          "end": 1440
+        },
+        {
+          "value": "8",
+          "unit": "倍",
+          "start": 1451,
+          "end": 1453
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1829,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1829,
+    "processed_ranges": [
+      [
+        0,
+        1829
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1829,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001933,
+  "source_content_sha256": "d24e4694d5af0de2e5966e7bd56183d34764267fdfb21da32f7f463b6e5957d5"
+}

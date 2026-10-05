@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"根据极目新闻报道，据河北衡水武邑县应急管理局通报，5月30日18时65分左右，武邑县一化工企业车间发生煮洗釜爆炸。\",\"start\":0,\"end\":76}],\"reason\":\"18时65分不成立，分钟数最大为59。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"根据海关总署数据，2023-2019年我国初级形状的硝酸纤维素出口量维持在2-2.5万吨之间波动，2024年出口量下降至1.56万吨，同比下降36%。\",\"start\":1090,\"end\":1200}],\"reason\":\"年份区间写作2023-2019，起点晚于终点，时间顺序冲突。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"根据北化股份2024年年报，硝化棉全球市场需求基本稳定，目前有90%的民用硝化棉产品用于涂料和油墨市场。\",\"start\":687,\"end\":748},{\"text\":\"硝化棉产品90%的民用市场需求集中于涂料和油墨领域。\",\"start\":749,\"end\":775}],\"reason\":\"两处均表达约90%民用硝化棉需求在涂料和油墨领域，信息重复。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨。\",\"start\":1191,\"end\":1280},{\"text\":\"若此次武邑县化工企业车间煮洗釜爆炸确如相关新闻报道涉及硝化纤维素产能，或将对于国内硝化棉供需格局产生冲击，进而可能导致硝化棉价格上涨，建议关注国内具备硝化棉产能布局的相关企业。\",\"start\":1281,\"end\":1393}],\"reason\":\"投资建议开头与点评结尾使用同一段话，重复陈述相同判断。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:01:19.213346+00:00",
+    "request_sha256": "2a40bde61977b7722c5f0fc0a7bc0a38084df1bef00c5201ba82949f21b40b15",
+    "input_token_estimate": 16832,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278976",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "e58c31992ef0411180add64f680e56d2",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3919,
+    "output_tokens": 7274,
+    "usage_source": "provider",
+    "duration_seconds": 32.330798,
+    "cost_cny": "0.033015"
+  },
+  "cache_request": {
+    "key": "82de841b88e91d4f057d870c0173df8009ac47267a49808cff4ff8e9f9055d42",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2a40bde61977b7722c5f0fc0a7bc0a38084df1bef00c5201ba82949f21b40b15"
+  }
+}

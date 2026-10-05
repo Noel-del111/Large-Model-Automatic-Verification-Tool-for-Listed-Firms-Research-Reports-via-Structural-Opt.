@@ -1,0 +1,373 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000470",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“2024年13月”中13月不存在，日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 636,
+          "end": 676,
+          "text": "2024年13月公司拟通过协议转让方式引入中科泓源作为新股东，优化公司股东结构；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年13月公司拟通过协议转让方式引入中科泓源作为新股东，优化公司股东结构；",
+          "start": 0,
+          "end": 42
+        }
+      ],
+      "spans": [
+        {
+          "start": 636,
+          "end": 676,
+          "text": "2024年13月公司拟通过协议转让方式引入中科泓源作为新股东，优化公司股东结构；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "297e03532f71edd3bbb5c938",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“129年”与上下文2025年明显不符，应为2029年或2024年等，时间信息错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 784,
+          "end": 850,
+          "text": "129年3月水泥、钢铁、铝冶炼三大高能耗行业正式纳入全国碳市场，CEA和CCER需求均有望增多，公司有望通过碳交易获得额外业绩增量。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "129年3月水泥、钢铁、铝冶炼三大高能耗行业正式纳入全国碳市场，CEA和CCER需求均有望增多，公司有望通过碳交易获得额外业绩增量。",
+          "start": 0,
+          "end": 70
+        }
+      ],
+      "spans": [
+        {
+          "start": 784,
+          "end": 850,
+          "text": "129年3月水泥、钢铁、铝冶炼三大高能耗行业正式纳入全国碳市场，CEA和CCER需求均有望增多，公司有望通过碳交易获得额外业绩增量。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f8676c645c30513710ecfe3e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“新增装机”后直接接单位“万千瓦”，缺少应报的装机容量数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 301,
+          "end": 339,
+          "text": "截至2024年底，全国生物质发电装机容量达到4599万千瓦，新增装机万千瓦。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2024年底，全国生物质发电装机容量达到4599万千瓦，新增装机万千瓦。",
+          "start": 0,
+          "end": 39
+        }
+      ],
+      "spans": [
+        {
+          "start": 301,
+          "end": 339,
+          "text": "截至2024年底，全国生物质发电装机容量达到4599万千瓦，新增装机万千瓦。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7a9232eae7c1288537eb143a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "与中科信控签署的文件名称在书名号内为空，关键文件名称缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 676,
+          "end": 716,
+          "text": "2025年2月与中科信控签署《》为公司在行业内的数字化、智能化转型打下坚实基础。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年2月与中科信控签署《》为公司在行业内的数字化、智能化转型打下坚实基础。",
+          "start": 0,
+          "end": 47
+        }
+      ],
+      "spans": [
+        {
+          "start": 676,
+          "end": 716,
+          "text": "2025年2月与中科信控签署《》为公司在行业内的数字化、智能化转型打下坚实基础。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "eeb6e3145fe8875e41157878",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1051
+        ]
+      ],
+      "estimated_input_tokens": 5625,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:26:36.585246+00:00",
+        "request_sha256": "6266d2b778696096f77b722715835cf994a243b7e011d62332c0aa07271dc45d",
+        "input_token_estimate": 15644,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277788",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "def6dd01253c410eb220ae8edcd28e75",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3668,
+        "output_tokens": 7849,
+        "usage_source": "provider",
+        "duration_seconds": 33.243585,
+        "cost_cny": "0.035064",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "截至2024年末，公司农林生物质发电项目业务总装机容量491MW，仅次于国能生物和光大绿色环保位居行业第三。",
+            "start": 0,
+            "end": 60
+          }
+        ],
+        "reason": "同一装机容量和行业排名表述在相邻段落完全重复，属不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2024年13月公司拟通过协议转让方式引入中科泓源作为新股东，优化公司股东结构；",
+            "start": 0,
+            "end": 42
+          }
+        ],
+        "reason": "“2024年13月”中13月不存在，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "129年3月水泥、钢铁、铝冶炼三大高能耗行业正式纳入全国碳市场，CEA和CCER需求均有望增多，公司有望通过碳交易获得额外业绩增量。",
+            "start": 0,
+            "end": 70
+          }
+        ],
+        "reason": "年份“129年”与上下文2025年明显不符，应为2029年或2024年等，时间信息错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "截至2024年底，全国生物质发电装机容量达到4599万千瓦，新增装机万千瓦。",
+            "start": 0,
+            "end": 39
+          }
+        ],
+        "reason": "“新增装机”后直接接单位“万千瓦”，缺少应报的装机容量数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2025年2月与中科信控签署《》为公司在行业内的数字化、智能化转型打下坚实基础。",
+            "start": 0,
+            "end": 47
+          }
+        ],
+        "reason": "与中科信控签署的文件名称在书名号内为空，关键文件名称缺失。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "截至2024年末，公司农林生物质发电项目业务总装机容量491MW，仅次于国能生物和光大绿色环保位居行业第三。",
+            "start": 0,
+            "end": 60
+          }
+        ],
+        "reason": "同一装机容量和行业排名表述在相邻段落完全重复，属不必要重复。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 852,
+      "end": 935,
+      "text": "盈利预测与估值：我们预计2025-2027年公司归母净利润分别为2.80/3.08/3.34亿元，同比+29.2%/10.2%/8.4%，对应PE15/14/13x。",
+      "quantities": [
+        {
+          "value": "3.34",
+          "unit": "亿元",
+          "start": 894,
+          "end": 900
+        },
+        {
+          "value": "+29.2",
+          "unit": "%",
+          "start": 903,
+          "end": 909
+        },
+        {
+          "value": "10.2",
+          "unit": "%",
+          "start": 910,
+          "end": 915
+        },
+        {
+          "value": "8.4",
+          "unit": "%",
+          "start": 916,
+          "end": 920
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1051,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1051,
+    "processed_ranges": [
+      [
+        0,
+        1051
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1051,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002076,
+  "source_content_sha256": "b74a6dffb78f63fd6fd886d9063992b0112a02b4003d88a94bbb526cca56e283"
+}

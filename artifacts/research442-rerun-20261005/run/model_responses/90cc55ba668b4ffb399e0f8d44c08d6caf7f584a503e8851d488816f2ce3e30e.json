@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"上海瀚讯(300)\", \"start\": 36, \"end\": 44}], \"reason\": \"股票代码通常为6位数字，此处仅写“300”，格式不完整。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"财务债权率（-7.14%，-5.07pcts）明显下降，主要系存款利息收入增加所致。\", \"start\": 1697, \"end\": 1742}], \"reason\": \"“财务债权率”不是规范财务指标，应为“财务费用率”，术语使用错误。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"2025年Q1营收（1.26亿元，+84.41%），归母净利润（0.13亿元，同比增加0.23亿元）。\", \"start\": 137, \"end\": 185}, {\"text\": \"2025年Q1，公司营收（1.26亿元，+84.41%）显著增长，主要系低轨卫星通信业务收入增加所致，同时归母净利润（-0.13亿元，同比减少0.23亿元）实现扭亏。\", \"start\": 548, \"end\": 626}], \"reason\": \"同一2025Q1归母净利润，前文为0.13亿元且同比增加0.23亿元，后文为-0.13亿元且同比减少0.23亿元，数值和方向冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:06:06.131514+00:00",
+    "request_sha256": "9a2a30bd0517cbff94ace630563d084dccb1ba3cacf573328c7d0e3472487d72",
+    "input_token_estimate": 22294,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.284438",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "6e480f05d7844225b9067a346150c339",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 5196,
+    "output_tokens": 19686,
+    "usage_source": "provider",
+    "duration_seconds": 63.728107,
+    "cost_cny": "0.08394"
+  },
+  "cache_request": {
+    "key": "90cc55ba668b4ffb399e0f8d44c08d6caf7f584a503e8851d488816f2ce3e30e",
+    "purpose": "text_review.detect",
+    "messages_sha256": "9a2a30bd0517cbff94ace630563d084dccb1ba3cacf573328c7d0e3472487d72"
+  }
+}

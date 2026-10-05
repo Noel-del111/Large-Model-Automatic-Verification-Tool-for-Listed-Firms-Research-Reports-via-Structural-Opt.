@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"受益标的：港股海外公司阿里巴巴-SW、京东集团-SW、拼多多、爱奇艺、移卡、阅文集团、美图公司、哔哩哔哩-W、猫眼娱乐、泡泡玛特、云音乐、祖龙娱乐、中手游、心动公司、东方甄选、巨星传奇等；A股主要有慈文传媒、掌阅科技、三人行、万达电影、浙数文化、电广传媒，南方传媒，中文传媒、电魂网络、冰川网络、中文在线、昆仑万维、万兴科技、游族网络、力盛体育、遥望科技、东方时尚、浙文互联、零点有数、兆讯传媒、风语筑、视觉中国、创业黑马、立方数科、视觉中国等。\"}],\"reason\":\"A股受益标的列表中出现两次“视觉中国”，同一信息重复列举。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"档期内总观影人次3757.9万，总场次240.5亿场，刷新了中国影史五一档总场次数纪录。\"}],\"reason\":\"总场次用“亿场”作单位，单位量纲明显错误，应为万场等级。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"截至5月3日，香港恒生指数已连续9个交易日收涨，创2018年以来最长连跌纪录。\"}],\"reason\":\"“连续9个交易日收涨”与“最长连跌纪录”在同一指数上不能同时成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:29:30.977443+00:00",
+    "request_sha256": "45e2b14c64b9d9af1d9d87d4e3e035b25acaba65263e0e55e6b1fe4dbbd189ac",
+    "input_token_estimate": 16789,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278933",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "0e42e9557c944a2e9b00de3e0a8f4b72",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4021,
+    "output_tokens": 5583,
+    "usage_source": "provider",
+    "duration_seconds": 21.620863,
+    "cost_cny": "0.026353"
+  },
+  "cache_request": {
+    "key": "41734ffb137368da7a1b7d082de3822f91a36db5c1a1e2e22cee60aaeab566fb",
+    "purpose": "text_review.detect",
+    "messages_sha256": "45e2b14c64b9d9af1d9d87d4e3e035b25acaba65263e0e55e6b1fe4dbbd189ac"
+  }
+}

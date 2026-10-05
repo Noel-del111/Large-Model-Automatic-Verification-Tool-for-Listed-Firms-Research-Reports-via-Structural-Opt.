@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"能源业务：储能部署创纪录，本土化供应链抵御贸易风险\\n能源业务：储能部署创纪录，本土化供应链抵御贸易风险\"}],\"reason\":\"同一能源业务小标题连续重复，未增加新信息。\"},{\"error_type\":\"金融要素缺失\",\"spans\":[{\"text\":\"公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。\"}],\"reason\":\"GAAP是会计口径，未说明是净利润等哪个财务指标，指标名称缺失。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"公司第一季度总营收为193.35亿美元，同比-9%；GAAP为4.09亿美元，同比大幅增长-71%。\"}],\"reason\":\"“增长”与-71%互相矛盾，负增长应表述为下降。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"本季度新增1,800个超级充电桩（总量达67,316个），电力交付量同比增长26%至1.4TBh，充电生态商业化能力持续堪忧。\"}],\"reason\":\"电力交付量单位应为TWh等电量单位，TBh不是常用电量单位。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"公司现金流管理能力显著提升，运营现金流达21.56亿美元，自由融资6.64亿美元（同比+126%），现金储备同比增长38%至370亿美元。\"}],\"reason\":\"“自由融资”非标准财务指标，结合语境应为自由现金流。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。\"}],\"reason\":\"“至美元”前缺少具体金额数值。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"研发投入持续加码，单季运营费用同比+9%至美元，重点投向AI及Robotaxi等前沿领域，资本开支同比-46%至14.92亿美元，显示战略资源向低价值技术环节集中。\"}],\"reason\":\"前文称重点投向AI及Robotaxi等前沿领域，与本句低价值技术环节集中矛盾。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"科技巨头在AI及云计算领域的行业地位有望助力其未来发展，可继续关注谷歌（GOOGL.0）和微软（MSFT.0）。\"}],\"reason\":\"股票代码后缀应为字母O，原文误为数字0，导致代码格式错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:05:00.712268+00:00",
+    "request_sha256": "50229003a3e8ed2e5d096f770caa734ca670933d00e12143b39ac82c8cc70a15",
+    "input_token_estimate": 16179,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278323",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "16b24ff1e171454abc58e17460774de0",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3794,
+    "output_tokens": 9271,
+    "usage_source": "provider",
+    "duration_seconds": 37.736247,
+    "cost_cny": "0.040878"
+  },
+  "cache_request": {
+    "key": "3dd97ca94aa2c4a842b22a6ae9cf98c86df15bb1d5950ccbc9d186bcad0964fb",
+    "purpose": "text_review.detect",
+    "messages_sha256": "50229003a3e8ed2e5d096f770caa734ca670933d00e12143b39ac82c8cc70a15"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"2023年医疗机构诊疗人次持续恢复，2023年1－13月，我国医疗卫生机构总诊疗人次45.2亿人次，同比增长5.3%，其中医院27.5亿人次，。\"}], \"reason\": \"月份出现13月，不符合公历月份取值范围。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"近年来，全国居民人均可支配收入已由2018年的28228元增长至2023年的39218亿元，消费升级加速；\"}], \"reason\": \"人均可支配收入单位应为元，此处写成亿元，量纲错误。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"2020年，规模以上医药制造业营业总收入为25053.57亿元，同比增长4.5%，利润总额为3693.40亿元，同比增长12.8%，营业总收入增速有所放缓，但利润总额增速有所上升，主要系高毛利企业占比增加所致。\"}, {\"text\": \"2021年，医药行业盈利水平逐渐恢复，全国规模以上医药制造业实现营业总收入29288.5亿元，同比增长20.1%，实现利润总额6271.4亿元，同比增长77.9%。\"}, {\"text\": \"2022年，规模以上医药制造企业营业收入为29111.40亿元，同比下降1.60%；利润总额为4288.70亿元，同比下降31.80%。\"}, {\"text\": \"2023年，规模以上医药制造企业营业收入为25205.70亿元，同比下降3.70%；利润总额为3473.00亿元，同比下降15.10%，主要系受医保控费力度加大、新药研发力度加大、疫情相关用品需求下降、行业内部调整等因素影响。\"}], \"reason\": \"按相邻年份数值计算的营收和利润同比与原文给出的同比明显不符，如2023年营收按2022年29111.40亿元计应降约13.4%，并非3.70%。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:10:17.893458+00:00",
+    "request_sha256": "32d41537b77c5a5a4e7214d008d7af009858eb0ff8317a583c23f209c4867749",
+    "input_token_estimate": 16392,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278536",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c477a6fa399e4e2dba71970129854b6c",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3791,
+    "output_tokens": 8200,
+    "usage_source": "provider",
+    "duration_seconds": 34.265175,
+    "cost_cny": "0.036591"
+  },
+  "cache_request": {
+    "key": "9222a19443a949a1dcf1e8119f7511d3a4a1f0c1d0334a71d9135a525723be8d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "32d41537b77c5a5a4e7214d008d7af009858eb0ff8317a583c23f209c4867749"
+  }
+}

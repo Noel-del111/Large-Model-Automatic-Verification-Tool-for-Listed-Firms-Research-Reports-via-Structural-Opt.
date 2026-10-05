@@ -1,0 +1,470 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000430",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一分句连续重复两次，没有新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 762,
+          "end": 824,
+          "text": "民士达芳纶纸产品全球市场占有率居于第二位，仅次于美国杜邦公司；民士达芳纶纸产品全球市场占有率居于第二位，仅次于美国杜邦公司；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "民士达芳纶纸产品全球市场占有率居于第二位，仅次于美国杜邦公司；民士达芳纶纸产品全球市场占有率居于第二位，仅次于美国杜邦公司；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 762,
+          "end": 824,
+          "text": "民士达芳纶纸产品全球市场占有率居于第二位，仅次于美国杜邦公司；民士达芳纶纸产品全球市场占有率居于第二位，仅次于美国杜邦公司；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fa2011fd5a414a00f48fc360",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "法规引用错误",
+      "reason": "《》内法规名称空白，未引用具体法律文件。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 379,
+          "end": 453,
+          "text": "2025年4月4日因杜邦中国集团有限公司涉嫌违反《》，市场监管总局依法对杜邦中国集团有限公司开展立案调查，预计未来中国芳纶纸国产替代有望进一步加速。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4月4日因杜邦中国集团有限公司涉嫌违反《》，市场监管总局依法对杜邦中国集团有限公司开展立案调查，预计未来中国芳纶纸国产替代有望进一步加速。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 379,
+          "end": 453,
+          "text": "2025年4月4日因杜邦中国集团有限公司涉嫌违反《》，市场监管总局依法对杜邦中国集团有限公司开展立案调查，预计未来中国芳纶纸国产替代有望进一步加速。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aa2234936d42c05ed2bfa1d7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“设计年产能”后直接接单位“吨”，缺少应报告的具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 868,
+          "end": 898,
+          "text": "RO膜基材设计年产能吨终端覆盖电子、医药、化工、食品等行业。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "RO膜基材设计年产能吨终端覆盖电子、医药、化工、食品等行业。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 868,
+          "end": 898,
+          "text": "RO膜基材设计年产能吨终端覆盖电子、医药、化工、食品等行业。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aa9c09db39efeda1ea447e85",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "需求规模用“1.31元”表示，金额单位明显不匹配，应为亿元或吨等合理单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 678,
+          "end": 731,
+          "text": "按照商飞生产计划2029年实现200架/年的产能目标计算，预计2029年届时芳纶纸需求规模将达1.31元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "按照商飞生产计划2029年实现200架/年的产能目标计算，预计2029年届时芳纶纸需求规模将达1.31元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 678,
+          "end": 731,
+          "text": "按照商飞生产计划2029年实现200架/年的产能目标计算，预计2029年届时芳纶纸需求规模将达1.31元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "58bd77590e8831a53dd4ba25",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          969
+        ]
+      ],
+      "estimated_input_tokens": 5490,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:52:27.016444+00:00",
+        "request_sha256": "abaf3615f5e3ff4ad2d859f1a83f9dce1324e8dc9cb9a3447dca60a880c24206",
+        "input_token_estimate": 15289,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277433",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "61c1f54382ac4b8b8efd92c5cb7b9fdd",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3627,
+        "output_tokens": 5536,
+        "usage_source": "provider",
+        "duration_seconds": 21.464785,
+        "cost_cny": "0.025771",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "民士达芳纶纸产品全球市场占有率居于第二位，仅次于美国杜邦公司；民士达芳纶纸产品全球市场占有率居于第二位，仅次于美国杜邦公司；"
+          }
+        ],
+        "reason": "同一分句连续重复两次，没有新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "法规引用错误",
+        "spans": [
+          {
+            "text": "2025年4月4日因杜邦中国集团有限公司涉嫌违反《》，市场监管总局依法对杜邦中国集团有限公司开展立案调查，预计未来中国芳纶纸国产替代有望进一步加速。"
+          }
+        ],
+        "reason": "《》内法规名称空白，未引用具体法律文件。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "RO膜基材设计年产能吨终端覆盖电子、医药、化工、食品等行业。"
+          }
+        ],
+        "reason": "“设计年产能”后直接接单位“吨”，缺少应报告的具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "按照商飞生产计划2029年实现200架/年的产能目标计算，预计2029年届时芳纶纸需求规模将达1.31元。"
+          }
+        ],
+        "reason": "需求规模用“1.31元”表示，金额单位明显不匹配，应为亿元或吨等合理单位。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 50,
+      "end": 99,
+      "text": "2025Q1公司实现营收1.15亿元（+27.43%），归母净利润0.31亿元（+49.92%）\n",
+      "quantities": [
+        {
+          "value": "1.15",
+          "unit": "亿元",
+          "start": 62,
+          "end": 68
+        },
+        {
+          "value": "+27.43",
+          "unit": "%",
+          "start": 69,
+          "end": 76
+        },
+        {
+          "value": "0.31",
+          "unit": "亿元",
+          "start": 83,
+          "end": 89
+        },
+        {
+          "value": "+49.92",
+          "unit": "%",
+          "start": 90,
+          "end": 97
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 50,
+      "end": 99,
+      "text": "2025Q1公司实现营收1.15亿元（+27.43%），归母净利润0.31亿元（+49.92%）\n",
+      "quantities": [
+        {
+          "value": "1.15",
+          "unit": "亿元",
+          "start": 62,
+          "end": 68
+        },
+        {
+          "value": "+27.43",
+          "unit": "%",
+          "start": 69,
+          "end": 76
+        },
+        {
+          "value": "0.31",
+          "unit": "亿元",
+          "start": 83,
+          "end": 89
+        },
+        {
+          "value": "+49.92",
+          "unit": "%",
+          "start": 90,
+          "end": 97
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 100,
+      "end": 160,
+      "text": "2025年一季度公司实现营收1.15亿元，同比增长27.43%，实现归母净利润3055.05万元，同比增长49.92%。",
+      "quantities": [
+        {
+          "value": "1.15",
+          "unit": "亿元",
+          "start": 114,
+          "end": 120
+        },
+        {
+          "value": "27.43",
+          "unit": "%",
+          "start": 125,
+          "end": 131
+        },
+        {
+          "value": "3055.05",
+          "unit": "万元",
+          "start": 139,
+          "end": 148
+        },
+        {
+          "value": "49.92",
+          "unit": "%",
+          "start": 153,
+          "end": 159
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 100,
+      "end": 160,
+      "text": "2025年一季度公司实现营收1.15亿元，同比增长27.43%，实现归母净利润3055.05万元，同比增长49.92%。",
+      "quantities": [
+        {
+          "value": "1.15",
+          "unit": "亿元",
+          "start": 114,
+          "end": 120
+        },
+        {
+          "value": "27.43",
+          "unit": "%",
+          "start": 125,
+          "end": 131
+        },
+        {
+          "value": "3055.05",
+          "unit": "万元",
+          "start": 139,
+          "end": 148
+        },
+        {
+          "value": "49.92",
+          "unit": "%",
+          "start": 153,
+          "end": 159
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 160,
+      "end": 344,
+      "text": "下游需求高增，我们维持2025-2027年盈利预测，预计公司2025-2027年的归母净利润分别为1.33/1.64/1.92亿元，对应EPS分别为0.91/1.12/1.31元/股，对应当前股价的PE分别为46.0/37.4/31.9倍，看好公司产业链的稳固地位，看好航空蜂窝领域市场销量增加+新产品打开公司第二增长曲线，公司产能释放带来业绩增长，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "1.92",
+          "unit": "亿元",
+          "start": 219,
+          "end": 225
+        },
+        {
+          "value": "1.31",
+          "unit": "元/股",
+          "start": 244,
+          "end": 251
+        },
+        {
+          "value": "31.9",
+          "unit": "倍",
+          "start": 274,
+          "end": 279
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司",
+        "看好公司",
+        "新产品打开公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 969,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 969,
+    "processed_ranges": [
+      [
+        0,
+        969
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 969,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002025,
+  "source_content_sha256": "f2e53c3df74dde1c0ff163057fde4cbb67ad4e978f013f38c1f25e55e5d0ec9f"
+}

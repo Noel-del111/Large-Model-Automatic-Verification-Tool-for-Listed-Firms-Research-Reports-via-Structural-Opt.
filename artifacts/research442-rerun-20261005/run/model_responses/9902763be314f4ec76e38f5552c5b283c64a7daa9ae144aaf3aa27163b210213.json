@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"计算机：交通数字化升级政策出台，带来千亿增量市场\"},{\"text\":\"投资建议：我们认为，完整的2024食饮投资策略的主线是低估值优质确定性成长+高股息率标的，辅线是经营改善标的，需动态根据底层要素变化对确定性成长或高股息策略权重进行修正。\"}],\"reason\":\"标题称计算机/交通数字化，正文却全篇分析白酒并称食饮投资策略，主题互斥。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"虽然普飞批价波动放大需求担忧，我们认为伴随茅台酒批价泡沫挤出带来合理温和回调，消费步入强真实支撑区间，看好后续茅台稳价护盘，以及在茅五汾价格领衔下，行业批价保持稳定。\"},{\"text\":\"看好后续茅台稳价护盘。\"}],\"reason\":\"前文已表述看好茅台稳价护盘，末句又单独重复同一判断。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"其中高端、次高端、区域酒企收入同比增速分别16.5%、14.15%、，区域市场调节空间更大、动销去库更良性的头部酒企，业绩稳定性更为突出。\"}],\"reason\":\"“分别”后列三项，但区域酒企收入同比增速为空，直接接下一分句。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。\"}],\"reason\":\"用“收入分别为”接百分数，实指收入同比增速，漏“增速”致指标含义错误。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"利润增速方面，23年高端（18.46%）＞地产酒（18.05%）＞次高端（16.44%），24Q1次高端（20.93%）＞高端（15.21%）＜地产酒（13.87%）。\"}],\"reason\":\"24Q1高端15.21%大于地产酒13.87%，文中却写高端＜地产酒，比较方向与数值相反。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"费率方面，2023年/24Q1白酒企业销售费用率分别提升0.17pct/0.15pct，存货周转率分别下滑0.49pct/0.53pct，多数酒企加强C端营销投入及数字化营销手段应用，同时酒企亦加强费用管控，向管理端要效益。\"}],\"reason\":\"存货周转率单位为次/率，不是百分点；将其变动写为pct属于单位误用。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:14:19.757559+00:00",
+    "request_sha256": "d5751e1d1c843938a278f8c58c23335c8fdf44b13279617389a4300ee3bfaa1e",
+    "input_token_estimate": 16976,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27912",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "e448bb3d42bf4c678266d9c8b485a4e5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4088,
+    "output_tokens": 10732,
+    "usage_source": "provider",
+    "duration_seconds": 45.630166,
+    "cost_cny": "0.047016"
+  },
+  "cache_request": {
+    "key": "9902763be314f4ec76e38f5552c5b283c64a7daa9ae144aaf3aa27163b210213",
+    "purpose": "text_review.detect",
+    "messages_sha256": "d5751e1d1c843938a278f8c58c23335c8fdf44b13279617389a4300ee3bfaa1e"
+  }
+}

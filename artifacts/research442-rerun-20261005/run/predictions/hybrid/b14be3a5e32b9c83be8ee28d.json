@@ -1,0 +1,329 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000679",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份“13月”不存在，2025年13月财年不是合法时间表述。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 100,
+          "end": 155,
+          "text": "海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 100,
+          "end": 155,
+          "text": "海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3c240e77e5d394a57ac11825",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "括号内“微软”与“Meta”之间有两个顿号，中间缺失一个公司名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 100,
+          "end": 155,
+          "text": "海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 100,
+          "end": 155,
+          "text": "海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e314b78a54da4b7723ef6340",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“智算中心”后的括号内为空，缺失应有的缩写或说明性名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 29,
+          "end": 59,
+          "text": "需求和政策驱动智算中心（）基建爆发，资本开支达千亿美元量级："
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "需求和政策驱动智算中心（）基建爆发，资本开支达千亿美元量级："
+        }
+      ],
+      "spans": [
+        {
+          "start": 29,
+          "end": 59,
+          "text": "需求和政策驱动智算中心（）基建爆发，资本开支达千亿美元量级："
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e7d400d47a26372fb8ca632c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "功率密度提升应要求供电、散热能力更高，却写成“提出低要求”，前后矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 236,
+          "end": 296,
+          "text": "AIDC功率密度提升对AI基建的供电、散热提出低要求，价值量上看AI基础设施建设中制冷占比超20%、供配电系统超50%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "AIDC功率密度提升对AI基建的供电、散热提出低要求，价值量上看AI基础设施建设中制冷占比超20%、供配电系统超50%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 236,
+          "end": 296,
+          "text": "AIDC功率密度提升对AI基建的供电、散热提出低要求，价值量上看AI基础设施建设中制冷占比超20%、供配电系统超50%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "de2f8e6af3a02911f9769160",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "先预测2026年市场规模，又说保持增长至2023年，时间顺序倒置。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 662,
+          "end": 709,
+          "text": "据康明斯预测，2026年全球数据中心柴发市场将达90亿美元，且将保持近两位数增长至2023年。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据康明斯预测，2026年全球数据中心柴发市场将达90亿美元，且将保持近两位数增长至2023年。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 662,
+          "end": 709,
+          "text": "据康明斯预测，2026年全球数据中心柴发市场将达90亿美元，且将保持近两位数增长至2023年。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e3f4a4769eff1a9f20447355",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1247
+        ]
+      ],
+      "estimated_input_tokens": 5880,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:02:23.354525+00:00",
+        "request_sha256": "e7bc009bd595555e264458af9686975aa9fe73a227b0003fa4e1f9976bb050ab",
+        "input_token_estimate": 16332,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278476",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "571aa7c01ca847abbd53c0ebe7ee88bb",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3809,
+        "output_tokens": 5963,
+        "usage_source": "provider",
+        "duration_seconds": 26.834883,
+        "cost_cny": "0.027661",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；"
+          }
+        ],
+        "reason": "月份“13月”不存在，2025年13月财年不是合法时间表述。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "海外大厂（谷歌、微软、、Meta）2025年13月财年资本支出指引达3200亿美元，较2024年增长约39%；"
+          }
+        ],
+        "reason": "括号内“微软”与“Meta”之间有两个顿号，中间缺失一个公司名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "需求和政策驱动智算中心（）基建爆发，资本开支达千亿美元量级："
+          }
+        ],
+        "reason": "“智算中心”后的括号内为空，缺失应有的缩写或说明性名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "AIDC功率密度提升对AI基建的供电、散热提出低要求，价值量上看AI基础设施建设中制冷占比超20%、供配电系统超50%。"
+          }
+        ],
+        "reason": "功率密度提升应要求供电、散热能力更高，却写成“提出低要求”，前后矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "据康明斯预测，2026年全球数据中心柴发市场将达90亿美元，且将保持近两位数增长至2023年。"
+          }
+        ],
+        "reason": "先预测2026年市场规模，又说保持增长至2023年，时间顺序倒置。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1247,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1247,
+    "processed_ranges": [
+      [
+        0,
+        1247
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1247,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001936,
+  "source_content_sha256": "d4cb76f7863b5dc194721b646c77444d337260c8fff9c5f24db0e982a5b362fe"
+}

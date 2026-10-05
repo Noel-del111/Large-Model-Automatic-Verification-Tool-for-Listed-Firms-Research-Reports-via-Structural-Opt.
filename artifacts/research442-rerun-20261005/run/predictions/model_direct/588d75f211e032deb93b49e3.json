@@ -1,0 +1,519 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000499",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "5月没有32日，该日期不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 36,
+          "end": 73,
+          "text": "事件：5月32日起公司旗下百利得威士忌、椒语金酒、岭洌伏特加上架歪马平台。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件：5月32日起公司旗下百利得威士忌、椒语金酒、岭洌伏特加上架歪马平台。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 36,
+          "end": 73,
+          "text": "事件：5月32日起公司旗下百利得威士忌、椒语金酒、岭洌伏特加上架歪马平台。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f4627dd584d6f63f14309089",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一信息“酒类即时零售长坡厚雪，歪马全方位优势凸显”被重复一次。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 75,
+          "end": 117,
+          "text": "酒类即时零售长坡厚雪，歪马全方位优势凸显。酒类即时零售长坡厚雪，歪马全方位优势凸显。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "酒类即时零售长坡厚雪，歪马全方位优势凸显。酒类即时零售长坡厚雪，歪马全方位优势凸显。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 75,
+          "end": 117,
+          "text": "酒类即时零售长坡厚雪，歪马全方位优势凸显。酒类即时零售长坡厚雪，歪马全方位优势凸显。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "15e90e72ae34f4222e98308d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "称“四大品类”但只列出啤酒、红酒、洋酒三个品类，缺少一个类别名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 303,
+          "end": 371,
+          "text": "其中，歪马送酒为美团旗下经营啤酒、、红酒、洋酒四大品类的酒水即时零售品牌，主打自建配送体系给前置仓配货，提供最快15分钟可达的送酒服务。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，歪马送酒为美团旗下经营啤酒、、红酒、洋酒四大品类的酒水即时零售品牌，主打自建配送体系给前置仓配货，提供最快15分钟可达的送酒服务。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 303,
+          "end": 371,
+          "text": "其中，歪马送酒为美团旗下经营啤酒、、红酒、洋酒四大品类的酒水即时零售品牌，主打自建配送体系给前置仓配货，提供最快15分钟可达的送酒服务。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d17276b3e361210cfeb5aea0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "2025-2027年营收只给出35、40两个数，缺少2027年营收数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 906,
+          "end": 1011,
+          "text": "我们维持2025-2027年营收为35、40、亿元，同比+15%、+14%、+18%，归母净利润为8.1、9.7、11.8亿元，同比+12%、+20%、+22%，对应PE为34、28、23倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们维持2025-2027年营收为35、40、亿元，同比+15%、+14%、+18%，归母净利润为8.1、9.7、11.8亿元，同比+12%、+20%、+22%，对应PE为34、28、23倍，维持“买入”评级。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 906,
+          "end": 1011,
+          "text": "我们维持2025-2027年营收为35、40、亿元，同比+15%、+14%、+18%，归母净利润为8.1、9.7、11.8亿元，同比+12%、+20%、+22%，对应PE为34、28、23倍，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ee67e2177bb64d389e5b79cb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "2023年市场规模“不到200万亿美元”量级明显错误，与后文亿元口径矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 211,
+          "end": 303,
+          "text": "据美团闪购的数据显示，2023年中国酒类即时零售市场规模不到200万亿美元，渗透率约为1%，2024年已增长至360亿元左右，预计到2027年规模将增长至1000亿元，渗透率达到6%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据美团闪购的数据显示，2023年中国酒类即时零售市场规模不到200万亿美元，渗透率约为1%，2024年已增长至360亿元左右，预计到2027年规模将增长至1000亿元，渗透率达到6%。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 211,
+          "end": 303,
+          "text": "据美团闪购的数据显示，2023年中国酒类即时零售市场规模不到200万亿美元，渗透率约为1%，2024年已增长至360亿元左右，预计到2027年规模将增长至1000亿元，渗透率达到6%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "061a6620056a72eb411d947d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "“358度”应为3度、5度、8度，缺少分隔符导致数值连写，格式不符合度数列举方式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 720,
+          "end": 828,
+          "text": "盈利预测与投资评级：展望全年，预调酒业务方面，将继续打造358度产品矩阵，强爽维持势能、微醺/清爽实现有策略的放量，同时预计开发8~20度新品满足强酒感度客户需求，预计亦有望带来一定增量贡献，全年目标力争实现正增长；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "盈利预测与投资评级：展望全年，预调酒业务方面，将继续打造358度产品矩阵，强爽维持势能、微醺/清爽实现有策略的放量，同时预计开发8~20度新品满足强酒感度客户需求，预计亦有望带来一定增量贡献，全年目标力争实现正增长；",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 720,
+          "end": 828,
+          "text": "盈利预测与投资评级：展望全年，预调酒业务方面，将继续打造358度产品矩阵，强爽维持势能、微醺/清爽实现有策略的放量，同时预计开发8~20度新品满足强酒感度客户需求，预计亦有望带来一定增量贡献，全年目标力争实现正增长；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "54fa69f2b9f81e8d46739607",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1054
+        ]
+      ],
+      "estimated_input_tokens": 5647,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:53:04.012477+00:00",
+        "request_sha256": "78de631fd162c92cdefcdaba741e84dc3b9cc1d6776db31ec4481f090a0c9dde",
+        "input_token_estimate": 15721,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277865",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "314f30ab4e09474b88b9fab68e5b42de",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3744,
+        "output_tokens": 5888,
+        "usage_source": "provider",
+        "duration_seconds": 23.291335,
+        "cost_cny": "0.027296"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "事件：5月32日起公司旗下百利得威士忌、椒语金酒、岭洌伏特加上架歪马平台。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "5月没有32日，该日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "酒类即时零售长坡厚雪，歪马全方位优势凸显。酒类即时零售长坡厚雪，歪马全方位优势凸显。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "同一信息“酒类即时零售长坡厚雪，歪马全方位优势凸显”被重复一次。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "其中，歪马送酒为美团旗下经营啤酒、、红酒、洋酒四大品类的酒水即时零售品牌，主打自建配送体系给前置仓配货，提供最快15分钟可达的送酒服务。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "称“四大品类”但只列出啤酒、红酒、洋酒三个品类，缺少一个类别名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "我们维持2025-2027年营收为35、40、亿元，同比+15%、+14%、+18%，归母净利润为8.1、9.7、11.8亿元，同比+12%、+20%、+22%，对应PE为34、28、23倍，维持“买入”评级。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "2025-2027年营收只给出35、40两个数，缺少2027年营收数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "据美团闪购的数据显示，2023年中国酒类即时零售市场规模不到200万亿美元，渗透率约为1%，2024年已增长至360亿元左右，预计到2027年规模将增长至1000亿元，渗透率达到6%。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "2023年市场规模“不到200万亿美元”量级明显错误，与后文亿元口径矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "盈利预测与投资评级：展望全年，预调酒业务方面，将继续打造358度产品矩阵，强爽维持势能、微醺/清爽实现有策略的放量，同时预计开发8~20度新品满足强酒感度客户需求，预计亦有望带来一定增量贡献，全年目标力争实现正增长；",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“358度”应为3度、5度、8度，缺少分隔符导致数值连写，格式不符合度数列举方式。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 906,
+      "end": 1011,
+      "text": "我们维持2025-2027年营收为35、40、亿元，同比+15%、+14%、+18%，归母净利润为8.1、9.7、11.8亿元，同比+12%、+20%、+22%，对应PE为34、28、23倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "+15",
+          "unit": "%",
+          "start": 934,
+          "end": 938
+        },
+        {
+          "value": "+14",
+          "unit": "%",
+          "start": 939,
+          "end": 943
+        },
+        {
+          "value": "+18",
+          "unit": "%",
+          "start": 944,
+          "end": 948
+        },
+        {
+          "value": "11.8",
+          "unit": "亿元",
+          "start": 963,
+          "end": 969
+        },
+        {
+          "value": "+12",
+          "unit": "%",
+          "start": 972,
+          "end": 976
+        },
+        {
+          "value": "+20",
+          "unit": "%",
+          "start": 977,
+          "end": 981
+        },
+        {
+          "value": "+22",
+          "unit": "%",
+          "start": 982,
+          "end": 986
+        },
+        {
+          "value": "23",
+          "unit": "倍",
+          "start": 998,
+          "end": 1001
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 906,
+      "end": 1011,
+      "text": "我们维持2025-2027年营收为35、40、亿元，同比+15%、+14%、+18%，归母净利润为8.1、9.7、11.8亿元，同比+12%、+20%、+22%，对应PE为34、28、23倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "+15",
+          "unit": "%",
+          "start": 934,
+          "end": 938
+        },
+        {
+          "value": "+14",
+          "unit": "%",
+          "start": 939,
+          "end": 943
+        },
+        {
+          "value": "+18",
+          "unit": "%",
+          "start": 944,
+          "end": 948
+        },
+        {
+          "value": "11.8",
+          "unit": "亿元",
+          "start": 963,
+          "end": 969
+        },
+        {
+          "value": "+12",
+          "unit": "%",
+          "start": 972,
+          "end": 976
+        },
+        {
+          "value": "+20",
+          "unit": "%",
+          "start": 977,
+          "end": 981
+        },
+        {
+          "value": "+22",
+          "unit": "%",
+          "start": 982,
+          "end": 986
+        },
+        {
+          "value": "23",
+          "unit": "倍",
+          "start": 998,
+          "end": 1001
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1054,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1054,
+    "processed_ranges": [
+      [
+        0,
+        1054
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.324987,
+  "source_content_sha256": "3e47a14b89ba778460854c934bbe50b08d9daf31383d8c8cc0886c561354be4f"
+}

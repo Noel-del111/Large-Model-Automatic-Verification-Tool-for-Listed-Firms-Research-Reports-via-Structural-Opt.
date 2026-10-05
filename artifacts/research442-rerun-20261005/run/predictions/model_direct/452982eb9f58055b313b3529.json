@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000565",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“申请注册‘’商标”中商标名称引号内为空，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 808,
+          "end": 846,
+          "text": "近期机器人布局加速，增资极目机器30亿，申请注册“”商标，哈勃入股千寻智能。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近期机器人布局加速，增资极目机器30亿，申请注册“”商标，哈勃入股千寻智能。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 808,
+          "end": 846,
+          "text": "近期机器人布局加速，增资极目机器30亿，申请注册“”商标，哈勃入股千寻智能。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d5b5dc48137dc3d4233a0ca5",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "2025Q1会议上称2024年内推出，所涉时间已过去，先后关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 934,
+          "end": 977,
+          "text": "小鹏在2025Q1财报电话会议上表示，2024年内推出面向工业和商业场景的人形机器人。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "小鹏在2025Q1财报电话会议上表示，2024年内推出面向工业和商业场景的人形机器人。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 934,
+          "end": 977,
+          "text": "小鹏在2025Q1财报电话会议上表示，2024年内推出面向工业和商业场景的人形机器人。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4e0ad76d80a2bf8006278be9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“套利”为金融术语，与“算力底座”搭配不当，导致表达含义错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 716,
+          "end": 758,
+          "text": "华为提供模型、算法、算力底座套利，建立全球元宇宙产业创新中心，并与优必选等企业合作。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "华为提供模型、算法、算力底座套利，建立全球元宇宙产业创新中心，并与优必选等企业合作。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 716,
+          "end": 758,
+          "text": "华为提供模型、算法、算力底座套利，建立全球元宇宙产业创新中心，并与优必选等企业合作。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "635dd76dc26cf3294507525b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "人形机器人订单以“万台”计量，量级与行业通常交付规模明显不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 136,
+          "end": 157,
+          "text": "松延动力N2机器人订单已突破2000万台；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "松延动力N2机器人订单已突破2000万台；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 136,
+          "end": 157,
+          "text": "松延动力N2机器人订单已突破2000万台；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b545a3c6cd006712a1920e87",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1861
+        ]
+      ],
+      "estimated_input_tokens": 6551,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:27:25.623191+00:00",
+        "request_sha256": "a7d91c9d6067f5d37db7a71ba6365008196a2eaad32142dd44a85aa1585fd5d4",
+        "input_token_estimate": 18188,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280332",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f37519f30c4646bea4a094806641b7b8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4180,
+        "output_tokens": 6267,
+        "usage_source": "provider",
+        "duration_seconds": 25.758846,
+        "cost_cny": "0.029248"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "近期机器人布局加速，增资极目机器30亿，申请注册“”商标，哈勃入股千寻智能。"
+          }
+        ],
+        "reason": "“申请注册‘’商标”中商标名称引号内为空，非数值属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "小鹏在2025Q1财报电话会议上表示，2024年内推出面向工业和商业场景的人形机器人。"
+          }
+        ],
+        "reason": "2025Q1会议上称2024年内推出，所涉时间已过去，先后关系矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "华为提供模型、算法、算力底座套利，建立全球元宇宙产业创新中心，并与优必选等企业合作。"
+          }
+        ],
+        "reason": "“套利”为金融术语，与“算力底座”搭配不当，导致表达含义错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "松延动力N2机器人订单已突破2000万台；"
+          }
+        ],
+        "reason": "人形机器人订单以“万台”计量，量级与行业通常交付规模明显不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1861,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1861,
+    "processed_ranges": [
+      [
+        0,
+        1861
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.781183,
+  "source_content_sha256": "a033226072e23ed85c4ecf7db15144a4fe4baf3d1277b8a7db39abd885abbfab"
+}

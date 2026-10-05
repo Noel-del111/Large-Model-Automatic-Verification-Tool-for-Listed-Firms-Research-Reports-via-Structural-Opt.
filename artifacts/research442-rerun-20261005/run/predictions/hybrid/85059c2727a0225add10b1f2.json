@@ -1,0 +1,329 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000670",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同时重复表述RokidGlasses重49g及外观接近普通眼镜/传统眼镜，属于不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 729,
+          "end": 926,
+          "text": "RokidGlasses仅重49g，外观接近于普通眼镜，却拥有多种前沿AR显示功能；与此同时，RokidGlasses的重量设计为49g，整体造型与传统眼镜相似，配备领先的AR显示技术，更新选代后的RokidGlasses全面接入AI大模型，集成了通义千问、DeepSeek、豆包、智谱清言、纳米搜索等多个大模型，支持实时翻译、物体识别、导航及消息提醒，还支持随手拍照查看、声纹支付等多种功能。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "RokidGlasses仅重49g，外观接近于普通眼镜，却拥有多种前沿AR显示功能；与此同时，RokidGlasses的重量设计为49g，整体造型与传统眼镜相似，配备领先的AR显示技术，更新选代后的RokidGlasses全面接入AI大模型，集成了通义千问、DeepSeek、豆包、智谱清言、纳米搜索等多个大模型，支持实时翻译、物体识别、导航及消息提醒，还支持随手拍照查看、声纹支付等多种功能。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 729,
+          "end": 926,
+          "text": "RokidGlasses仅重49g，外观接近于普通眼镜，却拥有多种前沿AR显示功能；与此同时，RokidGlasses的重量设计为49g，整体造型与传统眼镜相似，配备领先的AR显示技术，更新选代后的RokidGlasses全面接入AI大模型，集成了通义千问、DeepSeek、豆包、智谱清言、纳米搜索等多个大模型，支持实时翻译、物体识别、导航及消息提醒，还支持随手拍照查看、声纹支付等多种功能。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8485c07fb50bfbe47098465f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "行业常用指数名称为“申万电子指数”，非“中万电子指数”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 57,
+          "end": 167,
+          "text": "从指数表现来看，本周（2025-05-26至2025-05-30），上证指数周涨跌-0.026%，深证成指涨跌幅为+0.91%，创业板指数涨跌幅-1.40%，科创50涨跌幅为-0.36%，中万电子指数涨跌幅-0.59%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从指数表现来看，本周（2025-05-26至2025-05-30），上证指数周涨跌-0.026%，深证成指涨跌幅为+0.91%，创业板指数涨跌幅-1.40%，科创50涨跌幅为-0.36%，中万电子指数涨跌幅-0.59%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 57,
+          "end": 167,
+          "text": "从指数表现来看，本周（2025-05-26至2025-05-30），上证指数周涨跌-0.026%，深证成指涨跌幅为+0.91%，创业板指数涨跌幅-1.40%，科创50涨跌幅为-0.36%，中万电子指数涨跌幅-0.59%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9b7c3abed87486cabf92501f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“涨福”不是金融标准术语，应为“涨幅”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 215,
+          "end": 267,
+          "text": "板块概念指数来看，表现最好的是EDA指数，涨福为6.53%，表现最弱的是显示面板指数，跌幅为1.25%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "板块概念指数来看，表现最好的是EDA指数，涨福为6.53%，表现最弱的是显示面板指数，跌幅为1.25%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 215,
+          "end": 267,
+          "text": "板块概念指数来看，表现最好的是EDA指数，涨福为6.53%，表现最弱的是显示面板指数，跌幅为1.25%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2cf97052d341f145d5add146",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "智能眼镜订单数量不能用体积单位“立方米”，应为台/副等数量单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 628,
+          "end": 696,
+          "text": "Rokid旗下带显示的智能眼镜——RokidGlasses，全球已交定金订单超25万立方米，其中在线订单超4万台，且今年内有望全部交付。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Rokid旗下带显示的智能眼镜——RokidGlasses，全球已交定金订单超25万立方米，其中在线订单超4万台，且今年内有望全部交付。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 628,
+          "end": 696,
+          "text": "Rokid旗下带显示的智能眼镜——RokidGlasses，全球已交定金订单超25万立方米，其中在线订单超4万台，且今年内有望全部交付。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3e98b8557d24ebb6015df3d6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "2024年234万台至2025年预计550万台为增长，不是下降，且下降135%不可能。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 481,
+          "end": 564,
+          "text": "XR行业第三方研究机构WellsennXR统计数据显示，2024年全球AI眼镜销量达到234万台，预计2025年全球AI眼镜销售有望达到550万台，同比下降135%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "XR行业第三方研究机构WellsennXR统计数据显示，2024年全球AI眼镜销量达到234万台，预计2025年全球AI眼镜销售有望达到550万台，同比下降135%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 481,
+          "end": 564,
+          "text": "XR行业第三方研究机构WellsennXR统计数据显示，2024年全球AI眼镜销量达到234万台，预计2025年全球AI眼镜销售有望达到550万台，同比下降135%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "247e5a8ca3097be239b7b732",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1034
+        ]
+      ],
+      "estimated_input_tokens": 5523,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:54:06.701842+00:00",
+        "request_sha256": "081152f5ecad5a7fde295e1fbb146a1c127ed806ae15113a84af9d8b67c6cbfd",
+        "input_token_estimate": 15393,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277537",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "fb0ea6c659f64679942593864459fcf2",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3668,
+        "output_tokens": 6904,
+        "usage_source": "provider",
+        "duration_seconds": 28.914882,
+        "cost_cny": "0.031284",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "RokidGlasses仅重49g，外观接近于普通眼镜，却拥有多种前沿AR显示功能；与此同时，RokidGlasses的重量设计为49g，整体造型与传统眼镜相似，配备领先的AR显示技术，更新选代后的RokidGlasses全面接入AI大模型，集成了通义千问、DeepSeek、豆包、智谱清言、纳米搜索等多个大模型，支持实时翻译、物体识别、导航及消息提醒，还支持随手拍照查看、声纹支付等多种功能。"
+          }
+        ],
+        "reason": "同时重复表述RokidGlasses重49g及外观接近普通眼镜/传统眼镜，属于不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "从指数表现来看，本周（2025-05-26至2025-05-30），上证指数周涨跌-0.026%，深证成指涨跌幅为+0.91%，创业板指数涨跌幅-1.40%，科创50涨跌幅为-0.36%，中万电子指数涨跌幅-0.59%。"
+          }
+        ],
+        "reason": "行业常用指数名称为“申万电子指数”，非“中万电子指数”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "板块概念指数来看，表现最好的是EDA指数，涨福为6.53%，表现最弱的是显示面板指数，跌幅为1.25%。"
+          }
+        ],
+        "reason": "“涨福”不是金融标准术语，应为“涨幅”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "Rokid旗下带显示的智能眼镜——RokidGlasses，全球已交定金订单超25万立方米，其中在线订单超4万台，且今年内有望全部交付。"
+          }
+        ],
+        "reason": "智能眼镜订单数量不能用体积单位“立方米”，应为台/副等数量单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "XR行业第三方研究机构WellsennXR统计数据显示，2024年全球AI眼镜销量达到234万台，预计2025年全球AI眼镜销售有望达到550万台，同比下降135%。"
+          }
+        ],
+        "reason": "2024年234万台至2025年预计550万台为增长，不是下降，且下降135%不可能。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1034,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1034,
+    "processed_ranges": [
+      [
+        0,
+        1034
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1034,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001496,
+  "source_content_sha256": "ec2c4c234e9c24c9868d71e8d52e759dcf569419f7a5758a0e264e9e01bc809f"
+}

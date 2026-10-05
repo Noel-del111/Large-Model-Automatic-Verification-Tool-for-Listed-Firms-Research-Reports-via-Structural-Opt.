@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"交大铁发(920027)\"}, {\"text\": \"交大铁发（920028）：公司专业从事轨道交通智能产品及装备的研发、生产、销售，并提供轨道交通专业技术服务。\"}], \"reason\": \"同一公司股票代码前文为920027，后文为920028，两者冲突。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"本周二（5月27日）有一只北交所新股“交大铁发”申购，发行价格为8.81元、发行市盈率为倍（每股收益按照2024年度经会计师事务所依据中国会计准则审计的扣除非经常性损益后归属于母公司股东净利润除以考虑超额配售选择权全额行使时本次发行后总股本计算）。\"}], \"reason\": \"发行市盈率明确写“为倍”，缺少具体数值。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"公司2024-2022年分别实现营业收入2.35亿元/2.73亿元/3.35亿元，YOY依次为15.26%/16.12%/22.61%；实现归母净利润0.34亿元/0.48亿元/0.53亿元，YOY依次为15.00%/41.00%/12.04%。\"}], \"reason\": \"年份区间“2024-2022年”起点2024晚于终点2022，时间顺序矛盾。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"根据公司管理层初步预测，公司2025年1-6月营业收入较上年同期增长2.83%至21.53%，归母净利润较。\"}], \"reason\": \"“归母净利润较”后缺失具体增长幅度或数值，句子不完整。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:58:41.741314+00:00",
+    "request_sha256": "86b8cb8650327df2c0ddbaa70d8b4cff735b48759840a218c9f8784ae52e1337",
+    "input_token_estimate": 17493,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279637",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "270dfc2ee6c14263809f4287ca7474d6",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4068,
+    "output_tokens": 7509,
+    "usage_source": "provider",
+    "duration_seconds": 29.438018,
+    "cost_cny": "0.034104"
+  },
+  "cache_request": {
+    "key": "d12bd84d6145f48d08f67c900029341a6d39384e12f2f2a60b2638d302c04f54",
+    "purpose": "text_review.detect",
+    "messages_sha256": "86b8cb8650327df2c0ddbaa70d8b4cff735b48759840a218c9f8784ae52e1337"
+  }
+}

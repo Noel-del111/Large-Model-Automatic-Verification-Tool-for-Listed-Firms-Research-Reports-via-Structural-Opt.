@@ -1,0 +1,618 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000481",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收数值“65.2”后单位写成“平方”，应为“亿元”等货币单位，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 71,
+          "end": 114,
+          "text": "2024年营收65.2平方/同比+10.5%，归母净利润1.9亿元/同比-41.9%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年营收65.2平方/同比+10.5%，归母净利润1.9亿元/同比-41.9%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 71,
+          "end": 114,
+          "text": "2024年营收65.2平方/同比+10.5%，归母净利润1.9亿元/同比-41.9%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6c8d1c3edd55910198783232",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "该段与紧邻前文“1）分产品来看”内容完全相同，属不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 387,
+          "end": 510,
+          "text": "2）分产品来看，时尚珠宝/传统黄金首饰/皮具收入分别同比-0.6%/+30%/-27%至29.7/29.5/2.7亿元，品牌授权费同比+23%至2.6亿元；时尚珠宝/传统黄金首饰的销售占比分别同比-5.1/+6.9pct至45.6%/45.3%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）分产品来看，时尚珠宝/传统黄金首饰/皮具收入分别同比-0.6%/+30%/-27%至29.7/29.5/2.7亿元，品牌授权费同比+23%至2.6亿元；时尚珠宝/传统黄金首饰的销售占比分别同比-5.1/+6.9pct至45.6%/45.3%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 387,
+          "end": 510,
+          "text": "2）分产品来看，时尚珠宝/传统黄金首饰/皮具收入分别同比-0.6%/+30%/-27%至29.7/29.5/2.7亿元，品牌授权费同比+23%至2.6亿元；时尚珠宝/传统黄金首饰的销售占比分别同比-5.1/+6.9pct至45.6%/45.3%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3db66686f9d48523728bb1f9",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-27年只有三年，净利润却列出四个数值，对应PE仅三个，年份与数值数量不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1490,
+          "end": 1556,
+          "text": "我们预计2025-27年净利润分别为4.85/5.76/6.81/4.81亿元，对应PE分别为21/18/15倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计2025-27年净利润分别为4.85/5.76/6.81/4.81亿元，对应PE分别为21/18/15倍，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1490,
+          "end": 1556,
+          "text": "我们预计2025-27年净利润分别为4.85/5.76/6.81/4.81亿元，对应PE分别为21/18/15倍，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7f2ae1b0fc34e11067ca22ae",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "称“三大差异化产品类别”，但仅列出“花丝”“流行IP”两项，数量表述与列举不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1125,
+          "end": 1211,
+          "text": "继续深耕品牌印记类和IP系列产品，围绕“花丝”、“流行IP”三大差异化产品类别，加大传统黄金首饰的研发，推出了花丝系列、“梵华”系列、“臻金臻钻”系列、“三丽鸥”IP系列。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "继续深耕品牌印记类和IP系列产品，围绕“花丝”、“流行IP”三大差异化产品类别，加大传统黄金首饰的研发，推出了花丝系列、“梵华”系列、“臻金臻钻”系列、“三丽鸥”IP系列。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1125,
+          "end": 1211,
+          "text": "继续深耕品牌印记类和IP系列产品，围绕“花丝”、“流行IP”三大差异化产品类别，加大传统黄金首饰的研发，推出了花丝系列、“梵华”系列、“臻金臻钻”系列、“三丽鸥”IP系列。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1eec00829deca0538c30a6c4",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1586
+        ]
+      ],
+      "estimated_input_tokens": 5897,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:36:56.733598+00:00",
+        "request_sha256": "41788a05c5a06ececeb425960bf040248a567928f58364a276904b90eb88ca3f",
+        "input_token_estimate": 16510,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278654",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "874aaa54446c459c961ed497f321627a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4099,
+        "output_tokens": 7468,
+        "usage_source": "provider",
+        "duration_seconds": 29.751494,
+        "cost_cny": "0.033971"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年营收65.2平方/同比+10.5%，归母净利润1.9亿元/同比-41.9%；"
+          }
+        ],
+        "reason": "营收数值“65.2”后单位写成“平方”，应为“亿元”等货币单位，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2）分产品来看，时尚珠宝/传统黄金首饰/皮具收入分别同比-0.6%/+30%/-27%至29.7/29.5/2.7亿元，品牌授权费同比+23%至2.6亿元；时尚珠宝/传统黄金首饰的销售占比分别同比-5.1/+6.9pct至45.6%/45.3%。"
+          }
+        ],
+        "reason": "该段与紧邻前文“1）分产品来看”内容完全相同，属不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们预计2025-27年净利润分别为4.85/5.76/6.81/4.81亿元，对应PE分别为21/18/15倍，维持“买入”评级。"
+          }
+        ],
+        "reason": "2025-27年只有三年，净利润却列出四个数值，对应PE仅三个，年份与数值数量不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "继续深耕品牌印记类和IP系列产品，围绕“花丝”、“流行IP”三大差异化产品类别，加大传统黄金首饰的研发，推出了花丝系列、“梵华”系列、“臻金臻钻”系列、“三丽鸥”IP系列。"
+          }
+        ],
+        "reason": "称“三大差异化产品类别”，但仅列出“花丝”“流行IP”两项，数量表述与列举不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 45,
+      "end": 114,
+      "text": "事件：公司近期公布2024年年报及2025年一季报，2024年营收65.2平方/同比+10.5%，归母净利润1.9亿元/同比-41.9%；",
+      "quantities": [
+        {
+          "value": "+10.5",
+          "unit": "%",
+          "start": 87,
+          "end": 93
+        },
+        {
+          "value": "1.9",
+          "unit": "亿元",
+          "start": 99,
+          "end": 104
+        },
+        {
+          "value": "-41.9",
+          "unit": "%",
+          "start": 107,
+          "end": 113
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 45,
+      "end": 114,
+      "text": "事件：公司近期公布2024年年报及2025年一季报，2024年营收65.2平方/同比+10.5%，归母净利润1.9亿元/同比-41.9%；",
+      "quantities": [
+        {
+          "value": "+10.5",
+          "unit": "%",
+          "start": 87,
+          "end": 93
+        },
+        {
+          "value": "1.9",
+          "unit": "亿元",
+          "start": 99,
+          "end": 104
+        },
+        {
+          "value": "-41.9",
+          "unit": "%",
+          "start": 107,
+          "end": 113
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 114,
+      "end": 156,
+      "text": "25Q1营收22.5亿元/同比+25.4%，归母净利润1.9亿元/同比+44.4%。",
+      "quantities": [
+        {
+          "value": "22.5",
+          "unit": "亿元",
+          "start": 120,
+          "end": 126
+        },
+        {
+          "value": "+25.4",
+          "unit": "%",
+          "start": 129,
+          "end": 135
+        },
+        {
+          "value": "1.9",
+          "unit": "亿元",
+          "start": 141,
+          "end": 146
+        },
+        {
+          "value": "+44.4",
+          "unit": "%",
+          "start": 149,
+          "end": 155
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 114,
+      "end": 156,
+      "text": "25Q1营收22.5亿元/同比+25.4%，归母净利润1.9亿元/同比+44.4%。",
+      "quantities": [
+        {
+          "value": "22.5",
+          "unit": "亿元",
+          "start": 120,
+          "end": 126
+        },
+        {
+          "value": "+25.4",
+          "unit": "%",
+          "start": 129,
+          "end": 135
+        },
+        {
+          "value": "1.9",
+          "unit": "亿元",
+          "start": 141,
+          "end": 146
+        },
+        {
+          "value": "+44.4",
+          "unit": "%",
+          "start": 149,
+          "end": 155
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 220,
+      "end": 262,
+      "text": "24年公司营收同比+10.5%至65.2亿元，毛利率同比-2.5pct至23.6%。",
+      "quantities": [
+        {
+          "value": "+10.5",
+          "unit": "%",
+          "start": 229,
+          "end": 235
+        },
+        {
+          "value": "65.2",
+          "unit": "亿元",
+          "start": 236,
+          "end": 242
+        },
+        {
+          "value": "23.6",
+          "unit": "%",
+          "start": 256,
+          "end": 261
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 220,
+      "end": 262,
+      "text": "24年公司营收同比+10.5%至65.2亿元，毛利率同比-2.5pct至23.6%。",
+      "quantities": [
+        {
+          "value": "+10.5",
+          "unit": "%",
+          "start": 229,
+          "end": 235
+        },
+        {
+          "value": "65.2",
+          "unit": "亿元",
+          "start": 236,
+          "end": 242
+        },
+        {
+          "value": "23.6",
+          "unit": "%",
+          "start": 256,
+          "end": 261
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 639,
+      "end": 725,
+      "text": "1）24年：毛利率同比-2.5pct至23.6%，销售/管理/研发/财务费用率分别同比-2.3/-0.1/-0.02/-0.04pct，归母净利率-2.7pct至3.0%。",
+      "quantities": [
+        {
+          "value": "23.6",
+          "unit": "%",
+          "start": 658,
+          "end": 663
+        },
+        {
+          "value": "3.0",
+          "unit": "%",
+          "start": 720,
+          "end": 724
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 639,
+      "end": 725,
+      "text": "1）24年：毛利率同比-2.5pct至23.6%，销售/管理/研发/财务费用率分别同比-2.3/-0.1/-0.02/-0.04pct，归母净利率-2.7pct至3.0%。",
+      "quantities": [
+        {
+          "value": "23.6",
+          "unit": "%",
+          "start": 658,
+          "end": 663
+        },
+        {
+          "value": "3.0",
+          "unit": "%",
+          "start": 720,
+          "end": 724
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 725,
+      "end": 810,
+      "text": "2）25Q1：毛利率同比-2.0pct至22.9%，销售/管理/研发/财务费用率分别同比-2.6/-0.5/+0.1/-0.1pct，归母净利率+1.1pct至8.4%。",
+      "quantities": [
+        {
+          "value": "22.9",
+          "unit": "%",
+          "start": 745,
+          "end": 750
+        },
+        {
+          "value": "8.4",
+          "unit": "%",
+          "start": 805,
+          "end": 809
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 725,
+      "end": 810,
+      "text": "2）25Q1：毛利率同比-2.0pct至22.9%，销售/管理/研发/财务费用率分别同比-2.6/-0.5/+0.1/-0.1pct，归母净利率+1.1pct至8.4%。",
+      "quantities": [
+        {
+          "value": "22.9",
+          "unit": "%",
+          "start": 745,
+          "end": 750
+        },
+        {
+          "value": "8.4",
+          "unit": "%",
+          "start": 805,
+          "end": 809
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 857,
+      "end": 902,
+      "text": "24年净利率下滑主要系女包业务商誉减值1.8亿，如剔除商誉减值后，归母净利率同比基本持平。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 857,
+      "end": 902,
+      "text": "24年净利率下滑主要系女包业务商誉减值1.8亿，如剔除商誉减值后，归母净利率同比基本持平。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1490,
+      "end": 1556,
+      "text": "我们预计2025-27年净利润分别为4.85/5.76/6.81/4.81亿元，对应PE分别为21/18/15倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "4.81",
+          "unit": "亿元",
+          "start": 1523,
+          "end": 1529
+        },
+        {
+          "value": "15",
+          "unit": "倍",
+          "start": 1543,
+          "end": 1546
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1586,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1586,
+    "processed_ranges": [
+      [
+        0,
+        1586
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 13,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 29.780713,
+  "source_content_sha256": "41821483147385a68a11788fe93f3f6ea2b5b42561f0159b7d21aa23d26eb72b"
+}

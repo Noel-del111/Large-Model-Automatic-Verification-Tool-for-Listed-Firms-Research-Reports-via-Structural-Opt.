@@ -1,0 +1,252 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000686",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "第二点和第三点表述完全相同，属于同一信息不必要地重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 216,
+          "end": 310,
+          "text": "近期更新定增进展的3家券商，有三个共同点：一是定增发行对象均包含各自的控股股东；二是募资投向更加聚焦与“服务实体经济”相关的业务板块；三是募资投向更加聚焦与“服务实体经济”相关的业务板块。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近期更新定增进展的3家券商，有三个共同点：一是定增发行对象均包含各自的控股股东；二是募资投向更加聚焦与“服务实体经济”相关的业务板块；三是募资投向更加聚焦与“服务实体经济”相关的业务板块。",
+          "start": 255,
+          "end": 370
+        }
+      ],
+      "spans": [
+        {
+          "start": 216,
+          "end": 310,
+          "text": "近期更新定增进展的3家券商，有三个共同点：一是定增发行对象均包含各自的控股股东；二是募资投向更加聚焦与“服务实体经济”相关的业务板块；三是募资投向更加聚焦与“服务实体经济”相关的业务板块。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4af5a6e23d34ac7e774fb4f2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "股基成交额单位应为亿元或万亿元，写成“平方米”是单位量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 346,
+          "end": 404,
+          "text": "本周日均股基成交额1.31万亿平方米，环比-5.6%，5月日均股基成交额1.44万亿，环比-3.6%，同比+50%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周日均股基成交额1.31万亿平方米，环比-5.6%，5月日均股基成交额1.44万亿，环比-3.6%，同比+50%。",
+          "start": 425,
+          "end": 488
+        }
+      ],
+      "spans": [
+        {
+          "start": 346,
+          "end": 404,
+          "text": "本周日均股基成交额1.31万亿平方米，环比-5.6%，5月日均股基成交额1.44万亿，环比-3.6%，同比+50%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7c80475d65060e5fcb36e583",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "股权和并购重组方式提供的是股权融资，不能笼统归为“债权支持”，术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 553,
+          "end": 587,
+          "text": "监管导向券商通过股权、并购重组和债券等方式为科技型企业提供债权支持。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "监管导向券商通过股权、并购重组和债券等方式为科技型企业提供债权支持。",
+          "start": 711,
+          "end": 746
+        }
+      ],
+      "spans": [
+        {
+          "start": 553,
+          "end": 587,
+          "text": "监管导向券商通过股权、并购重组和债券等方式为科技型企业提供债权支持。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f1bd5ed9c3894e042d560158",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1242
+        ]
+      ],
+      "estimated_input_tokens": 5872,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:07:43.834926+00:00",
+        "request_sha256": "49d798fe953b4c36a34a4d928ec29b08038ddf9705b5c07e463cd340082b6b1a",
+        "input_token_estimate": 16323,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278467",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "af70c6dba948438bbd3bb34cb9b5bf5e",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3829,
+        "output_tokens": 5873,
+        "usage_source": "provider",
+        "duration_seconds": 25.043739,
+        "cost_cny": "0.027321"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "近期更新定增进展的3家券商，有三个共同点：一是定增发行对象均包含各自的控股股东；二是募资投向更加聚焦与“服务实体经济”相关的业务板块；三是募资投向更加聚焦与“服务实体经济”相关的业务板块。",
+            "start": 255,
+            "end": 370
+          }
+        ],
+        "reason": "第二点和第三点表述完全相同，属于同一信息不必要地重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本周日均股基成交额1.31万亿平方米，环比-5.6%，5月日均股基成交额1.44万亿，环比-3.6%，同比+50%。",
+            "start": 425,
+            "end": 488
+          }
+        ],
+        "reason": "股基成交额单位应为亿元或万亿元，写成“平方米”是单位量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "监管导向券商通过股权、并购重组和债券等方式为科技型企业提供债权支持。",
+            "start": 711,
+            "end": 746
+          }
+        ],
+        "reason": "股权和并购重组方式提供的是股权融资，不能笼统归为“债权支持”，术语使用不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1242,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1242,
+    "processed_ranges": [
+      [
+        0,
+        1242
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.069985,
+  "source_content_sha256": "19de7cf4e62842a8206915724791deeb4ef381cddb3189c06396707f0134de71"
+}

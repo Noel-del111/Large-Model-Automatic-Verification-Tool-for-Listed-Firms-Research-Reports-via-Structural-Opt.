@@ -1,0 +1,49 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000605",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "d078e36ff4467d123fea2f46",
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 386,
+          "end": 627,
+          "text": "先导智能作为龙头设备商有望充分受益，2025年全年预计关联交易规模约85亿元，Q1已实现21亿元，此外塔塔等海外客户稳步拓展中，海外客户均为高毛利客户，发货前付款比例60-90%，现金流良好，且订单多为类整线高价值量项目，随着海外业务占比的提升，先导的综合毛利率和现金流有望大幅改善，从报表来看，公司2023及2024年已合计计提减值28亿元，其中信用减值13亿元、存货跌价准备15亿元，风险已充分计提，经营性现金流已于2024Q4及2025Q1连续两个季度大幅转正，改善趋势明显。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.003"
+    },
+    {
+      "id": "d078e36ff4467d123fea2f46",
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 386,
+          "end": 627,
+          "text": "先导智能作为龙头设备商有望充分受益，2025年全年预计关联交易规模约85亿元，Q1已实现21亿元，此外塔塔等海外客户稳步拓展中，海外客户均为高毛利客户，发货前付款比例60-90%，现金流良好，且订单多为类整线高价值量项目，随着海外业务占比的提升，先导的综合毛利率和现金流有望大幅改善，从报表来看，公司2023及2024年已合计计提减值28亿元，其中信用减值13亿元、存货跌价准备15亿元，风险已充分计提，经营性现金流已于2024Q4及2025Q1连续两个季度大幅转正，改善趋势明显。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.003"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1971,
+    "total_chars": 1971,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.002201,
+  "source_content_sha256": "c5ddc9eafc5bfcb8dcc641dcb092f26d0c010ded3a96e9a47badd3335ccfc21c"
+}

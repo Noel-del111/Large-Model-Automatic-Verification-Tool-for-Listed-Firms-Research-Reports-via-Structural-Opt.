@@ -1,0 +1,471 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000605",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "spans": [
+        {
+          "start": 386,
+          "end": 627,
+          "text": "先导智能作为龙头设备商有望充分受益，2025年全年预计关联交易规模约85亿元，Q1已实现21亿元，此外塔塔等海外客户稳步拓展中，海外客户均为高毛利客户，发货前付款比例60-90%，现金流良好，且订单多为类整线高价值量项目，随着海外业务占比的提升，先导的综合毛利率和现金流有望大幅改善，从报表来看，公司2023及2024年已合计计提减值28亿元，其中信用减值13亿元、存货跌价准备15亿元，风险已充分计提，经营性现金流已于2024Q4及2025Q1连续两个季度大幅转正，改善趋势明显。"
+        }
+      ],
+      "reason": "指标 gross_margin 通常不以金额单位计量，出现单位 \"亿元\"，需人工核对术语与单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 386,
+          "end": 627,
+          "text": "先导智能作为龙头设备商有望充分受益，2025年全年预计关联交易规模约85亿元，Q1已实现21亿元，此外塔塔等海外客户稳步拓展中，海外客户均为高毛利客户，发货前付款比例60-90%，现金流良好，且订单多为类整线高价值量项目，随着海外业务占比的提升，先导的综合毛利率和现金流有望大幅改善，从报表来看，公司2023及2024年已合计计提减值28亿元，其中信用减值13亿元、存货跌价准备15亿元，风险已充分计提，经营性现金流已于2024Q4及2025Q1连续两个季度大幅转正，改善趋势明显。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.003",
+      "validation": "rule_candidate",
+      "id": "d6973e72939840cfcb169968",
+      "detector_ids": [
+        "legacy.C.INTRINSIC.003"
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "353亿港元的约50%应为176.5亿港元，原文括号内276亿港元，比例与金额对应不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 215,
+          "end": 386,
+          "text": "近期宁德时代港股IPO募集353亿港元，约50%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建，一期项目已投入7亿欧元，规划产能为34GWH，预计将于2025年投入生产；二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "近期宁德时代港股IPO募集353亿港元，约50%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建，一期项目已投入7亿欧元，规划产能为34GWH，预计将于2025年投入生产；二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 215,
+          "end": 386,
+          "text": "近期宁德时代港股IPO募集353亿港元，约50%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建，一期项目已投入7亿欧元，规划产能为34GWH，预计将于2025年投入生产；二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9f01693eb3a9b1a3e1bd96c4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "二期项目预计2025年才开工建设，却称2024年投入生产，开工时间晚于投产时间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 324,
+          "end": 386,
+          "text": "二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 324,
+          "end": 386,
+          "text": "二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "44b942bc6ff04b3003562e43",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "国内销量9.4万台加出口4.6万台等于14.0万台，与总销量13.0万台不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1550,
+          "end": 1605,
+          "text": "4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1550,
+          "end": 1605,
+          "text": "4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "27ce55ab2d6226512ed5c884",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "标题称外销量同比+5%，正文称出口同比增长18%，同一期间出口同比数值冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1523,
+          "end": 1548,
+          "text": "【叉车】4月内/外销量分别同比-1%/+5%，出口"
+        },
+        {
+          "kind": "source_text",
+          "start": 1550,
+          "end": 1605,
+          "text": "4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "【叉车】4月内/外销量分别同比-1%/+5%，出口"
+        },
+        {
+          "text": "4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1523,
+          "end": 1548,
+          "text": "【叉车】4月内/外销量分别同比-1%/+5%，出口"
+        },
+        {
+          "start": 1550,
+          "end": 1605,
+          "text": "4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2736a2cb2921224b10d49fcd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "三个产品名称后列四个销量数值，且同比百分比只有三个，产品与销量、同比数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1232,
+          "end": 1314,
+          "text": "2025年4月，压路机/摊铺机/平地机销量分别为1713/200/756/222台，分别同比+36%/52%/22%，1-4月累计同比+30%/+38%/+20%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4月，压路机/摊铺机/平地机销量分别为1713/200/756/222台，分别同比+36%/52%/22%，1-4月累计同比+30%/+38%/+20%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1232,
+          "end": 1314,
+          "text": "2025年4月，压路机/摊铺机/平地机销量分别为1713/200/756/222台，分别同比+36%/52%/22%，1-4月累计同比+30%/+38%/+20%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3950c72248164f55fd5e5768",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1971
+        ]
+      ],
+      "estimated_input_tokens": 6547,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:57:42.953785+00:00",
+        "request_sha256": "7c13435538648049a09c1b35fc3cd40ba93216d6ea828232cd6bdbd439ae12db",
+        "input_token_estimate": 18211,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280355",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6bc8e81a18ac4930b8941cffad6e0029",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4316,
+        "output_tokens": 8260,
+        "usage_source": "provider",
+        "duration_seconds": 32.806919,
+        "cost_cny": "0.037356",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "近期宁德时代港股IPO募集353亿港元，约50%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建，一期项目已投入7亿欧元，规划产能为34GWH，预计将于2025年投入生产；二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。"
+          }
+        ],
+        "reason": "353亿港元的约50%应为176.5亿港元，原文括号内276亿港元，比例与金额对应不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "二期项目规划产能38GWH，预计将于2025年开工建设，2024年投入生产，达产后将配套宝马、奔驰等欧洲车企，服务欧洲市场。"
+          }
+        ],
+        "reason": "二期项目预计2025年才开工建设，却称2024年投入生产，开工时间晚于投产时间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。"
+          }
+        ],
+        "reason": "国内销量9.4万台加出口4.6万台等于14.0万台，与总销量13.0万台不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "【叉车】4月内/外销量分别同比-1%/+5%，出口"
+          },
+          {
+            "text": "4月叉车销量13.0万台，同比增长5%，其中国内销量9.4万台，同比下降1%，出口4.6万台，同比增长18%。"
+          }
+        ],
+        "reason": "标题称外销量同比+5%，正文称出口同比增长18%，同一期间出口同比数值冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2025年4月，压路机/摊铺机/平地机销量分别为1713/200/756/222台，分别同比+36%/52%/22%，1-4月累计同比+30%/+38%/+20%。"
+          }
+        ],
+        "reason": "三个产品名称后列四个销量数值，且同比百分比只有三个，产品与销量、同比数量不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 386,
+      "end": 627,
+      "text": "先导智能作为龙头设备商有望充分受益，2025年全年预计关联交易规模约85亿元，Q1已实现21亿元，此外塔塔等海外客户稳步拓展中，海外客户均为高毛利客户，发货前付款比例60-90%，现金流良好，且订单多为类整线高价值量项目，随着海外业务占比的提升，先导的综合毛利率和现金流有望大幅改善，从报表来看，公司2023及2024年已合计计提减值28亿元，其中信用减值13亿元、存货跌价准备15亿元，风险已充分计提，经营性现金流已于2024Q4及2025Q1连续两个季度大幅转正，改善趋势明显。",
+      "quantities": [
+        {
+          "value": "85",
+          "unit": "亿元",
+          "start": 420,
+          "end": 424
+        },
+        {
+          "value": "21",
+          "unit": "亿元",
+          "start": 430,
+          "end": 434
+        },
+        {
+          "value": "-90",
+          "unit": "%",
+          "start": 471,
+          "end": 475
+        },
+        {
+          "value": "28",
+          "unit": "亿元",
+          "start": 553,
+          "end": 557
+        },
+        {
+          "value": "13",
+          "unit": "亿元",
+          "start": 564,
+          "end": 568
+        },
+        {
+          "value": "15",
+          "unit": "亿元",
+          "start": 575,
+          "end": 579
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1690,
+      "end": 1778,
+      "text": "短期，受制造业景气周期和关税政策冲击导致观望情绪加剧等影响，行业内外需求仍然磨底，2025Q1板块营收/归母净利润同比分别+3%/+1%，可期待后续内需刺激政策和欧美补库推进。",
+      "quantities": [
+        {
+          "value": "+3",
+          "unit": "%",
+          "start": 1751,
+          "end": 1754
+        },
+        {
+          "value": "+1",
+          "unit": "%",
+          "start": 1755,
+          "end": 1758
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1690,
+      "end": 1778,
+      "text": "短期，受制造业景气周期和关税政策冲击导致观望情绪加剧等影响，行业内外需求仍然磨底，2025Q1板块营收/归母净利润同比分别+3%/+1%，可期待后续内需刺激政策和欧美补库推进。",
+      "quantities": [
+        {
+          "value": "+3",
+          "unit": "%",
+          "start": 1751,
+          "end": 1754
+        },
+        {
+          "value": "+1",
+          "unit": "%",
+          "start": 1755,
+          "end": 1758
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1971,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1971,
+    "processed_ranges": [
+      [
+        0,
+        1971
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1971,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 3,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002061,
+  "source_content_sha256": "c5ddc9eafc5bfcb8dcc641dcb092f26d0c010ded3a96e9a47badd3335ccfc21c"
+}

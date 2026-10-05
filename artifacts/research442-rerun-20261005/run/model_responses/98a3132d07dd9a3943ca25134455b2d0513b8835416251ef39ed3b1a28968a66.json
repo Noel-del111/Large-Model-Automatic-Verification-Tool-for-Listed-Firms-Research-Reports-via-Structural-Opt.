@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"预计25年13月起，存量备案但未开工绿氢氨醇项目将加速动工，带动上游制氢设备商的需求爆发。\"}],\"reason\":\"一年只有12个月，“25年13月”不是合法月份，时间信息不成立。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"我们预计2025年国内电解槽招标量达GW，招标倾向于央国企下属及相关合作企业，重点推荐已具备项目经验的设备企业。\"}],\"reason\":\"“达GW”前缺少应填的具体数值，招标量无法读取。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"当前落地绿醇产能仅20余克，而目前已投入运营的甲醇动力船舶对甲醇燃料需求约93万吨，存在绿醇燃料供不应求赚取绿色溢价的窗口期。\"}],\"reason\":\"绿醇产能用“克”作单位明显错误，与万吨级需求比较也不成立。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"重点推荐：华电科工、华光环能、吉电股份等。（注：）\"}],\"reason\":\"“（注：）”后无任何注释内容，注释属性值为空。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:06:19.626510+00:00",
+    "request_sha256": "d3f67a3de27d7a6642062758440e24b8ecd923ae3eefc18ec69992cf226ba331",
+    "input_token_estimate": 15142,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277286",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f4058bf22da648479cf0cf6a6263d21d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3531,
+    "output_tokens": 6547,
+    "usage_source": "provider",
+    "duration_seconds": 26.479799,
+    "cost_cny": "0.029719"
+  },
+  "cache_request": {
+    "key": "98a3132d07dd9a3943ca25134455b2d0513b8835416251ef39ed3b1a28968a66",
+    "purpose": "text_review.detect",
+    "messages_sha256": "d3f67a3de27d7a6642062758440e24b8ecd923ae3eefc18ec69992cf226ba331"
+  }
+}

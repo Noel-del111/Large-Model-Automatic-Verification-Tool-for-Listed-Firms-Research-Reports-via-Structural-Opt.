@@ -1,0 +1,342 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000436",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "前文称2024年公司已更名为千里科技，后文又称2025年成立千里科技，同一主体名称的成立与更名时间冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 197,
+          "end": 276,
+          "text": "2024年，旷视科技创始人印奇入股并担任公司董事长，公司随后更名为千里科技，依托印奇在AI大模型、计算机视觉领域的技术积累，加速向“AI+车”智能化业务转型。"
+        },
+        {
+          "kind": "source_text",
+          "start": 486,
+          "end": 594,
+          "text": "2025年公司携手两江、吉利成立了千里科技，其核心业务包括终端业务与科技业务两大板块，其中终端业务覆盖摩托车、汽车领域，形成多元化产品矩阵；科技业务聚焦研发行业领先的智能驾驶和智能座舱解决方案，打造AI智行开放平台。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，旷视科技创始人印奇入股并担任公司董事长，公司随后更名为千里科技，依托印奇在AI大模型、计算机视觉领域的技术积累，加速向“AI+车”智能化业务转型。"
+        },
+        {
+          "text": "2025年公司携手两江、吉利成立了千里科技，其核心业务包括终端业务与科技业务两大板块，其中终端业务覆盖摩托车、汽车领域，形成多元化产品矩阵；科技业务聚焦研发行业领先的智能驾驶和智能座舱解决方案，打造AI智行开放平台。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 197,
+          "end": 276,
+          "text": "2024年，旷视科技创始人印奇入股并担任公司董事长，公司随后更名为千里科技，依托印奇在AI大模型、计算机视觉领域的技术积累，加速向“AI+车”智能化业务转型。"
+        },
+        {
+          "start": 486,
+          "end": 594,
+          "text": "2025年公司携手两江、吉利成立了千里科技，其核心业务包括终端业务与科技业务两大板块，其中终端业务覆盖摩托车、汽车领域，形成多元化产品矩阵；科技业务聚焦研发行业领先的智能驾驶和智能座舱解决方案，打造AI智行开放平台。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4b30bbfe4246a82599796776",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同句内“苏州”在启动试点名单中重复出现，属不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 787,
+          "end": 874,
+          "text": "2025年2月，曹操出行上线“曹操智行”自动驾驶平台，在苏州、杭州、苏州启动Robotaxi试点，融合换电技术与车路云协同设计，标志着其在国内自动驾驶商业化进程迈出关键一步。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年2月，曹操出行上线“曹操智行”自动驾驶平台，在苏州、杭州、苏州启动Robotaxi试点，融合换电技术与车路云协同设计，标志着其在国内自动驾驶商业化进程迈出关键一步。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 787,
+          "end": 874,
+          "text": "2025年2月，曹操出行上线“曹操智行”自动驾驶平台，在苏州、杭州、苏州启动Robotaxi试点，融合换电技术与车路云协同设计，标志着其在国内自动驾驶商业化进程迈出关键一步。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e656c46a9c7a7962fd0da134",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027三个年份对应归母净利润却列出四个数值，且同比增速仅三个，年份与数值数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 981,
+          "end": 1054,
+          "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 981,
+          "end": 1054,
+          "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2f236897fd78829f587e75de",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按所列净利润计算，1.33/0.81-1≈64.2%，2.36/1.33-1≈77.4%，原文64.6%和78.4%不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 981,
+          "end": 1054,
+          "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 981,
+          "end": 1054,
+          "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4302ec510029ac98dcca9984",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1232
+        ]
+      ],
+      "estimated_input_tokens": 5782,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:58:15.812444+00:00",
+        "request_sha256": "7fbad455c3bfcc6bc7949adf50b6cd5bd1df04ac45723a406c24ee5b5c79307c",
+        "input_token_estimate": 16127,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278271",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ea2d3cb856a04dd99ea62c2be0c1e7a8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3777,
+        "output_tokens": 6623,
+        "usage_source": "provider",
+        "duration_seconds": 27.381246,
+        "cost_cny": "0.030269"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2024年，旷视科技创始人印奇入股并担任公司董事长，公司随后更名为千里科技，依托印奇在AI大模型、计算机视觉领域的技术积累，加速向“AI+车”智能化业务转型。"
+          },
+          {
+            "text": "2025年公司携手两江、吉利成立了千里科技，其核心业务包括终端业务与科技业务两大板块，其中终端业务覆盖摩托车、汽车领域，形成多元化产品矩阵；科技业务聚焦研发行业领先的智能驾驶和智能座舱解决方案，打造AI智行开放平台。"
+          }
+        ],
+        "reason": "前文称2024年公司已更名为千里科技，后文又称2025年成立千里科技，同一主体名称的成立与更名时间冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025年2月，曹操出行上线“曹操智行”自动驾驶平台，在苏州、杭州、苏州启动Robotaxi试点，融合换电技术与车路云协同设计，标志着其在国内自动驾驶商业化进程迈出关键一步。"
+          }
+        ],
+        "reason": "同句内“苏州”在启动试点名单中重复出现，属不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。"
+          }
+        ],
+        "reason": "2025-2027三个年份对应归母净利润却列出四个数值，且同比增速仅三个，年份与数值数量不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。"
+          }
+        ],
+        "reason": "按所列净利润计算，1.33/0.81-1≈64.2%，2.36/1.33-1≈77.4%，原文64.6%和78.4%不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 981,
+      "end": 1054,
+      "text": "投资建议：预计公司2025-2027年实现归母净利润分别为0.81/1.33/2.36/1.36亿元，同比+101.2%/64.6%/78.4%。",
+      "quantities": [
+        {
+          "value": "1.36",
+          "unit": "亿元",
+          "start": 1025,
+          "end": 1031
+        },
+        {
+          "value": "+101.2",
+          "unit": "%",
+          "start": 1034,
+          "end": 1041
+        },
+        {
+          "value": "64.6",
+          "unit": "%",
+          "start": 1042,
+          "end": 1047
+        },
+        {
+          "value": "78.4",
+          "unit": "%",
+          "start": 1048,
+          "end": 1053
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1232,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1232,
+    "processed_ranges": [
+      [
+        0,
+        1232
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 27.404529,
+  "source_content_sha256": "9804e66847ae012ec0cab4e92236a8f9adc334919ac846dd918f1dc02f3604e6"
+}

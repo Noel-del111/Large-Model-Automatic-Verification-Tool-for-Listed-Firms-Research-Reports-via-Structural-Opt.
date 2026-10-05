@@ -1,0 +1,328 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000680",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "区间起始日2025年5月30日晚于结束日2025年5月25日，时间先后颠倒。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 41,
+          "end": 82,
+          "text": "本周（20250530-20250525）电力板块行情：本周电力板块走势优于大盘。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（20250530-20250525）电力板块行情：本周电力板块走势优于大盘。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 41,
+          "end": 82,
+          "text": "本周（20250530-20250525）电力板块行情：本周电力板块走势优于大盘。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4e43cbe283ed03d27c98c872",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "跌幅百分号前缺少具体数值，无法读取涨跌幅。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 131,
+          "end": 171,
+          "text": "电力子板块收于3176.11点，下跌4.87点，跌幅%，优于沪深300本周走势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "电力子板块收于3176.11点，下跌4.87点，跌幅%，优于沪深300本周走势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 131,
+          "end": 171,
+          "text": "电力子板块收于3176.11点，下跌4.87点，跌幅%，优于沪深300本周走势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "832351daece05926dfa7fd3b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "申万一级板块共31个，排名第52位超出总数范围，前后矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 171,
+          "end": 204,
+          "text": "公用事业（电力）板块走势变化幅度在申万31个一级板块中排第52位。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公用事业（电力）板块走势变化幅度在申万31个一级板块中排第52位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 171,
+          "end": 204,
+          "text": "公用事业（电力）板块走势变化幅度在申万31个一级板块中排第52位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cb4cd15c0bd1d36f236e3427",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "电价单位应为元/千瓦时等电量单位，原文写成元/立方分米，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 530,
+          "end": 586,
+          "text": "存量项目机制电价为蒙东煤电基准价0.3035元/立方分米，执行期限为全生命周期合理利用小时数或项目投产满20年。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "存量项目机制电价为蒙东煤电基准价0.3035元/立方分米，执行期限为全生命周期合理利用小时数或项目投产满20年。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 530,
+          "end": 586,
+          "text": "存量项目机制电价为蒙东煤电基准价0.3035元/立方分米，执行期限为全生命周期合理利用小时数或项目投产满20年。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d100ffb7111a43ebf8a6ed0e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内未填写所印发文件的名称，关键属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 635,
+          "end": 705,
+          "text": "5月21日，国家发改委、国家能源局联合印发《》，旨在探索创新新能源生产和消费融合发展模式，促进新能源就近就地消纳，更好满足企业绿色用能需求。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月21日，国家发改委、国家能源局联合印发《》，旨在探索创新新能源生产和消费融合发展模式，促进新能源就近就地消纳，更好满足企业绿色用能需求。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 635,
+          "end": 705,
+          "text": "5月21日，国家发改委、国家能源局联合印发《》，旨在探索创新新能源生产和消费融合发展模式，促进新能源就近就地消纳，更好满足企业绿色用能需求。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4b88a7d79717ad735fd1d83f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1092
+        ]
+      ],
+      "estimated_input_tokens": 5659,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:03:18.126917+00:00",
+        "request_sha256": "1719be1ff518508f22c838702d1ed56f5e14112a98b4cf2a5c92c6c707958986",
+        "input_token_estimate": 15739,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277883",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d0b5945bf69b433ab336f5241b5c34e8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3702,
+        "output_tokens": 4662,
+        "usage_source": "provider",
+        "duration_seconds": 19.798392,
+        "cost_cny": "0.02235"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "本周（20250530-20250525）电力板块行情：本周电力板块走势优于大盘。"
+          }
+        ],
+        "reason": "区间起始日2025年5月30日晚于结束日2025年5月25日，时间先后颠倒。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "电力子板块收于3176.11点，下跌4.87点，跌幅%，优于沪深300本周走势。"
+          }
+        ],
+        "reason": "跌幅百分号前缺少具体数值，无法读取涨跌幅。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "公用事业（电力）板块走势变化幅度在申万31个一级板块中排第52位。"
+          }
+        ],
+        "reason": "申万一级板块共31个，排名第52位超出总数范围，前后矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "存量项目机制电价为蒙东煤电基准价0.3035元/立方分米，执行期限为全生命周期合理利用小时数或项目投产满20年。"
+          }
+        ],
+        "reason": "电价单位应为元/千瓦时等电量单位，原文写成元/立方分米，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "5月21日，国家发改委、国家能源局联合印发《》，旨在探索创新新能源生产和消费融合发展模式，促进新能源就近就地消纳，更好满足企业绿色用能需求。"
+          }
+        ],
+        "reason": "书名号内未填写所印发文件的名称，关键属性值为空。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1092,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1092,
+    "processed_ranges": [
+      [
+        0,
+        1092
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 19.826441,
+  "source_content_sha256": "74581c8ee6191333a8a63b58c03ad04a6d7cf6e52f58d30b28868aeb0566566a"
+}

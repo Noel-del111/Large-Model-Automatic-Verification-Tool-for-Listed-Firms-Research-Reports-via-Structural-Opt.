@@ -1,0 +1,372 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000228",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "重卡销量单位应为万辆，写成“元”造成数量级错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 80,
+          "end": 132,
+          "text": "根据第一商用车网公布数据，2024年4月重卡行业销量约8.7元，同比+5%，环比-25%，略超市场预期。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据第一商用车网公布数据，2024年4月重卡行业销量约8.7元，同比+5%，环比-25%，略超市场预期。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 80,
+          "end": 132,
+          "text": "根据第一商用车网公布数据，2024年4月重卡行业销量约8.7元，同比+5%，环比-25%，略超市场预期。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0a6b500fa50f0464d126a8c7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“约”后缺少具体销量数值，导致无法核验累计销量。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 132,
+          "end": 161,
+          "text": "1-4月累计销售重卡约辆，同比+11%，整体销量持续复苏。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1-4月累计销售重卡约辆，同比+11%，整体销量持续复苏。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 132,
+          "end": 161,
+          "text": "1-4月累计销售重卡约辆，同比+11%，整体销量持续复苏。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a7abf043ced72d4fddbc5dc3",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份不存在14月，时间信息不合法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 403,
+          "end": 427,
+          "text": "预计14月份有望延续天然气卡车渗透率的提升趋势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计14月份有望延续天然气卡车渗透率的提升趋势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 403,
+          "end": 427,
+          "text": "预计14月份有望延续天然气卡车渗透率的提升趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "46c1834ade78cc4dbf10ff27",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“天价差”不是标准行业术语，应为“价差”，术语误用致含义不明。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 353,
+          "end": 427,
+          "text": "4月柴油-天然气天价差来到3.98元/kg，相较去年同期扩大约13.0%，燃气车在此区间经济性显著，预计14月份有望延续天然气卡车渗透率的提升趋势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月柴油-天然气天价差来到3.98元/kg，相较去年同期扩大约13.0%，燃气车在此区间经济性显著，预计14月份有望延续天然气卡车渗透率的提升趋势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 353,
+          "end": 427,
+          "text": "4月柴油-天然气天价差来到3.98元/kg，相较去年同期扩大约13.0%，燃气车在此区间经济性显著，预计14月份有望延续天然气卡车渗透率的提升趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "929072ba1a3f02283e8c2f5a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "894万辆减717万辆应为177万辆，不是377万辆，减法计算错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 810,
+          "end": 876,
+          "text": "截至2022年年底，全国重卡保有量为894万辆，扣除2017年以来国五和国六销量（717万），则剩余377万为国Ⅳ及以下待淘汰车辆。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2022年年底，全国重卡保有量为894万辆，扣除2017年以来国五和国六销量（717万），则剩余377万为国Ⅳ及以下待淘汰车辆。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 810,
+          "end": 876,
+          "text": "截至2022年年底，全国重卡保有量为894万辆，扣除2017年以来国五和国六销量（717万），则剩余377万为国Ⅳ及以下待淘汰车辆。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e067ae735638736517cb3887",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "列出的五个企业对应六个累计销量数字，而同比和份额均五个，数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 928,
+          "end": 1095,
+          "text": "2024年1-3月，中国重汽、一汽解放、东风集团、陕汽集团、福田汽车累计销量约为7.7/5.92/6.8/5.10/3.89/2.08万辆，同比+13%/+33%/+19%/+14%/-21%；市场份额约为28.1%/21.7%/19.4%/14.3%/7.6%，相较2023年+0.1/+3.3/+1.0/-1.4/-3.2pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年1-3月，中国重汽、一汽解放、东风集团、陕汽集团、福田汽车累计销量约为7.7/5.92/6.8/5.10/3.89/2.08万辆，同比+13%/+33%/+19%/+14%/-21%；市场份额约为28.1%/21.7%/19.4%/14.3%/7.6%，相较2023年+0.1/+3.3/+1.0/-1.4/-3.2pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 928,
+          "end": 1095,
+          "text": "2024年1-3月，中国重汽、一汽解放、东风集团、陕汽集团、福田汽车累计销量约为7.7/5.92/6.8/5.10/3.89/2.08万辆，同比+13%/+33%/+19%/+14%/-21%；市场份额约为28.1%/21.7%/19.4%/14.3%/7.6%，相较2023年+0.1/+3.3/+1.0/-1.4/-3.2pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "52ac146423fbd191e6e8d96f",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1439
+        ]
+      ],
+      "estimated_input_tokens": 5889,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:18:17.809523+00:00",
+        "request_sha256": "58e3a4ea76399a4d0aee07931701f898f036dfa9e2f61aa1119f5d91d734098d",
+        "input_token_estimate": 16418,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278562",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2d9d9259a2d64fb8894ac9eb37a3b7cc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3958,
+        "output_tokens": 11184,
+        "usage_source": "provider",
+        "duration_seconds": 41.536245,
+        "cost_cny": "0.048694"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "根据第一商用车网公布数据，2024年4月重卡行业销量约8.7元，同比+5%，环比-25%，略超市场预期。"
+          }
+        ],
+        "reason": "重卡销量单位应为万辆，写成“元”造成数量级错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "1-4月累计销售重卡约辆，同比+11%，整体销量持续复苏。"
+          }
+        ],
+        "reason": "“约”后缺少具体销量数值，导致无法核验累计销量。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "预计14月份有望延续天然气卡车渗透率的提升趋势。"
+          }
+        ],
+        "reason": "月份不存在14月，时间信息不合法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "4月柴油-天然气天价差来到3.98元/kg，相较去年同期扩大约13.0%，燃气车在此区间经济性显著，预计14月份有望延续天然气卡车渗透率的提升趋势。"
+          }
+        ],
+        "reason": "“天价差”不是标准行业术语，应为“价差”，术语误用致含义不明。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "截至2022年年底，全国重卡保有量为894万辆，扣除2017年以来国五和国六销量（717万），则剩余377万为国Ⅳ及以下待淘汰车辆。"
+          }
+        ],
+        "reason": "894万辆减717万辆应为177万辆，不是377万辆，减法计算错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2024年1-3月，中国重汽、一汽解放、东风集团、陕汽集团、福田汽车累计销量约为7.7/5.92/6.8/5.10/3.89/2.08万辆，同比+13%/+33%/+19%/+14%/-21%；市场份额约为28.1%/21.7%/19.4%/14.3%/7.6%，相较2023年+0.1/+3.3/+1.0/-1.4/-3.2pct。"
+          }
+        ],
+        "reason": "列出的五个企业对应六个累计销量数字，而同比和份额均五个，数量不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1439,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1439,
+    "processed_ranges": [
+      [
+        0,
+        1439
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 41.558773,
+  "source_content_sha256": "c6fe889c56ab09bb54d09f53bc3b58019019e4ff8831ca6e21a6ad5a89cec84f"
+}

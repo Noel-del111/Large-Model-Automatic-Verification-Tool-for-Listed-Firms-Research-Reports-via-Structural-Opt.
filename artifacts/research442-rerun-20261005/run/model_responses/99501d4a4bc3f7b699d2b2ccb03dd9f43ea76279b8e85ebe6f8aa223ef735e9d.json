@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"与以往几轮铜价上涨趋势不同，29年、2016年、2020年铜价都是经历过一轮暴跌后上涨，本轮铜价在8500美元/吨历史高位横盘一年多时间后向上拉升。\"}], \"reason\": \"“29年”年份缺少世纪前缀，在本世纪语境中无法对应具体年份，时间表述不成立。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。\"}], \"reason\": \"美联储利率概率预测通常由CME发布，CMB一般指招商银行，机构名称误用。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。\"}], \"reason\": \"6月不变概率81%与降息概率9%合计仅90%，未构成完整概率分布。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:54:37.311340+00:00",
+    "request_sha256": "2b681547f899a995004ec9f6db2a33221e811267f678462056d3b39b4cde5822",
+    "input_token_estimate": 16620,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278764",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "216cc54cc08140f9be8a8c09d190b2d5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3930,
+    "output_tokens": 6814,
+    "usage_source": "provider",
+    "duration_seconds": 28.028304,
+    "cost_cny": "0.031186"
+  },
+  "cache_request": {
+    "key": "99501d4a4bc3f7b699d2b2ccb03dd9f43ea76279b8e85ebe6f8aa223ef735e9d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2b681547f899a995004ec9f6db2a33221e811267f678462056d3b39b4cde5822"
+  }
+}

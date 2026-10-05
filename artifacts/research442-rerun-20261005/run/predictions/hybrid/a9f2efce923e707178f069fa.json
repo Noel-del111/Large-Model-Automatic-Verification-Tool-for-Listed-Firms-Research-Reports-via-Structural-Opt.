@@ -1,0 +1,435 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000667",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“中证REITs（）指数”括号内为空，缺失指数类别“收盘”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 76,
+          "end": 155,
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 76,
+          "end": 155,
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7a982fd8cbb4c9fa0127cb26",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "全收益指数数值“1090.07”后连续两个逗号，中间缺少同比数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 76,
+          "end": 155,
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 76,
+          "end": 155,
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a7fbc7bc1faaedfbdf61fe52",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "成交额单位写成“亿分”，应为“亿元”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 155,
+          "end": 234,
+          "text": "本周REITs市场交易规模成交量达5.41亿份，同比增长58.65%；成交额达23.81亿分，同比增长74.69%；区间换手率2.79%，同比增长1.45%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周REITs市场交易规模成交量达5.41亿份，同比增长58.65%；成交额达23.81亿分，同比增长74.69%；区间换手率2.79%，同比增长1.45%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 155,
+          "end": 234,
+          "text": "本周REITs市场交易规模成交量达5.41亿份，同比增长58.65%；成交额达23.81亿分，同比增长74.69%；区间换手率2.79%，同比增长1.45%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "82ce489d00dfd1b7f5158575",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "第22周与第21周的中证REITs指数、全收益指数及同比环比数值完全相同，期间标注与数据冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 76,
+          "end": 155,
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 779,
+          "end": 977,
+          "text": "2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        },
+        {
+          "text": "2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 76,
+          "end": 155,
+          "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+        },
+        {
+          "start": 779,
+          "end": 977,
+          "text": "2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "db4466037e74fafad9800428",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "报告期为2025年第21周，却写“2024年年初至今累计上涨”，年份与报告期矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 779,
+          "end": 977,
+          "text": "2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 779,
+          "end": 977,
+          "text": "2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "63439be9719924e8047d5527",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“拥有的的”连续重复“的”，多余字符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 529,
+          "end": 622,
+          "text": "华能国际电力以公司全资附属公司华能青岛热电有限公司拥有的的华能董家口热电联产项目及新上锅炉项目作为基础设施公募REIT的底层资产申请，于上交所公开发行并上市公开募集基础设施证券投资基金。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "华能国际电力以公司全资附属公司华能青岛热电有限公司拥有的的华能董家口热电联产项目及新上锅炉项目作为基础设施公募REIT的底层资产申请，于上交所公开发行并上市公开募集基础设施证券投资基金。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 529,
+          "end": 622,
+          "text": "华能国际电力以公司全资附属公司华能青岛热电有限公司拥有的的华能董家口热电联产项目及新上锅炉项目作为基础设施公募REIT的底层资产申请，于上交所公开发行并上市公开募集基础设施证券投资基金。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5361717a38bf43910c2ad746",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“领秀城贵和购物中心”连续重复出现，信息冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 665,
+          "end": 741,
+          "text": "中金中国绿发商业REIT首次发行拟投资的基础设施资产为领秀城贵和购物中心，领秀城贵和购物中心位于山东省济南市市中区，合计建筑面积达到20.09万平方米。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中金中国绿发商业REIT首次发行拟投资的基础设施资产为领秀城贵和购物中心，领秀城贵和购物中心位于山东省济南市市中区，合计建筑面积达到20.09万平方米。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 665,
+          "end": 741,
+          "text": "中金中国绿发商业REIT首次发行拟投资的基础设施资产为领秀城贵和购物中心，领秀城贵和购物中心位于山东省济南市市中区，合计建筑面积达到20.09万平方米。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f26dd61748bbb4721a1a3f68",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1335
+        ]
+      ],
+      "estimated_input_tokens": 5698,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:51:24.602606+00:00",
+        "request_sha256": "b4d724996f807bb7f2eee141c2a44bba8cc999f5b328904c6af42f6f84fa6a87",
+        "input_token_estimate": 15920,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278064",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b28a69e7b1df4f4192dadeb1f9b37df9",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3867,
+        "output_tokens": 11892,
+        "usage_source": "provider",
+        "duration_seconds": 47.455899,
+        "cost_cny": "0.051435",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+          }
+        ],
+        "reason": "“中证REITs（）指数”括号内为空，缺失指数类别“收盘”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+          }
+        ],
+        "reason": "全收益指数数值“1090.07”后连续两个逗号，中间缺少同比数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本周REITs市场交易规模成交量达5.41亿份，同比增长58.65%；成交额达23.81亿分，同比增长74.69%；区间换手率2.79%，同比增长1.45%。"
+          }
+        ],
+        "reason": "成交额单位写成“亿分”，应为“亿元”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2025年第22周，中证REITs（）指数为868.35，同比上涨8.85%，环比下跌0.1%；中证REITs全收益指数1090.07，，环比上涨0.03%。"
+          },
+          {
+            "text": "2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。"
+          }
+        ],
+        "reason": "第22周与第21周的中证REITs指数、全收益指数及同比环比数值完全相同，期间标注与数据冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2025年第21周，中证REITs（收盘）指数为868.35，同比上涨8.85%，环比下跌0.1%，2024年年初至今累计上涨14.79%，同期沪深300指数累计上涨11.92%，累计超额收益+2.87%；中证REITs全收益指数1090.07，同比上涨16.77%，环比上涨0.03%，2024年年初至今累计上涨26.49%，同期沪深300指数累计上涨11.92%，累计超额收益+14.57%。"
+          }
+        ],
+        "reason": "报告期为2025年第21周，却写“2024年年初至今累计上涨”，年份与报告期矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "华能国际电力以公司全资附属公司华能青岛热电有限公司拥有的的华能董家口热电联产项目及新上锅炉项目作为基础设施公募REIT的底层资产申请，于上交所公开发行并上市公开募集基础设施证券投资基金。"
+          }
+        ],
+        "reason": "“拥有的的”连续重复“的”，多余字符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "中金中国绿发商业REIT首次发行拟投资的基础设施资产为领秀城贵和购物中心，领秀城贵和购物中心位于山东省济南市市中区，合计建筑面积达到20.09万平方米。"
+          }
+        ],
+        "reason": "“领秀城贵和购物中心”连续重复出现，信息冗余。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1335,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1335,
+    "processed_ranges": [
+      [
+        0,
+        1335
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1335,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001674,
+  "source_content_sha256": "da345c2442f6d58ff082c300bee0814ded68412cec35d38c612d6dcc9cac30ab"
+}

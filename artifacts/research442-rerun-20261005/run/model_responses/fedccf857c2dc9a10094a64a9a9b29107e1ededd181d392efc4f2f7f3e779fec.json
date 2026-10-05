@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"球冠电缆()\"}],\"reason\":\"公司名称后括号内股票代码为空，非数值属性值缺失。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"公司以轨道交通芯片、特种用途高/中/低压线缆、新能源电缆、超高压直流电缆、军工电缆为代表的新一代电缆产品广泛应用于电力、能源、交通、智能装备、石化、冶金、工矿、通讯、建筑工程等多个领域，为国家电网和南方电网及其附属电力公司、工矿企业、各类用户建设工程及经销商提供优质高效的电线电缆产品及工程服务，并在川藏联网工程、广州亚运、三峡电站、大型火电、石化工程、钢铁项目、各地轨道交通工程、联合国维和部队建设工程等国内外高端市场占有一席之地。\"}],\"reason\":\"公司主业为电线电缆，产品列举中却出现“轨道交通芯片”，与同类电缆产品及行业属性不符。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"公司电力电缆可分为低压电力电缆（1kV及以下）、中压电力电缆（6~35kV）和高压及超高压电缆（66kV以下），2024年该业务营收达32.95亿元，同比增长22.16%，占营业收入总额的92%；\"}],\"reason\":\"“高压及超高压电缆”又限定为“66kV以下”，与高压超高压的通常电压等级及前面中压6~35kV分类相矛盾。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"在“新基建”、“构建新型电力系统”、“碳中和、碳达标”等国家战略的推动下，相关领域建设投资方兴未艾，为线缆行业提供了新的发展机遇。\"}],\"reason\":\"国家战略常用表述为“碳达峰、碳中和”，此处“碳达标”属术语误用。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2024年全国电网工程投资完成6,083亿元，同比增加15.3%。\"}],\"reason\":\"该句在文中连续重复出现两次，同一信息不必要地重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:56:37.408464+00:00",
+    "request_sha256": "a121851ba66e51815ac5f55c511cea0f371325e2e060bc6402e87ba6912f36db",
+    "input_token_estimate": 17938,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280082",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c5c851a707a4446eb7b5736370a4793f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4135,
+    "output_tokens": 8053,
+    "usage_source": "provider",
+    "duration_seconds": 33.84005,
+    "cost_cny": "0.036347"
+  },
+  "cache_request": {
+    "key": "fedccf857c2dc9a10094a64a9a9b29107e1ededd181d392efc4f2f7f3e779fec",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a121851ba66e51815ac5f55c511cea0f371325e2e060bc6402e87ba6912f36db"
+  }
+}

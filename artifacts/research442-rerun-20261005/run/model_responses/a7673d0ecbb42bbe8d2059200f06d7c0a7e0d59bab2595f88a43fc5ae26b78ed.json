@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"正极材料：磷酸铁锂报价3.15万元/千克，近两周价格持稳；NCM523、NCM622、NCM811分别报价11.45万元/吨、12.25万元/吨、14.85万元/吨，近两周分别-2.97%、-2.00%、+0.68%。\"}], \"reason\": \"磷酸铁锂报价写成3.15万元/千克，而同类正极材料及行业惯用均为万元/吨，单位明显错误。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"隔膜：湿法隔膜均价为元/平方米，干法隔膜均价为0.43元/平方米，近两周价格持稳。\"}], \"reason\": \"“湿法隔膜均价为元/平方米”缺少应填写的具体数值。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"电解液：六氟磷酸锂报价5.29万元/吨，近两周价格下跌3.82%；磷酸铁锂电解液报价1.80万元/吨，，近两周分别下跌0.55%和0.42%。\"}], \"reason\": \"仅列出一个磷酸铁锂电解液报价，却用“分别下跌0.55%和0.42%”对应两个跌幅，缺少另一个对应对象。\"}, {\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"重点标的：宁德时代（300）、亿纬锂能（300014）、科达利（002850）、天奈科技（688116）、纳科诺尔（832522）。\"}], \"reason\": \"宁德时代股票代码应为六位数字，此处仅写“300”，缺少后三位，不符合代码格式。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:30:11.408400+00:00",
+    "request_sha256": "19ccbd7def03da1a277e0606b10e035985abbcd2e576f5568c1edf03c514b5ec",
+    "input_token_estimate": 15746,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27789",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "358418277fcb4b669086fa3206955603",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3748,
+    "output_tokens": 5924,
+    "usage_source": "provider",
+    "duration_seconds": 23.392994,
+    "cost_cny": "0.027444"
+  },
+  "cache_request": {
+    "key": "a7673d0ecbb42bbe8d2059200f06d7c0a7e0d59bab2595f88a43fc5ae26b78ed",
+    "purpose": "text_review.detect",
+    "messages_sha256": "19ccbd7def03da1a277e0606b10e035985abbcd2e576f5568c1edf03c514b5ec"
+  }
+}

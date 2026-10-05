@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"129年是公司融入中国五矿体系和中国盐湖的开局之年，公司积极融入公司控股股东中国盐湖“三步走”发展战略，中国盐湖到2025年内完成整合优化，具备世界一流盐湖产业的雏形；到2030年形成1000万吨/年钾肥、20万吨/年锂盐、3万吨以上/年镁及镁基材料产能；到2035年初步构建以盐湖为核心的锂电全生命周期产业、绿色氢能循环利用产业、高端镁基材料产业、新型储能产业，成为中国最大、世界一流的盐湖产业集群。\"}],\"reason\":\"年份“129年”在2024年年报语境下不成立，应为2024年或类似年份，时间信息非法。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"我们预计公司2027-2025年归母净利润分别为58.8/64.2/71.7亿元，同比增速分别为+26.2%/+9.0%/+11.7%，当前股价对应的PE分别为14/13/12倍。\"}],\"reason\":\"预计期间起点2027年晚于终点2025年，时间区间倒置，与逐年预测顺序矛盾。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"我们选取钾肥、锂矿和锂盐企业为可比公司，2025-2027年平均PE分别为32/17/13/20倍，公司作为国内钾肥龙头和盐湖提锂龙头，钾肥价格25年有望迎来企稳回升，锂盐新建4万吨产能释放有望贡献新增量，首次覆盖，给予“买入”评级。\"}],\"reason\":\"2025-2027年仅3个年度，却列出32/17/13/20共4个PE数值，年份数量与数值个数不对应。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:44:27.973797+00:00",
+    "request_sha256": "fa992585e989319202ffc304c8cde30d9496abc01a41c07039db406fa2281326",
+    "input_token_estimate": 16152,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278296",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "0951c6cf0c354fe5b1327efd0a20af8a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3832,
+    "output_tokens": 7686,
+    "usage_source": "provider",
+    "duration_seconds": 30.487828,
+    "cost_cny": "0.034576"
+  },
+  "cache_request": {
+    "key": "770ab3a58cf3c3dc528e5c334076f8fed04ea69633bf2da2c0281196a6176c16",
+    "purpose": "text_review.detect",
+    "messages_sha256": "fa992585e989319202ffc304c8cde30d9496abc01a41c07039db406fa2281326"
+  }
+}

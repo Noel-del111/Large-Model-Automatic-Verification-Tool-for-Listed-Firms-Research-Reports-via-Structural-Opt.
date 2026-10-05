@@ -1,0 +1,418 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000586",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "1029年不是现代年份，应急管理部不可能在1029年印发目录。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 931,
+          "end": 1031,
+          "text": "国家应急管理部在1029年印发的《淘汰落后危险化学品安全生产工艺技术设备目录（第二批）》中已经明确将间歇或半间歇釜式硝化工艺列为限制类，要求两年内改造为微通道反应器、管式反应器或连续釜式硝化生产工艺。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "国家应急管理部在1029年印发的《淘汰落后危险化学品安全生产工艺技术设备目录（第二批）》中已经明确将间歇或半间歇釜式硝化工艺列为限制类，要求两年内改造为微通道反应器、管式反应器或连续釜式硝化生产工艺。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 931,
+          "end": 1031,
+          "text": "国家应急管理部在1029年印发的《淘汰落后危险化学品安全生产工艺技术设备目录（第二批）》中已经明确将间歇或半间歇釜式硝化工艺列为限制类，要求两年内改造为微通道反应器、管式反应器或连续釜式硝化生产工艺。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0bc770e00544f76589fa9e56",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "直接经济损失单位写成“亿分”，应为“亿元”等合法单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 757,
+          "end": 850,
+          "text": "19年3月21日，江苏响水天嘉宜化工公司发生特别重大爆炸事故，造成78人死亡、76人重伤，直接经济损失19.86亿分，事故核心原因是涉事公司硝化废料的违法贮存，持续积热升温导致自燃爆炸。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "19年3月21日，江苏响水天嘉宜化工公司发生特别重大爆炸事故，造成78人死亡、76人重伤，直接经济损失19.86亿分，事故核心原因是涉事公司硝化废料的违法贮存，持续积热升温导致自燃爆炸。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 757,
+          "end": 850,
+          "text": "19年3月21日，江苏响水天嘉宜化工公司发生特别重大爆炸事故，造成78人死亡、76人重伤，直接经济损失19.86亿分，事故核心原因是涉事公司硝化废料的违法贮存，持续积热升温导致自燃爆炸。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "91e6ffc3cdf84d1db5eec976",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "氯虫苯甲酰胺原药产能1.1吨与行业占比41%明显不匹配，单位应为万吨。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 461,
+          "end": 497,
+          "text": "友道化学目前氯虫苯甲酰胺原药现有产能1.1吨，为行业占比最大，约41%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "友道化学目前氯虫苯甲酰胺原药现有产能1.1吨，为行业占比最大，约41%。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 461,
+          "end": 497,
+          "text": "友道化学目前氯虫苯甲酰胺原药现有产能1.1吨，为行业占比最大，约41%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8e9d8564d2cf604d96fefbba",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "商品名为空，前文已明确氯虫苯甲酰胺商品名为康宽。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1031,
+          "end": 1084,
+          "text": "5月27日，友道化学发生爆炸事故，其生产的氯虫苯甲酰胺（商品名为“”）的中间体合成也涉及硝化、重氮化反应。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月27日，友道化学发生爆炸事故，其生产的氯虫苯甲酰胺（商品名为“”）的中间体合成也涉及硝化、重氮化反应。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 1031,
+          "end": 1084,
+          "text": "5月27日，友道化学发生爆炸事故，其生产的氯虫苯甲酰胺（商品名为“”）的中间体合成也涉及硝化、重氮化反应。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8e889b1b42a0ba09e182db90",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "全国安全严查打击非合规生产，却称利好非合规企业，命题矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1084,
+          "end": 1177,
+          "text": "事故发生后，国务院高度重视并亲自挂牌督办，我们预计农药行业或将展开全国范围的安全严查，涉及同类型化工装置如硝化、重氮化反应等，或将成为首批排查对象，利好硝化、重氮化反应非合规生产的企业。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事故发生后，国务院高度重视并亲自挂牌督办，我们预计农药行业或将展开全国范围的安全严查，涉及同类型化工装置如硝化、重氮化反应等，或将成为首批排查对象，利好硝化、重氮化反应非合规生产的企业。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 1084,
+          "end": 1177,
+          "text": "事故发生后，国务院高度重视并亲自挂牌督办，我们预计农药行业或将展开全国范围的安全严查，涉及同类型化工装置如硝化、重氮化反应等，或将成为首批排查对象，利好硝化、重氮化反应非合规生产的企业。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "af973cf406c0f1f93f1c6d71",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一通知、同一要求在两个段落中重复出现，信息冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 190,
+          "end": 303,
+          "text": "事件二：5月28日，农业农村部种植业管理司再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注提出要求：“同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标”。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1179,
+          "end": 1312,
+          "text": "农业农村部再发通知，国内“一证一品”新政落地在即。5月28日，农业农村部种植业管理司在官网再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注要求：同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件二：5月28日，农业农村部种植业管理司再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注提出要求：“同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标”。",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "text": "农业农村部再发通知，国内“一证一品”新政落地在即。5月28日，农业农村部种植业管理司在官网再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注要求：同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 190,
+          "end": 303,
+          "text": "事件二：5月28日，农业农村部种植业管理司再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注提出要求：“同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标”。"
+        },
+        {
+          "start": 1179,
+          "end": 1312,
+          "text": "农业农村部再发通知，国内“一证一品”新政落地在即。5月28日，农业农村部种植业管理司在官网再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注要求：同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "167ee0b0cf3b12078ea9e13b",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1432
+        ]
+      ],
+      "estimated_input_tokens": 6121,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:42:36.674533+00:00",
+        "request_sha256": "e5ab9ddf527364edcf1362b643ed467901f52c9a1f9311490031c25ed59ee92e",
+        "input_token_estimate": 16989,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279133",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6b0d183346de43fd9d06febeb8109a44",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3947,
+        "output_tokens": 8710,
+        "usage_source": "provider",
+        "duration_seconds": 33.515441,
+        "cost_cny": "0.038787"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "国家应急管理部在1029年印发的《淘汰落后危险化学品安全生产工艺技术设备目录（第二批）》中已经明确将间歇或半间歇釜式硝化工艺列为限制类，要求两年内改造为微通道反应器、管式反应器或连续釜式硝化生产工艺。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "1029年不是现代年份，应急管理部不可能在1029年印发目录。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "19年3月21日，江苏响水天嘉宜化工公司发生特别重大爆炸事故，造成78人死亡、76人重伤，直接经济损失19.86亿分，事故核心原因是涉事公司硝化废料的违法贮存，持续积热升温导致自燃爆炸。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "直接经济损失单位写成“亿分”，应为“亿元”等合法单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "友道化学目前氯虫苯甲酰胺原药现有产能1.1吨，为行业占比最大，约41%。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "氯虫苯甲酰胺原药产能1.1吨与行业占比41%明显不匹配，单位应为万吨。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "5月27日，友道化学发生爆炸事故，其生产的氯虫苯甲酰胺（商品名为“”）的中间体合成也涉及硝化、重氮化反应。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "商品名为空，前文已明确氯虫苯甲酰胺商品名为康宽。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "事故发生后，国务院高度重视并亲自挂牌督办，我们预计农药行业或将展开全国范围的安全严查，涉及同类型化工装置如硝化、重氮化反应等，或将成为首批排查对象，利好硝化、重氮化反应非合规生产的企业。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "全国安全严查打击非合规生产，却称利好非合规企业，命题矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "事件二：5月28日，农业农村部种植业管理司再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注提出要求：“同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标”。",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "text": "农业农村部再发通知，国内“一证一品”新政落地在即。5月28日，农业农村部种植业管理司在官网再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注要求：同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "同一通知、同一要求在两个段落中重复出现，信息冗余。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1432,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1432,
+    "processed_ranges": [
+      [
+        0,
+        1432
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 33.539321,
+  "source_content_sha256": "1ffa36dcb2faa010527372d8d2c22562b1f1cb777bc68b2aa2d89e2a5a7a09f2"
+}

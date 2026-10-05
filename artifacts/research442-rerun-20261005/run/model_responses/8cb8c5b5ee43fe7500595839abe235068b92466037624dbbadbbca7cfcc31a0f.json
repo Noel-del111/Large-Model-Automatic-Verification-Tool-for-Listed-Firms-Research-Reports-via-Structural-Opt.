@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"家族化设计语言：车长近5m、车宽近2m、轴距3m。\", \"start\": 64, \"end\": 89}], \"reason\": \"该句在“外观设计”下连续出现两次，信息完全重复。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"充电技术：全系采用800V碳化硅高压平台，Max版本支持5.2C最大充电倍率，10-80%最快分钟，最快15分钟充电620km。\"}], \"reason\": \"“10-80%最快分钟”中缺少具体充电分钟数，只有单位“分钟”。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"电动化和智能化的优质赛道核心抵押品，如华阳集团、德赛西威、瑞可达、科博达、伯特利等；\"}], \"reason\": \"投资语境下应为“核心标的”，“抵押品”是担保物术语，含义错误。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"本周重点关注组合：比亚迪、理想汽车、拓普集团、德赛西威和。\"}], \"reason\": \"并列连词“和”后缺少组合成员名称，列举不完整。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:04:22.924043+00:00",
+    "request_sha256": "ed6c54199c9af2b031b3644795f4155dc0db3869a7e44aea28d772182931dbc2",
+    "input_token_estimate": 15638,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277782",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d6a95c95c5ab4ab88baad325c4c7ced7",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3752,
+    "output_tokens": 5546,
+    "usage_source": "provider",
+    "duration_seconds": 24.229637,
+    "cost_cny": "0.025936"
+  },
+  "cache_request": {
+    "key": "8cb8c5b5ee43fe7500595839abe235068b92466037624dbbadbbca7cfcc31a0f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ed6c54199c9af2b031b3644795f4155dc0db3869a7e44aea28d772182931dbc2"
+  }
+}

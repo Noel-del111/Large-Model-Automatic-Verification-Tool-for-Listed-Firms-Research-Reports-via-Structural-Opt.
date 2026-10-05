@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"129年公司棉籽业务受豆油豆粕等大宗商品行情波动等因素影响，主要产品价格下降，毛利率下降3.48%。\"}],\"reason\":\"“129年”不是合理年份，与上下文2024年、25年时间线不符。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"晨光生物是一家专注于植物有效成分萃取、分离、纯化及应用的高科技企业，胰岛素、辣椒油树脂、叶黄素产销量位居世界重要位置，随着下游食品调味、医疗保健等需求趋势增长，公司望持续获益。\"}],\"reason\":\"晨光生物属植物提取行业，胰岛素并非其植物提取产品，术语使用与公司业务不符。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"25年棉籽加工行情回暖，产品、原材料恢复至顺价状态，同比显著恶化。\"}],\"reason\":\"行情回暖、恢复顺价与“同比显著恶化”在同一条件下矛盾，不能同时成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:23:27.156732+00:00",
+    "request_sha256": "85403e97592def182c0c34374f132bbeee9bf882de866111e8b5af269880cb00",
+    "input_token_estimate": 15353,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277497",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "bfe5df18e7604947b3fdd341de2fd5ce",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3625,
+    "output_tokens": 5253,
+    "usage_source": "provider",
+    "duration_seconds": 21.109189,
+    "cost_cny": "0.024637"
+  },
+  "cache_request": {
+    "key": "911a3fc7973797474fecc7b7a4d396a86bc7366a8320d05d585a531489f82904",
+    "purpose": "text_review.detect",
+    "messages_sha256": "85403e97592def182c0c34374f132bbeee9bf882de866111e8b5af269880cb00"
+  }
+}

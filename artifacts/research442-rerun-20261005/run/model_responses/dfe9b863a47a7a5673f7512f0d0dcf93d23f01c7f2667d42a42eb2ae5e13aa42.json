@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"公司公告拟以现金6.96亿元收购浙江索特60%股权\"}, {\"text\": \"经协商确定，浙江索特100%股权对应估值约11.60亿元，本次以6.96亿元收购其80%股权。\"}], \"reason\": \"100%估值11.60亿元，收购80%应支付9.28亿元而非6.96亿元；6.96亿元对应60%，与前述60%矛盾。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"公司24年营收35.53亿元，净利润0.51亿元，其中旗下Solamet®业务净利润0.72亿元；\"}], \"reason\": \"浙江索特整体净利润0.51亿元，小于其中Solamet®业务净利润0.72亿元，部分大于整体。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"截至公告发布，浙江索特全球获授有效专利项，可充分利用技术优势协同创新、强化竞争力。\"}], \"reason\": \"“获授有效专利”后缺少具体数量数字，应写明专利项数。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:07:15.368286+00:00",
+    "request_sha256": "30bceb9292a164ccc0c85f749657b6556cea76f7a982034c2a03b7a58080ad62",
+    "input_token_estimate": 14764,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.276908",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2258e477795c40d58be9aeba62bda840",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3513,
+    "output_tokens": 6652,
+    "usage_source": "provider",
+    "duration_seconds": 28.417538,
+    "cost_cny": "0.030121"
+  },
+  "cache_request": {
+    "key": "dfe9b863a47a7a5673f7512f0d0dcf93d23f01c7f2667d42a42eb2ae5e13aa42",
+    "purpose": "text_review.detect",
+    "messages_sha256": "30bceb9292a164ccc0c85f749657b6556cea76f7a982034c2a03b7a58080ad62"
+  }
+}

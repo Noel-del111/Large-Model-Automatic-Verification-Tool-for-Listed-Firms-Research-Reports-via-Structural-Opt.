@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"投资建议：维持“优于大市”评级。我们看好公司多个主营产品涨价带来的利润弹性，以及公司未来与多个合作伙伴在农药创新领域的合作取得进展，预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。\"}], \"reason\": \"投资建议开头和结尾两次出现“维持“优于大市”评级”，信息重复。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"公司2024年实现营业收入42.37亿元，同比增长0.32%；归母净利润为0.81亿元，同比增长31.11%；公司2024年归母净利润下降主要系受全球农化去库周期影响，多数农药产品价格下降，使得公司营收和毛/净利率下降。\"}], \"reason\": \"同句先称归母净利润同比增长31.11%，后称归母净利润下降，同一指标方向矛盾。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"2025年3月以来，代森锰锌的市场价格从2.35万元/吨下跌至2.5万元/吨；\"}], \"reason\": \"“下跌”与价格从2.35万元/吨升至2.5万元/吨的数值变化相反。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"百菌清市场价格已从2025年1月的1.8万元/吨上涨至2024年5月的2.9万元/吨；\"}], \"reason\": \"起始时间2025年1月晚于终点2024年5月，时间顺序倒置。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"2024年以来公司多个主营产品价格上涨，预计盈利水平恶化明显；\"}], \"reason\": \"产品涨价通常改善盈利，与“预计盈利水平恶化明显”矛盾，也与标题“归母净利润大幅改善”冲突。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"预计2025-2027年公司归母净利润分别为4.02/4.78/5.22/6.10亿元，EPS为0.95/1.13/1.24元，对应当前股价PE为15.9/13.4/12.3X，维持“优于大市”评级。\"}], \"reason\": \"归母净利润列出四个数值，而预测期间为2025-2027年三年，且EPS和PE均为三个数值。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:07:48.914378+00:00",
+    "request_sha256": "92c691c45ff08033eb23d41236948010fc1a7f50cc4e553b33914ff9820c8d78",
+    "input_token_estimate": 15697,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277841",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "6e5aed40b3ac4c269298d79dec3e9ac0",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3746,
+    "output_tokens": 8139,
+    "usage_source": "provider",
+    "duration_seconds": 30.047286,
+    "cost_cny": "0.036302"
+  },
+  "cache_request": {
+    "key": "ce4b7634d1fdbe172a687c8fe87fc665031ea24724ba5722c3059c9df9466c86",
+    "purpose": "text_review.detect",
+    "messages_sha256": "92c691c45ff08033eb23d41236948010fc1a7f50cc4e553b33914ff9820c8d78"
+  }
+}

@@ -1,0 +1,843 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000368",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "营业总收入后直接接单位“亿”，缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 60,
+          "end": 86,
+          "text": "本报告期内，实现营业总收入亿，同比增+19.67%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本报告期内，实现营业总收入亿，同比增+19.67%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 60,
+          "end": 86,
+          "text": "本报告期内，实现营业总收入亿，同比增+19.67%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "515d1100cf75aa31cf35843b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "基本每股收益后应列加权平均净资产收益率，此处缺失且无后续数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 116,
+          "end": 130,
+          "text": "基本每股收益1.16元，加权"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "基本每股收益1.16元，加权"
+        }
+      ],
+      "spans": [
+        {
+          "start": 116,
+          "end": 130,
+          "text": "基本每股收益1.16元，加权"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "942b30674564cb61f38dd6ce",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "每股分红应以元/股表示，写成“每股约全年分红1次”，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 132,
+          "end": 186,
+          "text": "股息政策，公司24年拟派发现金股息约12.3亿人民币，每股约全年分红1次，约占当年度净利润比例的30.7%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "股息政策，公司24年拟派发现金股息约12.3亿人民币，每股约全年分红1次，约占当年度净利润比例的30.7%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 132,
+          "end": 186,
+          "text": "股息政策，公司24年拟派发现金股息约12.3亿人民币，每股约全年分红1次，约占当年度净利润比例的30.7%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6a73b1c7ccf6b42bc86c5ce9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "扣非归母净利后缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 188,
+          "end": 223,
+          "text": "2025年Q1业绩，营收170.6亿，同比增+10.6%，扣非归母净利"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年Q1业绩，营收170.6亿，同比增+10.6%，扣非归母净利"
+        }
+      ],
+      "spans": [
+        {
+          "start": 188,
+          "end": 223,
+          "text": "2025年Q1业绩，营收170.6亿，同比增+10.6%，扣非归母净利"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "51200633caa4dd1141db4b59",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“毛”后缺“利”或“利率”及对应数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 259,
+          "end": 292,
+          "text": "快递分部，营收623亿，同比增+19.2%，营收占比90.2%；毛"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "快递分部，营收623亿，同比增+19.2%，营收占比90.2%；毛"
+        }
+      ],
+      "spans": [
+        {
+          "start": 259,
+          "end": 292,
+          "text": "快递分部，营收623亿，同比增+19.2%，营收占比90.2%；毛"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "873b41c3b7262d2090d245bf",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“毛”后缺“利”或“利率”及对应数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 294,
+          "end": 327,
+          "text": "货代分部，营收37.6亿，同比增+22.5%，营收占比5.5%；毛"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "货代分部，营收37.6亿，同比增+22.5%，营收占比5.5%；毛"
+        }
+      ],
+      "spans": [
+        {
+          "start": 294,
+          "end": 327,
+          "text": "货代分部，营收37.6亿，同比增+22.5%，营收占比5.5%；毛"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4f2e557ad331dce983424699",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "毛利为负时通常称“毛利亏损”或“毛利为-1.7亿”，称“毛利金额亏损”术语不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 329,
+          "end": 363,
+          "text": "航空分部，营收17.2亿，同比增+43.2%；毛利金额亏损1.7亿。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "航空分部，营收17.2亿，同比增+43.2%；毛利金额亏损1.7亿。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 329,
+          "end": 363,
+          "text": "航空分部，营收17.2亿，同比增+43.2%；毛利金额亏损1.7亿。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1ea33675db8482365c7d5381",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "正文出现多余符号“>>”，不符合正常文本格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 363,
+          "end": 397,
+          "text": ">>其他业务，营收11.6亿，同比增+5.8%；毛利金额为6.1亿。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": ">>其他业务，营收11.6亿，同比增+5.8%；毛利金额为6.1亿。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 363,
+          "end": 397,
+          "text": ">>其他业务，营收11.6亿，同比增+5.8%；毛利金额为6.1亿。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a5e3cbe0ca7e091f49ce4b8d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "模糊语言",
+      "reason": "“亮25%”缺字，无法明确业务数据增长的具体内容和口径。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 424,
+          "end": 444,
+          "text": "24年业务数据亮25%，超行业平均增速；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年业务数据亮25%，超行业平均增速；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 424,
+          "end": 444,
+          "text": "24年业务数据亮25%，超行业平均增速；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "49e516315c9694d8d5d89a1e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "模糊语言",
+      "reason": "“小4.9%”缺字，无法确定是下降、减少还是其他变化。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 444,
+          "end": 457,
+          "text": "单票收入较去年小4.9%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "单票收入较去年小4.9%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 444,
+          "end": 457,
+          "text": "单票收入较去年小4.9%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "44d70eadf4431fb87e8f804d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“市场竞争加剧风险”在风险提示中重复出现。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 489,
+          "end": 526,
+          "text": "经济波动风险；市场竞争加剧风险；客户需求变动及政策风险；市场竞争加剧风险；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "经济波动风险；市场竞争加剧风险；客户需求变动及政策风险；市场竞争加剧风险；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 489,
+          "end": 526,
+          "text": "经济波动风险；市场竞争加剧风险；客户需求变动及政策风险；市场竞争加剧风险；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5740d13264da1f647d683d08",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "“投资评级”标题下未给出具体评级结果，缺失必要要素。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 397,
+          "end": 424,
+          "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 397,
+          "end": 424,
+          "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6ea3ca7331d7bbd6fa7a57e7",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          526
+        ]
+      ],
+      "estimated_input_tokens": 4195,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:00:27.578962+00:00",
+        "request_sha256": "5892345d764cb1d1376e401653ec829c0fb535c6f9ec62fd3f42691c618863c7",
+        "input_token_estimate": 11522,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.273666",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "68542afd74b94833bbe82fbd6c861996",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 2702,
+        "output_tokens": 8007,
+        "usage_source": "provider",
+        "duration_seconds": 30.765519,
+        "cost_cny": "0.03473"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "本报告期内，实现营业总收入亿，同比增+19.67%；"
+          }
+        ],
+        "reason": "营业总收入后直接接单位“亿”，缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "基本每股收益1.16元，加权"
+          }
+        ],
+        "reason": "基本每股收益后应列加权平均净资产收益率，此处缺失且无后续数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "股息政策，公司24年拟派发现金股息约12.3亿人民币，每股约全年分红1次，约占当年度净利润比例的30.7%。"
+          }
+        ],
+        "reason": "每股分红应以元/股表示，写成“每股约全年分红1次”，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025年Q1业绩，营收170.6亿，同比增+10.6%，扣非归母净利"
+          }
+        ],
+        "reason": "扣非归母净利后缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "快递分部，营收623亿，同比增+19.2%，营收占比90.2%；毛"
+          }
+        ],
+        "reason": "“毛”后缺“利”或“利率”及对应数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "货代分部，营收37.6亿，同比增+22.5%，营收占比5.5%；毛"
+          }
+        ],
+        "reason": "“毛”后缺“利”或“利率”及对应数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "航空分部，营收17.2亿，同比增+43.2%；毛利金额亏损1.7亿。"
+          }
+        ],
+        "reason": "毛利为负时通常称“毛利亏损”或“毛利为-1.7亿”，称“毛利金额亏损”术语不当。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": ">>其他业务，营收11.6亿，同比增+5.8%；毛利金额为6.1亿。"
+          }
+        ],
+        "reason": "正文出现多余符号“>>”，不符合正常文本格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "模糊语言",
+        "spans": [
+          {
+            "text": "24年业务数据亮25%，超行业平均增速；"
+          }
+        ],
+        "reason": "“亮25%”缺字，无法明确业务数据增长的具体内容和口径。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "模糊语言",
+        "spans": [
+          {
+            "text": "单票收入较去年小4.9%；"
+          }
+        ],
+        "reason": "“小4.9%”缺字，无法确定是下降、减少还是其他变化。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "经济波动风险；市场竞争加剧风险；客户需求变动及政策风险；市场竞争加剧风险；"
+          }
+        ],
+        "reason": "“市场竞争加剧风险”在风险提示中重复出现。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "投资评级\n\n公司借助科技化手段，引领综合实力持续提升。"
+          }
+        ],
+        "reason": "“投资评级”标题下未给出具体评级结果，缺失必要要素。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue_total",
+      "metric_text": "营业总收入",
+      "start": 60,
+      "end": 86,
+      "text": "本报告期内，实现营业总收入亿，同比增+19.67%；",
+      "quantities": [
+        {
+          "value": "+19.67",
+          "unit": "%",
+          "start": 78,
+          "end": 85
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 116,
+      "end": 131,
+      "text": "基本每股收益1.16元，加权\n",
+      "quantities": [
+        {
+          "value": "1.16",
+          "unit": "元",
+          "start": 122,
+          "end": 127
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 132,
+      "end": 186,
+      "text": "股息政策，公司24年拟派发现金股息约12.3亿人民币，每股约全年分红1次，约占当年度净利润比例的30.7%。",
+      "quantities": [
+        {
+          "value": "30.7",
+          "unit": "%",
+          "start": 180,
+          "end": 185
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 188,
+      "end": 224,
+      "text": "2025年Q1业绩，营收170.6亿，同比增+10.6%，扣非归母净利\n",
+      "quantities": [
+        {
+          "value": "+10.6",
+          "unit": "%",
+          "start": 210,
+          "end": 216
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 259,
+      "end": 291,
+      "text": "快递分部，营收623亿，同比增+19.2%，营收占比90.2%；",
+      "quantities": [
+        {
+          "value": "+19.2",
+          "unit": "%",
+          "start": 274,
+          "end": 280
+        },
+        {
+          "value": "90.2",
+          "unit": "%",
+          "start": 285,
+          "end": 290
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 259,
+      "end": 291,
+      "text": "快递分部，营收623亿，同比增+19.2%，营收占比90.2%；",
+      "quantities": [
+        {
+          "value": "+19.2",
+          "unit": "%",
+          "start": 274,
+          "end": 280
+        },
+        {
+          "value": "90.2",
+          "unit": "%",
+          "start": 285,
+          "end": 290
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 294,
+      "end": 326,
+      "text": "货代分部，营收37.6亿，同比增+22.5%，营收占比5.5%；",
+      "quantities": [
+        {
+          "value": "+22.5",
+          "unit": "%",
+          "start": 310,
+          "end": 316
+        },
+        {
+          "value": "5.5",
+          "unit": "%",
+          "start": 321,
+          "end": 325
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 294,
+      "end": 326,
+      "text": "货代分部，营收37.6亿，同比增+22.5%，营收占比5.5%；",
+      "quantities": [
+        {
+          "value": "+22.5",
+          "unit": "%",
+          "start": 310,
+          "end": 316
+        },
+        {
+          "value": "5.5",
+          "unit": "%",
+          "start": 321,
+          "end": 325
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 329,
+      "end": 352,
+      "text": "航空分部，营收17.2亿，同比增+43.2%；",
+      "quantities": [
+        {
+          "value": "+43.2",
+          "unit": "%",
+          "start": 345,
+          "end": 351
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 363,
+      "end": 387,
+      "text": ">>其他业务，营收11.6亿，同比增+5.8%；",
+      "quantities": [
+        {
+          "value": "+5.8",
+          "unit": "%",
+          "start": 381,
+          "end": 386
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 457,
+      "end": 473,
+      "text": "航空板块毛利率同比增加10个点；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 526,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 526,
+    "processed_ranges": [
+      [
+        0,
+        526
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 30.789675,
+  "source_content_sha256": "049600cf64253e3e480d4ccbd1561877b3b22918f8441c54ed332f96782a9fc1"
+}

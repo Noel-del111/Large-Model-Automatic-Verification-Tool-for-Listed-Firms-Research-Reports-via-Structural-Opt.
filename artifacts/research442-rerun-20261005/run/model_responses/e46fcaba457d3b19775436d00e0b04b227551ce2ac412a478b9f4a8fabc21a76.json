@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2023年以来，营收增长呈现中枢下沉的态势：相比2022年，2023年、2024年的增长分别收窄了16.14和10.22个百分点。\"}],\"reason\":\"该句在相邻位置完全重复出现，属于不必要的冗余。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2025年以来，葵花籽和坚果价格有所回落，预计公司后续季度的原料成本压力将会减缓。\"}],\"reason\":\"该句在相邻段落中完全重复，属于不必要的冗余。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"洽洽食品()\"}],\"reason\":\"公司名称后的股票代码属性为空，缺少证券代码。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"2025年一季度，葵花籽价格同比下跌，截至3月价格稳定在5950元/吨，同比下跌1.65%。\"},{\"text\":\"同期净利润下降73.76%，主要原料葵花籽和坚果的价格同比上升是其主要原因。\"}],\"reason\":\"前文称葵花籽价格同比下跌，后文却称葵花籽和坚果价格同比上升是净利润下降主因，同一期间价格方向矛盾。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"投资评级：我们预测公司2025、2026、2027年的每股收益为1.58元、1.71元和1.91元，参照5月23日收盘价22.99元，对应的市盈率分别为14.59倍、13.45倍和12.06倍，给予公司“增持”评级。\"}],\"reason\":\"按22.99元除以1.58元约14.55倍，原文14.59倍有误。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"对照现金流来看，20242Q、20243Q、20244Q和2025-1Q，连续四个季度的销售商品获得现金流同比减少。\"},{\"text\":\"20251Q，公司收入同比减少13.76%，其中主要是季节性因素所致，具有偶然性，预计后续季度的收入增长将会企稳。\"}],\"reason\":\"季度期间写法不符合规范，如20242Q应为2024Q2或2024年二季度等。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:31:38.336450+00:00",
+    "request_sha256": "29cb39b19efb65b92bbc3fb4c0545e0a1c1cd55325b1c805d374bb8c24ce7c1f",
+    "input_token_estimate": 17278,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279422",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4620ee55e3464a539642dc93939cc0c6",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4134,
+    "output_tokens": 10491,
+    "usage_source": "provider",
+    "duration_seconds": 39.908241,
+    "cost_cny": "0.046098"
+  },
+  "cache_request": {
+    "key": "e46fcaba457d3b19775436d00e0b04b227551ce2ac412a478b9f4a8fabc21a76",
+    "purpose": "text_review.detect",
+    "messages_sha256": "29cb39b19efb65b92bbc3fb4c0545e0a1c1cd55325b1c805d374bb8c24ce7c1f"
+  }
+}

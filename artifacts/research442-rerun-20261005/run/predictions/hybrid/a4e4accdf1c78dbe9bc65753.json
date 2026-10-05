@@ -1,0 +1,301 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000639",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内政策文件名称完全为空，无法识别被发布文件。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 43,
+          "end": 63,
+          "text": "事件：近日，国家发改委、能源局发布《》。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件：近日，国家发改委、能源局发布《》。",
+          "start": 114,
+          "end": 136
+        }
+      ],
+      "spans": [
+        {
+          "start": 43,
+          "end": 63,
+          "text": "事件：近日，国家发改委、能源局发布《》。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0a3417c96c7bb1d997b0c679",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "用“债权”描述电源投资主体关系，混淆投资/出资与债权概念，导致含义错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 695,
+          "end": 723,
+          "text": "电源可由负荷债权，也由发电企业或双方成立的合资公司债权。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "电源可由负荷债权，也由发电企业或双方成立的合资公司债权。",
+          "start": 675,
+          "end": 713
+        }
+      ],
+      "spans": [
+        {
+          "start": 695,
+          "end": 723,
+          "text": "电源可由负荷债权，也由发电企业或双方成立的合资公司债权。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ebae52e2a4bffdf97705528e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同一段落先称“不断提高自发自用比例”，后称“并不断降低自发自用比例”，方向相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 767,
+          "end": 846,
+          "text": "2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。",
+          "start": 782,
+          "end": 878
+        }
+      ],
+      "spans": [
+        {
+          "start": 767,
+          "end": 846,
+          "text": "2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "32fc223de9ffd119985537fd",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "政策近日发布，目标时点却写“129年前”，目标时间早于政策发布时间，先后冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 767,
+          "end": 846,
+          "text": "2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。",
+          "start": 782,
+          "end": 878
+        }
+      ],
+      "spans": [
+        {
+          "start": 767,
+          "end": 846,
+          "text": "2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "400f7b87e7865b1848a89958",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1559
+        ]
+      ],
+      "estimated_input_tokens": 6220,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:28:14.287271+00:00",
+        "request_sha256": "1fa6ab5da30e6f50aabf793bd1d5befbbbc4d5f1f9f19b41ac4b8c9ce057eb89",
+        "input_token_estimate": 17256,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.2794",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "24b31d7576df474c9dd8c1d8e675ed6d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3994,
+        "output_tokens": 7152,
+        "usage_source": "provider",
+        "duration_seconds": 32.270849,
+        "cost_cny": "0.032602",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "事件：近日，国家发改委、能源局发布《》。",
+            "start": 114,
+            "end": 136
+          }
+        ],
+        "reason": "书名号内政策文件名称完全为空，无法识别被发布文件。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "电源可由负荷债权，也由发电企业或双方成立的合资公司债权。",
+            "start": 675,
+            "end": 713
+          }
+        ],
+        "reason": "用“债权”描述电源投资主体关系，混淆投资/出资与债权概念，导致含义错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。",
+            "start": 782,
+            "end": 878
+          }
+        ],
+        "reason": "同一段落先称“不断提高自发自用比例”，后称“并不断降低自发自用比例”，方向相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2）不断提高自发自用比例：并网型项目年自发自用电量占总可用发电量比例不低于60%，占总用电量比例不低于30%，并不断降低自发自用比例，129年前不低于35%。",
+            "start": 782,
+            "end": 878
+          }
+        ],
+        "reason": "政策近日发布，目标时点却写“129年前”，目标时间早于政策发布时间，先后冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1559,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1559,
+    "processed_ranges": [
+      [
+        0,
+        1559
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1559,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001684,
+  "source_content_sha256": "f84d48e163ffb6304f62f59a75d8d3d1621a3b56704875a2617c160652bf401b"
+}

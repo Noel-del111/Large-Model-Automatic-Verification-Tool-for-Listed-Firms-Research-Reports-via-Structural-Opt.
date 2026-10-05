@@ -1,0 +1,445 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000174",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "五一档应为5月1日至5月5日，却写成6月1日至6月5日，且截至5月5日与档期起点6月1日冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 50,
+          "end": 101,
+          "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 50,
+          "end": 101,
+          "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2c3303135e80a34dd737f753",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一五一档新片数量“8部”在相邻两句重复陈述，没有新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 263,
+          "end": 289,
+          "text": "2024年五一档共8部新片上映，《维和防暴队》领跑。"
+        },
+        {
+          "kind": "source_text",
+          "start": 289,
+          "end": 325,
+          "text": "五一档期间有8部新片上映，涵盖了动画、动作、爱情、喜剧、悬疑等多种类型。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年五一档共8部新片上映，《维和防暴队》领跑。"
+        },
+        {
+          "text": "五一档期间有8部新片上映，涵盖了动画、动作、爱情、喜剧、悬疑等多种类型。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 263,
+          "end": 289,
+          "text": "2024年五一档共8部新片上映，《维和防暴队》领跑。"
+        },
+        {
+          "start": 289,
+          "end": 325,
+          "text": "五一档期间有8部新片上映，涵盖了动画、动作、爱情、喜剧、悬疑等多种类型。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a7c7c1e33e97eece2f8049ad",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "前五公司对应5个市占率，原文却列出6个数值，数量不匹配且5%排序异常。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 997,
+          "end": 1055,
+          "text": "前五影投公司分别为万达、横店、星轶、CGV、金逸，市占率分别为14.3%、3.7%、2.5%、2.1%、2%、5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "前五影投公司分别为万达、横店、星轶、CGV、金逸，市占率分别为14.3%、3.7%、2.5%、2.1%、2%、5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 997,
+          "end": 1055,
+          "text": "前五影投公司分别为万达、横店、星轶、CGV、金逸，市占率分别为14.3%、3.7%、2.5%、2.1%、2%、5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "45199d63254a4161c6663d9d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按档期总票房15.2亿元计算，对应占比应约为25.5%、23.8%、15.0%，与原文不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 343,
+          "end": 374,
+          "text": "《维和防暴队》以3.88亿元的票房位居榜首，票房占比为27%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 374,
+          "end": 407,
+          "text": "《末路狂花钱》紧随其后，票房为3.61亿元，票房占比为25.1%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 407,
+          "end": 437,
+          "text": "《九龙城寨之围城》票房为2.28亿元，票房占比为15.8%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "《维和防暴队》以3.88亿元的票房位居榜首，票房占比为27%。"
+        },
+        {
+          "text": "《末路狂花钱》紧随其后，票房为3.61亿元，票房占比为25.1%。"
+        },
+        {
+          "text": "《九龙城寨之围城》票房为2.28亿元，票房占比为15.8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 343,
+          "end": 374,
+          "text": "《维和防暴队》以3.88亿元的票房位居榜首，票房占比为27%。"
+        },
+        {
+          "start": 374,
+          "end": 407,
+          "text": "《末路狂花钱》紧随其后，票房为3.61亿元，票房占比为25.1%。"
+        },
+        {
+          "start": 407,
+          "end": 437,
+          "text": "《九龙城寨之围城》票房为2.28亿元，票房占比为15.8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "751edc9959ee0193e81c58d8",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按档期票房15.2亿元除以观影人次3543.9万，平均票价约42.89元，与40.40元不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 199,
+          "end": 256,
+          "text": "2024年五一档档期观影人次3543.9万人，同比下降5.97%，档期平均票价为40.40元，同比上升0.07%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 50,
+          "end": 101,
+          "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年五一档档期观影人次3543.9万人，同比下降5.97%，档期平均票价为40.40元，同比上升0.07%。"
+        },
+        {
+          "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 199,
+          "end": 256,
+          "text": "2024年五一档档期观影人次3543.9万人，同比下降5.97%，档期平均票价为40.40元，同比上升0.07%。"
+        },
+        {
+          "start": 50,
+          "end": 101,
+          "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "da418e0286697f36878ec7be",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "前文为“优质IP储备”，此处“AR储备”并非对应资产术语，含义错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1360,
+          "end": 1396,
+          "text": "建议关注具有优质AR储备的公司上海电影、奥飞娱乐、中文在线、掌阅科技等。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "建议关注具有优质AR储备的公司上海电影、奥飞娱乐、中文在线、掌阅科技等。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1360,
+          "end": 1396,
+          "text": "建议关注具有优质AR储备的公司上海电影、奥飞娱乐、中文在线、掌阅科技等。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "93597342676a58a7de1db556",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1430
+        ]
+      ],
+      "estimated_input_tokens": 5990,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:50:18.484651+00:00",
+        "request_sha256": "de72b01c1193be38199bf7ac82416a31dca69549570e8750b5d8a53d1c01cd95",
+        "input_token_estimate": 16647,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278791",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e7451579cb904bf8a54e6df14b50595b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3966,
+        "output_tokens": 11023,
+        "usage_source": "provider",
+        "duration_seconds": 41.518146,
+        "cost_cny": "0.048058",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+          }
+        ],
+        "reason": "五一档应为5月1日至5月5日，却写成6月1日至6月5日，且截至5月5日与档期起点6月1日冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024年五一档共8部新片上映，《维和防暴队》领跑。"
+          },
+          {
+            "text": "五一档期间有8部新片上映，涵盖了动画、动作、爱情、喜剧、悬疑等多种类型。"
+          }
+        ],
+        "reason": "同一五一档新片数量“8部”在相邻两句重复陈述，没有新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "前五影投公司分别为万达、横店、星轶、CGV、金逸，市占率分别为14.3%、3.7%、2.5%、2.1%、2%、5%。"
+          }
+        ],
+        "reason": "前五公司对应5个市占率，原文却列出6个数值，数量不匹配且5%排序异常。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "《维和防暴队》以3.88亿元的票房位居榜首，票房占比为27%。"
+          },
+          {
+            "text": "《末路狂花钱》紧随其后，票房为3.61亿元，票房占比为25.1%。"
+          },
+          {
+            "text": "《九龙城寨之围城》票房为2.28亿元，票房占比为15.8%。"
+          }
+        ],
+        "reason": "按档期总票房15.2亿元计算，对应占比应约为25.5%、23.8%、15.0%，与原文不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2024年五一档档期观影人次3543.9万人，同比下降5.97%，档期平均票价为40.40元，同比上升0.07%。"
+          },
+          {
+            "text": "今年五一档从6月1日至6月5日，档期票房为15.2亿元，同比近乎持平（截至2024年5月5日14时）。"
+          }
+        ],
+        "reason": "按档期票房15.2亿元除以观影人次3543.9万，平均票价约42.89元，与40.40元不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "建议关注具有优质AR储备的公司上海电影、奥飞娱乐、中文在线、掌阅科技等。"
+          }
+        ],
+        "reason": "前文为“优质IP储备”，此处“AR储备”并非对应资产术语，含义错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1430,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1430,
+    "processed_ranges": [
+      [
+        0,
+        1430
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1430,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001667,
+  "source_content_sha256": "77c590e9caa643bea46e2a0f5791a35faa59b32bb4d87357719b00fda8e34759"
+}

@@ -1,0 +1,366 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000371",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "标题称国产首个骨髓纤维化JAK抑制剂，正文又称并非首个获批用于治疗骨髓纤维化的国产JAK抑制剂类创新药物，同一事实前后矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 0,
+          "end": 25,
+          "text": "吉卡昔替尼获批上市，国产首个骨髓纤维化JAK抑制剂"
+        },
+        {
+          "kind": "source_text",
+          "start": 455,
+          "end": 619,
+          "text": "本次获得批准的适应症是“用于中危或高危原发性骨髓纤维化（PMF）、真性红细胞增多症继发性骨髓纤维化（PPV-MF）和原发性血小板增多症继发性骨纤维化（PET-MF）的成人患者，治疗疾病相关脾肿大或疾病相关症状”，这是盐酸吉卡昔替尼片首个获批的临床适应症盐酸吉卡昔替尼片并非首个获批用于治疗骨髓纤维化的国产JAK抑制剂类创新药物。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "吉卡昔替尼获批上市，国产首个骨髓纤维化JAK抑制剂"
+        },
+        {
+          "text": "本次获得批准的适应症是“用于中危或高危原发性骨髓纤维化（PMF）、真性红细胞增多症继发性骨髓纤维化（PPV-MF）和原发性血小板增多症继发性骨纤维化（PET-MF）的成人患者，治疗疾病相关脾肿大或疾病相关症状”，这是盐酸吉卡昔替尼片首个获批的临床适应症盐酸吉卡昔替尼片并非首个获批用于治疗骨髓纤维化的国产JAK抑制剂类创新药物。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 0,
+          "end": 25,
+          "text": "吉卡昔替尼获批上市，国产首个骨髓纤维化JAK抑制剂"
+        },
+        {
+          "start": 455,
+          "end": 619,
+          "text": "本次获得批准的适应症是“用于中危或高危原发性骨髓纤维化（PMF）、真性红细胞增多症继发性骨髓纤维化（PPV-MF）和原发性血小板增多症继发性骨纤维化（PET-MF）的成人患者，治疗疾病相关脾肿大或疾病相关症状”，这是盐酸吉卡昔替尼片首个获批的临床适应症盐酸吉卡昔替尼片并非首个获批用于治疗骨髓纤维化的国产JAK抑制剂类创新药物。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b5159143b17ef90ce0cd9bb4",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "药物疗效时间单位应为“周”，“24吨”中“吨”是重量单位，明显误用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 763,
+          "end": 850,
+          "text": "另外，治疗芦可替尼不耐受的MF患者IIb期临床试验结果显示24吨时SVR35达43.2%；芦可替尼难治或复发的骨髓纤维化II期临床试验结果显示24周时SVR35达32.4%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "另外，治疗芦可替尼不耐受的MF患者IIb期临床试验结果显示24吨时SVR35达43.2%；芦可替尼难治或复发的骨髓纤维化II期临床试验结果显示24周时SVR35达32.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 763,
+          "end": 850,
+          "text": "另外，治疗芦可替尼不耐受的MF患者IIb期临床试验结果显示24吨时SVR35达43.2%；芦可替尼难治或复发的骨髓纤维化II期临床试验结果显示24周时SVR35达32.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5b35af31cdc0b7bcdcd9f77e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "指南名称中“中国临床肿瘤学会”后的括号为空，缺失应填写的学会英文缩写等属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 850,
+          "end": 953,
+          "text": "盐酸吉卡昔替尼已被纳入《中国临床肿瘤学会（）恶性血液病诊疗指南2024》中骨髓纤维化一线分层治疗的I级推荐、二线及进展期治疗的推荐，尤其是在骨髓纤维化（MF）相关贫血患者的一线治疗中，被列为I级推荐的首选。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "盐酸吉卡昔替尼已被纳入《中国临床肿瘤学会（）恶性血液病诊疗指南2024》中骨髓纤维化一线分层治疗的I级推荐、二线及进展期治疗的推荐，尤其是在骨髓纤维化（MF）相关贫血患者的一线治疗中，被列为I级推荐的首选。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 850,
+          "end": 953,
+          "text": "盐酸吉卡昔替尼已被纳入《中国临床肿瘤学会（）恶性血液病诊疗指南2024》中骨髓纤维化一线分层治疗的I级推荐、二线及进展期治疗的推荐，尤其是在骨髓纤维化（MF）相关贫血患者的一线治疗中，被列为I级推荐的首选。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b5c5788914472e7c9c7dc6b8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "2026年归母净利润5.3亿元较2025年0.7亿元增长约657.1%，与所列同比增长630.1%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1329,
+          "end": 1454,
+          "text": "预计公司2025~2027年收入分别9.0/16.5/24.1亿元，分别同比增长68.7%/83.2%/46.2%，归母净利润分别为0.7/5.3/10.2亿元，分别同比增长152.6%/630.1%/93.1%，对应估值为392X/54X/28X。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计公司2025~2027年收入分别9.0/16.5/24.1亿元，分别同比增长68.7%/83.2%/46.2%，归母净利润分别为0.7/5.3/10.2亿元，分别同比增长152.6%/630.1%/93.1%，对应估值为392X/54X/28X。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1329,
+          "end": 1454,
+          "text": "预计公司2025~2027年收入分别9.0/16.5/24.1亿元，分别同比增长68.7%/83.2%/46.2%，归母净利润分别为0.7/5.3/10.2亿元，分别同比增长152.6%/630.1%/93.1%，对应估值为392X/54X/28X。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1d6ccafeedba95ea8ef46e69",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1565
+        ]
+      ],
+      "estimated_input_tokens": 6082,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:02:30.383524+00:00",
+        "request_sha256": "bcee22f8ef528478e56b670c35fd3a378c64fdfa2cfad2bc43047c99c52ce4c0",
+        "input_token_estimate": 16946,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27909",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e607467b94494f039a786ec5c08312b4",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4041,
+        "output_tokens": 9078,
+        "usage_source": "provider",
+        "duration_seconds": 35.261099,
+        "cost_cny": "0.040353"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "吉卡昔替尼获批上市，国产首个骨髓纤维化JAK抑制剂"
+          },
+          {
+            "text": "本次获得批准的适应症是“用于中危或高危原发性骨髓纤维化（PMF）、真性红细胞增多症继发性骨髓纤维化（PPV-MF）和原发性血小板增多症继发性骨纤维化（PET-MF）的成人患者，治疗疾病相关脾肿大或疾病相关症状”，这是盐酸吉卡昔替尼片首个获批的临床适应症盐酸吉卡昔替尼片并非首个获批用于治疗骨髓纤维化的国产JAK抑制剂类创新药物。"
+          }
+        ],
+        "reason": "标题称国产首个骨髓纤维化JAK抑制剂，正文又称并非首个获批用于治疗骨髓纤维化的国产JAK抑制剂类创新药物，同一事实前后矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "另外，治疗芦可替尼不耐受的MF患者IIb期临床试验结果显示24吨时SVR35达43.2%；芦可替尼难治或复发的骨髓纤维化II期临床试验结果显示24周时SVR35达32.4%。"
+          }
+        ],
+        "reason": "药物疗效时间单位应为“周”，“24吨”中“吨”是重量单位，明显误用。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "盐酸吉卡昔替尼已被纳入《中国临床肿瘤学会（）恶性血液病诊疗指南2024》中骨髓纤维化一线分层治疗的I级推荐、二线及进展期治疗的推荐，尤其是在骨髓纤维化（MF）相关贫血患者的一线治疗中，被列为I级推荐的首选。"
+          }
+        ],
+        "reason": "指南名称中“中国临床肿瘤学会”后的括号为空，缺失应填写的学会英文缩写等属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "预计公司2025~2027年收入分别9.0/16.5/24.1亿元，分别同比增长68.7%/83.2%/46.2%，归母净利润分别为0.7/5.3/10.2亿元，分别同比增长152.6%/630.1%/93.1%，对应估值为392X/54X/28X。"
+          }
+        ],
+        "reason": "2026年归母净利润5.3亿元较2025年0.7亿元增长约657.1%，与所列同比增长630.1%不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1311,
+      "end": 1454,
+      "text": "由于新产品上市，我们略调整销售预测，预计公司2025~2027年收入分别9.0/16.5/24.1亿元，分别同比增长68.7%/83.2%/46.2%，归母净利润分别为0.7/5.3/10.2亿元，分别同比增长152.6%/630.1%/93.1%，对应估值为392X/54X/28X。",
+      "quantities": [
+        {
+          "value": "24.1",
+          "unit": "亿元",
+          "start": 1356,
+          "end": 1362
+        },
+        {
+          "value": "68.7",
+          "unit": "%",
+          "start": 1369,
+          "end": 1374
+        },
+        {
+          "value": "83.2",
+          "unit": "%",
+          "start": 1375,
+          "end": 1380
+        },
+        {
+          "value": "46.2",
+          "unit": "%",
+          "start": 1381,
+          "end": 1386
+        },
+        {
+          "value": "10.2",
+          "unit": "亿元",
+          "start": 1403,
+          "end": 1409
+        },
+        {
+          "value": "152.6",
+          "unit": "%",
+          "start": 1416,
+          "end": 1422
+        },
+        {
+          "value": "630.1",
+          "unit": "%",
+          "start": 1423,
+          "end": 1429
+        },
+        {
+          "value": "93.1",
+          "unit": "%",
+          "start": 1430,
+          "end": 1435
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1565,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1565,
+    "processed_ranges": [
+      [
+        0,
+        1565
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 35.283593,
+  "source_content_sha256": "72c2307f386016b08ca548272008359e354fb9b2a4aa69b64cdec06d7f290694"
+}

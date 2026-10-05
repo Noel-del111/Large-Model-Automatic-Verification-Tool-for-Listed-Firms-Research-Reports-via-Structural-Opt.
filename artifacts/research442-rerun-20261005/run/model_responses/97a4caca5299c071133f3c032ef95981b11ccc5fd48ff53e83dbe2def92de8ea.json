@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"截至5月32日，COMEX金主力合约环比下跌1.33%至3313.10美元/盎司。\",\"start\":84,\"end\":149}],\"reason\":\"5月没有32日，该日期不成立。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"本周美国国际贸易法院阻止了特朗普的“解放日”关税生效，裁定特朗普越权。\",\"start\":179,\"end\":223}],\"reason\":\"与前文“美国国际贸易法院阻止了特朗普的‘解放日’关税生效”重复。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。\",\"start\":468,\"end\":509}],\"reason\":\"“环比去库万吨”未给出具体去库数量，明确数值位置为空。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"基本面来看，截至5.29国内铜社会库存达13.87吨，环比去库万吨。\",\"start\":468,\"end\":509}],\"reason\":\"铜社会库存以13.87吨计量，与行业通常万吨口径不符，单位量纲错误。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"短期来看，美国政策、贸易谈判及地缘政治的不确定性仍然存在，避险需求则对金作形成支撑。\",\"start\":224,\"end\":277}],\"reason\":\"“金作”不是规范金融表述，应为“金价”，术语使用不当。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"若需求表现超预期，则铜基本面融资或进一步走强，铜价中枢有望通过套利实现对冲效应。\",\"start\":775,\"end\":841}],\"reason\":\"“融资”用在此处描述铜基本面走强，金融术语误用。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:37:26.545951+00:00",
+    "request_sha256": "51d06abfdc37db0d7a6a6864684b6d154f5636b01b558acdcb5f5b8c9a5e0ec5",
+    "input_token_estimate": 16307,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278451",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "344d602918ec41f494b872635c8e29d8",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3843,
+    "output_tokens": 6170,
+    "usage_source": "provider",
+    "duration_seconds": 24.923512,
+    "cost_cny": "0.028523"
+  },
+  "cache_request": {
+    "key": "97a4caca5299c071133f3c032ef95981b11ccc5fd48ff53e83dbe2def92de8ea",
+    "purpose": "text_review.detect",
+    "messages_sha256": "51d06abfdc37db0d7a6a6864684b6d154f5636b01b558acdcb5f5b8c9a5e0ec5"
+  }
+}

@@ -1,0 +1,969 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000510",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "归母净利润同比增长122.17%表明上年同期为盈利，与“扭亏为盈”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 52,
+          "end": 102,
+          "text": "2024年实现营收56.77亿元，同比-11.88%；归母净利润1.03亿元，同比+122.17%；"
+        },
+        {
+          "kind": "source_text",
+          "start": 325,
+          "end": 346,
+          "text": "公司归母净利润扭亏为盈，盈利能力逐渐改善。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年实现营收56.77亿元，同比-11.88%；归母净利润1.03亿元，同比+122.17%；"
+        },
+        {
+          "text": "公司归母净利润扭亏为盈，盈利能力逐渐改善。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 52,
+          "end": 102,
+          "text": "2024年实现营收56.77亿元，同比-11.88%；归母净利润1.03亿元，同比+122.17%；"
+        },
+        {
+          "start": 325,
+          "end": 346,
+          "text": "公司归母净利润扭亏为盈，盈利能力逐渐改善。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8c4441b34955acdcb68e6d5c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "验证项目总数为6个，API项目却为8个，部分超过整体。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1187,
+          "end": 1223,
+          "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1187,
+          "end": 1223,
+          "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2af922eed7f1147fa28917b8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一信息“马来西亚基地正在按计划建设”连续重复，无新增内容。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 879,
+          "end": 937,
+          "text": "2024年公司依托海外基地将产品推入商业化生产阶段，同时马来西亚基地正在按计划建设。同时马来西亚基地正在按计划建设。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司依托海外基地将产品推入商业化生产阶段，同时马来西亚基地正在按计划建设。同时马来西亚基地正在按计划建设。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 879,
+          "end": 937,
+          "text": "2024年公司依托海外基地将产品推入商业化生产阶段，同时马来西亚基地正在按计划建设。同时马来西亚基地正在按计划建设。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5376758b6c32bc2f8b39c65e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1890
+        ]
+      ],
+      "estimated_input_tokens": 6231,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:03:37.983880+00:00",
+        "request_sha256": "2c9db2e52e259fd2b6e532d4658f5a128f1c47aef45cdc964a80f7354f91cea4",
+        "input_token_estimate": 17391,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279535",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "cea99cf014eb485484b6f62a52e9c957",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4181,
+        "output_tokens": 11521,
+        "usage_source": "provider",
+        "duration_seconds": 44.87616,
+        "cost_cny": "0.050265"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年实现营收56.77亿元，同比-11.88%；归母净利润1.03亿元，同比+122.17%；"
+          },
+          {
+            "text": "公司归母净利润扭亏为盈，盈利能力逐渐改善。"
+          }
+        ],
+        "reason": "归母净利润同比增长122.17%表明上年同期为盈利，与“扭亏为盈”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+          }
+        ],
+        "reason": "验证项目总数为6个，API项目却为8个，部分超过整体。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024年公司依托海外基地将产品推入商业化生产阶段，同时马来西亚基地正在按计划建设。同时马来西亚基地正在按计划建设。"
+          }
+        ],
+        "reason": "同一信息“马来西亚基地正在按计划建设”连续重复，无新增内容。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 40,
+      "end": 79,
+      "text": "公司发布2024年年报，2024年实现营收56.77亿元，同比-11.88%；",
+      "quantities": [
+        {
+          "value": "56.77",
+          "unit": "亿元",
+          "start": 61,
+          "end": 68
+        },
+        {
+          "value": "-11.88",
+          "unit": "%",
+          "start": 71,
+          "end": 78
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 79,
+      "end": 102,
+      "text": "归母净利润1.03亿元，同比+122.17%；",
+      "quantities": [
+        {
+          "value": "1.03",
+          "unit": "亿元",
+          "start": 84,
+          "end": 90
+        },
+        {
+          "value": "+122.17",
+          "unit": "%",
+          "start": 93,
+          "end": 101
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 102,
+      "end": 138,
+      "text": "其中24Q4实现营收13.18亿元，同比-7.44%，环比-4.55%；",
+      "quantities": [
+        {
+          "value": "13.18",
+          "unit": "亿元",
+          "start": 112,
+          "end": 119
+        },
+        {
+          "value": "-7.44",
+          "unit": "%",
+          "start": 122,
+          "end": 128
+        },
+        {
+          "value": "-4.55",
+          "unit": "%",
+          "start": 131,
+          "end": 137
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 138,
+      "end": 168,
+      "text": "归母净利润0.71亿元，同比扭亏为盈，环比+284.98%。",
+      "quantities": [
+        {
+          "value": "0.71",
+          "unit": "亿元",
+          "start": 143,
+          "end": 149
+        },
+        {
+          "value": "+284.98",
+          "unit": "%",
+          "start": 159,
+          "end": 167
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 168,
+      "end": 216,
+      "text": "公司发布2025年一季报，25Q1实现营收15.10亿元，同比+3.02%，环比+14.55%；",
+      "quantities": [
+        {
+          "value": "15.10",
+          "unit": "亿元",
+          "start": 189,
+          "end": 196
+        },
+        {
+          "value": "+3.02",
+          "unit": "%",
+          "start": 199,
+          "end": 205
+        },
+        {
+          "value": "+14.55",
+          "unit": "%",
+          "start": 208,
+          "end": 215
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 216,
+      "end": 250,
+      "text": "归母净利润0.50亿元，同比+1747.04%，环比-29.02%。",
+      "quantities": [
+        {
+          "value": "0.50",
+          "unit": "亿元",
+          "start": 221,
+          "end": 227
+        },
+        {
+          "value": "+1747.04",
+          "unit": "%",
+          "start": 230,
+          "end": 239
+        },
+        {
+          "value": "-29.02",
+          "unit": "%",
+          "start": 242,
+          "end": 249
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 346,
+      "end": 419,
+      "text": "根据公司2024年年报，2024年公司营收同比略有下滑，公司及时调整经营策略，精益管理，提升效率以稳定各基地生产经营情况并实现归母净利润扭亏为盈。",
+      "quantities": [],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "根据公司",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 346,
+      "end": 419,
+      "text": "根据公司2024年年报，2024年公司营收同比略有下滑，公司及时调整经营策略，精益管理，提升效率以稳定各基地生产经营情况并实现归母净利润扭亏为盈。",
+      "quantities": [],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "根据公司",
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 419,
+      "end": 543,
+      "text": "2024年公司毛利率为26.06%（同比+6.20pct），净利率为2.67%（同比+9.33pct），期间费用率为19.23%（同比+0.50pct），其中财务费用率为1.30%（同比+0.97pct），主要系2024年美元套利收益同比减少所致。",
+      "quantities": [
+        {
+          "value": "26.06",
+          "unit": "%",
+          "start": 430,
+          "end": 436
+        },
+        {
+          "value": "2.67",
+          "unit": "%",
+          "start": 453,
+          "end": 458
+        },
+        {
+          "value": "19.23",
+          "unit": "%",
+          "start": 477,
+          "end": 483
+        },
+        {
+          "value": "1.30",
+          "unit": "%",
+          "start": 504,
+          "end": 509
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 419,
+      "end": 543,
+      "text": "2024年公司毛利率为26.06%（同比+6.20pct），净利率为2.67%（同比+9.33pct），期间费用率为19.23%（同比+0.50pct），其中财务费用率为1.30%（同比+0.97pct），主要系2024年美元套利收益同比减少所致。",
+      "quantities": [
+        {
+          "value": "26.06",
+          "unit": "%",
+          "start": 430,
+          "end": 436
+        },
+        {
+          "value": "2.67",
+          "unit": "%",
+          "start": 453,
+          "end": 458
+        },
+        {
+          "value": "19.23",
+          "unit": "%",
+          "start": 477,
+          "end": 483
+        },
+        {
+          "value": "1.30",
+          "unit": "%",
+          "start": 504,
+          "end": 509
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 543,
+      "end": 640,
+      "text": "25Q1公司归母净利润同比大幅增长，毛利率为26.15%（同比+0.95pct，环比-11.02pct），净利率为4.63%（同比+2.98pct，环比-1.02pct），公司盈利能力逐渐改善。",
+      "quantities": [
+        {
+          "value": "26.15",
+          "unit": "%",
+          "start": 565,
+          "end": 571
+        },
+        {
+          "value": "4.63",
+          "unit": "%",
+          "start": 600,
+          "end": 605
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 543,
+      "end": 640,
+      "text": "25Q1公司归母净利润同比大幅增长，毛利率为26.15%（同比+0.95pct，环比-11.02pct），净利率为4.63%（同比+2.98pct，环比-1.02pct），公司盈利能力逐渐改善。",
+      "quantities": [
+        {
+          "value": "26.15",
+          "unit": "%",
+          "start": 565,
+          "end": 571
+        },
+        {
+          "value": "4.63",
+          "unit": "%",
+          "start": 600,
+          "end": 605
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 543,
+      "end": 640,
+      "text": "25Q1公司归母净利润同比大幅增长，毛利率为26.15%（同比+0.95pct，环比-11.02pct），净利率为4.63%（同比+2.98pct，环比-1.02pct），公司盈利能力逐渐改善。",
+      "quantities": [
+        {
+          "value": "26.15",
+          "unit": "%",
+          "start": 565,
+          "end": 571
+        },
+        {
+          "value": "4.63",
+          "unit": "%",
+          "start": 600,
+          "end": 605
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 666,
+      "end": 782,
+      "text": "2024年公司植保业务实现营收35.90亿元（同比-15.39%），产量3.07万吨（同比+23.84%），销量3.16万吨（同比+28.20%），库存0.31万吨（同比+18.42%），毛利率20.10%（同比+5.78pct）。",
+      "quantities": [
+        {
+          "value": "35.90",
+          "unit": "亿元",
+          "start": 681,
+          "end": 688
+        },
+        {
+          "value": "-15.39",
+          "unit": "%",
+          "start": 691,
+          "end": 698
+        },
+        {
+          "value": "+23.84",
+          "unit": "%",
+          "start": 711,
+          "end": 718
+        },
+        {
+          "value": "+28.20",
+          "unit": "%",
+          "start": 731,
+          "end": 738
+        },
+        {
+          "value": "+18.42",
+          "unit": "%",
+          "start": 751,
+          "end": 758
+        },
+        {
+          "value": "20.10",
+          "unit": "%",
+          "start": 763,
+          "end": 769
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 666,
+      "end": 782,
+      "text": "2024年公司植保业务实现营收35.90亿元（同比-15.39%），产量3.07万吨（同比+23.84%），销量3.16万吨（同比+28.20%），库存0.31万吨（同比+18.42%），毛利率20.10%（同比+5.78pct）。",
+      "quantities": [
+        {
+          "value": "35.90",
+          "unit": "亿元",
+          "start": 681,
+          "end": 688
+        },
+        {
+          "value": "-15.39",
+          "unit": "%",
+          "start": 691,
+          "end": 698
+        },
+        {
+          "value": "+23.84",
+          "unit": "%",
+          "start": 711,
+          "end": 718
+        },
+        {
+          "value": "+28.20",
+          "unit": "%",
+          "start": 731,
+          "end": 738
+        },
+        {
+          "value": "+18.42",
+          "unit": "%",
+          "start": 751,
+          "end": 758
+        },
+        {
+          "value": "20.10",
+          "unit": "%",
+          "start": 763,
+          "end": 769
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 958,
+      "end": 1077,
+      "text": "2024年公司医药业务实现营收12.85亿元（同比-13.32%），产量705.28吨（同比-21.24%），销量621.09吨（同比-12.37%），库存333.07吨（同比-3.94%），毛利率47.95%（同比+13.13pct）。",
+      "quantities": [
+        {
+          "value": "12.85",
+          "unit": "亿元",
+          "start": 973,
+          "end": 980
+        },
+        {
+          "value": "-13.32",
+          "unit": "%",
+          "start": 983,
+          "end": 990
+        },
+        {
+          "value": "-21.24",
+          "unit": "%",
+          "start": 1004,
+          "end": 1011
+        },
+        {
+          "value": "-12.37",
+          "unit": "%",
+          "start": 1025,
+          "end": 1032
+        },
+        {
+          "value": "-3.94",
+          "unit": "%",
+          "start": 1046,
+          "end": 1052
+        },
+        {
+          "value": "47.95",
+          "unit": "%",
+          "start": 1057,
+          "end": 1063
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 958,
+      "end": 1077,
+      "text": "2024年公司医药业务实现营收12.85亿元（同比-13.32%），产量705.28吨（同比-21.24%），销量621.09吨（同比-12.37%），库存333.07吨（同比-3.94%），毛利率47.95%（同比+13.13pct）。",
+      "quantities": [
+        {
+          "value": "12.85",
+          "unit": "亿元",
+          "start": 973,
+          "end": 980
+        },
+        {
+          "value": "-13.32",
+          "unit": "%",
+          "start": 983,
+          "end": 990
+        },
+        {
+          "value": "-21.24",
+          "unit": "%",
+          "start": 1004,
+          "end": 1011
+        },
+        {
+          "value": "-12.37",
+          "unit": "%",
+          "start": 1025,
+          "end": 1032
+        },
+        {
+          "value": "-3.94",
+          "unit": "%",
+          "start": 1046,
+          "end": 1052
+        },
+        {
+          "value": "47.95",
+          "unit": "%",
+          "start": 1057,
+          "end": 1063
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1346,
+      "end": 1464,
+      "text": "2024年公司功能化学品业务实现营收3.06亿元（同比+61.82%），产量2.29万吨（同比+100.09%），销量2.22万吨（同比+87.92%），库存0.17万吨（同比+69.30%），毛利率7.22%（同比-8.28pct）。",
+      "quantities": [
+        {
+          "value": "3.06",
+          "unit": "亿元",
+          "start": 1364,
+          "end": 1370
+        },
+        {
+          "value": "+61.82",
+          "unit": "%",
+          "start": 1373,
+          "end": 1380
+        },
+        {
+          "value": "+100.09",
+          "unit": "%",
+          "start": 1393,
+          "end": 1401
+        },
+        {
+          "value": "+87.92",
+          "unit": "%",
+          "start": 1414,
+          "end": 1421
+        },
+        {
+          "value": "+69.30",
+          "unit": "%",
+          "start": 1434,
+          "end": 1441
+        },
+        {
+          "value": "7.22",
+          "unit": "%",
+          "start": 1446,
+          "end": 1451
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1346,
+      "end": 1464,
+      "text": "2024年公司功能化学品业务实现营收3.06亿元（同比+61.82%），产量2.29万吨（同比+100.09%），销量2.22万吨（同比+87.92%），库存0.17万吨（同比+69.30%），毛利率7.22%（同比-8.28pct）。",
+      "quantities": [
+        {
+          "value": "3.06",
+          "unit": "亿元",
+          "start": 1364,
+          "end": 1370
+        },
+        {
+          "value": "+61.82",
+          "unit": "%",
+          "start": 1373,
+          "end": 1380
+        },
+        {
+          "value": "+100.09",
+          "unit": "%",
+          "start": 1393,
+          "end": 1401
+        },
+        {
+          "value": "+87.92",
+          "unit": "%",
+          "start": 1414,
+          "end": 1421
+        },
+        {
+          "value": "+69.30",
+          "unit": "%",
+          "start": 1434,
+          "end": 1441
+        },
+        {
+          "value": "7.22",
+          "unit": "%",
+          "start": 1446,
+          "end": 1451
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1678,
+      "end": 1806,
+      "text": "公司盈利能力逐渐改善，推动植保业务高质量发展、医药及功能化学品业务稳步增长，调整盈利预测，预计2025-2027年归母净利润分别为2.79/4.00/5.14亿元，每股收益分别为0.31/0.44/0.56元，对应PE分别为24.8/17.3/13.5倍。",
+      "quantities": [
+        {
+          "value": "5.14",
+          "unit": "亿元",
+          "start": 1753,
+          "end": 1759
+        },
+        {
+          "value": "0.56",
+          "unit": "元",
+          "start": 1777,
+          "end": 1782
+        },
+        {
+          "value": "13.5",
+          "unit": "倍",
+          "start": 1800,
+          "end": 1805
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 1678,
+      "end": 1806,
+      "text": "公司盈利能力逐渐改善，推动植保业务高质量发展、医药及功能化学品业务稳步增长，调整盈利预测，预计2025-2027年归母净利润分别为2.79/4.00/5.14亿元，每股收益分别为0.31/0.44/0.56元，对应PE分别为24.8/17.3/13.5倍。",
+      "quantities": [
+        {
+          "value": "5.14",
+          "unit": "亿元",
+          "start": 1753,
+          "end": 1759
+        },
+        {
+          "value": "0.56",
+          "unit": "元",
+          "start": 1777,
+          "end": 1782
+        },
+        {
+          "value": "13.5",
+          "unit": "倍",
+          "start": 1800,
+          "end": 1805
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1890,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1890,
+    "processed_ranges": [
+      [
+        0,
+        1890
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 21,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 44.906739,
+  "source_content_sha256": "5fa2bfe7f4f97404ec982dd4063cf0d8f64c7022c20274740e846f13cc66babc"
+}

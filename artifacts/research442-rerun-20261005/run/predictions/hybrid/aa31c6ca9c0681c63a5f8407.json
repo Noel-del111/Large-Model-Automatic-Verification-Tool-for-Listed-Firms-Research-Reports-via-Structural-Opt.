@@ -1,0 +1,604 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000335",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "评级引号内为空，缺少具体评级名称，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 146,
+          "end": 172,
+          "text": "投资建议：维持“”评级，上调目标价至147.19元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：维持“”评级，上调目标价至147.19元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 146,
+          "end": 172,
+          "text": "投资建议：维持“”评级，上调目标价至147.19元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3bcf5ab5390d9007fbfb4014",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收单位应为亿元，却写作元，与括号中2025年原预测18.11亿元的单位口径不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 172,
+          "end": 237,
+          "text": "我们预计公司2025-2027（新增2027）年营收分别为15.98/21.37/27.55元（2025年原预测为18.11亿元）"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司2025-2027（新增2027）年营收分别为15.98/21.37/27.55元（2025年原预测为18.11亿元）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 172,
+          "end": 237,
+          "text": "我们预计公司2025-2027（新增2027）年营收分别为15.98/21.37/27.55元（2025年原预测为18.11亿元）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "baa28bd05365c99169f053b5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“224年”不成立，缺少千位数字，应为2024年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 350,
+          "end": 384,
+          "text": "对应目标价147.19元（原为124.82元，224年50x PS）"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "对应目标价147.19元（原为124.82元，224年50x PS）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 350,
+          "end": 384,
+          "text": "对应目标价147.19元（原为124.82元，224年50x PS）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e476756cad5b425b973e87f0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“营业收入”后直接接“万元”，明确数值位置为空，缺少具体金额。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 497,
+          "end": 518,
+          "text": "全年实现营业收入万元，同比增长20.98%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "全年实现营业收入万元，同比增长20.98%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 497,
+          "end": 518,
+          "text": "全年实现营业收入万元，同比增长20.98%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aeb15631a350df0ab9676d96",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "左括号后连续两个逗号且未见右括号闭合，标点格式损坏。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 385,
+          "end": 452,
+          "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 385,
+          "end": 452,
+          "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c37a06167f2eb338c8f6bf38",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1165
+        ]
+      ],
+      "estimated_input_tokens": 5633,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:17:42.628991+00:00",
+        "request_sha256": "daf7d48aa42dff423ce692156db4bc8f7603cf37571ebbf2101d9e9035af50e6",
+        "input_token_estimate": 15706,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27785",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b2af5c3ad1b547f9a2ed7bd5918bc696",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3719,
+        "output_tokens": 9064,
+        "usage_source": "provider",
+        "duration_seconds": 35.132787,
+        "cost_cny": "0.039975",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "投资建议：维持“”评级，上调目标价至147.19元。"
+          }
+        ],
+        "reason": "评级引号内为空，缺少具体评级名称，非数值属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "我们预计公司2025-2027（新增2027）年营收分别为15.98/21.37/27.55元（2025年原预测为18.11亿元）"
+          }
+        ],
+        "reason": "营收单位应为亿元，却写作元，与括号中2025年原预测18.11亿元的单位口径不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "对应目标价147.19元（原为124.82元，224年50x PS）"
+          }
+        ],
+        "reason": "年份“224年”不成立，缺少千位数字，应为2024年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "全年实现营业收入万元，同比增长20.98%"
+          }
+        ],
+        "reason": "“营业收入”后直接接“万元”，明确数值位置为空，缺少具体金额。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "此外，基于相同理由，我们重申公司应维持2025年50倍PS估值，对应目标价147.19元（原为124.82元，，维持“优于大市”评级。"
+          }
+        ],
+        "reason": "左括号后连续两个逗号且未见右括号闭合，标点格式损坏。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 172,
+      "end": 385,
+      "text": "我们预计公司2025-2027（新增2027）年营收分别为15.98/21.37/27.55元（2025年原预测为18.11亿元），EPS分别为0.43/0.57/0.72元（2025年原预测为0.58元），可比公司2025年平均PS32.07X，考虑到公司作为国内EDA行业龙头，收购芯和半导体补全产品矩阵驱动业绩增长，因此给予公司2025年50倍PS，对应目标价147.19元（原为124.82元，224年50x PS）。",
+      "quantities": [
+        {
+          "value": "27.55",
+          "unit": "元",
+          "start": 213,
+          "end": 219
+        },
+        {
+          "value": "18.11",
+          "unit": "亿元",
+          "start": 229,
+          "end": 236
+        },
+        {
+          "value": "0.72",
+          "unit": "元",
+          "start": 254,
+          "end": 259
+        },
+        {
+          "value": "0.58",
+          "unit": "元",
+          "start": 269,
+          "end": 274
+        },
+        {
+          "value": "50",
+          "unit": "倍",
+          "start": 344,
+          "end": 347
+        },
+        {
+          "value": "147.19",
+          "unit": "元",
+          "start": 355,
+          "end": 362
+        },
+        {
+          "value": "124.82",
+          "unit": "元",
+          "start": 365,
+          "end": 372
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2025年",
+        "2025年",
+        "2025年"
+      ],
+      "entity_mentions": [
+        "我们预计公司",
+        "可比公司",
+        "考虑到公司",
+        "因此给予公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 481,
+      "end": 629,
+      "text": "2024年华大九天业绩增收亮眼，全年实现营业收入万元，同比增长20.98%，2024年归母净利润为1.09亿元，同比下降45.46%，主要系计提股份支付费用叠加营销、研发人员数量和薪酬增加从而期间费用率同比增加6.9pct所致，2024年公司研发投入同比增长26.77%，营收占比达71.02%；",
+      "quantities": [
+        {
+          "value": "20.98",
+          "unit": "%",
+          "start": 512,
+          "end": 518
+        },
+        {
+          "value": "1.09",
+          "unit": "亿元",
+          "start": 530,
+          "end": 536
+        },
+        {
+          "value": "45.46",
+          "unit": "%",
+          "start": 541,
+          "end": 547
+        },
+        {
+          "value": "26.77",
+          "unit": "%",
+          "start": 610,
+          "end": 616
+        },
+        {
+          "value": "71.02",
+          "unit": "%",
+          "start": 622,
+          "end": 628
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 481,
+      "end": 629,
+      "text": "2024年华大九天业绩增收亮眼，全年实现营业收入万元，同比增长20.98%，2024年归母净利润为1.09亿元，同比下降45.46%，主要系计提股份支付费用叠加营销、研发人员数量和薪酬增加从而期间费用率同比增加6.9pct所致，2024年公司研发投入同比增长26.77%，营收占比达71.02%；",
+      "quantities": [
+        {
+          "value": "20.98",
+          "unit": "%",
+          "start": 512,
+          "end": 518
+        },
+        {
+          "value": "1.09",
+          "unit": "亿元",
+          "start": 530,
+          "end": 536
+        },
+        {
+          "value": "45.46",
+          "unit": "%",
+          "start": 541,
+          "end": 547
+        },
+        {
+          "value": "26.77",
+          "unit": "%",
+          "start": 610,
+          "end": 616
+        },
+        {
+          "value": "71.02",
+          "unit": "%",
+          "start": 622,
+          "end": 628
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 481,
+      "end": 629,
+      "text": "2024年华大九天业绩增收亮眼，全年实现营业收入万元，同比增长20.98%，2024年归母净利润为1.09亿元，同比下降45.46%，主要系计提股份支付费用叠加营销、研发人员数量和薪酬增加从而期间费用率同比增加6.9pct所致，2024年公司研发投入同比增长26.77%，营收占比达71.02%；",
+      "quantities": [
+        {
+          "value": "20.98",
+          "unit": "%",
+          "start": 512,
+          "end": 518
+        },
+        {
+          "value": "1.09",
+          "unit": "亿元",
+          "start": 530,
+          "end": 536
+        },
+        {
+          "value": "45.46",
+          "unit": "%",
+          "start": 541,
+          "end": 547
+        },
+        {
+          "value": "26.77",
+          "unit": "%",
+          "start": 610,
+          "end": 616
+        },
+        {
+          "value": "71.02",
+          "unit": "%",
+          "start": 622,
+          "end": 628
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 629,
+      "end": 685,
+      "text": "2025Q1公司实现营业收入2.34亿元同比增长9.77%，归母净利润为971.39万元，同比增长26.72%。",
+      "quantities": [
+        {
+          "value": "2.34",
+          "unit": "亿元",
+          "start": 643,
+          "end": 649
+        },
+        {
+          "value": "9.77",
+          "unit": "%",
+          "start": 653,
+          "end": 658
+        },
+        {
+          "value": "971.39",
+          "unit": "万元",
+          "start": 665,
+          "end": 673
+        },
+        {
+          "value": "26.72",
+          "unit": "%",
+          "start": 678,
+          "end": 684
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 629,
+      "end": 685,
+      "text": "2025Q1公司实现营业收入2.34亿元同比增长9.77%，归母净利润为971.39万元，同比增长26.72%。",
+      "quantities": [
+        {
+          "value": "2.34",
+          "unit": "亿元",
+          "start": 643,
+          "end": 649
+        },
+        {
+          "value": "9.77",
+          "unit": "%",
+          "start": 653,
+          "end": 658
+        },
+        {
+          "value": "971.39",
+          "unit": "万元",
+          "start": 665,
+          "end": 673
+        },
+        {
+          "value": "26.72",
+          "unit": "%",
+          "start": 678,
+          "end": 684
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1165,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1165,
+    "processed_ranges": [
+      [
+        0,
+        1165
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1165,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001964,
+  "source_content_sha256": "4f63fd8a002af6456d359d65720b22ec672a08750096dbd58f2a6a9c85a828aa"
+}

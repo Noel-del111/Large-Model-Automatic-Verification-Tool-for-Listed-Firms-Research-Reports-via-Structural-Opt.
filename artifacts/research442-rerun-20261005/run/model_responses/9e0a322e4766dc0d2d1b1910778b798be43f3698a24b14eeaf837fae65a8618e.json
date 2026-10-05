@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"事件：5月32日起公司旗下百利得威士忌、椒语金酒、岭洌伏特加上架歪马平台。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"5月没有32日，该日期不成立。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"酒类即时零售长坡厚雪，歪马全方位优势凸显。酒类即时零售长坡厚雪，歪马全方位优势凸显。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"同一信息“酒类即时零售长坡厚雪，歪马全方位优势凸显”被重复一次。\"\n    },\n    {\n      \"error_type\": \"属性值缺失错误\",\n      \"spans\": [\n        {\n          \"text\": \"其中，歪马送酒为美团旗下经营啤酒、、红酒、洋酒四大品类的酒水即时零售品牌，主打自建配送体系给前置仓配货，提供最快15分钟可达的送酒服务。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"称“四大品类”但只列出啤酒、红酒、洋酒三个品类，缺少一个类别名称。\"\n    },\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"我们维持2025-2027年营收为35、40、亿元，同比+15%、+14%、+18%，归母净利润为8.1、9.7、11.8亿元，同比+12%、+20%、+22%，对应PE为34、28、23倍，维持“买入”评级。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"2025-2027年营收只给出35、40两个数，缺少2027年营收数值。\"\n    },\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"据美团闪购的数据显示，2023年中国酒类即时零售市场规模不到200万亿美元，渗透率约为1%，2024年已增长至360亿元左右，预计到2027年规模将增长至1000亿元，渗透率达到6%。\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"2023年市场规模“不到200万亿美元”量级明显错误，与后文亿元口径矛盾。\"\n    },\n    {\n      \"error_type\": \"格式错误\",\n      \"spans\": [\n        {\n          \"text\": \"盈利预测与投资评级：展望全年，预调酒业务方面，将继续打造358度产品矩阵，强爽维持势能、微醺/清爽实现有策略的放量，同时预计开发8~20度新品满足强酒感度客户需求，预计亦有望带来一定增量贡献，全年目标力争实现正增长；\",\n          \"start\": 0,\n          \"end\": 0\n        }\n      ],\n      \"reason\": \"“358度”应为3度、5度、8度，缺少分隔符导致数值连写，格式不符合度数列举方式。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:53:04.012477+00:00",
+    "request_sha256": "78de631fd162c92cdefcdaba741e84dc3b9cc1d6776db31ec4481f090a0c9dde",
+    "input_token_estimate": 15721,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277865",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "314f30ab4e09474b88b9fab68e5b42de",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3744,
+    "output_tokens": 5888,
+    "usage_source": "provider",
+    "duration_seconds": 23.291335,
+    "cost_cny": "0.027296"
+  },
+  "cache_request": {
+    "key": "9e0a322e4766dc0d2d1b1910778b798be43f3698a24b14eeaf837fae65a8618e",
+    "purpose": "text_review.detect",
+    "messages_sha256": "78de631fd162c92cdefcdaba741e84dc3b9cc1d6776db31ec4481f090a0c9dde"
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000420",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句话在相邻位置完全重复，未提供新增信息，属于不必要的冗余。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "茅台历史上数次在行业震荡期逆势突围，已充分验证其体系韧性。",
+          "start": 334,
+          "end": 368
+        },
+        {
+          "text": "茅台历史上数次在行业震荡期逆势突围，已充分验证其体系韧性。",
+          "start": 368,
+          "end": 402
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "30292dadc4ab14bc7cfc9029",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "股票回购通常称为“股份回购”，“债权回购股票”表述混淆债权与股权，术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 801,
+          "end": 853,
+          "text": "目前，公司正加快实施60亿元上限的债权回购股票计划，同时预计将制定新一期的股份回购方案和集团的增持方案。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前，公司正加快实施60亿元上限的债权回购股票计划，同时预计将制定新一期的股份回购方案和集团的增持方案。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 801,
+          "end": 853,
+          "text": "目前，公司正加快实施60亿元上限的债权回购股票计划，同时预计将制定新一期的股份回购方案和集团的增持方案。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1357ca671e41d91fd0fa1b33",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "公司为贵州茅台，上下文为2024年股东大会，不可能在“129年”实施分红回购，时间与事实矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 702,
+          "end": 745,
+          "text": "129年，公司分红加回购的实际分红比率突破80%，以真金白银践行“与股东共生”的理念。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "129年，公司分红加回购的实际分红比率突破80%，以真金白银践行“与股东共生”的理念。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 702,
+          "end": 745,
+          "text": "129年，公司分红加回购的实际分红比率突破80%，以真金白银践行“与股东共生”的理念。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "047de682d27865b6e86af721",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "明确称“国际化三步走”，但括号内仅列两步，缺少第三步内容，战略要素不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 513,
+          "end": 562,
+          "text": "中期战略聚焦于国际化三步走（产品出口→文化出海→）和年轻化三聚焦（活力、创新、包容），培育新增量。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中期战略聚焦于国际化三步走（产品出口→文化出海→）和年轻化三聚焦（活力、创新、包容），培育新增量。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 513,
+          "end": 562,
+          "text": "中期战略聚焦于国际化三步走（产品出口→文化出海→）和年轻化三聚焦（活力、创新、包容），培育新增量。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1e189c1b1bb96c0338a0631f",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1011
+        ]
+      ],
+      "estimated_input_tokens": 5637,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:43:49.280632+00:00",
+        "request_sha256": "0ed873f4df066fb128297881efbdc6fd2ce9ba151493cf2078652ca0952597bb",
+        "input_token_estimate": 15680,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277824",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "978c5dc86fa9455dbea286523583df4b",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3647,
+        "output_tokens": 4904,
+        "usage_source": "provider",
+        "duration_seconds": 21.75614,
+        "cost_cny": "0.023263"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "茅台历史上数次在行业震荡期逆势突围，已充分验证其体系韧性。",
+            "start": 334,
+            "end": 368
+          },
+          {
+            "text": "茅台历史上数次在行业震荡期逆势突围，已充分验证其体系韧性。",
+            "start": 368,
+            "end": 402
+          }
+        ],
+        "reason": "同一句话在相邻位置完全重复，未提供新增信息，属于不必要的冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "目前，公司正加快实施60亿元上限的债权回购股票计划，同时预计将制定新一期的股份回购方案和集团的增持方案。"
+          }
+        ],
+        "reason": "股票回购通常称为“股份回购”，“债权回购股票”表述混淆债权与股权，术语使用不当。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "129年，公司分红加回购的实际分红比率突破80%，以真金白银践行“与股东共生”的理念。"
+          }
+        ],
+        "reason": "公司为贵州茅台，上下文为2024年股东大会，不可能在“129年”实施分红回购，时间与事实矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "中期战略聚焦于国际化三步走（产品出口→文化出海→）和年轻化三聚焦（活力、创新、包容），培育新增量。"
+          }
+        ],
+        "reason": "明确称“国际化三步走”，但括号内仅列两步，缺少第三步内容，战略要素不完整。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "茅台历史上数次在行业震荡期逆势突围，已充分验证其体系韧性。",
+            "start": 334,
+            "end": 368
+          },
+          {
+            "text": "茅台历史上数次在行业震荡期逆势突围，已充分验证其体系韧性。",
+            "start": 368,
+            "end": 402
+          }
+        ],
+        "reason": "同一句话在相邻位置完全重复，未提供新增信息，属于不必要的冗余。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 855,
+      "end": 965,
+      "text": "目标价1,900.00元，买入评级：综上，我们维持公司25-27年经营净利润预测，分别有望实现950.4/1,035.3/1,126.9亿元，目标价1,900.00元，相当于25财年盈利预测25.1倍PE，重申买入评级。",
+      "quantities": [
+        {
+          "value": "1,900.00",
+          "unit": "元",
+          "start": 858,
+          "end": 867
+        },
+        {
+          "value": "1,126.9",
+          "unit": "亿元",
+          "start": 916,
+          "end": 925
+        },
+        {
+          "value": "1,900.00",
+          "unit": "元",
+          "start": 929,
+          "end": 938
+        },
+        {
+          "value": "25.1",
+          "unit": "倍",
+          "start": 950,
+          "end": 955
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们维持公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1011,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1011,
+    "processed_ranges": [
+      [
+        0,
+        1011
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 21.780085,
+  "source_content_sha256": "7d951c831902e336c7e0ba19956fce3ba631657f091669eb9facee98fb8606a7"
+}

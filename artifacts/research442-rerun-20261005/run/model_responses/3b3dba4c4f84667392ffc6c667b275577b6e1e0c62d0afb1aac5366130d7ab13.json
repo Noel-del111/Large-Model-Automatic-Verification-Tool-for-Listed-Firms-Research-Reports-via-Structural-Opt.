@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"2025年13月，根据美国半导体行业协会（SIA）的数据，全球半导体销售额为559.0亿美元，同比增长18.8%，环比增长1.8%，连续第17个月同比增长。\"}],\"reason\":\"一年只有12个月，2025年13月不存在，时间信息非法。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"新材料板块成交额7075.91亿分，环比缩量21.51%。\"}],\"reason\":\"成交额单位写成“亿分”，量纲不合常规，应为亿元等金额单位。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"截至2025年5月28日，5月稀有气体价格环比小幅下降。截至2025年5月28日，5月稀有气体价格环比小幅下降。\"}],\"reason\":\"同一时间、同一信息连续重复，属于不必要的冗余语句。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"4月我国超硬材料及其制品出口1.63万吨，同比上涨22.88%；出口额1.53亿美元，同比下跌2.69%。\"},{\"text\":\"分层级来看，超硬材料出口53.86吨，同比下跌34.93%；出口额0.11亿美元，同比下跌54.37%；4月，我国超硬制品出口1.62万吨，同比上涨23.24%；出口额1.41亿美元，同比上涨7.13%。\"}],\"reason\":\"分层级出口额0.11+1.41=1.52亿美元，与总额1.53亿美元不符，合计不成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:17:11.533158+00:00",
+    "request_sha256": "c817bad18fe9ebe068f134cd842b76107a77c74426fc4cb614e3e54dc0d49bd3",
+    "input_token_estimate": 15490,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277634",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "389f1a29aa0f463c9645b93b6353b9ac",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3725,
+    "output_tokens": 7092,
+    "usage_source": "provider",
+    "duration_seconds": 27.327704,
+    "cost_cny": "0.032093"
+  },
+  "cache_request": {
+    "key": "3b3dba4c4f84667392ffc6c667b275577b6e1e0c62d0afb1aac5366130d7ab13",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c817bad18fe9ebe068f134cd842b76107a77c74426fc4cb614e3e54dc0d49bd3"
+  }
+}

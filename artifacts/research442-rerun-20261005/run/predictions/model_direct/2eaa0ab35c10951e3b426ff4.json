@@ -1,0 +1,196 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000578",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“线下机构压减率为%”中百分号前缺少应报告的数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 103,
+          "end": 136,
+          "text": "到2022年2月线下机构压减率为%，线上机构压减率为87.07%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "到2022年2月线下机构压减率为%，线上机构压减率为87.07%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 103,
+          "end": 136,
+          "text": "到2022年2月线下机构压减率为%，线上机构压减率为87.07%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aa5eb8821c4b86b4d1f5e2c0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "前文已出现“教育行业呈现剩者为王的特点，教育上市公司成为此轮教育市场复苏的最主要的受益者”，此处重复同一判断。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 853,
+          "end": 940,
+          "text": "教育行业呈现剩者为王的特点，教育上市公司成为此轮教育市场复苏的最主要的受益者，债权资产、租赁负债、合同负债、经营性净现金流、营业收入、净利润等财务指标大幅改善，业绩加速释放。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "教育行业呈现剩者为王的特点，教育上市公司成为此轮教育市场复苏的最主要的受益者，债权资产、租赁负债、合同负债、经营性净现金流、营业收入、净利润等财务指标大幅改善，业绩加速释放。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 853,
+          "end": 940,
+          "text": "教育行业呈现剩者为王的特点，教育上市公司成为此轮教育市场复苏的最主要的受益者，债权资产、租赁负债、合同负债、经营性净现金流、营业收入、净利润等财务指标大幅改善，业绩加速释放。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "588320a525af1e60bca71451",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1253
+        ]
+      ],
+      "estimated_input_tokens": 5880,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:36:37.587742+00:00",
+        "request_sha256": "b26f61fcec79db0d0515fea683479153f2e44c04bc2313d761ede21ddf7384a0",
+        "input_token_estimate": 16438,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278582",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9cd5ec8051fd43f284a53ed4a8c8a2df",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3779,
+        "output_tokens": 5711,
+        "usage_source": "provider",
+        "duration_seconds": 25.002459,
+        "cost_cny": "0.026623"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "到2022年2月线下机构压减率为%，线上机构压减率为87.07%。"
+          }
+        ],
+        "reason": "“线下机构压减率为%”中百分号前缺少应报告的数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "教育行业呈现剩者为王的特点，教育上市公司成为此轮教育市场复苏的最主要的受益者，债权资产、租赁负债、合同负债、经营性净现金流、营业收入、净利润等财务指标大幅改善，业绩加速释放。"
+          }
+        ],
+        "reason": "前文已出现“教育行业呈现剩者为王的特点，教育上市公司成为此轮教育市场复苏的最主要的受益者”，此处重复同一判断。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1253,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1253,
+    "processed_ranges": [
+      [
+        0,
+        1253
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.028216,
+  "source_content_sha256": "8d1c3174cd3c6dbf64c2b3b8c46ec10497e300084e90a0dd4f44fb5792f9b62d"
+}

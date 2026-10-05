@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"全年销售毛利率为 %，下滑 pcts；净利率为25.9%，下滑1.1pcts。\"}], \"reason\": \"销售毛利率的具体数值为空，同比下滑的百分点也缺失，导致关键财务指标无法读取。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"公司预计125年至期光子实现营业收入1.5亿元左右，同比继续翻倍增长。\"}], \"reason\": \"预计年份写成“125年”，与上下文中的2024年、2025年明显不符，应为2025年。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"公司凭借大股东中科院物构所深耕高分子材料多年积累的经验，沿着“材料—元件—组件—器件”的产业路径，不断培育业务新兴增长点，平滑了单一行业周期波动的风险。\"}], \"reason\": \"中科院物构所及公司主业为晶体、光学材料，并非高分子材料，使用“高分子材料”表述错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:07:28.655200+00:00",
+    "request_sha256": "de6771eb6b2a41232454a0f3be06c61300a6ab25e379bef8ccbea4b7c9a0690a",
+    "input_token_estimate": 16068,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278212",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "bc1b7817525e4e1cae9e095beb570424",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3823,
+    "output_tokens": 7442,
+    "usage_source": "provider",
+    "duration_seconds": 30.657203,
+    "cost_cny": "0.033591"
+  },
+  "cache_request": {
+    "key": "0e1d874af4646190e805fa6a7fbba59350a7275a6484c81f4c34a3a2271406bd",
+    "purpose": "text_review.detect",
+    "messages_sha256": "de6771eb6b2a41232454a0f3be06c61300a6ab25e379bef8ccbea4b7c9a0690a"
+  }
+}

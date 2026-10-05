@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"公司本次公开发行股份初始发行股份数量为 1,909.00 万股， 发行后总股本为 7,634.00 万股， 本次发行数量占发行后总股本的 55.01%（ 超额配售选择权行使前）\",\"start\":135,\"end\":257}],\"reason\":\"1,909.00除以7,634.00约等于25.01%，与文中55.01%不符。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"公司本次公开发行股份债券资金扣除发行费用后， 拟投资于“新津区交大铁发轨道交通智能产品及装备生产新建项目” 、 “新津区交大铁发研发中心建设项目” 、 “营销及售后服务网络建设项目” 以及补充流动资金。\",\"start\":402,\"end\":543}],\"reason\":\"公开发行股份为股权融资，不应称“债券资金”，应为“募集资金”。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"轨道交通基础设施安全智能产品及装备国家级“小巨人” ， 2024 年营收 3.35 亿元。\",\"start\":656,\"end\":700},{\"text\":\"2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。\",\"start\":887,\"end\":950}],\"reason\":\"同一2024年营收3.35亿元信息在同一段重复出现，无新增含义。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。\",\"start\":887,\"end\":950}],\"reason\":\"5339万元除以3.35亿元约等于15.94%，与文中净利率16.73%不符。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"国务院于 2021 年发布了《》 ， 大规模推进铁路线路建设和信息化建设已成为促进我国经济持续健康发展的一项长期战略工程。\",\"start\":1005,\"end\":1069}],\"reason\":\"书名号内文件名称缺失，法规名称属性值为空，无法核验引用依据。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%。\",\"start\":955,\"end\":1004},{\"text\":\"根据国铁集团官方发布的有关数据，2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%， 时隔 5 年再次突破 8000亿元大关， 创投资历史新高。\",\"start\":1071,\"end\":1171}],\"reason\":\"同一2024年铁路固定资产投资数据在同一段重复出现，无新增含义。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:08:08.930715+00:00",
+    "request_sha256": "57d49fdde858e95da63fa3bdefd77de172634300341b9b3a0fed5ac76ba0b7fa",
+    "input_token_estimate": 16897,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279041",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "316d5ab08d9f4daeb5bbc2f8da49c2a9",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4050,
+    "output_tokens": 7242,
+    "usage_source": "provider",
+    "duration_seconds": 27.078076,
+    "cost_cny": "0.033018"
+  },
+  "cache_request": {
+    "key": "225439c214983183436feb6f566508e425be2871b446f48a0fa02bae194275d3",
+    "purpose": "text_review.detect",
+    "messages_sha256": "57d49fdde858e95da63fa3bdefd77de172634300341b9b3a0fed5ac76ba0b7fa"
+  }
+}

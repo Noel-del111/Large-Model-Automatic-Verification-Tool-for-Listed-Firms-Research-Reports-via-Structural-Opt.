@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"宁德时代港股IPO募集资金达353亿港元，其中约90%（276亿港元）将用于匈牙利德布勒森工厂建设。\"}],\"reason\":\"353亿港元的90%约为317.7亿港元，与括号内276亿港元不符。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2025Q1与宁德实际关联交易规模达21元（2025年全年预计关联交易规模约85亿元），同比大增，25Q1关联交易规模接近2024全年实际规模的60%，宁德订单有望重回2021-2020年规模。\"}],\"reason\":\"关联交易规模写为“21元”，结合后文预计约85亿元，应漏“亿”字，单位错误。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"宁德订单有望重回2021-2020年规模。\"}],\"reason\":\"年份区间“2021-2020”起始晚于结束，时间区间不成立。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"固态电池领域，先导智能具有显著的先发优势，是全球唯一能够提供固态电池整线设备的企业，并且是全球唯一能够提供固态电池整线设备的企业：固态电池作为未来动力电池的重要发展方向，具有更高的安全性和能量密度，有望逐步替代传统液态电池。\"}],\"reason\":\"同一句内“全球唯一能够提供固态电池整线设备的企业”重复出现，无新增信息。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"公司2023&2024充分计提28亿元减值，后续回款有望跟随新订单加速：公司2023及2024年已合计计提减值28亿元，其中信用减值14亿元、存货跌价准备15亿元，风险已充分计提。\"}],\"reason\":\"信用减值14亿元加存货跌价准备15亿元为29亿元，与所述合计28亿元不符。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"先导智能经营性现金流已于2024Q4及2025Q0连续两个季度大幅转正，改善趋势明显。\"}],\"reason\":\"季度表述“2025Q0”不存在，时间信息非法。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:39:03.500123+00:00",
+    "request_sha256": "1c8796cffc48f62a9a4c78dfbf3ba27115e11f49c859f88628a82e2b42b34f19",
+    "input_token_estimate": 15869,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278013",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "99706b5109d54730bba410df0f39c68b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3731,
+    "output_tokens": 9374,
+    "usage_source": "provider",
+    "duration_seconds": 37.195447,
+    "cost_cny": "0.041227"
+  },
+  "cache_request": {
+    "key": "f103dcbcbf97f7f79575f87469a748c9370df78f8aa08d4937916fc0a1f563f9",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1c8796cffc48f62a9a4c78dfbf3ba27115e11f49c859f88628a82e2b42b34f19"
+  }
+}

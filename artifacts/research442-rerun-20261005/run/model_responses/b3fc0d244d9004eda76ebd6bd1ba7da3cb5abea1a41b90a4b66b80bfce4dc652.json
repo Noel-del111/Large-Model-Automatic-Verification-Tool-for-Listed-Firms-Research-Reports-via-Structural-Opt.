@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"数值单位错误\",\n      \"spans\": [\n        {\n          \"text\": \"2024年，公司实现营收7.93亿次，同比增加11.19%，实现归母净利润1.13亿元，同比增加23.70%；\"\n        }\n      ],\n      \"reason\": \"营收单位应为“亿元”，此处写成“亿次”，单位错误。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"其中样板和小批量板的平均订单面积分别为0.69平方米、0.49平方米和13.58平方米。\"\n        }\n      ],\n      \"reason\": \"样板和小批量板仅两类，却列出三个平均订单面积数值，类别与数值数量不符。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:48:47.877264+00:00",
+    "request_sha256": "3b3d980ea0118c0fc926137f4958c4232b5fb12ca5fd75b7c42432a4bbfbc96c",
+    "input_token_estimate": 16883,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279027",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4281ba44da5b4c9f9fdac12d2cf71e5f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3906,
+    "output_tokens": 5606,
+    "usage_source": "provider",
+    "duration_seconds": 22.898608,
+    "cost_cny": "0.02633"
+  },
+  "cache_request": {
+    "key": "b3fc0d244d9004eda76ebd6bd1ba7da3cb5abea1a41b90a4b66b80bfce4dc652",
+    "purpose": "text_review.detect",
+    "messages_sha256": "3b3d980ea0118c0fc926137f4958c4232b5fb12ca5fd75b7c42432a4bbfbc96c"
+  }
+}

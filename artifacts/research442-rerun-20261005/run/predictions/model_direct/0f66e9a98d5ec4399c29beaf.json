@@ -1,0 +1,581 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000438",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码通常为连续六位数字，此处写成“600-057”，多出连字符，不符合代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 27,
+          "end": 40,
+          "text": "厦门象屿(600-057)"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "厦门象屿(600-057)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 27,
+          "end": 40,
+          "text": "厦门象屿(600-057)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "786a5e9159d8d92edbadd6a2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "前值单位为亿吨，后值“8.75万吨”单位不一致；按亿吨计才与增至及年均增速4.8%吻合。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 438,
+          "end": 519,
+          "text": "2021~2024年大宗供应链货量CR5由2021年的4.81%增至2024年的5.26%，CR5经营货量由7.61亿吨增至8.75万吨，年均复合增速+4.8%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2021~2024年大宗供应链货量CR5由2021年的4.81%增至2024年的5.26%，CR5经营货量由7.61亿吨增至8.75万吨，年均复合增速+4.8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 438,
+          "end": 519,
+          "text": "2021~2024年大宗供应链货量CR5由2021年的4.81%增至2024年的5.26%，CR5经营货量由7.61亿吨增至8.75万吨，年均复合增速+4.8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f4cf2d1750742106aa2d0fe7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“同比略降%”百分号前没有具体降幅数字，关键数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 519,
+          "end": 589,
+          "text": "2024年受宏观经济影响，大宗商品市场需求放缓，头部CR5供应链企业经营货量同比略降%，但我们认为业务量提升趋势预计仍在，后续有望恢复增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年受宏观经济影响，大宗商品市场需求放缓，头部CR5供应链企业经营货量同比略降%，但我们认为业务量提升趋势预计仍在，后续有望恢复增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 519,
+          "end": 589,
+          "text": "2024年受宏观经济影响，大宗商品市场需求放缓，头部CR5供应链企业经营货量同比略降%，但我们认为业务量提升趋势预计仍在，后续有望恢复增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "53f869738b9b5cd23f4a2c89",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“从1.92亿吨减至2.24亿吨”用“减至”却数值增加，与“稳步增长”“增速+5.3%”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 841,
+          "end": 920,
+          "text": "经营货量上，公司大宗商品经营货量稳步增长，2021至2024年经营体量从1.92亿吨减至2.24亿吨，年均增速+5.3%，市占率从1.21%提升至1.35%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "经营货量上，公司大宗商品经营货量稳步增长，2021至2024年经营体量从1.92亿吨减至2.24亿吨，年均增速+5.3%，市占率从1.21%提升至1.35%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 841,
+          "end": 920,
+          "text": "经营货量上，公司大宗商品经营货量稳步增长，2021至2024年经营体量从1.92亿吨减至2.24亿吨，年均增速+5.3%，市占率从1.21%提升至1.35%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a8573ff2a64d4cb6d095a988",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "叙述称2023年下滑后，2022年已回升；2022年早于2023年，先后顺序冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 920,
+          "end": 970,
+          "text": "单吨毛利方面，公司整体大宗商品单吨毛利相对稳健，在2023年受经济影响下滑后，2022年已企稳回升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "单吨毛利方面，公司整体大宗商品单吨毛利相对稳健，在2023年受经济影响下滑后，2022年已企稳回升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 920,
+          "end": 970,
+          "text": "单吨毛利方面，公司整体大宗商品单吨毛利相对稳健，在2023年受经济影响下滑后，2022年已企稳回升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0e0ff42f773c3d82e5f0f75f",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1643
+        ]
+      ],
+      "estimated_input_tokens": 6181,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:00:07.972489+00:00",
+        "request_sha256": "793aba3197b3f12aa8e04cc2feddd2007c34b0539ec7cd2e13897339cbbaa3b0",
+        "input_token_estimate": 17196,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27934",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "eb7543da58894a478b7843b86076eedc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4034,
+        "output_tokens": 7138,
+        "usage_source": "provider",
+        "duration_seconds": 26.257012,
+        "cost_cny": "0.032586"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "厦门象屿(600-057)"
+          }
+        ],
+        "reason": "股票代码通常为连续六位数字，此处写成“600-057”，多出连字符，不符合代码格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2021~2024年大宗供应链货量CR5由2021年的4.81%增至2024年的5.26%，CR5经营货量由7.61亿吨增至8.75万吨，年均复合增速+4.8%。"
+          }
+        ],
+        "reason": "前值单位为亿吨，后值“8.75万吨”单位不一致；按亿吨计才与增至及年均增速4.8%吻合。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年受宏观经济影响，大宗商品市场需求放缓，头部CR5供应链企业经营货量同比略降%，但我们认为业务量提升趋势预计仍在，后续有望恢复增长。"
+          }
+        ],
+        "reason": "“同比略降%”百分号前没有具体降幅数字，关键数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "经营货量上，公司大宗商品经营货量稳步增长，2021至2024年经营体量从1.92亿吨减至2.24亿吨，年均增速+5.3%，市占率从1.21%提升至1.35%。"
+          }
+        ],
+        "reason": "“从1.92亿吨减至2.24亿吨”用“减至”却数值增加，与“稳步增长”“增速+5.3%”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "单吨毛利方面，公司整体大宗商品单吨毛利相对稳健，在2023年受经济影响下滑后，2022年已企稳回升。"
+          }
+        ],
+        "reason": "叙述称2023年下滑后，2022年已回升；2022年早于2023年，先后顺序冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 86,
+      "end": 222,
+      "text": "厦门象屿主营大宗供应链业务，依托供应链业务同时发展物流及制造业务，整体业绩稳步增长，2011~2024年营业收入、归母净利润复合增速分别+20.1%、+17.3%，其中2023和2024年受产业链影响业绩有一定波动，2024年公司归母净利润14.2亿元，同比下滑9.9%。",
+      "quantities": [
+        {
+          "value": "+20.1",
+          "unit": "%",
+          "start": 154,
+          "end": 160
+        },
+        {
+          "value": "+17.3",
+          "unit": "%",
+          "start": 161,
+          "end": 167
+        },
+        {
+          "value": "14.2",
+          "unit": "亿元",
+          "start": 206,
+          "end": 212
+        },
+        {
+          "value": "9.9",
+          "unit": "%",
+          "start": 217,
+          "end": 221
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 86,
+      "end": 222,
+      "text": "厦门象屿主营大宗供应链业务，依托供应链业务同时发展物流及制造业务，整体业绩稳步增长，2011~2024年营业收入、归母净利润复合增速分别+20.1%、+17.3%，其中2023和2024年受产业链影响业绩有一定波动，2024年公司归母净利润14.2亿元，同比下滑9.9%。",
+      "quantities": [
+        {
+          "value": "+20.1",
+          "unit": "%",
+          "start": 154,
+          "end": 160
+        },
+        {
+          "value": "+17.3",
+          "unit": "%",
+          "start": 161,
+          "end": 167
+        },
+        {
+          "value": "14.2",
+          "unit": "亿元",
+          "start": 206,
+          "end": 212
+        },
+        {
+          "value": "9.9",
+          "unit": "%",
+          "start": 217,
+          "end": 221
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 86,
+      "end": 222,
+      "text": "厦门象屿主营大宗供应链业务，依托供应链业务同时发展物流及制造业务，整体业绩稳步增长，2011~2024年营业收入、归母净利润复合增速分别+20.1%、+17.3%，其中2023和2024年受产业链影响业绩有一定波动，2024年公司归母净利润14.2亿元，同比下滑9.9%。",
+      "quantities": [
+        {
+          "value": "+20.1",
+          "unit": "%",
+          "start": 154,
+          "end": 160
+        },
+        {
+          "value": "+17.3",
+          "unit": "%",
+          "start": 161,
+          "end": 167
+        },
+        {
+          "value": "14.2",
+          "unit": "亿元",
+          "start": 206,
+          "end": 212
+        },
+        {
+          "value": "9.9",
+          "unit": "%",
+          "start": 217,
+          "end": 221
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1250,
+      "end": 1279,
+      "text": "2024年公司造船业务营收实现59亿元，同比+24.8%；",
+      "quantities": [
+        {
+          "value": "59",
+          "unit": "亿元",
+          "start": 1265,
+          "end": 1269
+        },
+        {
+          "value": "+24.8",
+          "unit": "%",
+          "start": 1272,
+          "end": 1278
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1371,
+      "end": 1508,
+      "text": "盈利预测与投资评级：我们预计公司2025-2027年实现归母净利润分别17.41/20.18/23.37亿元，同比分别+22.7%、+15.9%、+15.8%，对应每股收益分别为0.62、0.72、0.83元，5月26日收盘价对应PE分别为11.08、9.55、8.25倍。",
+      "quantities": [
+        {
+          "value": "23.37",
+          "unit": "亿元",
+          "start": 1418,
+          "end": 1425
+        },
+        {
+          "value": "+22.7",
+          "unit": "%",
+          "start": 1430,
+          "end": 1436
+        },
+        {
+          "value": "+15.9",
+          "unit": "%",
+          "start": 1437,
+          "end": 1443
+        },
+        {
+          "value": "+15.8",
+          "unit": "%",
+          "start": 1444,
+          "end": 1450
+        },
+        {
+          "value": "0.83",
+          "unit": "元",
+          "start": 1470,
+          "end": 1475
+        },
+        {
+          "value": "8.25",
+          "unit": "倍",
+          "start": 1502,
+          "end": 1507
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 1371,
+      "end": 1508,
+      "text": "盈利预测与投资评级：我们预计公司2025-2027年实现归母净利润分别17.41/20.18/23.37亿元，同比分别+22.7%、+15.9%、+15.8%，对应每股收益分别为0.62、0.72、0.83元，5月26日收盘价对应PE分别为11.08、9.55、8.25倍。",
+      "quantities": [
+        {
+          "value": "23.37",
+          "unit": "亿元",
+          "start": 1418,
+          "end": 1425
+        },
+        {
+          "value": "+22.7",
+          "unit": "%",
+          "start": 1430,
+          "end": 1436
+        },
+        {
+          "value": "+15.9",
+          "unit": "%",
+          "start": 1437,
+          "end": 1443
+        },
+        {
+          "value": "+15.8",
+          "unit": "%",
+          "start": 1444,
+          "end": 1450
+        },
+        {
+          "value": "0.83",
+          "unit": "元",
+          "start": 1470,
+          "end": 1475
+        },
+        {
+          "value": "8.25",
+          "unit": "倍",
+          "start": 1502,
+          "end": 1507
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1643,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1643,
+    "processed_ranges": [
+      [
+        0,
+        1643
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 26.282586,
+  "source_content_sha256": "ad76f177d84a8e25ad651a9d8b84869eeecd9783ba69d4493f94496cf77fd164"
+}

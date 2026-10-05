@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"2025年5月9日，印度制药企业Dr.Reddy's Laboratories发布2025-2024财年第四季度财报，Q4实现营业收入850.6亿卢比，同比增长20%，净利润为159.4亿卢比，同比增长22%。\"}], \"reason\": \"财年区间写成“2025-2024”，起始年份晚于结束年份，财年标识不成立。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"EBITDA为247.5亿分，同比增长32%，EBITDA利润率为29.1%，同比提升2.7pct\"}], \"reason\": \"EBITDA货币单位写成“亿分”，前后文财务数据均以亿卢比计，单位量纲错误。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"税后利润（）为159.4亿卢比，同比增长22%，利润率为19%。\"}], \"reason\": \"“税后利润”后的括号内指标名称缺失，应为PAT等简称，非数值空槽。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"全球仿制药及PSAI业务均实现两位数增长，欧洲市场内生增速达。\"}], \"reason\": \"“增速达”后直接句号，缺少具体的百分比数值。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"预计2026财年收入两位数增长，EBITDA利润率维持25%。2026财年，公司收入指引为两位数增长（剔除gRevlimid影响），同时预期EBITDA利润率维持25%。\"}], \"reason\": \"同一段落内两次重复“收入两位数增长”和“EBITDA利润率维持25%”，信息冗余。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:56:04.940224+00:00",
+    "request_sha256": "63856eea235ca84e81e78c3cd2b9ec7f688bde2d86e25d478adfedbb87393b2f",
+    "input_token_estimate": 15752,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277896",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "c1f4ecdfbdfc4d7a88fa813853457f29",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3743,
+    "output_tokens": 8191,
+    "usage_source": "provider",
+    "duration_seconds": 32.414543,
+    "cost_cny": "0.036507"
+  },
+  "cache_request": {
+    "key": "a2fb7eebfed2b8b0343edf069191c35dbcaeb3cd0632827485ce34d55b433a5d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "63856eea235ca84e81e78c3cd2b9ec7f688bde2d86e25d478adfedbb87393b2f"
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000585",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "“11万分”作为药物上市申请数量的单位不成立，应为“款”或“个”等计数单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 55,
+          "end": 131,
+          "text": "本周，国家药监局批准11万分全新创新药的上市申请，另外还有2款创新药拟纳入优先审评，新品种密集获批有望赶上今年医保谈判放量，为相关企业业绩增长提供助力。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周，国家药监局批准11万分全新创新药的上市申请，另外还有2款创新药拟纳入优先审评，新品种密集获批有望赶上今年医保谈判放量，为相关企业业绩增长提供助力。",
+          "reason": "“11万分”作为药物上市申请数量的单位不成立，应为“款”或“个”等计数单位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 55,
+          "end": 131,
+          "text": "本周，国家药监局批准11万分全新创新药的上市申请，另外还有2款创新药拟纳入优先审评，新品种密集获批有望赶上今年医保谈判放量，为相关企业业绩增长提供助力。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5493750b7a73fc570ae3344b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一获批上市申报中，前称“11款创新药”，括号内又写“15款国内自主研发创新药”，数量互相冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 232,
+          "end": 290,
+          "text": "2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。",
+          "reason": "同一获批上市申报中，前称“11款创新药”，括号内又写“15款国内自主研发创新药”，数量互相冲突。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 232,
+          "end": 290,
+          "text": "2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ff027a708c9e02f0ea750c55",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前半句肯定获批丰富产品种类，后半句却说产业倒退、创新能力下滑，前后语义自相矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 290,
+          "end": 352,
+          "text": "此次NMPA批准的11款创新药，不仅丰富了我国医药市场的产品种类，同时也是我国医药产业不断倒退、创新能力持续下滑的重要体现。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此次NMPA批准的11款创新药，不仅丰富了我国医药市场的产品种类，同时也是我国医药产业不断倒退、创新能力持续下滑的重要体现。",
+          "reason": "前半句肯定获批丰富产品种类，后半句却说产业倒退、创新能力下滑，前后语义自相矛盾。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 290,
+          "end": 352,
+          "text": "此次NMPA批准的11款创新药，不仅丰富了我国医药市场的产品种类，同时也是我国医药产业不断倒退、创新能力持续下滑的重要体现。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d6203cb327a19278c0eff4d4",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“适应症为”与“适用于”表意重复，同一信息不必要地叠用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 506,
+          "end": 565,
+          "text": "特宝生物怡培生长激素注射液（商品名：益佩生）获批上市，适应症为适用于治疗3岁及以上儿童的生长激素缺乏症所致的生长缓慢。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "特宝生物怡培生长激素注射液（商品名：益佩生）获批上市，适应症为适用于治疗3岁及以上儿童的生长激素缺乏症所致的生长缓慢。",
+          "reason": "“适应症为”与“适用于”表意重复，同一信息不必要地叠用。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 506,
+          "end": 565,
+          "text": "特宝生物怡培生长激素注射液（商品名：益佩生）获批上市，适应症为适用于治疗3岁及以上儿童的生长激素缺乏症所致的生长缓慢。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ed4d0bfce8f6ad140756a059",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1335
+        ]
+      ],
+      "estimated_input_tokens": 6022,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:41:52.152699+00:00",
+        "request_sha256": "c9de084ac9eb1b693a60ce67b422f45a35633b6464f8e704a8ed796f82c6b9e3",
+        "input_token_estimate": 16700,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278844",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "941b8b2cf81c4f66af4ca30ad9ac2ef9",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3839,
+        "output_tokens": 6060,
+        "usage_source": "provider",
+        "duration_seconds": 24.518295,
+        "cost_cny": "0.028079"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本周，国家药监局批准11万分全新创新药的上市申请，另外还有2款创新药拟纳入优先审评，新品种密集获批有望赶上今年医保谈判放量，为相关企业业绩增长提供助力。",
+            "reason": "“11万分”作为药物上市申请数量的单位不成立，应为“款”或“个”等计数单位。"
+          }
+        ],
+        "reason": "“11万分”作为药物上市申请数量的单位不成立，应为“款”或“个”等计数单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。",
+            "reason": "同一获批上市申报中，前称“11款创新药”，括号内又写“15款国内自主研发创新药”，数量互相冲突。"
+          }
+        ],
+        "reason": "同一获批上市申报中，前称“11款创新药”，括号内又写“15款国内自主研发创新药”，数量互相冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "此次NMPA批准的11款创新药，不仅丰富了我国医药市场的产品种类，同时也是我国医药产业不断倒退、创新能力持续下滑的重要体现。",
+            "reason": "前半句肯定获批丰富产品种类，后半句却说产业倒退、创新能力下滑，前后语义自相矛盾。"
+          }
+        ],
+        "reason": "前半句肯定获批丰富产品种类，后半句却说产业倒退、创新能力下滑，前后语义自相矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "特宝生物怡培生长激素注射液（商品名：益佩生）获批上市，适应症为适用于治疗3岁及以上儿童的生长激素缺乏症所致的生长缓慢。",
+            "reason": "“适应症为”与“适用于”表意重复，同一信息不必要地叠用。"
+          }
+        ],
+        "reason": "“适应症为”与“适用于”表意重复，同一信息不必要地叠用。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1335,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1335,
+    "processed_ranges": [
+      [
+        0,
+        1335
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 24.541387,
+  "source_content_sha256": "d47a4a55a0b6e78cfdbf9bccb247dd4de4f7c7991ad918b7409b9ceeff598fda"
+}

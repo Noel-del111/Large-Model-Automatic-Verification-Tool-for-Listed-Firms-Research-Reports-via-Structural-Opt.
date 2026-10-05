@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；\"}],\"reason\":\"“亿分”不是正确营收单位，应为“亿元”，单位量纲错误。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年实现营业收入5.23亿分，同比增长25.98%，其中射频前端芯片及模组产品累计销售数量超 亿片；\"}],\"reason\":\"“超 亿片”缺少具体销售数量，数值位置为空。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"2025年Q0实现营业收入1.35亿元，同比增长64.53%。\"}],\"reason\":\"季度标识Q0不存在，合法季度应为Q1至Q4。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"我们预计公司129/2026/2027年分别实现收入6.53/7.84/9.42亿元，归母净利润分别为0.01/0.40/0.70亿元，维持“买入”评级。\"}],\"reason\":\"预计年份“129年”不是合法年份，应为2025年等四位年份。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"参投的深圳市芯中芯科技主要集中在家电、音频，面向智能物联网市场，提供基于Wi-Fi、音频DSP、Bluetooth、AIoT等技术的智能控制模块与解决方案\"},{\"text\":\"参投的深圳市芯中芯科技主要集中在家电、音频，面向智能物联网市场，提供基于Wi-Fi、音频DSP、Bluetooth、AIoT等技术的智能控制模块与解决方案，产品广泛应用于智能家居、智能穿戴、智能健康等各类智能物联网相关的智能终端。\"}],\"reason\":\"同一关于芯中芯科技的描述连续重复出现，属于不必要的冗余表达。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:08:25.181240+00:00",
+    "request_sha256": "c417be33d09142456fa2fc17de0a5a050a47a77b2985dee0716d176e3918267f",
+    "input_token_estimate": 14977,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277121",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d753a54191cf4672ad84348b99100a88",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3511,
+    "output_tokens": 6334,
+    "usage_source": "provider",
+    "duration_seconds": 25.846481,
+    "cost_cny": "0.028847"
+  },
+  "cache_request": {
+    "key": "aff5b835a68765edc7fb36980bf430e6462e126ea2b6d164cc2de024ce763eb6",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c417be33d09142456fa2fc17de0a5a050a47a77b2985dee0716d176e3918267f"
+  }
+}

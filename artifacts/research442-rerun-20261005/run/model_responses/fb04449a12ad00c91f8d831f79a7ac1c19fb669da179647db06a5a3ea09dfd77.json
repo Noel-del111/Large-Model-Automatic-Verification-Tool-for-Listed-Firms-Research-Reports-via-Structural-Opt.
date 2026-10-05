@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"2）科学试剂：。\"}],\"reason\":\"科学试剂类别冒号后未列示任何具体产品，属性值为空。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"5）高等院校，如。\"}],\"reason\":\"高等院校类别“如”后未列示任何具体院校，属性值为空。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2）外销：主要由子公司毕路得和美国子公司Bepharm执行。\"},{\"text\":\"此外，外销业务仍由子公司毕路得和美国子公司Bepharm主导开展。。\"}],\"reason\":\"外销执行主体信息重复表述，后句未提供新信息。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2024年海外收入为1.02亿元，占比为41.12%，随后公司不断加大海外市场开拓力度，2019年海外收入为6.16亿元，占比为55.89%。\"}],\"reason\":\"先说2024年，随后又倒回2019年，时间先后关系冲突。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"此外，海外业务毛利率显著高于国内业务，国内业务的毛利率从2018年的59.80%不断上涨至2024年的29.84%，而近几年海外业务毛利率基本维持在50%左右，未来随着海外收入占比持续提升，公司盈利能力或不断提高。\"}],\"reason\":\"国内毛利率从59.80%降至29.84%，却称“不断上涨”，且2018年国内毛利率高于海外50%左右，与“海外显著高于国内”矛盾。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"2024年海外收入为1.02亿元，占比为41.12%\"},{\"text\":\"我们预计2025年-2027年公司营业收入分别为13.42/16.38/20.01亿元，同比增长21.81%/22.01%/22.16%；\"}],\"reason\":\"2024年海外收入1.02亿占比41.12%隐含总营收约2.48亿；而2025年营收13.42亿按21.81%增长反推2024年总营收约11.02亿，同一公司2024年总营收冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:35:37.541523+00:00",
+    "request_sha256": "aee4e1f3748d2bb33bca91071bfbb7e13e5a629d008b98ad026b58d3e3bda4da",
+    "input_token_estimate": 15621,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277765",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d51ddca33dec46d8829bd325c392b758",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3686,
+    "output_tokens": 9845,
+    "usage_source": "provider",
+    "duration_seconds": 39.526759,
+    "cost_cny": "0.043066"
+  },
+  "cache_request": {
+    "key": "fb04449a12ad00c91f8d831f79a7ac1c19fb669da179647db06a5a3ea09dfd77",
+    "purpose": "text_review.detect",
+    "messages_sha256": "aee4e1f3748d2bb33bca91071bfbb7e13e5a629d008b98ad026b58d3e3bda4da"
+  }
+}

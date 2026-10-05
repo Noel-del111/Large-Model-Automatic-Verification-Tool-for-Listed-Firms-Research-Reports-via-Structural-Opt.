@@ -1,0 +1,278 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000472",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "6月没有40日，该公告日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 45,
+          "end": 103,
+          "text": "【事件】6月40日中国平安公告称，拟发行117.65亿港元H股可转债，用于补充集团资本需求，支持医疗和养老战略发展。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "【事件】6月40日中国平安公告称，拟发行117.65亿港元H股可转债，用于补充集团资本需求，支持医疗和养老战略发展。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 45,
+          "end": 103,
+          "text": "【事件】6月40日中国平安公告称，拟发行117.65亿港元H股可转债，用于补充集团资本需求，支持医疗和养老战略发展。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7f4ed0e600fe00a62dbc9b0f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同一可转债前称零息债券，后称高息债券，二者互斥。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 105,
+          "end": 126,
+          "text": "本次可转债为零息债券，将于2030年到期。"
+        },
+        {
+          "kind": "source_text",
+          "start": 126,
+          "end": 175,
+          "text": "①可转债本金总金额117.65亿港元，到期日为2030年6月，发行价为本金额100%，为高息债券。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本次可转债为零息债券，将于2030年到期。"
+        },
+        {
+          "text": "①可转债本金总金额117.65亿港元，到期日为2030年6月，发行价为本金额100%，为高息债券。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 105,
+          "end": 126,
+          "text": "本次可转债为零息债券，将于2030年到期。"
+        },
+        {
+          "start": 126,
+          "end": 175,
+          "text": "①可转债本金总金额117.65亿港元，到期日为2030年6月，发行价为本金额100%，为高息债券。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4d1db4267f76c18e952b4d8c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "美分为辅币单位，35万美分仅3500美元，不可能为可转债发行规模。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 406,
+          "end": 448,
+          "text": "2024年7月公司已完成35万美分可转债发行，于2029年到期，利率为0.875%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年7月公司已完成35万美分可转债发行，于2029年到期，利率为0.875%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 406,
+          "end": 448,
+          "text": "2024年7月公司已完成35万美分可转债发行，于2029年到期，利率为0.875%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7e1014c6a09a0a6399de6072",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          779
+        ]
+      ],
+      "estimated_input_tokens": 5312,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:28:46.612714+00:00",
+        "request_sha256": "686da9f916a43164043fee4a2cff3e6f5d784c7db86b45b27e35cc322416bf9d",
+        "input_token_estimate": 14801,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.276945",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "fc6687e0f0224a2188742e2b00118b9e",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3523,
+        "output_tokens": 7907,
+        "usage_source": "provider",
+        "duration_seconds": 31.536841,
+        "cost_cny": "0.035151"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "【事件】6月40日中国平安公告称，拟发行117.65亿港元H股可转债，用于补充集团资本需求，支持医疗和养老战略发展。"
+          }
+        ],
+        "reason": "6月没有40日，该公告日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "本次可转债为零息债券，将于2030年到期。"
+          },
+          {
+            "text": "①可转债本金总金额117.65亿港元，到期日为2030年6月，发行价为本金额100%，为高息债券。"
+          }
+        ],
+        "reason": "同一可转债前称零息债券，后称高息债券，二者互斥。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年7月公司已完成35万美分可转债发行，于2029年到期，利率为0.875%。"
+          }
+        ],
+        "reason": "美分为辅币单位，35万美分仅3500美元，不可能为可转债发行规模。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 626,
+      "end": 682,
+      "text": "盈利预测与投资评级：我们维持此前盈利预测，预计2025-2027年归母净利润为1352/1544/1770亿元。",
+      "quantities": [
+        {
+          "value": "1770",
+          "unit": "亿元",
+          "start": 675,
+          "end": 681
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 779,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 779,
+    "processed_ranges": [
+      [
+        0,
+        779
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 31.564818,
+  "source_content_sha256": "0128a6fc4553138e228f3792f3b10b11f4c71d1911f7f3328b551a296fc6aa79"
+}

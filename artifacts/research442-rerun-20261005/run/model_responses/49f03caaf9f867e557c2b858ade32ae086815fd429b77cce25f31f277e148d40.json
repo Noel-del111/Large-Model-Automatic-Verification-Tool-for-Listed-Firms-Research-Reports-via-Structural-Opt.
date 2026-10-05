@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"天猫宠物发布了618抢先购全周期战报，统计时间为5月26日0点-16日24点。\"}],\"reason\":\"统计时间起点为5月26日，终点只写16日，缺少月份，日期区间不成立。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"②韩国召开国家生物委员会会议，推进《》，强调生物技术创新。\"}],\"reason\":\"《》内法规名称缺失，无法确认所推进的法律文件。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"3）我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，关注国内收入高增长的公司。\"},{\"text\":\"我们认为，我国宠物经济蓬勃发展，国产品牌崛起快速，聚焦国内收入高成长企业。\"}],\"reason\":\"相邻两句重复“我国宠物经济蓬勃发展，国产品牌崛起快速”，同一信息不必要重复。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"①祖代鸡引种不确定性犹存。\"},{\"text\":\"②祖代鸡引种不确定性犹存。本周价格稳定。\"}],\"reason\":\"同一小标题在相邻小点中重复出现“祖代鸡引种不确定性犹存”，信息冗余。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:38:10.728845+00:00",
+    "request_sha256": "27e1c8c9c8965e9ae23d06ae34f2439983c8fa209c1d3442c4b810a16fb0cea8",
+    "input_token_estimate": 24334,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.286478",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2f267f3d44164adaaf7bfdfd69715fea",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 5807,
+    "output_tokens": 13243,
+    "usage_source": "provider",
+    "duration_seconds": 52.723353,
+    "cost_cny": "0.058779"
+  },
+  "cache_request": {
+    "key": "49f03caaf9f867e557c2b858ade32ae086815fd429b77cce25f31f277e148d40",
+    "purpose": "text_review.detect",
+    "messages_sha256": "27e1c8c9c8965e9ae23d06ae34f2439983c8fa209c1d3442c4b810a16fb0cea8"
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000538",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "5月32日不存在，日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 61,
+          "end": 100,
+          "text": "本周市场表现：截至5月32日收盘，本周公用事业板块下跌0.2%，表现劣于大盘。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周市场表现：截至5月32日收盘，本周公用事业板块下跌0.2%，表现劣于大盘。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 61,
+          "end": 100,
+          "text": "本周市场表现：截至5月32日收盘，本周公用事业板块下跌0.2%，表现劣于大盘。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e7c82d719c3e0cc055a6db6a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一印尼煤价格及环比变动在分号内重复一次。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 200,
+          "end": 316,
+          "text": "截至5月30日，广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港澳洲煤(Q5500)库提价705.53元/吨，周环比持平。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至5月30日，广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港澳洲煤(Q5500)库提价705.53元/吨，周环比持平。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 200,
+          "end": 316,
+          "text": "截至5月30日，广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港澳洲煤(Q5500)库提价705.53元/吨，周环比持平。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a215f99d1bed106577c1bcce",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "电厂日耗用“万克/日”作为单位不符合电量/煤耗语境，后文沿海8省同类指标为“万吨/日”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 384,
+          "end": 499,
+          "text": "截至5月29日，内陆17省煤炭库存8372.9万吨，较上周增加238.6万吨，周环比上升2.93%；内陆17省电厂日耗为280.6万克，较上周下降35.7万克/日，周环比下降11.29%；可用天数为29.8天，较上周增加4.1天。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至5月29日，内陆17省煤炭库存8372.9万吨，较上周增加238.6万吨，周环比上升2.93%；内陆17省电厂日耗为280.6万克，较上周下降35.7万克/日，周环比下降11.29%；可用天数为29.8天，较上周增加4.1天。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 384,
+          "end": 499,
+          "text": "截至5月29日，内陆17省煤炭库存8372.9万吨，较上周增加238.6万吨，周环比上升2.93%；内陆17省电厂日耗为280.6万克，较上周下降35.7万克/日，周环比下降11.29%；可用天数为29.8天，较上周增加4.1天。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "46a0f7c818e35eafc0b9de53",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "《》内报告名称缺失，非数值属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1983,
+          "end": 2029,
+          "text": "5月22日，国际燃气联盟（IGU）在第29届世界燃气大会（WGC2025）召开期间发布《》。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月22日，国际燃气联盟（IGU）在第29届世界燃气大会（WGC2025）召开期间发布《》。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1983,
+          "end": 2029,
+          "text": "5月22日，国际燃气联盟（IGU）在第29届世界燃气大会（WGC2025）召开期间发布《》。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "939085a788b6ea7d97ce5468",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "天然气供应量58.2亿方，LNG 27.8亿方占比约47.8%，52.2%对应管道气30.4亿方，占比与数值不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1339,
+          "end": 1413,
+          "text": "其中，LNG供应量为27.8亿方，周环比上升3.4%，占天然气供应量的52.2%；进口管道气30.4亿方，同比下降14.7%，周环比下降13.8%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，LNG供应量为27.8亿方，周环比上升3.4%，占天然气供应量的52.2%；进口管道气30.4亿方，同比下降14.7%，周环比下降13.8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1339,
+          "end": 1413,
+          "text": "其中，LNG供应量为27.8亿方，周环比上升3.4%，占天然气供应量的52.2%；进口管道气30.4亿方，同比下降14.7%，周环比下降13.8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d34d781adfe14e3520c9d8fb",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2746
+        ]
+      ],
+      "estimated_input_tokens": 7068,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:07:09.922384+00:00",
+        "request_sha256": "d6b5870576667206f34ea84b5b1da36f7d13a3cdc1d99ced3950acb25ea0ead3",
+        "input_token_estimate": 19717,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281861",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1591c63ec68e47989e38d7a7fc2aec35",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4785,
+        "output_tokens": 10304,
+        "usage_source": "provider",
+        "duration_seconds": 38.935073,
+        "cost_cny": "0.046001",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "本周市场表现：截至5月32日收盘，本周公用事业板块下跌0.2%，表现劣于大盘。"
+          }
+        ],
+        "reason": "5月32日不存在，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "截至5月30日，广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港印尼煤(Q5500)库提价684.6元/吨，周环比下跌6.84元/吨；广州港澳洲煤(Q5500)库提价705.53元/吨，周环比持平。"
+          }
+        ],
+        "reason": "同一印尼煤价格及环比变动在分号内重复一次。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "截至5月29日，内陆17省煤炭库存8372.9万吨，较上周增加238.6万吨，周环比上升2.93%；内陆17省电厂日耗为280.6万克，较上周下降35.7万克/日，周环比下降11.29%；可用天数为29.8天，较上周增加4.1天。"
+          }
+        ],
+        "reason": "电厂日耗用“万克/日”作为单位不符合电量/煤耗语境，后文沿海8省同类指标为“万吨/日”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "5月22日，国际燃气联盟（IGU）在第29届世界燃气大会（WGC2025）召开期间发布《》。"
+          }
+        ],
+        "reason": "《》内报告名称缺失，非数值属性值为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "其中，LNG供应量为27.8亿方，周环比上升3.4%，占天然气供应量的52.2%；进口管道气30.4亿方，同比下降14.7%，周环比下降13.8%。"
+          }
+        ],
+        "reason": "天然气供应量58.2亿方，LNG 27.8亿方占比约47.8%，52.2%对应管道气30.4亿方，占比与数值不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2746,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2746,
+    "processed_ranges": [
+      [
+        0,
+        2746
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2746,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002113,
+  "source_content_sha256": "69fef053e95735fdb18217c787d5d2a0312967b34260ee0fe7539da848be7b7a"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。\"}],\"reason\":\"SW有色指数跌幅“下跌%”中百分数缺失，未给出应报告数值。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。\"},{\"text\":\"白银价格受金价影响有所回落，但工业属性利好使其回落幅度小于黄金，预计银价弹性相对更高。\"}],\"reason\":\"COMEX白银变动-1.68%跌幅大于黄金-1.33%，与“回落幅度小于黄金”的比较叙述相反。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"汽车铝材预计13月中下旬需求走弱\"}],\"reason\":\"“13月”不是合法月份，时间信息不成立。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"国内铝锭社会库存继续去化，周内去库2.3吨。\"},{\"text\":\"国内铝锭社会库存继续减少\"}],\"reason\":\"两处重复陈述国内铝锭社会库存继续去化/减少，信息不必要地重复。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"国内铝锭社会库存继续去化，周内去库2.3吨。\"}],\"reason\":\"全国铝锭社会库存单周去库以吨计量数量级明显异常，疑应为万吨。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:11:29.023009+00:00",
+    "request_sha256": "8823d1db8498bfa9e50fdf50aae7deded84cc38b28fcc1edb3169f5f033dd556",
+    "input_token_estimate": 16523,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278667",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b04f63509ffd4c31b1ebe18c97640044",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3949,
+    "output_tokens": 7371,
+    "usage_source": "provider",
+    "duration_seconds": 33.234235,
+    "cost_cny": "0.033433"
+  },
+  "cache_request": {
+    "key": "7cd8eb1c2ed5c453dd59e5c26cf10a2abd5809a7d0125c86b9b18b5aa00eb59f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "8823d1db8498bfa9e50fdf50aae7deded84cc38b28fcc1edb3169f5f033dd556"
+  }
+}

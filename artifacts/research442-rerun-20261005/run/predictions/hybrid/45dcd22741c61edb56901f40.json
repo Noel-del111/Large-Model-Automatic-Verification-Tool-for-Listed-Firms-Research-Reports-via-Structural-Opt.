@@ -1,0 +1,521 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000384",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 140,
+          "end": 210,
+          "text": "2024年实现收入36.39亿元(YoY+59%)，互连类芯片和津逮服务器平台分别占比92%和8%，2024-2016年的CAGR为20%；"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 140,
+          "end": 210,
+          "text": "2024年实现收入36.39亿元(YoY+59%)，互连类芯片和津逮服务器平台分别占比92%和8%，2024-2016年的CAGR为20%；"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "ae8ce0ac26639e5f59955ce4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "时间区间写成2024年至2016年，起点晚于终点，期间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 190,
+          "end": 210,
+          "text": "2024-2016年的CAGR为20%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024-2016年的CAGR为20%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 190,
+          "end": 210,
+          "text": "2024-2016年的CAGR为20%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c7e2a4c5238032d045cdbb5c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后的括号内股票代码为空，缺失证券代码属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 22,
+          "end": 28,
+          "text": "澜起科技()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "澜起科技()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 22,
+          "end": 28,
+          "text": "澜起科技()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fd05e239a38f3c4039f80d36",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "归母净利润同比增速后括号内逗号后为空，应有环比或另一增速数值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 255,
+          "end": 326,
+          "text": "1Q25实现收入12.22亿元(YoY+65.78%，QoQ+14.43%），实现归母净利润5.25亿元(+135.14%，），均创季度新高；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1Q25实现收入12.22亿元(YoY+65.78%，QoQ+14.43%），实现归母净利润5.25亿元(+135.14%，），均创季度新高；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 255,
+          "end": 326,
+          "text": "1Q25实现收入12.22亿元(YoY+65.78%，QoQ+14.43%），实现归母净利润5.25亿元(+135.14%，），均创季度新高；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c4f9412d7e346eeadee76fe4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "互连类芯片和津逮服务器平台占比92%和8%的信息在相邻两句中重复出现。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 36,
+          "end": 87,
+          "text": "2024年互连类芯片和津逮服务器平台收入占比分别为92%和8%，1Q25收入和归母净利润均创季度新高。"
+        },
+        {
+          "kind": "source_text",
+          "start": 140,
+          "end": 255,
+          "text": "2024年实现收入36.39亿元(YoY+59%)，互连类芯片和津逮服务器平台分别占比92%和8%，2024-2016年的CAGR为20%；实现归母净利润14.12亿元(YoY+213%)，2016-2024年的CAGR为41%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年互连类芯片和津逮服务器平台收入占比分别为92%和8%，1Q25收入和归母净利润均创季度新高。"
+        },
+        {
+          "text": "2024年实现收入36.39亿元(YoY+59%)，互连类芯片和津逮服务器平台分别占比92%和8%，2024-2016年的CAGR为20%；实现归母净利润14.12亿元(YoY+213%)，2016-2024年的CAGR为41%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 36,
+          "end": 87,
+          "text": "2024年互连类芯片和津逮服务器平台收入占比分别为92%和8%，1Q25收入和归母净利润均创季度新高。"
+        },
+        {
+          "start": 140,
+          "end": 255,
+          "text": "2024年实现收入36.39亿元(YoY+59%)，互连类芯片和津逮服务器平台分别占比92%和8%，2024-2016年的CAGR为20%；实现归母净利润14.12亿元(YoY+213%)，2016-2024年的CAGR为41%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b6fcdc0380cfda25803e6af8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "AI发展通常推动算力、存力需求增加，此处称需求“大幅减少”，与后文运力成瓶颈相矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 607,
+          "end": 668,
+          "text": "AI技术及应用的快速发展推动算力、存力需求大幅减少，运力，即计算与存储之间及其内部的数据传输效率，成为制约系统性能的瓶颈。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "AI技术及应用的快速发展推动算力、存力需求大幅减少，运力，即计算与存储之间及其内部的数据传输效率，成为制约系统性能的瓶颈。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 607,
+          "end": 668,
+          "text": "AI技术及应用的快速发展推动算力、存力需求大幅减少，运力，即计算与存储之间及其内部的数据传输效率，成为制约系统性能的瓶颈。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ed2e593edd2f73d072116efb",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1236
+        ]
+      ],
+      "estimated_input_tokens": 5630,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:12:52.139388+00:00",
+        "request_sha256": "fe451d83a8190d5a2e786c977c709986f9f55dd1e41ad2284550943c37adc6fc",
+        "input_token_estimate": 15717,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277861",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2c29465e1f1f427aafa4d6c1167a3f86",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3788,
+        "output_tokens": 8130,
+        "usage_source": "provider",
+        "duration_seconds": 33.845401,
+        "cost_cny": "0.036308",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2024-2016年的CAGR为20%；"
+          }
+        ],
+        "reason": "时间区间写成2024年至2016年，起点晚于终点，期间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "澜起科技()"
+          }
+        ],
+        "reason": "公司名称后的括号内股票代码为空，缺失证券代码属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "1Q25实现收入12.22亿元(YoY+65.78%，QoQ+14.43%），实现归母净利润5.25亿元(+135.14%，），均创季度新高；"
+          }
+        ],
+        "reason": "归母净利润同比增速后括号内逗号后为空，应有环比或另一增速数值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024年互连类芯片和津逮服务器平台收入占比分别为92%和8%，1Q25收入和归母净利润均创季度新高。"
+          },
+          {
+            "text": "2024年实现收入36.39亿元(YoY+59%)，互连类芯片和津逮服务器平台分别占比92%和8%，2024-2016年的CAGR为20%；实现归母净利润14.12亿元(YoY+213%)，2016-2024年的CAGR为41%。"
+          }
+        ],
+        "reason": "互连类芯片和津逮服务器平台占比92%和8%的信息在相邻两句中重复出现。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "AI技术及应用的快速发展推动算力、存力需求大幅减少，运力，即计算与存储之间及其内部的数据传输效率，成为制约系统性能的瓶颈。"
+          }
+        ],
+        "reason": "AI发展通常推动算力、存力需求增加，此处称需求“大幅减少”，与后文运力成瓶颈相矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 36,
+      "end": 87,
+      "text": "2024年互连类芯片和津逮服务器平台收入占比分别为92%和8%，1Q25收入和归母净利润均创季度新高。",
+      "quantities": [
+        {
+          "value": "92",
+          "unit": "%",
+          "start": 61,
+          "end": 64
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 65,
+          "end": 67
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 210,
+      "end": 255,
+      "text": "实现归母净利润14.12亿元(YoY+213%)，2016-2024年的CAGR为41%。",
+      "quantities": [
+        {
+          "value": "14.12",
+          "unit": "亿元",
+          "start": 217,
+          "end": 224
+        },
+        {
+          "value": "+213",
+          "unit": "%",
+          "start": 228,
+          "end": 233
+        },
+        {
+          "value": "41",
+          "unit": "%",
+          "start": 251,
+          "end": 254
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 255,
+      "end": 326,
+      "text": "1Q25实现收入12.22亿元(YoY+65.78%，QoQ+14.43%），实现归母净利润5.25亿元(+135.14%，），均创季度新高；",
+      "quantities": [
+        {
+          "value": "12.22",
+          "unit": "亿元",
+          "start": 263,
+          "end": 270
+        },
+        {
+          "value": "+65.78",
+          "unit": "%",
+          "start": 274,
+          "end": 281
+        },
+        {
+          "value": "+14.43",
+          "unit": "%",
+          "start": 285,
+          "end": 292
+        },
+        {
+          "value": "5.25",
+          "unit": "亿元",
+          "start": 301,
+          "end": 307
+        },
+        {
+          "value": "+135.14",
+          "unit": "%",
+          "start": 308,
+          "end": 316
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 326,
+      "end": 360,
+      "text": "毛利率为60.45%(YoY+2.7pct，QoQ+2.3pct）。",
+      "quantities": [
+        {
+          "value": "60.45",
+          "unit": "%",
+          "start": 330,
+          "end": 336
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 509,
+      "end": 585,
+      "text": "同时，DDR5子代迭代有助于维持ASP和毛利率，2024年公司DDR5第二子代RCD芯片出货量已超过第一子代产品，第三子代RCD芯片于4Q24规模出货。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1076,
+      "end": 1133,
+      "text": "盈利预测与估值：我们维持公司业绩预测，预计2025-2027年归母净利润为21.50/28.08/33.85亿元。",
+      "quantities": [
+        {
+          "value": "33.85",
+          "unit": "亿元",
+          "start": 1125,
+          "end": 1132
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们维持公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1236,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1236,
+    "processed_ranges": [
+      [
+        0,
+        1236
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1236,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.0019,
+  "source_content_sha256": "9b3059db67897ea45c40a1e677143eaedc0c152d8308c8c7b02d25f6a3071c1e"
+}

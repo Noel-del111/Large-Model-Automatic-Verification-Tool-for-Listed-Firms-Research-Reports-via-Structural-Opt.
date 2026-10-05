@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"申通快递()\"}], \"reason\": \"公司名称后括号内应为股票代码，原文空缺。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。公司补齐产能短板，业务量取得快速增长：公司百亿产能提升计划始于2022年，以年均超30亿元的资本投入转运中心、自动化设备等硬件，补齐产能短板。\"}], \"reason\": \"同一句子连续重复出现一次，未增加新信息。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"而从经营效果看，公司件量从2021年的111亿单增长至2024年的227亿单，期间市占率也稳步提升，从10.2%降低至13.0%。\"}], \"reason\": \"市占率从10.2%到13.0%是上升，但表述为“降低”，且与“稳步提升”矛盾。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"而业绩考核目标以2024年为基数，2025-2027年收入增长率分别不低于12%、25.4%、38%、28%，或是净利润增长率分别不低于30%、56%、87.2%。\"}], \"reason\": \"2025-2027年为三个年度，但收入增长率列出四个数值，年份与数值数量不匹配。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"预计2025-2027年公司分别实现净利润14、16、19亿元，YOY分别为+30%、+20%、+15%，EPS为0.9元、1.1元、1.2元，当前A股价对应PE分别为12、10、8倍，维持公司“买进”的投资建议。\"}], \"reason\": \"净利润与YOY、EPS、PE之间的计算关系不成立，如14亿对应EPS0.9元、PE12倍时隐含股本和股价与后续年份不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:34:35.696600+00:00",
+    "request_sha256": "0f72d61f1c45dae0671dc3a4995ac13f5b04975f59d2f97819686570842828f0",
+    "input_token_estimate": 15472,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277616",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7ecf309190274b67a29a89a104b7d90a",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3681,
+    "output_tokens": 6520,
+    "usage_source": "provider",
+    "duration_seconds": 26.367169,
+    "cost_cny": "0.029761"
+  },
+  "cache_request": {
+    "key": "e24edffe5ddd1e815727afdbaabaf4ace67ec20a4f817adcab1dcd91f5ebb22b",
+    "purpose": "text_review.detect",
+    "messages_sha256": "0f72d61f1c45dae0671dc3a4995ac13f5b04975f59d2f97819686570842828f0"
+  }
+}

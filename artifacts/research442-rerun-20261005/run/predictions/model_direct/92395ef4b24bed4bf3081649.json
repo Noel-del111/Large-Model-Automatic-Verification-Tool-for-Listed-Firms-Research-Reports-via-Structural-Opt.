@@ -1,0 +1,697 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000451",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一份文本中“国内计划完成前湾新区9期、10期工厂建设”重复出现，未增添新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1374,
+          "end": 1431,
+          "text": "2025 年公司将继续推进产能布局，国内计划完成前湾新区 9 期、10 期工厂建设，海外墨西哥二期项目已开始筹划。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1431,
+          "end": 1455,
+          "text": "国内计划完成前湾新区 9 期、10 期工厂建设；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025 年公司将继续推进产能布局，国内计划完成前湾新区 9 期、10 期工厂建设，海外墨西哥二期项目已开始筹划。"
+        },
+        {
+          "text": "国内计划完成前湾新区 9 期、10 期工厂建设；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1374,
+          "end": 1431,
+          "text": "2025 年公司将继续推进产能布局，国内计划完成前湾新区 9 期、10 期工厂建设，海外墨西哥二期项目已开始筹划。"
+        },
+        {
+          "start": 1431,
+          "end": 1455,
+          "text": "国内计划完成前湾新区 9 期、10 期工厂建设；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "89971c919e6266f4e273cfb0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“超万辆”缺少具体数量，中国汽车总销量不可能仅超一万辆，应补充具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1031,
+          "end": 1084,
+          "text": "2025 年中国汽车总销量预测将超万辆，新能源汽车销量将突破 1,600 万辆（含出口），继续维持高增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025 年中国汽车总销量预测将超万辆，新能源汽车销量将突破 1,600 万辆（含出口），继续维持高增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1031,
+          "end": 1084,
+          "text": "2025 年中国汽车总销量预测将超万辆，新能源汽车销量将突破 1,600 万辆（含出口），继续维持高增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c2fec4ab585c739e1a5f1620",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "研发费用单位写成“亿分”，应为“亿元”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1135,
+          "end": 1159,
+          "text": "公司 2024 年研发费用达到 12.24 亿分"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司 2024 年研发费用达到 12.24 亿分"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1135,
+          "end": 1159,
+          "text": "公司 2024 年研发费用达到 12.24 亿分"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "caa67fc95b9fc0d45287c0c5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "标题称新能源汽车高速增长带动公司业绩下降，但后文列示2024年内饰、底盘、热管理、汽车电子收入均同比增长，未下降。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 752,
+          "end": 782,
+          "text": "新能源汽车高速增长带动公司业绩下降，其中汽车电子呈爆发式增长"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新能源汽车高速增长带动公司业绩下降，其中汽车电子呈爆发式增长"
+        }
+      ],
+      "spans": [
+        {
+          "start": 752,
+          "end": 782,
+          "text": "新能源汽车高速增长带动公司业绩下降，其中汽车电子呈爆发式增长"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ae6ba2ca5b2d54b5e76c7a33",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2029
+        ]
+      ],
+      "estimated_input_tokens": 6384,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:08:41.123218+00:00",
+        "request_sha256": "c8536272f2aa1d9977813e2ae76c24cd43ef3054a49db20c230737f67f11e4a6",
+        "input_token_estimate": 17830,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279974",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "796d79a60fef48cd890b53a64c15bb98",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4306,
+        "output_tokens": 12225,
+        "usage_source": "provider",
+        "duration_seconds": 45.038868,
+        "cost_cny": "0.053206"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025 年公司将继续推进产能布局，国内计划完成前湾新区 9 期、10 期工厂建设，海外墨西哥二期项目已开始筹划。"
+          },
+          {
+            "text": "国内计划完成前湾新区 9 期、10 期工厂建设；"
+          }
+        ],
+        "reason": "同一份文本中“国内计划完成前湾新区9期、10期工厂建设”重复出现，未增添新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2025 年中国汽车总销量预测将超万辆，新能源汽车销量将突破 1,600 万辆（含出口），继续维持高增长。"
+          }
+        ],
+        "reason": "“超万辆”缺少具体数量，中国汽车总销量不可能仅超一万辆，应补充具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司 2024 年研发费用达到 12.24 亿分"
+          }
+        ],
+        "reason": "研发费用单位写成“亿分”，应为“亿元”，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "新能源汽车高速增长带动公司业绩下降，其中汽车电子呈爆发式增长"
+          }
+        ],
+        "reason": "标题称新能源汽车高速增长带动公司业绩下降，但后文列示2024年内饰、底盘、热管理、汽车电子收入均同比增长，未下降。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 312,
+      "end": 412,
+      "text": "2024 年拓普集团实现营业收入 266.00 亿元（人民币，下同）（同比+35.02%），实现归母净利润 30.01 亿元（同比+39.52%），扣非归母净利润 27.3 亿元（同比+35.0%）；",
+      "quantities": [
+        {
+          "value": "266.00",
+          "unit": "亿元",
+          "start": 329,
+          "end": 338
+        },
+        {
+          "value": "+35.02",
+          "unit": "%",
+          "start": 349,
+          "end": 356
+        },
+        {
+          "value": "30.01",
+          "unit": "亿元",
+          "start": 366,
+          "end": 374
+        },
+        {
+          "value": "+39.52",
+          "unit": "%",
+          "start": 377,
+          "end": 384
+        },
+        {
+          "value": "27.3",
+          "unit": "亿元",
+          "start": 394,
+          "end": 401
+        },
+        {
+          "value": "+35.0",
+          "unit": "%",
+          "start": 404,
+          "end": 410
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年拓普集团"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 312,
+      "end": 412,
+      "text": "2024 年拓普集团实现营业收入 266.00 亿元（人民币，下同）（同比+35.02%），实现归母净利润 30.01 亿元（同比+39.52%），扣非归母净利润 27.3 亿元（同比+35.0%）；",
+      "quantities": [
+        {
+          "value": "266.00",
+          "unit": "亿元",
+          "start": 329,
+          "end": 338
+        },
+        {
+          "value": "+35.02",
+          "unit": "%",
+          "start": 349,
+          "end": 356
+        },
+        {
+          "value": "30.01",
+          "unit": "亿元",
+          "start": 366,
+          "end": 374
+        },
+        {
+          "value": "+39.52",
+          "unit": "%",
+          "start": 377,
+          "end": 384
+        },
+        {
+          "value": "27.3",
+          "unit": "亿元",
+          "start": 394,
+          "end": 401
+        },
+        {
+          "value": "+35.0",
+          "unit": "%",
+          "start": 404,
+          "end": 410
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年拓普集团"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 312,
+      "end": 412,
+      "text": "2024 年拓普集团实现营业收入 266.00 亿元（人民币，下同）（同比+35.02%），实现归母净利润 30.01 亿元（同比+39.52%），扣非归母净利润 27.3 亿元（同比+35.0%）；",
+      "quantities": [
+        {
+          "value": "266.00",
+          "unit": "亿元",
+          "start": 329,
+          "end": 338
+        },
+        {
+          "value": "+35.02",
+          "unit": "%",
+          "start": 349,
+          "end": 356
+        },
+        {
+          "value": "30.01",
+          "unit": "亿元",
+          "start": 366,
+          "end": 374
+        },
+        {
+          "value": "+39.52",
+          "unit": "%",
+          "start": 377,
+          "end": 384
+        },
+        {
+          "value": "27.3",
+          "unit": "亿元",
+          "start": 394,
+          "end": 401
+        },
+        {
+          "value": "+35.0",
+          "unit": "%",
+          "start": 404,
+          "end": 410
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "年拓普集团"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 412,
+      "end": 474,
+      "text": "其中，Q4 公司实现营业收入 72.48 亿元（同比+30.63%），实现归母净利润 7.67 亿元（同比+38.47%）；",
+      "quantities": [
+        {
+          "value": "72.48",
+          "unit": "亿元",
+          "start": 427,
+          "end": 435
+        },
+        {
+          "value": "+30.63",
+          "unit": "%",
+          "start": 438,
+          "end": 445
+        },
+        {
+          "value": "7.67",
+          "unit": "亿元",
+          "start": 455,
+          "end": 462
+        },
+        {
+          "value": "+38.47",
+          "unit": "%",
+          "start": 465,
+          "end": 472
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 412,
+      "end": 474,
+      "text": "其中，Q4 公司实现营业收入 72.48 亿元（同比+30.63%），实现归母净利润 7.67 亿元（同比+38.47%）；",
+      "quantities": [
+        {
+          "value": "72.48",
+          "unit": "亿元",
+          "start": 427,
+          "end": 435
+        },
+        {
+          "value": "+30.63",
+          "unit": "%",
+          "start": 438,
+          "end": 445
+        },
+        {
+          "value": "7.67",
+          "unit": "亿元",
+          "start": 455,
+          "end": 462
+        },
+        {
+          "value": "+38.47",
+          "unit": "%",
+          "start": 465,
+          "end": 472
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 474,
+      "end": 524,
+      "text": "24 年实现毛利率 20.8%（同比-2.2ppts），净利率 11.3%（同比+0.4ppts）。",
+      "quantities": [
+        {
+          "value": "20.8",
+          "unit": "%",
+          "start": 484,
+          "end": 489
+        },
+        {
+          "value": "11.3",
+          "unit": "%",
+          "start": 506,
+          "end": 511
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 474,
+      "end": 524,
+      "text": "24 年实现毛利率 20.8%（同比-2.2ppts），净利率 11.3%（同比+0.4ppts）。",
+      "quantities": [
+        {
+          "value": "20.8",
+          "unit": "%",
+          "start": 484,
+          "end": 489
+        },
+        {
+          "value": "11.3",
+          "unit": "%",
+          "start": 506,
+          "end": 511
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 524,
+      "end": 633,
+      "text": "尽管因车企竞争加剧、原材料价格波动以及产能扩张等因素所致毛利率有所下滑，但通过严格的费用管控（期间费用率降至 8.6%，同比-0.9ppts）和政府补贴（2.8 亿元，同比+1.3 亿元）增厚利润，公司净利率逆势提升。",
+      "quantities": [
+        {
+          "value": "8.6",
+          "unit": "%",
+          "start": 579,
+          "end": 583
+        },
+        {
+          "value": "2.8",
+          "unit": "亿元",
+          "start": 601,
+          "end": 607
+        },
+        {
+          "value": "+1.3",
+          "unit": "亿元",
+          "start": 610,
+          "end": 617
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 524,
+      "end": 633,
+      "text": "尽管因车企竞争加剧、原材料价格波动以及产能扩张等因素所致毛利率有所下滑，但通过严格的费用管控（期间费用率降至 8.6%，同比-0.9ppts）和政府补贴（2.8 亿元，同比+1.3 亿元）增厚利润，公司净利率逆势提升。",
+      "quantities": [
+        {
+          "value": "8.6",
+          "unit": "%",
+          "start": 579,
+          "end": 583
+        },
+        {
+          "value": "2.8",
+          "unit": "亿元",
+          "start": 601,
+          "end": 607
+        },
+        {
+          "value": "+1.3",
+          "unit": "亿元",
+          "start": 610,
+          "end": 617
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 635,
+      "end": 666,
+      "text": "2025Q1 公司实现营收 57.7 亿元（同比+1.4%）；",
+      "quantities": [
+        {
+          "value": "57.7",
+          "unit": "亿元",
+          "start": 649,
+          "end": 656
+        },
+        {
+          "value": "+1.4",
+          "unit": "%",
+          "start": 659,
+          "end": 664
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 1869,
+      "end": 1974,
+      "text": "综合来看，我们认为公司具备持续增长能力，预计 25/26/27 年每股收益为 1.97/2.46/3.15，给予目标价 59.1元，对应 25/26/27 财年预期市盈率 30/24/19 倍， “增持”评级。",
+      "quantities": [
+        {
+          "value": "59.1",
+          "unit": "元",
+          "start": 1929,
+          "end": 1934
+        },
+        {
+          "value": "19",
+          "unit": "倍",
+          "start": 1961,
+          "end": 1965
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们认为公司"
+      ]
+    },
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 1869,
+      "end": 1974,
+      "text": "综合来看，我们认为公司具备持续增长能力，预计 25/26/27 年每股收益为 1.97/2.46/3.15，给予目标价 59.1元，对应 25/26/27 财年预期市盈率 30/24/19 倍， “增持”评级。",
+      "quantities": [
+        {
+          "value": "59.1",
+          "unit": "元",
+          "start": 1929,
+          "end": 1934
+        },
+        {
+          "value": "19",
+          "unit": "倍",
+          "start": 1961,
+          "end": 1965
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们认为公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2029,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2029,
+    "processed_ranges": [
+      [
+        0,
+        2029
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 45.066583,
+  "source_content_sha256": "f311fac2e235e48ff0207bebcd6d043547dfaa4cda3992d939c6666de0d97c26"
+}

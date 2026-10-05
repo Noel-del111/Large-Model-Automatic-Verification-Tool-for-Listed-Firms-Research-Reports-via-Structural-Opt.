@@ -1,0 +1,745 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000406",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码应为6位数字，此处仅写“603”，不符合A股代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 21,
+          "end": 30,
+          "text": "景津装备(603)"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "景津装备(603)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 21,
+          "end": 30,
+          "text": "景津装备(603)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "104384db5f0c26daefd8c218",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "主动调低销售价格通常压缩单位毛利，与“毛利升幅较大”的表述逻辑冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 391,
+          "end": 428,
+          "text": "1）公司为积极扩张市场业务，主动调低核心产品压滤机销售价格，毛利升幅较大；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1）公司为积极扩张市场业务，主动调低核心产品压滤机销售价格，毛利升幅较大；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 391,
+          "end": 428,
+          "text": "1）公司为积极扩张市场业务，主动调低核心产品压滤机销售价格，毛利升幅较大；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6225b0b444d109d0f98caced",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句内两次重复“积极推进过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利”，信息冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 675,
+          "end": 794,
+          "text": "报告期内，公司产品技术水平不断提高，积极推进过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利，成套装备产业化不断推进，推进了过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利，为公司的持续发展和战略转型提供支撑。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "报告期内，公司产品技术水平不断提高，积极推进过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利，成套装备产业化不断推进，推进了过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利，为公司的持续发展和战略转型提供支撑。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 675,
+          "end": 794,
+          "text": "报告期内，公司产品技术水平不断提高，积极推进过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利，成套装备产业化不断推进，推进了过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利，为公司的持续发展和战略转型提供支撑。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cd331b5c0bf45b98591a849f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1223
+        ]
+      ],
+      "estimated_input_tokens": 5727,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:33:02.227270+00:00",
+        "request_sha256": "b165f3a5d0be9d079d166639ecb6c8c1456cdeb4e9848e3023ed95d4b340ebe9",
+        "input_token_estimate": 15954,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278098",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6c403c45427843afa9a040efac3cee25",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3757,
+        "output_tokens": 5180,
+        "usage_source": "provider",
+        "duration_seconds": 20.814629,
+        "cost_cny": "0.024477"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "景津装备(603)"
+          }
+        ],
+        "reason": "股票代码应为6位数字，此处仅写“603”，不符合A股代码格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "1）公司为积极扩张市场业务，主动调低核心产品压滤机销售价格，毛利升幅较大；"
+          }
+        ],
+        "reason": "主动调低销售价格通常压缩单位毛利，与“毛利升幅较大”的表述逻辑冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "报告期内，公司产品技术水平不断提高，积极推进过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利，成套装备产业化不断推进，推进了过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利，为公司的持续发展和战略转型提供支撑。"
+          }
+        ],
+        "reason": "同一句内两次重复“积极推进过滤成套装备产业化二期项目的建设，项目已开工建设，项目进展顺利”，信息冗余。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 61,
+      "end": 189,
+      "text": "2024年公司实现营收61.29亿元（-1.92%），归母净利润8.48亿元（-15.86%），扣非归母净利润8.41亿元（-14.84%），经营活动现金流净额10.41亿元（+288.21%），加权平均净资产收益率为18.82%，同比减少4.71pct。",
+      "quantities": [
+        {
+          "value": "61.29",
+          "unit": "亿元",
+          "start": 72,
+          "end": 79
+        },
+        {
+          "value": "-1.92",
+          "unit": "%",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "8.48",
+          "unit": "亿元",
+          "start": 93,
+          "end": 99
+        },
+        {
+          "value": "-15.86",
+          "unit": "%",
+          "start": 100,
+          "end": 107
+        },
+        {
+          "value": "8.41",
+          "unit": "亿元",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "-14.84",
+          "unit": "%",
+          "start": 123,
+          "end": 130
+        },
+        {
+          "value": "10.41",
+          "unit": "亿元",
+          "start": 141,
+          "end": 148
+        },
+        {
+          "value": "+288.21",
+          "unit": "%",
+          "start": 149,
+          "end": 157
+        },
+        {
+          "value": "18.82",
+          "unit": "%",
+          "start": 170,
+          "end": 176
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 61,
+      "end": 189,
+      "text": "2024年公司实现营收61.29亿元（-1.92%），归母净利润8.48亿元（-15.86%），扣非归母净利润8.41亿元（-14.84%），经营活动现金流净额10.41亿元（+288.21%），加权平均净资产收益率为18.82%，同比减少4.71pct。",
+      "quantities": [
+        {
+          "value": "61.29",
+          "unit": "亿元",
+          "start": 72,
+          "end": 79
+        },
+        {
+          "value": "-1.92",
+          "unit": "%",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "8.48",
+          "unit": "亿元",
+          "start": 93,
+          "end": 99
+        },
+        {
+          "value": "-15.86",
+          "unit": "%",
+          "start": 100,
+          "end": 107
+        },
+        {
+          "value": "8.41",
+          "unit": "亿元",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "-14.84",
+          "unit": "%",
+          "start": 123,
+          "end": 130
+        },
+        {
+          "value": "10.41",
+          "unit": "亿元",
+          "start": 141,
+          "end": 148
+        },
+        {
+          "value": "+288.21",
+          "unit": "%",
+          "start": 149,
+          "end": 157
+        },
+        {
+          "value": "18.82",
+          "unit": "%",
+          "start": 170,
+          "end": 176
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 61,
+      "end": 189,
+      "text": "2024年公司实现营收61.29亿元（-1.92%），归母净利润8.48亿元（-15.86%），扣非归母净利润8.41亿元（-14.84%），经营活动现金流净额10.41亿元（+288.21%），加权平均净资产收益率为18.82%，同比减少4.71pct。",
+      "quantities": [
+        {
+          "value": "61.29",
+          "unit": "亿元",
+          "start": 72,
+          "end": 79
+        },
+        {
+          "value": "-1.92",
+          "unit": "%",
+          "start": 80,
+          "end": 86
+        },
+        {
+          "value": "8.48",
+          "unit": "亿元",
+          "start": 93,
+          "end": 99
+        },
+        {
+          "value": "-15.86",
+          "unit": "%",
+          "start": 100,
+          "end": 107
+        },
+        {
+          "value": "8.41",
+          "unit": "亿元",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "-14.84",
+          "unit": "%",
+          "start": 123,
+          "end": 130
+        },
+        {
+          "value": "10.41",
+          "unit": "亿元",
+          "start": 141,
+          "end": 148
+        },
+        {
+          "value": "+288.21",
+          "unit": "%",
+          "start": 149,
+          "end": 157
+        },
+        {
+          "value": "18.82",
+          "unit": "%",
+          "start": 170,
+          "end": 176
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 189,
+      "end": 281,
+      "text": "2025年一季度，公司实现营收14.06亿元（-6.70%），归母净利润1.67亿元（-26.99%），扣非后归母净利润1.59亿元（-27.27%），加权平均净资产收益率3.67%。",
+      "quantities": [
+        {
+          "value": "14.06",
+          "unit": "亿元",
+          "start": 204,
+          "end": 211
+        },
+        {
+          "value": "-6.70",
+          "unit": "%",
+          "start": 212,
+          "end": 218
+        },
+        {
+          "value": "1.67",
+          "unit": "亿元",
+          "start": 225,
+          "end": 231
+        },
+        {
+          "value": "-26.99",
+          "unit": "%",
+          "start": 232,
+          "end": 239
+        },
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 249,
+          "end": 255
+        },
+        {
+          "value": "-27.27",
+          "unit": "%",
+          "start": 256,
+          "end": 263
+        },
+        {
+          "value": "3.67",
+          "unit": "%",
+          "start": 275,
+          "end": 280
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 189,
+      "end": 281,
+      "text": "2025年一季度，公司实现营收14.06亿元（-6.70%），归母净利润1.67亿元（-26.99%），扣非后归母净利润1.59亿元（-27.27%），加权平均净资产收益率3.67%。",
+      "quantities": [
+        {
+          "value": "14.06",
+          "unit": "亿元",
+          "start": 204,
+          "end": 211
+        },
+        {
+          "value": "-6.70",
+          "unit": "%",
+          "start": 212,
+          "end": 218
+        },
+        {
+          "value": "1.67",
+          "unit": "亿元",
+          "start": 225,
+          "end": 231
+        },
+        {
+          "value": "-26.99",
+          "unit": "%",
+          "start": 232,
+          "end": 239
+        },
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 249,
+          "end": 255
+        },
+        {
+          "value": "-27.27",
+          "unit": "%",
+          "start": 256,
+          "end": 263
+        },
+        {
+          "value": "3.67",
+          "unit": "%",
+          "start": 275,
+          "end": 280
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 189,
+      "end": 281,
+      "text": "2025年一季度，公司实现营收14.06亿元（-6.70%），归母净利润1.67亿元（-26.99%），扣非后归母净利润1.59亿元（-27.27%），加权平均净资产收益率3.67%。",
+      "quantities": [
+        {
+          "value": "14.06",
+          "unit": "亿元",
+          "start": 204,
+          "end": 211
+        },
+        {
+          "value": "-6.70",
+          "unit": "%",
+          "start": 212,
+          "end": 218
+        },
+        {
+          "value": "1.67",
+          "unit": "亿元",
+          "start": 225,
+          "end": 231
+        },
+        {
+          "value": "-26.99",
+          "unit": "%",
+          "start": 232,
+          "end": 239
+        },
+        {
+          "value": "1.59",
+          "unit": "亿元",
+          "start": 249,
+          "end": 255
+        },
+        {
+          "value": "-27.27",
+          "unit": "%",
+          "start": 256,
+          "end": 263
+        },
+        {
+          "value": "3.67",
+          "unit": "%",
+          "start": 275,
+          "end": 280
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 313,
+      "end": 428,
+      "text": "从下游行业来看，由于新能源行业客户设备需求减缓，其他行业也缺乏较大订单增量，因此压滤机市场竞争加剧，营收端公司小幅下降，而整体利润端下降幅度相对较大主要系：1）公司为积极扩张市场业务，主动调低核心产品压滤机销售价格，毛利升幅较大；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": [
+        "营收端公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 428,
+      "end": 455,
+      "text": "2）本期配套装备市场订单和收入显著增长，但毛利率较低。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 912,
+      "end": 1118,
+      "text": "我们看好公司长期发展，但考虑到行业调价影响，我们调整公司2025-2027年营收预测为63.23/68.12/75.65亿元（2025-2026年前值为69.15/74.83亿元），归母净利润预测为8.61/9.49/10.78亿元（2025-2026年前值为9.86/11.02亿元），以当前总股本5.76亿股计算的摊薄EPS为1.49/1.65/1.87元（2025-2026年前值为1.71/1.91元）；",
+      "quantities": [
+        {
+          "value": "75.65",
+          "unit": "亿元",
+          "start": 967,
+          "end": 974
+        },
+        {
+          "value": "74.83",
+          "unit": "亿元",
+          "start": 994,
+          "end": 1001
+        },
+        {
+          "value": "10.78",
+          "unit": "亿元",
+          "start": 1021,
+          "end": 1028
+        },
+        {
+          "value": "11.02",
+          "unit": "亿元",
+          "start": 1047,
+          "end": 1054
+        },
+        {
+          "value": "1.87",
+          "unit": "元",
+          "start": 1087,
+          "end": 1092
+        },
+        {
+          "value": "1.91",
+          "unit": "元",
+          "start": 1111,
+          "end": 1116
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2026年",
+        "2026年",
+        "2026年"
+      ],
+      "entity_mentions": [
+        "我们看好公司",
+        "我们调整公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 912,
+      "end": 1118,
+      "text": "我们看好公司长期发展，但考虑到行业调价影响，我们调整公司2025-2027年营收预测为63.23/68.12/75.65亿元（2025-2026年前值为69.15/74.83亿元），归母净利润预测为8.61/9.49/10.78亿元（2025-2026年前值为9.86/11.02亿元），以当前总股本5.76亿股计算的摊薄EPS为1.49/1.65/1.87元（2025-2026年前值为1.71/1.91元）；",
+      "quantities": [
+        {
+          "value": "75.65",
+          "unit": "亿元",
+          "start": 967,
+          "end": 974
+        },
+        {
+          "value": "74.83",
+          "unit": "亿元",
+          "start": 994,
+          "end": 1001
+        },
+        {
+          "value": "10.78",
+          "unit": "亿元",
+          "start": 1021,
+          "end": 1028
+        },
+        {
+          "value": "11.02",
+          "unit": "亿元",
+          "start": 1047,
+          "end": 1054
+        },
+        {
+          "value": "1.87",
+          "unit": "元",
+          "start": 1087,
+          "end": 1092
+        },
+        {
+          "value": "1.91",
+          "unit": "元",
+          "start": 1111,
+          "end": 1116
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2026年",
+        "2026年",
+        "2026年"
+      ],
+      "entity_mentions": [
+        "我们看好公司",
+        "我们调整公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1223,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1223,
+    "processed_ranges": [
+      [
+        0,
+        1223
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 10,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 20.839887,
+  "source_content_sha256": "73acb10beb4799bf5eb377b8d4f8adc35bb5289c817063801a3a538a5af5e3e5"
+}

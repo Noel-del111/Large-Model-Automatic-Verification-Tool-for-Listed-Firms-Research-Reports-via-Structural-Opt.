@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"二）行业竞争加剧。\"}], \"reason\": \"风险提示编号1、3、4、5均用阿拉伯数字，此处用中文“二）”，编号格式不统一。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:18:01.525779+00:00",
+    "request_sha256": "f98117e9867ff2380cbe1646ef19e01d35a69d14fb3f48607e0207a4fb08f2fc",
+    "input_token_estimate": 15159,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277303",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "87c6fcafdf4c483283aa01cefab026bc",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3575,
+    "output_tokens": 3624,
+    "usage_source": "provider",
+    "duration_seconds": 15.509487,
+    "cost_cny": "0.018071"
+  },
+  "cache_request": {
+    "key": "fc7c5660617def3b4683e40529022b0b83f1ef523587e63124a48d10e2242bee",
+    "purpose": "text_review.detect",
+    "messages_sha256": "f98117e9867ff2380cbe1646ef19e01d35a69d14fb3f48607e0207a4fb08f2fc"
+  }
+}

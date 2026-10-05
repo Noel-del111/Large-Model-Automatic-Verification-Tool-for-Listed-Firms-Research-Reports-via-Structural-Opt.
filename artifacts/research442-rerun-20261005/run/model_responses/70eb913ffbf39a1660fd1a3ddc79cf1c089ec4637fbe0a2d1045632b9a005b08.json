@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"1995年至129年，光固化涂料在世界工业涂料中的占比由3.5%增长至10%。\"}],\"reason\":\"“129年”不是合法年份，无法与1995年构成有效时间区间。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"光引发剂作为光固化材料的核心组成部分，在光固化材料中占比为%-5%，成本一般占到光固化产品整体成本的10%-15%。\"}],\"reason\":\"“%-5%”缺少百分号前的具体数字，数值位置为空。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"近年来，光引发剂产值由2018年的31.13亿元降低至2023年的45.93亿元，CAGR为8.09%；\"}],\"reason\":\"产值从31.13亿元增至45.93亿元，却表述为“降低至”，数值增减方向与措辞矛盾。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"产量由2019年的3.84万吨增长至2023年的6.1万吨，CAGR为2.27%。\"}],\"reason\":\"3.84万吨到6.1万吨四年复合增速应约12.2%，而非2.27%。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2023年中国光固化原材料出口12.53万吨，其中光引发剂出口2.54万吨，占比33.21%。\"}],\"reason\":\"2.54除以12.53约20.27%，与33.21%不符。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"目前我国光引发剂头部企业久日新材、强力新材、沃凯珑、IGM、扬帆新材、固润科技国内产能分别为2.285、1.66、1.3、1.2、0.8、0.5、0.8万吨。\"}],\"reason\":\"企业名称为6个，产能数值却有7个，数量不对应，无法逐一匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:16:43.730598+00:00",
+    "request_sha256": "72ad86f75bf33b5ccea6e079b0a050da3134c93340eecaf60d41b3517dd12775",
+    "input_token_estimate": 16389,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278533",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "3fd30f7897644609b9286028ecd2157f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3832,
+    "output_tokens": 7405,
+    "usage_source": "provider",
+    "duration_seconds": 27.751435,
+    "cost_cny": "0.033452"
+  },
+  "cache_request": {
+    "key": "70eb913ffbf39a1660fd1a3ddc79cf1c089ec4637fbe0a2d1045632b9a005b08",
+    "purpose": "text_review.detect",
+    "messages_sha256": "72ad86f75bf33b5ccea6e079b0a050da3134c93340eecaf60d41b3517dd12775"
+  }
+}

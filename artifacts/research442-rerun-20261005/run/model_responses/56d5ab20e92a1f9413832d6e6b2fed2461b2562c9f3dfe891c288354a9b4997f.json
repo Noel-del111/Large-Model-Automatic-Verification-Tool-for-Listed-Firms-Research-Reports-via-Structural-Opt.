@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。\"}], \"reason\": \"管理费用是金额，单位应为亿元，却写成体积单位“亿立方分米”。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"④2025Q1销售费用为0.03亿元，管理费用为0.49亿立方分米，研发费用为亿元，财务费用为0.15亿元。\"}], \"reason\": \"研发费用后直接接单位“亿元”，缺少具体金额数值。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"①2024年公司实现营业收入44.09亿元，同比-8.79%；归母净利润4.16亿，同比-41.71%；扣非归母净利润3.58亿，同比-46.76%。\"}, {\"text\": \"2024年，汽车类营收37.79亿元，同比-10.87%，销量同比-16.2%。主要产品销量呈现下滑趋势。工业类营收0.80亿元，同比+8.54%，销量同比+23.97%；模具类营收1.68亿元，同比-29.05%；其他类营收3.22亿元，同比+46.05%。\"}], \"reason\": \"汽车类、工业类、模具类、其他类营收合计43.49亿元，与前述全年营业收入44.09亿元相差0.60亿元。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"24年业绩呈现回落态势受阻，25Q1期间业绩显著承压\"}], \"reason\": \"前文数据已显示24年营收和利润同比回落，此处“回落态势受阻”意即回落被阻止，与事实矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:43:21.265999+00:00",
+    "request_sha256": "193b5a4b5f0ddcd523534b16f6361e7b3f57df3f09bf5bc11dc920fa819a148b",
+    "input_token_estimate": 16178,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278322",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "35c504257fdf473397364d5e3d963bfa",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3832,
+    "output_tokens": 12729,
+    "usage_source": "provider",
+    "duration_seconds": 48.927722,
+    "cost_cny": "0.054748"
+  },
+  "cache_request": {
+    "key": "56d5ab20e92a1f9413832d6e6b2fed2461b2562c9f3dfe891c288354a9b4997f",
+    "purpose": "text_review.detect",
+    "messages_sha256": "193b5a4b5f0ddcd523534b16f6361e7b3f57df3f09bf5bc11dc920fa819a148b"
+  }
+}

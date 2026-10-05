@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000532",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "术语误用",
+      "reason": "“举借”的对象应为债务或借款，债权是权利，不能作为举借对象。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 241,
+          "end": 293,
+          "text": "②5月27日，富煌钢构拟通过发行股份及支付现金的方式（拟举借债权不低于4亿元）购买中科视界100%股权。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "②5月27日，富煌钢构拟通过发行股份及支付现金的方式（拟举借债权不低于4亿元）购买中科视界100%股权。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 241,
+          "end": 293,
+          "text": "②5月27日，富煌钢构拟通过发行股份及支付现金的方式（拟举借债权不低于4亿元）购买中科视界100%股权。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "77d532033fb7c6c83925fe51",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "按1.05亿元和28.82元/每注册资本计算，对应新增注册资本约364.3303万元，写成“千元”单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 293,
+          "end": 374,
+          "text": "③5月30日，中天精装全资子公司中天精艺接到中经芯玑告知函，中经芯玑拟以1.05亿元、28.82元/每注册资本的价格认购远见智存364.3303千元新增注册资本。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "③5月30日，中天精装全资子公司中天精艺接到中经芯玑告知函，中经芯玑拟以1.05亿元、28.82元/每注册资本的价格认购远见智存364.3303千元新增注册资本。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 293,
+          "end": 374,
+          "text": "③5月30日，中天精装全资子公司中天精艺接到中经芯玑告知函，中经芯玑拟以1.05亿元、28.82元/每注册资本的价格认购远见智存364.3303千元新增注册资本。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1517063c45e7ec97ccd2535c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“发布”后书名号内为空，缺少所发布公告的文件名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 374,
+          "end": 430,
+          "text": "④5月31日，菲林格尔发布《》，实际控制人丁福如正在筹划公司股份协议转让事宜，该事项可能导致公司控制权发生变更。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "④5月31日，菲林格尔发布《》，实际控制人丁福如正在筹划公司股份协议转让事宜，该事项可能导致公司控制权发生变更。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 374,
+          "end": 430,
+          "text": "④5月31日，菲林格尔发布《》，实际控制人丁福如正在筹划公司股份协议转让事宜，该事项可能导致公司控制权发生变更。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ee910fc71a76ab23fc58671f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1808
+        ]
+      ],
+      "estimated_input_tokens": 6360,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:00:58.392883+00:00",
+        "request_sha256": "fae39e556d9e6980cf23104a81a75b646cf311c207ae59fb1bc5aefc85763b40",
+        "input_token_estimate": 17767,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279911",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9f217bc3b84248c1915fb141d6bebd20",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4203,
+        "output_tokens": 6803,
+        "usage_source": "provider",
+        "duration_seconds": 28.125605,
+        "cost_cny": "0.031415"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "②5月27日，富煌钢构拟通过发行股份及支付现金的方式（拟举借债权不低于4亿元）购买中科视界100%股权。"
+          }
+        ],
+        "reason": "“举借”的对象应为债务或借款，债权是权利，不能作为举借对象。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "③5月30日，中天精装全资子公司中天精艺接到中经芯玑告知函，中经芯玑拟以1.05亿元、28.82元/每注册资本的价格认购远见智存364.3303千元新增注册资本。"
+          }
+        ],
+        "reason": "按1.05亿元和28.82元/每注册资本计算，对应新增注册资本约364.3303万元，写成“千元”单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "④5月31日，菲林格尔发布《》，实际控制人丁福如正在筹划公司股份协议转让事宜，该事项可能导致公司控制权发生变更。"
+          }
+        ],
+        "reason": "“发布”后书名号内为空，缺少所发布公告的文件名称。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1808,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1808,
+    "processed_ranges": [
+      [
+        0,
+        1808
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 28.152659,
+  "source_content_sha256": "dcbe600b336685ab9211d445690c33a07fb8ee8d6a6ac8bb2f20a4c67003f642"
+}

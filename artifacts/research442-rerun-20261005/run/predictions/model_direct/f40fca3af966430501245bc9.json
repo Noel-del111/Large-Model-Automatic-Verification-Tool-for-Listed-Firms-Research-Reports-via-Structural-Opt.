@@ -1,0 +1,673 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000388",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年”不是有效年份，时间信息不成立，疑为年份书写错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 794,
+          "end": 864,
+          "text": "富士达于129年已经拉通了所有HTCC项目的工艺流程，HTCC项目样品与小批量产已满足高端客户的需求，预计2025年将实现营收和利润的增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "富士达于129年已经拉通了所有HTCC项目的工艺流程，HTCC项目样品与小批量产已满足高端客户的需求，预计2025年将实现营收和利润的增长。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 794,
+          "end": 864,
+          "text": "富士达于129年已经拉通了所有HTCC项目的工艺流程，HTCC项目样品与小批量产已满足高端客户的需求，预计2025年将实现营收和利润的增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "22db58654635752adc6d7677",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "前文已明确为产业基地（二期），此处括号内属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 548,
+          "end": 603,
+          "text": "产能建设方面富士达产业基地（）在2024年7月完成建设并全部转固，项目截至2023年末已实现9847万元收益。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "产能建设方面富士达产业基地（）在2024年7月完成建设并全部转固，项目截至2023年末已实现9847万元收益。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 548,
+          "end": 603,
+          "text": "产能建设方面富士达产业基地（）在2024年7月完成建设并全部转固，项目截至2023年末已实现9847万元收益。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8f425ee1f5f45d778a31999e",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "预测区间为2025-2027三年，归母净利润却列1.05/1.51/1.78/0.23四个值，与后文EPS三个值不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 200,
+          "end": 372,
+          "text": "考虑到富士达产业基地（二期）已经完成建设并转固，宇航级射频同轴电缆组件市场仍保持领先地位，我们维持2025-2026年、并增加2027年盈利预测，预计2025-2027年实现归母净利润1.05/1.51/1.78/0.23亿元，对应EPS为0.56/0.80/0.95元，当前股价对应PE为50.1/34.8/29.5X，我们维持“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "考虑到富士达产业基地（二期）已经完成建设并转固，宇航级射频同轴电缆组件市场仍保持领先地位，我们维持2025-2026年、并增加2027年盈利预测，预计2025-2027年实现归母净利润1.05/1.51/1.78/0.23亿元，对应EPS为0.56/0.80/0.95元，当前股价对应PE为50.1/34.8/29.5X，我们维持“买入”评级。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 200,
+          "end": 372,
+          "text": "考虑到富士达产业基地（二期）已经完成建设并转固，宇航级射频同轴电缆组件市场仍保持领先地位，我们维持2025-2026年、并增加2027年盈利预测，预计2025-2027年实现归母净利润1.05/1.51/1.78/0.23亿元，对应EPS为0.56/0.80/0.95元，当前股价对应PE为50.1/34.8/29.5X，我们维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3083feb9eb67127e5538eb68",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "小标题把射频同轴连接器的4.39亿元营收写成射频同轴电缆，正文电缆组件营收为3.13亿元，产品归属矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 374,
+          "end": 409,
+          "text": "射频同轴电缆实现营收4.39亿元，产业基地（二期）达产并拓展量子等领域"
+        },
+        {
+          "kind": "source_text",
+          "start": 411,
+          "end": 486,
+          "text": "2024年射频同轴连接器实现营业收入4.39亿元，同比增长4.65%，毛利率为29.80%；射频同轴电缆组件实现营收3.13亿元，毛利率36.58%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "射频同轴电缆实现营收4.39亿元，产业基地（二期）达产并拓展量子等领域",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "text": "2024年射频同轴连接器实现营业收入4.39亿元，同比增长4.65%，毛利率为29.80%；射频同轴电缆组件实现营收3.13亿元，毛利率36.58%。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 374,
+          "end": 409,
+          "text": "射频同轴电缆实现营收4.39亿元，产业基地（二期）达产并拓展量子等领域"
+        },
+        {
+          "start": 411,
+          "end": 486,
+          "text": "2024年射频同轴连接器实现营业收入4.39亿元，同比增长4.65%，毛利率为29.80%；射频同轴电缆组件实现营收3.13亿元，毛利率36.58%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4de4e4918a38b7430adbd768",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          960
+        ]
+      ],
+      "estimated_input_tokens": 5471,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:15:48.870017+00:00",
+        "request_sha256": "a91dee26ca9e547dafe104bf081cf2b468badee2a0503c69110c015b97574b7b",
+        "input_token_estimate": 15238,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277382",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4fdd3b73cd3d43c6a43b93fdb1edcf8d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3620,
+        "output_tokens": 9565,
+        "usage_source": "provider",
+        "duration_seconds": 37.380147,
+        "cost_cny": "0.04188"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "富士达于129年已经拉通了所有HTCC项目的工艺流程，HTCC项目样品与小批量产已满足高端客户的需求，预计2025年将实现营收和利润的增长。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“129年”不是有效年份，时间信息不成立，疑为年份书写错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "产能建设方面富士达产业基地（）在2024年7月完成建设并全部转固，项目截至2023年末已实现9847万元收益。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "前文已明确为产业基地（二期），此处括号内属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "考虑到富士达产业基地（二期）已经完成建设并转固，宇航级射频同轴电缆组件市场仍保持领先地位，我们维持2025-2026年、并增加2027年盈利预测，预计2025-2027年实现归母净利润1.05/1.51/1.78/0.23亿元，对应EPS为0.56/0.80/0.95元，当前股价对应PE为50.1/34.8/29.5X，我们维持“买入”评级。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "预测区间为2025-2027三年，归母净利润却列1.05/1.51/1.78/0.23四个值，与后文EPS三个值不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "射频同轴电缆实现营收4.39亿元，产业基地（二期）达产并拓展量子等领域",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "text": "2024年射频同轴连接器实现营业收入4.39亿元，同比增长4.65%，毛利率为29.80%；射频同轴电缆组件实现营收3.13亿元，毛利率36.58%。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "小标题把射频同轴连接器的4.39亿元营收写成射频同轴电缆，正文电缆组件营收为3.13亿元，产品归属矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 0,
+      "end": 49,
+      "text": "北交所信息更新：产业基地达产并获得商业卫星、无人机千万以上批量订单，2025Q1营收1.90亿元\n",
+      "quantities": [
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 42,
+          "end": 48
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 63,
+      "end": 107,
+      "text": "2024年归母净利润0.51亿元，2025Q1实现营收1.90亿元归母净利润1237万\n",
+      "quantities": [
+        {
+          "value": "0.51",
+          "unit": "亿元",
+          "start": 73,
+          "end": 79
+        },
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 90,
+          "end": 96
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 63,
+      "end": 107,
+      "text": "2024年归母净利润0.51亿元，2025Q1实现营收1.90亿元归母净利润1237万\n",
+      "quantities": [
+        {
+          "value": "0.51",
+          "unit": "亿元",
+          "start": 73,
+          "end": 79
+        },
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 90,
+          "end": 96
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 63,
+      "end": 107,
+      "text": "2024年归母净利润0.51亿元，2025Q1实现营收1.90亿元归母净利润1237万\n",
+      "quantities": [
+        {
+          "value": "0.51",
+          "unit": "亿元",
+          "start": 73,
+          "end": 79
+        },
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 90,
+          "end": 96
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 108,
+      "end": 140,
+      "text": "富士达2024年实现总营业收入7.63亿元，同比减少6.42%；",
+      "quantities": [
+        {
+          "value": "7.63",
+          "unit": "亿元",
+          "start": 123,
+          "end": 129
+        },
+        {
+          "value": "6.42",
+          "unit": "%",
+          "start": 134,
+          "end": 139
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 140,
+      "end": 165,
+      "text": "实现归母净利润0.51亿元，同比减少65.02%。",
+      "quantities": [
+        {
+          "value": "0.51",
+          "unit": "亿元",
+          "start": 147,
+          "end": 153
+        },
+        {
+          "value": "65.02",
+          "unit": "%",
+          "start": 158,
+          "end": 164
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 165,
+      "end": 200,
+      "text": "2025Q1富士达实现营收1.90亿元，归母净利润1237.06万元。",
+      "quantities": [
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 178,
+          "end": 184
+        },
+        {
+          "value": "1237.06",
+          "unit": "万元",
+          "start": 190,
+          "end": 199
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 165,
+      "end": 200,
+      "text": "2025Q1富士达实现营收1.90亿元，归母净利润1237.06万元。",
+      "quantities": [
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 178,
+          "end": 184
+        },
+        {
+          "value": "1237.06",
+          "unit": "万元",
+          "start": 190,
+          "end": 199
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 200,
+      "end": 372,
+      "text": "考虑到富士达产业基地（二期）已经完成建设并转固，宇航级射频同轴电缆组件市场仍保持领先地位，我们维持2025-2026年、并增加2027年盈利预测，预计2025-2027年实现归母净利润1.05/1.51/1.78/0.23亿元，对应EPS为0.56/0.80/0.95元，当前股价对应PE为50.1/34.8/29.5X，我们维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "0.23",
+          "unit": "亿元",
+          "start": 307,
+          "end": 313
+        },
+        {
+          "value": "0.95",
+          "unit": "元",
+          "start": 330,
+          "end": 335
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 374,
+      "end": 410,
+      "text": "射频同轴电缆实现营收4.39亿元，产业基地（二期）达产并拓展量子等领域\n",
+      "quantities": [
+        {
+          "value": "4.39",
+          "unit": "亿元",
+          "start": 384,
+          "end": 390
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 411,
+      "end": 457,
+      "text": "2024年射频同轴连接器实现营业收入4.39亿元，同比增长4.65%，毛利率为29.80%；",
+      "quantities": [
+        {
+          "value": "4.39",
+          "unit": "亿元",
+          "start": 429,
+          "end": 435
+        },
+        {
+          "value": "4.65",
+          "unit": "%",
+          "start": 440,
+          "end": 445
+        },
+        {
+          "value": "29.80",
+          "unit": "%",
+          "start": 450,
+          "end": 456
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 411,
+      "end": 457,
+      "text": "2024年射频同轴连接器实现营业收入4.39亿元，同比增长4.65%，毛利率为29.80%；",
+      "quantities": [
+        {
+          "value": "4.39",
+          "unit": "亿元",
+          "start": 429,
+          "end": 435
+        },
+        {
+          "value": "4.65",
+          "unit": "%",
+          "start": 440,
+          "end": 445
+        },
+        {
+          "value": "29.80",
+          "unit": "%",
+          "start": 450,
+          "end": 456
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 457,
+      "end": 486,
+      "text": "射频同轴电缆组件实现营收3.13亿元，毛利率36.58%。",
+      "quantities": [
+        {
+          "value": "3.13",
+          "unit": "亿元",
+          "start": 469,
+          "end": 475
+        },
+        {
+          "value": "36.58",
+          "unit": "%",
+          "start": 479,
+          "end": 485
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 457,
+      "end": 486,
+      "text": "射频同轴电缆组件实现营收3.13亿元，毛利率36.58%。",
+      "quantities": [
+        {
+          "value": "3.13",
+          "unit": "亿元",
+          "start": 469,
+          "end": 475
+        },
+        {
+          "value": "36.58",
+          "unit": "%",
+          "start": 479,
+          "end": 485
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 794,
+      "end": 864,
+      "text": "富士达于129年已经拉通了所有HTCC项目的工艺流程，HTCC项目样品与小批量产已满足高端客户的需求，预计2025年将实现营收和利润的增长。",
+      "quantities": [],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 960,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 960,
+    "processed_ranges": [
+      [
+        0,
+        960
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 15,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 37.406039,
+  "source_content_sha256": "dc0905f42326385ce3cefa54c4eaad3aabeca22d5050c04a4ff2ad0affbc802f"
+}

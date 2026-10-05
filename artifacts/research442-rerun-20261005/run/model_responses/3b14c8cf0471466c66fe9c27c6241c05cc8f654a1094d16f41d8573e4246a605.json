@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2023年SW印制电路板板块上市公司实现营收元，同比减少3.71%；归母净利润为121.32亿元，同比减少29.39%；扣非后归母净利润为104.05亿元，同比减少32.39%。\"}],\"reason\":\"营业总收入具体数值缺失，原文直接写成“实现营收元”，缺少应报告的金额。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"据Prismark统计数据显示，2023年全球PCB产值约为695.17亿元，同比减少14.96%，而PCB产出面积仅下降4.7%，与产出面积相比，PCB产值的急剧下降凸显了严重的价格侵蚀。\"}],\"reason\":\"后文Prismark预计2024年全球PCB产值为729.71亿美元，同一指标此处应与美元口径一致，695.17亿元单位错误。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2024Q1主动型基金对PCB的持仓占基金股票投资市值比例为0.61%，环比2023Q4的0.44%提升0.15%，基金占比创下2052年以来新高。\"}],\"reason\":\"0.61%与0.44%相差0.17个百分点，不是原文所称的提升0.15个百分点。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2024Q1主动型基金对PCB的持仓占基金股票投资市值比例为0.61%，环比2023Q4的0.44%提升0.15%，基金占比创下2052年以来新高。\"}],\"reason\":\"2052年远晚于报告所涉2024年，不可能已有“2052年以来”的历史新高统计。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"建议关注沪电股份、胜宏科技、鹏鼎控股、沪电股份、深南电路、生益电子。\"}],\"reason\":\"关注列表中“沪电股份”重复出现，合并为一次即可，不增加新信息。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:39:40.746340+00:00",
+    "request_sha256": "0fcdbb0b402a137bd51f3edaa81eb7e8e622a6aba36cdb5f5366b3bb4050035b",
+    "input_token_estimate": 16122,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278266",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7b250b46109c45c5b406205fac69d4c3",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3805,
+    "output_tokens": 6819,
+    "usage_source": "provider",
+    "duration_seconds": 29.317716,
+    "cost_cny": "0.031081"
+  },
+  "cache_request": {
+    "key": "3b14c8cf0471466c66fe9c27c6241c05cc8f654a1094d16f41d8573e4246a605",
+    "purpose": "text_review.detect",
+    "messages_sha256": "0fcdbb0b402a137bd51f3edaa81eb7e8e622a6aba36cdb5f5366b3bb4050035b"
+  }
+}

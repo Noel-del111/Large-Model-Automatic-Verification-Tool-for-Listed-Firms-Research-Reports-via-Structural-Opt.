@@ -1,0 +1,538 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000482",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "每股收益应以元/股为单位，“万平方分米”是面积单位，单位明显错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 47,
+          "end": 145,
+          "text": "公司发布2024年报：全年实现收入43.65亿元，同比增长0.32%；归母净利润17.90亿元，同比增长1.62%；扣非后归母净利润17.78亿元，同比增长4.07%；每股收益1.04万平方分米。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司发布2024年报：全年实现收入43.65亿元，同比增长0.32%；归母净利润17.90亿元，同比增长1.62%；扣非后归母净利润17.78亿元，同比增长4.07%；每股收益1.04万平方分米。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 47,
+          "end": 145,
+          "text": "公司发布2024年报：全年实现收入43.65亿元，同比增长0.32%；归母净利润17.90亿元，同比增长1.62%；扣非后归母净利润17.78亿元，同比增长4.07%；每股收益1.04万平方分米。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1172175d31ba6a509d633def",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "改造从2023年底开始，恢复上架却为2023年中，恢复早于开始，时间顺序矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 577,
+          "end": 644,
+          "text": "公司从2023年底对早期交付的多栋数据中心进行了升级改造，并于2023年中逐步恢复上架，成功抓住新一代智算中心批量投运前的短暂窗口期。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司从2023年底对早期交付的多栋数据中心进行了升级改造，并于2023年中逐步恢复上架，成功抓住新一代智算中心批量投运前的短暂窗口期。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 577,
+          "end": 644,
+          "text": "公司从2023年底对早期交付的多栋数据中心进行了升级改造，并于2023年中逐步恢复上架，成功抓住新一代智算中心批量投运前的短暂窗口期。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8f4a2b35f65f8e0351f86f9e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“智算集权”应为“智算集群”，“集权”指权力集中，不是算力集群，术语使用错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 475,
+          "end": 572,
+          "text": "公司为了最大程度提升智算集权的计算能力和MFU值，在购买了高性能服务器以后，对CPU、内存、硬盘、网卡等硬件进行了统一，置换下来的硬件在2024Q4进行了统一的成本冲减收入，拖累了Q4收入增速。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司为了最大程度提升智算集权的计算能力和MFU值，在购买了高性能服务器以后，对CPU、内存、硬盘、网卡等硬件进行了统一，置换下来的硬件在2024Q4进行了统一的成本冲减收入，拖累了Q4收入增速。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 475,
+          "end": 572,
+          "text": "公司为了最大程度提升智算集权的计算能力和MFU值，在购买了高性能服务器以后，对CPU、内存、硬盘、网卡等硬件进行了统一，置换下来的硬件在2024Q4进行了统一的成本冲减收入，拖累了Q4收入增速。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6498fcdcb57b75566e260533",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“数据中集约化”漏“心”字，应为“数据中心集约化”，原词非行业术语。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1021,
+          "end": 1079,
+          "text": "公司从2009年成立就锚定了园区级算力中心的发展战略，这更加符合数据中集约化、规模化的发展趋势，因而也更具竞争优势。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司从2009年成立就锚定了园区级算力中心的发展战略，这更加符合数据中集约化、规模化的发展趋势，因而也更具竞争优势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1021,
+          "end": 1079,
+          "text": "公司从2009年成立就锚定了园区级算力中心的发展战略，这更加符合数据中集约化、规模化的发展趋势，因而也更具竞争优势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "261db4fedae296c4e1f6dc36",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "44.14/1.97约22.41倍，44.14/2.35约18.78倍，原文22.40倍和18.82倍计算不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1870,
+          "end": 1948,
+          "text": "预计25-27年公司EPS分别为1.44元、1.97元、2.35元，按5月29日收盘价44.14元计算，对应PE为30.65倍、22.40倍、18.82倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计25-27年公司EPS分别为1.44元、1.97元、2.35元，按5月29日收盘价44.14元计算，对应PE为30.65倍、22.40倍、18.82倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1870,
+          "end": 1948,
+          "text": "预计25-27年公司EPS分别为1.44元、1.97元、2.35元，按5月29日收盘价44.14元计算，对应PE为30.65倍、22.40倍、18.82倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2aa8b2769d6d2bfb981478c2",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1975
+        ]
+      ],
+      "estimated_input_tokens": 6456,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:37:51.528826+00:00",
+        "request_sha256": "b7efae9b95177c9a81275aec110f417cb3bd7d73f3b14b38fea7f9a5ba16b010",
+        "input_token_estimate": 17986,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.28013",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3b26d0c69ec6413fb732119d9ab5714d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4259,
+        "output_tokens": 9369,
+        "usage_source": "provider",
+        "duration_seconds": 35.37914,
+        "cost_cny": "0.041735",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司发布2024年报：全年实现收入43.65亿元，同比增长0.32%；归母净利润17.90亿元，同比增长1.62%；扣非后归母净利润17.78亿元，同比增长4.07%；每股收益1.04万平方分米。"
+          }
+        ],
+        "reason": "每股收益应以元/股为单位，“万平方分米”是面积单位，单位明显错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "公司从2023年底对早期交付的多栋数据中心进行了升级改造，并于2023年中逐步恢复上架，成功抓住新一代智算中心批量投运前的短暂窗口期。"
+          }
+        ],
+        "reason": "改造从2023年底开始，恢复上架却为2023年中，恢复早于开始，时间顺序矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司为了最大程度提升智算集权的计算能力和MFU值，在购买了高性能服务器以后，对CPU、内存、硬盘、网卡等硬件进行了统一，置换下来的硬件在2024Q4进行了统一的成本冲减收入，拖累了Q4收入增速。"
+          }
+        ],
+        "reason": "“智算集权”应为“智算集群”，“集权”指权力集中，不是算力集群，术语使用错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司从2009年成立就锚定了园区级算力中心的发展战略，这更加符合数据中集约化、规模化的发展趋势，因而也更具竞争优势。"
+          }
+        ],
+        "reason": "“数据中集约化”漏“心”字，应为“数据中心集约化”，原词非行业术语。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "预计25-27年公司EPS分别为1.44元、1.97元、2.35元，按5月29日收盘价44.14元计算，对应PE为30.65倍、22.40倍、18.82倍。"
+          }
+        ],
+        "reason": "44.14/1.97约22.41倍，44.14/2.35约18.78倍，原文22.40倍和18.82倍计算不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 82,
+      "end": 105,
+      "text": "归母净利润17.90亿元，同比增长1.62%；",
+      "quantities": [
+        {
+          "value": "17.90",
+          "unit": "亿元",
+          "start": 87,
+          "end": 94
+        },
+        {
+          "value": "1.62",
+          "unit": "%",
+          "start": 99,
+          "end": 104
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 105,
+      "end": 131,
+      "text": "扣非后归母净利润17.78亿元，同比增长4.07%；",
+      "quantities": [
+        {
+          "value": "17.78",
+          "unit": "亿元",
+          "start": 113,
+          "end": 120
+        },
+        {
+          "value": "4.07",
+          "unit": "%",
+          "start": 125,
+          "end": 130
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 131,
+      "end": 145,
+      "text": "每股收益1.04万平方分米。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 177,
+      "end": 256,
+      "text": "2024Q4公司一改前三个季度增长势头，收入、净利润分别同比下滑了45.64%和56.89%，但是2025Q1的收入增长了21.40%，净利润下滑9.29%。",
+      "quantities": [
+        {
+          "value": "45.64",
+          "unit": "%",
+          "start": 210,
+          "end": 216
+        },
+        {
+          "value": "56.89",
+          "unit": "%",
+          "start": 217,
+          "end": 223
+        },
+        {
+          "value": "21.40",
+          "unit": "%",
+          "start": 238,
+          "end": 244
+        },
+        {
+          "value": "9.29",
+          "unit": "%",
+          "start": 250,
+          "end": 255
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 177,
+      "end": 256,
+      "text": "2024Q4公司一改前三个季度增长势头，收入、净利润分别同比下滑了45.64%和56.89%，但是2025Q1的收入增长了21.40%，净利润下滑9.29%。",
+      "quantities": [
+        {
+          "value": "45.64",
+          "unit": "%",
+          "start": 210,
+          "end": 216
+        },
+        {
+          "value": "56.89",
+          "unit": "%",
+          "start": 217,
+          "end": 223
+        },
+        {
+          "value": "21.40",
+          "unit": "%",
+          "start": 238,
+          "end": 244
+        },
+        {
+          "value": "9.29",
+          "unit": "%",
+          "start": 250,
+          "end": 255
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 280,
+      "end": 393,
+      "text": "（1）2024年，公司对于高性能模组销售收入确认方式从“总额法”调整为“净额法”，由于调整在年报期间才追溯到全年，公司前三季度的收入从64.10亿元降低到34.57亿元（但是不影响净利润），增速从139.1%降至28.95%。",
+      "quantities": [
+        {
+          "value": "64.10",
+          "unit": "亿元",
+          "start": 347,
+          "end": 354
+        },
+        {
+          "value": "34.57",
+          "unit": "亿元",
+          "start": 357,
+          "end": 364
+        },
+        {
+          "value": "139.1",
+          "unit": "%",
+          "start": 378,
+          "end": 384
+        },
+        {
+          "value": "28.95",
+          "unit": "%",
+          "start": 386,
+          "end": 392
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 644,
+      "end": 712,
+      "text": "改造期间由于还在进行折旧同时不产生收入，对2024年净利润产生了3亿影响，但是充分发掘了早期数据中心的潜在价值，更有利于公司长期的发展。",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "更有利于公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 714,
+      "end": 777,
+      "text": "润泽发展未完成业绩承诺，2021-2024年累计扣非净利润52.39亿元，业绩承诺完成比例93.56%，补偿金额9.18亿元。",
+      "quantities": [
+        {
+          "value": "52.39",
+          "unit": "亿元",
+          "start": 743,
+          "end": 750
+        },
+        {
+          "value": "93.56",
+          "unit": "%",
+          "start": 759,
+          "end": 765
+        },
+        {
+          "value": "9.18",
+          "unit": "亿元",
+          "start": 770,
+          "end": 776
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1975,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1975,
+    "processed_ranges": [
+      [
+        0,
+        1975
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1975,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00269,
+  "source_content_sha256": "78752334d96b16c9377953974c45c29dd8a10ae5cc9d3d58bcdb8bded51535f6"
+}

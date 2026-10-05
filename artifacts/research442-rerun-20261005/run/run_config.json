@@ -1,0 +1,33 @@
+{
+  "inputs_sha256": "6f4c3e2b106b5e409c8fc542157639ac8fe3ade73dbed30a99adac3871b55cd9",
+  "mode": "model",
+  "detectors": [
+    "legacy_rules",
+    "model_direct",
+    "hybrid"
+  ],
+  "comparison_protocol": "same_model_response_postprocessing_ablation_v2",
+  "source_hash": "f3de6c7ebf6b7c39dea3ed26599c3cf91e2b05b71c773599c0c0b6b3009bc06c",
+  "model": "deepseek-flash",
+  "model_request": {
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "timeout": 480.0
+  },
+  "endpoint_hash": "a34e2a4708ed1c61008a151688838dcf1c44d4e7f08054633e72ba7c0b16cfc1",
+  "runtime": {
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "context_tokens": "1000000",
+    "max_output_tokens": "65536",
+    "budget_cny": "20",
+    "ledger": "[omitted: local billing ledger]",
+    "max_retries": "0",
+    "price_valid_until": "2026-10-05T16:00:00Z"
+  },
+  "examples_sha256": "3faeeeb332a86a0adf002d74bae1564394d188ea6f4a4e923d6c52abb22161af",
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "max_input_tokens": 934464
+}

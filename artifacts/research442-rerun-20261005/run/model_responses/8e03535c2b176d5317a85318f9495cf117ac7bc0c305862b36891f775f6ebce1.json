@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"据艾媒咨询数据，我国化妆品市场25-22年CAGR预计为6.2%，25年有望达到5791亿元，仍在持续增长上升区间。\", \"start\": 0, \"end\": 0}], \"reason\": \"时间区间“25-22年”起止年份倒置，应为22-25年，后文也写作“22-25年”，此处不成立。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"据青眼情报数据，23年国产化妆品销售额同比增长超%，而以往占据主要市场份额的欧美、日韩等国家进口品牌销售额均下滑。\", \"start\": 0, \"end\": 0}], \"reason\": \"“同比增长超%”中百分比数值缺失，仅写“超%”，无法获知具体增长幅度。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"公司作为国货化妆品行业龙头，品牌力产品力强劲，护肤彩妆两大业务齐头并进，长期发展动力充足。护肤彩妆两大业务齐头并进，长期发展动力充足。\", \"start\": 0, \"end\": 0}], \"reason\": \"“护肤彩妆两大业务齐头并进，长期发展动力充足”连续重复，未提供新增信息。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"目前红宝石精华已退出3.0，双抗精华已推出第四代。\", \"start\": 0, \"end\": 0}], \"reason\": \"产品版本应说“推出3.0”，写成“退出3.0”与后文“已推出第四代”及大单品升级逻辑矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:34:56.676206+00:00",
+    "request_sha256": "867b2fc661eb352bbc180f5d92625c688fd0365f6f2002c0c81e077a8569b411",
+    "input_token_estimate": 15997,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278141",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "e5bce59a1415498cb12d5f1d9802c569",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3755,
+    "output_tokens": 5371,
+    "usage_source": "provider",
+    "duration_seconds": 23.013196,
+    "cost_cny": "0.025239"
+  },
+  "cache_request": {
+    "key": "8e03535c2b176d5317a85318f9495cf117ac7bc0c305862b36891f775f6ebce1",
+    "purpose": "text_review.detect",
+    "messages_sha256": "867b2fc661eb352bbc180f5d92625c688fd0365f6f2002c0c81e077a8569b411"
+  }
+}

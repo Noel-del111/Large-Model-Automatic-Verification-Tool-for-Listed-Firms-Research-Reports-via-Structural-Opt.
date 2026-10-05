@@ -1,0 +1,524 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000603",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "财年区间写成“2025-2024”，起始年份晚于结束年份，财年标识不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 46,
+          "end": 151,
+          "text": "2025年5月9日，印度制药企业Dr.Reddy's Laboratories发布2025-2024财年第四季度财报，Q4实现营业收入850.6亿卢比，同比增长20%，净利润为159.4亿卢比，同比增长22%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月9日，印度制药企业Dr.Reddy's Laboratories发布2025-2024财年第四季度财报，Q4实现营业收入850.6亿卢比，同比增长20%，净利润为159.4亿卢比，同比增长22%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 46,
+          "end": 151,
+          "text": "2025年5月9日，印度制药企业Dr.Reddy's Laboratories发布2025-2024财年第四季度财报，Q4实现营业收入850.6亿卢比，同比增长20%，净利润为159.4亿卢比，同比增长22%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7e65384a4ec26a5bcb626b3b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "EBITDA货币单位写成“亿分”，前后文财务数据均以亿卢比计，单位量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 286,
+          "end": 335,
+          "text": "EBITDA为247.5亿分，同比增长32%，EBITDA利润率为29.1%，同比提升2.7pct"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "EBITDA为247.5亿分，同比增长32%，EBITDA利润率为29.1%，同比提升2.7pct"
+        }
+      ],
+      "spans": [
+        {
+          "start": 286,
+          "end": 335,
+          "text": "EBITDA为247.5亿分，同比增长32%，EBITDA利润率为29.1%，同比提升2.7pct"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6bca2c42b95d6b61b68d54c2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“税后利润”后的括号内指标名称缺失，应为PAT等简称，非数值空槽。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 363,
+          "end": 395,
+          "text": "税后利润（）为159.4亿卢比，同比增长22%，利润率为19%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "税后利润（）为159.4亿卢比，同比增长22%，利润率为19%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 363,
+          "end": 395,
+          "text": "税后利润（）为159.4亿卢比，同比增长22%，利润率为19%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bbc631d43dabfe8860ae6cb8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“增速达”后直接句号，缺少具体的百分比数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 525,
+          "end": 556,
+          "text": "全球仿制药及PSAI业务均实现两位数增长，欧洲市场内生增速达。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "全球仿制药及PSAI业务均实现两位数增长，欧洲市场内生增速达。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 525,
+          "end": 556,
+          "text": "全球仿制药及PSAI业务均实现两位数增长，欧洲市场内生增速达。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ab0aa2619b74aac6d1c39b55",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一段落内两次重复“收入两位数增长”和“EBITDA利润率维持25%”，信息冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 967,
+          "end": 1052,
+          "text": "预计2026财年收入两位数增长，EBITDA利润率维持25%。2026财年，公司收入指引为两位数增长（剔除gRevlimid影响），同时预期EBITDA利润率维持25%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "预计2026财年收入两位数增长，EBITDA利润率维持25%。2026财年，公司收入指引为两位数增长（剔除gRevlimid影响），同时预期EBITDA利润率维持25%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 967,
+          "end": 1052,
+          "text": "预计2026财年收入两位数增长，EBITDA利润率维持25%。2026财年，公司收入指引为两位数增长（剔除gRevlimid影响），同时预期EBITDA利润率维持25%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f6b39bc248a1519e10e4da42",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1215
+        ]
+      ],
+      "estimated_input_tokens": 5644,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:56:04.940224+00:00",
+        "request_sha256": "63856eea235ca84e81e78c3cd2b9ec7f688bde2d86e25d478adfedbb87393b2f",
+        "input_token_estimate": 15752,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277896",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "c1f4ecdfbdfc4d7a88fa813853457f29",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3743,
+        "output_tokens": 8191,
+        "usage_source": "provider",
+        "duration_seconds": 32.414543,
+        "cost_cny": "0.036507"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年5月9日，印度制药企业Dr.Reddy's Laboratories发布2025-2024财年第四季度财报，Q4实现营业收入850.6亿卢比，同比增长20%，净利润为159.4亿卢比，同比增长22%。"
+          }
+        ],
+        "reason": "财年区间写成“2025-2024”，起始年份晚于结束年份，财年标识不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "EBITDA为247.5亿分，同比增长32%，EBITDA利润率为29.1%，同比提升2.7pct"
+          }
+        ],
+        "reason": "EBITDA货币单位写成“亿分”，前后文财务数据均以亿卢比计，单位量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "税后利润（）为159.4亿卢比，同比增长22%，利润率为19%。"
+          }
+        ],
+        "reason": "“税后利润”后的括号内指标名称缺失，应为PAT等简称，非数值空槽。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "全球仿制药及PSAI业务均实现两位数增长，欧洲市场内生增速达。"
+          }
+        ],
+        "reason": "“增速达”后直接句号，缺少具体的百分比数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "预计2026财年收入两位数增长，EBITDA利润率维持25%。2026财年，公司收入指引为两位数增长（剔除gRevlimid影响），同时预期EBITDA利润率维持25%。"
+          }
+        ],
+        "reason": "同一段落内两次重复“收入两位数增长”和“EBITDA利润率维持25%”，信息冗余。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 0,
+      "end": 34,
+      "text": "医药：Dr. Reddy's Q4净利润同比增长22%，超市场预期\n",
+      "quantities": [
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 24,
+          "end": 27
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 46,
+      "end": 151,
+      "text": "2025年5月9日，印度制药企业Dr.Reddy's Laboratories发布2025-2024财年第四季度财报，Q4实现营业收入850.6亿卢比，同比增长20%，净利润为159.4亿卢比，同比增长22%。",
+      "quantities": [
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 126,
+          "end": 129
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 147,
+          "end": 150
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 46,
+      "end": 151,
+      "text": "2025年5月9日，印度制药企业Dr.Reddy's Laboratories发布2025-2024财年第四季度财报，Q4实现营业收入850.6亿卢比，同比增长20%，净利润为159.4亿卢比，同比增长22%。",
+      "quantities": [
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 126,
+          "end": 129
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 147,
+          "end": 150
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 160,
+      "end": 181,
+      "text": "NRT业务整合驱动Q4营收及利润快速增长。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 181,
+      "end": 395,
+      "text": "2024-2025财年Q4（2025.1.1-2025.3.31），公司实现营业收入850.6亿卢比，同比增长20%，剔除NRT（尼古丁替代疗法）业务，同比增长12%，毛利率为55.6%，同比下滑3.0pct，EBITDA为247.5亿分，同比增长32%，EBITDA利润率为29.1%，同比提升2.7pct，税前利润（PBT）为200.5亿卢比，同比增长25%，税后利润（）为159.4亿卢比，同比增长22%，利润率为19%。",
+      "quantities": [
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 236,
+          "end": 239
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 261,
+          "end": 264
+        },
+        {
+          "value": "55.6",
+          "unit": "%",
+          "start": 269,
+          "end": 274
+        },
+        {
+          "value": "32",
+          "unit": "%",
+          "start": 305,
+          "end": 308
+        },
+        {
+          "value": "29.1",
+          "unit": "%",
+          "start": 319,
+          "end": 324
+        },
+        {
+          "value": "25",
+          "unit": "%",
+          "start": 359,
+          "end": 362
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 383,
+          "end": 386
+        },
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 391,
+          "end": 394
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 181,
+      "end": 395,
+      "text": "2024-2025财年Q4（2025.1.1-2025.3.31），公司实现营业收入850.6亿卢比，同比增长20%，剔除NRT（尼古丁替代疗法）业务，同比增长12%，毛利率为55.6%，同比下滑3.0pct，EBITDA为247.5亿分，同比增长32%，EBITDA利润率为29.1%，同比提升2.7pct，税前利润（PBT）为200.5亿卢比，同比增长25%，税后利润（）为159.4亿卢比，同比增长22%，利润率为19%。",
+      "quantities": [
+        {
+          "value": "20",
+          "unit": "%",
+          "start": 236,
+          "end": 239
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 261,
+          "end": 264
+        },
+        {
+          "value": "55.6",
+          "unit": "%",
+          "start": 269,
+          "end": 274
+        },
+        {
+          "value": "32",
+          "unit": "%",
+          "start": 305,
+          "end": 308
+        },
+        {
+          "value": "29.1",
+          "unit": "%",
+          "start": 319,
+          "end": 324
+        },
+        {
+          "value": "25",
+          "unit": "%",
+          "start": 359,
+          "end": 362
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 383,
+          "end": 386
+        },
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 391,
+          "end": 394
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1215,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1215,
+    "processed_ranges": [
+      [
+        0,
+        1215
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 32.442817,
+  "source_content_sha256": "4b85e75f2c16bc32b141e562e181bafc257db5c54c5f4229a9eb9c568627e2fb"
+}

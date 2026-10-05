@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"计算机行业周观点：《“数据要素×”三年行动计划（2024—2026年）》印发，自定义Chat GPT商店即将上线\"}, {\"text\": \"（1）数据要素：1月4日，国家数据局等17部门联合印发《“数据要素×”三年行动计划（2023—2026年）》。\"}], \"reason\": \"同一文件标题写2024—2026年，正文写2023—2026年，年份范围冲突。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"（3）数据要素：2023年以来，上海数交所数据交易额不断攀升，保持每月稳步增长态势，全年数据交易额超11万元，累计挂牌数据产品2100个，日益活跃的市场交易生态正在逐步形成。\"}], \"reason\": \"交易所全年交易额写为“超11万元”，与交易所规模明显不符，量纲错误。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"从估值情况来看，SW计算机行业PE（TTM）下降至43.67倍，高于2016年至今历史均值48.82倍，行业估值低于历史中枢水平。\"}], \"reason\": \"43.67倍低于48.82倍，原文却称高于，且后文称估值低于历史中枢，前后矛盾。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"上周计算机板块表现较差：350只个股中，33只个股上涨，302只个股下跌，7只个股持平。下跌股票数占比88.30%。\"}], \"reason\": \"33+302+7=342，不等于350；302/350约86.29%，不是88.30%。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:56:57.850157+00:00",
+    "request_sha256": "e7d1bcbff45717a4be9cf1d5b213ac84c55b1159b109095c4dd668ee32e40ae0",
+    "input_token_estimate": 15641,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277785",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f8a3f510834443538a212458997087be",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3629,
+    "output_tokens": 4708,
+    "usage_source": "provider",
+    "duration_seconds": 18.86453,
+    "cost_cny": "0.022461"
+  },
+  "cache_request": {
+    "key": "dbf0c99b00adbc76aea07ec244cccef5ab1a6c61ba4eb9760a176e14b6b4d1ad",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e7d1bcbff45717a4be9cf1d5b213ac84c55b1159b109095c4dd668ee32e40ae0"
+  }
+}

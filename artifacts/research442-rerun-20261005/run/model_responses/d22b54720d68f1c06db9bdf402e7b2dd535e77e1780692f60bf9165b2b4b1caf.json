@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"行业深耕与业务拓展取得显著成效，收入与净利润有望再创历史新低\"}],\"reason\":\"前文与后文均称公司收入与净利润持续增长，此处却称“再创历史新低”，与增长事实及后文“再创历史新高”矛盾。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。\"}],\"reason\":\"毛利率括号内缺少具体百分比数值，仅有“+0.64pcts”，数值位置为空。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"我们判断，随着公司多个研发项目顺利实施，研发人员不断增长，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升，并逐步体现在利润表中，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升。\"}],\"reason\":\"同一句内“表明公司竞争能力、项目承接能力和创新能力均有望逐步提升”重复出现，未新增信息。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"公司IPO募集资金近2亿立方米，拟投资于以下项目：\"}],\"reason\":\"募集资金应以货币单位计量，原文使用体积单位“立方米”，量纲错误。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"其中，前两个项目的达产将为公司直接实现增收增利，项目内容如下：\"},{\"text\":\"我们认为，在上述三个IPO募投项目的实施过程中，公司业绩已经实现快速增长，测控服务中心与洞察者软件平台研制项目的实施将构成公司航天测控管理业务的核心竞争力，成为公司在商业航天产业进入实质性建设和卫星测运控需求增长的双重背景下，同步实现增收增利的基础保障。\"}],\"reason\":\"前文仅列出两个IPO募投项目，后文却称“上述三个IPO募投项目”，项目数量前后不一致。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"IPO债权近2亿元，建设商业航天测控软硬件平台\"}],\"reason\":\"“IPO债权”与公司IPO募集资金投向语境不符，应属“募资”或“募投”的误用。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"首次覆盖，给予“买入”评级，当前股价分别对应2025-2027年106倍、85倍及68倍体育课.\"}],\"reason\":\"“体育课”出现在估值倍数后，应为“市盈率”，术语使用错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:51:00.055674+00:00",
+    "request_sha256": "d87e0976fa380d58bdcfde8c0a2547fea698d5e5be4fac7333f798dbcfb0d4a3",
+    "input_token_estimate": 24220,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.286364",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2390549abcc2479bb60525f41f46fd0d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 5617,
+    "output_tokens": 7114,
+    "usage_source": "provider",
+    "duration_seconds": 26.571654,
+    "cost_cny": "0.034073"
+  },
+  "cache_request": {
+    "key": "d22b54720d68f1c06db9bdf402e7b2dd535e77e1780692f60bf9165b2b4b1caf",
+    "purpose": "text_review.detect",
+    "messages_sha256": "d87e0976fa380d58bdcfde8c0a2547fea698d5e5be4fac7333f798dbcfb0d4a3"
+  }
+}

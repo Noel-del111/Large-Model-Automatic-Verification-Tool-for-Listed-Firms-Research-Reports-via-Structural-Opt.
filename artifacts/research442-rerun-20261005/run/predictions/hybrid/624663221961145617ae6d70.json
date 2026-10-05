@@ -1,0 +1,225 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000616",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "中位PFS为9.7年远大于同句mOS的23个月，PFS不可能长于OS，单位“年”应为“月”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 565,
+          "end": 624,
+          "text": "PD-L1阳性（CPS≥10）mTNBC的一线标准治疗为帕博利珠单抗联合化疗，中位PFS为9.7年，mOS为23个月。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "PD-L1阳性（CPS≥10）mTNBC的一线标准治疗为帕博利珠单抗联合化疗，中位PFS为9.7年，mOS为23个月。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 565,
+          "end": 624,
+          "text": "PD-L1阳性（CPS≥10）mTNBC的一线标准治疗为帕博利珠单抗联合化疗，中位PFS为9.7年，mOS为23个月。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "22a80fad931102e44c87511d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "若主要终点为PFS，则“达到主要终点”与“PFS显著劣于对照组”不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 323,
+          "end": 374,
+          "text": "吉利德宣布ASCENT-06研究达到主要终点，实验组在PFS上显著劣于对照组，且OS数据呈现积极趋势。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "吉利德宣布ASCENT-06研究达到主要终点，实验组在PFS上显著劣于对照组，且OS数据呈现积极趋势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 323,
+          "end": 374,
+          "text": "吉利德宣布ASCENT-06研究达到主要终点，实验组在PFS上显著劣于对照组，且OS数据呈现积极趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ff3c7ebec4757e22af4a6bf2",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1173
+        ]
+      ],
+      "estimated_input_tokens": 5542,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:08:23.957222+00:00",
+        "request_sha256": "24bd1a08ff0d58ff06fcd92aeba5d84a8794a9611b407099d0d0147f87d44df2",
+        "input_token_estimate": 15482,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277626",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "37d3b5ead1ae4365a732298779f50e22",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3745,
+        "output_tokens": 5886,
+        "usage_source": "provider",
+        "duration_seconds": 24.753293,
+        "cost_cny": "0.027289",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "SG有望成为一线mTNBC治疗新标准，并适应症有望向辅助/新辅助拓展。"
+          }
+        ],
+        "reason": "该句与前一句内容完全相同，属于不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "PD-L1阳性（CPS≥10）mTNBC的一线标准治疗为帕博利珠单抗联合化疗，中位PFS为9.7年，mOS为23个月。"
+          }
+        ],
+        "reason": "中位PFS为9.7年远大于同句mOS的23个月，PFS不可能长于OS，单位“年”应为“月”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "吉利德宣布ASCENT-06研究达到主要终点，实验组在PFS上显著劣于对照组，且OS数据呈现积极趋势。"
+          }
+        ],
+        "reason": "若主要终点为PFS，则“达到主要终点”与“PFS显著劣于对照组”不能同时成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "SG有望成为一线mTNBC治疗新标准，并适应症有望向辅助/新辅助拓展。"
+          }
+        ],
+        "reason": "该句与前一句内容完全相同，属于不必要重复。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1173,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1173,
+    "processed_ranges": [
+      [
+        0,
+        1173
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1173,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001456,
+  "source_content_sha256": "f3bb921dfe9dbcabd8ae6bce6761425f52663d21db3c56ba75fdfa68801f0f14"
+}

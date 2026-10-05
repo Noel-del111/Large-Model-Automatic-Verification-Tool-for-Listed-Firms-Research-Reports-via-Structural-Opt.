@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"威高骨科(68-8)\"}],\"reason\":\"股票代码应为六位数字，68-8格式不合法且不完整。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"2025-129年业绩考核目标的CAGR为18.1%。\"}],\"reason\":\"2025-129年份不成立，应为2025-2029等合法区间。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"投资建议：公司是平台化发展的国产骨科龙头，实现脊柱、创伤、关节、运动医学的全面覆盖，积极开拓组织修复和脊柱微创业务，集采趋势下公司快速失去市场份额，巩固龙头地位。\"}],\"reason\":\"前文称市场覆盖率/份额大幅提升，此处又说快速失去市场份额，且与巩固龙头地位相互矛盾。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"预计2027-25年归母净利润为2.54/3.12/3.77亿元（2025-26年原为2.92/3.43亿），同比增长13.3%/23.2%/20.9%\"}],\"reason\":\"预测年份写成2027-25年，终点早于起点，时间区间不合法。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:07:43.409034+00:00",
+    "request_sha256": "2347fb1e8cc091dfc9557f02350420164f8e3be25227690be71ebdf1ca50ffc4",
+    "input_token_estimate": 15814,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277958",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7b8da68307494f76903a0373b962c70b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3794,
+    "output_tokens": 10060,
+    "usage_source": "provider",
+    "duration_seconds": 40.496858,
+    "cost_cny": "0.044034"
+  },
+  "cache_request": {
+    "key": "44ed070a5bc9a2681180b20ae6ec40f9d0a685a6d4af781aff85097b642cf912",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2347fb1e8cc091dfc9557f02350420164f8e3be25227690be71ebdf1ca50ffc4"
+  }
+}

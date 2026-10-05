@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"上周医药生物板块收益率为2.21%，板块相对沪深300收益率为3.30%，在31个一级子行业指数中涨跌幅排名第35位。\",\"reason\":\"共31个一级子行业，排名第35位超出可能范围，名次与总数矛盾。\"}]},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"6个子板块中，化学制药周收益率排名第一，涨跌幅为%（相对沪深300收益率为4.91%）；周收益率排名第六的为医药商业，涨跌幅为-0.39%（相对沪深300收益率为0.69%）。\",\"reason\":\"化学制药周涨跌幅的百分号前无具体数值，数值缺失。\"}]},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"周观点：上周化学制药板块涨幅领先，5月30日至6月3日2025年美国临床肿瘤学会（）年会在美国芝加哥举行，本届年会中国专家的发言数量再创新高，ASCO的召开进一步推动创新药投资热情。\",\"reason\":\"“美国临床肿瘤学会”后括号内应为ASCO或年会简称，却为空，非数值属性值缺失。\"}]},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"创新药主线：①商业化快速放量的创新药标的，建议关注信达生物、百济神州、云顶新耀、再鼎医药、康方生物、科伦博泰、再鼎医药、荣昌生物等；\",\"reason\":\"同一推荐标的名单中“再鼎医药”重复出现两次，属不必要重复。\"}]}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:06:23.666022+00:00",
+    "request_sha256": "5b5b36ddc9e013db0efb29f765f3f79e86fab19550c77bc207b5c653e1053be0",
+    "input_token_estimate": 17913,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280057",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "286e0a5ada66472dbb38ddd69d480631",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4224,
+    "output_tokens": 5454,
+    "usage_source": "provider",
+    "duration_seconds": 21.433193,
+    "cost_cny": "0.02604"
+  },
+  "cache_request": {
+    "key": "2321e7e45dcd05c4ed7619017b22dea0c75bc887778d39d11a4ea853cce579d4",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5b5b36ddc9e013db0efb29f765f3f79e86fab19550c77bc207b5c653e1053be0"
+  }
+}

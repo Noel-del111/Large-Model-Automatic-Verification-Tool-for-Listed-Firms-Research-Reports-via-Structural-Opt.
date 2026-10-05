@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"以波音787为例，有将近%的系统和零部件承包给世界范围内各国的供应商，主要包括日本和欧洲等。\"}],\"reason\":\"百分比符号前缺少具体数值，“将近”的比例无法确定。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"供应商的角色由传统的零部件生产供应者，逐渐转变为产品零部件总成的参与设计者，最终成为波音的战略合作伙伴。\"}],\"reason\":\"该句与紧邻上一句几乎完全重复，仅句末追加表述，属不必要重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:12:25.396732+00:00",
+    "request_sha256": "79a82d9d3692b60209b17f58b755099822a7892f44924ba39960244e170b9394",
+    "input_token_estimate": 16336,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27848",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "90991be267934f169eb214d282c1d799",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3719,
+    "output_tokens": 5744,
+    "usage_source": "provider",
+    "duration_seconds": 26.691599,
+    "cost_cny": "0.026695"
+  },
+  "cache_request": {
+    "key": "85bac10133ad2d1644ff06c703a2d84698cc70d9ba2ff3a4b63cc84854fa3588",
+    "purpose": "text_review.detect",
+    "messages_sha256": "79a82d9d3692b60209b17f58b755099822a7892f44924ba39960244e170b9394"
+  }
+}

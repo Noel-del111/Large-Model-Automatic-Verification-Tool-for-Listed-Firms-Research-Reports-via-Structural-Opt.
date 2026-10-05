@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"国家应急管理部在1029年印发的《淘汰落后危险化学品安全生产工艺技术设备目录（第二批）》中已经明确将间歇或半间歇釜式硝化工艺列为限制类，要求两年内改造为微通道反应器、管式反应器或连续釜式硝化生产工艺。\",\"start\":0,\"end\":0}],\"reason\":\"1029年不是现代年份，应急管理部不可能在1029年印发目录。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"19年3月21日，江苏响水天嘉宜化工公司发生特别重大爆炸事故，造成78人死亡、76人重伤，直接经济损失19.86亿分，事故核心原因是涉事公司硝化废料的违法贮存，持续积热升温导致自燃爆炸。\",\"start\":0,\"end\":0}],\"reason\":\"直接经济损失单位写成“亿分”，应为“亿元”等合法单位。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"友道化学目前氯虫苯甲酰胺原药现有产能1.1吨，为行业占比最大，约41%。\",\"start\":0,\"end\":0}],\"reason\":\"氯虫苯甲酰胺原药产能1.1吨与行业占比41%明显不匹配，单位应为万吨。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"5月27日，友道化学发生爆炸事故，其生产的氯虫苯甲酰胺（商品名为“”）的中间体合成也涉及硝化、重氮化反应。\",\"start\":0,\"end\":0}],\"reason\":\"商品名为空，前文已明确氯虫苯甲酰胺商品名为康宽。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"事故发生后，国务院高度重视并亲自挂牌督办，我们预计农药行业或将展开全国范围的安全严查，涉及同类型化工装置如硝化、重氮化反应等，或将成为首批排查对象，利好硝化、重氮化反应非合规生产的企业。\",\"start\":0,\"end\":0}],\"reason\":\"全国安全严查打击非合规生产，却称利好非合规企业，命题矛盾。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"事件二：5月28日，农业农村部种植业管理司再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注提出要求：“同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标”。\",\"start\":0,\"end\":0},{\"text\":\"农业农村部再发通知，国内“一证一品”新政落地在即。5月28日，农业农村部种植业管理司在官网再次发布了《关于公开征求农药标签和说明书标注要求意见的通知》，拟对农药标签和说明书标注要求：同一登记证号的农药产品应当标注同样的商标，委托加工、分装的产品不得标注受托人的商标。\",\"start\":0,\"end\":0}],\"reason\":\"同一通知、同一要求在两个段落中重复出现，信息冗余。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:42:36.674533+00:00",
+    "request_sha256": "e5ab9ddf527364edcf1362b643ed467901f52c9a1f9311490031c25ed59ee92e",
+    "input_token_estimate": 16989,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279133",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "6b0d183346de43fd9d06febeb8109a44",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3947,
+    "output_tokens": 8710,
+    "usage_source": "provider",
+    "duration_seconds": 33.515441,
+    "cost_cny": "0.038787"
+  },
+  "cache_request": {
+    "key": "414521834d4d8e80bb0a6fb809ff8aa4d7267d98eabaae0f80576599c65e6425",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e5ab9ddf527364edcf1362b643ed467901f52c9a1f9311490031c25ed59ee92e"
+  }
+}

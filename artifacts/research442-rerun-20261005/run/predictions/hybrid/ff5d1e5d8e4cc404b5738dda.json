@@ -1,0 +1,338 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000542",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“降至”表示下降，但准确率由70%变为87.5%是上升，数字与比较叙述相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 143,
+          "end": 225,
+          "text": "在AIME2025测试中，新版模型准确率由旧版的70%降至下87.5%，主要得益于模型在推理过程中的思维深度增强：新版模型平均每题使用tokens，约为旧版的两倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在AIME2025测试中，新版模型准确率由旧版的70%降至下87.5%，主要得益于模型在推理过程中的思维深度增强：新版模型平均每题使用tokens，约为旧版的两倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 143,
+          "end": 225,
+          "text": "在AIME2025测试中，新版模型准确率由旧版的70%降至下87.5%，主要得益于模型在推理过程中的思维深度增强：新版模型平均每题使用tokens，约为旧版的两倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4d37dd13eda7d00fd30c3839",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“平均每题使用tokens”前缺少具体token数量，数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 143,
+          "end": 225,
+          "text": "在AIME2025测试中，新版模型准确率由旧版的70%降至下87.5%，主要得益于模型在推理过程中的思维深度增强：新版模型平均每题使用tokens，约为旧版的两倍。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在AIME2025测试中，新版模型准确率由旧版的70%降至下87.5%，主要得益于模型在推理过程中的思维深度增强：新版模型平均每题使用tokens，约为旧版的两倍。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 143,
+          "end": 225,
+          "text": "在AIME2025测试中，新版模型准确率由旧版的70%降至下87.5%，主要得益于模型在推理过程中的思维深度增强：新版模型平均每题使用tokens，约为旧版的两倍。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "996286fd8fae26034fc9e683",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "“80亿分”作为Q2收入缺口的单位错误，应为美元等货币单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 506,
+          "end": 578,
+          "text": "同时，受到美国出口管制影响，英伟达针对中国市场的H20芯片计提了45亿美元库存减值（低于市场预期的55亿美元），同时导致80亿分的Q2收入缺口。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "同时，受到美国出口管制影响，英伟达针对中国市场的H20芯片计提了45亿美元库存减值（低于市场预期的55亿美元），同时导致80亿分的Q2收入缺口。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 506,
+          "end": 578,
+          "text": "同时，受到美国出口管制影响，英伟达针对中国市场的H20芯片计提了45亿美元库存减值（低于市场预期的55亿美元），同时导致80亿分的Q2收入缺口。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ac38f94313e6e99512d5a426",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "前文已述GB200散热难题攻克且GB300将于3Q25出货，此处重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 732,
+          "end": 763,
+          "text": "英伟达GB200散热难题得到攻克，GB300将于3Q25出货。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "英伟达GB200散热难题得到攻克，GB300将于3Q25出货。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 732,
+          "end": 763,
+          "text": "英伟达GB200散热难题得到攻克，GB300将于3Q25出货。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1a791fc6ebeb928a9c7bd95b",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1542
+        ]
+      ],
+      "estimated_input_tokens": 5928,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:09:40.638565+00:00",
+        "request_sha256": "6a933fd54c9b4237ebd40232949358e8bf848dc75136b00fa4d9cee9efac4fb0",
+        "input_token_estimate": 16545,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278689",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ac6ac1b7dc2f49e5ad38830d81b3971a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3945,
+        "output_tokens": 8099,
+        "usage_source": "provider",
+        "duration_seconds": 31.213007,
+        "cost_cny": "0.036341",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "在AIME2025测试中，新版模型准确率由旧版的70%降至下87.5%，主要得益于模型在推理过程中的思维深度增强：新版模型平均每题使用tokens，约为旧版的两倍。"
+          }
+        ],
+        "reason": "“降至”表示下降，但准确率由70%变为87.5%是上升，数字与比较叙述相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "在AIME2025测试中，新版模型准确率由旧版的70%降至下87.5%，主要得益于模型在推理过程中的思维深度增强：新版模型平均每题使用tokens，约为旧版的两倍。"
+          }
+        ],
+        "reason": "“平均每题使用tokens”前缺少具体token数量，数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "Blackwell整体表现强劲，预计贡献数据中心收入的70%，并已登陆AWS、谷歌云等四大云平台。"
+          }
+        ],
+        "reason": "该句在上一句已完整出现一次，此处再次重复，无新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "同时，受到美国出口管制影响，英伟达针对中国市场的H20芯片计提了45亿美元库存减值（低于市场预期的55亿美元），同时导致80亿分的Q2收入缺口。"
+          }
+        ],
+        "reason": "“80亿分”作为Q2收入缺口的单位错误，应为美元等货币单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "台积电COUPE硅光引擎实现三大突破：晶圆级插损<1.2dB（较传统方案降低40%）、波长控制精度±1.7nm、3D堆叠技术使能耗降低40%。"
+          }
+        ],
+        "reason": "该段落在前文“3）台积电COUPE硅光引擎实现三大突破”中已完整描述，此处重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "英伟达GB200散热难题得到攻克，GB300将于3Q25出货。"
+          }
+        ],
+        "reason": "前文已述GB200散热难题攻克且GB300将于3Q25出货，此处重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "Blackwell整体表现强劲，预计贡献数据中心收入的70%，并已登陆AWS、谷歌云等四大云平台。"
+          }
+        ],
+        "reason": "该句在上一句已完整出现一次，此处再次重复，无新增信息。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "台积电COUPE硅光引擎实现三大突破：晶圆级插损<1.2dB（较传统方案降低40%）、波长控制精度±1.7nm、3D堆叠技术使能耗降低40%。"
+          }
+        ],
+        "reason": "该段落在前文“3）台积电COUPE硅光引擎实现三大突破”中已完整描述，此处重复。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1542,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1542,
+    "processed_ranges": [
+      [
+        0,
+        1542
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1542,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001731,
+  "source_content_sha256": "118e9be9db89998fe6d0809fbcdbabcc574b6cb74ad67463a55d419e3e37c2c8"
+}

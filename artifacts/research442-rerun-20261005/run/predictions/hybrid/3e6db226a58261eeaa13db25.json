@@ -1,0 +1,900 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000372",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文显示国内收入95.93亿元、海外收入2.71亿元，海外收入不可能高于国内收入。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 421,
+          "end": 469,
+          "text": "总体来看，公司不同板块业务增长有所分化，呈现出制药装备好于医疗器械，海外收入高于国内收入的局面："
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "总体来看，公司不同板块业务增长有所分化，呈现出制药装备好于医疗器械，海外收入高于国内收入的局面："
+        }
+      ],
+      "spans": [
+        {
+          "start": 421,
+          "end": 469,
+          "text": "总体来看，公司不同板块业务增长有所分化，呈现出制药装备好于医疗器械，海外收入高于国内收入的局面："
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "70507c19f87d96511da79ec1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "47.69%高于25.03%，与“远低于”的表述相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 620,
+          "end": 657,
+          "text": "其中国际化业务毛利率（47.69%）远低于国内业务毛利率（25.03%）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中国际化业务毛利率（47.69%）远低于国内业务毛利率（25.03%）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 620,
+          "end": 657,
+          "text": "其中国际化业务毛利率（47.69%）远低于国内业务毛利率（25.03%）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c22b47f101fecc46c96aad0c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "收入金额单位应为亿元，此处误用“万吨”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 657,
+          "end": 779,
+          "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 657,
+          "end": 779,
+          "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f8735e84b5fb53028f82a5ef",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "列示四项产品却给出五个收入数字，项目与数值个数不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 657,
+          "end": 779,
+          "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 657,
+          "end": 779,
+          "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bf2ccb346ec4f85ca7abda93",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1535
+        ]
+      ],
+      "estimated_input_tokens": 5900,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:03:47.579044+00:00",
+        "request_sha256": "f028e8f7f9e0df7fd5089cb98ad83c699fd2f44d784cdc9d2de9250d56ba4de7",
+        "input_token_estimate": 16510,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278654",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ccc16a20b620482cafb6388ea4f5f49f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3999,
+        "output_tokens": 8630,
+        "usage_source": "provider",
+        "duration_seconds": 33.00229,
+        "cost_cny": "0.038519",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "总体来看，公司不同板块业务增长有所分化，呈现出制药装备好于医疗器械，海外收入高于国内收入的局面："
+          }
+        ],
+        "reason": "前文显示国内收入95.93亿元、海外收入2.71亿元，海外收入不可能高于国内收入。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "其中国际化业务毛利率（47.69%）远低于国内业务毛利率（25.03%）。"
+          }
+        ],
+        "reason": "47.69%高于25.03%，与“远低于”的表述相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。"
+          }
+        ],
+        "reason": "收入金额单位应为亿元，此处误用“万吨”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。"
+          }
+        ],
+        "reason": "列示四项产品却给出五个收入数字，项目与数值个数不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 78,
+      "end": 151,
+      "text": "2024年全年，公司实现营业收入100.21亿元（+0.09%），归母净利润6.92亿元（+5.75%），扣非净利润6.23亿元（+0.60%）；",
+      "quantities": [
+        {
+          "value": "100.21",
+          "unit": "亿元",
+          "start": 94,
+          "end": 102
+        },
+        {
+          "value": "+0.09",
+          "unit": "%",
+          "start": 103,
+          "end": 109
+        },
+        {
+          "value": "6.92",
+          "unit": "亿元",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "+5.75",
+          "unit": "%",
+          "start": 123,
+          "end": 129
+        },
+        {
+          "value": "6.23",
+          "unit": "亿元",
+          "start": 136,
+          "end": 142
+        },
+        {
+          "value": "+0.60",
+          "unit": "%",
+          "start": 143,
+          "end": 149
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 78,
+      "end": 151,
+      "text": "2024年全年，公司实现营业收入100.21亿元（+0.09%），归母净利润6.92亿元（+5.75%），扣非净利润6.23亿元（+0.60%）；",
+      "quantities": [
+        {
+          "value": "100.21",
+          "unit": "亿元",
+          "start": 94,
+          "end": 102
+        },
+        {
+          "value": "+0.09",
+          "unit": "%",
+          "start": 103,
+          "end": 109
+        },
+        {
+          "value": "6.92",
+          "unit": "亿元",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "+5.75",
+          "unit": "%",
+          "start": 123,
+          "end": 129
+        },
+        {
+          "value": "6.23",
+          "unit": "亿元",
+          "start": 136,
+          "end": 142
+        },
+        {
+          "value": "+0.60",
+          "unit": "%",
+          "start": 143,
+          "end": 149
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 78,
+      "end": 151,
+      "text": "2024年全年，公司实现营业收入100.21亿元（+0.09%），归母净利润6.92亿元（+5.75%），扣非净利润6.23亿元（+0.60%）；",
+      "quantities": [
+        {
+          "value": "100.21",
+          "unit": "亿元",
+          "start": 94,
+          "end": 102
+        },
+        {
+          "value": "+0.09",
+          "unit": "%",
+          "start": 103,
+          "end": 109
+        },
+        {
+          "value": "6.92",
+          "unit": "亿元",
+          "start": 116,
+          "end": 122
+        },
+        {
+          "value": "+5.75",
+          "unit": "%",
+          "start": 123,
+          "end": 129
+        },
+        {
+          "value": "6.23",
+          "unit": "亿元",
+          "start": 136,
+          "end": 142
+        },
+        {
+          "value": "+0.60",
+          "unit": "%",
+          "start": 143,
+          "end": 149
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 151,
+      "end": 226,
+      "text": "2024年单四季度，公司实现营业收入25.97亿元（-3.63%），归母净利润0.75亿元（-0.97%），扣非净利润0.16亿元（-74.94%）；",
+      "quantities": [
+        {
+          "value": "25.97",
+          "unit": "亿元",
+          "start": 169,
+          "end": 176
+        },
+        {
+          "value": "-3.63",
+          "unit": "%",
+          "start": 177,
+          "end": 183
+        },
+        {
+          "value": "0.75",
+          "unit": "亿元",
+          "start": 190,
+          "end": 196
+        },
+        {
+          "value": "-0.97",
+          "unit": "%",
+          "start": 197,
+          "end": 203
+        },
+        {
+          "value": "0.16",
+          "unit": "亿元",
+          "start": 210,
+          "end": 216
+        },
+        {
+          "value": "-74.94",
+          "unit": "%",
+          "start": 217,
+          "end": 224
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 151,
+      "end": 226,
+      "text": "2024年单四季度，公司实现营业收入25.97亿元（-3.63%），归母净利润0.75亿元（-0.97%），扣非净利润0.16亿元（-74.94%）；",
+      "quantities": [
+        {
+          "value": "25.97",
+          "unit": "亿元",
+          "start": 169,
+          "end": 176
+        },
+        {
+          "value": "-3.63",
+          "unit": "%",
+          "start": 177,
+          "end": 183
+        },
+        {
+          "value": "0.75",
+          "unit": "亿元",
+          "start": 190,
+          "end": 196
+        },
+        {
+          "value": "-0.97",
+          "unit": "%",
+          "start": 197,
+          "end": 203
+        },
+        {
+          "value": "0.16",
+          "unit": "亿元",
+          "start": 210,
+          "end": 216
+        },
+        {
+          "value": "-74.94",
+          "unit": "%",
+          "start": 217,
+          "end": 224
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 151,
+      "end": 226,
+      "text": "2024年单四季度，公司实现营业收入25.97亿元（-3.63%），归母净利润0.75亿元（-0.97%），扣非净利润0.16亿元（-74.94%）；",
+      "quantities": [
+        {
+          "value": "25.97",
+          "unit": "亿元",
+          "start": 169,
+          "end": 176
+        },
+        {
+          "value": "-3.63",
+          "unit": "%",
+          "start": 177,
+          "end": 183
+        },
+        {
+          "value": "0.75",
+          "unit": "亿元",
+          "start": 190,
+          "end": 196
+        },
+        {
+          "value": "-0.97",
+          "unit": "%",
+          "start": 197,
+          "end": 203
+        },
+        {
+          "value": "0.16",
+          "unit": "亿元",
+          "start": 210,
+          "end": 216
+        },
+        {
+          "value": "-74.94",
+          "unit": "%",
+          "start": 217,
+          "end": 224
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 226,
+      "end": 301,
+      "text": "2025年一季度，公司实现营业收入23.08亿元（-8.74%），归母净利润1.60亿元（-23.97%），扣非净利润1.58亿元（-24.53%）。",
+      "quantities": [
+        {
+          "value": "23.08",
+          "unit": "亿元",
+          "start": 243,
+          "end": 250
+        },
+        {
+          "value": "-8.74",
+          "unit": "%",
+          "start": 251,
+          "end": 257
+        },
+        {
+          "value": "1.60",
+          "unit": "亿元",
+          "start": 264,
+          "end": 270
+        },
+        {
+          "value": "-23.97",
+          "unit": "%",
+          "start": 271,
+          "end": 278
+        },
+        {
+          "value": "1.58",
+          "unit": "亿元",
+          "start": 285,
+          "end": 291
+        },
+        {
+          "value": "-24.53",
+          "unit": "%",
+          "start": 292,
+          "end": 299
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 226,
+      "end": 301,
+      "text": "2025年一季度，公司实现营业收入23.08亿元（-8.74%），归母净利润1.60亿元（-23.97%），扣非净利润1.58亿元（-24.53%）。",
+      "quantities": [
+        {
+          "value": "23.08",
+          "unit": "亿元",
+          "start": 243,
+          "end": 250
+        },
+        {
+          "value": "-8.74",
+          "unit": "%",
+          "start": 251,
+          "end": 257
+        },
+        {
+          "value": "1.60",
+          "unit": "亿元",
+          "start": 264,
+          "end": 270
+        },
+        {
+          "value": "-23.97",
+          "unit": "%",
+          "start": 271,
+          "end": 278
+        },
+        {
+          "value": "1.58",
+          "unit": "亿元",
+          "start": 285,
+          "end": 291
+        },
+        {
+          "value": "-24.53",
+          "unit": "%",
+          "start": 292,
+          "end": 299
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 226,
+      "end": 301,
+      "text": "2025年一季度，公司实现营业收入23.08亿元（-8.74%），归母净利润1.60亿元（-23.97%），扣非净利润1.58亿元（-24.53%）。",
+      "quantities": [
+        {
+          "value": "23.08",
+          "unit": "亿元",
+          "start": 243,
+          "end": 250
+        },
+        {
+          "value": "-8.74",
+          "unit": "%",
+          "start": 251,
+          "end": 257
+        },
+        {
+          "value": "1.60",
+          "unit": "亿元",
+          "start": 264,
+          "end": 270
+        },
+        {
+          "value": "-23.97",
+          "unit": "%",
+          "start": 271,
+          "end": 278
+        },
+        {
+          "value": "1.58",
+          "unit": "亿元",
+          "start": 285,
+          "end": 291
+        },
+        {
+          "value": "-24.53",
+          "unit": "%",
+          "start": 292,
+          "end": 299
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 556,
+      "end": 657,
+      "text": "按地区分类，国内/海外收入实现95.93/2.71亿元，同比变化-0.72/12.73%，国内业务相对稳健，国际化业务保持增长，其中国际化业务毛利率（47.69%）远低于国内业务毛利率（25.03%）。",
+      "quantities": [
+        {
+          "value": "2.71",
+          "unit": "亿元",
+          "start": 577,
+          "end": 583
+        },
+        {
+          "value": "12.73",
+          "unit": "%",
+          "start": 594,
+          "end": 600
+        },
+        {
+          "value": "47.69",
+          "unit": "%",
+          "start": 631,
+          "end": 637
+        },
+        {
+          "value": "25.03",
+          "unit": "%",
+          "start": 649,
+          "end": 655
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 556,
+      "end": 657,
+      "text": "按地区分类，国内/海外收入实现95.93/2.71亿元，同比变化-0.72/12.73%，国内业务相对稳健，国际化业务保持增长，其中国际化业务毛利率（47.69%）远低于国内业务毛利率（25.03%）。",
+      "quantities": [
+        {
+          "value": "2.71",
+          "unit": "亿元",
+          "start": 577,
+          "end": 583
+        },
+        {
+          "value": "12.73",
+          "unit": "%",
+          "start": 594,
+          "end": 600
+        },
+        {
+          "value": "47.69",
+          "unit": "%",
+          "start": 631,
+          "end": 637
+        },
+        {
+          "value": "25.03",
+          "unit": "%",
+          "start": 649,
+          "end": 655
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 657,
+      "end": 779,
+      "text": "按产品分类，医疗器械/制药装备/医疗商贸/医疗服务实现收入37.35/21.71/31.25/8.34/8.04万吨，同比变化-10.37/+12.90/+8.04/-9.51%，毛利率变动+2.49/-1.65/-0.16/-2.04pct。",
+      "quantities": [
+        {
+          "value": "-9.51",
+          "unit": "%",
+          "start": 740,
+          "end": 746
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1284,
+      "end": 1379,
+      "text": "我们预计公司2025-2027年营业收入有望分别实现108.24/115.82/123.81亿元（调整前25/26年为113.03/120.21亿元），同比增长8.0%/7.0%/6.9%；",
+      "quantities": [
+        {
+          "value": "123.81",
+          "unit": "亿元",
+          "start": 1324,
+          "end": 1332
+        },
+        {
+          "value": "120.21",
+          "unit": "亿元",
+          "start": 1350,
+          "end": 1358
+        },
+        {
+          "value": "8.0",
+          "unit": "%",
+          "start": 1364,
+          "end": 1368
+        },
+        {
+          "value": "7.0",
+          "unit": "%",
+          "start": 1369,
+          "end": 1373
+        },
+        {
+          "value": "6.9",
+          "unit": "%",
+          "start": 1374,
+          "end": 1378
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1379,
+      "end": 1449,
+      "text": "归母净利润分别实现8.00/8.85/9.53亿元（调整前25/26年为8.64/9.47亿元），同比增长15.7%/10.6%/7.7%；",
+      "quantities": [
+        {
+          "value": "9.53",
+          "unit": "亿元",
+          "start": 1398,
+          "end": 1404
+        },
+        {
+          "value": "9.47",
+          "unit": "亿元",
+          "start": 1420,
+          "end": 1426
+        },
+        {
+          "value": "15.7",
+          "unit": "%",
+          "start": 1432,
+          "end": 1437
+        },
+        {
+          "value": "10.6",
+          "unit": "%",
+          "start": 1438,
+          "end": 1443
+        },
+        {
+          "value": "7.7",
+          "unit": "%",
+          "start": 1444,
+          "end": 1448
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1535,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1535,
+    "processed_ranges": [
+      [
+        0,
+        1535
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1535,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 14,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002759,
+  "source_content_sha256": "fb031021e7cc1d0859d897e3a4dad0adbd0c3be597107db764cf8987c4d765c6"
+}

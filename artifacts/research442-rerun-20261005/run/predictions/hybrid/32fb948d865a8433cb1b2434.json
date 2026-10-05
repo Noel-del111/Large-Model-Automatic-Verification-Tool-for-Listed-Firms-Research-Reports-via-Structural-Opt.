@@ -1,0 +1,285 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000546",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“通用设备下跌%”中百分号前缺少具体数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 110,
+          "end": 172,
+          "text": "具体来看，工程机械下跌1.88%，通用设备下跌%，专用设备下跌1.08%，仪器仪表下跌2.77%，金属制品下跌2.62%，。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "具体来看，工程机械下跌1.88%，通用设备下跌%，专用设备下跌1.08%，仪器仪表下跌2.77%，金属制品下跌2.62%，。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 110,
+          "end": 172,
+          "text": "具体来看，工程机械下跌1.88%，通用设备下跌%，专用设备下跌1.08%，仪器仪表下跌2.77%，金属制品下跌2.62%，。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7a063c95762b5e9029c5bb31",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "5月没有32日，日期本身不存在。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 335,
+          "end": 387,
+          "text": "5月32日，马斯克在社交媒体发帖称，已经重新回到7x24小时工作状态，会睡在会议室、服务器机房或工厂里。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月32日，马斯克在社交媒体发帖称，已经重新回到7x24小时工作状态，会睡在会议室、服务器机房或工厂里。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 335,
+          "end": 387,
+          "text": "5月32日，马斯克在社交媒体发帖称，已经重新回到7x24小时工作状态，会睡在会议室、服务器机房或工厂里。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "608f44ff6f57ce738580e04c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内节目或赛事名称缺失，未填写具体名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 649,
+          "end": 684,
+          "text": "5月25日晚，由中央广播电视总台主办的《》机甲格斗擂台赛，在杭州举办。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月25日晚，由中央广播电视总台主办的《》机甲格斗擂台赛，在杭州举办。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 649,
+          "end": 684,
+          "text": "5月25日晚，由中央广播电视总台主办的《》机甲格斗擂台赛，在杭州举办。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "acbdd4d4e91b8eda10c0ef17",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "身高用面积单位“平方分米”，体重“35吨”与人形机器人格斗场景量级不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 737,
+          "end": 810,
+          "text": "它们身高约130平方分米，体重约35吨，都“身怀绝技”，能做出直拳刺探、左右勾拳、上勾拳、组合拳、前踢、左右侧踢、膝踢、闪避、跌倒起身等复杂动作。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "它们身高约130平方分米，体重约35吨，都“身怀绝技”，能做出直拳刺探、左右勾拳、上勾拳、组合拳、前踢、左右侧踢、膝踢、闪避、跌倒起身等复杂动作。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 737,
+          "end": 810,
+          "text": "它们身高约130平方分米，体重约35吨，都“身怀绝技”，能做出直拳刺探、左右勾拳、上勾拳、组合拳、前踢、左右侧踢、膝踢、闪避、跌倒起身等复杂动作。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b4a8486fdda8b5b85a931a0f",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2104
+        ]
+      ],
+      "estimated_input_tokens": 6681,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:11:32.059799+00:00",
+        "request_sha256": "2d819668ce0a420eb94034e9beb335bb9d7f2960994c857859498c5ec7fa8648",
+        "input_token_estimate": 18589,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280733",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9f4c9d174e4e4b3683729c9dc60ca30c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4422,
+        "output_tokens": 10805,
+        "usage_source": "provider",
+        "duration_seconds": 45.896445,
+        "cost_cny": "0.047642",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "具体来看，工程机械下跌1.88%，通用设备下跌%，专用设备下跌1.08%，仪器仪表下跌2.77%，金属制品下跌2.62%，。"
+          }
+        ],
+        "reason": "“通用设备下跌%”中百分号前缺少具体数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "5月32日，马斯克在社交媒体发帖称，已经重新回到7x24小时工作状态，会睡在会议室、服务器机房或工厂里。"
+          }
+        ],
+        "reason": "5月没有32日，日期本身不存在。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "5月25日晚，由中央广播电视总台主办的《》机甲格斗擂台赛，在杭州举办。"
+          }
+        ],
+        "reason": "书名号内节目或赛事名称缺失，未填写具体名称。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "它们身高约130平方分米，体重约35吨，都“身怀绝技”，能做出直拳刺探、左右勾拳、上勾拳、组合拳、前踢、左右侧踢、膝踢、闪避、跌倒起身等复杂动作。"
+          }
+        ],
+        "reason": "身高用面积单位“平方分米”，体重“35吨”与人形机器人格斗场景量级不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2104,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2104,
+    "processed_ranges": [
+      [
+        0,
+        2104
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2104,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001765,
+  "source_content_sha256": "996f1f44794273db55b68b11123b0f0351bea0959177a53ec5b304e2081c1f1c"
+}

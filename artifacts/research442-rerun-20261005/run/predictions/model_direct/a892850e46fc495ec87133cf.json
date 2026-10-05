@@ -1,0 +1,357 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000397",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "2025年13月不存在，月份取值应在1至12之间，时间信息非法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 452,
+          "end": 504,
+          "text": "印尼首家工厂已于2024年上半年投产，在3个月内即实现损益平衡；印尼第二工厂于2025年13月启动生产。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "印尼首家工厂已于2024年上半年投产，在3个月内即实现损益平衡；印尼第二工厂于2025年13月启动生产。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 452,
+          "end": 504,
+          "text": "印尼首家工厂已于2024年上半年投产，在3个月内即实现损益平衡；印尼第二工厂于2025年13月启动生产。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "95f6ae1a2f27a48ca5a71441",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "该句与前文表述完全重复，已在前句尾段出现，属冗余语句。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "降低客户集中度，提升整体订单质量和议价能力，为未来的可持续发展奠定坚实基础。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "480a56137fc7f400125eea56",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "员工人数应使用“人”或“万人”计量，“17万人次”将人数与人次混淆，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 85,
+          "end": 185,
+          "text": "管理层表示，2024年华利集团工厂数量由2023年的16座增至20座，总员工人数达到17万人次，全年出货量达2.23亿双，同比增长逾17%；营收和净利润分别达到240亿元与38亿元，延续稳健增长趋势。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "管理层表示，2024年华利集团工厂数量由2023年的16座增至20座，总员工人数达到17万人次，全年出货量达2.23亿双，同比增长逾17%；营收和净利润分别达到240亿元与38亿元，延续稳健增长趋势。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 85,
+          "end": 185,
+          "text": "管理层表示，2024年华利集团工厂数量由2023年的16座增至20座，总员工人数达到17万人次，全年出货量达2.23亿双，同比增长逾17%；营收和净利润分别达到240亿元与38亿元，延续稳健增长趋势。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e518f26430ab984ed2323353",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码通常为6位数字，此处“300”仅为3位，不符合股票代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 29,
+          "end": 38,
+          "text": "华利集团(300)"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "华利集团(300)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 29,
+          "end": 38,
+          "text": "华利集团(300)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8b3d9a34b2991ff8adbd5b89",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1265
+        ]
+      ],
+      "estimated_input_tokens": 5886,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:25:02.758805+00:00",
+        "request_sha256": "d90cacfa9db39c3d7999162036a31c18759cff232c715c973f02927f9a0e8113",
+        "input_token_estimate": 16342,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278486",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ffb6f878871b495d85787fd0f94a8e3a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3758,
+        "output_tokens": 6979,
+        "usage_source": "provider",
+        "duration_seconds": 28.948328,
+        "cost_cny": "0.031674"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "印尼首家工厂已于2024年上半年投产，在3个月内即实现损益平衡；印尼第二工厂于2025年13月启动生产。"
+          }
+        ],
+        "reason": "2025年13月不存在，月份取值应在1至12之间，时间信息非法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "降低客户集中度，提升整体订单质量和议价能力，为未来的可持续发展奠定坚实基础。"
+          }
+        ],
+        "reason": "该句与前文表述完全重复，已在前句尾段出现，属冗余语句。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "管理层表示，2024年华利集团工厂数量由2023年的16座增至20座，总员工人数达到17万人次，全年出货量达2.23亿双，同比增长逾17%；营收和净利润分别达到240亿元与38亿元，延续稳健增长趋势。"
+          }
+        ],
+        "reason": "员工人数应使用“人”或“万人”计量，“17万人次”将人数与人次混淆，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "华利集团(300)"
+          }
+        ],
+        "reason": "股票代码通常为6位数字，此处“300”仅为3位，不符合股票代码格式。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "降低客户集中度，提升整体订单质量和议价能力，为未来的可持续发展奠定坚实基础。"
+          }
+        ],
+        "reason": "该句与前文表述完全重复，已在前句尾段出现，属冗余语句。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 155,
+      "end": 185,
+      "text": "营收和净利润分别达到240亿元与38亿元，延续稳健增长趋势。",
+      "quantities": [
+        {
+          "value": "240",
+          "unit": "亿元",
+          "start": 165,
+          "end": 170
+        },
+        {
+          "value": "38",
+          "unit": "亿元",
+          "start": 171,
+          "end": 175
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 155,
+      "end": 185,
+      "text": "营收和净利润分别达到240亿元与38亿元，延续稳健增长趋势。",
+      "quantities": [
+        {
+          "value": "240",
+          "unit": "亿元",
+          "start": 165,
+          "end": 170
+        },
+        {
+          "value": "38",
+          "unit": "亿元",
+          "start": 171,
+          "end": 175
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1038,
+      "end": 1077,
+      "text": "2025-2026年随着新工厂落地毛利率有所承压，中长期毛利率有望回升至高位。",
+      "quantities": [],
+      "periods": [
+        "2026年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 1038,
+      "end": 1077,
+      "text": "2025-2026年随着新工厂落地毛利率有所承压，中长期毛利率有望回升至高位。",
+      "quantities": [],
+      "periods": [
+        "2026年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1265,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1265,
+    "processed_ranges": [
+      [
+        0,
+        1265
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 28.972883,
+  "source_content_sha256": "09ccf89fd099981d83f910524a77e7a76b9b51e3dbc2ed34dea69d26c1b10028"
+}

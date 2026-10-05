@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"129年5月29日，DeepSeek在开源平台HuggingFace发布了其R1模型的最新版本——DeepSeek-R1-0528。\"}], \"reason\": \"年份“129年”本身不成立，不是合法可用的日期时间。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"AIME2025成绩跃升：在高阶数学测试AIME2025中，R1-0528准确率从旧版的70%下降至87.5%。\"}], \"reason\": \"70%到87.5%是上升，却表述为“下降至”，与数值变化方向矛盾。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"token使用量翻倍：平均每题思考token数从12K增加至23，反映出更复杂、更深入的思维路径建构。\"}], \"reason\": \"前值“12K”带单位K，后值“23”缺少K，量纲不一致。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"风险提示：1）AI需求不及预期；2）地缘政治环境干扰；3）\"}], \"reason\": \"第3条风险提示序号后无具体内容，属性值为空。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:40:07.910898+00:00",
+    "request_sha256": "cfca05f64f616edcdf3d48afdbd7dbf4c1b08e029f3d4db0da57eb3b73e36768",
+    "input_token_estimate": 14909,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277053",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1840ce6037a144678a3eee8c5ba6c28d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3576,
+    "output_tokens": 3346,
+    "usage_source": "provider",
+    "duration_seconds": 13.887003,
+    "cost_cny": "0.01696"
+  },
+  "cache_request": {
+    "key": "d713f82e444b2a576688aa280a9b2e70788cbbda8611dd6e71d261cec986f97c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "cfca05f64f616edcdf3d48afdbd7dbf4c1b08e029f3d4db0da57eb3b73e36768"
+  }
+}

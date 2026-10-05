@@ -1,0 +1,241 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000227",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "4月只有30天，不存在4月31日，日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 182,
+          "end": 250,
+          "text": "4月31日中共中央政治局召开会议，会议分析研究当前经济形势和经济工作，审议《关于持续深入推进长三角一体化高质量发展若干政策措施的意见》。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月31日中共中央政治局召开会议，会议分析研究当前经济形势和经济工作，审议《关于持续深入推进长三角一体化高质量发展若干政策措施的意见》。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 182,
+          "end": 250,
+          "text": "4月31日中共中央政治局召开会议，会议分析研究当前经济形势和经济工作，审议《关于持续深入推进长三角一体化高质量发展若干政策措施的意见》。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9222a1843945a7150a26cd8d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“申万电子指数上涨”后直接接逗号，缺少应报告的上涨幅度数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 41,
+          "end": 99,
+          "text": "2024年4月29日至5月5日期间，沪深300指数上涨0.56%，申万电子指数上涨，在31个申万一级行业中排第10。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年4月29日至5月5日期间，沪深300指数上涨0.56%，申万电子指数上涨，在31个申万一级行业中排第10。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 41,
+          "end": 99,
+          "text": "2024年4月29日至5月5日期间，沪深300指数上涨0.56%，申万电子指数上涨，在31个申万一级行业中排第10。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7c220a4c171922c3a2792e0e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "381除以482约等于79.05%，原文的99.05%与上涨个股数和总个股数不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 981,
+          "end": 1034,
+          "text": "期间电子板块大部分个股上涨：申万电子行业482只个股中，上涨381只，下跌98只，上涨比例为99.05%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "期间电子板块大部分个股上涨：申万电子行业482只个股中，上涨381只，下跌98只，上涨比例为99.05%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 981,
+          "end": 1034,
+          "text": "期间电子板块大部分个股上涨：申万电子行业482只个股中，上涨381只，下跌98只，上涨比例为99.05%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b8dc47186d03b4e83166854d",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1097
+        ]
+      ],
+      "estimated_input_tokens": 5659,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:16:32.493533+00:00",
+        "request_sha256": "cb06640b583519e812a8dc1e6cb125770a487afbcdbb922ea3ab1128f9cf87c3",
+        "input_token_estimate": 15744,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277888",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "eee41d6ecd5348539966dbce94901392",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3689,
+        "output_tokens": 3229,
+        "usage_source": "provider",
+        "duration_seconds": 13.127282,
+        "cost_cny": "0.016605",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "4月31日中共中央政治局召开会议，会议分析研究当前经济形势和经济工作，审议《关于持续深入推进长三角一体化高质量发展若干政策措施的意见》。"
+          }
+        ],
+        "reason": "4月只有30天，不存在4月31日，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年4月29日至5月5日期间，沪深300指数上涨0.56%，申万电子指数上涨，在31个申万一级行业中排第10。"
+          }
+        ],
+        "reason": "“申万电子指数上涨”后直接接逗号，缺少应报告的上涨幅度数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "期间电子板块大部分个股上涨：申万电子行业482只个股中，上涨381只，下跌98只，上涨比例为99.05%。"
+          }
+        ],
+        "reason": "381除以482约等于79.05%，原文的99.05%与上涨个股数和总个股数不符。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1097,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1097,
+    "processed_ranges": [
+      [
+        0,
+        1097
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1097,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001503,
+  "source_content_sha256": "fa5b23afc3e972f3959f54530e7c3756e031614792bf1bf7af8352c96143cdd9"
+}

@@ -1,0 +1,671 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000360",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "法规引用错误",
+      "reason": "书名号内法规名称空缺，引用文件不完整，无法核验具体政策依据。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 283,
+          "end": 329,
+          "text": "2024年12月，财政部、税务总局公布《》，取消铝材出口退税，但公司未受相关政策变动显著影响"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年12月，财政部、税务总局公布《》，取消铝材出口退税，但公司未受相关政策变动显著影响"
+        }
+      ],
+      "spans": [
+        {
+          "start": 283,
+          "end": 329,
+          "text": "2024年12月，财政部、税务总局公布《》，取消铝材出口退税，但公司未受相关政策变动显著影响"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "af0254872ee66e3054130917",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一原因说明连续重复一次，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 615,
+          "end": 658,
+          "text": "其中研发费用减少主要系研发物料消耗减少所致。\n研发费用减少主要系研发物料消耗减少所致。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中研发费用减少主要系研发物料消耗减少所致。\n研发费用减少主要系研发物料消耗减少所致。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 615,
+          "end": 658,
+          "text": "其中研发费用减少主要系研发物料消耗减少所致。\n研发费用减少主要系研发物料消耗减少所致。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bcdf496161e8906d29594903",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“减少”与负值“-2.78pct”连用，按字面表示增加，变动方向自相矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 502,
+          "end": 537,
+          "text": "2024年公司期间费用率为2.34%，较去年同期减少-2.78pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司期间费用率为2.34%，较去年同期减少-2.78pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 502,
+          "end": 537,
+          "text": "2024年公司期间费用率为2.34%，较去年同期减少-2.78pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1d17e6baa4cdd9396b5a29c7",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“低端化”与“高附加值方向优化”在同一句中互相排斥，不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 949,
+          "end": 981,
+          "text": "产品结构持续向低端化、高附加值方向优化，促进公司利润率水平提升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "产品结构持续向低端化、高附加值方向优化，促进公司利润率水平提升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 949,
+          "end": 981,
+          "text": "产品结构持续向低端化、高附加值方向优化，促进公司利润率水平提升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "89d7ece774d0dcbe1328cf3d",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "模糊语言",
+      "reason": "“提高约5%”可解释为相对提高5%或提高5个百分点，关键含义不明确。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 913,
+          "end": 949,
+          "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 913,
+          "end": 949,
+          "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4d35ec0b66bf9f7f41706b38",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "金融要素缺失",
+      "reason": "标题明确称周转率水平提升，但正文未给出任何周转率数据或变化依据。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 763,
+          "end": 780,
+          "text": "产品结构不断改善，周转率水平提升。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "产品结构不断改善，周转率水平提升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 763,
+          "end": 780,
+          "text": "产品结构不断改善，周转率水平提升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5f973d0c85ff05539b8aed05",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1587
+        ]
+      ],
+      "estimated_input_tokens": 6018,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:53:10.630180+00:00",
+        "request_sha256": "a5531e44afe98f9898272e07c94b1de67617ca035a9000e7ac80eec2ae95aea6",
+        "input_token_estimate": 16778,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278922",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "edaa150d6ecb49a897d3329f1988a0f9",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3994,
+        "output_tokens": 10389,
+        "usage_source": "provider",
+        "duration_seconds": 41.510853,
+        "cost_cny": "0.04555"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "法规引用错误",
+        "spans": [
+          {
+            "text": "2024年12月，财政部、税务总局公布《》，取消铝材出口退税，但公司未受相关政策变动显著影响"
+          }
+        ],
+        "reason": "书名号内法规名称空缺，引用文件不完整，无法核验具体政策依据。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "其中研发费用减少主要系研发物料消耗减少所致。\n研发费用减少主要系研发物料消耗减少所致。"
+          }
+        ],
+        "reason": "同一原因说明连续重复一次，未增加新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年公司期间费用率为2.34%，较去年同期减少-2.78pct。"
+          }
+        ],
+        "reason": "“减少”与负值“-2.78pct”连用，按字面表示增加，变动方向自相矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "产品结构持续向低端化、高附加值方向优化，促进公司利润率水平提升。"
+          }
+        ],
+        "reason": "“低端化”与“高附加值方向优化”在同一句中互相排斥，不能同时成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "模糊语言",
+        "spans": [
+          {
+            "text": "2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。"
+          }
+        ],
+        "reason": "“提高约5%”可解释为相对提高5%或提高5个百分点，关键含义不明确。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "spans": [
+          {
+            "text": "产品结构不断改善，周转率水平提升。"
+          }
+        ],
+        "reason": "标题明确称周转率水平提升，但正文未给出任何周转率数据或变化依据。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 41,
+      "end": 126,
+      "text": "事件：公司公布2024年年报及2025年一季报，2024年公司实现营业收入323.21亿元，同比增长22.23%，扣非后的归母净利润14.46亿元，同比增长37.74%；",
+      "quantities": [
+        {
+          "value": "323.21",
+          "unit": "亿元",
+          "start": 78,
+          "end": 86
+        },
+        {
+          "value": "22.23",
+          "unit": "%",
+          "start": 91,
+          "end": 97
+        },
+        {
+          "value": "14.46",
+          "unit": "亿元",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "37.74",
+          "unit": "%",
+          "start": 119,
+          "end": 125
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 41,
+      "end": 126,
+      "text": "事件：公司公布2024年年报及2025年一季报，2024年公司实现营业收入323.21亿元，同比增长22.23%，扣非后的归母净利润14.46亿元，同比增长37.74%；",
+      "quantities": [
+        {
+          "value": "323.21",
+          "unit": "亿元",
+          "start": 78,
+          "end": 86
+        },
+        {
+          "value": "22.23",
+          "unit": "%",
+          "start": 91,
+          "end": 97
+        },
+        {
+          "value": "14.46",
+          "unit": "亿元",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "37.74",
+          "unit": "%",
+          "start": 119,
+          "end": 125
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 126,
+      "end": 161,
+      "text": "2025年一季度公司实现营业收入81.24亿元，同比增长13.07%。",
+      "quantities": [
+        {
+          "value": "81.24",
+          "unit": "亿元",
+          "start": 142,
+          "end": 149
+        },
+        {
+          "value": "13.07",
+          "unit": "%",
+          "start": 154,
+          "end": 160
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 161,
+      "end": 190,
+      "text": "实现扣非后的归母净利润3.79亿元，同比增长41.73%。",
+      "quantities": [
+        {
+          "value": "3.79",
+          "unit": "亿元",
+          "start": 172,
+          "end": 178
+        },
+        {
+          "value": "41.73",
+          "unit": "%",
+          "start": 183,
+          "end": 189
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 365,
+      "end": 403,
+      "text": "实现单吨净利润1191.71元/吨，与2023年相比提升100.54元/吨。",
+      "quantities": [
+        {
+          "value": "1191.71",
+          "unit": "元",
+          "start": 372,
+          "end": 380
+        },
+        {
+          "value": "100.54",
+          "unit": "元",
+          "start": 393,
+          "end": 400
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 403,
+      "end": 477,
+      "text": "2025年一季度公司铝板带箔实现销量37.85万吨，同比增长10.03%，实现单吨净利润1161.56元/吨，与去年同期相比增加109.29元/吨。",
+      "quantities": [
+        {
+          "value": "10.03",
+          "unit": "%",
+          "start": 433,
+          "end": 439
+        },
+        {
+          "value": "1161.56",
+          "unit": "元",
+          "start": 447,
+          "end": 455
+        },
+        {
+          "value": "109.29",
+          "unit": "元",
+          "start": 467,
+          "end": 474
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": [
+        "年一季度公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 981,
+      "end": 1037,
+      "text": "2025年一季度和2024年公司销售净利率分别为5.41%、5.42%，较去年同期增加0.36、0.32pct。",
+      "quantities": [
+        {
+          "value": "5.41",
+          "unit": "%",
+          "start": 1005,
+          "end": 1010
+        },
+        {
+          "value": "5.42",
+          "unit": "%",
+          "start": 1011,
+          "end": 1016
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1373,
+      "end": 1552,
+      "text": "盈利能力与投资建议：考虑到公司产品结构不断优化，在制造业绿色低碳发展背景下，公司再生铝生产规模和使用比率不断扩大，我们维持“增持”评级，预计公司2025-2027年营业收入为356.32/376.02/397.07亿元，净利润为22.06/24.07/24.58亿元，对应的EPS为1.77/1.94/1.98元，对应的PE为6.90/6.32/6.19倍。",
+      "quantities": [
+        {
+          "value": "397.07",
+          "unit": "亿元",
+          "start": 1474,
+          "end": 1482
+        },
+        {
+          "value": "24.58",
+          "unit": "亿元",
+          "start": 1499,
+          "end": 1506
+        },
+        {
+          "value": "1.98",
+          "unit": "元",
+          "start": 1524,
+          "end": 1529
+        },
+        {
+          "value": "6.19",
+          "unit": "倍",
+          "start": 1546,
+          "end": 1551
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑到公司",
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1373,
+      "end": 1552,
+      "text": "盈利能力与投资建议：考虑到公司产品结构不断优化，在制造业绿色低碳发展背景下，公司再生铝生产规模和使用比率不断扩大，我们维持“增持”评级，预计公司2025-2027年营业收入为356.32/376.02/397.07亿元，净利润为22.06/24.07/24.58亿元，对应的EPS为1.77/1.94/1.98元，对应的PE为6.90/6.32/6.19倍。",
+      "quantities": [
+        {
+          "value": "397.07",
+          "unit": "亿元",
+          "start": 1474,
+          "end": 1482
+        },
+        {
+          "value": "24.58",
+          "unit": "亿元",
+          "start": 1499,
+          "end": 1506
+        },
+        {
+          "value": "1.98",
+          "unit": "元",
+          "start": 1524,
+          "end": 1529
+        },
+        {
+          "value": "6.19",
+          "unit": "倍",
+          "start": 1546,
+          "end": 1551
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑到公司",
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1587,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1587,
+    "processed_ranges": [
+      [
+        0,
+        1587
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 41.53469,
+  "source_content_sha256": "f488980c0ddd5cb38a489a85c5588387cd90dd4370961c284f05714bc0bf0825"
+}

@@ -1,0 +1,289 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000564",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "英伟达后的括号内为空，缺少通常应填写的股票代码等非数值属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 457,
+          "end": 493,
+          "text": "5月29日，英伟达（）发布截至4月27日的2026财年第一季度财务报告。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月29日，英伟达（）发布截至4月27日的2026财年第一季度财务报告。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 457,
+          "end": 493,
+          "text": "5月29日，英伟达（）发布截至4月27日的2026财年第一季度财务报告。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "84e3516ec0023b0066430e0b",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "“80亿分”不是规范金额单位，应为“80亿美元”之类，单位表述错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 573,
+          "end": 610,
+          "text": "公司表示这一数据反映出H20产品的收入由于近期出口管制政策而减少80亿分。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司表示这一数据反映出H20产品的收入由于近期出口管制政策而减少80亿分。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 573,
+          "end": 610,
+          "text": "公司表示这一数据反映出H20产品的收入由于近期出口管制政策而减少80亿分。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "897ff19488394abd3850ab21",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "265只上涨、101只下跌、4只停牌合计370只，超过全部360只，合计关系不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 970,
+          "end": 1010,
+          "text": "本周，计算机行业360只A股成分股中，265只股价上涨，101只下跌，4只停牌。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周，计算机行业360只A股成分股中，265只股价上涨，101只下跌，4只停牌。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 970,
+          "end": 1010,
+          "text": "本周，计算机行业360只A股成分股中，265只股价上涨，101只下跌，4只停牌。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3444e482ec8f0a4545095bda",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1483
+        ]
+      ],
+      "estimated_input_tokens": 6033,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:26:27.226250+00:00",
+        "request_sha256": "4f1d211ebee4824c6848ef249298435c59036406b4c52c8a4f71df682b727c32",
+        "input_token_estimate": 16770,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278914",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "0502b7715ccf4bdd85e9c1d58025a054",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3961,
+        "output_tokens": 5426,
+        "usage_source": "provider",
+        "duration_seconds": 21.059831,
+        "cost_cny": "0.025665",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "5月29日，英伟达（）发布截至4月27日的2026财年第一季度财务报告。"
+          }
+        ],
+        "reason": "英伟达后的括号内为空，缺少通常应填写的股票代码等非数值属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司表示这一数据反映出H20产品的收入由于近期出口管制政策而减少80亿分。"
+          }
+        ],
+        "reason": "“80亿分”不是规范金额单位，应为“80亿美元”之类，单位表述错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "本周，计算机行业360只A股成分股中，265只股价上涨，101只下跌，4只停牌。"
+          }
+        ],
+        "reason": "265只上涨、101只下跌、4只停牌合计370只，超过全部360只，合计关系不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 421,
+      "end": 457,
+      "text": "2）英伟达2026财年一季度营收持续高速增长，全球AI算力需求依然强劲。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 610,
+      "end": 640,
+      "text": "我们以450亿美元估算，第二季度营收预计同比增长接近50%。",
+      "quantities": [
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 636,
+          "end": 639
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 640,
+      "end": 697,
+      "text": "英伟达2026财年一季度营收持续高速增长，并且二季度营收预计同比大幅增长，我们认为这表明全球AI算力需求仍然强劲。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 640,
+      "end": 697,
+      "text": "英伟达2026财年一季度营收持续高速增长，并且二季度营收预计同比大幅增长，我们认为这表明全球AI算力需求仍然强劲。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1483,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1483,
+    "processed_ranges": [
+      [
+        0,
+        1483
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1483,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00161,
+  "source_content_sha256": "beab5ef68c698c2ff0a63b24b11ae82263696d39d79bbdf95d0177348b352157"
+}

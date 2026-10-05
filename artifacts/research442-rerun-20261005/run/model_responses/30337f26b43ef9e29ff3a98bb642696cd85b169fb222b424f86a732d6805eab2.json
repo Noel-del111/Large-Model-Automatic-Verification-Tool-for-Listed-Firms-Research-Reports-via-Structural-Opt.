@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"129年公司实现营业收入11.02亿元（+0.93%），归母净利润1.17亿元（+7.17%），扣非净利润1.04亿元（-15.09%），经营现金流净额1.58亿元（+375.87%）。\"}],\"reason\":\"“129年”不是与后文2024Q4、25Q1对应的报告期，应为2024年。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年公司海外收入6.16亿元（+10.58%），国内收入（-9.12%）。\"}],\"reason\":\"“国内收入”后直接接同比增速，缺少国内收入的金额数值。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"其中杂环化合物收入4.75亿元（+0.61%）。\"}],\"reason\":\"前一句列举分子砌块时已列过同一杂环化合物收入数据，此处重复。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"截至2024年底，公司常备药物分子砌块和科学试剂现货库近13万种，其中药物分子砌块为12.7万种，科学试剂为1.3万种。\"}],\"reason\":\"药物分子砌块12.7万种加科学试剂1.3万种为14万种，与“近13万种”不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:17:25.239128+00:00",
+    "request_sha256": "74dd4baf39f647d56198f78559831e5029136d360af1eec331170954d49e6999",
+    "input_token_estimate": 15742,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277886",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "980044e579e84a0bae80c9656b807ada",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3879,
+    "output_tokens": 8481,
+    "usage_source": "provider",
+    "duration_seconds": 33.553314,
+    "cost_cny": "0.037803"
+  },
+  "cache_request": {
+    "key": "30337f26b43ef9e29ff3a98bb642696cd85b169fb222b424f86a732d6805eab2",
+    "purpose": "text_review.detect",
+    "messages_sha256": "74dd4baf39f647d56198f78559831e5029136d360af1eec331170954d49e6999"
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000183",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“29年”年份缺少世纪前缀，在本世纪语境中无法对应具体年份，时间表述不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 444,
+          "end": 518,
+          "text": "与以往几轮铜价上涨趋势不同，29年、2016年、2020年铜价都是经历过一轮暴跌后上涨，本轮铜价在8500美元/吨历史高位横盘一年多时间后向上拉升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "与以往几轮铜价上涨趋势不同，29年、2016年、2020年铜价都是经历过一轮暴跌后上涨，本轮铜价在8500美元/吨历史高位横盘一年多时间后向上拉升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 444,
+          "end": 518,
+          "text": "与以往几轮铜价上涨趋势不同，29年、2016年、2020年铜价都是经历过一轮暴跌后上涨，本轮铜价在8500美元/吨历史高位横盘一年多时间后向上拉升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "10e15120713abcafded29294",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "美联储利率概率预测通常由CME发布，CMB一般指招商银行，机构名称误用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 764,
+          "end": 839,
+          "text": "目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 764,
+          "end": 839,
+          "text": "目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "73c456787aa60018c0b50b2f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "6月不变概率81%与降息概率9%合计仅90%，未构成完整概率分布。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 764,
+          "end": 839,
+          "text": "目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 764,
+          "end": 839,
+          "text": "目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "78acd17119fadb25dab4895f",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1389
+        ]
+      ],
+      "estimated_input_tokens": 5978,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:54:37.311340+00:00",
+        "request_sha256": "2b681547f899a995004ec9f6db2a33221e811267f678462056d3b39b4cde5822",
+        "input_token_estimate": 16620,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278764",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "216cc54cc08140f9be8a8c09d190b2d5",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3930,
+        "output_tokens": 6814,
+        "usage_source": "provider",
+        "duration_seconds": 28.028304,
+        "cost_cny": "0.031186",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "与以往几轮铜价上涨趋势不同，29年、2016年、2020年铜价都是经历过一轮暴跌后上涨，本轮铜价在8500美元/吨历史高位横盘一年多时间后向上拉升。"
+          }
+        ],
+        "reason": "“29年”年份缺少世纪前缀，在本世纪语境中无法对应具体年份，时间表述不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。"
+          }
+        ],
+        "reason": "美联储利率概率预测通常由CME发布，CMB一般指招商银行，机构名称误用。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "目前CMB预测显示，6月不变概率约为81%，降息概率约为9%；7月不变概率约为69%，降息概率约为31%；9月不变概率约为33%，降息概率约为67%。"
+          }
+        ],
+        "reason": "6月不变概率81%与降息概率9%合计仅90%，未构成完整概率分布。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1389,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1389,
+    "processed_ranges": [
+      [
+        0,
+        1389
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1389,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001915,
+  "source_content_sha256": "3cb69eaef5e0498be623e90cd0182fe4b736e3c0b0ab08ab6ea25e41ed30b97c"
+}

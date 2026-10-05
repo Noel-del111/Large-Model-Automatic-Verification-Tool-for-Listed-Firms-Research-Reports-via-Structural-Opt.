@@ -1,0 +1,337 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000176",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“1120年12月30日”年份不成立，应为2020年或2021年等真实年份。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1211,
+          "end": 1295,
+          "text": "根据1120年12月30日制定的《深圳经济特区城市更新条例》，建筑物区分所有权的，应当经专有部分面积占比四分之三以上的物业权利人且占总人数四分之三以上的物业权利人同意。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据1120年12月30日制定的《深圳经济特区城市更新条例》，建筑物区分所有权的，应当经专有部分面积占比四分之三以上的物业权利人且占总人数四分之三以上的物业权利人同意。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1211,
+          "end": 1295,
+          "text": "根据1120年12月30日制定的《深圳经济特区城市更新条例》，建筑物区分所有权的，应当经专有部分面积占比四分之三以上的物业权利人且占总人数四分之三以上的物业权利人同意。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4ff0ff51fa13f7a1140f4654",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "“总建筑面积约2.2平”面积单位错误，应为“亿平方米”等，否则数量级不合理。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 270,
+          "end": 373,
+          "text": "截至2022年底，深圳全市以自然村为单位的城中村单元共计2042个，城中村总楼栋约31.9万栋，总套（间）约591.3万，总建筑面积约2.2平，占全市建筑总量比重超过40%，居住人口占全市实有人口约60%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2022年底，深圳全市以自然村为单位的城中村单元共计2042个，城中村总楼栋约31.9万栋，总套（间）约591.3万，总建筑面积约2.2平，占全市建筑总量比重超过40%，居住人口占全市实有人口约60%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 270,
+          "end": 373,
+          "text": "截至2022年底，深圳全市以自然村为单位的城中村单元共计2042个，城中村总楼栋约31.9万栋，总套（间）约591.3万，总建筑面积约2.2平，占全市建筑总量比重超过40%，居住人口占全市实有人口约60%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d8595d826ee43304c294ba11",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "龙岗、宝安、龙华栋数占比30.5%+38.2%+11.5%=80.2%，与前述栋数合计占比70.3%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 474,
+          "end": 522,
+          "text": "辖区建面和栋数前三甲为龙岗、宝安、龙华三区，栋数合计占比70.3%，建筑面积合计占比74.9%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 522,
+          "end": 618,
+          "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。龙华栋数占比为11.5%，建筑面积占比15.4%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "辖区建面和栋数前三甲为龙岗、宝安、龙华三区，栋数合计占比70.3%，建筑面积合计占比74.9%。"
+        },
+        {
+          "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。龙华栋数占比为11.5%，建筑面积占比15.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 474,
+          "end": 522,
+          "text": "辖区建面和栋数前三甲为龙岗、宝安、龙华三区，栋数合计占比70.3%，建筑面积合计占比74.9%。"
+        },
+        {
+          "start": 522,
+          "end": 618,
+          "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。龙华栋数占比为11.5%，建筑面积占比15.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2676f04d5109678fcb972990",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "宝安栋数占比38.2%高于龙岗30.5%，龙岗不可能栋数占比最高、宝安第二。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 522,
+          "end": 593,
+          "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 522,
+          "end": 593,
+          "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5a667bf0762240dd46a0d908",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          3064
+        ]
+      ],
+      "estimated_input_tokens": 7831,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:49:19.400629+00:00",
+        "request_sha256": "1cfa3ecedae5f5f3882bfcb27d35ed79718687a79c923f29e0dd7af50195f1c2",
+        "input_token_estimate": 21691,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.283835",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "20a3aec6e77b4331877db6116c4cd61c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4847,
+        "output_tokens": 10152,
+        "usage_source": "provider",
+        "duration_seconds": 37.626437,
+        "cost_cny": "0.045455",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据1120年12月30日制定的《深圳经济特区城市更新条例》，建筑物区分所有权的，应当经专有部分面积占比四分之三以上的物业权利人且占总人数四分之三以上的物业权利人同意。"
+          }
+        ],
+        "reason": "“1120年12月30日”年份不成立，应为2020年或2021年等真实年份。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "截至2022年底，深圳全市以自然村为单位的城中村单元共计2042个，城中村总楼栋约31.9万栋，总套（间）约591.3万，总建筑面积约2.2平，占全市建筑总量比重超过40%，居住人口占全市实有人口约60%。"
+          }
+        ],
+        "reason": "“总建筑面积约2.2平”面积单位错误，应为“亿平方米”等，否则数量级不合理。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "辖区建面和栋数前三甲为龙岗、宝安、龙华三区，栋数合计占比70.3%，建筑面积合计占比74.9%。"
+          },
+          {
+            "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。龙华栋数占比为11.5%，建筑面积占比15.4%。"
+          }
+        ],
+        "reason": "龙岗、宝安、龙华栋数占比30.5%+38.2%+11.5%=80.2%，与前述栋数合计占比70.3%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "其中，龙岗栋数占比最高，为30.5%，建筑面积占比位居第二，为28.6%；宝安建筑面积占比最高，为30.9%，栋数占比位居第二，为38.2%。"
+          }
+        ],
+        "reason": "宝安栋数占比38.2%高于龙岗30.5%，龙岗不可能栋数占比最高、宝安第二。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "拆除新建类项目，意见征集门槛降低，从规划层面、搬迁实施、资金平衡及前服引入等方面为城中村改造项目落地提供保障支持。"
+          },
+          {
+            "text": "从规划层面、搬迁实施、资金平衡及前服引入等方面为城中村改造项目落地提供保障支持。"
+          }
+        ],
+        "reason": "同一总结句在前后不必要地重复出现。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "拆除新建类项目，意见征集门槛降低，从规划层面、搬迁实施、资金平衡及前服引入等方面为城中村改造项目落地提供保障支持。"
+          },
+          {
+            "text": "从规划层面、搬迁实施、资金平衡及前服引入等方面为城中村改造项目落地提供保障支持。"
+          }
+        ],
+        "reason": "同一总结句在前后不必要地重复出现。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 3064,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 3064,
+    "processed_ranges": [
+      [
+        0,
+        3064
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 3064,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00237,
+  "source_content_sha256": "9de5fe643ff3a01621adc4256a279924b9e4dc63157d29ac3cc6bfd099014c91"
+}

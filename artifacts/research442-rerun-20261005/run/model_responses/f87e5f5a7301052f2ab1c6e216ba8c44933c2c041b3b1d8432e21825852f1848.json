@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"截至2025年3月32日，亚普股份总资产为68.97亿元，资产负债率为33.63%，账面货币资金14.02亿元。\",\"start\":0,\"end\":0}],\"reason\":\"2025年3月没有32日，日期本身不成立。\"},{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"亚普股份(6030)\",\"start\":0,\"end\":0}],\"reason\":\"A股股票代码应为6位数字，此处仅为4位，不符合股票代码格式。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:31:43.296544+00:00",
+    "request_sha256": "1d6491368628f257c17fb2339f4fe8153b5a3a1eac7e1606e238919f0c90dade",
+    "input_token_estimate": 15534,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277678",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "91f44ac59ea24c699540d2483ec69aa7",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3699,
+    "output_tokens": 3663,
+    "usage_source": "provider",
+    "duration_seconds": 16.102425,
+    "cost_cny": "0.018351"
+  },
+  "cache_request": {
+    "key": "f87e5f5a7301052f2ab1c6e216ba8c44933c2c041b3b1d8432e21825852f1848",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1d6491368628f257c17fb2339f4fe8153b5a3a1eac7e1606e238919f0c90dade"
+  }
+}

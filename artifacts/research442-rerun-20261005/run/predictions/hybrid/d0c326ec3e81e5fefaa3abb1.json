@@ -1,0 +1,721 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000477",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "股票代码括号内为空，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 24,
+          "end": 30,
+          "text": "协鑫能科()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "协鑫能科()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 24,
+          "end": 30,
+          "text": "协鑫能科()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ef9bd744eebf878a559aa499",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "“2025年01”日期格式不规范，缺少“月”或“Q1”等时间单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 141,
+          "end": 223,
+          "text": "2025年01公司实现营业收入29.33亿元，同比增长21.49%；归母净利润2.54亿元，同比增长35.15%；扣非归母净利润1.93亿元，同比+176.61%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年01公司实现营业收入29.33亿元，同比增长21.49%；归母净利润2.54亿元，同比增长35.15%；扣非归母净利润1.93亿元，同比+176.61%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 141,
+          "end": 223,
+          "text": "2025年01公司实现营业收入29.33亿元，同比增长21.49%；归母净利润2.54亿元，同比增长35.15%；扣非归母净利润1.93亿元，同比+176.61%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e7f25ede74448cd25c5e3cd2",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "所列分项装机合计为6978.01MW，与总装机5978.01MW不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 596,
+          "end": 707,
+          "text": "截至2025年3月31日，公司并网运营总装机容量为5978.01MW，其中燃机热电联产3017.14MW，燃煤热电联产203MW，光伏发电2128.47MW，风电817.85MW，垃圾发电149MW，储能662.55MW。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2025年3月31日，公司并网运营总装机容量为5978.01MW，其中燃机热电联产3017.14MW，燃煤热电联产203MW，光伏发电2128.47MW，风电817.85MW，垃圾发电149MW，储能662.55MW。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 596,
+          "end": 707,
+          "text": "截至2025年3月31日，公司并网运营总装机容量为5978.01MW，其中燃机热电联产3017.14MW，燃煤热电联产203MW，光伏发电2128.47MW，风电817.85MW，垃圾发电149MW，储能662.55MW。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "77662cadfa1dc8f8575153bb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "按所列光伏、风电、垃圾发电等分项计算，占比与58.23%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 707,
+          "end": 732,
+          "text": "公司可再生能源装机占发电总装机的比例为58.23%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司可再生能源装机占发电总装机的比例为58.23%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 707,
+          "end": 732,
+          "text": "公司可再生能源装机占发电总装机的比例为58.23%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0a2808e2a08dbab35e9a1d8b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "2025Q1毛利率23.30%低于2024年27.66%，却称电厂盈利好转提升毛利率，逻辑矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 225,
+          "end": 247,
+          "text": "2025Q1业绩高增，电厂盈利好转提升毛利率"
+        },
+        {
+          "kind": "source_text",
+          "start": 434,
+          "end": 495,
+          "text": "盈利能力来看，2024年、2025Q1毛利率分别为27.66%、23.30%，，主要系电厂盈利好转及新业务能源服务占比提升"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1业绩高增，电厂盈利好转提升毛利率"
+        },
+        {
+          "text": "盈利能力来看，2024年、2025Q1毛利率分别为27.66%、23.30%，，主要系电厂盈利好转及新业务能源服务占比提升"
+        }
+      ],
+      "spans": [
+        {
+          "start": 225,
+          "end": 247,
+          "text": "2025Q1业绩高增，电厂盈利好转提升毛利率"
+        },
+        {
+          "start": 434,
+          "end": 495,
+          "text": "盈利能力来看，2024年、2025Q1毛利率分别为27.66%、23.30%，，主要系电厂盈利好转及新业务能源服务占比提升"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1870332704706e42da1d9bef",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1322
+        ]
+      ],
+      "estimated_input_tokens": 5729,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:33:53.348564+00:00",
+        "request_sha256": "5cbc7b9820dfd22232b4474e60af555dbbac964afc3b502d77eea0a2f90a351b",
+        "input_token_estimate": 15997,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278141",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "df00956a8f93450b9056fc2161c5f390",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3836,
+        "output_tokens": 8202,
+        "usage_source": "provider",
+        "duration_seconds": 32.809842,
+        "cost_cny": "0.036644",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "协鑫能科()"
+          }
+        ],
+        "reason": "股票代码括号内为空，非数值属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "2025年01公司实现营业收入29.33亿元，同比增长21.49%；归母净利润2.54亿元，同比增长35.15%；扣非归母净利润1.93亿元，同比+176.61%。"
+          }
+        ],
+        "reason": "“2025年01”日期格式不规范，缺少“月”或“Q1”等时间单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "截至2025年3月31日，公司并网运营总装机容量为5978.01MW，其中燃机热电联产3017.14MW，燃煤热电联产203MW，光伏发电2128.47MW，风电817.85MW，垃圾发电149MW，储能662.55MW。"
+          }
+        ],
+        "reason": "所列分项装机合计为6978.01MW，与总装机5978.01MW不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "公司可再生能源装机占发电总装机的比例为58.23%"
+          }
+        ],
+        "reason": "按所列光伏、风电、垃圾发电等分项计算，占比与58.23%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025Q1业绩高增，电厂盈利好转提升毛利率"
+          },
+          {
+            "text": "盈利能力来看，2024年、2025Q1毛利率分别为27.66%、23.30%，，主要系电厂盈利好转及新业务能源服务占比提升"
+          }
+        ],
+        "reason": "2025Q1毛利率23.30%低于2024年27.66%，却称电厂盈利好转提升毛利率，逻辑矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 38,
+      "end": 93,
+      "text": "事件：公司发布2024年年报及2025年一季报，2024年公司实现营业收入97.96亿元，同比下降5.42%；",
+      "quantities": [
+        {
+          "value": "97.96",
+          "unit": "亿元",
+          "start": 75,
+          "end": 82
+        },
+        {
+          "value": "5.42",
+          "unit": "%",
+          "start": 87,
+          "end": 92
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 93,
+      "end": 116,
+      "text": "归母净利润4.89亿元，同比下降46.92%；",
+      "quantities": [
+        {
+          "value": "4.89",
+          "unit": "亿元",
+          "start": 98,
+          "end": 104
+        },
+        {
+          "value": "46.92",
+          "unit": "%",
+          "start": 109,
+          "end": 115
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 116,
+      "end": 141,
+      "text": "扣非归母净利润2.94亿元，同比+190.83%。",
+      "quantities": [
+        {
+          "value": "2.94",
+          "unit": "亿元",
+          "start": 123,
+          "end": 129
+        },
+        {
+          "value": "+190.83",
+          "unit": "%",
+          "start": 132,
+          "end": 140
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 141,
+      "end": 175,
+      "text": "2025年01公司实现营业收入29.33亿元，同比增长21.49%；",
+      "quantities": [
+        {
+          "value": "29.33",
+          "unit": "亿元",
+          "start": 156,
+          "end": 163
+        },
+        {
+          "value": "21.49",
+          "unit": "%",
+          "start": 168,
+          "end": 174
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 175,
+      "end": 198,
+      "text": "归母净利润2.54亿元，同比增长35.15%；",
+      "quantities": [
+        {
+          "value": "2.54",
+          "unit": "亿元",
+          "start": 180,
+          "end": 186
+        },
+        {
+          "value": "35.15",
+          "unit": "%",
+          "start": 191,
+          "end": 197
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 198,
+      "end": 223,
+      "text": "扣非归母净利润1.93亿元，同比+176.61%。",
+      "quantities": [
+        {
+          "value": "1.93",
+          "unit": "亿元",
+          "start": 205,
+          "end": 211
+        },
+        {
+          "value": "+176.61",
+          "unit": "%",
+          "start": 214,
+          "end": 222
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 225,
+      "end": 248,
+      "text": "2025Q1业绩高增，电厂盈利好转提升毛利率\n",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 249,
+      "end": 296,
+      "text": "2024年公司归母净利润出现下滑，主要原因为：1）对部分运营情况不佳的换电等项目计提减值损失；",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 434,
+      "end": 496,
+      "text": "盈利能力来看，2024年、2025Q1毛利率分别为27.66%、23.30%，，主要系电厂盈利好转及新业务能源服务占比提升\n",
+      "quantities": [
+        {
+          "value": "27.66",
+          "unit": "%",
+          "start": 459,
+          "end": 465
+        },
+        {
+          "value": "23.30",
+          "unit": "%",
+          "start": 466,
+          "end": 472
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 762,
+      "end": 807,
+      "text": "2024年能源服务业务收入11.9亿元，同比+337.25%，占营收比重提升至12.2%。",
+      "quantities": [
+        {
+          "value": "11.9",
+          "unit": "亿元",
+          "start": 775,
+          "end": 781
+        },
+        {
+          "value": "+337.25",
+          "unit": "%",
+          "start": 784,
+          "end": 792
+        },
+        {
+          "value": "12.2",
+          "unit": "%",
+          "start": 801,
+          "end": 806
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1172,
+      "end": 1279,
+      "text": "预计公司2025-27年实现营收102.03亿元/110.07亿元/119.86亿元，归母净利润8.06亿元/10.11亿元/11.74亿元，当前股价对应市盈率为14.6X/11.7X/10.0X，维持“买入评级。",
+      "quantities": [
+        {
+          "value": "102.03",
+          "unit": "亿元",
+          "start": 1188,
+          "end": 1196
+        },
+        {
+          "value": "110.07",
+          "unit": "亿元",
+          "start": 1197,
+          "end": 1205
+        },
+        {
+          "value": "119.86",
+          "unit": "亿元",
+          "start": 1206,
+          "end": 1214
+        },
+        {
+          "value": "8.06",
+          "unit": "亿元",
+          "start": 1220,
+          "end": 1226
+        },
+        {
+          "value": "10.11",
+          "unit": "亿元",
+          "start": 1227,
+          "end": 1234
+        },
+        {
+          "value": "11.74",
+          "unit": "亿元",
+          "start": 1235,
+          "end": 1242
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1172,
+      "end": 1279,
+      "text": "预计公司2025-27年实现营收102.03亿元/110.07亿元/119.86亿元，归母净利润8.06亿元/10.11亿元/11.74亿元，当前股价对应市盈率为14.6X/11.7X/10.0X，维持“买入评级。",
+      "quantities": [
+        {
+          "value": "102.03",
+          "unit": "亿元",
+          "start": 1188,
+          "end": 1196
+        },
+        {
+          "value": "110.07",
+          "unit": "亿元",
+          "start": 1197,
+          "end": 1205
+        },
+        {
+          "value": "119.86",
+          "unit": "亿元",
+          "start": 1206,
+          "end": 1214
+        },
+        {
+          "value": "8.06",
+          "unit": "亿元",
+          "start": 1220,
+          "end": 1226
+        },
+        {
+          "value": "10.11",
+          "unit": "亿元",
+          "start": 1227,
+          "end": 1234
+        },
+        {
+          "value": "11.74",
+          "unit": "亿元",
+          "start": 1235,
+          "end": 1242
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 1172,
+      "end": 1279,
+      "text": "预计公司2025-27年实现营收102.03亿元/110.07亿元/119.86亿元，归母净利润8.06亿元/10.11亿元/11.74亿元，当前股价对应市盈率为14.6X/11.7X/10.0X，维持“买入评级。",
+      "quantities": [
+        {
+          "value": "102.03",
+          "unit": "亿元",
+          "start": 1188,
+          "end": 1196
+        },
+        {
+          "value": "110.07",
+          "unit": "亿元",
+          "start": 1197,
+          "end": 1205
+        },
+        {
+          "value": "119.86",
+          "unit": "亿元",
+          "start": 1206,
+          "end": 1214
+        },
+        {
+          "value": "8.06",
+          "unit": "亿元",
+          "start": 1220,
+          "end": 1226
+        },
+        {
+          "value": "10.11",
+          "unit": "亿元",
+          "start": 1227,
+          "end": 1234
+        },
+        {
+          "value": "11.74",
+          "unit": "亿元",
+          "start": 1235,
+          "end": 1242
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1322,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1322,
+    "processed_ranges": [
+      [
+        0,
+        1322
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1322,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 13,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002622,
+  "source_content_sha256": "98985ab34026ffd618dc1e16130d384981b9be00cd41ab7a8f9b4b6d1d0531c3"
+}

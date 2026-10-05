@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"瑞可达亮相ComputeX大会，成为英伟达的全新合作伙伴，迈入全新的成长阶段。瑞可达亮相ComputeX大会，成为英伟达的全新合作伙伴，迈入全新的成长阶段。\"}], \"reason\": \"同一完整句子连续重复两次，未提供新增信息。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"瑞可达展示的AI数据中心解决方案主要包括：1）高速数据传输产品，包括支持200M/400G/800G/1.6T的AEC/ACC/DAC等；2）电源及电力传输产品，包括POWER WHIP和BUSBAR等；3）传输PCIE协议MCIO，GENZ等；4）冷却连接产品，包括UQD等。\"}], \"reason\": \"高速数据传输产品速率等级通常为G/T量级，此处“200M”与后续400G/800G/1.6T量级不符，单位疑误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:33:23.092571+00:00",
+    "request_sha256": "ef05db15a57796d81ea7d2e1a26570a28b3ad2de243d6e5e4f31170cfcb89056",
+    "input_token_estimate": 15626,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27777",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "72e9273d82384b6982bc2bc9d9d77533",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3710,
+    "output_tokens": 4747,
+    "usage_source": "provider",
+    "duration_seconds": 19.508772,
+    "cost_cny": "0.022698"
+  },
+  "cache_request": {
+    "key": "20948176d00893c8a1bcf2e930d800960938632dada37904b11fd78b2bb397ff",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ef05db15a57796d81ea7d2e1a26570a28b3ad2de243d6e5e4f31170cfcb89056"
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000589",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "LME铜价单位应为美元/吨，却写成美元/平方米，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 655,
+          "end": 704,
+          "text": "铜：价格方面，本周LME铜收盘价9560美元/平方米，环比5月16日-5美元/吨，跌幅0.05%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "铜：价格方面，本周LME铜收盘价9560美元/平方米，环比5月16日-5美元/吨，跌幅0.05%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 655,
+          "end": 704,
+          "text": "铜：价格方面，本周LME铜收盘价9560美元/平方米，环比5月16日-5美元/吨，跌幅0.05%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "106e22739a8f0b4bbec8f4c5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "环比下跌14030元/吨，跌幅应为约5.59%，与5.29%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1721,
+          "end": 1769,
+          "text": "价格方面，国内精炼锡价格为251040元/吨，环比5月23日-14030元/吨，跌幅5.29%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "价格方面，国内精炼锡价格为251040元/吨，环比5月23日-14030元/吨，跌幅5.29%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1721,
+          "end": 1769,
+          "text": "价格方面，国内精炼锡价格为251040元/吨，环比5月23日-14030元/吨，跌幅5.29%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d5d339037a7f0cdb8fe1b7ea",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "环比下跌10000元/吨，跌幅应为约4.75%，与4.49%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2001,
+          "end": 2061,
+          "text": "根据百川盈孚数据，价格方面，本周国内锑锭价格为210500元/吨，环比5月23日-10000元/吨，环比跌幅4.49%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据百川盈孚数据，价格方面，本周国内锑锭价格为210500元/吨，环比5月23日-10000元/吨，环比跌幅4.49%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2001,
+          "end": 2061,
+          "text": "根据百川盈孚数据，价格方面，本周国内锑锭价格为210500元/吨，环比5月23日-10000元/吨，环比跌幅4.49%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f8d623b4242cc6ef00660393",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "环比下跌160元/吨，跌幅应为约0.79%，且不应写成负数。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1174,
+          "end": 1222,
+          "text": "铝：价格方面，国内电解铝价格为20240元/吨，环比5月23日-160元/吨，跌幅-0.78%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "铝：价格方面，国内电解铝价格为20240元/吨，环比5月23日-160元/吨，跌幅-0.78%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1174,
+          "end": 1222,
+          "text": "铝：价格方面，国内电解铝价格为20240元/吨，环比5月23日-160元/吨，跌幅-0.78%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d296c4bff2760596cb72ca96",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2636
+        ]
+      ],
+      "estimated_input_tokens": 7061,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:26:53.057184+00:00",
+        "request_sha256": "0bdf1f07d483a4a3d9d09cb4cac1154fd054948b848e113a815fc1f202344ca9",
+        "input_token_estimate": 19713,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281857",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "42d519d2f73e4e23b1e7819764e7fcfc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4775,
+        "output_tokens": 8854,
+        "usage_source": "provider",
+        "duration_seconds": 35.653366,
+        "cost_cny": "0.040191",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主"
+          }
+        ],
+        "reason": "该小标题紧接着完全重复一次，无新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "新疆地区电解铝即时冶炼利润为3416元/吨，环比5月23日-295元/吨。"
+          }
+        ],
+        "reason": "同一利润数据句紧接着完全重复一次，造成冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "铜：价格方面，本周LME铜收盘价9560美元/平方米，环比5月16日-5美元/吨，跌幅0.05%。"
+          }
+        ],
+        "reason": "LME铜价单位应为美元/吨，却写成美元/平方米，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "价格方面，国内精炼锡价格为251040元/吨，环比5月23日-14030元/吨，跌幅5.29%。"
+          }
+        ],
+        "reason": "环比下跌14030元/吨，跌幅应为约5.59%，与5.29%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "根据百川盈孚数据，价格方面，本周国内锑锭价格为210500元/吨，环比5月23日-10000元/吨，环比跌幅4.49%。"
+          }
+        ],
+        "reason": "环比下跌10000元/吨，跌幅应为约4.75%，与4.49%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "铝：价格方面，国内电解铝价格为20240元/吨，环比5月23日-160元/吨，跌幅-0.78%。"
+          }
+        ],
+        "reason": "环比下跌160元/吨，跌幅应为约0.79%，且不应写成负数。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主"
+          }
+        ],
+        "reason": "该小标题紧接着完全重复一次，无新增信息。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "新疆地区电解铝即时冶炼利润为3416元/吨，环比5月23日-295元/吨。"
+          }
+        ],
+        "reason": "同一利润数据句紧接着完全重复一次，造成冗余。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 2636,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 2636,
+    "processed_ranges": [
+      [
+        0,
+        2636
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 2636,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002129,
+  "source_content_sha256": "50e7a92af580f85f639ac9e57758ccdadb8801f748adc93935e1abfa50c6654a"
+}

@@ -1,0 +1,678 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000434",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后括号内股票代码为空，非数值属性值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 36,
+          "end": 42,
+          "text": "球冠电缆()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "球冠电缆()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 36,
+          "end": 42,
+          "text": "球冠电缆()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b20fa70b817b637d91765b86",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "公司主业为电线电缆，产品列举中却出现“轨道交通芯片”，与同类电缆产品及行业属性不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 139,
+          "end": 356,
+          "text": "公司以轨道交通芯片、特种用途高/中/低压线缆、新能源电缆、超高压直流电缆、军工电缆为代表的新一代电缆产品广泛应用于电力、能源、交通、智能装备、石化、冶金、工矿、通讯、建筑工程等多个领域，为国家电网和南方电网及其附属电力公司、工矿企业、各类用户建设工程及经销商提供优质高效的电线电缆产品及工程服务，并在川藏联网工程、广州亚运、三峡电站、大型火电、石化工程、钢铁项目、各地轨道交通工程、联合国维和部队建设工程等国内外高端市场占有一席之地。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司以轨道交通芯片、特种用途高/中/低压线缆、新能源电缆、超高压直流电缆、军工电缆为代表的新一代电缆产品广泛应用于电力、能源、交通、智能装备、石化、冶金、工矿、通讯、建筑工程等多个领域，为国家电网和南方电网及其附属电力公司、工矿企业、各类用户建设工程及经销商提供优质高效的电线电缆产品及工程服务，并在川藏联网工程、广州亚运、三峡电站、大型火电、石化工程、钢铁项目、各地轨道交通工程、联合国维和部队建设工程等国内外高端市场占有一席之地。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 139,
+          "end": 356,
+          "text": "公司以轨道交通芯片、特种用途高/中/低压线缆、新能源电缆、超高压直流电缆、军工电缆为代表的新一代电缆产品广泛应用于电力、能源、交通、智能装备、石化、冶金、工矿、通讯、建筑工程等多个领域，为国家电网和南方电网及其附属电力公司、工矿企业、各类用户建设工程及经销商提供优质高效的电线电缆产品及工程服务，并在川藏联网工程、广州亚运、三峡电站、大型火电、石化工程、钢铁项目、各地轨道交通工程、联合国维和部队建设工程等国内外高端市场占有一席之地。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d9c1807a51f322249566cdd0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "“高压及超高压电缆”又限定为“66kV以下”，与高压超高压的通常电压等级及前面中压6~35kV分类相矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 501,
+          "end": 599,
+          "text": "公司电力电缆可分为低压电力电缆（1kV及以下）、中压电力电缆（6~35kV）和高压及超高压电缆（66kV以下），2024年该业务营收达32.95亿元，同比增长22.16%，占营业收入总额的92%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司电力电缆可分为低压电力电缆（1kV及以下）、中压电力电缆（6~35kV）和高压及超高压电缆（66kV以下），2024年该业务营收达32.95亿元，同比增长22.16%，占营业收入总额的92%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 501,
+          "end": 599,
+          "text": "公司电力电缆可分为低压电力电缆（1kV及以下）、中压电力电缆（6~35kV）和高压及超高压电缆（66kV以下），2024年该业务营收达32.95亿元，同比增长22.16%，占营业收入总额的92%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "443230f12dae51e6e5f530f9",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "国家战略常用表述为“碳达峰、碳中和”，此处“碳达标”属术语误用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1014,
+          "end": 1079,
+          "text": "在“新基建”、“构建新型电力系统”、“碳中和、碳达标”等国家战略的推动下，相关领域建设投资方兴未艾，为线缆行业提供了新的发展机遇。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在“新基建”、“构建新型电力系统”、“碳中和、碳达标”等国家战略的推动下，相关领域建设投资方兴未艾，为线缆行业提供了新的发展机遇。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1014,
+          "end": 1079,
+          "text": "在“新基建”、“构建新型电力系统”、“碳中和、碳达标”等国家战略的推动下，相关领域建设投资方兴未艾，为线缆行业提供了新的发展机遇。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "094794a989dbf67ea9fce99f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1885
+        ]
+      ],
+      "estimated_input_tokens": 6446,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:56:37.408464+00:00",
+        "request_sha256": "a121851ba66e51815ac5f55c511cea0f371325e2e060bc6402e87ba6912f36db",
+        "input_token_estimate": 17938,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280082",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "c5c851a707a4446eb7b5736370a4793f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4135,
+        "output_tokens": 8053,
+        "usage_source": "provider",
+        "duration_seconds": 33.84005,
+        "cost_cny": "0.036347",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "球冠电缆()"
+          }
+        ],
+        "reason": "公司名称后括号内股票代码为空，非数值属性值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司以轨道交通芯片、特种用途高/中/低压线缆、新能源电缆、超高压直流电缆、军工电缆为代表的新一代电缆产品广泛应用于电力、能源、交通、智能装备、石化、冶金、工矿、通讯、建筑工程等多个领域，为国家电网和南方电网及其附属电力公司、工矿企业、各类用户建设工程及经销商提供优质高效的电线电缆产品及工程服务，并在川藏联网工程、广州亚运、三峡电站、大型火电、石化工程、钢铁项目、各地轨道交通工程、联合国维和部队建设工程等国内外高端市场占有一席之地。"
+          }
+        ],
+        "reason": "公司主业为电线电缆，产品列举中却出现“轨道交通芯片”，与同类电缆产品及行业属性不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司电力电缆可分为低压电力电缆（1kV及以下）、中压电力电缆（6~35kV）和高压及超高压电缆（66kV以下），2024年该业务营收达32.95亿元，同比增长22.16%，占营业收入总额的92%；"
+          }
+        ],
+        "reason": "“高压及超高压电缆”又限定为“66kV以下”，与高压超高压的通常电压等级及前面中压6~35kV分类相矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "在“新基建”、“构建新型电力系统”、“碳中和、碳达标”等国家战略的推动下，相关领域建设投资方兴未艾，为线缆行业提供了新的发展机遇。"
+          }
+        ],
+        "reason": "国家战略常用表述为“碳达峰、碳中和”，此处“碳达标”属术语误用。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024年全国电网工程投资完成6,083亿元，同比增加15.3%。"
+          }
+        ],
+        "reason": "该句在文中连续重复出现两次，同一信息不必要地重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024年全国电网工程投资完成6,083亿元，同比增加15.3%。"
+          }
+        ],
+        "reason": "该句在文中连续重复出现两次，同一信息不必要地重复。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 51,
+      "end": 86,
+      "text": "电线电缆国家级专精特新“小巨人”，2024年营收yoy+20.19%。",
+      "quantities": [
+        {
+          "value": "+20.19",
+          "unit": "%",
+          "start": 78,
+          "end": 85
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 356,
+      "end": 411,
+      "text": "2024年实现营业收入35.85亿元（yoy+20.19%）、，毛利率、净利率分别为10.86%、3.71%；",
+      "quantities": [
+        {
+          "value": "35.85",
+          "unit": "亿元",
+          "start": 367,
+          "end": 374
+        },
+        {
+          "value": "+20.19",
+          "unit": "%",
+          "start": 378,
+          "end": 385
+        },
+        {
+          "value": "10.86",
+          "unit": "%",
+          "start": 398,
+          "end": 404
+        },
+        {
+          "value": "3.71",
+          "unit": "%",
+          "start": 405,
+          "end": 410
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 356,
+      "end": 411,
+      "text": "2024年实现营业收入35.85亿元（yoy+20.19%）、，毛利率、净利率分别为10.86%、3.71%；",
+      "quantities": [
+        {
+          "value": "35.85",
+          "unit": "亿元",
+          "start": 367,
+          "end": 374
+        },
+        {
+          "value": "+20.19",
+          "unit": "%",
+          "start": 378,
+          "end": 385
+        },
+        {
+          "value": "10.86",
+          "unit": "%",
+          "start": 398,
+          "end": 404
+        },
+        {
+          "value": "3.71",
+          "unit": "%",
+          "start": 405,
+          "end": 410
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 356,
+      "end": 411,
+      "text": "2024年实现营业收入35.85亿元（yoy+20.19%）、，毛利率、净利率分别为10.86%、3.71%；",
+      "quantities": [
+        {
+          "value": "35.85",
+          "unit": "亿元",
+          "start": 367,
+          "end": 374
+        },
+        {
+          "value": "+20.19",
+          "unit": "%",
+          "start": 378,
+          "end": 385
+        },
+        {
+          "value": "10.86",
+          "unit": "%",
+          "start": 398,
+          "end": 404
+        },
+        {
+          "value": "3.71",
+          "unit": "%",
+          "start": 405,
+          "end": 410
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 411,
+      "end": 456,
+      "text": "2025Q1实现营业收入6.42亿元（yoy+5.63%）、归母净利润1607.59万元。",
+      "quantities": [
+        {
+          "value": "6.42",
+          "unit": "亿元",
+          "start": 423,
+          "end": 429
+        },
+        {
+          "value": "+5.63",
+          "unit": "%",
+          "start": 433,
+          "end": 439
+        },
+        {
+          "value": "1607.59",
+          "unit": "万元",
+          "start": 446,
+          "end": 455
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 411,
+      "end": 456,
+      "text": "2025Q1实现营业收入6.42亿元（yoy+5.63%）、归母净利润1607.59万元。",
+      "quantities": [
+        {
+          "value": "6.42",
+          "unit": "亿元",
+          "start": 423,
+          "end": 429
+        },
+        {
+          "value": "+5.63",
+          "unit": "%",
+          "start": 433,
+          "end": 439
+        },
+        {
+          "value": "1607.59",
+          "unit": "万元",
+          "start": 446,
+          "end": 455
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 458,
+      "end": 501,
+      "text": "2024年电力电缆业务营收yoy+22%，设备更新政策、新基建计划等驱动线缆需求扩容。",
+      "quantities": [
+        {
+          "value": "+22",
+          "unit": "%",
+          "start": 474,
+          "end": 478
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 501,
+      "end": 599,
+      "text": "公司电力电缆可分为低压电力电缆（1kV及以下）、中压电力电缆（6~35kV）和高压及超高压电缆（66kV以下），2024年该业务营收达32.95亿元，同比增长22.16%，占营业收入总额的92%；",
+      "quantities": [
+        {
+          "value": "32.95",
+          "unit": "亿元",
+          "start": 568,
+          "end": 575
+        },
+        {
+          "value": "22.16",
+          "unit": "%",
+          "start": 580,
+          "end": 586
+        },
+        {
+          "value": "92",
+          "unit": "%",
+          "start": 595,
+          "end": 598
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 501,
+      "end": 599,
+      "text": "公司电力电缆可分为低压电力电缆（1kV及以下）、中压电力电缆（6~35kV）和高压及超高压电缆（66kV以下），2024年该业务营收达32.95亿元，同比增长22.16%，占营业收入总额的92%；",
+      "quantities": [
+        {
+          "value": "32.95",
+          "unit": "亿元",
+          "start": 568,
+          "end": 575
+        },
+        {
+          "value": "22.16",
+          "unit": "%",
+          "start": 580,
+          "end": 586
+        },
+        {
+          "value": "92",
+          "unit": "%",
+          "start": 595,
+          "end": 598
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 599,
+      "end": 681,
+      "text": "电气装备用电线电缆可用于布电线、轨道交通、航天、军工、海洋工程、高端装备及新能源等领域，2024年该营收达2.74亿元，同比增长17.17%，占营业收入总额的8%。",
+      "quantities": [
+        {
+          "value": "2.74",
+          "unit": "亿元",
+          "start": 652,
+          "end": 658
+        },
+        {
+          "value": "17.17",
+          "unit": "%",
+          "start": 663,
+          "end": 669
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 678,
+          "end": 680
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 599,
+      "end": 681,
+      "text": "电气装备用电线电缆可用于布电线、轨道交通、航天、军工、海洋工程、高端装备及新能源等领域，2024年该营收达2.74亿元，同比增长17.17%，占营业收入总额的8%。",
+      "quantities": [
+        {
+          "value": "2.74",
+          "unit": "亿元",
+          "start": 652,
+          "end": 658
+        },
+        {
+          "value": "17.17",
+          "unit": "%",
+          "start": 663,
+          "end": 669
+        },
+        {
+          "value": "8",
+          "unit": "%",
+          "start": 678,
+          "end": 680
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1630,
+      "end": 1732,
+      "text": "盈利预测与评级：我们预计公司2025-2027年归母净利润分别为1.47/1.71/2.04亿元，对应EPS分别为0.45/0.53/0.63元/股，对应当前股价PE分别为22.4/19.3/16.1倍。",
+      "quantities": [
+        {
+          "value": "2.04",
+          "unit": "亿元",
+          "start": 1672,
+          "end": 1678
+        },
+        {
+          "value": "0.63",
+          "unit": "元/股",
+          "start": 1697,
+          "end": 1704
+        },
+        {
+          "value": "16.1",
+          "unit": "倍",
+          "start": 1726,
+          "end": 1731
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1885,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1885,
+    "processed_ranges": [
+      [
+        0,
+        1885
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1885,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002672,
+  "source_content_sha256": "c9a26771cc59fd608a2679bf9f42224590766dae701a3ee8ede49897c57fd2c4"
+}

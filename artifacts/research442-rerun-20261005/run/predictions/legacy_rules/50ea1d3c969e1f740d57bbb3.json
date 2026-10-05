@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000369",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "da45833647c936b08502c1b3",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 1154,
+          "end": 1259,
+          "text": "估值\n\n结合2025年一季度销量增长情况以及2026年产品销量及价格展望，调整盈利预测，预计2027-2025年EPS分别为0.84元、0.98元、1.14元，对应PE分别为15.0倍、12.9倍、11.1倍。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1321,
+    "total_chars": 1321,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001288,
+  "source_content_sha256": "7d4a95864666477a1d3292f107eaf237af0f5385c622058253e9629929f8375c"
+}

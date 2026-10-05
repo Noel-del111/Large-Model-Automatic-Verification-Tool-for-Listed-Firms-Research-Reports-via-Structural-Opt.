@@ -1,0 +1,397 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000163",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“净增”后直接接“亿”，缺少具体数值，数量表达不完整。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 34,
+          "end": 51,
+          "text": "PSL投放拉开帷幕，12月净增亿。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "PSL投放拉开帷幕，12月净增亿。",
+          "start": 22,
+          "end": 42
+        }
+      ],
+      "spans": [
+        {
+          "start": 34,
+          "end": 51,
+          "text": "PSL投放拉开帷幕，12月净增亿。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f677277b2281e51ec0557586",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句中“增量均衡投放”连续出现两次，属于不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 641,
+          "end": 692,
+          "text": "央行年度工作会议：优化信贷结构、增量均衡投放、存量提高使用效率、增量均衡投放，确保社融可持续较快增长。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "央行年度工作会议：优化信贷结构、增量均衡投放、存量提高使用效率、增量均衡投放，确保社融可持续较快增长。",
+          "start": 657,
+          "end": 715
+        }
+      ],
+      "spans": [
+        {
+          "start": 641,
+          "end": 692,
+          "text": "央行年度工作会议：优化信贷结构、增量均衡投放、存量提高使用效率、增量均衡投放，确保社融可持续较快增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "bd14bf220d3ee0ee3c8ea62f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "列举三个板块却给出五个涨幅数值，数值个数与对应板块数不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1059,
+          "end": 1122,
+          "text": "从细分板块来看，农商行、国有行、城商行分别上涨2.78%、2.52%、1.25%、3.52%、5.25%，股份行跌0.85%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从细分板块来看，农商行、国有行、城商行分别上涨2.78%、2.52%、1.25%、3.52%、5.25%，股份行跌0.85%。",
+          "start": 1168,
+          "end": 1234
+        }
+      ],
+      "spans": [
+        {
+          "start": 1059,
+          "end": 1122,
+          "text": "从细分板块来看，农商行、国有行、城商行分别上涨2.78%、2.52%、1.25%、3.52%、5.25%，股份行跌0.85%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fb2f80c2f67f0854d328354e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间起点1月11日晚于终点1月5日，日期先后关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1533,
+          "end": 1586,
+          "text": "央行动态：1月11日-1月5日，央行逆回购投放2,410亿，到期26,640亿，累计净回笼24,230亿。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "央行动态：1月11日-1月5日，央行逆回购投放2,410亿，到期26,640亿，累计净回笼24,230亿。",
+          "start": 1562,
+          "end": 1624
+        }
+      ],
+      "spans": [
+        {
+          "start": 1533,
+          "end": 1586,
+          "text": "央行动态：1月11日-1月5日，央行逆回购投放2,410亿，到期26,640亿，累计净回笼24,230亿。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "81df7942d652c0a1bb1c6827",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "增持金额下限不少于1000万元、上限不高于600万元，同一条件下不能同时成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2484,
+          "end": 2510,
+          "text": "共计不少于1000万元人民币不高于600万元人民币。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "共计不少于1000万元人民币不高于600万元人民币。",
+          "start": 2456,
+          "end": 2483
+        }
+      ],
+      "spans": [
+        {
+          "start": 2484,
+          "end": 2510,
+          "text": "共计不少于1000万元人民币不高于600万元人民币。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6a542e270e1ee468fe68411c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "银行发行的是住房租赁金融债券，小标题却称“金融专项债”，两者不是同一工具，术语使用不当。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 466,
+          "end": 538,
+          "text": "（2）支持银行发行金融专项债：支持商业银行发行用于住房租赁的金融债券，筹集资金专门用于增加住房租赁开发建设贷款、团体购房贷款和经营性贷款的投放。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "（2）支持银行发行金融专项债：支持商业银行发行用于住房租赁的金融债券，筹集资金专门用于增加住房租赁开发建设贷款、团体购房贷款和经营性贷款的投放。",
+          "start": 577,
+          "end": 660
+        }
+      ],
+      "spans": [
+        {
+          "start": 466,
+          "end": 538,
+          "text": "（2）支持银行发行金融专项债：支持商业银行发行用于住房租赁的金融债券，筹集资金专门用于增加住房租赁开发建设贷款、团体购房贷款和经营性贷款的投放。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1fd7745bb404407dfcfeb69f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2612
+        ]
+      ],
+      "estimated_input_tokens": 7107,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:47:19.818951+00:00",
+        "request_sha256": "5d09d938310d280f0635ed29c3ecd9d1c6dbfdbd3e31cbff0f6327077eaea8db",
+        "input_token_estimate": 19789,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281933",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "a36664fbf33d499598e690e1a1b7eb1c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4623,
+        "output_tokens": 7334,
+        "usage_source": "provider",
+        "duration_seconds": 29.101356,
+        "cost_cny": "0.033959",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "PSL投放拉开帷幕，12月净增亿。",
+            "start": 22,
+            "end": 42
+          }
+        ],
+        "reason": "“净增”后直接接“亿”，缺少具体数值，数量表达不完整。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "央行年度工作会议：优化信贷结构、增量均衡投放、存量提高使用效率、增量均衡投放，确保社融可持续较快增长。",
+            "start": 657,
+            "end": 715
+          }
+        ],
+        "reason": "同一句中“增量均衡投放”连续出现两次，属于不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "从细分板块来看，农商行、国有行、城商行分别上涨2.78%、2.52%、1.25%、3.52%、5.25%，股份行跌0.85%。",
+            "start": 1168,
+            "end": 1234
+          }
+        ],
+        "reason": "列举三个板块却给出五个涨幅数值，数值个数与对应板块数不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "央行动态：1月11日-1月5日，央行逆回购投放2,410亿，到期26,640亿，累计净回笼24,230亿。",
+            "start": 1562,
+            "end": 1624
+          }
+        ],
+        "reason": "时间区间起点1月11日晚于终点1月5日，日期先后关系矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "共计不少于1000万元人民币不高于600万元人民币。",
+            "start": 2456,
+            "end": 2483
+          }
+        ],
+        "reason": "增持金额下限不少于1000万元、上限不高于600万元，同一条件下不能同时成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "（2）支持银行发行金融专项债：支持商业银行发行用于住房租赁的金融债券，筹集资金专门用于增加住房租赁开发建设贷款、团体购房贷款和经营性贷款的投放。",
+            "start": 577,
+            "end": 660
+          }
+        ],
+        "reason": "银行发行的是住房租赁金融债券，小标题却称“金融专项债”，两者不是同一工具，术语使用不当。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2612,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2612,
+    "processed_ranges": [
+      [
+        0,
+        2612
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2612,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002937,
+  "source_content_sha256": "53c5030e9753c7ac8b5361f5c3351ff364a45ca224e8b26a69d229105dbccc62"
+}

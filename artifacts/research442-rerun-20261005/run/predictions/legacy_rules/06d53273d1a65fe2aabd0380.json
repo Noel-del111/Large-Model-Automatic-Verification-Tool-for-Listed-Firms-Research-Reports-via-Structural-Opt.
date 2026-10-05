@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000380",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "cc4e5d46bb570cf82b01fec2",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 1873,
+          "end": 2044,
+          "text": "\n\n盈利预测\n\n预测公司2027-2025年收入分别为711.52、782.67、853.12亿元，EPS分别为0.54、0.66、0.71元，当前股价对应PE分别为21.4、17.6、16.4倍，苹果手机降价叠加国补，有望提升手机销售量，并且为新一代iPhone17系列预热，公司布局AI算力业务，有望为公司业绩赋能，给予“买入”投资评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 2098,
+    "total_chars": 2098,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001236,
+  "source_content_sha256": "c1c656f32ac13b26928553960165c2330e5548976d5b5adde7a907186dd4a25d"
+}

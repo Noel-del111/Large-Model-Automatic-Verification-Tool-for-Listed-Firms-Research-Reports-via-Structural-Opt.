@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000588",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "6dbc19939e930526071370a3",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 830,
+          "end": 883,
+          "text": "核电：核电运营商装机规模成长性确定，2031-2025年中国核电在运装机容量年复合增长率达7%，中国广核。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1184,
+    "total_chars": 1184,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001004,
+  "source_content_sha256": "8ba4cf0f6b174ec40d3e973dec9f96699c6c1a37bdd23b68dd04fa8158a82c02"
+}

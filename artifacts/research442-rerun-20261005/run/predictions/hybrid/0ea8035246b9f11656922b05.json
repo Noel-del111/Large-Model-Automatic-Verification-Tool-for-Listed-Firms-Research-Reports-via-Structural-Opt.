@@ -1,0 +1,566 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000454",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "25Q13不是合法季度，Q13不存在，应为25Q1等有效季度。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 35,
+          "end": 55,
+          "text": "25Q13业绩OPAT和NBV表现较强。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "25Q13业绩OPAT和NBV表现较强。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 35,
+          "end": 55,
+          "text": "25Q13业绩OPAT和NBV表现较强。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c920249b9239ba3b672a0358",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后的括号内缺少股票代码，非数值属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 20,
+          "end": 26,
+          "text": "中国平安()"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中国平安()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 20,
+          "end": 26,
+          "text": "中国平安()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3d5b02739e66a71ea8e7a4e8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“同比增长%”中百分号前缺少具体增速数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 57,
+          "end": 306,
+          "text": "中国平安25Q1集团营收和归母净利润同比分别下降5.2%和26.4%至2328亿元和270亿元，利润下降主要是受好医生联营转并表带来的一次性34亿财务损失和TPL账户中债券价值的波动，作为分红基数的集团OPAT同比增长%至379亿元，其中核心寿险业务受益于NBV34.9%的较高增长和边际提升的利率水平实现了5%的OPAT增速，财险综合成本率同比下降3pct至96.6%的较好水平，集团保险资金非年化综合投资收益率同比提升0.2pct至1.3%，带动集团归母净资产较年初增加1.2%至9397亿元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中国平安25Q1集团营收和归母净利润同比分别下降5.2%和26.4%至2328亿元和270亿元，利润下降主要是受好医生联营转并表带来的一次性34亿财务损失和TPL账户中债券价值的波动，作为分红基数的集团OPAT同比增长%至379亿元，其中核心寿险业务受益于NBV34.9%的较高增长和边际提升的利率水平实现了5%的OPAT增速，财险综合成本率同比下降3pct至96.6%的较好水平，集团保险资金非年化综合投资收益率同比提升0.2pct至1.3%，带动集团归母净资产较年初增加1.2%至9397亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 57,
+          "end": 306,
+          "text": "中国平安25Q1集团营收和归母净利润同比分别下降5.2%和26.4%至2328亿元和270亿元，利润下降主要是受好医生联营转并表带来的一次性34亿财务损失和TPL账户中债券价值的波动，作为分红基数的集团OPAT同比增长%至379亿元，其中核心寿险业务受益于NBV34.9%的较高增长和边际提升的利率水平实现了5%的OPAT增速，财险综合成本率同比下降3pct至96.6%的较好水平，集团保险资金非年化综合投资收益率同比提升0.2pct至1.3%，带动集团归母净资产较年初增加1.2%至9397亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fe96367983cb8cc3bed082b5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "21-24年共4年，却列出5个减值损失数值，年份数量与数值数量不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1286,
+          "end": 1454,
+          "text": "1、刨除单独上市的平安银行，21-24年平安集团其他子板块的信用和资产减值损失分别为312亿、106亿、200亿、332亿和433亿，主要集中在寿险和资管，其中寿险部分的地产持仓在保险投资组合中有较为明确的披露，即24年末持仓余额为2025亿元，3.5%的占比已经压缩较多，我们理解在24年整体投资收益较好的环境下平安加快对风险的减值；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1、刨除单独上市的平安银行，21-24年平安集团其他子板块的信用和资产减值损失分别为312亿、106亿、200亿、332亿和433亿，主要集中在寿险和资管，其中寿险部分的地产持仓在保险投资组合中有较为明确的披露，即24年末持仓余额为2025亿元，3.5%的占比已经压缩较多，我们理解在24年整体投资收益较好的环境下平安加快对风险的减值；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1286,
+          "end": 1454,
+          "text": "1、刨除单独上市的平安银行，21-24年平安集团其他子板块的信用和资产减值损失分别为312亿、106亿、200亿、332亿和433亿，主要集中在寿险和资管，其中寿险部分的地产持仓在保险投资组合中有较为明确的披露，即24年末持仓余额为2025亿元，3.5%的占比已经压缩较多，我们理解在24年整体投资收益较好的环境下平安加快对风险的减值；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0afa226e1dbb0b3e8caace93",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "285亿元除以759亿元约为37.5%，不是40%，比例计算有误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1115,
+          "end": 1206,
+          "text": "4、寿险也面临挑战，主要是基础管理弱化后高绩优（钻石/钻会）人力的下降以及2024年NBV的绝对额（285亿元）只有历史高点19年（759亿元）的40%，致使CSM余额增速尚未转正。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4、寿险也面临挑战，主要是基础管理弱化后高绩优（钻石/钻会）人力的下降以及2024年NBV的绝对额（285亿元）只有历史高点19年（759亿元）的40%，致使CSM余额增速尚未转正。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1115,
+          "end": 1206,
+          "text": "4、寿险也面临挑战，主要是基础管理弱化后高绩优（钻石/钻会）人力的下降以及2024年NBV的绝对额（285亿元）只有历史高点19年（759亿元）的40%，致使CSM余额增速尚未转正。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1c1219a73ab9a544e7a71f11",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2464
+        ]
+      ],
+      "estimated_input_tokens": 6902,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:10:52.210755+00:00",
+        "request_sha256": "6cc719102b8392de779e248b3f4dc365c18de8acfdf7f2242e3e9e5d23876bcd",
+        "input_token_estimate": 19233,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.281377",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "73a1500502214df7ae008b8a7e59e292",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4555,
+        "output_tokens": 10800,
+        "usage_source": "provider",
+        "duration_seconds": 39.798891,
+        "cost_cny": "0.047755",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "25Q13业绩OPAT和NBV表现较强。"
+          }
+        ],
+        "reason": "25Q13不是合法季度，Q13不存在，应为25Q1等有效季度。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "中国平安()"
+          }
+        ],
+        "reason": "公司名称后的括号内缺少股票代码，非数值属性值为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "中国平安25Q1集团营收和归母净利润同比分别下降5.2%和26.4%至2328亿元和270亿元，利润下降主要是受好医生联营转并表带来的一次性34亿财务损失和TPL账户中债券价值的波动，作为分红基数的集团OPAT同比增长%至379亿元，其中核心寿险业务受益于NBV34.9%的较高增长和边际提升的利率水平实现了5%的OPAT增速，财险综合成本率同比下降3pct至96.6%的较好水平，集团保险资金非年化综合投资收益率同比提升0.2pct至1.3%，带动集团归母净资产较年初增加1.2%至9397亿元。"
+          }
+        ],
+        "reason": "“同比增长%”中百分号前缺少具体增速数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "1、刨除单独上市的平安银行，21-24年平安集团其他子板块的信用和资产减值损失分别为312亿、106亿、200亿、332亿和433亿，主要集中在寿险和资管，其中寿险部分的地产持仓在保险投资组合中有较为明确的披露，即24年末持仓余额为2025亿元，3.5%的占比已经压缩较多，我们理解在24年整体投资收益较好的环境下平安加快对风险的减值；"
+          }
+        ],
+        "reason": "21-24年共4年，却列出5个减值损失数值，年份数量与数值数量不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "4、寿险也面临挑战，主要是基础管理弱化后高绩优（钻石/钻会）人力的下降以及2024年NBV的绝对额（285亿元）只有历史高点19年（759亿元）的40%，致使CSM余额增速尚未转正。"
+          }
+        ],
+        "reason": "285亿元除以759亿元约为37.5%，不是40%，比例计算有误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 57,
+      "end": 306,
+      "text": "中国平安25Q1集团营收和归母净利润同比分别下降5.2%和26.4%至2328亿元和270亿元，利润下降主要是受好医生联营转并表带来的一次性34亿财务损失和TPL账户中债券价值的波动，作为分红基数的集团OPAT同比增长%至379亿元，其中核心寿险业务受益于NBV34.9%的较高增长和边际提升的利率水平实现了5%的OPAT增速，财险综合成本率同比下降3pct至96.6%的较好水平，集团保险资金非年化综合投资收益率同比提升0.2pct至1.3%，带动集团归母净资产较年初增加1.2%至9397亿元。",
+      "quantities": [
+        {
+          "value": "5.2",
+          "unit": "%",
+          "start": 81,
+          "end": 85
+        },
+        {
+          "value": "26.4",
+          "unit": "%",
+          "start": 86,
+          "end": 91
+        },
+        {
+          "value": "2328",
+          "unit": "亿元",
+          "start": 92,
+          "end": 98
+        },
+        {
+          "value": "270",
+          "unit": "亿元",
+          "start": 99,
+          "end": 104
+        },
+        {
+          "value": "379",
+          "unit": "亿元",
+          "start": 168,
+          "end": 173
+        },
+        {
+          "value": "34.9",
+          "unit": "%",
+          "start": 188,
+          "end": 193
+        },
+        {
+          "value": "5",
+          "unit": "%",
+          "start": 211,
+          "end": 213
+        },
+        {
+          "value": "96.6",
+          "unit": "%",
+          "start": 237,
+          "end": 242
+        },
+        {
+          "value": "1.3",
+          "unit": "%",
+          "start": 275,
+          "end": 279
+        },
+        {
+          "value": "1.2",
+          "unit": "%",
+          "start": 294,
+          "end": 298
+        },
+        {
+          "value": "9397",
+          "unit": "亿元",
+          "start": 299,
+          "end": 305
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "作为分红基数的集团",
+        "带动集团"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 57,
+      "end": 306,
+      "text": "中国平安25Q1集团营收和归母净利润同比分别下降5.2%和26.4%至2328亿元和270亿元，利润下降主要是受好医生联营转并表带来的一次性34亿财务损失和TPL账户中债券价值的波动，作为分红基数的集团OPAT同比增长%至379亿元，其中核心寿险业务受益于NBV34.9%的较高增长和边际提升的利率水平实现了5%的OPAT增速，财险综合成本率同比下降3pct至96.6%的较好水平，集团保险资金非年化综合投资收益率同比提升0.2pct至1.3%，带动集团归母净资产较年初增加1.2%至9397亿元。",
+      "quantities": [
+        {
+          "value": "5.2",
+          "unit": "%",
+          "start": 81,
+          "end": 85
+        },
+        {
+          "value": "26.4",
+          "unit": "%",
+          "start": 86,
+          "end": 91
+        },
+        {
+          "value": "2328",
+          "unit": "亿元",
+          "start": 92,
+          "end": 98
+        },
+        {
+          "value": "270",
+          "unit": "亿元",
+          "start": 99,
+          "end": 104
+        },
+        {
+          "value": "379",
+          "unit": "亿元",
+          "start": 168,
+          "end": 173
+        },
+        {
+          "value": "34.9",
+          "unit": "%",
+          "start": 188,
+          "end": 193
+        },
+        {
+          "value": "5",
+          "unit": "%",
+          "start": 211,
+          "end": 213
+        },
+        {
+          "value": "96.6",
+          "unit": "%",
+          "start": 237,
+          "end": 242
+        },
+        {
+          "value": "1.3",
+          "unit": "%",
+          "start": 275,
+          "end": 279
+        },
+        {
+          "value": "1.2",
+          "unit": "%",
+          "start": 294,
+          "end": 298
+        },
+        {
+          "value": "9397",
+          "unit": "亿元",
+          "start": 299,
+          "end": 305
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "作为分红基数的集团",
+        "带动集团"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 383,
+      "end": 435,
+      "text": "平安的寿险业务25Q1的归母净利润和归母OPAT分别占集团71.7%和70.9%，依然是核心支柱业务：\n",
+      "quantities": [
+        {
+          "value": "71.7",
+          "unit": "%",
+          "start": 412,
+          "end": 417
+        },
+        {
+          "value": "70.9",
+          "unit": "%",
+          "start": 418,
+          "end": 423
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "的归母净利润和归母OPAT分别占集团"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2277,
+      "end": 2420,
+      "text": "盈利预测与评级：我们预计公司2025-2027年归母净利润分别为1351/1543/1678亿元，同比增速分别为6.7%/14.2%/8.8%，25-27年每股内含价值为83.4/88.5/94.2元，当前股价对应PEV估值为0.64/0.60/0.57倍，首次覆盖，给予“买入”评级。",
+      "quantities": [
+        {
+          "value": "1678",
+          "unit": "亿元",
+          "start": 2319,
+          "end": 2325
+        },
+        {
+          "value": "6.7",
+          "unit": "%",
+          "start": 2333,
+          "end": 2337
+        },
+        {
+          "value": "14.2",
+          "unit": "%",
+          "start": 2338,
+          "end": 2343
+        },
+        {
+          "value": "8.8",
+          "unit": "%",
+          "start": 2344,
+          "end": 2348
+        },
+        {
+          "value": "94.2",
+          "unit": "元",
+          "start": 2372,
+          "end": 2377
+        },
+        {
+          "value": "0.57",
+          "unit": "倍",
+          "start": 2400,
+          "end": 2405
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2464,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2464,
+    "processed_ranges": [
+      [
+        0,
+        2464
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 2464,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002455,
+  "source_content_sha256": "e4779792251063fbbb76023bbf142627827f9d1b706194e001bc103b5a4d3438"
+}

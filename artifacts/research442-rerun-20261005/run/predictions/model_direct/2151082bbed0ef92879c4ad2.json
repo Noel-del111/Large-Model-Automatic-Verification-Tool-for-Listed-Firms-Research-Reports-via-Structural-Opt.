@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000587",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "5月32日不是合法日期，5月没有32日。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 683,
+          "end": 769,
+          "text": "下游景气度情况：1）实物工作量的角度来看，本周（5月32日）水泥出货率47.8%，环比+1.4pct，本周（5月28日）石油沥青装置开工率为27.7%，环比-3.1pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "下游景气度情况：1）实物工作量的角度来看，本周（5月32日）水泥出货率47.8%，环比+1.4pct，本周（5月28日）石油沥青装置开工率为27.7%，环比-3.1pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 683,
+          "end": 769,
+          "text": "下游景气度情况：1）实物工作量的角度来看，本周（5月32日）水泥出货率47.8%，环比+1.4pct，本周（5月28日）石油沥青装置开工率为27.7%，环比-3.1pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0548b6691091e34cb4ba4bed",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "本周区间写作0530-0526，起始5月30日晚于结束5月26日，时间顺序冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 891,
+          "end": 959,
+          "text": "根据总市值加权平均统计，本周（0530-0526）建筑指数上涨1.24%，沪深300板块下跌0.65%，建筑板块跑赢大盘1.89pct。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据总市值加权平均统计，本周（0530-0526）建筑指数上涨1.24%，沪深300板块下跌0.65%，建筑板块跑赢大盘1.89pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 891,
+          "end": 959,
+          "text": "根据总市值加权平均统计，本周（0530-0526）建筑指数上涨1.24%，沪深300板块下跌0.65%，建筑板块跑赢大盘1.89pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d7ae09676407fdff65faed17",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "仅列举三个板块，却给出四个相对沪深300收益数值，数量对应不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 959,
+          "end": 1051,
+          "text": "建筑设计及服务、园林工程、建筑装修板块涨幅居前，涨幅分别为4.01%、3.95%、2.99%，较沪深300分别取得4.67pct、4.6pct、3.64pct、4.64pct的正收益。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "建筑设计及服务、园林工程、建筑装修板块涨幅居前，涨幅分别为4.01%、3.95%、2.99%，较沪深300分别取得4.67pct、4.6pct、3.64pct、4.64pct的正收益。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 959,
+          "end": 1051,
+          "text": "建筑设计及服务、园林工程、建筑装修板块涨幅居前，涨幅分别为4.01%、3.95%、2.99%，较沪深300分别取得4.67pct、4.6pct、3.64pct、4.64pct的正收益。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4043f8272b3282ab94241d0b",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1158
+        ]
+      ],
+      "estimated_input_tokens": 5719,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:43:28.474240+00:00",
+        "request_sha256": "072c81300e816d5b71c4093c27fe103490357e4514fc1ebc18109ccf2e5ce107",
+        "input_token_estimate": 15903,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278047",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "7a4a3d5d29fa464aa49f62d3f0b3061c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3767,
+        "output_tokens": 5374,
+        "usage_source": "provider",
+        "duration_seconds": 20.759861,
+        "cost_cny": "0.025263"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "下游景气度情况：1）实物工作量的角度来看，本周（5月32日）水泥出货率47.8%，环比+1.4pct，本周（5月28日）石油沥青装置开工率为27.7%，环比-3.1pct。"
+          }
+        ],
+        "reason": "5月32日不是合法日期，5月没有32日。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "根据总市值加权平均统计，本周（0530-0526）建筑指数上涨1.24%，沪深300板块下跌0.65%，建筑板块跑赢大盘1.89pct。"
+          }
+        ],
+        "reason": "本周区间写作0530-0526，起始5月30日晚于结束5月26日，时间顺序冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "建筑设计及服务、园林工程、建筑装修板块涨幅居前，涨幅分别为4.01%、3.95%、2.99%，较沪深300分别取得4.67pct、4.6pct、3.64pct、4.64pct的正收益。"
+          }
+        ],
+        "reason": "仅列举三个板块，却给出四个相对沪深300收益数值，数量对应不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1158,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1158,
+    "processed_ranges": [
+      [
+        0,
+        1158
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 20.783093,
+  "source_content_sha256": "68ee1c054b020d8029daba8cded088fff115be68c87956c6f2288d24af45d89a"
+}

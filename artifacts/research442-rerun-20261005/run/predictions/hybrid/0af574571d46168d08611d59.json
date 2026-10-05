@@ -1,0 +1,1463 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000370",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文与后文均称公司收入与净利润持续增长，此处却称“再创历史新低”，与增长事实及后文“再创历史新高”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 227,
+          "end": 257,
+          "text": "行业深耕与业务拓展取得显著成效，收入与净利润有望再创历史新低"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "行业深耕与业务拓展取得显著成效，收入与净利润有望再创历史新低"
+        }
+      ],
+      "spans": [
+        {
+          "start": 227,
+          "end": 257,
+          "text": "行业深耕与业务拓展取得显著成效，收入与净利润有望再创历史新低"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d88f9b9f91a06d253c05f8ba",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "毛利率括号内缺少具体百分比数值，仅有“+0.64pcts”，数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 259,
+          "end": 395,
+          "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 259,
+          "end": 395,
+          "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c5e879602e26ee16c7cffe2c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句内“表明公司竞争能力、项目承接能力和创新能力均有望逐步提升”重复出现，未新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1659,
+          "end": 1755,
+          "text": "我们判断，随着公司多个研发项目顺利实施，研发人员不断增长，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升，并逐步体现在利润表中，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们判断，随着公司多个研发项目顺利实施，研发人员不断增长，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升，并逐步体现在利润表中，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1659,
+          "end": 1755,
+          "text": "我们判断，随着公司多个研发项目顺利实施，研发人员不断增长，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升，并逐步体现在利润表中，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ebc5886e34e07e76de447d91",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "募集资金应以货币单位计量，原文使用体积单位“立方米”，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2091,
+          "end": 2116,
+          "text": "公司IPO募集资金近2亿立方米，拟投资于以下项目："
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司IPO募集资金近2亿立方米，拟投资于以下项目："
+        }
+      ],
+      "spans": [
+        {
+          "start": 2091,
+          "end": 2116,
+          "text": "公司IPO募集资金近2亿立方米，拟投资于以下项目："
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f325989a2c22f51573f0432b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文仅列出两个IPO募投项目，后文却称“上述三个IPO募投项目”，项目数量前后不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2118,
+          "end": 2149,
+          "text": "其中，前两个项目的达产将为公司直接实现增收增利，项目内容如下："
+        },
+        {
+          "kind": "source_text",
+          "start": 2599,
+          "end": 2726,
+          "text": "我们认为，在上述三个IPO募投项目的实施过程中，公司业绩已经实现快速增长，测控服务中心与洞察者软件平台研制项目的实施将构成公司航天测控管理业务的核心竞争力，成为公司在商业航天产业进入实质性建设和卫星测运控需求增长的双重背景下，同步实现增收增利的基础保障。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，前两个项目的达产将为公司直接实现增收增利，项目内容如下："
+        },
+        {
+          "text": "我们认为，在上述三个IPO募投项目的实施过程中，公司业绩已经实现快速增长，测控服务中心与洞察者软件平台研制项目的实施将构成公司航天测控管理业务的核心竞争力，成为公司在商业航天产业进入实质性建设和卫星测运控需求增长的双重背景下，同步实现增收增利的基础保障。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2118,
+          "end": 2149,
+          "text": "其中，前两个项目的达产将为公司直接实现增收增利，项目内容如下："
+        },
+        {
+          "start": 2599,
+          "end": 2726,
+          "text": "我们认为，在上述三个IPO募投项目的实施过程中，公司业绩已经实现快速增长，测控服务中心与洞察者软件平台研制项目的实施将构成公司航天测控管理业务的核心竞争力，成为公司在商业航天产业进入实质性建设和卫星测运控需求增长的双重背景下，同步实现增收增利的基础保障。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4176f4d7af75989ac832a614",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“IPO债权”与公司IPO募集资金投向语境不符，应属“募资”或“募投”的误用。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2066,
+          "end": 2089,
+          "text": "IPO债权近2亿元，建设商业航天测控软硬件平台"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "IPO债权近2亿元，建设商业航天测控软硬件平台"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2066,
+          "end": 2089,
+          "text": "IPO债权近2亿元，建设商业航天测控软硬件平台"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "97173cd96c5c4391845e0883",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“体育课”出现在估值倍数后，应为“市盈率”，术语使用错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 4132,
+          "end": 4180,
+          "text": "首次覆盖，给予“买入”评级，当前股价分别对应2025-2027年106倍、85倍及68倍体育课."
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "首次覆盖，给予“买入”评级，当前股价分别对应2025-2027年106倍、85倍及68倍体育课."
+        }
+      ],
+      "spans": [
+        {
+          "start": 4132,
+          "end": 4180,
+          "text": "首次覆盖，给予“买入”评级，当前股价分别对应2025-2027年106倍、85倍及68倍体育课."
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6d8b3cb70da09b0b6e991531",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          4273
+        ]
+      ],
+      "estimated_input_tokens": 8687,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:51:00.055674+00:00",
+        "request_sha256": "d87e0976fa380d58bdcfde8c0a2547fea698d5e5be4fac7333f798dbcfb0d4a3",
+        "input_token_estimate": 24220,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.286364",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2390549abcc2479bb60525f41f46fd0d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 5617,
+        "output_tokens": 7114,
+        "usage_source": "provider",
+        "duration_seconds": 26.571654,
+        "cost_cny": "0.034073",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "行业深耕与业务拓展取得显著成效，收入与净利润有望再创历史新低"
+          }
+        ],
+        "reason": "前文与后文均称公司收入与净利润持续增长，此处却称“再创历史新低”，与增长事实及后文“再创历史新高”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。"
+          }
+        ],
+        "reason": "毛利率括号内缺少具体百分比数值，仅有“+0.64pcts”，数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "我们判断，随着公司多个研发项目顺利实施，研发人员不断增长，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升，并逐步体现在利润表中，表明公司竞争能力、项目承接能力和创新能力均有望逐步提升。"
+          }
+        ],
+        "reason": "同一句内“表明公司竞争能力、项目承接能力和创新能力均有望逐步提升”重复出现，未新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司IPO募集资金近2亿立方米，拟投资于以下项目："
+          }
+        ],
+        "reason": "募集资金应以货币单位计量，原文使用体积单位“立方米”，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "其中，前两个项目的达产将为公司直接实现增收增利，项目内容如下："
+          },
+          {
+            "text": "我们认为，在上述三个IPO募投项目的实施过程中，公司业绩已经实现快速增长，测控服务中心与洞察者软件平台研制项目的实施将构成公司航天测控管理业务的核心竞争力，成为公司在商业航天产业进入实质性建设和卫星测运控需求增长的双重背景下，同步实现增收增利的基础保障。"
+          }
+        ],
+        "reason": "前文仅列出两个IPO募投项目，后文却称“上述三个IPO募投项目”，项目数量前后不一致。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "IPO债权近2亿元，建设商业航天测控软硬件平台"
+          }
+        ],
+        "reason": "“IPO债权”与公司IPO募集资金投向语境不符，应属“募资”或“募投”的误用。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "首次覆盖，给予“买入”评级，当前股价分别对应2025-2027年106倍、85倍及68倍体育课."
+          }
+        ],
+        "reason": "“体育课”出现在估值倍数后，应为“市盈率”，术语使用错误。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 55,
+      "end": 140,
+      "text": "事件：3月3日，公司公告，2024年公司营收（2.88亿元，+25.90%），归母净利润（0.85亿元，+35.68%），扣非归母净利润（0.60亿元，+18.72%)。",
+      "quantities": [
+        {
+          "value": "2.88",
+          "unit": "亿元",
+          "start": 78,
+          "end": 84
+        },
+        {
+          "value": "+25.90",
+          "unit": "%",
+          "start": 85,
+          "end": 92
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 100,
+          "end": 106
+        },
+        {
+          "value": "+35.68",
+          "unit": "%",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 124,
+          "end": 130
+        },
+        {
+          "value": "+18.72",
+          "unit": "%",
+          "start": 131,
+          "end": 138
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 55,
+      "end": 140,
+      "text": "事件：3月3日，公司公告，2024年公司营收（2.88亿元，+25.90%），归母净利润（0.85亿元，+35.68%），扣非归母净利润（0.60亿元，+18.72%)。",
+      "quantities": [
+        {
+          "value": "2.88",
+          "unit": "亿元",
+          "start": 78,
+          "end": 84
+        },
+        {
+          "value": "+25.90",
+          "unit": "%",
+          "start": 85,
+          "end": 92
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 100,
+          "end": 106
+        },
+        {
+          "value": "+35.68",
+          "unit": "%",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 124,
+          "end": 130
+        },
+        {
+          "value": "+18.72",
+          "unit": "%",
+          "start": 131,
+          "end": 138
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 55,
+      "end": 140,
+      "text": "事件：3月3日，公司公告，2024年公司营收（2.88亿元，+25.90%），归母净利润（0.85亿元，+35.68%），扣非归母净利润（0.60亿元，+18.72%)。",
+      "quantities": [
+        {
+          "value": "2.88",
+          "unit": "亿元",
+          "start": 78,
+          "end": 84
+        },
+        {
+          "value": "+25.90",
+          "unit": "%",
+          "start": 85,
+          "end": 92
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 100,
+          "end": 106
+        },
+        {
+          "value": "+35.68",
+          "unit": "%",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 124,
+          "end": 130
+        },
+        {
+          "value": "+18.72",
+          "unit": "%",
+          "start": 131,
+          "end": 138
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 140,
+      "end": 225,
+      "text": "4月29日，公司公告，2025年Q1营收（0.44亿元，+34.49%），归母净利润（0.13亿元，+10.35%），扣非归母净利润（396.96万元，+30.26%)。",
+      "quantities": [
+        {
+          "value": "0.44",
+          "unit": "亿元",
+          "start": 161,
+          "end": 167
+        },
+        {
+          "value": "+34.49",
+          "unit": "%",
+          "start": 168,
+          "end": 175
+        },
+        {
+          "value": "0.13",
+          "unit": "亿元",
+          "start": 183,
+          "end": 189
+        },
+        {
+          "value": "+10.35",
+          "unit": "%",
+          "start": 190,
+          "end": 197
+        },
+        {
+          "value": "396.96",
+          "unit": "万元",
+          "start": 207,
+          "end": 215
+        },
+        {
+          "value": "+30.26",
+          "unit": "%",
+          "start": 216,
+          "end": 223
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 140,
+      "end": 225,
+      "text": "4月29日，公司公告，2025年Q1营收（0.44亿元，+34.49%），归母净利润（0.13亿元，+10.35%），扣非归母净利润（396.96万元，+30.26%)。",
+      "quantities": [
+        {
+          "value": "0.44",
+          "unit": "亿元",
+          "start": 161,
+          "end": 167
+        },
+        {
+          "value": "+34.49",
+          "unit": "%",
+          "start": 168,
+          "end": 175
+        },
+        {
+          "value": "0.13",
+          "unit": "亿元",
+          "start": 183,
+          "end": 189
+        },
+        {
+          "value": "+10.35",
+          "unit": "%",
+          "start": 190,
+          "end": 197
+        },
+        {
+          "value": "396.96",
+          "unit": "万元",
+          "start": 207,
+          "end": 215
+        },
+        {
+          "value": "+30.26",
+          "unit": "%",
+          "start": 216,
+          "end": 223
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 140,
+      "end": 225,
+      "text": "4月29日，公司公告，2025年Q1营收（0.44亿元，+34.49%），归母净利润（0.13亿元，+10.35%），扣非归母净利润（396.96万元，+30.26%)。",
+      "quantities": [
+        {
+          "value": "0.44",
+          "unit": "亿元",
+          "start": 161,
+          "end": 167
+        },
+        {
+          "value": "+34.49",
+          "unit": "%",
+          "start": 168,
+          "end": 175
+        },
+        {
+          "value": "0.13",
+          "unit": "亿元",
+          "start": 183,
+          "end": 189
+        },
+        {
+          "value": "+10.35",
+          "unit": "%",
+          "start": 190,
+          "end": 197
+        },
+        {
+          "value": "396.96",
+          "unit": "万元",
+          "start": 207,
+          "end": 215
+        },
+        {
+          "value": "+30.26",
+          "unit": "%",
+          "start": 216,
+          "end": 223
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 259,
+      "end": 395,
+      "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。",
+      "quantities": [
+        {
+          "value": "2.88",
+          "unit": "亿元",
+          "start": 270,
+          "end": 276
+        },
+        {
+          "value": "+25.90",
+          "unit": "%",
+          "start": 277,
+          "end": 284
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 296,
+          "end": 302
+        },
+        {
+          "value": "+35.68",
+          "unit": "%",
+          "start": 303,
+          "end": 310
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 320,
+          "end": 326
+        },
+        {
+          "value": "+18.72",
+          "unit": "%",
+          "start": 327,
+          "end": 334
+        },
+        {
+          "value": "29.47",
+          "unit": "%",
+          "start": 366,
+          "end": 372
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 259,
+      "end": 395,
+      "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。",
+      "quantities": [
+        {
+          "value": "2.88",
+          "unit": "亿元",
+          "start": 270,
+          "end": 276
+        },
+        {
+          "value": "+25.90",
+          "unit": "%",
+          "start": 277,
+          "end": 284
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 296,
+          "end": 302
+        },
+        {
+          "value": "+35.68",
+          "unit": "%",
+          "start": 303,
+          "end": 310
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 320,
+          "end": 326
+        },
+        {
+          "value": "+18.72",
+          "unit": "%",
+          "start": 327,
+          "end": 334
+        },
+        {
+          "value": "29.47",
+          "unit": "%",
+          "start": 366,
+          "end": 372
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 259,
+      "end": 395,
+      "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。",
+      "quantities": [
+        {
+          "value": "2.88",
+          "unit": "亿元",
+          "start": 270,
+          "end": 276
+        },
+        {
+          "value": "+25.90",
+          "unit": "%",
+          "start": 277,
+          "end": 284
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 296,
+          "end": 302
+        },
+        {
+          "value": "+35.68",
+          "unit": "%",
+          "start": 303,
+          "end": 310
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 320,
+          "end": 326
+        },
+        {
+          "value": "+18.72",
+          "unit": "%",
+          "start": 327,
+          "end": 334
+        },
+        {
+          "value": "29.47",
+          "unit": "%",
+          "start": 366,
+          "end": 372
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 259,
+      "end": 395,
+      "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。",
+      "quantities": [
+        {
+          "value": "2.88",
+          "unit": "亿元",
+          "start": 270,
+          "end": 276
+        },
+        {
+          "value": "+25.90",
+          "unit": "%",
+          "start": 277,
+          "end": 284
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 296,
+          "end": 302
+        },
+        {
+          "value": "+35.68",
+          "unit": "%",
+          "start": 303,
+          "end": 310
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 320,
+          "end": 326
+        },
+        {
+          "value": "+18.72",
+          "unit": "%",
+          "start": 327,
+          "end": 334
+        },
+        {
+          "value": "29.47",
+          "unit": "%",
+          "start": 366,
+          "end": 372
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 259,
+      "end": 395,
+      "text": "2024年，公司营收（2.88亿元，+25.90%）快速增长，归母净利润（0.85亿元，+35.68%）与扣非归母净利润（0.60亿元，+18.72%)基本保持同步增长，毛利率（ ，+0.64pcts）以及净利率（29.47%，+2.13pcts）等主要财务指标稳中有升。",
+      "quantities": [
+        {
+          "value": "2.88",
+          "unit": "亿元",
+          "start": 270,
+          "end": 276
+        },
+        {
+          "value": "+25.90",
+          "unit": "%",
+          "start": 277,
+          "end": 284
+        },
+        {
+          "value": "0.85",
+          "unit": "亿元",
+          "start": 296,
+          "end": 302
+        },
+        {
+          "value": "+35.68",
+          "unit": "%",
+          "start": 303,
+          "end": 310
+        },
+        {
+          "value": "0.60",
+          "unit": "亿元",
+          "start": 320,
+          "end": 326
+        },
+        {
+          "value": "+18.72",
+          "unit": "%",
+          "start": 327,
+          "end": 334
+        },
+        {
+          "value": "29.47",
+          "unit": "%",
+          "start": 366,
+          "end": 372
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 395,
+      "end": 460,
+      "text": "单季度看，2024Q4公司营业收入（1.26亿元，+16.40%）同比有所增长，归母净利润（0.35亿元，-0.82%）相对持平；",
+      "quantities": [
+        {
+          "value": "1.26",
+          "unit": "亿元",
+          "start": 413,
+          "end": 419
+        },
+        {
+          "value": "+16.40",
+          "unit": "%",
+          "start": 420,
+          "end": 427
+        },
+        {
+          "value": "0.35",
+          "unit": "亿元",
+          "start": 441,
+          "end": 447
+        },
+        {
+          "value": "-0.82",
+          "unit": "%",
+          "start": 448,
+          "end": 454
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 395,
+      "end": 460,
+      "text": "单季度看，2024Q4公司营业收入（1.26亿元，+16.40%）同比有所增长，归母净利润（0.35亿元，-0.82%）相对持平；",
+      "quantities": [
+        {
+          "value": "1.26",
+          "unit": "亿元",
+          "start": 413,
+          "end": 419
+        },
+        {
+          "value": "+16.40",
+          "unit": "%",
+          "start": 420,
+          "end": 427
+        },
+        {
+          "value": "0.35",
+          "unit": "亿元",
+          "start": 441,
+          "end": 447
+        },
+        {
+          "value": "-0.82",
+          "unit": "%",
+          "start": 448,
+          "end": 454
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 460,
+      "end": 515,
+      "text": "2025Q1公司营业收入（0.44亿元，+34.49%）和归母净利润（0.13亿元，+10.35%）持续增长。",
+      "quantities": [
+        {
+          "value": "0.44",
+          "unit": "亿元",
+          "start": 473,
+          "end": 479
+        },
+        {
+          "value": "+34.49",
+          "unit": "%",
+          "start": 480,
+          "end": 487
+        },
+        {
+          "value": "0.13",
+          "unit": "亿元",
+          "start": 495,
+          "end": 501
+        },
+        {
+          "value": "+10.35",
+          "unit": "%",
+          "start": 502,
+          "end": 509
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 460,
+      "end": 515,
+      "text": "2025Q1公司营业收入（0.44亿元，+34.49%）和归母净利润（0.13亿元，+10.35%）持续增长。",
+      "quantities": [
+        {
+          "value": "0.44",
+          "unit": "亿元",
+          "start": 473,
+          "end": 479
+        },
+        {
+          "value": "+34.49",
+          "unit": "%",
+          "start": 480,
+          "end": 487
+        },
+        {
+          "value": "0.13",
+          "unit": "亿元",
+          "start": 495,
+          "end": 501
+        },
+        {
+          "value": "+10.35",
+          "unit": "%",
+          "start": 502,
+          "end": 509
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 517,
+      "end": 550,
+      "text": "按产品类型拆分，2024年公司各产品类型的收入和毛利率情况如下：\n",
+      "quantities": [],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 551,
+      "end": 637,
+      "text": "①技术开发与服务：收入（2.24亿元，+31.42%）显著增长，收入占比（77.68%，+3.27pcts）提升，毛利率（56.81%，-0.15pcts）仍处于较高水平；",
+      "quantities": [
+        {
+          "value": "2.24",
+          "unit": "亿元",
+          "start": 563,
+          "end": 569
+        },
+        {
+          "value": "+31.42",
+          "unit": "%",
+          "start": 570,
+          "end": 577
+        },
+        {
+          "value": "77.68",
+          "unit": "%",
+          "start": 588,
+          "end": 594
+        },
+        {
+          "value": "56.81",
+          "unit": "%",
+          "start": 612,
+          "end": 618
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 639,
+      "end": 721,
+      "text": "②测控地面系统建设：收入（0.34亿元，-16.62%）有所减少，收入占比（11.85%，-6.04pcts）降低，毛利率（38.55%，+5.27pcts）增长；",
+      "quantities": [
+        {
+          "value": "0.34",
+          "unit": "亿元",
+          "start": 652,
+          "end": 658
+        },
+        {
+          "value": "-16.62",
+          "unit": "%",
+          "start": 659,
+          "end": 666
+        },
+        {
+          "value": "11.85",
+          "unit": "%",
+          "start": 677,
+          "end": 683
+        },
+        {
+          "value": "38.55",
+          "unit": "%",
+          "start": 701,
+          "end": 707
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 723,
+      "end": 806,
+      "text": "③系统集成：收入（0.20亿元，+89.02%）显著增长，收入占比（7.09%，+2.37pcts）提升，毛利率（15.82%，-10.13pcts）仍处于较高水平；",
+      "quantities": [
+        {
+          "value": "0.20",
+          "unit": "亿元",
+          "start": 732,
+          "end": 738
+        },
+        {
+          "value": "+89.02",
+          "unit": "%",
+          "start": 739,
+          "end": 746
+        },
+        {
+          "value": "7.09",
+          "unit": "%",
+          "start": 757,
+          "end": 762
+        },
+        {
+          "value": "15.82",
+          "unit": "%",
+          "start": 780,
+          "end": 786
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 808,
+      "end": 888,
+      "text": "④软件销售：收入（0.10亿元，+43.18%）显著增长，收入占比（3.38%，+0.41pcts）提升，毛利率（88.29%，+0.88pcts）进一步提升。",
+      "quantities": [
+        {
+          "value": "0.10",
+          "unit": "亿元",
+          "start": 817,
+          "end": 823
+        },
+        {
+          "value": "+43.18",
+          "unit": "%",
+          "start": 824,
+          "end": 831
+        },
+        {
+          "value": "3.38",
+          "unit": "%",
+          "start": 842,
+          "end": 847
+        },
+        {
+          "value": "88.29",
+          "unit": "%",
+          "start": 865,
+          "end": 871
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 3755,
+      "end": 3851,
+      "text": "2.从财报来看，公司正处于高速发展期，近年来收入和净利润持续增长，存货和合同负债也显著增长，短期看，在军工信息化、战场态势感知需求快速增长的背景下，特种领域仍将是收入和净利润增长的主要驱动力；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 3755,
+      "end": 3851,
+      "text": "2.从财报来看，公司正处于高速发展期，近年来收入和净利润持续增长，存货和合同负债也显著增长，短期看，在军工信息化、战场态势感知需求快速增长的背景下，特种领域仍将是收入和净利润增长的主要驱动力；",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 4027,
+      "end": 4132,
+      "text": "基于以上观点，我们预计公司2025-2027年的营业收入分别为3.72亿元、4.75亿元和5.94亿元，归母净利润分别为1.12亿元、1.40亿元及1.74亿元，EPS分别为0.70元、0.88元、1.09元。",
+      "quantities": [
+        {
+          "value": "3.72",
+          "unit": "亿元",
+          "start": 4058,
+          "end": 4064
+        },
+        {
+          "value": "4.75",
+          "unit": "亿元",
+          "start": 4065,
+          "end": 4071
+        },
+        {
+          "value": "5.94",
+          "unit": "亿元",
+          "start": 4072,
+          "end": 4078
+        },
+        {
+          "value": "1.12",
+          "unit": "亿元",
+          "start": 4087,
+          "end": 4093
+        },
+        {
+          "value": "1.40",
+          "unit": "亿元",
+          "start": 4094,
+          "end": 4100
+        },
+        {
+          "value": "1.74",
+          "unit": "亿元",
+          "start": 4101,
+          "end": 4107
+        },
+        {
+          "value": "0.70",
+          "unit": "元",
+          "start": 4114,
+          "end": 4119
+        },
+        {
+          "value": "0.88",
+          "unit": "元",
+          "start": 4120,
+          "end": 4125
+        },
+        {
+          "value": "1.09",
+          "unit": "元",
+          "start": 4126,
+          "end": 4131
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 4027,
+      "end": 4132,
+      "text": "基于以上观点，我们预计公司2025-2027年的营业收入分别为3.72亿元、4.75亿元和5.94亿元，归母净利润分别为1.12亿元、1.40亿元及1.74亿元，EPS分别为0.70元、0.88元、1.09元。",
+      "quantities": [
+        {
+          "value": "3.72",
+          "unit": "亿元",
+          "start": 4058,
+          "end": 4064
+        },
+        {
+          "value": "4.75",
+          "unit": "亿元",
+          "start": 4065,
+          "end": 4071
+        },
+        {
+          "value": "5.94",
+          "unit": "亿元",
+          "start": 4072,
+          "end": 4078
+        },
+        {
+          "value": "1.12",
+          "unit": "亿元",
+          "start": 4087,
+          "end": 4093
+        },
+        {
+          "value": "1.40",
+          "unit": "亿元",
+          "start": 4094,
+          "end": 4100
+        },
+        {
+          "value": "1.74",
+          "unit": "亿元",
+          "start": 4101,
+          "end": 4107
+        },
+        {
+          "value": "0.70",
+          "unit": "元",
+          "start": 4114,
+          "end": 4119
+        },
+        {
+          "value": "0.88",
+          "unit": "元",
+          "start": 4120,
+          "end": 4125
+        },
+        {
+          "value": "1.09",
+          "unit": "元",
+          "start": 4126,
+          "end": 4131
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 4273,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 4273,
+    "processed_ranges": [
+      [
+        0,
+        4273
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 4273,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 24,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.004675,
+  "source_content_sha256": "e9d3d3469d7b161315f8da8343d57e522c47381ac8fb0140f469c09286c12b6b"
+}

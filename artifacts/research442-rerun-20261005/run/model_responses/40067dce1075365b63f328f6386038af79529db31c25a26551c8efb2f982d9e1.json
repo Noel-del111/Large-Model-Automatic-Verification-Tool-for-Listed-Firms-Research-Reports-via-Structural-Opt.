@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"50公斤二元母猪价格1627元/亩，周环比下跌0.2%，同比上升2.2%；\"}],\"reason\":\"二元母猪价格应按头计价，单位却用面积单位“亩”，量纲错误。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"2025年第18周（5.4-5.4.28）：黄羽在产祖代存栏159.6万套，创出2021年以来同期最高；\"}],\"reason\":\"日期区间“5.4-5.4.28”中“5.4.28”不是合法日期表达，区间无法成立。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"USDA5月供需报告预测：24/25年全球大豆库消比20.8%，预测值环比升0.1个百分点，25/26年度全球小麦库消比20.3%，同比降0.5个百分点。\"}],\"reason\":\"该句在讨论全球大豆库消比，却写成“全球小麦库消比”，指标对象错误。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"中国农业部市场预警专家委员会5月报：24/25年中国大豆生产、消费估计值与4月一致，大豆进口量上调400万吨至9860万吨，结余变化451万吨，预测值较4月升400万吨。\"}],\"reason\":\"前文机构名为“中国农业农村部市场预警专家委员会”，此处应为农业农村部，机构名称不规范。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"宠物食品国产替代逻辑持续演绎，国产宠物食品公司有望量价齐升中宠旗下品牌持续发力，中宠小金盾推出全价幼猫粮、全价烘焙成猫粮和主食罐头，领先烘焙猫粮在原有高端配方“羊奶鸡”和“蛋黄兔”基础上，新增三文鱼口味，烘焙犬粮产品线也推出“蓝莓牛”新口味，且与央视合作获官媒背书，国内自有品牌收入有望超预期。\"},{\"text\":\"宠物食品行业国产替代逻辑持续演绎中，国产宠物食品公司有望量价齐升，我们继续推荐乖宝宠物、中宠股份，关注佩蒂股份。\"}],\"reason\":\"同一“国产替代逻辑持续演绎、国产宠物食品公司有望量价齐升”信息前后重复出现。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:33:07.445035+00:00",
+    "request_sha256": "ae5c8684c8f4bc096bd1afb20925f42c39e08ece56b9ee20674d3b81741dc9a3",
+    "input_token_estimate": 19282,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.281426",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "79af233302a74d65be981a302efdb767",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4791,
+    "output_tokens": 10643,
+    "usage_source": "provider",
+    "duration_seconds": 39.86317,
+    "cost_cny": "0.047363"
+  },
+  "cache_request": {
+    "key": "40067dce1075365b63f328f6386038af79529db31c25a26551c8efb2f982d9e1",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ae5c8684c8f4bc096bd1afb20925f42c39e08ece56b9ee20674d3b81741dc9a3"
+  }
+}

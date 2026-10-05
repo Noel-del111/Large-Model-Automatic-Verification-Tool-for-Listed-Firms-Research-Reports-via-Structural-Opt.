@@ -1,0 +1,529 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000339",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 418,
+          "end": 556,
+          "text": "我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 418,
+          "end": 556,
+          "text": "我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "4642db26c80c7d37a233c300",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“向不超过人授予”中缺少具体人数，应明确上限人数。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 196,
+          "end": 292,
+          "text": "股票增值权将向不超过人授予25.19万份股票增值权（约占本激励计划草案公告时公司股本总额的0.21%），激励对象为公司董事、高级管理人员、部分外籍员工以及其他核心人员（不包括独立董事、监事）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "股票增值权将向不超过人授予25.19万份股票增值权（约占本激励计划草案公告时公司股本总额的0.21%），激励对象为公司董事、高级管理人员、部分外籍员工以及其他核心人员（不包括独立董事、监事）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 196,
+          "end": 292,
+          "text": "股票增值权将向不超过人授予25.19万份股票增值权（约占本激励计划草案公告时公司股本总额的0.21%），激励对象为公司董事、高级管理人员、部分外籍员工以及其他核心人员（不包括独立董事、监事）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c868d3f1e8aa26639d867778",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "两句话几乎重复表达同一事实，后一句没有新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 292,
+          "end": 368,
+          "text": "公司股权激励连续多年实施，已成为常态化的激励机制，促进了公司核心人才队伍的建设和稳定，是公司实现可持续发展的有效措施，也体现公司对未来发展前景充满信心。"
+        },
+        {
+          "kind": "source_text",
+          "start": 368,
+          "end": 418,
+          "text": "公司通过股权激励机制连续多年实施，已成为常态化的激励机制，进一步促进了公司核心人才队伍的建设和稳定。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司股权激励连续多年实施，已成为常态化的激励机制，促进了公司核心人才队伍的建设和稳定，是公司实现可持续发展的有效措施，也体现公司对未来发展前景充满信心。"
+        },
+        {
+          "text": "公司通过股权激励机制连续多年实施，已成为常态化的激励机制，进一步促进了公司核心人才队伍的建设和稳定。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 292,
+          "end": 368,
+          "text": "公司股权激励连续多年实施，已成为常态化的激励机制，促进了公司核心人才队伍的建设和稳定，是公司实现可持续发展的有效措施，也体现公司对未来发展前景充满信心。"
+        },
+        {
+          "start": 368,
+          "end": 418,
+          "text": "公司通过股权激励机制连续多年实施，已成为常态化的激励机制，进一步促进了公司核心人才队伍的建设和稳定。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "336c25a4d4598dd57c19be7a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“2026-2025年”期间起止年份颠倒，不能构成有效时间区间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 418,
+          "end": 556,
+          "text": "我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 418,
+          "end": 556,
+          "text": "我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "071b1037d617e7275cf8a496",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "归母净利润“0.41亿分”单位错误，应为“亿元”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 869,
+          "end": 956,
+          "text": "单看2025Q1，公司实现营业收入1.86亿元，同比增长27.73%；实现归母净利润0.41亿分，同比增长32.30%；实现扣非归母净利润0.38亿元，同比增长25.99%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "单看2025Q1，公司实现营业收入1.86亿元，同比增长27.73%；实现归母净利润0.41亿分，同比增长32.30%；实现扣非归母净利润0.38亿元，同比增长25.99%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 869,
+          "end": 956,
+          "text": "单看2025Q1，公司实现营业收入1.86亿元，同比增长27.73%；实现归母净利润0.41亿分，同比增长32.30%；实现扣非归母净利润0.38亿元，同比增长25.99%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0c2cd7e1d486fbdc305e436a",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          992
+        ]
+      ],
+      "estimated_input_tokens": 5472,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:24:47.608960+00:00",
+        "request_sha256": "0fe4fcd202e2d5e7c2932a99ced98bea5cc5a358fa62d6a26ef6aab5ab6869b3",
+        "input_token_estimate": 15250,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277394",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "72c40a0e4dc6433eb1af9a3308adcb15",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3608,
+        "output_tokens": 7894,
+        "usage_source": "provider",
+        "duration_seconds": 28.101268,
+        "cost_cny": "0.035184",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "股票增值权将向不超过人授予25.19万份股票增值权（约占本激励计划草案公告时公司股本总额的0.21%），激励对象为公司董事、高级管理人员、部分外籍员工以及其他核心人员（不包括独立董事、监事）。"
+          }
+        ],
+        "reason": "“向不超过人授予”中缺少具体人数，应明确上限人数。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "公司股权激励连续多年实施，已成为常态化的激励机制，促进了公司核心人才队伍的建设和稳定，是公司实现可持续发展的有效措施，也体现公司对未来发展前景充满信心。"
+          },
+          {
+            "text": "公司通过股权激励机制连续多年实施，已成为常态化的激励机制，进一步促进了公司核心人才队伍的建设和稳定。"
+          }
+        ],
+        "reason": "两句话几乎重复表达同一事实，后一句没有新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。"
+          }
+        ],
+        "reason": "“2026-2025年”期间起止年份颠倒，不能构成有效时间区间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "单看2025Q1，公司实现营业收入1.86亿元，同比增长27.73%；实现归母净利润0.41亿分，同比增长32.30%；实现扣非归母净利润0.38亿元，同比增长25.99%。"
+          }
+        ],
+        "reason": "归母净利润“0.41亿分”单位错误，应为“亿元”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 418,
+      "end": 556,
+      "text": "我们上调2026-2025年并新增2027年盈利预测，预计归母净利润为1.69/2.22/2.72亿元（原预计2025-2026年为1.49/1.90亿元），EPS分别为1.41/1.85/2.27元，当前股价对应P/E分别为34.1/26.0/21.2倍，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "2.72",
+          "unit": "亿元",
+          "start": 463,
+          "end": 469
+        },
+        {
+          "value": "1.90",
+          "unit": "亿元",
+          "start": 489,
+          "end": 495
+        },
+        {
+          "value": "2.27",
+          "unit": "元",
+          "start": 513,
+          "end": 518
+        },
+        {
+          "value": "21.2",
+          "unit": "倍",
+          "start": 541,
+          "end": 546
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年",
+        "2026年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 640,
+      "end": 681,
+      "text": "2025年营业收入目标值10.9亿元，2026/2027年同比增长率不低于15%；",
+      "quantities": [
+        {
+          "value": "10.9",
+          "unit": "亿元",
+          "start": 652,
+          "end": 658
+        },
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 677,
+          "end": 680
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 786,
+      "end": 817,
+      "text": "2024年公司实现营业收入6.45亿元，同比增长18.65%；",
+      "quantities": [
+        {
+          "value": "6.45",
+          "unit": "亿元",
+          "start": 799,
+          "end": 805
+        },
+        {
+          "value": "18.65",
+          "unit": "%",
+          "start": 810,
+          "end": 816
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 817,
+      "end": 843,
+      "text": "公司归母净利润为1.24亿元，同比下滑19.38%；",
+      "quantities": [
+        {
+          "value": "1.24",
+          "unit": "亿元",
+          "start": 825,
+          "end": 831
+        },
+        {
+          "value": "19.38",
+          "unit": "%",
+          "start": 836,
+          "end": 842
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 843,
+      "end": 869,
+      "text": "扣非归母净利润为1.19亿元，同比下滑15.16%。",
+      "quantities": [
+        {
+          "value": "1.19",
+          "unit": "亿元",
+          "start": 851,
+          "end": 857
+        },
+        {
+          "value": "15.16",
+          "unit": "%",
+          "start": 862,
+          "end": 868
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 869,
+      "end": 904,
+      "text": "单看2025Q1，公司实现营业收入1.86亿元，同比增长27.73%；",
+      "quantities": [
+        {
+          "value": "1.86",
+          "unit": "亿元",
+          "start": 886,
+          "end": 892
+        },
+        {
+          "value": "27.73",
+          "unit": "%",
+          "start": 897,
+          "end": 903
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 904,
+      "end": 929,
+      "text": "实现归母净利润0.41亿分，同比增长32.30%；",
+      "quantities": [
+        {
+          "value": "32.30",
+          "unit": "%",
+          "start": 922,
+          "end": 928
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 929,
+      "end": 956,
+      "text": "实现扣非归母净利润0.38亿元，同比增长25.99%。",
+      "quantities": [
+        {
+          "value": "0.38",
+          "unit": "亿元",
+          "start": 938,
+          "end": 944
+        },
+        {
+          "value": "25.99",
+          "unit": "%",
+          "start": 949,
+          "end": 955
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 992,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 992,
+    "processed_ranges": [
+      [
+        0,
+        992
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 992,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002898,
+  "source_content_sha256": "fb07014742987d8a458c22208549bcfd0912f054208fb2c4e67e1a890c03dc3b"
+}

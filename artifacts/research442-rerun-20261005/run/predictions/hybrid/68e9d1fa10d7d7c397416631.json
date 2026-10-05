@@ -1,0 +1,496 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000340",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年12月”作为日期不成立，年份写法明显有误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 452,
+          "end": 551,
+          "text": "自129年12月，ChatGPT掀起全球生成式AI发展浪潮，到今年年初DeepSeek厚积薄发、迅速突破，推动了国内AI技术的加速发展和应用场景的不断延伸，促使全球大模型训练与推理需求呈指数级增长。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "自129年12月，ChatGPT掀起全球生成式AI发展浪潮，到今年年初DeepSeek厚积薄发、迅速突破，推动了国内AI技术的加速发展和应用场景的不断延伸，促使全球大模型训练与推理需求呈指数级增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 452,
+          "end": 551,
+          "text": "自129年12月，ChatGPT掀起全球生成式AI发展浪潮，到今年年初DeepSeek厚积薄发、迅速突破，推动了国内AI技术的加速发展和应用场景的不断延伸，促使全球大模型训练与推理需求呈指数级增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2da23e4440640e94d0652b6e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“约为%”中百分号前没有数字，关键增速数值缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 808,
+          "end": 858,
+          "text": "《数据中心综合能耗及其灵活性预测报告》指出，2024—2030年，全国数据中心用电量年均增速约为%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "《数据中心综合能耗及其灵活性预测报告》指出，2024—2030年，全国数据中心用电量年均增速约为%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 808,
+          "end": 858,
+          "text": "《数据中心综合能耗及其灵活性预测报告》指出，2024—2030年，全国数据中心用电量年均增速约为%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d37fc0507a98816c3d50b678",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“280EFLOPS（）”括号内为空，缺少应标注的算力精度或类别属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 609,
+          "end": 661,
+          "text": "2024年中国算力总规模已达到280EFLOPS（），其中智能算力规模达90EFLOPS，占比达32%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年中国算力总规模已达到280EFLOPS（），其中智能算力规模达90EFLOPS，占比达32%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 609,
+          "end": 661,
+          "text": "2024年中国算力总规模已达到280EFLOPS（），其中智能算力规模达90EFLOPS，占比达32%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "dd328304eedc1b2fb089d298",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1127
+        ]
+      ],
+      "estimated_input_tokens": 5556,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:26:13.828035+00:00",
+        "request_sha256": "ef44b9ec97c2edabbd3cdf37352926f213e3f5bb25bb788ff9bff4b38fa42e6a",
+        "input_token_estimate": 15498,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277642",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "7283973d65464001a703a7cf63f70eaa",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3717,
+        "output_tokens": 4109,
+        "usage_source": "provider",
+        "duration_seconds": 16.311114,
+        "cost_cny": "0.020153",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "自129年12月，ChatGPT掀起全球生成式AI发展浪潮，到今年年初DeepSeek厚积薄发、迅速突破，推动了国内AI技术的加速发展和应用场景的不断延伸，促使全球大模型训练与推理需求呈指数级增长。"
+          }
+        ],
+        "reason": "“129年12月”作为日期不成立，年份写法明显有误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "《数据中心综合能耗及其灵活性预测报告》指出，2024—2030年，全国数据中心用电量年均增速约为%。"
+          }
+        ],
+        "reason": "“约为%”中百分号前没有数字，关键增速数值缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2024年中国算力总规模已达到280EFLOPS（），其中智能算力规模达90EFLOPS，占比达32%。"
+          }
+        ],
+        "reason": "“280EFLOPS（）”括号内为空，缺少应标注的算力精度或类别属性值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 44,
+      "end": 76,
+      "text": "事件：公司2024年实现营收19.62亿元，同比增长26.1%；",
+      "quantities": [
+        {
+          "value": "19.62",
+          "unit": "亿元",
+          "start": 58,
+          "end": 65
+        },
+        {
+          "value": "26.1",
+          "unit": "%",
+          "start": 70,
+          "end": 75
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 76,
+      "end": 100,
+      "text": "实现归母净利润1.1亿元，同比增长178.5%；",
+      "quantities": [
+        {
+          "value": "1.1",
+          "unit": "亿元",
+          "start": 83,
+          "end": 88
+        },
+        {
+          "value": "178.5",
+          "unit": "%",
+          "start": 93,
+          "end": 99
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 100,
+      "end": 125,
+      "text": "扣非归母净利润0.83亿元，同比增长322.1%。",
+      "quantities": [
+        {
+          "value": "0.83",
+          "unit": "亿元",
+          "start": 107,
+          "end": 113
+        },
+        {
+          "value": "322.1",
+          "unit": "%",
+          "start": 118,
+          "end": 124
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 125,
+      "end": 155,
+      "text": "2025年Q1实现营收3.88亿元，，环比变化-50.4%；",
+      "quantities": [
+        {
+          "value": "3.88",
+          "unit": "亿元",
+          "start": 136,
+          "end": 142
+        },
+        {
+          "value": "-50.4",
+          "unit": "%",
+          "start": 148,
+          "end": 154
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 155,
+      "end": 189,
+      "text": "实现归母净利润0.2亿元，同比增长84.3%，环比变化-14.2%；",
+      "quantities": [
+        {
+          "value": "0.2",
+          "unit": "亿元",
+          "start": 162,
+          "end": 167
+        },
+        {
+          "value": "84.3",
+          "unit": "%",
+          "start": 172,
+          "end": 177
+        },
+        {
+          "value": "-14.2",
+          "unit": "%",
+          "start": 182,
+          "end": 188
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 189,
+      "end": 225,
+      "text": "扣非归母净利润0.18亿元，同比增长103.9%，环比变化-32.1%。",
+      "quantities": [
+        {
+          "value": "0.18",
+          "unit": "亿元",
+          "start": 196,
+          "end": 202
+        },
+        {
+          "value": "103.9",
+          "unit": "%",
+          "start": 207,
+          "end": 213
+        },
+        {
+          "value": "-32.1",
+          "unit": "%",
+          "start": 218,
+          "end": 224
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 242,
+      "end": 298,
+      "text": "盈利能力方面，公司2024年销售毛利率/净利率分别为26.2%/5.8%，分别同比变化-0.1pp/3.0pp。",
+      "quantities": [
+        {
+          "value": "26.2",
+          "unit": "%",
+          "start": 268,
+          "end": 273
+        },
+        {
+          "value": "5.8",
+          "unit": "%",
+          "start": 274,
+          "end": 278
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 242,
+      "end": 298,
+      "text": "盈利能力方面，公司2024年销售毛利率/净利率分别为26.2%/5.8%，分别同比变化-0.1pp/3.0pp。",
+      "quantities": [
+        {
+          "value": "26.2",
+          "unit": "%",
+          "start": 268,
+          "end": 273
+        },
+        {
+          "value": "5.8",
+          "unit": "%",
+          "start": 274,
+          "end": 278
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 298,
+      "end": 348,
+      "text": "公司2025年Q1销售毛利率/净利率分别为24.6%/5.1%，分别同比变化4.4pp/3.0pp。",
+      "quantities": [
+        {
+          "value": "24.6",
+          "unit": "%",
+          "start": 319,
+          "end": 324
+        },
+        {
+          "value": "5.1",
+          "unit": "%",
+          "start": 325,
+          "end": 329
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 298,
+      "end": 348,
+      "text": "公司2025年Q1销售毛利率/净利率分别为24.6%/5.1%，分别同比变化4.4pp/3.0pp。",
+      "quantities": [
+        {
+          "value": "24.6",
+          "unit": "%",
+          "start": 319,
+          "end": 324
+        },
+        {
+          "value": "5.1",
+          "unit": "%",
+          "start": 325,
+          "end": 329
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1127,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1127,
+    "processed_ranges": [
+      [
+        0,
+        1127
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1127,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 10,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001973,
+  "source_content_sha256": "95b144034b0024800a411888233407a4e0301ba1504d6956e52ae3f92778d3bd"
+}

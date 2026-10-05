@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比锐减0.04%，增速比2024年年末高0.2个百分点，一季度增加6197亿元。\"}, {\"text\": \"央行：央行发布2025年一季度金融机构贷款投向统计，房地产贷款增速回升，人民币房地产贷款余额53.54万亿元，同比增长0.04%，增速比上年末高0.2个百分点，一季度增加6197亿元。\"}], \"reason\": \"同一对象同一期间，前文称同比锐减0.04%，后文称同比增长0.04%，数值矛盾。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"杭州迎来1宗拱墅区康桥单元住宅用地出让，用地性质为住宅用地，土地出让面积26351m2，规划建筑面积57972.2m2，总价13.74亿元，成交楼面价23707元/mm，溢价率40.33%。\"}], \"reason\": \"成交楼面价单位写成“元/mm”，应为元/平方米，后文同一数据使用“元/㎡”。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"杭州土拍市场火热。杭州土拍市场火热。\"}], \"reason\": \"同一信息“杭州土拍市场火热”连续重复两次，没有新增内容。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:33:19.551561+00:00",
+    "request_sha256": "5d68db03ea10ef902bd83de489be3502eafa5dcb0f69b2ee50165d313b206990",
+    "input_token_estimate": 16222,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278366",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "8aff6c790704416398a5d143d388baf9",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3771,
+    "output_tokens": 8274,
+    "usage_source": "provider",
+    "duration_seconds": 33.739565,
+    "cost_cny": "0.036867"
+  },
+  "cache_request": {
+    "key": "dda94681c85c880f09ae407a0f397127811443a79bede2f6114263f8132c1524",
+    "purpose": "text_review.detect",
+    "messages_sha256": "5d68db03ea10ef902bd83de489be3502eafa5dcb0f69b2ee50165d313b206990"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"在多重因素的共同作用下，2025 年第一季度，上海办公平均租金环比下降 1.6%，升至 4.15 元/㎡·日\"}],\"reason\":\"环比下降表示租金低于上期，与“升至”所表达的上升方向矛盾。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"另外，这些区域内物流仓储类企业占比居高不下，承租面积普遍在 1000 平方分米以上，但租金承受力集中在 1-1.5 元/㎡·日的低位区间。\"}],\"reason\":\"1000平方分米仅10平方米，物流仓储承租面积应为平方米量级。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"内环内区域平均租金下跌 1.6个百分点至 5.66 元/㎡·日。\"},{\"text\":\"内中环平均租金下跌 1.8 个百分点，平均租金降至 3.84 元/㎡·日，中外环与外郊环区域平均租金分别在 2.89 元/㎡·日与 2.32 元/㎡·日，环比下跌 1.3 个百分点与 2 个百分点\"}],\"reason\":\"租金环比变化应以百分比表示，用“个百分点”描述租金跌幅混淆了单位。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:10:46.598947+00:00",
+    "request_sha256": "a2dd8f2e41368b477db3447ca5ae277a4da01b54e45b23c8fe4e9b7fa6d65f3b",
+    "input_token_estimate": 15575,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277719",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b92ff3ab7127498d9defd5bf2d053e60",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3667,
+    "output_tokens": 6303,
+    "usage_source": "provider",
+    "duration_seconds": 24.519634,
+    "cost_cny": "0.028879"
+  },
+  "cache_request": {
+    "key": "b8635e2a069bb5a56383f2f37c9777cbaeb05aad603371a9fe8741a784c67d97",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a2dd8f2e41368b477db3447ca5ae277a4da01b54e45b23c8fe4e9b7fa6d65f3b"
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000662",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "正文公司名称后的括号内为空，未填股票代码等属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 52,
+          "end": 89,
+          "text": "2025 年 4 月 23 日，亚马逊（）发布 2025 年第一季度财报。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025 年 4 月 23 日，亚马逊（）发布 2025 年第一季度财报。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 52,
+          "end": 89,
+          "text": "2025 年 4 月 23 日，亚马逊（）发布 2025 年第一季度财报。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "61aac84f25f584b71448fb81",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "净利润单位应为亿美元，“亿美分”使量级缩小100倍。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 89,
+          "end": 146,
+          "text": "公司第一季度总营收为 1556.67 亿美元，同比增长9%；净利润达 171.27 亿美分，同比大幅增长 64%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司第一季度总营收为 1556.67 亿美元，同比增长9%；净利润达 171.27 亿美分，同比大幅增长 64%。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 89,
+          "end": 146,
+          "text": "公司第一季度总营收为 1556.67 亿美元，同比增长9%；净利润达 171.27 亿美分，同比大幅增长 64%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "814e11a0a6a47ac82b567bdd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "1,556.7亿美元高于1,551.6亿美元，不是“略低于”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 348,
+          "end": 421,
+          "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元，营收增长放缓至两年最低。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元，营收增长放缓至两年最低。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 348,
+          "end": 421,
+          "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元，营收增长放缓至两年最低。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "24b6b098706e6c9884741f19",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“提升至”后无百分比数值，缺失当期AWS营业利润率。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 823,
+          "end": 877,
+          "text": "AWS 营业利润率提升至,相较于上年同期37.6%有所上升，主要受益于\"基础设施升级聚焦 AI 算力优化\"。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "AWS 营业利润率提升至,相较于上年同期37.6%有所上升，主要受益于\"基础设施升级聚焦 AI 算力优化\"。",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "spans": [
+        {
+          "start": 823,
+          "end": 877,
+          "text": "AWS 营业利润率提升至,相较于上年同期37.6%有所上升，主要受益于\"基础设施升级聚焦 AI 算力优化\"。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3d0807a9ad002fa292ee73dd",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1452
+        ]
+      ],
+      "estimated_input_tokens": 5892,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:45:59.356364+00:00",
+        "request_sha256": "b20e60c50ede1e48b9e18ee6265bfbad3427e4891d035e5145735cb285834ea0",
+        "input_token_estimate": 16445,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278589",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b23730d4cd184b60b7779fd894753d6a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3892,
+        "output_tokens": 9282,
+        "usage_source": "provider",
+        "duration_seconds": 36.909486,
+        "cost_cny": "0.04102",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2025 年 4 月 23 日，亚马逊（）发布 2025 年第一季度财报。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "正文公司名称后的括号内为空，未填股票代码等属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司第一季度总营收为 1556.67 亿美元，同比增长9%；净利润达 171.27 亿美分，同比大幅增长 64%。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "净利润单位应为亿美元，“亿美分”使量级缩小100倍。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元，营收增长放缓至两年最低。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "1,556.7亿美元高于1,551.6亿美元，不是“略低于”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "AWS 营业利润率提升至,相较于上年同期37.6%有所上升，主要受益于\"基础设施升级聚焦 AI 算力优化\"。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“提升至”后无百分比数值，缺失当期AWS营业利润率。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "风险提示：全球宏观经济复苏不及预期；行业竞争加剧或导致企业债权空间收窄；政策监管趋严及技术落地不及预期；未来 AI 研发进展不及预期",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“债权空间收窄”表述不当，行业竞争通常影响盈利或信用空间。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "计算机行业点评报告：亚马逊（AMZN.O）：电商筑基云智跃迁：全域AI驱动生态扩容与资本优配",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "text": "贵金属领域建议关注紫金矿业、银泰黄金、中金黄金、湖南黄金；小金属领域建议关注锡业股份。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "报告标题和事件主体为计算机行业/亚马逊，投资建议却推荐贵金属、小金属，与主题冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "风险提示：全球宏观经济复苏不及预期；行业竞争加剧或导致企业债权空间收窄；政策监管趋严及技术落地不及预期；未来 AI 研发进展不及预期",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "“债权空间收窄”表述不当，行业竞争通常影响盈利或信用空间。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "计算机行业点评报告：亚马逊（AMZN.O）：电商筑基云智跃迁：全域AI驱动生态扩容与资本优配",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "text": "贵金属领域建议关注紫金矿业、银泰黄金、中金黄金、湖南黄金；小金属领域建议关注锡业股份。",
+            "start": 0,
+            "end": 0
+          }
+        ],
+        "reason": "报告标题和事件主体为计算机行业/亚马逊，投资建议却推荐贵金属、小金属，与主题冲突。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 89,
+      "end": 119,
+      "text": "公司第一季度总营收为 1556.67 亿美元，同比增长9%；",
+      "quantities": [
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 116,
+          "end": 118
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 119,
+      "end": 146,
+      "text": "净利润达 171.27 亿美分，同比大幅增长 64%。",
+      "quantities": [
+        {
+          "value": "64",
+          "unit": "%",
+          "start": 142,
+          "end": 145
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 348,
+      "end": 421,
+      "text": "2025 年第一季度，亚马逊净销售额达 1,556.7 亿美元，同比增长 9%，略低于分析师预期的 1551.6 亿美元，营收增长放缓至两年最低。",
+      "quantities": [
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 385,
+          "end": 387
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "eps",
+      "metric_text": "每股收益",
+      "start": 482,
+      "end": 528,
+      "text": "稀释后每股收益达 1.59 美元，同比增长 62.2%，显著高于市场预期的 1.36 美元。",
+      "quantities": [
+        {
+          "value": "62.2",
+          "unit": "%",
+          "start": 504,
+          "end": 509
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 528,
+      "end": 604,
+      "text": "核心云业务 AWS 营收同比增长16.9%，不及分析师预期的 293.6 亿美元，其营业利润率逆势提升至 39.45%，显著高于四季度的 36.83%。",
+      "quantities": [
+        {
+          "value": "16.9",
+          "unit": "%",
+          "start": 544,
+          "end": 549
+        },
+        {
+          "value": "39.45",
+          "unit": "%",
+          "start": 581,
+          "end": 587
+        },
+        {
+          "value": "36.83",
+          "unit": "%",
+          "start": 597,
+          "end": 603
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1452,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1452,
+    "processed_ranges": [
+      [
+        0,
+        1452
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1452,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002525,
+  "source_content_sha256": "9a6978f40bfaaae165234588e600b3b75fc17c3991ec8045a06edf45a5372384"
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000539",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句子连续重复出现一次，未提供新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1020,
+          "end": 1072,
+          "text": "但是还未能改变2025年出口外部环境的巨大不确定性。但是还未能改变2025年出口外部环境的巨大不确定性。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "但是还未能改变2025年出口外部环境的巨大不确定性。但是还未能改变2025年出口外部环境的巨大不确定性。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1020,
+          "end": 1072,
+          "text": "但是还未能改变2025年出口外部环境的巨大不确定性。但是还未能改变2025年出口外部环境的巨大不确定性。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ad1d0d77237e71ad5ca66861",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "空调线上零售均价写为2609万元/台，单位应为元/台，万元/台量级明显错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 322,
+          "end": 350,
+          "text": "4月跌至2609万元/台，同比-3.2%、环比-7.5%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月跌至2609万元/台，同比-3.2%、环比-7.5%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 322,
+          "end": 350,
+          "text": "4月跌至2609万元/台，同比-3.2%、环比-7.5%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ca6d75c4a39be10c1d672118",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "5月13日早于去年同期5月20日，称“延后”与时间先后矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 217,
+          "end": 251,
+          "text": "2025年618活动延后自5月13日开始（去年同期自5月20日开始）"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年618活动延后自5月13日开始（去年同期自5月20日开始）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 217,
+          "end": 251,
+          "text": "2025年618活动延后自5月13日开始（去年同期自5月20日开始）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "04c3e7de47bf838fd91abc1a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "5-8月共4个月，却列出5个同比数值，期间与数值个数不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 647,
+          "end": 697,
+          "text": "5-8月内销排产量较去年同期实绩分别+15.4%、+29.3%、+22.8%、-9.2%、+5.2%"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5-8月内销排产量较去年同期实绩分别+15.4%、+29.3%、+22.8%、-9.2%、+5.2%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 647,
+          "end": 697,
+          "text": "5-8月内销排产量较去年同期实绩分别+15.4%、+29.3%、+22.8%、-9.2%、+5.2%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4ce6e04885aad9a0760517d5",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1513
+        ]
+      ],
+      "estimated_input_tokens": 6103,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:07:08.991097+00:00",
+        "request_sha256": "6f50b415defcee03b60bfd7f983459789717f994c181d8f2ec38a1ad70f6ddce",
+        "input_token_estimate": 16950,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279094",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f70909a556a041cb97f5274d52799562",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3945,
+        "output_tokens": 4912,
+        "usage_source": "provider",
+        "duration_seconds": 19.612877,
+        "cost_cny": "0.023593"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "但是还未能改变2025年出口外部环境的巨大不确定性。但是还未能改变2025年出口外部环境的巨大不确定性。"
+          }
+        ],
+        "reason": "同一句子连续重复出现一次，未提供新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "4月跌至2609万元/台，同比-3.2%、环比-7.5%"
+          }
+        ],
+        "reason": "空调线上零售均价写为2609万元/台，单位应为元/台，万元/台量级明显错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2025年618活动延后自5月13日开始（去年同期自5月20日开始）"
+          }
+        ],
+        "reason": "5月13日早于去年同期5月20日，称“延后”与时间先后矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "5-8月内销排产量较去年同期实绩分别+15.4%、+29.3%、+22.8%、-9.2%、+5.2%"
+          }
+        ],
+        "reason": "5-8月共4个月，却列出5个同比数值，期间与数值个数不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1513,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1513,
+    "processed_ranges": [
+      [
+        0,
+        1513
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 19.639161,
+  "source_content_sha256": "6817169842be548eea5f33af2762af74956de110fdf74e15afa3f2e4effd0dc8"
+}

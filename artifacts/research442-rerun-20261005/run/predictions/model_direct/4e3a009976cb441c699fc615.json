@@ -1,0 +1,541 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000496",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "上市公司全年营业收入写成20.13万元，与后文季度营收及预测营收量级严重不符，单位应为亿元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 60,
+          "end": 91,
+          "text": "2024年公司实现营业收入20.13万元，同比-10.66%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年公司实现营业收入20.13万元，同比-10.66%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 60,
+          "end": 91,
+          "text": "2024年公司实现营业收入20.13万元，同比-10.66%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "12d47fdc4151e6821edccac5",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“9-7月”月份区间终点早于起点，时间区间本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 737,
+          "end": 756,
+          "text": "鸿林矿业预计2025年9-7月试生产，"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "鸿林矿业预计2025年9-7月试生产，"
+        }
+      ],
+      "spans": [
+        {
+          "start": 737,
+          "end": 756,
+          "text": "鸿林矿业预计2025年9-7月试生产，"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c54cbc5269ba11718fbca670",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一毛利润数据及同比增速连续两行重复出现，未提供额外信息。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "利：公司2024年毛利润为9.86亿元，同比+35.53%。"
+        },
+        {
+          "text": "利：公司2024年毛利润为9.86亿元，同比+35.53%。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "8478dc19bebcb1ee8b5280b3",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1174
+        ]
+      ],
+      "estimated_input_tokens": 5496,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:49:40.148596+00:00",
+        "request_sha256": "5e806ce184d062124e35516af87334d30de480ce3af3557a56fe6337d241852f",
+        "input_token_estimate": 15387,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277531",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4f83e698d69245aead43866b800295fc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3807,
+        "output_tokens": 8539,
+        "usage_source": "provider",
+        "duration_seconds": 35.357489,
+        "cost_cny": "0.037963"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年公司实现营业收入20.13万元，同比-10.66%；"
+          }
+        ],
+        "reason": "上市公司全年营业收入写成20.13万元，与后文季度营收及预测营收量级严重不符，单位应为亿元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "鸿林矿业预计2025年9-7月试生产，"
+          }
+        ],
+        "reason": "“9-7月”月份区间终点早于起点，时间区间本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "利：公司2024年毛利润为9.86亿元，同比+35.53%。"
+          },
+          {
+            "text": "利：公司2024年毛利润为9.86亿元，同比+35.53%。"
+          }
+        ],
+        "reason": "同一毛利润数据及同比增速连续两行重复出现，未提供额外信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "利：公司2024年毛利润为9.86亿元，同比+35.53%。"
+          },
+          {
+            "text": "利：公司2024年毛利润为9.86亿元，同比+35.53%。"
+          }
+        ],
+        "reason": "同一毛利润数据及同比增速连续两行重复出现，未提供额外信息。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 39,
+      "end": 91,
+      "text": "公司发布2024年年报和2025年一季报，2024年公司实现营业收入20.13万元，同比-10.66%；",
+      "quantities": [
+        {
+          "value": "20.13",
+          "unit": "万元",
+          "start": 73,
+          "end": 80
+        },
+        {
+          "value": "-10.66",
+          "unit": "%",
+          "start": 83,
+          "end": 90
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": [
+        "年公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 91,
+      "end": 137,
+      "text": "实现归母净利润/扣非归母净利润3.90/2.60亿元，同比+163.56%/+85.74%。",
+      "quantities": [
+        {
+          "value": "2.60",
+          "unit": "亿元",
+          "start": 111,
+          "end": 117
+        },
+        {
+          "value": "+163.56",
+          "unit": "%",
+          "start": 120,
+          "end": 128
+        },
+        {
+          "value": "+85.74",
+          "unit": "%",
+          "start": 129,
+          "end": 136
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 91,
+      "end": 137,
+      "text": "实现归母净利润/扣非归母净利润3.90/2.60亿元，同比+163.56%/+85.74%。",
+      "quantities": [
+        {
+          "value": "2.60",
+          "unit": "亿元",
+          "start": 111,
+          "end": 117
+        },
+        {
+          "value": "+163.56",
+          "unit": "%",
+          "start": 120,
+          "end": 128
+        },
+        {
+          "value": "+85.74",
+          "unit": "%",
+          "start": 129,
+          "end": 136
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 137,
+      "end": 209,
+      "text": "2025年Q1公司实现营收/归母净利润/扣非归母净利润3.53/0.08/0.07亿元，同比+33.92%/+194.37%/+196.59%。",
+      "quantities": [
+        {
+          "value": "0.07",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "+33.92",
+          "unit": "%",
+          "start": 183,
+          "end": 190
+        },
+        {
+          "value": "+194.37",
+          "unit": "%",
+          "start": 191,
+          "end": 199
+        },
+        {
+          "value": "+196.59",
+          "unit": "%",
+          "start": 200,
+          "end": 208
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 137,
+      "end": 209,
+      "text": "2025年Q1公司实现营收/归母净利润/扣非归母净利润3.53/0.08/0.07亿元，同比+33.92%/+194.37%/+196.59%。",
+      "quantities": [
+        {
+          "value": "0.07",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "+33.92",
+          "unit": "%",
+          "start": 183,
+          "end": 190
+        },
+        {
+          "value": "+194.37",
+          "unit": "%",
+          "start": 191,
+          "end": 199
+        },
+        {
+          "value": "+196.59",
+          "unit": "%",
+          "start": 200,
+          "end": 208
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 137,
+      "end": 209,
+      "text": "2025年Q1公司实现营收/归母净利润/扣非归母净利润3.53/0.08/0.07亿元，同比+33.92%/+194.37%/+196.59%。",
+      "quantities": [
+        {
+          "value": "0.07",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "+33.92",
+          "unit": "%",
+          "start": 183,
+          "end": 190
+        },
+        {
+          "value": "+194.37",
+          "unit": "%",
+          "start": 191,
+          "end": 199
+        },
+        {
+          "value": "+196.59",
+          "unit": "%",
+          "start": 200,
+          "end": 208
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 589,
+      "end": 673,
+      "text": "公司2024年多措并举通过债权增持优质资产，10月购买鸿林矿业剩余47%股权，12月子公司金山矿业剩余33%股权，并承诺2025-2027年累计净利润不低于4.7亿元。",
+      "quantities": [
+        {
+          "value": "47",
+          "unit": "%",
+          "start": 622,
+          "end": 625
+        },
+        {
+          "value": "33",
+          "unit": "%",
+          "start": 640,
+          "end": 643
+        },
+        {
+          "value": "4.7",
+          "unit": "亿元",
+          "start": 667,
+          "end": 672
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "月子公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 852,
+      "end": 949,
+      "text": "投资建议：考虑到公司25年金山矿业恢复正常，降本增效有序进行，菜园子铜金矿将于下半年复产，预计公司2025/2026/2027年实现营业收入27.49/32.14/37.04亿元，分别同比变化\n",
+      "quantities": [
+        {
+          "value": "37.04",
+          "unit": "亿元",
+          "start": 934,
+          "end": 941
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑到公司",
+        "预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 971,
+      "end": 1032,
+      "text": "归母净利润分别为6.01/7.78/9.01亿元，分别同比增长54.05%/29.41%/15.93%，对应EPS分别为\n",
+      "quantities": [
+        {
+          "value": "9.01",
+          "unit": "亿元",
+          "start": 989,
+          "end": 995
+        },
+        {
+          "value": "54.05",
+          "unit": "%",
+          "start": 1002,
+          "end": 1008
+        },
+        {
+          "value": "29.41",
+          "unit": "%",
+          "start": 1009,
+          "end": 1015
+        },
+        {
+          "value": "15.93",
+          "unit": "%",
+          "start": 1016,
+          "end": 1022
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1174,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1174,
+    "processed_ranges": [
+      [
+        0,
+        1174
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 35.384981,
+  "source_content_sha256": "4c73b2bd9f7a5961ee490941ceb098d6a6428215e37ff4402ba443189caa3a14"
+}

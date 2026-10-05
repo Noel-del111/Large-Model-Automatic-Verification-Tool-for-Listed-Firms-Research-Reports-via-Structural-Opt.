@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"横向比较来看，本周传媒板块在所有板块中涨跌幅排名倒数第位。\"}],\"reason\":\"“倒数第位”缺少具体名次数字，数值位置为空。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"4）1月4日国家数据局等17部门联合印发《“数据要素×”三年行动计划（2026—2024年）》，数据产业规模年增速预计约20%。\"}],\"reason\":\"行动计划年份区间写成2026—2024年，结束年份早于开始年份。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"1）本周（12月30日-1月5日）电影票房18.65元，环比增长144.68%。\"}],\"reason\":\"电影票房18.65元使用“元”作单位，明显不符合票房量级，应为亿元等。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"本周重要数据跟踪：2023年国内电影总票房549亿元，同比增长83%。\"},{\"text\":\"据猫眼专业版数据，2023年国内电影总票房约549亿元，同比增长约83%。\"}],\"reason\":\"同一段落内两次重复2023年国内电影总票房及同比增速信息。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"短剧短期监管趋严，但景气度与热度提升趋势提升（紫天科技、华策影视、掌阅科技等）；\"}],\"reason\":\"“提升趋势提升”重复使用“提升”，语义冗余。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2）主题投资带动板块估值整体修复，基本面维度关注可以关注景气度较好且超跌的游戏（推荐恺英网络、三七互娱、巨人网络、姚记科技等标的）、IP潮玩（泡泡玛特、阅文集团等）、媒体（分众传媒、芒果超媒）、IP潮玩（泡泡玛特、阅文集团等）、出版板块；\"}],\"reason\":\"“关注可以关注”语义重复；“IP潮玩（泡泡玛特、阅文集团等）”在句中重复出现两次。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:59:04.792399+00:00",
+    "request_sha256": "27913d9d8c54321c30caa5883ba575ed4c19158cd059c75a7cf998c6b949ff3f",
+    "input_token_estimate": 16185,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278329",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "e20b00afb78f4c3aae738710c74ddbba",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3829,
+    "output_tokens": 6291,
+    "usage_source": "provider",
+    "duration_seconds": 24.768121,
+    "cost_cny": "0.028993"
+  },
+  "cache_request": {
+    "key": "fb0a9f135b11c24bea949b76532ad9a2cee75a14dd36da0a5d9cb8ce033d1019",
+    "purpose": "text_review.detect",
+    "messages_sha256": "27913d9d8c54321c30caa5883ba575ed4c19158cd059c75a7cf998c6b949ff3f"
+  }
+}

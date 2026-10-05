@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"聚酯化纤：截至2024年4月19日，PA66价格周环比持平，原料价格高位运行，成本面支撑稳定，己二酸价格小幅回落，己二胺按月定价，4月执行价格上调元/吨，天辰齐翔己二胺供应量增长，原料市场供应紧张稍有缓解。\"}], \"reason\": \"“4月执行价格上调元/吨”中上调金额缺失，仅有单位“元/吨”而无具体数值。\"}, {\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"截至2024年4月19，制冷剂周环比价格R22+2.08%，R32+3.45%，旺季及成本提振加持下，主流厂家定价探涨，下游终端空调市场旺季支撑明显，叠加出口市场逐步恢复，市场部分呈现供应偏紧情况，整体区间上行为主。\"}], \"reason\": \"日期“2024年4月19”缺少“日”，不符合日期属性值的完整格式。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"风险提示：原油价格大幅波动；原油价格大幅波动；汇率波动；贸易摩擦持续恶化；地缘政治局势紧张升级；业绩不及预期；所引用数据资料的错误风险。\"}], \"reason\": \"风险提示中“原油价格大幅波动”连续出现两次，同一信息不必要重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:03:26.043175+00:00",
+    "request_sha256": "c3a13388cba555f3f57944bfca5585f3c37defc2578fb6ade1fd4955c8eeaa30",
+    "input_token_estimate": 16788,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278932",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ca3f6702ffac4d94b3a04dac1a63119f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4000,
+    "output_tokens": 3077,
+    "usage_source": "provider",
+    "duration_seconds": 12.901669,
+    "cost_cny": "0.016308"
+  },
+  "cache_request": {
+    "key": "52f192c03103fe3b419ecfd9e39aa59abc6b32f5e20e5336c98619ce6da7ef75",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c3a13388cba555f3f57944bfca5585f3c37defc2578fb6ade1fd4955c8eeaa30"
+  }
+}

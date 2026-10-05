@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2025年5月26日，印度制药企业Aurobindo Pharma发布2025-2024财年第四季度财报，Q4实现营业收入838.2亿卢比，同比增长10.6%，净利润为90.3亿卢比，同比下滑0.5%。\"}],\"reason\":\"事件写“2025-2024财年”，后文写“2024-2025财年”，同一财年区间倒置冲突。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"2024-2025财年Q4（），公司实现营业收入838.2亿卢比，同比增长10.6%，毛利率为59.1%，EBITDA为179.2亿卢比，同比增长6.2%，EBITDA利润率为21.4%，同比下滑0.9pct，净利润为90.3亿卢比，同比下滑0.5%。\"}],\"reason\":\"“2024-2025财年Q4（）”括号内时间范围为空，缺少对应期间。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"欧洲制剂业务实现销售收入214.7亿公斤，同比增长17.2%，占比为25.6%。\"}],\"reason\":\"销售收入应以货币单位计，写“214.7亿公斤”把金额单位误作重量单位。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"公司已经有2个生物类似药在欧洲获批，预计26财年开始贡献收入，欧洲制剂业务将稳步向10亿美元（约8,500亿卢比）的收入里程碑迈进。\"}],\"reason\":\"10亿美元约合850亿卢比，原文写约8,500亿卢比，数量级相差10倍。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"ARV制剂业务实现销售收入30.8亿卢比，同比增长29.4%，占比3.4%。\"}],\"reason\":\"30.8亿卢比除以总营收838.2亿卢比约3.7%，原文占比3.4%不成立。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"美国及欧洲市场增长强劲，新兴市场增长放缓。\"},{\"text\":\"新兴市场制剂业务实现销售收入78.6亿卢比，同比下滑7.8%，占比9.4%。\"}],\"reason\":\"前文称新兴市场“增长放缓”，后文却显示同比下滑7.8%，增长与下滑不能同时成立。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"公司Q4营业收入创历史新高，主要得益于销量增长、新产品放量及二级市场股价的稳定，但燃料成本、企业发展成本等相关的一次性营业支出影响EBITDA超10.5亿卢比。\"}],\"reason\":\"将二级市场股价稳定列为营业收入增长驱动，混淆股价表现与经营业绩。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:21:44.651338+00:00",
+    "request_sha256": "425af2244497b6ddba1773e0428a827cd8b09bfb8939a2ae036194ec428a09e0",
+    "input_token_estimate": 14914,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277058",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2b8b3623fadd4d5b89eebbc31effb17d",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3560,
+    "output_tokens": 8074,
+    "usage_source": "provider",
+    "duration_seconds": 32.981432,
+    "cost_cny": "0.035856"
+  },
+  "cache_request": {
+    "key": "fef7eaaf574f65d1ec8a1938f79582189ac2978b5ec69b2175706f27e38a269c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "425af2244497b6ddba1773e0428a827cd8b09bfb8939a2ae036194ec428a09e0"
+  }
+}

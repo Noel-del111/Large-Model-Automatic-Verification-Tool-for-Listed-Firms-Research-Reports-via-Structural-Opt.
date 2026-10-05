@@ -1,0 +1,286 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000685",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 913,
+          "end": 1026,
+          "text": "据前瞻产业研究院援引360ResearchReports预测，2027-2021年全球氯虫苯甲酰胺市场规模复合增长率为4.4%，而我国氯虫苯甲酰胺市场才进入成长期，在中间体、原药、制剂的产能都将进入加速发展阶段，市场潜力较大。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 913,
+          "end": 1026,
+          "text": "据前瞻产业研究院援引360ResearchReports预测，2027-2021年全球氯虫苯甲酰胺市场规模复合增长率为4.4%，而我国氯虫苯甲酰胺市场才进入成长期，在中间体、原药、制剂的产能都将进入加速发展阶段，市场潜力较大。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "3d1646cf8b4371a6d6216e06",
+      "detector_ids": [
+        "hybrid.model",
+        "legacy.C.INTRINSIC.002"
+      ],
+      "original_spans": [
+        {
+          "text": "据前瞻产业研究院援引360ResearchReports预测，2027-2021年全球氯虫苯甲酰胺市场规模复合增长率为4.4%，而我国氯虫苯甲酰胺市场才进入成长期，在中间体、原药、制剂的产能都将进入加速发展阶段，市场潜力较大。"
+        }
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "分钟数不能为63，时间“11时63分”本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 53,
+          "end": 89,
+          "text": "5月27日11时63分左右，山东省潍坊市高密市友道化学有限公司发生爆炸。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月27日11时63分左右，山东省潍坊市高密市友道化学有限公司发生爆炸。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 53,
+          "end": 89,
+          "text": "5月27日11时63分左右，山东省潍坊市高密市友道化学有限公司发生爆炸。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "79bfc428c64202071ebfff31",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "农药原药产能通常以吨/年计量，11000克量纲明显错误，与产能规模表述矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 346,
+          "end": 391,
+          "text": "其中，友道化学的氯虫苯甲酰胺原药产能达11000克，是全球产能最大、产业链最全的生产企业。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，友道化学的氯虫苯甲酰胺原药产能达11000克，是全球产能最大、产业链最全的生产企业。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 346,
+          "end": 391,
+          "text": "其中，友道化学的氯虫苯甲酰胺原药产能达11000克，是全球产能最大、产业链最全的生产企业。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c7321358182f0e82aa339711",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“美国环境保护署”后的括号内为空，缺少应标注的英文缩写等属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 445,
+          "end": 509,
+          "text": "2025年4月21日，友道化学的氯虫苯甲酰胺原药获得了美国环境保护署（）的登记批准，成为中国首家在美国获得该产品自主登记的企业。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年4月21日，友道化学的氯虫苯甲酰胺原药获得了美国环境保护署（）的登记批准，成为中国首家在美国获得该产品自主登记的企业。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 445,
+          "end": 509,
+          "text": "2025年4月21日，友道化学的氯虫苯甲酰胺原药获得了美国环境保护署（）的登记批准，成为中国首家在美国获得该产品自主登记的企业。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2a38ab52e8aeb60116f1411f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1124
+        ]
+      ],
+      "estimated_input_tokens": 5742,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:07:02.161076+00:00",
+        "request_sha256": "692451eb0963170b2e09d6f6223f806ea68e94b243487d5d891a50908548f947",
+        "input_token_estimate": 15949,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278093",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "fd8b171884544e2ba8fb7d5f70a42945",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3772,
+        "output_tokens": 3113,
+        "usage_source": "provider",
+        "duration_seconds": 13.155637,
+        "cost_cny": "0.016224",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "5月27日11时63分左右，山东省潍坊市高密市友道化学有限公司发生爆炸。"
+          }
+        ],
+        "reason": "分钟数不能为63，时间“11时63分”本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "其中，友道化学的氯虫苯甲酰胺原药产能达11000克，是全球产能最大、产业链最全的生产企业。"
+          }
+        ],
+        "reason": "农药原药产能通常以吨/年计量，11000克量纲明显错误，与产能规模表述矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2025年4月21日，友道化学的氯虫苯甲酰胺原药获得了美国环境保护署（）的登记批准，成为中国首家在美国获得该产品自主登记的企业。"
+          }
+        ],
+        "reason": "“美国环境保护署”后的括号内为空，缺少应标注的英文缩写等属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "据前瞻产业研究院援引360ResearchReports预测，2027-2021年全球氯虫苯甲酰胺市场规模复合增长率为4.4%，而我国氯虫苯甲酰胺市场才进入成长期，在中间体、原药、制剂的产能都将进入加速发展阶段，市场潜力较大。"
+          }
+        ],
+        "reason": "时间区间写作“2027-2021年”，起点2027年晚于终点2021年，先后关系矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1124,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1124,
+    "processed_ranges": [
+      [
+        0,
+        1124
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1124,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001423,
+  "source_content_sha256": "0c614adce62c3b0aa5efd4852dd434fdb7c23a2a36cb0f4d81bdbf29d6dae26d"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"2024年全球ADC药物市场规模达亿美元。\"}], \"reason\": \"市场规模仅写“达亿美元”，未给出具体数字。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"预计到2028年约有超550亿克的市场规模。\"}], \"reason\": \"市场规模单位误用为“克”，应为美元等货币单位。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"神州细胞和普米斯（）除了布局双抗产品，PD-1/VEGF/TGFB三抗产品也已进入临床阶段。\"}], \"reason\": \"普米斯后括号内为空，缺失应注明的非数值属性。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"2021-2024年市场复合增速为40%，且鉴于全球ADC单抗市场正处于快速发展阶段，故假设2025-2028年ADC市场以35%复合增速增长，预计到2028年约有超550亿克的市场规模。\"}], \"reason\": \"ADC为抗体偶联药物，不是单抗，“ADC单抗市场”术语使用不当。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:47:54.911138+00:00",
+    "request_sha256": "4658429371aee86f5cb4b7143c776c0898b811e43831ec51fb243aba31f628a3",
+    "input_token_estimate": 15799,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277943",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "8dac074c430a4f4b85f44c87ee331817",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3830,
+    "output_tokens": 6985,
+    "usage_source": "provider",
+    "duration_seconds": 27.719202,
+    "cost_cny": "0.03177"
+  },
+  "cache_request": {
+    "key": "3549b2374ab1815ff5f4e63fcb42aed660d8c6511e4f259936fb002c52eae373",
+    "purpose": "text_review.detect",
+    "messages_sha256": "4658429371aee86f5cb4b7143c776c0898b811e43831ec51fb243aba31f628a3"
+  }
+}

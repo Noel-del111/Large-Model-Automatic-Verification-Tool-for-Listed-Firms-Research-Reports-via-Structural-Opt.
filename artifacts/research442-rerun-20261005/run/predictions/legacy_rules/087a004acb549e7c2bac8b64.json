@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000569",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "52474eb5eaca28c6276bc5aa",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 155,
+          "end": 228,
+          "text": "供给端：2025年1-4月，国内钼供应增量则仅为4%，2023-2021年间均保持10%以上，2024年供给增速为7.9%，今年以来继续保持下滑。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 851,
+    "total_chars": 851,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.00064,
+  "source_content_sha256": "24a3e85a0f1ce5622154b798e4653b3e0914a4bb3ff84a0ec3af11db5bcf5497"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"产品销量快速增长，经营业绩显著改善。产品销量快速增长，经营业绩显著改善。\"}], \"reason\": \"同一句“产品销量快速增长，经营业绩显著改善”连续重复两次，无新增信息。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"新增省级新产品试制计划15只，累计288只，累计288只。\"}], \"reason\": \"“累计288只”在同一句末尾连续重复两次，属于冗余表述。\"}, {\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"预计2027-2025年EPS分别为0.84元、0.98元、1.14元，对应PE分别为15.0倍、12.9倍、11.1倍。\"}], \"reason\": \"年份区间“2027-2025年”终点早于起点，时间区间本身不成立。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"绿科安工厂产能利用率为79.58%，，净利润为1.44亿分，同比增长35.76%。\"}], \"reason\": \"净利润单位应为“亿元”，原文写作“亿分”，量纲错误。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"2024年公司销售毛利率为24.98%，同比增长0.36pct，期间费用率（）为6.12%，同比-1.13pct。\"}], \"reason\": \"期间费用率后的括号为空，未标明所采用的费用口径或子项。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:01:26.571435+00:00",
+    "request_sha256": "e5eeb8d74f14a14d80504110450955b1c3d1ba1b789b86898958f68a809493b6",
+    "input_token_estimate": 16072,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278216",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "83d6e35f1bcf4a058ec897c183d0bb7b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3802,
+    "output_tokens": 5403,
+    "usage_source": "provider",
+    "duration_seconds": 20.206667,
+    "cost_cny": "0.025414"
+  },
+  "cache_request": {
+    "key": "084c630ad378d6fb39024a31d353489e42db51dcf712a2b6d6f1bb61207f56b2",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e5eeb8d74f14a14d80504110450955b1c3d1ba1b789b86898958f68a809493b6"
+  }
+}

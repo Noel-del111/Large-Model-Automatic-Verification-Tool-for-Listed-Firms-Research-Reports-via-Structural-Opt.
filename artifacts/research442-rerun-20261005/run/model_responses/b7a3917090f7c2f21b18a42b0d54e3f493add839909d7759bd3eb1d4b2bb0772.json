@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"专利产品和新产品营收规模同比有较好增长，正往专利产品和新产品占比不断提升的方向发展。\"}],\"reason\":\"该句与紧邻前句内容重复，均表达专利及新产品营收增长且占比提升，属不必要重复。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2025Q1，销售费用率为38.11%，同比增长3.55pct；管理费用率为6.62%，同比增长0.05pct；研发费用率为10.18%，同比增加pct。\"}],\"reason\":\"研发费用率同比增加数值缺失，'同比增加pct'中未填具体数值。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"3个项目处于III期临床阶段：S086（慢性心衰，已完成入组）、PCSK9单抗（已完成入组，预计23年NDA）、SAL0130（一项III期已完成入组，另一项正在开展入组）。\"}],\"reason\":\"报告期为2024年报和2025年一季报，却写预计23年NDA，预计时间已过，与当前报告时间矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:01:51.602942+00:00",
+    "request_sha256": "7522569e70183cb4471a02825bae65f79ef81fc92df042022756d744cbbd1592",
+    "input_token_estimate": 15722,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277866",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f73c015dcead46b9a99ed1f0349537cc",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3732,
+    "output_tokens": 7267,
+    "usage_source": "provider",
+    "duration_seconds": 31.684297,
+    "cost_cny": "0.0328"
+  },
+  "cache_request": {
+    "key": "b7a3917090f7c2f21b18a42b0d54e3f493add839909d7759bd3eb1d4b2bb0772",
+    "purpose": "text_review.detect",
+    "messages_sha256": "7522569e70183cb4471a02825bae65f79ef81fc92df042022756d744cbbd1592"
+  }
+}

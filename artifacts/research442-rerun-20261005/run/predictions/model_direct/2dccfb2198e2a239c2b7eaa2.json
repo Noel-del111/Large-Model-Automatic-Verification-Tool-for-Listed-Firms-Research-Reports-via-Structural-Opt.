@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000645",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "建筑面积单位应为平方米，写成平方分米使面积缩小100倍，与容积率2.2及楼面价计算明显矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 468,
+          "end": 530,
+          "text": "土地出让面积26351㎡，规划建筑面积57972.2平方分米，容积率2.2，起始价9.79亿元，起始楼面价16893元/㎡。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "土地出让面积26351㎡，规划建筑面积57972.2平方分米，容积率2.2，起始价9.79亿元，起始楼面价16893元/㎡。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 468,
+          "end": 530,
+          "text": "土地出让面积26351㎡，规划建筑面积57972.2平方分米，容积率2.2，起始价9.79亿元，起始楼面价16893元/㎡。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2de8467aea3749606ca55e83",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "标注为跌幅却出现+2.03%的正值，且列示5家公司却给出6个跌幅数值，与“跌幅”定义及一一对应关系矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 212,
+          "end": 292,
+          "text": "个股跌幅较大的为南国置业、粤宏远A、中国国贸、深振业A、招商积余，跌幅分别为-5.02%/-1.89%/-1.64%/-1.13%/-1.10%/+2.03%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "个股跌幅较大的为南国置业、粤宏远A、中国国贸、深振业A、招商积余，跌幅分别为-5.02%/-1.89%/-1.64%/-1.13%/-1.10%/+2.03%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 212,
+          "end": 292,
+          "text": "个股跌幅较大的为南国置业、粤宏远A、中国国贸、深振业A、招商积余，跌幅分别为-5.02%/-1.89%/-1.64%/-1.13%/-1.10%/+2.03%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fae10a3c691f71f48c0425d1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "正文“计划发行总额为人民币”后直接接“类型”，缺少具体金额，标题虽有28.01亿元但正文未给出。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 873,
+          "end": 938,
+          "text": "该债券的发行人为上海地产（集团）有限公司，计划发行总额为人民币，类型为资产支持证券(ABS)，并由申万宏源资管作为承销商负责推广。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "该债券的发行人为上海地产（集团）有限公司，计划发行总额为人民币，类型为资产支持证券(ABS)，并由申万宏源资管作为承销商负责推广。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 873,
+          "end": 938,
+          "text": "该债券的发行人为上海地产（集团）有限公司，计划发行总额为人民币，类型为资产支持证券(ABS)，并由申万宏源资管作为承销商负责推广。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "17c1381534c4dc1a42d98840",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "公告标签为中海宏洋地产集团，正文却以浦东金桥为公告主体并提及其高管辞职，两者主体不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 947,
+          "end": 1005,
+          "text": "【中海宏洋地产集团】浦东金桥公告，杜少雄因工作调动，辞去公司董事、副董事长、战略委员会委员职务，同时辞去总经理职务。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "【中海宏洋地产集团】浦东金桥公告，杜少雄因工作调动，辞去公司董事、副董事长、战略委员会委员职务，同时辞去总经理职务。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 947,
+          "end": 1005,
+          "text": "【中海宏洋地产集团】浦东金桥公告，杜少雄因工作调动，辞去公司董事、副董事长、战略委员会委员职务，同时辞去总经理职务。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b1863cf8c9ba152216ee6e3e",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1179
+        ]
+      ],
+      "estimated_input_tokens": 5670,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:31:04.846379+00:00",
+        "request_sha256": "ec6f9d7b7e2e62d552baa6f0eb509a2c59c07de9c2b20ab78621da0c37feee9c",
+        "input_token_estimate": 15804,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277948",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "242ffee170e1420baa0345178798ada2",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3819,
+        "output_tokens": 9267,
+        "usage_source": "provider",
+        "duration_seconds": 38.391397,
+        "cost_cny": "0.040887"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "土地出让面积26351㎡，规划建筑面积57972.2平方分米，容积率2.2，起始价9.79亿元，起始楼面价16893元/㎡。"
+          }
+        ],
+        "reason": "建筑面积单位应为平方米，写成平方分米使面积缩小100倍，与容积率2.2及楼面价计算明显矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "个股跌幅较大的为南国置业、粤宏远A、中国国贸、深振业A、招商积余，跌幅分别为-5.02%/-1.89%/-1.64%/-1.13%/-1.10%/+2.03%。"
+          }
+        ],
+        "reason": "标注为跌幅却出现+2.03%的正值，且列示5家公司却给出6个跌幅数值，与“跌幅”定义及一一对应关系矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "该债券的发行人为上海地产（集团）有限公司，计划发行总额为人民币，类型为资产支持证券(ABS)，并由申万宏源资管作为承销商负责推广。"
+          }
+        ],
+        "reason": "正文“计划发行总额为人民币”后直接接“类型”，缺少具体金额，标题虽有28.01亿元但正文未给出。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "【中海宏洋地产集团】浦东金桥公告，杜少雄因工作调动，辞去公司董事、副董事长、战略委员会委员职务，同时辞去总经理职务。"
+          }
+        ],
+        "reason": "公告标签为中海宏洋地产集团，正文却以浦东金桥为公告主体并提及其高管辞职，两者主体不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1179,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1179,
+    "processed_ranges": [
+      [
+        0,
+        1179
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 38.417552,
+  "source_content_sha256": "36787f6f20fc02827501a78f5c52c580cc5c90f68f8bf2f33d0f36169e3340c7"
+}

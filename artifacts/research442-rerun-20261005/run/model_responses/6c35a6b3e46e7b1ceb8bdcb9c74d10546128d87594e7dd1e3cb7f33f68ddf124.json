@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"稳定币正在成为连接传统金融与加密世界的桥梁\"},{\"text\":\"目前正在成为连接传统金融与加密世界的桥梁。\"}],\"reason\":\"正文首句与正文第一段末句重复表达稳定币正在成为连接传统金融与加密世界的桥梁。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"稳定币巨头Circle预计于6月5日在美国纽约证券交易所（）上市，这将是稳定币领域的首个IPO。\"}],\"reason\":\"纽约证券交易所后的括号内应为股票代码等属性值，但原文为空。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"截至2025年4月，USDC已成为全球第二大美元挂钩稳定币，市值约609美元。\"}],\"reason\":\"USDC作为稳定币，市值约609美元不合量级，应为约609亿美元。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"Circle报告称，截至2024年底，其稳定币相关业务入为美元，占总收入的99.1%。\"}],\"reason\":\"“业务入为美元”缺少应报告的业务收入数值，无法核验占比。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:56:02.037813+00:00",
+    "request_sha256": "a18c486a25a312bac36af9c2a67ea669b3f4e338c8a23b1342e8b02c720e804b",
+    "input_token_estimate": 16211,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278355",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1999936479df47cc967cd4b2efa8c0fa",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3773,
+    "output_tokens": 5370,
+    "usage_source": "provider",
+    "duration_seconds": 22.172221,
+    "cost_cny": "0.025253"
+  },
+  "cache_request": {
+    "key": "6c35a6b3e46e7b1ceb8bdcb9c74d10546128d87594e7dd1e3cb7f33f68ddf124",
+    "purpose": "text_review.detect",
+    "messages_sha256": "a18c486a25a312bac36af9c2a67ea669b3f4e338c8a23b1342e8b02c720e804b"
+  }
+}

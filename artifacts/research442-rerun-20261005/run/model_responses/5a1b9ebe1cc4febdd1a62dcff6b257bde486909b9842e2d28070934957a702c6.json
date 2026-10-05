@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。\"}],\"reason\":\"医药板块涨跌幅使用金额单位“亿元”，涨跌幅应为百分比或百分点单位，单位错误。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"2025年5月28日，医药板块涨跌幅-0.40亿元，跑输沪深300指数0.32pct，涨跌幅居申万31个子行业第41名。\"}],\"reason\":\"申万子行业总数为31个，排名却为第41名，排名超出总数范围。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"惠泰医疗（）：公司发布公告，子公司湖南埃普特医疗器械有限公司取得一项医疗器械注册证，公司产品冠状动脉棘突球囊扩张导管获得批准上市。\"}],\"reason\":\"惠泰医疗后的股票代码括号为空，缺失股票代码属性值。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:29:18.205329+00:00",
+    "request_sha256": "2bb7c3fc5ac76104832dcd7bfa240007494e684702cdcbf9583acdbd25f38f0f",
+    "input_token_estimate": 15180,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277324",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "47336142a5fd4f02a43ceb4a82280d5f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3628,
+    "output_tokens": 5384,
+    "usage_source": "provider",
+    "duration_seconds": 22.103734,
+    "cost_cny": "0.025164"
+  },
+  "cache_request": {
+    "key": "5a1b9ebe1cc4febdd1a62dcff6b257bde486909b9842e2d28070934957a702c6",
+    "purpose": "text_review.detect",
+    "messages_sha256": "2bb7c3fc5ac76104832dcd7bfa240007494e684702cdcbf9583acdbd25f38f0f"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"维持2027年-2025年营业收入预测至161.92/175.60/191.35亿元，同比+7.04%/+8.45%/+8.97%，维持2025年-2027年归母净利润预测至16.22/17.69/19.51亿元，同比+9.25%/9.05%/10.28%，对应三年EPS分别为5.53/6.03/6.65元，对应当前股价PE分别为15/14/13倍，维持“买入”评级。\"}], \"reason\": \"营业收入预测年份区间写成2027年-2025年，起止倒置，时间区间不成立。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"食品安全风险；食品安全风险；市场竞争加剧风险；原材料价格波动风险。\"}], \"reason\": \"风险提示中“食品安全风险”连续重复列出，同一信息不必要地重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:43:10.236419+00:00",
+    "request_sha256": "f3d6358e27e94840971dad7082d2fbd9ed497d4e5a4139d4b5adbbbdf1958cf0",
+    "input_token_estimate": 15905,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278049",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "14a104a7c4aa4444bf374e7ca5c046a5",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3775,
+    "output_tokens": 4273,
+    "usage_source": "provider",
+    "duration_seconds": 18.190971,
+    "cost_cny": "0.020867"
+  },
+  "cache_request": {
+    "key": "fd5cfc0f6f4a402fe5bcd3e985f1edcd60f624306640d1141234c84e1f1df923",
+    "purpose": "text_review.detect",
+    "messages_sha256": "f3d6358e27e94840971dad7082d2fbd9ed497d4e5a4139d4b5adbbbdf1958cf0"
+  }
+}

@@ -1,0 +1,671 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000308",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份为“0月”，不是合法月份，日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 84,
+          "end": 99,
+          "text": "2022年0月游戏版号重启发放"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2022年0月游戏版号重启发放"
+        }
+      ],
+      "spans": [
+        {
+          "start": 84,
+          "end": 99,
+          "text": "2022年0月游戏版号重启发放"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f88b27b5d0de371c71e8b6ef",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "明确合计关系978+98应等于1076，而非1090，合计不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 149,
+          "end": 183,
+          "text": "2023年共发放978个国产版号，98个进口版号，合计1090个版号"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2023年共发放978个国产版号，98个进口版号，合计1090个版号"
+        }
+      ],
+      "spans": [
+        {
+          "start": 149,
+          "end": 183,
+          "text": "2023年共发放978个国产版号，98个进口版号，合计1090个版号"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "44a058ca438469e23cc53e84",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1583
+        ]
+      ],
+      "estimated_input_tokens": 6047,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:45:47.121734+00:00",
+        "request_sha256": "94ebe5582d9247bbf79c90c9427f5dd8a63846e37a30d963e70acaf7f0d5dacf",
+        "input_token_estimate": 16848,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278992",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "deb7e5291e4543dcbfe1d65e62792f63",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4020,
+        "output_tokens": 6096,
+        "usage_source": "provider",
+        "duration_seconds": 22.689714,
+        "cost_cny": "0.028404",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2022年0月游戏版号重启发放"
+          }
+        ],
+        "reason": "月份为“0月”，不是合法月份，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2023年共发放978个国产版号，98个进口版号，合计1090个版号"
+          }
+        ],
+        "reason": "明确合计关系978+98应等于1076，而非1090，合计不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 423,
+      "end": 641,
+      "text": "2023年及2024Q1A股游戏上市公司合计收入达812、206亿元，yoy+3%、+7%，我们认为主要系版号重启发放，各公司新游相继上线，驱动营收增长，归母净利润合计为89.2、26.4亿元，yoy+1265%，-27%，归母净利率为11.0%、12.8%，yoy+10.1pct、-5.9pct，2023年归母净利润及归母净利率同比高增主要系2022年部分公司计提大额减值准备，致基数较低，同时2023年新游相继上线，业绩稳步增长。",
+      "quantities": [
+        {
+          "value": "206",
+          "unit": "亿元",
+          "start": 452,
+          "end": 457
+        },
+        {
+          "value": "+3",
+          "unit": "%",
+          "start": 461,
+          "end": 464
+        },
+        {
+          "value": "+7",
+          "unit": "%",
+          "start": 465,
+          "end": 468
+        },
+        {
+          "value": "26.4",
+          "unit": "亿元",
+          "start": 513,
+          "end": 519
+        },
+        {
+          "value": "+1265",
+          "unit": "%",
+          "start": 523,
+          "end": 529
+        },
+        {
+          "value": "-27",
+          "unit": "%",
+          "start": 530,
+          "end": 534
+        },
+        {
+          "value": "11.0",
+          "unit": "%",
+          "start": 541,
+          "end": 546
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 547,
+          "end": 552
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2023年",
+        "2022年",
+        "2023年"
+      ],
+      "entity_mentions": [
+        "A股游戏上市公司",
+        "各公司",
+        "年部分公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 423,
+      "end": 641,
+      "text": "2023年及2024Q1A股游戏上市公司合计收入达812、206亿元，yoy+3%、+7%，我们认为主要系版号重启发放，各公司新游相继上线，驱动营收增长，归母净利润合计为89.2、26.4亿元，yoy+1265%，-27%，归母净利率为11.0%、12.8%，yoy+10.1pct、-5.9pct，2023年归母净利润及归母净利率同比高增主要系2022年部分公司计提大额减值准备，致基数较低，同时2023年新游相继上线，业绩稳步增长。",
+      "quantities": [
+        {
+          "value": "206",
+          "unit": "亿元",
+          "start": 452,
+          "end": 457
+        },
+        {
+          "value": "+3",
+          "unit": "%",
+          "start": 461,
+          "end": 464
+        },
+        {
+          "value": "+7",
+          "unit": "%",
+          "start": 465,
+          "end": 468
+        },
+        {
+          "value": "26.4",
+          "unit": "亿元",
+          "start": 513,
+          "end": 519
+        },
+        {
+          "value": "+1265",
+          "unit": "%",
+          "start": 523,
+          "end": 529
+        },
+        {
+          "value": "-27",
+          "unit": "%",
+          "start": 530,
+          "end": 534
+        },
+        {
+          "value": "11.0",
+          "unit": "%",
+          "start": 541,
+          "end": 546
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 547,
+          "end": 552
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2023年",
+        "2022年",
+        "2023年"
+      ],
+      "entity_mentions": [
+        "A股游戏上市公司",
+        "各公司",
+        "年部分公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 423,
+      "end": 641,
+      "text": "2023年及2024Q1A股游戏上市公司合计收入达812、206亿元，yoy+3%、+7%，我们认为主要系版号重启发放，各公司新游相继上线，驱动营收增长，归母净利润合计为89.2、26.4亿元，yoy+1265%，-27%，归母净利率为11.0%、12.8%，yoy+10.1pct、-5.9pct，2023年归母净利润及归母净利率同比高增主要系2022年部分公司计提大额减值准备，致基数较低，同时2023年新游相继上线，业绩稳步增长。",
+      "quantities": [
+        {
+          "value": "206",
+          "unit": "亿元",
+          "start": 452,
+          "end": 457
+        },
+        {
+          "value": "+3",
+          "unit": "%",
+          "start": 461,
+          "end": 464
+        },
+        {
+          "value": "+7",
+          "unit": "%",
+          "start": 465,
+          "end": 468
+        },
+        {
+          "value": "26.4",
+          "unit": "亿元",
+          "start": 513,
+          "end": 519
+        },
+        {
+          "value": "+1265",
+          "unit": "%",
+          "start": 523,
+          "end": 529
+        },
+        {
+          "value": "-27",
+          "unit": "%",
+          "start": 530,
+          "end": 534
+        },
+        {
+          "value": "11.0",
+          "unit": "%",
+          "start": 541,
+          "end": 546
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 547,
+          "end": 552
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2023年",
+        "2022年",
+        "2023年"
+      ],
+      "entity_mentions": [
+        "A股游戏上市公司",
+        "各公司",
+        "年部分公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 423,
+      "end": 641,
+      "text": "2023年及2024Q1A股游戏上市公司合计收入达812、206亿元，yoy+3%、+7%，我们认为主要系版号重启发放，各公司新游相继上线，驱动营收增长，归母净利润合计为89.2、26.4亿元，yoy+1265%，-27%，归母净利率为11.0%、12.8%，yoy+10.1pct、-5.9pct，2023年归母净利润及归母净利率同比高增主要系2022年部分公司计提大额减值准备，致基数较低，同时2023年新游相继上线，业绩稳步增长。",
+      "quantities": [
+        {
+          "value": "206",
+          "unit": "亿元",
+          "start": 452,
+          "end": 457
+        },
+        {
+          "value": "+3",
+          "unit": "%",
+          "start": 461,
+          "end": 464
+        },
+        {
+          "value": "+7",
+          "unit": "%",
+          "start": 465,
+          "end": 468
+        },
+        {
+          "value": "26.4",
+          "unit": "亿元",
+          "start": 513,
+          "end": 519
+        },
+        {
+          "value": "+1265",
+          "unit": "%",
+          "start": 523,
+          "end": 529
+        },
+        {
+          "value": "-27",
+          "unit": "%",
+          "start": 530,
+          "end": 534
+        },
+        {
+          "value": "11.0",
+          "unit": "%",
+          "start": 541,
+          "end": 546
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 547,
+          "end": 552
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2023年",
+        "2022年",
+        "2023年"
+      ],
+      "entity_mentions": [
+        "A股游戏上市公司",
+        "各公司",
+        "年部分公司"
+      ]
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 423,
+      "end": 641,
+      "text": "2023年及2024Q1A股游戏上市公司合计收入达812、206亿元，yoy+3%、+7%，我们认为主要系版号重启发放，各公司新游相继上线，驱动营收增长，归母净利润合计为89.2、26.4亿元，yoy+1265%，-27%，归母净利率为11.0%、12.8%，yoy+10.1pct、-5.9pct，2023年归母净利润及归母净利率同比高增主要系2022年部分公司计提大额减值准备，致基数较低，同时2023年新游相继上线，业绩稳步增长。",
+      "quantities": [
+        {
+          "value": "206",
+          "unit": "亿元",
+          "start": 452,
+          "end": 457
+        },
+        {
+          "value": "+3",
+          "unit": "%",
+          "start": 461,
+          "end": 464
+        },
+        {
+          "value": "+7",
+          "unit": "%",
+          "start": 465,
+          "end": 468
+        },
+        {
+          "value": "26.4",
+          "unit": "亿元",
+          "start": 513,
+          "end": 519
+        },
+        {
+          "value": "+1265",
+          "unit": "%",
+          "start": 523,
+          "end": 529
+        },
+        {
+          "value": "-27",
+          "unit": "%",
+          "start": 530,
+          "end": 534
+        },
+        {
+          "value": "11.0",
+          "unit": "%",
+          "start": 541,
+          "end": 546
+        },
+        {
+          "value": "12.8",
+          "unit": "%",
+          "start": 547,
+          "end": 552
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2023年",
+        "2022年",
+        "2023年"
+      ],
+      "entity_mentions": [
+        "A股游戏上市公司",
+        "各公司",
+        "年部分公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 641,
+      "end": 831,
+      "text": "2024Q1A股游戏上市公司营收同比增长，但归母净利润同比有所下降，我们认为主要系游戏收入费用错配所致，2024Q1A股游戏上市公司销售费用为72.9亿元，yoy+46%，销售费用率为35.5%，yoy+9.5pct，各厂商新游陆续上线，致销售费用有所增长，但收入确认及利润释放有所延迟，截至2024Q1末，A股游戏上市公司的合同负债为64.3亿元，较2023年末增长5.5亿元。",
+      "quantities": [
+        {
+          "value": "72.9",
+          "unit": "亿元",
+          "start": 712,
+          "end": 718
+        },
+        {
+          "value": "+46",
+          "unit": "%",
+          "start": 722,
+          "end": 726
+        },
+        {
+          "value": "35.5",
+          "unit": "%",
+          "start": 733,
+          "end": 738
+        },
+        {
+          "value": "64.3",
+          "unit": "亿元",
+          "start": 809,
+          "end": 815
+        },
+        {
+          "value": "5.5",
+          "unit": "亿元",
+          "start": 825,
+          "end": 830
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": [
+        "A股游戏上市公司",
+        "A股游戏上市公司",
+        "A股游戏上市公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 641,
+      "end": 831,
+      "text": "2024Q1A股游戏上市公司营收同比增长，但归母净利润同比有所下降，我们认为主要系游戏收入费用错配所致，2024Q1A股游戏上市公司销售费用为72.9亿元，yoy+46%，销售费用率为35.5%，yoy+9.5pct，各厂商新游陆续上线，致销售费用有所增长，但收入确认及利润释放有所延迟，截至2024Q1末，A股游戏上市公司的合同负债为64.3亿元，较2023年末增长5.5亿元。",
+      "quantities": [
+        {
+          "value": "72.9",
+          "unit": "亿元",
+          "start": 712,
+          "end": 718
+        },
+        {
+          "value": "+46",
+          "unit": "%",
+          "start": 722,
+          "end": 726
+        },
+        {
+          "value": "35.5",
+          "unit": "%",
+          "start": 733,
+          "end": 738
+        },
+        {
+          "value": "64.3",
+          "unit": "亿元",
+          "start": 809,
+          "end": 815
+        },
+        {
+          "value": "5.5",
+          "unit": "亿元",
+          "start": 825,
+          "end": 830
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": [
+        "A股游戏上市公司",
+        "A股游戏上市公司",
+        "A股游戏上市公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 915,
+      "end": 1015,
+      "text": "回顾2021-2023年，A股游戏上市公司合计分红55、48、52亿元，股利支付率（现金分红/当期归母净利润）为55.5%、735.1%、58%，行业股利支付率常年维持较高水平，高额稳定分红回报股东。",
+      "quantities": [
+        {
+          "value": "52",
+          "unit": "亿元",
+          "start": 946,
+          "end": 950
+        },
+        {
+          "value": "55.5",
+          "unit": "%",
+          "start": 971,
+          "end": 976
+        },
+        {
+          "value": "735.1",
+          "unit": "%",
+          "start": 977,
+          "end": 983
+        },
+        {
+          "value": "58",
+          "unit": "%",
+          "start": 984,
+          "end": 987
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": [
+        "A股游戏上市公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1583,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1583,
+    "processed_ranges": [
+      [
+        0,
+        1583
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1583,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002442,
+  "source_content_sha256": "dcfb7e945be2ddb6608fcee117f2cb65487798a8e342f98cbb07558b03fcb7ae"
+}

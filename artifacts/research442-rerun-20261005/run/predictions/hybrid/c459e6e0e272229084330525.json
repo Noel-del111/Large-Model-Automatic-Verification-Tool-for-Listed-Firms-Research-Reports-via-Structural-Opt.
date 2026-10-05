@@ -1,0 +1,544 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000320",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "净利润单位写成“亿分”，应为“亿元”，单位量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 86,
+          "end": 110,
+          "text": "归母净利润为15.7亿分，同比增长384.5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "归母净利润为15.7亿分，同比增长384.5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 86,
+          "end": 110,
+          "text": "归母净利润为15.7亿分，同比增长384.5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b0f6d2c3ec1f4838551e7c4e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前面已述2025Q1营收同比增长264.1%，此处称“大幅降低”与事实相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 392,
+          "end": 415,
+          "text": "公司受益于数据中心快速发展，营收同比大幅降低。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司受益于数据中心快速发展，营收同比大幅降低。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 392,
+          "end": 415,
+          "text": "公司受益于数据中心快速发展，营收同比大幅降低。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8697124793eeeafa409f2105",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "国外业务毛利率明确位置为空，只写了“41.69%、 ”后缺少数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 685,
+          "end": 731,
+          "text": "国内业务、国外业务毛利率分别为41.69%、 ，同比+16.37pct、+13.45pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "国内业务、国外业务毛利率分别为41.69%、 ，同比+16.37pct、+13.45pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 685,
+          "end": 731,
+          "text": "国内业务、国外业务毛利率分别为41.69%、 ，同比+16.37pct、+13.45pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b4e7f024a3b3b240d24ac890",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“债权费用率”不是标准财务术语，应表述为“财务费用率”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 785,
+          "end": 834,
+          "text": "其中，销售费用率、管理费用率、债权费用率分别-0.91pct、-1.09pct、+1.05pct。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "其中，销售费用率、管理费用率、债权费用率分别-0.91pct、-1.09pct、+1.05pct。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 785,
+          "end": 834,
+          "text": "其中，销售费用率、管理费用率、债权费用率分别-0.91pct、-1.09pct、+1.05pct。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c7cb7b8f24b7fd15e898e8e6",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1596
+        ]
+      ],
+      "estimated_input_tokens": 5980,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:49:57.081269+00:00",
+        "request_sha256": "c923ba067beda992dacd577b6298e1d4a0eebc085078f09d49c5a40265b417dc",
+        "input_token_estimate": 16687,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278831",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "c3387a26c8e24aa5baa961f7c29115dd",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3977,
+        "output_tokens": 5549,
+        "usage_source": "provider",
+        "duration_seconds": 21.348636,
+        "cost_cny": "0.026173",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "归母净利润为15.7亿分，同比增长384.5%。"
+          }
+        ],
+        "reason": "净利润单位写成“亿分”，应为“亿元”，单位量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "公司受益于数据中心快速发展，营收同比大幅降低。"
+          }
+        ],
+        "reason": "前面已述2025Q1营收同比增长264.1%，此处称“大幅降低”与事实相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "泰国工厂二期已于2025年初投入运营，目前处于持续扩产阶段，产能储备充分。"
+          }
+        ],
+        "reason": "该句在原文中连续出现两次，属于不必要重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "国内业务、国外业务毛利率分别为41.69%、 ，同比+16.37pct、+13.45pct。"
+          }
+        ],
+        "reason": "国外业务毛利率明确位置为空，只写了“41.69%、 ”后缺少数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "其中，销售费用率、管理费用率、债权费用率分别-0.91pct、-1.09pct、+1.05pct。"
+          }
+        ],
+        "reason": "“债权费用率”不是标准财务术语，应表述为“财务费用率”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "泰国工厂二期已于2025年初投入运营，目前处于持续扩产阶段，产能储备充分。"
+          }
+        ],
+        "reason": "该句在原文中连续出现两次，属于不必要重复。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 0,
+      "end": 26,
+      "text": "季报点评：净利润创新高，800G产品出货量持续提升\n",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 40,
+      "end": 86,
+      "text": "事件：公司发布2025年一季报，2025Q1公司实现营收40.5亿元，同比增长264.1%；",
+      "quantities": [
+        {
+          "value": "40.5",
+          "unit": "亿元",
+          "start": 68,
+          "end": 74
+        },
+        {
+          "value": "264.1",
+          "unit": "%",
+          "start": 79,
+          "end": 85
+        }
+      ],
+      "periods": [
+        "2025年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 86,
+      "end": 110,
+      "text": "归母净利润为15.7亿分，同比增长384.5%。",
+      "quantities": [
+        {
+          "value": "384.5",
+          "unit": "%",
+          "start": 103,
+          "end": 109
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 316,
+      "end": 364,
+      "text": "2024年，公司主要产品点对点光模块占营收比例为99.36%，PON光模块占营收比为0.08%；",
+      "quantities": [
+        {
+          "value": "99.36",
+          "unit": "%",
+          "start": 340,
+          "end": 346
+        },
+        {
+          "value": "0.08",
+          "unit": "%",
+          "start": 358,
+          "end": 363
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 316,
+      "end": 364,
+      "text": "2024年，公司主要产品点对点光模块占营收比例为99.36%，PON光模块占营收比为0.08%；",
+      "quantities": [
+        {
+          "value": "99.36",
+          "unit": "%",
+          "start": 340,
+          "end": 346
+        },
+        {
+          "value": "0.08",
+          "unit": "%",
+          "start": 358,
+          "end": 363
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 364,
+      "end": 392,
+      "text": "国外业务和国内业务占营收比分别为78.7%、21.3%。",
+      "quantities": [
+        {
+          "value": "78.7",
+          "unit": "%",
+          "start": 380,
+          "end": 385
+        },
+        {
+          "value": "21.3",
+          "unit": "%",
+          "start": 386,
+          "end": 391
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 606,
+      "end": 648,
+      "text": "2025Q1，公司毛利率为48.66%，同比+6.66pct，环比+0.47pct。",
+      "quantities": [
+        {
+          "value": "48.66",
+          "unit": "%",
+          "start": 619,
+          "end": 625
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 648,
+      "end": 685,
+      "text": "2024年，公司点对点光模块毛利率为44.88%，同比+13.85pct；",
+      "quantities": [
+        {
+          "value": "44.88",
+          "unit": "%",
+          "start": 666,
+          "end": 672
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 685,
+      "end": 731,
+      "text": "国内业务、国外业务毛利率分别为41.69%、 ，同比+16.37pct、+13.45pct。",
+      "quantities": [
+        {
+          "value": "41.69",
+          "unit": "%",
+          "start": 700,
+          "end": 706
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 977,
+      "end": 1000,
+      "text": "2024年，公司研发投入占营收比为4.66%。",
+      "quantities": [
+        {
+          "value": "4.66",
+          "unit": "%",
+          "start": 994,
+          "end": 999
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1472,
+      "end": 1552,
+      "text": "我们预计公司2025-2027年归母净利润为64.38亿元、90.03亿元、111.15亿元，对应PE为13.04X、9.33X、7.55X，维持“买入”评级。",
+      "quantities": [
+        {
+          "value": "64.38",
+          "unit": "亿元",
+          "start": 1494,
+          "end": 1501
+        },
+        {
+          "value": "90.03",
+          "unit": "亿元",
+          "start": 1502,
+          "end": 1509
+        },
+        {
+          "value": "111.15",
+          "unit": "亿元",
+          "start": 1510,
+          "end": 1518
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1596,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1596,
+    "processed_ranges": [
+      [
+        0,
+        1596
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1596,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002366,
+  "source_content_sha256": "b9f7f61f29a98cf3f94db8541aad4b331f870c38e6ce9ff4fa94862128a46f4a"
+}

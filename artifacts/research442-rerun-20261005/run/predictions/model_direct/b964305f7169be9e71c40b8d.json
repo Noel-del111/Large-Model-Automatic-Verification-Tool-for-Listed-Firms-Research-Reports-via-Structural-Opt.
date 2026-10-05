@@ -1,0 +1,328 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000315",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "13.6亿人次按5天日均约2.7亿人次，原文“2.7人次”漏掉“亿”，单位量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 126,
+          "end": 207,
+          "text": "今年五一假期期间（5月1日至5月5日），全社会跨区域人员流动量达13.6亿人次，日均超2.7人次，同比增长2.1%，较2019年同期增长23.7%，符合节前预期。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "今年五一假期期间（5月1日至5月5日），全社会跨区域人员流动量达13.6亿人次，日均超2.7人次，同比增长2.1%，较2019年同期增长23.7%，符合节前预期。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 126,
+          "end": 207,
+          "text": "今年五一假期期间（5月1日至5月5日），全社会跨区域人员流动量达13.6亿人次，日均超2.7人次，同比增长2.1%，较2019年同期增长23.7%，符合节前预期。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "df5745a42297c798edf7b5ce",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "同比增长后仅有百分号，缺少具体百分比数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 975,
+          "end": 1016,
+          "text": "服务消费方面，重点监测餐饮企业销售额同比增长 %，部分电商平台住宿销售额增长6%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "服务消费方面，重点监测餐饮企业销售额同比增长 %，部分电商平台住宿销售额增长6%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 975,
+          "end": 1016,
+          "text": "服务消费方面，重点监测餐饮企业销售额同比增长 %，部分电商平台住宿销售额增长6%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a845cf007aa973280626e762",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "88.5%低于90%和91%，比较结论却说“均有所提高”，与数值矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1330,
+          "end": 1409,
+          "text": "2024年五一假期，人均旅游消费为566元，恢复至2019年同期的88.5%，较2023年五一假期90%的恢复度、2024年春节假期91%的恢复度均有所提高。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年五一假期，人均旅游消费为566元，恢复至2019年同期的88.5%，较2023年五一假期90%的恢复度、2024年春节假期91%的恢复度均有所提高。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1330,
+          "end": 1409,
+          "text": "2024年五一假期，人均旅游消费为566元，恢复至2019年同期的88.5%，较2023年五一假期90%的恢复度、2024年春节假期91%的恢复度均有所提高。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ab3bc5f26befa8b49cf4f2a4",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "列出5类出行方式，却给出6个增长率数值，数量无法一一对应。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 254,
+          "end": 328,
+          "text": "五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%/2.3%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%/2.3%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 254,
+          "end": 328,
+          "text": "五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%/2.3%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b0bf576a10f371bde089f25b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "航班取消量应以“架次”计量，原文用“架”表示飞机数量，单位不准确。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 671,
+          "end": 701,
+          "text": "五一假期期间，国内航班取消量超1万架，日均同比增长超25%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "五一假期期间，国内航班取消量超1万架，日均同比增长超25%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 671,
+          "end": 701,
+          "text": "五一假期期间，国内航班取消量超1万架，日均同比增长超25%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9229b79b0a59d123826c5ede",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2588
+        ]
+      ],
+      "estimated_input_tokens": 7151,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:00:13.560681+00:00",
+        "request_sha256": "bd6e0121a83fa288858cef804a7248c0b64287417f7d0a54338365a785a14a8a",
+        "input_token_estimate": 19877,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.282021",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "aff6264c325a4587ab5528cf9aa63f53",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4631,
+        "output_tokens": 9404,
+        "usage_source": "provider",
+        "duration_seconds": 36.128443,
+        "cost_cny": "0.042247"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "今年五一假期期间（5月1日至5月5日），全社会跨区域人员流动量达13.6亿人次，日均超2.7人次，同比增长2.1%，较2019年同期增长23.7%，符合节前预期。"
+          }
+        ],
+        "reason": "13.6亿人次按5天日均约2.7亿人次，原文“2.7人次”漏掉“亿”，单位量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "服务消费方面，重点监测餐饮企业销售额同比增长 %，部分电商平台住宿销售额增长6%。"
+          }
+        ],
+        "reason": "同比增长后仅有百分号，缺少具体百分比数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年五一假期，人均旅游消费为566元，恢复至2019年同期的88.5%，较2023年五一假期90%的恢复度、2024年春节假期91%的恢复度均有所提高。"
+          }
+        ],
+        "reason": "88.5%低于90%和91%，比较结论却说“均有所提高”，与数值矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%/2.3%。"
+          }
+        ],
+        "reason": "列出5类出行方式，却给出6个增长率数值，数量无法一一对应。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "五一假期期间，国内航班取消量超1万架，日均同比增长超25%。"
+          }
+        ],
+        "reason": "航班取消量应以“架次”计量，原文用“架”表示飞机数量，单位不准确。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2588,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2588,
+    "processed_ranges": [
+      [
+        0,
+        2588
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 36.153787,
+  "source_content_sha256": "2702348c8391056cbe382f5717909cb152f8e6413db99ae598ee010737b4322c"
+}

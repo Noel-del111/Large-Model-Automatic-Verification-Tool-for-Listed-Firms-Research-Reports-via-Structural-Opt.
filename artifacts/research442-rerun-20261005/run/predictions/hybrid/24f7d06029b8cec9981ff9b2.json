@@ -1,0 +1,365 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000692",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "SW有色指数跌幅“下跌%”中百分数缺失，未给出应报告数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 26,
+          "end": 113,
+          "text": "本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 26,
+          "end": 113,
+          "text": "本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1bce0cd3fe93d32d13f5dcca",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "COMEX白银变动-1.68%跌幅大于黄金-1.33%，与“回落幅度小于黄金”的比较叙述相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 26,
+          "end": 113,
+          "text": "本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1234,
+          "end": 1277,
+          "text": "白银价格受金价影响有所回落，但工业属性利好使其回落幅度小于黄金，预计银价弹性相对更高。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。"
+        },
+        {
+          "text": "白银价格受金价影响有所回落，但工业属性利好使其回落幅度小于黄金，预计银价弹性相对更高。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 26,
+          "end": 113,
+          "text": "本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。"
+        },
+        {
+          "start": 1234,
+          "end": 1277,
+          "text": "白银价格受金价影响有所回落，但工业属性利好使其回落幅度小于黄金，预计银价弹性相对更高。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "acb07d49eb4bb15ff9b04e15",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“13月”不是合法月份，时间信息不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 547,
+          "end": 563,
+          "text": "汽车铝材预计13月中下旬需求走弱"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "汽车铝材预计13月中下旬需求走弱"
+        }
+      ],
+      "spans": [
+        {
+          "start": 547,
+          "end": 563,
+          "text": "汽车铝材预计13月中下旬需求走弱"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e5e1263ef51a733bf14236db",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "两处重复陈述国内铝锭社会库存继续去化/减少，信息不必要地重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 595,
+          "end": 617,
+          "text": "国内铝锭社会库存继续去化，周内去库2.3吨。"
+        },
+        {
+          "kind": "source_text",
+          "start": 617,
+          "end": 629,
+          "text": "国内铝锭社会库存继续减少"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "国内铝锭社会库存继续去化，周内去库2.3吨。"
+        },
+        {
+          "text": "国内铝锭社会库存继续减少"
+        }
+      ],
+      "spans": [
+        {
+          "start": 595,
+          "end": 617,
+          "text": "国内铝锭社会库存继续去化，周内去库2.3吨。"
+        },
+        {
+          "start": 617,
+          "end": 629,
+          "text": "国内铝锭社会库存继续减少"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "030abeeaa37047b5ee542a7f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "全国铝锭社会库存单周去库以吨计量数量级明显异常，疑应为万吨。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 595,
+          "end": 617,
+          "text": "国内铝锭社会库存继续去化，周内去库2.3吨。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "国内铝锭社会库存继续去化，周内去库2.3吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 595,
+          "end": 617,
+          "text": "国内铝锭社会库存继续去化，周内去库2.3吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cf048db395c503e404929175",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1388
+        ]
+      ],
+      "estimated_input_tokens": 5945,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:11:29.023009+00:00",
+        "request_sha256": "8823d1db8498bfa9e50fdf50aae7deded84cc38b28fcc1edb3169f5f033dd556",
+        "input_token_estimate": 16523,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278667",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b04f63509ffd4c31b1ebe18c97640044",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3949,
+        "output_tokens": 7371,
+        "usage_source": "provider",
+        "duration_seconds": 33.234235,
+        "cost_cny": "0.033433",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。"
+          }
+        ],
+        "reason": "SW有色指数跌幅“下跌%”中百分数缺失，未给出应报告数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "本周（05/26-05/30）上证综指下跌0.03%，沪深300指数下跌1.08%，SW有色指数下跌%，贵金属COMEX黄金变动-1.33%，COMEX白银变动-1.68%。"
+          },
+          {
+            "text": "白银价格受金价影响有所回落，但工业属性利好使其回落幅度小于黄金，预计银价弹性相对更高。"
+          }
+        ],
+        "reason": "COMEX白银变动-1.68%跌幅大于黄金-1.33%，与“回落幅度小于黄金”的比较叙述相反。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "汽车铝材预计13月中下旬需求走弱"
+          }
+        ],
+        "reason": "“13月”不是合法月份，时间信息不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "国内铝锭社会库存继续去化，周内去库2.3吨。"
+          },
+          {
+            "text": "国内铝锭社会库存继续减少"
+          }
+        ],
+        "reason": "两处重复陈述国内铝锭社会库存继续去化/减少，信息不必要地重复。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "国内铝锭社会库存继续去化，周内去库2.3吨。"
+          }
+        ],
+        "reason": "全国铝锭社会库存单周去库以吨计量数量级明显异常，疑应为万吨。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1388,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1388,
+    "processed_ranges": [
+      [
+        0,
+        1388
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1388,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001748,
+  "source_content_sha256": "d9d41bd12338c80728e5a5a9dd33c340eeafab389786b246871e79d8c502dc34"
+}

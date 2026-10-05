@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000663",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "13月并非合法月份，时间信息不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 239,
+          "end": 286,
+          "text": "Robotaxi-5月28日，特斯拉计划于13月在美国得州奥斯汀启动Robotaxi试点服务。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Robotaxi-5月28日，特斯拉计划于13月在美国得州奥斯汀启动Robotaxi试点服务。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 239,
+          "end": 286,
+          "text": "Robotaxi-5月28日，特斯拉计划于13月在美国得州奥斯汀启动Robotaxi试点服务。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ab141de725258aa1d80b3b03",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内文件名称缺失，属于非数值属性值为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 286,
+          "end": 309,
+          "text": "AI基建-5月28日，工信部等三部门印发《》；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "AI基建-5月28日，工信部等三部门印发《》；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 286,
+          "end": 309,
+          "text": "AI基建-5月28日，工信部等三部门印发《》；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "38cf40d3fb6c4d69fd4d57ec",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "募资单位应为“元”，“15亿分”单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 504,
+          "end": 538,
+          "text": "公司动态：人形机器人-5月29日，双林股份拟定增募资不超过15亿分。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司动态：人形机器人-5月29日，双林股份拟定增募资不超过15亿分。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 504,
+          "end": 538,
+          "text": "公司动态：人形机器人-5月29日，双林股份拟定增募资不超过15亿分。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "776df534735226da5433b57a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "日期“2025年6月12”缺少“日”，不符合日期完整格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 538,
+          "end": 581,
+          "text": "事件前瞻：Robotaxi-特斯拉计划2025年6月12在奥斯汀推出Robotaxi。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件前瞻：Robotaxi-特斯拉计划2025年6月12在奥斯汀推出Robotaxi。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 538,
+          "end": 581,
+          "text": "事件前瞻：Robotaxi-特斯拉计划2025年6月12在奥斯汀推出Robotaxi。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "936fc8dc4e68b3c5a928a1ff",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1762
+        ]
+      ],
+      "estimated_input_tokens": 6366,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:47:18.008829+00:00",
+        "request_sha256": "cf6c27308da66fb1163bae401bf96cc43fbf14f2be3bfdf8160f7082528d883d",
+        "input_token_estimate": 17693,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279837",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "df3cf041b28847b698cac011e15705a8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4155,
+        "output_tokens": 7749,
+        "usage_source": "provider",
+        "duration_seconds": 32.001961,
+        "cost_cny": "0.035151"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "Robotaxi-5月28日，特斯拉计划于13月在美国得州奥斯汀启动Robotaxi试点服务。"
+          }
+        ],
+        "reason": "13月并非合法月份，时间信息不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "AI基建-5月28日，工信部等三部门印发《》；"
+          }
+        ],
+        "reason": "书名号内文件名称缺失，属于非数值属性值为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "公司动态：人形机器人-5月29日，双林股份拟定增募资不超过15亿分。"
+          }
+        ],
+        "reason": "募资单位应为“元”，“15亿分”单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "事件前瞻：Robotaxi-特斯拉计划2025年6月12在奥斯汀推出Robotaxi。"
+          }
+        ],
+        "reason": "日期“2025年6月12”缺少“日”，不符合日期完整格式。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1762,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1762,
+    "processed_ranges": [
+      [
+        0,
+        1762
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 32.027603,
+  "source_content_sha256": "6070a8568a184a27af4e2ceba20d41a8f2e9243e16b5f485ffa9e8c0d4949ee0"
+}

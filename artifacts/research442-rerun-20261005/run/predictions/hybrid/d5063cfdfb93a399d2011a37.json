@@ -1,0 +1,809 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000415",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "公司1992年成立，208年远早于成立时间，年份不合法，应为2018年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 322,
+          "end": 352,
+          "text": "2003年公司推出沙发推杆产品；208年推出办公台推杆产品；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2003年公司推出沙发推杆产品；208年推出办公台推杆产品；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 322,
+          "end": 352,
+          "text": "2003年公司推出沙发推杆产品；208年推出办公台推杆产品；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "835f846a9196b596eb8f2a2c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“大约为亿元”中缺少具体市场规模数值，无法核验。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1364,
+          "end": 1419,
+          "text": "2024年全球可升降办公桌所应用线性驱动产品的市场规模大约为亿元，2021-2024年CAGR约为18.2%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年全球可升降办公桌所应用线性驱动产品的市场规模大约为亿元，2021-2024年CAGR约为18.2%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1364,
+          "end": 1419,
+          "text": "2024年全球可升降办公桌所应用线性驱动产品的市场规模大约为亿元，2021-2024年CAGR约为18.2%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a3bea0deca1003eaae356548",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按845到1389的4年增长计算，CAGR约13.2%，与文中17.4%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1117,
+          "end": 1204,
+          "text": "Marketsand Markets报告显示，全球智能家居市场规模预计将从2022年的845亿美元增长到2026年的1389亿美元，2022-2026年CAGR为17.4%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "Marketsand Markets报告显示，全球智能家居市场规模预计将从2022年的845亿美元增长到2026年的1389亿美元，2022-2026年CAGR为17.4%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1117,
+          "end": 1204,
+          "text": "Marketsand Markets报告显示，全球智能家居市场规模预计将从2022年的845亿美元增长到2026年的1389亿美元，2022-2026年CAGR为17.4%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8c06e23f9c0ad18b1d1e3f89",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "按16.3到28.4的7年增长计算，年复合增长率约8.25%，与文中7.8%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1571,
+          "end": 1653,
+          "text": "GlobaI InfoResearch数据显示，2022年全球电动尾门系统市场规模达到了16.3亿美元，预计2029年将达到28.4亿美元，年复合增长率为7.8%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "GlobaI InfoResearch数据显示，2022年全球电动尾门系统市场规模达到了16.3亿美元，预计2029年将达到28.4亿美元，年复合增长率为7.8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1571,
+          "end": 1653,
+          "text": "GlobaI InfoResearch数据显示，2022年全球电动尾门系统市场规模达到了16.3亿美元，预计2029年将达到28.4亿美元，年复合增长率为7.8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d5d6f6c844bdceb841220571",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "前六名仅对应6家公司，却列出7个市占率，且合计101%，数量与数值不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1717,
+          "end": 1796,
+          "text": "2022年，全球线性驱动市场前六名分别为力纳克、德沃康、迪摩讯、捷昌驱动、凯迪股份以及乐歌股份，市占率分别为31%/31%/13%/12%/8%/1%/5%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2022年，全球线性驱动市场前六名分别为力纳克、德沃康、迪摩讯、捷昌驱动、凯迪股份以及乐歌股份，市占率分别为31%/31%/13%/12%/8%/1%/5%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1717,
+          "end": 1796,
+          "text": "2022年，全球线性驱动市场前六名分别为力纳克、德沃康、迪摩讯、捷昌驱动、凯迪股份以及乐歌股份，市占率分别为31%/31%/13%/12%/8%/1%/5%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b878b4267d76cdd10bfd9561",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "渗透率下降通常不利于收入增长，与“成为公司收入增长新动能”矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1848,
+          "end": 1873,
+          "text": "汽车电动尾门渗透率持续下降，成为公司收入增长新动能"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "汽车电动尾门渗透率持续下降，成为公司收入增长新动能"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1848,
+          "end": 1873,
+          "text": "汽车电动尾门渗透率持续下降，成为公司收入增长新动能"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "91318084693a46ac9461d819",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“直线运用”不是描述运动形式的专业术语，应为“直线运动”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 3159,
+          "end": 3205,
+          "text": "并且线性驱动器产品和机器人线性关节工作原理相同，均是通过丝杠将电机的旋转运动转化为直线运用。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "并且线性驱动器产品和机器人线性关节工作原理相同，均是通过丝杠将电机的旋转运动转化为直线运用。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 3159,
+          "end": 3205,
+          "text": "并且线性驱动器产品和机器人线性关节工作原理相同，均是通过丝杠将电机的旋转运动转化为直线运用。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ce1005de057c13d15d786346",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          3505
+        ]
+      ],
+      "estimated_input_tokens": 7862,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:01:43.736635+00:00",
+        "request_sha256": "7529089f8c94a170269254160bb841f0fee7d726d2f1500f0aa434ae6611b270",
+        "input_token_estimate": 21922,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.284066",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "69b51bd65eaa409f903c039bf20913f7",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 5115,
+        "output_tokens": 6200,
+        "usage_source": "provider",
+        "duration_seconds": 23.21357,
+        "cost_cny": "0.029915",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2003年公司推出沙发推杆产品；208年推出办公台推杆产品；"
+          }
+        ],
+        "reason": "公司1992年成立，208年远早于成立时间，年份不合法，应为2018年。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年全球可升降办公桌所应用线性驱动产品的市场规模大约为亿元，2021-2024年CAGR约为18.2%。"
+          }
+        ],
+        "reason": "“大约为亿元”中缺少具体市场规模数值，无法核验。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "Marketsand Markets报告显示，全球智能家居市场规模预计将从2022年的845亿美元增长到2026年的1389亿美元，2022-2026年CAGR为17.4%。"
+          }
+        ],
+        "reason": "按845到1389的4年增长计算，CAGR约13.2%，与文中17.4%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "GlobaI InfoResearch数据显示，2022年全球电动尾门系统市场规模达到了16.3亿美元，预计2029年将达到28.4亿美元，年复合增长率为7.8%。"
+          }
+        ],
+        "reason": "按16.3到28.4的7年增长计算，年复合增长率约8.25%，与文中7.8%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "2022年，全球线性驱动市场前六名分别为力纳克、德沃康、迪摩讯、捷昌驱动、凯迪股份以及乐歌股份，市占率分别为31%/31%/13%/12%/8%/1%/5%。"
+          }
+        ],
+        "reason": "前六名仅对应6家公司，却列出7个市占率，且合计101%，数量与数值不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "汽车电动尾门渗透率持续下降，成为公司收入增长新动能"
+          }
+        ],
+        "reason": "渗透率下降通常不利于收入增长，与“成为公司收入增长新动能”矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "并且线性驱动器产品和机器人线性关节工作原理相同，均是通过丝杠将电机的旋转运动转化为直线运用。"
+          }
+        ],
+        "reason": "“直线运用”不是描述运动形式的专业术语，应为“直线运动”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 117,
+      "end": 202,
+      "text": "股票激励计划选取归母净利润作为业绩考核目标，要求2025-2027年归母净利润每年同比+6%，对应2025-2027年目标实现归母净利润0.92/0.97/1.03亿元。",
+      "quantities": [
+        {
+          "value": "+6",
+          "unit": "%",
+          "start": 160,
+          "end": 163
+        },
+        {
+          "value": "1.03",
+          "unit": "亿元",
+          "start": 195,
+          "end": 201
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 117,
+      "end": 202,
+      "text": "股票激励计划选取归母净利润作为业绩考核目标，要求2025-2027年归母净利润每年同比+6%，对应2025-2027年目标实现归母净利润0.92/0.97/1.03亿元。",
+      "quantities": [
+        {
+          "value": "+6",
+          "unit": "%",
+          "start": 160,
+          "end": 163
+        },
+        {
+          "value": "1.03",
+          "unit": "亿元",
+          "start": 195,
+          "end": 201
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 117,
+      "end": 202,
+      "text": "股票激励计划选取归母净利润作为业绩考核目标，要求2025-2027年归母净利润每年同比+6%，对应2025-2027年目标实现归母净利润0.92/0.97/1.03亿元。",
+      "quantities": [
+        {
+          "value": "+6",
+          "unit": "%",
+          "start": 160,
+          "end": 163
+        },
+        {
+          "value": "1.03",
+          "unit": "亿元",
+          "start": 195,
+          "end": 201
+        }
+      ],
+      "periods": [
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 615,
+      "end": 692,
+      "text": "公司2021-2024年分别实现营收17.2/11.7/12.3/13.4亿元，同比+35.1%/-31.8%/+5.3%/+8.2%，下游需求逐步回暖。",
+      "quantities": [
+        {
+          "value": "13.4",
+          "unit": "亿元",
+          "start": 648,
+          "end": 654
+        },
+        {
+          "value": "+35.1",
+          "unit": "%",
+          "start": 657,
+          "end": 663
+        },
+        {
+          "value": "-31.8",
+          "unit": "%",
+          "start": 664,
+          "end": 670
+        },
+        {
+          "value": "+5.3",
+          "unit": "%",
+          "start": 671,
+          "end": 676
+        },
+        {
+          "value": "+8.2",
+          "unit": "%",
+          "start": 677,
+          "end": 682
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 692,
+      "end": 745,
+      "text": "毛利率方面，公司2021-2024年毛利率分别为20.9%/18.9%/25.4%/22.8%，趋于稳定。",
+      "quantities": [
+        {
+          "value": "20.9",
+          "unit": "%",
+          "start": 716,
+          "end": 721
+        },
+        {
+          "value": "18.9",
+          "unit": "%",
+          "start": 722,
+          "end": 727
+        },
+        {
+          "value": "25.4",
+          "unit": "%",
+          "start": 728,
+          "end": 733
+        },
+        {
+          "value": "22.8",
+          "unit": "%",
+          "start": 734,
+          "end": 739
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 692,
+      "end": 745,
+      "text": "毛利率方面，公司2021-2024年毛利率分别为20.9%/18.9%/25.4%/22.8%，趋于稳定。",
+      "quantities": [
+        {
+          "value": "20.9",
+          "unit": "%",
+          "start": 716,
+          "end": 721
+        },
+        {
+          "value": "18.9",
+          "unit": "%",
+          "start": 722,
+          "end": 727
+        },
+        {
+          "value": "25.4",
+          "unit": "%",
+          "start": 728,
+          "end": 733
+        },
+        {
+          "value": "22.8",
+          "unit": "%",
+          "start": 734,
+          "end": 739
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 745,
+      "end": 867,
+      "text": "盈利方面，公司2021-2024年分别实现归母净利润1.2/0.5/1.1/0.9亿元，同比-32.4%/-58.3%/+121.4%/-19.4%，2024年归母净利润承压主要系1）海外工厂投入使用推高营业成本，2）出海运费增长以及关税影响。",
+      "quantities": [
+        {
+          "value": "0.9",
+          "unit": "亿元",
+          "start": 783,
+          "end": 788
+        },
+        {
+          "value": "-32.4",
+          "unit": "%",
+          "start": 791,
+          "end": 797
+        },
+        {
+          "value": "-58.3",
+          "unit": "%",
+          "start": 798,
+          "end": 804
+        },
+        {
+          "value": "+121.4",
+          "unit": "%",
+          "start": 805,
+          "end": 812
+        },
+        {
+          "value": "-19.4",
+          "unit": "%",
+          "start": 813,
+          "end": 819
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 745,
+      "end": 867,
+      "text": "盈利方面，公司2021-2024年分别实现归母净利润1.2/0.5/1.1/0.9亿元，同比-32.4%/-58.3%/+121.4%/-19.4%，2024年归母净利润承压主要系1）海外工厂投入使用推高营业成本，2）出海运费增长以及关税影响。",
+      "quantities": [
+        {
+          "value": "0.9",
+          "unit": "亿元",
+          "start": 783,
+          "end": 788
+        },
+        {
+          "value": "-32.4",
+          "unit": "%",
+          "start": 791,
+          "end": 797
+        },
+        {
+          "value": "-58.3",
+          "unit": "%",
+          "start": 798,
+          "end": 804
+        },
+        {
+          "value": "+121.4",
+          "unit": "%",
+          "start": 805,
+          "end": 812
+        },
+        {
+          "value": "-19.4",
+          "unit": "%",
+          "start": 813,
+          "end": 819
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2573,
+      "end": 2665,
+      "text": "公司2025年股权激励计划选取归母净利润作为业绩考核目标，要求2025-2027年归母净利润每年同比+6%，对应2025-2027年目标实现归母净利润0.92/0.97/1.03亿元。",
+      "quantities": [
+        {
+          "value": "+6",
+          "unit": "%",
+          "start": 2623,
+          "end": 2626
+        },
+        {
+          "value": "1.03",
+          "unit": "亿元",
+          "start": 2658,
+          "end": 2664
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2573,
+      "end": 2665,
+      "text": "公司2025年股权激励计划选取归母净利润作为业绩考核目标，要求2025-2027年归母净利润每年同比+6%，对应2025-2027年目标实现归母净利润0.92/0.97/1.03亿元。",
+      "quantities": [
+        {
+          "value": "+6",
+          "unit": "%",
+          "start": 2623,
+          "end": 2626
+        },
+        {
+          "value": "1.03",
+          "unit": "亿元",
+          "start": 2658,
+          "end": 2664
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 2573,
+      "end": 2665,
+      "text": "公司2025年股权激励计划选取归母净利润作为业绩考核目标，要求2025-2027年归母净利润每年同比+6%，对应2025-2027年目标实现归母净利润0.92/0.97/1.03亿元。",
+      "quantities": [
+        {
+          "value": "+6",
+          "unit": "%",
+          "start": 2623,
+          "end": 2626
+        },
+        {
+          "value": "1.03",
+          "unit": "亿元",
+          "start": 2658,
+          "end": 2664
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 3319,
+      "end": 3403,
+      "text": "预测公司2025-2027年收入分别为15.2/17.2/19.3亿元，归母净利润分别为1.0/1.2/1.5亿元，当前股价对应PE分别为40.6/32.7/26.1。",
+      "quantities": [
+        {
+          "value": "19.3",
+          "unit": "亿元",
+          "start": 3348,
+          "end": 3354
+        },
+        {
+          "value": "1.5",
+          "unit": "亿元",
+          "start": 3371,
+          "end": 3376
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "预测公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 3505,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 3505,
+    "processed_ranges": [
+      [
+        0,
+        3505
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 3505,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 12,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.0034,
+  "source_content_sha256": "090b83162c723fe0d3c88dfb6ecd52159e9b0aa82b9c124d275d05fc221573c4"
+}

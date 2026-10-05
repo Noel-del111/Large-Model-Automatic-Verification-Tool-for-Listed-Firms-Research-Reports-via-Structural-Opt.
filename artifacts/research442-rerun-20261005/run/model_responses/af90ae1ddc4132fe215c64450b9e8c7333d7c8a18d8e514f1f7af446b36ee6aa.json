@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"我们预计公司2027-2025年归母净利润分别为8.19/9.00/10.08亿元，对应PE11/10/9x，维持“增持”评级。\"}],\"reason\":\"预测年份区间写成2027-2025年，起点晚于终点，期间倒置。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"公司24Q4实现营收18.81亿元，同比-33.03%；归母净利润2.23亿元，同比-1.34%；扣非归母净利1.59亿元，同比。\"}],\"reason\":\"扣非归母净利同比增速后为空，缺少具体百分比数值。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"公司25Q1实现营收19.65亿元，；归母净利润1.29亿元，同比-30.77%；扣非归母净利1.17亿元，同比-35.23%。\"}],\"reason\":\"25Q1营收后分号前为空，缺少营收同比增速数值。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"利润端看，公司25Q1扣非归母净利润同比下滑35.23%，主要系公司参股企业约克空调分红减少3000万，高佳太阳能亏损等导致投资收益同比减少3600万，以及工程业务收入下降导致利润增加。\"}],\"reason\":\"前文称扣非净利润同比下滑，后文称收入下降导致利润增加，二者相互矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:45:33.191029+00:00",
+    "request_sha256": "68919d642c360abf174d65b5e6fcc5af6efd66bcea2027f204d16ba4a30b4973",
+    "input_token_estimate": 15131,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277275",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "36c45b039d0d4550885221a205e547f1",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3650,
+    "output_tokens": 6826,
+    "usage_source": "provider",
+    "duration_seconds": 26.670063,
+    "cost_cny": "0.030954"
+  },
+  "cache_request": {
+    "key": "af90ae1ddc4132fe215c64450b9e8c7333d7c8a18d8e514f1f7af446b36ee6aa",
+    "purpose": "text_review.detect",
+    "messages_sha256": "68919d642c360abf174d65b5e6fcc5af6efd66bcea2027f204d16ba4a30b4973"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"全社会跨区域人员流动量达13.6亿人次，日均超2.7亿人次，同比减少2.1%，较2019年同期增长23.7%，符合节前预期。\"\n        },\n        {\n          \"text\": \"1）与2023年同期相比，各类出行方式的客运量在高基数下实现小幅正增长。五一假期期间，民航/营业性公路/水路/非营业性小客车/铁路日均客运量较2023年同期分别增长8.1%/6.5%/6%/1.4%/1.4%。\"\n        }\n      ],\n      \"reason\": \"全社会跨区域人员流动量同比减少2.1%，但后文所列各类出行方式日均客运量均较2023年同期正增长，同一期间的口径下总量与分项方向矛盾。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"3）军航市场量升价跌。\"\n        }\n      ],\n      \"reason\": \"上下文讨论航班管家、民航客运及国内国际航线，此处应为“民航市场”，“军航”指军事航空，术语错误。\"\n    },\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"商品消费方面，各地以旧换新活动带动之下，重点零售企业家电/汽车/家具销售额分别同比增长7.9%/4.8%/4.6%/5.4%；\"\n        }\n      ],\n      \"reason\": \"列举家电、汽车、家具三个类别，却给出四个同比增长率，类别数量与数值数量不匹配。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:56:00.182863+00:00",
+    "request_sha256": "959d00eca6b6870f544b78f0be69cae41b351b4f5f2ccd15f945722d063b1178",
+    "input_token_estimate": 19882,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.282026",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "4c44018257f8474cbfea6e3ddc453fbe",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4637,
+    "output_tokens": 5718,
+    "usage_source": "provider",
+    "duration_seconds": 22.982133,
+    "cost_cny": "0.027509"
+  },
+  "cache_request": {
+    "key": "9f4b310ce8ad1446c3fdb9ea34226d75d65597fa64cff826a3e9a60f88496b07",
+    "purpose": "text_review.detect",
+    "messages_sha256": "959d00eca6b6870f544b78f0be69cae41b351b4f5f2ccd15f945722d063b1178"
+  }
+}

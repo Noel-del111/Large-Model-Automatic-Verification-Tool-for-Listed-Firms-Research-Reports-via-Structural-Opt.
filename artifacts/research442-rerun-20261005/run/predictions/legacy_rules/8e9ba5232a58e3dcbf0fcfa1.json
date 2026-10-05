@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000504",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "1a0402578be8bbb6fb79518f",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 838,
+          "end": 927,
+          "text": "根据2024年年报与2025年一季报，我们预计2027-2025年EPS分别为3.23/3.52/3.78元，当前股价对应PE分别为9/9/8倍，首次覆盖，给予“买入”投资评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 970,
+    "total_chars": 970,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001777,
+  "source_content_sha256": "4dca2a2779d91ef8af02bc6d850f8e7c79c9391338a403a44962b96c20211b60"
+}

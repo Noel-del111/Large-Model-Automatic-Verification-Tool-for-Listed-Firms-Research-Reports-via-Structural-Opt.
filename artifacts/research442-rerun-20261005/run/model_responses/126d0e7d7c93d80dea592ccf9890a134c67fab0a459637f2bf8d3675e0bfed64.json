@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"2003年公司推出沙发推杆产品；208年推出办公台推杆产品；\"\n        }\n      ],\n      \"reason\": \"公司1992年成立，208年远早于成立时间，年份不合法，应为2018年。\"\n    },\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"2024年全球可升降办公桌所应用线性驱动产品的市场规模大约为亿元，2021-2024年CAGR约为18.2%。\"\n        }\n      ],\n      \"reason\": \"“大约为亿元”中缺少具体市场规模数值，无法核验。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"Marketsand Markets报告显示，全球智能家居市场规模预计将从2022年的845亿美元增长到2026年的1389亿美元，2022-2026年CAGR为17.4%。\"\n        }\n      ],\n      \"reason\": \"按845到1389的4年增长计算，CAGR约13.2%，与文中17.4%不符。\"\n    },\n    {\n      \"error_type\": \"计算错误\",\n      \"spans\": [\n        {\n          \"text\": \"GlobaI InfoResearch数据显示，2022年全球电动尾门系统市场规模达到了16.3亿美元，预计2029年将达到28.4亿美元，年复合增长率为7.8%。\"\n        }\n      ],\n      \"reason\": \"按16.3到28.4的7年增长计算，年复合增长率约8.25%，与文中7.8%不符。\"\n    },\n    {\n      \"error_type\": \"数值不一致错误\",\n      \"spans\": [\n        {\n          \"text\": \"2022年，全球线性驱动市场前六名分别为力纳克、德沃康、迪摩讯、捷昌驱动、凯迪股份以及乐歌股份，市占率分别为31%/31%/13%/12%/8%/1%/5%。\"\n        }\n      ],\n      \"reason\": \"前六名仅对应6家公司，却列出7个市占率，且合计101%，数量与数值不匹配。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"汽车电动尾门渗透率持续下降，成为公司收入增长新动能\"\n        }\n      ],\n      \"reason\": \"渗透率下降通常不利于收入增长，与“成为公司收入增长新动能”矛盾。\"\n    },\n    {\n      \"error_type\": \"术语误用\",\n      \"spans\": [\n        {\n          \"text\": \"并且线性驱动器产品和机器人线性关节工作原理相同，均是通过丝杠将电机的旋转运动转化为直线运用。\"\n        }\n      ],\n      \"reason\": \"“直线运用”不是描述运动形式的专业术语，应为“直线运动”。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:01:43.736635+00:00",
+    "request_sha256": "7529089f8c94a170269254160bb841f0fee7d726d2f1500f0aa434ae6611b270",
+    "input_token_estimate": 21922,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.284066",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "69b51bd65eaa409f903c039bf20913f7",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 5115,
+    "output_tokens": 6200,
+    "usage_source": "provider",
+    "duration_seconds": 23.21357,
+    "cost_cny": "0.029915"
+  },
+  "cache_request": {
+    "key": "126d0e7d7c93d80dea592ccf9890a134c67fab0a459637f2bf8d3675e0bfed64",
+    "purpose": "text_review.detect",
+    "messages_sha256": "7529089f8c94a170269254160bb841f0fee7d726d2f1500f0aa434ae6611b270"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。\",\"start\":101,\"end\":262}],\"reason\":\"食品饮料行业营收量纲应为亿元，“元”使3266.07元明显错误。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2025Q1食品饮料行业实现营收3266.07元（YoY+2.46%），归母净利润815.05亿元（YoY+0.28%），营收和归母净利润增速在申万31个一级子行业中分别排名第15和第19，营收增速较2024Q1下降pcts，归母净利润增速较去年同期下降15.68pcts，同时毛利率与净利率同比下降，费用率则相对稳健。\",\"start\":101,\"end\":262}],\"reason\":\"“下降pcts”前缺少具体百分点数值，营收增速较2024Q1下降幅度未给出。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"零食、啤酒和调味发酵品营收增速位居前列，营收增速分别为20.96%、30.96%、3.73%、3.46%；啤酒、调味发酵品和肉制品归母净利润增速排名前三，归母净利润增速分别为10.89%、7.31%和7.30%。\",\"start\":523,\"end\":640},{\"text\":\"2025Q1营收归母净利润，分别同比+3.73%/+10.89%，啤酒板块营收增速从去年同期的负增长转为低个位数正增长，归母净利润维持增长态势但增速减缓。\",\"start\":1741,\"end\":1840}],\"reason\":\"前文按“零食、啤酒和调味发酵品”顺序列示啤酒营收增速为30.96%，后文称啤酒营收同比+3.73%，同期同指标冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:22:26.903872+00:00",
+    "request_sha256": "914c99c7cee0c3af80ae1bc9bd4b06a55eb2e3f29be4a35cd66e4cbc60b5191a",
+    "input_token_estimate": 19101,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.281245",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7762970776fb4120abde3a643516407b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4565,
+    "output_tokens": 10296,
+    "usage_source": "provider",
+    "duration_seconds": 40.292658,
+    "cost_cny": "0.045749"
+  },
+  "cache_request": {
+    "key": "1aa3d98a6ba496e632ff2ac1ca9289fc6bb457ce4e5913669b91604e01d3403b",
+    "purpose": "text_review.detect",
+    "messages_sha256": "914c99c7cee0c3af80ae1bc9bd4b06a55eb2e3f29be4a35cd66e4cbc60b5191a"
+  }
+}

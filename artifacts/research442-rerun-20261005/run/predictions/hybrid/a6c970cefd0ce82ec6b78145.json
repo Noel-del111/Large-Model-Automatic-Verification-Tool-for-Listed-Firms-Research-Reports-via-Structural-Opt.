@@ -1,0 +1,391 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000598",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“同比增长”后仅有百分号，缺少应填的具体同比增长数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 370,
+          "end": 396,
+          "text": "4月国内新增光伏装机容量45.22GW，同比增长%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月国内新增光伏装机容量45.22GW，同比增长%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 370,
+          "end": 396,
+          "text": "4月国内新增光伏装机容量45.22GW，同比增长%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9bce5f1a73d6826f593ae7db",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“4-1月”作为期间起点为4月、终点为1月，时间先后倒置，通常应为“1-4月”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 396,
+          "end": 431,
+          "text": "4-1月，国内累计新增光伏装机104.93GW，同比增长74.56%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4-1月，国内累计新增光伏装机104.93GW，同比增长74.56%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 396,
+          "end": 431,
+          "text": "4-1月，国内累计新增光伏装机104.93GW，同比增长74.56%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1a46ade477bc00429e9d8448",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "光伏组件出口量通常以GW或金额计量，此处用面积单位“平方千米”不符合该指标常用单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 471,
+          "end": 520,
+          "text": "海外出口方面，受库存堆积以及国内抢装影响，第一季度我国光伏组件出口61.9平方千米，同比减少8%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "海外出口方面，受库存堆积以及国内抢装影响，第一季度我国光伏组件出口61.9平方千米，同比减少8%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 471,
+          "end": 520,
+          "text": "海外出口方面，受库存堆积以及国内抢装影响，第一季度我国光伏组件出口61.9平方千米，同比减少8%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2719f2efe739547fc76e1e68",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“光伏债权成本”搭配不当，税收抵免到期直接影响的是光伏项目成本或投资成本，而非债权成本。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 232,
+          "end": 291,
+          "text": "美国众议院提出美丽法案计划将住宅太阳能30%税收抵免政策到期日提前，后续实施将增加光伏债权成本，降低美国本土市场需求。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "美国众议院提出美丽法案计划将住宅太阳能30%税收抵免政策到期日提前，后续实施将增加光伏债权成本，降低美国本土市场需求。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 232,
+          "end": 291,
+          "text": "美国众议院提出美丽法案计划将住宅太阳能30%税收抵免政策到期日提前，后续实施将增加光伏债权成本，降低美国本土市场需求。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "680e8475f52190ef54e46f25",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“制定钙钛矿电池”搭配错误，技术语境应为“制备钙钛矿电池”，用词导致含义偏差。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 717,
+          "end": 754,
+          "text": "纤纳光电解决大面积制定钙钛矿电池难题，有望推动钙钛矿及叠层电池商业化进程。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "纤纳光电解决大面积制定钙钛矿电池难题，有望推动钙钛矿及叠层电池商业化进程。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 717,
+          "end": 754,
+          "text": "纤纳光电解决大面积制定钙钛矿电池难题，有望推动钙钛矿及叠层电池商业化进程。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "911ac59e3f1ad99f70b7d725",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "前文已述“细分子行业多数取得正向收益”，后文再次重申“大部分细分子行业均取得正向收益”，信息不必要重复。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 40,
+          "end": 67,
+          "text": "5月光伏板块继续震荡筑底，细分子行业多数取得正向收益。"
+        },
+        {
+          "kind": "source_text",
+          "start": 113,
+          "end": 160,
+          "text": "光伏板块日均成交环比缩量，大部分细分子行业均取得正向收益，石英坩埚、单晶硅片以及背板涨幅居前。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月光伏板块继续震荡筑底，细分子行业多数取得正向收益。"
+        },
+        {
+          "text": "光伏板块日均成交环比缩量，大部分细分子行业均取得正向收益，石英坩埚、单晶硅片以及背板涨幅居前。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 40,
+          "end": 67,
+          "text": "5月光伏板块继续震荡筑底，细分子行业多数取得正向收益。"
+        },
+        {
+          "start": 113,
+          "end": 160,
+          "text": "光伏板块日均成交环比缩量，大部分细分子行业均取得正向收益，石英坩埚、单晶硅片以及背板涨幅居前。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4cd15dc9a7b0ca53acdb3e8f",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1112
+        ]
+      ],
+      "estimated_input_tokens": 5783,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:51:03.868777+00:00",
+        "request_sha256": "45e02c4d0761408a224dc26cde2286b25b6179c58b1c9a025771a66d9a81fe61",
+        "input_token_estimate": 16043,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278187",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "302fee521e7c4c72839b2663de24aecc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3726,
+        "output_tokens": 5970,
+        "usage_source": "provider",
+        "duration_seconds": 24.132708,
+        "cost_cny": "0.027606",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "4月国内新增光伏装机容量45.22GW，同比增长%；"
+          }
+        ],
+        "reason": "“同比增长”后仅有百分号，缺少应填的具体同比增长数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "4-1月，国内累计新增光伏装机104.93GW，同比增长74.56%。"
+          }
+        ],
+        "reason": "“4-1月”作为期间起点为4月、终点为1月，时间先后倒置，通常应为“1-4月”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "海外出口方面，受库存堆积以及国内抢装影响，第一季度我国光伏组件出口61.9平方千米，同比减少8%。"
+          }
+        ],
+        "reason": "光伏组件出口量通常以GW或金额计量，此处用面积单位“平方千米”不符合该指标常用单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "美国众议院提出美丽法案计划将住宅太阳能30%税收抵免政策到期日提前，后续实施将增加光伏债权成本，降低美国本土市场需求。"
+          }
+        ],
+        "reason": "“光伏债权成本”搭配不当，税收抵免到期直接影响的是光伏项目成本或投资成本，而非债权成本。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "纤纳光电解决大面积制定钙钛矿电池难题，有望推动钙钛矿及叠层电池商业化进程。"
+          }
+        ],
+        "reason": "“制定钙钛矿电池”搭配错误，技术语境应为“制备钙钛矿电池”，用词导致含义偏差。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "5月光伏板块继续震荡筑底，细分子行业多数取得正向收益。"
+          },
+          {
+            "text": "光伏板块日均成交环比缩量，大部分细分子行业均取得正向收益，石英坩埚、单晶硅片以及背板涨幅居前。"
+          }
+        ],
+        "reason": "前文已述“细分子行业多数取得正向收益”，后文再次重申“大部分细分子行业均取得正向收益”，信息不必要重复。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1112,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1112,
+    "processed_ranges": [
+      [
+        0,
+        1112
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1112,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00174,
+  "source_content_sha256": "fc97d33f5c2559938e4d647a318ed616a800d04436ef2ca03a9f409077e2adfd"
+}

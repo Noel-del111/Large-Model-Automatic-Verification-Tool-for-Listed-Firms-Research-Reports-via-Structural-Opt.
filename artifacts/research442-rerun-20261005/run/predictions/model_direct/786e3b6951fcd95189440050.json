@@ -1,0 +1,594 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000485",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "日期“2024年13月31日”中13月不存在，该日期不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 900,
+          "end": 974,
+          "text": "公司的“新能源汽车精密零部件智造项目”2024年投入2042.60万元，截至2024年13月31日累计投入3794.70万元，进度达到35.26%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司的“新能源汽车精密零部件智造项目”2024年投入2042.60万元，截至2024年13月31日累计投入3794.70万元，进度达到35.26%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 900,
+          "end": 974,
+          "text": "公司的“新能源汽车精密零部件智造项目”2024年投入2042.60万元，截至2024年13月31日累计投入3794.70万元，进度达到35.26%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "44e59ae5ce7dd59dcda31be9",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "营收单位写成“亿分”不是合理货币单位，导致量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 168,
+          "end": 278,
+          "text": "2025Q1，公司实现营收7291.21亿分，同比增长44.24%，归母净利润1352.03万元，同比下滑15.49%，扣非归母净利润1296.52万元，同比增长64.55%，2025Q1公司不断开拓市场，客户需求增加。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1，公司实现营收7291.21亿分，同比增长44.24%，归母净利润1352.03万元，同比下滑15.49%，扣非归母净利润1296.52万元，同比增长64.55%，2025Q1公司不断开拓市场，客户需求增加。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 168,
+          "end": 278,
+          "text": "2025Q1，公司实现营收7291.21亿分，同比增长44.24%，归母净利润1352.03万元，同比下滑15.49%，扣非归母净利润1296.52万元，同比增长64.55%，2025Q1公司不断开拓市场，客户需求增加。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ecde9b009e836a40b8c47887",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“分别同比”后应列出同比增速数值，但原文缺失具体百分比。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 483,
+          "end": 545,
+          "text": "汽车门窗系统、精密传动系统营收增长较快，分别实现收入9086.10万元、9367.37万元，分别同比，主要源于下游需求增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "汽车门窗系统、精密传动系统营收增长较快，分别实现收入9086.10万元、9367.37万元，分别同比，主要源于下游需求增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 483,
+          "end": 545,
+          "text": "汽车门窗系统、精密传动系统营收增长较快，分别实现收入9086.10万元、9367.37万元，分别同比，主要源于下游需求增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aece09a719d32f9c7942fdc2",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1015
+        ]
+      ],
+      "estimated_input_tokens": 5460,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:40:21.855342+00:00",
+        "request_sha256": "6c10a9a8b3c314b512499ce5c54da1bfd0228cc3a037a3b29fcfb6ea4d39bc8a",
+        "input_token_estimate": 15242,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277386",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "452efbd8b9914283bad60ae410b4e936",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3619,
+        "output_tokens": 6247,
+        "usage_source": "provider",
+        "duration_seconds": 23.792934,
+        "cost_cny": "0.028607"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "公司的“新能源汽车精密零部件智造项目”2024年投入2042.60万元，截至2024年13月31日累计投入3794.70万元，进度达到35.26%。"
+          }
+        ],
+        "reason": "日期“2024年13月31日”中13月不存在，该日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2025Q1，公司实现营收7291.21亿分，同比增长44.24%，归母净利润1352.03万元，同比下滑15.49%，扣非归母净利润1296.52万元，同比增长64.55%，2025Q1公司不断开拓市场，客户需求增加。"
+          }
+        ],
+        "reason": "营收单位写成“亿分”不是合理货币单位，导致量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "汽车门窗系统、精密传动系统营收增长较快，分别实现收入9086.10万元、9367.37万元，分别同比，主要源于下游需求增长。"
+          }
+        ],
+        "reason": "“分别同比”后应列出同比增速数值，但原文缺失具体百分比。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 0,
+      "end": 36,
+      "text": "北交所信息更新：入选省单项冠军，2025Q1扣非归母净利润同比+65%\n",
+      "quantities": [
+        {
+          "value": "+65",
+          "unit": "%",
+          "start": 31,
+          "end": 35
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 51,
+      "end": 72,
+      "text": "2024年营收2.86亿元，同比+24%；",
+      "quantities": [
+        {
+          "value": "2.86",
+          "unit": "亿元",
+          "start": 58,
+          "end": 64
+        },
+        {
+          "value": "+24",
+          "unit": "%",
+          "start": 67,
+          "end": 71
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 72,
+      "end": 91,
+      "text": "归母净利润6251万元，同比+57%\n",
+      "quantities": [
+        {
+          "value": "6251",
+          "unit": "万元",
+          "start": 77,
+          "end": 83
+        },
+        {
+          "value": "+57",
+          "unit": "%",
+          "start": 86,
+          "end": 90
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 92,
+      "end": 168,
+      "text": "公司发布2024年报与2025年一季报，2024年，公司实现营收2.86亿元，同比增长23.63%，归母净利润6251.14万元，同比增长56.86%；",
+      "quantities": [
+        {
+          "value": "2.86",
+          "unit": "亿元",
+          "start": 124,
+          "end": 130
+        },
+        {
+          "value": "23.63",
+          "unit": "%",
+          "start": 135,
+          "end": 141
+        },
+        {
+          "value": "6251.14",
+          "unit": "万元",
+          "start": 147,
+          "end": 156
+        },
+        {
+          "value": "56.86",
+          "unit": "%",
+          "start": 161,
+          "end": 167
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 92,
+      "end": 168,
+      "text": "公司发布2024年报与2025年一季报，2024年，公司实现营收2.86亿元，同比增长23.63%，归母净利润6251.14万元，同比增长56.86%；",
+      "quantities": [
+        {
+          "value": "2.86",
+          "unit": "亿元",
+          "start": 124,
+          "end": 130
+        },
+        {
+          "value": "23.63",
+          "unit": "%",
+          "start": 135,
+          "end": 141
+        },
+        {
+          "value": "6251.14",
+          "unit": "万元",
+          "start": 147,
+          "end": 156
+        },
+        {
+          "value": "56.86",
+          "unit": "%",
+          "start": 161,
+          "end": 167
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2025年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 168,
+      "end": 278,
+      "text": "2025Q1，公司实现营收7291.21亿分，同比增长44.24%，归母净利润1352.03万元，同比下滑15.49%，扣非归母净利润1296.52万元，同比增长64.55%，2025Q1公司不断开拓市场，客户需求增加。",
+      "quantities": [
+        {
+          "value": "44.24",
+          "unit": "%",
+          "start": 195,
+          "end": 201
+        },
+        {
+          "value": "1352.03",
+          "unit": "万元",
+          "start": 207,
+          "end": 216
+        },
+        {
+          "value": "15.49",
+          "unit": "%",
+          "start": 221,
+          "end": 227
+        },
+        {
+          "value": "1296.52",
+          "unit": "万元",
+          "start": 235,
+          "end": 244
+        },
+        {
+          "value": "64.55",
+          "unit": "%",
+          "start": 249,
+          "end": 255
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 168,
+      "end": 278,
+      "text": "2025Q1，公司实现营收7291.21亿分，同比增长44.24%，归母净利润1352.03万元，同比下滑15.49%，扣非归母净利润1296.52万元，同比增长64.55%，2025Q1公司不断开拓市场，客户需求增加。",
+      "quantities": [
+        {
+          "value": "44.24",
+          "unit": "%",
+          "start": 195,
+          "end": 201
+        },
+        {
+          "value": "1352.03",
+          "unit": "万元",
+          "start": 207,
+          "end": 216
+        },
+        {
+          "value": "15.49",
+          "unit": "%",
+          "start": 221,
+          "end": 227
+        },
+        {
+          "value": "1296.52",
+          "unit": "万元",
+          "start": 235,
+          "end": 244
+        },
+        {
+          "value": "64.55",
+          "unit": "%",
+          "start": 249,
+          "end": 255
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 168,
+      "end": 278,
+      "text": "2025Q1，公司实现营收7291.21亿分，同比增长44.24%，归母净利润1352.03万元，同比下滑15.49%，扣非归母净利润1296.52万元，同比增长64.55%，2025Q1公司不断开拓市场，客户需求增加。",
+      "quantities": [
+        {
+          "value": "44.24",
+          "unit": "%",
+          "start": 195,
+          "end": 201
+        },
+        {
+          "value": "1352.03",
+          "unit": "万元",
+          "start": 207,
+          "end": 216
+        },
+        {
+          "value": "15.49",
+          "unit": "%",
+          "start": 221,
+          "end": 227
+        },
+        {
+          "value": "1296.52",
+          "unit": "万元",
+          "start": 235,
+          "end": 244
+        },
+        {
+          "value": "64.55",
+          "unit": "%",
+          "start": 249,
+          "end": 255
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 278,
+      "end": 417,
+      "text": "我们上调2025-2026年并新增2027年盈利预测，预计2025-2027年归母净利润分别为0.82/0.95（原0.69/0.86）/1.14亿元，对应EPS分别为1.23/1.43/1.71元/股，对应当前股价的PE分别为20.0/17.2/14.4倍，维持“增持”评级。",
+      "quantities": [
+        {
+          "value": "1.14",
+          "unit": "亿元",
+          "start": 347,
+          "end": 353
+        },
+        {
+          "value": "1.71",
+          "unit": "元/股",
+          "start": 372,
+          "end": 379
+        },
+        {
+          "value": "14.4",
+          "unit": "倍",
+          "start": 402,
+          "end": 407
+        }
+      ],
+      "periods": [
+        "2026年",
+        "2027年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 453,
+      "end": 545,
+      "text": "2024年，公司进一步加强新能源汽车市场开拓，扩大市场份额，汽车门窗系统、精密传动系统营收增长较快，分别实现收入9086.10万元、9367.37万元，分别同比，主要源于下游需求增长。",
+      "quantities": [
+        {
+          "value": "9086.10",
+          "unit": "万元",
+          "start": 509,
+          "end": 518
+        },
+        {
+          "value": "9367.37",
+          "unit": "万元",
+          "start": 519,
+          "end": 528
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 545,
+      "end": 612,
+      "text": "汽车视觉系统产品实现收入7785.31万元，同比增长10.51%，毛利率为产品分类中最高，达到42.71%，同比提升4.38个百分点。",
+      "quantities": [
+        {
+          "value": "7785.31",
+          "unit": "万元",
+          "start": 557,
+          "end": 566
+        },
+        {
+          "value": "10.51",
+          "unit": "%",
+          "start": 571,
+          "end": 577
+        },
+        {
+          "value": "42.71",
+          "unit": "%",
+          "start": 592,
+          "end": 598
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1015,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1015,
+    "processed_ranges": [
+      [
+        0,
+        1015
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 11,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.821488,
+  "source_content_sha256": "5501f83c57a307ddfbe350a010240b92bcd0ccb1dee1c9ebbb4484f435dddec3"
+}

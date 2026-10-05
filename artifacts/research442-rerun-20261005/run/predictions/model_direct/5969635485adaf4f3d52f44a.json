@@ -1,0 +1,729 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000232",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“汽车销量”后直接接单位“万辆”，缺少具体销量数值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 93,
+          "end": 127,
+          "text": "从2023全年维度来看，2023年汽车销量万辆，同比上升11.9%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "从2023全年维度来看，2023年汽车销量万辆，同比上升11.9%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 93,
+          "end": 127,
+          "text": "从2023全年维度来看，2023年汽车销量万辆，同比上升11.9%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0c9a54f933763b3b5c79da75",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "汽车行业营收写成3.7元，与同比增长和归母净利润万亿元量级不符，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 505,
+          "end": 555,
+          "text": "整体来看，2023年汽车行业实现营收3.7元，同比+16%，归母净利润0.14万亿元，同比+42%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "整体来看，2023年汽车行业实现营收3.7元，同比+16%，归母净利润0.14万亿元，同比+42%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 505,
+          "end": 555,
+          "text": "整体来看，2023年汽车行业实现营收3.7元，同比+16%，归母净利润0.14万亿元，同比+42%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a54a1537829051f92ef2ea8c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一期间汽车销量同比增速10.6%在相邻两句中重复出现。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 299,
+          "end": 324,
+          "text": "2024年Q1汽车销量同比+10.6%，韧性较强。"
+        },
+        {
+          "kind": "source_text",
+          "start": 324,
+          "end": 361,
+          "text": "2024年Q1汽车销量672万辆，同比上升10.6%，环比下降25.2%；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年Q1汽车销量同比+10.6%，韧性较强。"
+        },
+        {
+          "text": "2024年Q1汽车销量672万辆，同比上升10.6%，环比下降25.2%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 299,
+          "end": 324,
+          "text": "2024年Q1汽车销量同比+10.6%，韧性较强。"
+        },
+        {
+          "start": 324,
+          "end": 361,
+          "text": "2024年Q1汽车销量672万辆，同比上升10.6%，环比下降25.2%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "425b7df5f2c95d39ad8f1b58",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "一季度通常为汽车消费淡季，此处称旺季却用于解释环比下降，前后逻辑矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 396,
+          "end": 469,
+          "text": "2024年Q1汽车销量环比下降主要系一季度是汽车消费旺季，年底冲量透支部分需求、春节假期等因素影响，但同比来看仍然实现10.6%的增长，韧性较强。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年Q1汽车销量环比下降主要系一季度是汽车消费旺季，年底冲量透支部分需求、春节假期等因素影响，但同比来看仍然实现10.6%的增长，韧性较强。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 396,
+          "end": 469,
+          "text": "2024年Q1汽车销量环比下降主要系一季度是汽车消费旺季，年底冲量透支部分需求、春节假期等因素影响，但同比来看仍然实现10.6%的增长，韧性较强。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "20c8cfdd6d200cc1d9923a77",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "电动化语境下应为“新能源渗透率”，“能源渗透率”术语不准确。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1182,
+          "end": 1297,
+          "text": "我们认为，电动化：国内能源渗透率依然有提升空间；智能化：高阶智能驾驶有望在2024年进入放量周期；高端化：自主品牌结构升级，产品价格带覆盖上移；全球化：国内整车厂进入海外扩张期，国内优质零部件的海外基地2024年将逐步进入收获期。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们认为，电动化：国内能源渗透率依然有提升空间；智能化：高阶智能驾驶有望在2024年进入放量周期；高端化：自主品牌结构升级，产品价格带覆盖上移；全球化：国内整车厂进入海外扩张期，国内优质零部件的海外基地2024年将逐步进入收获期。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1182,
+          "end": 1297,
+          "text": "我们认为，电动化：国内能源渗透率依然有提升空间；智能化：高阶智能驾驶有望在2024年进入放量周期；高端化：自主品牌结构升级，产品价格带覆盖上移；全球化：国内整车厂进入海外扩张期，国内优质零部件的海外基地2024年将逐步进入收获期。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "31ae3fcf805e7a04da1ae5b4",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1704
+        ]
+      ],
+      "estimated_input_tokens": 6177,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:21:53.808429+00:00",
+        "request_sha256": "68b5657f27c474fd74f76fd74a225d52297075726754bae1d1694acac9179ea0",
+        "input_token_estimate": 17197,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279341",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "9a9ac0f52237477fa5a62489a4f8e267",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4097,
+        "output_tokens": 8586,
+        "usage_source": "provider",
+        "duration_seconds": 33.047388,
+        "cost_cny": "0.038441"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "从2023全年维度来看，2023年汽车销量万辆，同比上升11.9%；"
+          }
+        ],
+        "reason": "“汽车销量”后直接接单位“万辆”，缺少具体销量数值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "整体来看，2023年汽车行业实现营收3.7元，同比+16%，归母净利润0.14万亿元，同比+42%。"
+          }
+        ],
+        "reason": "汽车行业营收写成3.7元，与同比增长和归母净利润万亿元量级不符，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024年Q1汽车销量同比+10.6%，韧性较强。"
+          },
+          {
+            "text": "2024年Q1汽车销量672万辆，同比上升10.6%，环比下降25.2%；"
+          }
+        ],
+        "reason": "同一期间汽车销量同比增速10.6%在相邻两句中重复出现。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "2024年Q1汽车销量环比下降主要系一季度是汽车消费旺季，年底冲量透支部分需求、春节假期等因素影响，但同比来看仍然实现10.6%的增长，韧性较强。"
+          }
+        ],
+        "reason": "一季度通常为汽车消费淡季，此处称旺季却用于解释环比下降，前后逻辑矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "我们认为，电动化：国内能源渗透率依然有提升空间；智能化：高阶智能驾驶有望在2024年进入放量周期；高端化：自主品牌结构升级，产品价格带覆盖上移；全球化：国内整车厂进入海外扩张期，国内优质零部件的海外基地2024年将逐步进入收获期。"
+          }
+        ],
+        "reason": "电动化语境下应为“新能源渗透率”，“能源渗透率”术语不准确。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 471,
+      "end": 505,
+      "text": "业绩端：2023年汽车板块利润增速快于营收增速，各子板块盈利均改善。",
+      "quantities": [],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 505,
+      "end": 555,
+      "text": "整体来看，2023年汽车行业实现营收3.7元，同比+16%，归母净利润0.14万亿元，同比+42%。",
+      "quantities": [
+        {
+          "value": "3.7",
+          "unit": "元",
+          "start": 523,
+          "end": 527
+        },
+        {
+          "value": "+16",
+          "unit": "%",
+          "start": 530,
+          "end": 534
+        },
+        {
+          "value": "+42",
+          "unit": "%",
+          "start": 550,
+          "end": 554
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 505,
+      "end": 555,
+      "text": "整体来看，2023年汽车行业实现营收3.7元，同比+16%，归母净利润0.14万亿元，同比+42%。",
+      "quantities": [
+        {
+          "value": "3.7",
+          "unit": "元",
+          "start": 523,
+          "end": 527
+        },
+        {
+          "value": "+16",
+          "unit": "%",
+          "start": 530,
+          "end": 534
+        },
+        {
+          "value": "+42",
+          "unit": "%",
+          "start": 550,
+          "end": 554
+        }
+      ],
+      "periods": [
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 555,
+      "end": 670,
+      "text": "分板块来看，2023年乘用车/客车/货车/零部件/汽车服务收入同比分别为+16%/+11%/+24%/+12%/+6%，归母净利润同比分别为+34%/扭亏为盈/+118%/+27%/扭亏为盈，2023年乘用车、客车板块表现超预期。",
+      "quantities": [
+        {
+          "value": "+16",
+          "unit": "%",
+          "start": 591,
+          "end": 595
+        },
+        {
+          "value": "+11",
+          "unit": "%",
+          "start": 596,
+          "end": 600
+        },
+        {
+          "value": "+24",
+          "unit": "%",
+          "start": 601,
+          "end": 605
+        },
+        {
+          "value": "+12",
+          "unit": "%",
+          "start": 606,
+          "end": 610
+        },
+        {
+          "value": "+6",
+          "unit": "%",
+          "start": 611,
+          "end": 614
+        },
+        {
+          "value": "+34",
+          "unit": "%",
+          "start": 625,
+          "end": 629
+        },
+        {
+          "value": "+118",
+          "unit": "%",
+          "start": 635,
+          "end": 640
+        },
+        {
+          "value": "+27",
+          "unit": "%",
+          "start": 641,
+          "end": 645
+        }
+      ],
+      "periods": [
+        "2023年",
+        "2023年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 845,
+      "end": 911,
+      "text": "整体来看，2024年Q1汽车行业营收8534亿元，同环比分别+9%/-20%，归母净利润323.6亿元，同环比分别-8%/+14%。",
+      "quantities": [
+        {
+          "value": "8534",
+          "unit": "亿元",
+          "start": 863,
+          "end": 869
+        },
+        {
+          "value": "+9",
+          "unit": "%",
+          "start": 875,
+          "end": 878
+        },
+        {
+          "value": "-20",
+          "unit": "%",
+          "start": 879,
+          "end": 883
+        },
+        {
+          "value": "323.6",
+          "unit": "亿元",
+          "start": 889,
+          "end": 896
+        },
+        {
+          "value": "-8",
+          "unit": "%",
+          "start": 902,
+          "end": 905
+        },
+        {
+          "value": "+14",
+          "unit": "%",
+          "start": 906,
+          "end": 910
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 845,
+      "end": 911,
+      "text": "整体来看，2024年Q1汽车行业营收8534亿元，同环比分别+9%/-20%，归母净利润323.6亿元，同环比分别-8%/+14%。",
+      "quantities": [
+        {
+          "value": "8534",
+          "unit": "亿元",
+          "start": 863,
+          "end": 869
+        },
+        {
+          "value": "+9",
+          "unit": "%",
+          "start": 875,
+          "end": 878
+        },
+        {
+          "value": "-20",
+          "unit": "%",
+          "start": 879,
+          "end": 883
+        },
+        {
+          "value": "323.6",
+          "unit": "亿元",
+          "start": 889,
+          "end": 896
+        },
+        {
+          "value": "-8",
+          "unit": "%",
+          "start": 902,
+          "end": 905
+        },
+        {
+          "value": "+14",
+          "unit": "%",
+          "start": 906,
+          "end": 910
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 911,
+      "end": 1084,
+      "text": "分板块来看，2024年Q1乘用车/客车/货车/零部件/汽车服务收入同比分别为+9%/+54%/+8%/+11%/-7%，归母净利润同比分别为-37%/+3650%/+49%/+32%/-48%，整车端利润承压，且利润增速低于营收增速，主要系汽车行业竞争持续加剧导致车企价格压力大，盈利受到一定影响，其中长安、广汽等车企2024年Q1利润出现下滑。",
+      "quantities": [
+        {
+          "value": "+9",
+          "unit": "%",
+          "start": 949,
+          "end": 952
+        },
+        {
+          "value": "+54",
+          "unit": "%",
+          "start": 953,
+          "end": 957
+        },
+        {
+          "value": "+8",
+          "unit": "%",
+          "start": 958,
+          "end": 961
+        },
+        {
+          "value": "+11",
+          "unit": "%",
+          "start": 962,
+          "end": 966
+        },
+        {
+          "value": "-7",
+          "unit": "%",
+          "start": 967,
+          "end": 970
+        },
+        {
+          "value": "-37",
+          "unit": "%",
+          "start": 981,
+          "end": 985
+        },
+        {
+          "value": "+3650",
+          "unit": "%",
+          "start": 986,
+          "end": 992
+        },
+        {
+          "value": "+49",
+          "unit": "%",
+          "start": 993,
+          "end": 997
+        },
+        {
+          "value": "+32",
+          "unit": "%",
+          "start": 998,
+          "end": 1002
+        },
+        {
+          "value": "-48",
+          "unit": "%",
+          "start": 1003,
+          "end": 1007
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 911,
+      "end": 1084,
+      "text": "分板块来看，2024年Q1乘用车/客车/货车/零部件/汽车服务收入同比分别为+9%/+54%/+8%/+11%/-7%，归母净利润同比分别为-37%/+3650%/+49%/+32%/-48%，整车端利润承压，且利润增速低于营收增速，主要系汽车行业竞争持续加剧导致车企价格压力大，盈利受到一定影响，其中长安、广汽等车企2024年Q1利润出现下滑。",
+      "quantities": [
+        {
+          "value": "+9",
+          "unit": "%",
+          "start": 949,
+          "end": 952
+        },
+        {
+          "value": "+54",
+          "unit": "%",
+          "start": 953,
+          "end": 957
+        },
+        {
+          "value": "+8",
+          "unit": "%",
+          "start": 958,
+          "end": 961
+        },
+        {
+          "value": "+11",
+          "unit": "%",
+          "start": 962,
+          "end": 966
+        },
+        {
+          "value": "-7",
+          "unit": "%",
+          "start": 967,
+          "end": 970
+        },
+        {
+          "value": "-37",
+          "unit": "%",
+          "start": 981,
+          "end": 985
+        },
+        {
+          "value": "+3650",
+          "unit": "%",
+          "start": 986,
+          "end": 992
+        },
+        {
+          "value": "+49",
+          "unit": "%",
+          "start": 993,
+          "end": 997
+        },
+        {
+          "value": "+32",
+          "unit": "%",
+          "start": 998,
+          "end": 1002
+        },
+        {
+          "value": "-48",
+          "unit": "%",
+          "start": 1003,
+          "end": 1007
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1704,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1704,
+    "processed_ranges": [
+      [
+        0,
+        1704
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 33.069062,
+  "source_content_sha256": "25e292833934222cc30eb9f6dcc8955aaad9234140704e8ae7c799f350c3bb44"
+}

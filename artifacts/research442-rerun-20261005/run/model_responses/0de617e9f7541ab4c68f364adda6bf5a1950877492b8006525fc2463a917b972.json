@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。\"}],\"reason\":\"4月只有30天，不存在4月31日，该日期本身不成立。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"公司是公路板块核心标的，主营收费公路业务，截至2024年底拥有运营里程609米。\"}],\"reason\":\"高速公路运营里程通常以公里计，609米仅0.609公里，与路产规模严重不符。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"预计收购可以增加2025-2026年归母净利润 亿元、 亿元，占2024年归母净利润的11%、12%。\"}],\"reason\":\"两个“亿元”前缺少应填写的具体归母净利润增加数值。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"2025年4月31日起安徽高速公路差异化收费政策调整，对公司旗下路产货车ETC折扣由八五折变为九五折，车流量不变下预计公司可节省减免金额1.1亿元。\"}],\"reason\":\"折扣由八五折变为九五折意味着优惠减少，公司应增加收费而非节省减免。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"公司核心路产宣广高速在2022年开启改扩建，2024年改扩建完工通车，预计在2023年车流量有明显修复。\"}],\"reason\":\"改扩建2024年才完工通车，却预计2023年车流量明显修复，先后时间冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T18:56:23.222301+00:00",
+    "request_sha256": "b4934c657dd5fc162e239b132d98b668fd78d23afc3d6cbac648eafba68d7d6e",
+    "input_token_estimate": 15611,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277755",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "5cffb5a9950e4c629b7c7c9b129fd6f0",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3705,
+    "output_tokens": 8627,
+    "usage_source": "provider",
+    "duration_seconds": 34.570812,
+    "cost_cny": "0.038213"
+  },
+  "cache_request": {
+    "key": "0de617e9f7541ab4c68f364adda6bf5a1950877492b8006525fc2463a917b972",
+    "purpose": "text_review.detect",
+    "messages_sha256": "b4934c657dd5fc162e239b132d98b668fd78d23afc3d6cbac648eafba68d7d6e"
+  }
+}

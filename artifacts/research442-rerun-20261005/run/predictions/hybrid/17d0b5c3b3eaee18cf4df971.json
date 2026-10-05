@@ -1,0 +1,518 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000352",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "收入应以货币单位表示，却写成“万亿千克”，单位错误且数量级不合理。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 597,
+          "end": 617,
+          "text": "24年面向AI眼镜收入约1.06万亿千克"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年面向AI眼镜收入约1.06万亿千克"
+        }
+      ],
+      "spans": [
+        {
+          "start": 597,
+          "end": 617,
+          "text": "24年面向AI眼镜收入约1.06万亿千克"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "58a95d9746fc7aaa41496144",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "公司预计129年，年份明显有误，与当前及上下文年份矛盾，应为2029年等未来年份。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 618,
+          "end": 642,
+          "text": "公司预计129年该部分收入有望同比增长超500%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司预计129年该部分收入有望同比增长超500%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 618,
+          "end": 642,
+          "text": "公司预计129年该部分收入有望同比增长超500%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "36301b8be50d9971fa4aec49",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1155
+        ]
+      ],
+      "estimated_input_tokens": 5560,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:45:31.794185+00:00",
+        "request_sha256": "e75c78a9d0adb10f688c961c8da5d318db30f95ce05c3189fe49566b8e97246c",
+        "input_token_estimate": 15518,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277662",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "5bbaf101e703412f9e056489cfd77830",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3761,
+        "output_tokens": 3732,
+        "usage_source": "provider",
+        "duration_seconds": 15.273555,
+        "cost_cny": "0.018689",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "24年面向AI眼镜收入约1.06万亿千克"
+          }
+        ],
+        "reason": "收入应以货币单位表示，却写成“万亿千克”，单位错误且数量级不合理。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "公司预计129年该部分收入有望同比增长超500%"
+          }
+        ],
+        "reason": "公司预计129年，年份明显有误，与当前及上下文年份矛盾，应为2029年等未来年份。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 177,
+      "end": 337,
+      "text": "在此背景下，公司1Q25营收15.43亿元(YoY-10.62%，QoQ-7.58%)，短期受研发投入同比增长25.82%、股份支付费用8054万元及存货跌价准备等影响，扣非归母净利润-2.16亿元(YoY-217.87%，QoQ-195.29%)，毛利率1.99%(YoY-22.75pct，QoQ-3.19pct)。",
+      "quantities": [
+        {
+          "value": "15.43",
+          "unit": "亿元",
+          "start": 191,
+          "end": 198
+        },
+        {
+          "value": "-10.62",
+          "unit": "%",
+          "start": 202,
+          "end": 209
+        },
+        {
+          "value": "-7.58",
+          "unit": "%",
+          "start": 213,
+          "end": 219
+        },
+        {
+          "value": "25.82",
+          "unit": "%",
+          "start": 232,
+          "end": 238
+        },
+        {
+          "value": "8054",
+          "unit": "万元",
+          "start": 245,
+          "end": 251
+        },
+        {
+          "value": "-2.16",
+          "unit": "亿元",
+          "start": 269,
+          "end": 276
+        },
+        {
+          "value": "-217.87",
+          "unit": "%",
+          "start": 280,
+          "end": 288
+        },
+        {
+          "value": "-195.29",
+          "unit": "%",
+          "start": 292,
+          "end": 300
+        },
+        {
+          "value": "1.99",
+          "unit": "%",
+          "start": 305,
+          "end": 310
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 177,
+      "end": 337,
+      "text": "在此背景下，公司1Q25营收15.43亿元(YoY-10.62%，QoQ-7.58%)，短期受研发投入同比增长25.82%、股份支付费用8054万元及存货跌价准备等影响，扣非归母净利润-2.16亿元(YoY-217.87%，QoQ-195.29%)，毛利率1.99%(YoY-22.75pct，QoQ-3.19pct)。",
+      "quantities": [
+        {
+          "value": "15.43",
+          "unit": "亿元",
+          "start": 191,
+          "end": 198
+        },
+        {
+          "value": "-10.62",
+          "unit": "%",
+          "start": 202,
+          "end": 209
+        },
+        {
+          "value": "-7.58",
+          "unit": "%",
+          "start": 213,
+          "end": 219
+        },
+        {
+          "value": "25.82",
+          "unit": "%",
+          "start": 232,
+          "end": 238
+        },
+        {
+          "value": "8054",
+          "unit": "万元",
+          "start": 245,
+          "end": 251
+        },
+        {
+          "value": "-2.16",
+          "unit": "亿元",
+          "start": 269,
+          "end": 276
+        },
+        {
+          "value": "-217.87",
+          "unit": "%",
+          "start": 280,
+          "end": 288
+        },
+        {
+          "value": "-195.29",
+          "unit": "%",
+          "start": 292,
+          "end": 300
+        },
+        {
+          "value": "1.99",
+          "unit": "%",
+          "start": 305,
+          "end": 310
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 177,
+      "end": 337,
+      "text": "在此背景下，公司1Q25营收15.43亿元(YoY-10.62%，QoQ-7.58%)，短期受研发投入同比增长25.82%、股份支付费用8054万元及存货跌价准备等影响，扣非归母净利润-2.16亿元(YoY-217.87%，QoQ-195.29%)，毛利率1.99%(YoY-22.75pct，QoQ-3.19pct)。",
+      "quantities": [
+        {
+          "value": "15.43",
+          "unit": "亿元",
+          "start": 191,
+          "end": 198
+        },
+        {
+          "value": "-10.62",
+          "unit": "%",
+          "start": 202,
+          "end": 209
+        },
+        {
+          "value": "-7.58",
+          "unit": "%",
+          "start": 213,
+          "end": 219
+        },
+        {
+          "value": "25.82",
+          "unit": "%",
+          "start": 232,
+          "end": 238
+        },
+        {
+          "value": "8054",
+          "unit": "万元",
+          "start": 245,
+          "end": 251
+        },
+        {
+          "value": "-2.16",
+          "unit": "亿元",
+          "start": 269,
+          "end": 276
+        },
+        {
+          "value": "-217.87",
+          "unit": "%",
+          "start": 280,
+          "end": 288
+        },
+        {
+          "value": "-195.29",
+          "unit": "%",
+          "start": 292,
+          "end": 300
+        },
+        {
+          "value": "1.99",
+          "unit": "%",
+          "start": 305,
+          "end": 310
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 401,
+      "end": 529,
+      "text": "公司嵌入式存储24年实现营收42.41亿元(YoY+151.68%)，产品已进入OPPO、传音控股、摩托罗拉、HMD、ZTE、TCL等头部客户供应链，面向AI手机已推出UFS、LPDDR5/5X、uMCP等产品并量产12GB、16GB等LPDDR5X产品。",
+      "quantities": [
+        {
+          "value": "42.41",
+          "unit": "亿元",
+          "start": 415,
+          "end": 422
+        },
+        {
+          "value": "+151.68",
+          "unit": "%",
+          "start": 426,
+          "end": 434
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 643,
+      "end": 748,
+      "text": "PC存储24年实现营收20.19亿元(YoY+28.75%)，SSD产品已进入联想、Acer、HP、同方等国内外PC厂商供应链，面向AI PC已推出高端DDR5超频内存条、PCIe5.0SSD等高性能存储产品。",
+      "quantities": [
+        {
+          "value": "20.19",
+          "unit": "亿元",
+          "start": 654,
+          "end": 661
+        },
+        {
+          "value": "+28.75",
+          "unit": "%",
+          "start": 665,
+          "end": 672
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 839,
+      "end": 877,
+      "text": "工车规存储24年营收0.81亿元，产品已在国内头部车企及Tier1客户量产。",
+      "quantities": [
+        {
+          "value": "0.81",
+          "unit": "亿元",
+          "start": 849,
+          "end": 855
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 938,
+      "end": 1126,
+      "text": "投资建议：由于24年下半年需求不及此前预期，存储价格下跌，1Q25行业价格仍承压，存货跌价影响大于此前预测，公司研发投入高于预期，基于公司24年与25年一季度经营情况，下调25-26年净利润预测，预计25-27年归母净利润有望达1.78/2.00/3.82亿元(前值25-26年5.08/5.78亿元)，对应25-27年PE分别为156/139/73倍，维持“优于大市”评级。",
+      "quantities": [
+        {
+          "value": "3.82",
+          "unit": "亿元",
+          "start": 1062,
+          "end": 1068
+        },
+        {
+          "value": "5.78",
+          "unit": "亿元",
+          "start": 1082,
+          "end": 1088
+        },
+        {
+          "value": "73",
+          "unit": "倍",
+          "start": 1111,
+          "end": 1114
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "基于公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 938,
+      "end": 1126,
+      "text": "投资建议：由于24年下半年需求不及此前预期，存储价格下跌，1Q25行业价格仍承压，存货跌价影响大于此前预测，公司研发投入高于预期，基于公司24年与25年一季度经营情况，下调25-26年净利润预测，预计25-27年归母净利润有望达1.78/2.00/3.82亿元(前值25-26年5.08/5.78亿元)，对应25-27年PE分别为156/139/73倍，维持“优于大市”评级。",
+      "quantities": [
+        {
+          "value": "3.82",
+          "unit": "亿元",
+          "start": 1062,
+          "end": 1068
+        },
+        {
+          "value": "5.78",
+          "unit": "亿元",
+          "start": 1082,
+          "end": 1088
+        },
+        {
+          "value": "73",
+          "unit": "倍",
+          "start": 1111,
+          "end": 1114
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "基于公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1155,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1155,
+    "processed_ranges": [
+      [
+        0,
+        1155
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1155,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 8,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001976,
+  "source_content_sha256": "4ed550c0282a78b9574b2e73e788ffa641bf5c2818d5ca90f8d3df3fdd013d31"
+}

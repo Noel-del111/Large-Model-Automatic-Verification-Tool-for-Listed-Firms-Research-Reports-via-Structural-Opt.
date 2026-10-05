@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"SG有望成为一线mTNBC治疗新标准，并适应症有望向辅助/新辅助拓展。\"}], \"reason\": \"该句与前一句内容完全相同，属于不必要重复。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"PD-L1阳性（CPS≥10）mTNBC的一线标准治疗为帕博利珠单抗联合化疗，中位PFS为9.7年，mOS为23个月。\"}], \"reason\": \"中位PFS为9.7年远大于同句mOS的23个月，PFS不可能长于OS，单位“年”应为“月”。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"吉利德宣布ASCENT-06研究达到主要终点，实验组在PFS上显著劣于对照组，且OS数据呈现积极趋势。\"}], \"reason\": \"若主要终点为PFS，则“达到主要终点”与“PFS显著劣于对照组”不能同时成立。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:08:23.957222+00:00",
+    "request_sha256": "24bd1a08ff0d58ff06fcd92aeba5d84a8794a9611b407099d0d0147f87d44df2",
+    "input_token_estimate": 15482,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277626",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "37d3b5ead1ae4365a732298779f50e22",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3745,
+    "output_tokens": 5886,
+    "usage_source": "provider",
+    "duration_seconds": 24.753293,
+    "cost_cny": "0.027289"
+  },
+  "cache_request": {
+    "key": "e8201449af77fe751b61edd39393aac43c9fb6780217e4d5adc7591f8d87c93a",
+    "purpose": "text_review.detect",
+    "messages_sha256": "24bd1a08ff0d58ff06fcd92aeba5d84a8794a9611b407099d0d0147f87d44df2"
+  }
+}

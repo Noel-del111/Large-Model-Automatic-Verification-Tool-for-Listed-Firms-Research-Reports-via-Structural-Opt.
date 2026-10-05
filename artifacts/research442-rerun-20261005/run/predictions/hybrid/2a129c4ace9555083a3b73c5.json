@@ -1,0 +1,259 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000544",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "环比下降表示租金低于上期，与“升至”所表达的上升方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 164,
+          "end": 218,
+          "text": "在多重因素的共同作用下，2025 年第一季度，上海办公平均租金环比下降 1.6%，升至 4.15 元/㎡·日"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "在多重因素的共同作用下，2025 年第一季度，上海办公平均租金环比下降 1.6%，升至 4.15 元/㎡·日"
+        }
+      ],
+      "spans": [
+        {
+          "start": 164,
+          "end": 218,
+          "text": "在多重因素的共同作用下，2025 年第一季度，上海办公平均租金环比下降 1.6%，升至 4.15 元/㎡·日"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1fd1ab165e7dd9596fe61ce4",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "1000平方分米仅10平方米，物流仓储承租面积应为平方米量级。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 583,
+          "end": 652,
+          "text": "另外，这些区域内物流仓储类企业占比居高不下，承租面积普遍在 1000 平方分米以上，但租金承受力集中在 1-1.5 元/㎡·日的低位区间。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "另外，这些区域内物流仓储类企业占比居高不下，承租面积普遍在 1000 平方分米以上，但租金承受力集中在 1-1.5 元/㎡·日的低位区间。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 583,
+          "end": 652,
+          "text": "另外，这些区域内物流仓储类企业占比居高不下，承租面积普遍在 1000 平方分米以上，但租金承受力集中在 1-1.5 元/㎡·日的低位区间。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "59b415226d9715211b177bd4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "租金环比变化应以百分比表示，用“个百分点”描述租金跌幅混淆了单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 277,
+          "end": 309,
+          "text": "内环内区域平均租金下跌 1.6个百分点至 5.66 元/㎡·日。"
+        },
+        {
+          "kind": "source_text",
+          "start": 309,
+          "end": 407,
+          "text": "内中环平均租金下跌 1.8 个百分点，平均租金降至 3.84 元/㎡·日，中外环与外郊环区域平均租金分别在 2.89 元/㎡·日与 2.32 元/㎡·日，环比下跌 1.3 个百分点与 2 个百分点"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "内环内区域平均租金下跌 1.6个百分点至 5.66 元/㎡·日。"
+        },
+        {
+          "text": "内中环平均租金下跌 1.8 个百分点，平均租金降至 3.84 元/㎡·日，中外环与外郊环区域平均租金分别在 2.89 元/㎡·日与 2.32 元/㎡·日，环比下跌 1.3 个百分点与 2 个百分点"
+        }
+      ],
+      "spans": [
+        {
+          "start": 277,
+          "end": 309,
+          "text": "内环内区域平均租金下跌 1.6个百分点至 5.66 元/㎡·日。"
+        },
+        {
+          "start": 309,
+          "end": 407,
+          "text": "内中环平均租金下跌 1.8 个百分点，平均租金降至 3.84 元/㎡·日，中外环与外郊环区域平均租金分别在 2.89 元/㎡·日与 2.32 元/㎡·日，环比下跌 1.3 个百分点与 2 个百分点"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f782d95ecb544fb669b244b8",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1000
+        ]
+      ],
+      "estimated_input_tokens": 5603,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:10:46.598947+00:00",
+        "request_sha256": "a2dd8f2e41368b477db3447ca5ae277a4da01b54e45b23c8fe4e9b7fa6d65f3b",
+        "input_token_estimate": 15575,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277719",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "b92ff3ab7127498d9defd5bf2d053e60",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3667,
+        "output_tokens": 6303,
+        "usage_source": "provider",
+        "duration_seconds": 24.519634,
+        "cost_cny": "0.028879",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "在多重因素的共同作用下，2025 年第一季度，上海办公平均租金环比下降 1.6%，升至 4.15 元/㎡·日"
+          }
+        ],
+        "reason": "环比下降表示租金低于上期，与“升至”所表达的上升方向矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "另外，这些区域内物流仓储类企业占比居高不下，承租面积普遍在 1000 平方分米以上，但租金承受力集中在 1-1.5 元/㎡·日的低位区间。"
+          }
+        ],
+        "reason": "1000平方分米仅10平方米，物流仓储承租面积应为平方米量级。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "内环内区域平均租金下跌 1.6个百分点至 5.66 元/㎡·日。"
+          },
+          {
+            "text": "内中环平均租金下跌 1.8 个百分点，平均租金降至 3.84 元/㎡·日，中外环与外郊环区域平均租金分别在 2.89 元/㎡·日与 2.32 元/㎡·日，环比下跌 1.3 个百分点与 2 个百分点"
+          }
+        ],
+        "reason": "租金环比变化应以百分比表示，用“个百分点”描述租金跌幅混淆了单位。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1000,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1000,
+    "processed_ranges": [
+      [
+        0,
+        1000
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1000,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001371,
+  "source_content_sha256": "0839051656766654771c33205e3bdc30a117f3be80c59115b8f36f4bce20ccde"
+}

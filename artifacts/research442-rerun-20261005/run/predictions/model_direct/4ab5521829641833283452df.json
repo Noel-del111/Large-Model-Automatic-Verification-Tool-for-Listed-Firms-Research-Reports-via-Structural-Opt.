@@ -1,0 +1,680 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000515",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "计算错误",
+      "reason": "1,909.00除以7,634.00约等于25.01%，与文中55.01%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 111,
+          "end": 199,
+          "text": "公司本次公开发行股份初始发行股份数量为 1,909.00 万股， 发行后总股本为 7,634.00 万股， 本次发行数量占发行后总股本的 55.01%（ 超额配售选择权行使前）"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司本次公开发行股份初始发行股份数量为 1,909.00 万股， 发行后总股本为 7,634.00 万股， 本次发行数量占发行后总股本的 55.01%（ 超额配售选择权行使前）",
+          "start": 135,
+          "end": 257
+        }
+      ],
+      "spans": [
+        {
+          "start": 111,
+          "end": 199,
+          "text": "公司本次公开发行股份初始发行股份数量为 1,909.00 万股， 发行后总股本为 7,634.00 万股， 本次发行数量占发行后总股本的 55.01%（ 超额配售选择权行使前）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c6fdd9b33d51c39cf0107933",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "公开发行股份为股权融资，不应称“债券资金”，应为“募集资金”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 359,
+          "end": 460,
+          "text": "公司本次公开发行股份债券资金扣除发行费用后， 拟投资于“新津区交大铁发轨道交通智能产品及装备生产新建项目” 、 “新津区交大铁发研发中心建设项目” 、 “营销及售后服务网络建设项目” 以及补充流动资金。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司本次公开发行股份债券资金扣除发行费用后， 拟投资于“新津区交大铁发轨道交通智能产品及装备生产新建项目” 、 “新津区交大铁发研发中心建设项目” 、 “营销及售后服务网络建设项目” 以及补充流动资金。",
+          "start": 402,
+          "end": 543
+        }
+      ],
+      "spans": [
+        {
+          "start": 359,
+          "end": 460,
+          "text": "公司本次公开发行股份债券资金扣除发行费用后， 拟投资于“新津区交大铁发轨道交通智能产品及装备生产新建项目” 、 “新津区交大铁发研发中心建设项目” 、 “营销及售后服务网络建设项目” 以及补充流动资金。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b674d3bc069a7d01d59e447c",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一2024年营收3.35亿元信息在同一段重复出现，无新增含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 637,
+          "end": 682,
+          "text": "轨道交通基础设施安全智能产品及装备国家级“小巨人” ， 2024 年营收 3.35 亿元。"
+        },
+        {
+          "kind": "source_text",
+          "start": 920,
+          "end": 984,
+          "text": "2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "轨道交通基础设施安全智能产品及装备国家级“小巨人” ， 2024 年营收 3.35 亿元。",
+          "start": 656,
+          "end": 700
+        },
+        {
+          "text": "2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。",
+          "start": 887,
+          "end": 950
+        }
+      ],
+      "spans": [
+        {
+          "start": 637,
+          "end": 682,
+          "text": "轨道交通基础设施安全智能产品及装备国家级“小巨人” ， 2024 年营收 3.35 亿元。"
+        },
+        {
+          "start": 920,
+          "end": 984,
+          "text": "2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "51607fc66d621e8a9a767b78",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "5339万元除以3.35亿元约等于15.94%，与文中净利率16.73%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 920,
+          "end": 984,
+          "text": "2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。",
+          "start": 887,
+          "end": 950
+        }
+      ],
+      "spans": [
+        {
+          "start": 920,
+          "end": 984,
+          "text": "2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3ff4989afd0061d734470878",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内文件名称缺失，法规名称属性值为空，无法核验引用依据。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1027,
+          "end": 1088,
+          "text": "国务院于 2021 年发布了《》 ， 大规模推进铁路线路建设和信息化建设已成为促进我国经济持续健康发展的一项长期战略工程。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "国务院于 2021 年发布了《》 ， 大规模推进铁路线路建设和信息化建设已成为促进我国经济持续健康发展的一项长期战略工程。",
+          "start": 1005,
+          "end": 1069
+        }
+      ],
+      "spans": [
+        {
+          "start": 1027,
+          "end": 1088,
+          "text": "国务院于 2021 年发布了《》 ， 大规模推进铁路线路建设和信息化建设已成为促进我国经济持续健康发展的一项长期战略工程。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "88dd69302d3006a7735e4cec",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一2024年铁路固定资产投资数据在同一段重复出现，无新增含义。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 986,
+          "end": 1026,
+          "text": "2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1089,
+          "end": 1175,
+          "text": "根据国铁集团官方发布的有关数据，2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%， 时隔 5 年再次突破 8000亿元大关， 创投资历史新高。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%。",
+          "start": 955,
+          "end": 1004
+        },
+        {
+          "text": "根据国铁集团官方发布的有关数据，2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%， 时隔 5 年再次突破 8000亿元大关， 创投资历史新高。",
+          "start": 1071,
+          "end": 1171
+        }
+      ],
+      "spans": [
+        {
+          "start": 986,
+          "end": 1026,
+          "text": "2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%。"
+        },
+        {
+          "start": 1089,
+          "end": 1175,
+          "text": "根据国铁集团官方发布的有关数据，2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%， 时隔 5 年再次突破 8000亿元大关， 创投资历史新高。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ad9b626cf0fcaa8f51a4f154",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1624
+        ]
+      ],
+      "estimated_input_tokens": 6051,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:08:08.930715+00:00",
+        "request_sha256": "57d49fdde858e95da63fa3bdefd77de172634300341b9b3a0fed5ac76ba0b7fa",
+        "input_token_estimate": 16897,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279041",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "316d5ab08d9f4daeb5bbc2f8da49c2a9",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4050,
+        "output_tokens": 7242,
+        "usage_source": "provider",
+        "duration_seconds": 27.078076,
+        "cost_cny": "0.033018"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司本次公开发行股份初始发行股份数量为 1,909.00 万股， 发行后总股本为 7,634.00 万股， 本次发行数量占发行后总股本的 55.01%（ 超额配售选择权行使前）",
+            "start": 135,
+            "end": 257
+          }
+        ],
+        "reason": "1,909.00除以7,634.00约等于25.01%，与文中55.01%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "公司本次公开发行股份债券资金扣除发行费用后， 拟投资于“新津区交大铁发轨道交通智能产品及装备生产新建项目” 、 “新津区交大铁发研发中心建设项目” 、 “营销及售后服务网络建设项目” 以及补充流动资金。",
+            "start": 402,
+            "end": 543
+          }
+        ],
+        "reason": "公开发行股份为股权融资，不应称“债券资金”，应为“募集资金”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "轨道交通基础设施安全智能产品及装备国家级“小巨人” ， 2024 年营收 3.35 亿元。",
+            "start": 656,
+            "end": 700
+          },
+          {
+            "text": "2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。",
+            "start": 887,
+            "end": 950
+          }
+        ],
+        "reason": "同一2024年营收3.35亿元信息在同一段重复出现，无新增含义。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。",
+            "start": 887,
+            "end": 950
+          }
+        ],
+        "reason": "5339万元除以3.35亿元约等于15.94%，与文中净利率16.73%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "国务院于 2021 年发布了《》 ， 大规模推进铁路线路建设和信息化建设已成为促进我国经济持续健康发展的一项长期战略工程。",
+            "start": 1005,
+            "end": 1069
+          }
+        ],
+        "reason": "书名号内文件名称缺失，法规名称属性值为空，无法核验引用依据。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%。",
+            "start": 955,
+            "end": 1004
+          },
+          {
+            "text": "根据国铁集团官方发布的有关数据，2024 年全国铁路固定资产投资完成 8,506 亿元， 同比增长 11.3%， 时隔 5 年再次突破 8000亿元大关， 创投资历史新高。",
+            "start": 1071,
+            "end": 1171
+          }
+        ],
+        "reason": "同一2024年铁路固定资产投资数据在同一段重复出现，无新增含义。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "pe",
+      "metric_text": "市盈率",
+      "start": 55,
+      "end": 110,
+      "text": "交大铁发本次发行价格 8.81 元/股， 发行市盈率 12.6X， 申购日为 2025 年 5 月 27 日。",
+      "quantities": [
+        {
+          "value": "8.81",
+          "unit": "元/股",
+          "start": 66,
+          "end": 74
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 460,
+      "end": 635,
+      "text": " 其中， “新津区交大铁发轨道交通智能产品及装备生产新建项目” 建设期拟定为 2 年， 项目拟扩充的地震预警系统、 道岔监测系统、 线路监测预警系统、 周界智能视频监测系统产能分别为 32 套/年、 100 台/年、 140 台/年、 120 台/年， 项目达产后预计每年增加营业收入 24,714.88 万元， 增加净利润 3,010.42 万元。",
+      "quantities": [
+        {
+          "value": "24,714.88",
+          "unit": "万元",
+          "start": 603,
+          "end": 615
+        },
+        {
+          "value": "3,010.42",
+          "unit": "万元",
+          "start": 623,
+          "end": 634
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 460,
+      "end": 635,
+      "text": " 其中， “新津区交大铁发轨道交通智能产品及装备生产新建项目” 建设期拟定为 2 年， 项目拟扩充的地震预警系统、 道岔监测系统、 线路监测预警系统、 周界智能视频监测系统产能分别为 32 套/年、 100 台/年、 140 台/年、 120 台/年， 项目达产后预计每年增加营业收入 24,714.88 万元， 增加净利润 3,010.42 万元。",
+      "quantities": [
+        {
+          "value": "24,714.88",
+          "unit": "万元",
+          "start": 603,
+          "end": 615
+        },
+        {
+          "value": "3,010.42",
+          "unit": "万元",
+          "start": 623,
+          "end": 634
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 637,
+      "end": 682,
+      "text": "轨道交通基础设施安全智能产品及装备国家级“小巨人” ， 2024 年营收 3.35 亿元。",
+      "quantities": [
+        {
+          "value": "3.35",
+          "unit": "亿元",
+          "start": 674,
+          "end": 681
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 766,
+      "end": 829,
+      "text": " 2024 年， 中国国家铁路集团有限公司及其关联方是公司的第一大客户， 对其营业收入占比超过 70%， 客户集中度相对较高。",
+      "quantities": [
+        {
+          "value": "70",
+          "unit": "%",
+          "start": 814,
+          "end": 817
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "中国国家铁路集团有限公司及其关联方是公司"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 919,
+      "end": 984,
+      "text": " 2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。",
+      "quantities": [
+        {
+          "value": "3.35",
+          "unit": "亿元",
+          "start": 933,
+          "end": 940
+        },
+        {
+          "value": "5339",
+          "unit": "万元",
+          "start": 948,
+          "end": 955
+        },
+        {
+          "value": "44.50",
+          "unit": "%",
+          "start": 969,
+          "end": 975
+        },
+        {
+          "value": "16.73",
+          "unit": "%",
+          "start": 977,
+          "end": 983
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 919,
+      "end": 984,
+      "text": " 2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。",
+      "quantities": [
+        {
+          "value": "3.35",
+          "unit": "亿元",
+          "start": 933,
+          "end": 940
+        },
+        {
+          "value": "5339",
+          "unit": "万元",
+          "start": 948,
+          "end": 955
+        },
+        {
+          "value": "44.50",
+          "unit": "%",
+          "start": 969,
+          "end": 975
+        },
+        {
+          "value": "16.73",
+          "unit": "%",
+          "start": 977,
+          "end": 983
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 919,
+      "end": 984,
+      "text": " 2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。",
+      "quantities": [
+        {
+          "value": "3.35",
+          "unit": "亿元",
+          "start": 933,
+          "end": 940
+        },
+        {
+          "value": "5339",
+          "unit": "万元",
+          "start": 948,
+          "end": 955
+        },
+        {
+          "value": "44.50",
+          "unit": "%",
+          "start": 969,
+          "end": 975
+        },
+        {
+          "value": "16.73",
+          "unit": "%",
+          "start": 977,
+          "end": 983
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 919,
+      "end": 984,
+      "text": " 2024 年， 公司营收 3.35 亿元、 归母净利润 5339 万元， 毛利率、 净利率分别为 44.50%、 16.73%。",
+      "quantities": [
+        {
+          "value": "3.35",
+          "unit": "亿元",
+          "start": 933,
+          "end": 940
+        },
+        {
+          "value": "5339",
+          "unit": "万元",
+          "start": 948,
+          "end": 955
+        },
+        {
+          "value": "44.50",
+          "unit": "%",
+          "start": 969,
+          "end": 975
+        },
+        {
+          "value": "16.73",
+          "unit": "%",
+          "start": 977,
+          "end": 983
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1624,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1624,
+    "processed_ranges": [
+      [
+        0,
+        1624
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 9,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 27.102488,
+  "source_content_sha256": "8128a0c8848ab7d28359a8659f9c92dd293d5f85fd94b35a2920abd410dbf16c"
+}

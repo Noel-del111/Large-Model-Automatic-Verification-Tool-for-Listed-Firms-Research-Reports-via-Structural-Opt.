@@ -1,0 +1,390 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000196",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值缺失",
+      "reason": "“倒数第位”缺少具体名次数字，数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 199,
+          "end": 228,
+          "text": "横向比较来看，本周传媒板块在所有板块中涨跌幅排名倒数第位。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "横向比较来看，本周传媒板块在所有板块中涨跌幅排名倒数第位。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 199,
+          "end": 228,
+          "text": "横向比较来看，本周传媒板块在所有板块中涨跌幅排名倒数第位。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9c5f65073092eccb49efecb2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "行动计划年份区间写成2026—2024年，结束年份早于开始年份。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 438,
+          "end": 502,
+          "text": "4）1月4日国家数据局等17部门联合印发《“数据要素×”三年行动计划（2026—2024年）》，数据产业规模年增速预计约20%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4）1月4日国家数据局等17部门联合印发《“数据要素×”三年行动计划（2026—2024年）》，数据产业规模年增速预计约20%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 438,
+          "end": 502,
+          "text": "4）1月4日国家数据局等17部门联合印发《“数据要素×”三年行动计划（2026—2024年）》，数据产业规模年增速预计约20%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1fadd60176d612034f418715",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "电影票房18.65元使用“元”作单位，明显不符合票房量级，应为亿元等。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 539,
+          "end": 579,
+          "text": "1）本周（12月30日-1月5日）电影票房18.65元，环比增长144.68%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1）本周（12月30日-1月5日）电影票房18.65元，环比增长144.68%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 539,
+          "end": 579,
+          "text": "1）本周（12月30日-1月5日）电影票房18.65元，环比增长144.68%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "25db9d04153e4f0beb5421cf",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一段落内两次重复2023年国内电影总票房及同比增速信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 504,
+          "end": 539,
+          "text": "本周重要数据跟踪：2023年国内电影总票房549亿元，同比增长83%。"
+        },
+        {
+          "kind": "source_text",
+          "start": 612,
+          "end": 649,
+          "text": "据猫眼专业版数据，2023年国内电影总票房约549亿元，同比增长约83%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周重要数据跟踪：2023年国内电影总票房549亿元，同比增长83%。"
+        },
+        {
+          "text": "据猫眼专业版数据，2023年国内电影总票房约549亿元，同比增长约83%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 504,
+          "end": 539,
+          "text": "本周重要数据跟踪：2023年国内电影总票房549亿元，同比增长83%。"
+        },
+        {
+          "start": 612,
+          "end": 649,
+          "text": "据猫眼专业版数据，2023年国内电影总票房约549亿元，同比增长约83%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2f7d6f3e2ed5b2120f8211f0",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“提升趋势提升”重复使用“提升”，语义冗余。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1016,
+          "end": 1056,
+          "text": "短剧短期监管趋严，但景气度与热度提升趋势提升（紫天科技、华策影视、掌阅科技等）；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "短剧短期监管趋严，但景气度与热度提升趋势提升（紫天科技、华策影视、掌阅科技等）；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1016,
+          "end": 1056,
+          "text": "短剧短期监管趋严，但景气度与热度提升趋势提升（紫天科技、华策影视、掌阅科技等）；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "085d94da26396f5a52a37894",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "“关注可以关注”语义重复；“IP潮玩（泡泡玛特、阅文集团等）”在句中重复出现两次。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1056,
+          "end": 1175,
+          "text": "2）主题投资带动板块估值整体修复，基本面维度关注可以关注景气度较好且超跌的游戏（推荐恺英网络、三七互娱、巨人网络、姚记科技等标的）、IP潮玩（泡泡玛特、阅文集团等）、媒体（分众传媒、芒果超媒）、IP潮玩（泡泡玛特、阅文集团等）、出版板块；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2）主题投资带动板块估值整体修复，基本面维度关注可以关注景气度较好且超跌的游戏（推荐恺英网络、三七互娱、巨人网络、姚记科技等标的）、IP潮玩（泡泡玛特、阅文集团等）、媒体（分众传媒、芒果超媒）、IP潮玩（泡泡玛特、阅文集团等）、出版板块；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1056,
+          "end": 1175,
+          "text": "2）主题投资带动板块估值整体修复，基本面维度关注可以关注景气度较好且超跌的游戏（推荐恺英网络、三七互娱、巨人网络、姚记科技等标的）、IP潮玩（泡泡玛特、阅文集团等）、媒体（分众传媒、芒果超媒）、IP潮玩（泡泡玛特、阅文集团等）、出版板块；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b5a5be47f22c00b272d38c7c",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1264
+        ]
+      ],
+      "estimated_input_tokens": 5814,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T18:59:04.792399+00:00",
+        "request_sha256": "27913d9d8c54321c30caa5883ba575ed4c19158cd059c75a7cf998c6b949ff3f",
+        "input_token_estimate": 16185,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278329",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "e20b00afb78f4c3aae738710c74ddbba",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3829,
+        "output_tokens": 6291,
+        "usage_source": "provider",
+        "duration_seconds": 24.768121,
+        "cost_cny": "0.028993"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "横向比较来看，本周传媒板块在所有板块中涨跌幅排名倒数第位。"
+          }
+        ],
+        "reason": "“倒数第位”缺少具体名次数字，数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "4）1月4日国家数据局等17部门联合印发《“数据要素×”三年行动计划（2026—2024年）》，数据产业规模年增速预计约20%。"
+          }
+        ],
+        "reason": "行动计划年份区间写成2026—2024年，结束年份早于开始年份。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "1）本周（12月30日-1月5日）电影票房18.65元，环比增长144.68%。"
+          }
+        ],
+        "reason": "电影票房18.65元使用“元”作单位，明显不符合票房量级，应为亿元等。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "本周重要数据跟踪：2023年国内电影总票房549亿元，同比增长83%。"
+          },
+          {
+            "text": "据猫眼专业版数据，2023年国内电影总票房约549亿元，同比增长约83%。"
+          }
+        ],
+        "reason": "同一段落内两次重复2023年国内电影总票房及同比增速信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "短剧短期监管趋严，但景气度与热度提升趋势提升（紫天科技、华策影视、掌阅科技等）；"
+          }
+        ],
+        "reason": "“提升趋势提升”重复使用“提升”，语义冗余。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2）主题投资带动板块估值整体修复，基本面维度关注可以关注景气度较好且超跌的游戏（推荐恺英网络、三七互娱、巨人网络、姚记科技等标的）、IP潮玩（泡泡玛特、阅文集团等）、媒体（分众传媒、芒果超媒）、IP潮玩（泡泡玛特、阅文集团等）、出版板块；"
+          }
+        ],
+        "reason": "“关注可以关注”语义重复；“IP潮玩（泡泡玛特、阅文集团等）”在句中重复出现两次。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1264,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1264,
+    "processed_ranges": [
+      [
+        0,
+        1264
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 24.79467,
+  "source_content_sha256": "4fcf616c873c97db9220677bb642ed18b5228eb9c82d58bd9968fc2501d4e74e"
+}

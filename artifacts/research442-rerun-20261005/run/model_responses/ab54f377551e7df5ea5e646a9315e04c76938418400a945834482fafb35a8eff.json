@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"根据第一商用车网公布数据，2024年4月重卡行业销量约8.7元，同比+5%，环比-25%，略超市场预期。\"}],\"reason\":\"重卡销量单位应为万辆，写成“元”造成数量级错误。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"1-4月累计销售重卡约辆，同比+11%，整体销量持续复苏。\"}],\"reason\":\"“约”后缺少具体销量数值，导致无法核验累计销量。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"预计14月份有望延续天然气卡车渗透率的提升趋势。\"}],\"reason\":\"月份不存在14月，时间信息不合法。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"4月柴油-天然气天价差来到3.98元/kg，相较去年同期扩大约13.0%，燃气车在此区间经济性显著，预计14月份有望延续天然气卡车渗透率的提升趋势。\"}],\"reason\":\"“天价差”不是标准行业术语，应为“价差”，术语误用致含义不明。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"截至2022年年底，全国重卡保有量为894万辆，扣除2017年以来国五和国六销量（717万），则剩余377万为国Ⅳ及以下待淘汰车辆。\"}],\"reason\":\"894万辆减717万辆应为177万辆，不是377万辆，减法计算错误。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"2024年1-3月，中国重汽、一汽解放、东风集团、陕汽集团、福田汽车累计销量约为7.7/5.92/6.8/5.10/3.89/2.08万辆，同比+13%/+33%/+19%/+14%/-21%；市场份额约为28.1%/21.7%/19.4%/14.3%/7.6%，相较2023年+0.1/+3.3/+1.0/-1.4/-3.2pct。\"}],\"reason\":\"列出的五个企业对应六个累计销量数字，而同比和份额均五个，数量不匹配。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:18:17.809523+00:00",
+    "request_sha256": "58e3a4ea76399a4d0aee07931701f898f036dfa9e2f61aa1119f5d91d734098d",
+    "input_token_estimate": 16418,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278562",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2d9d9259a2d64fb8894ac9eb37a3b7cc",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3958,
+    "output_tokens": 11184,
+    "usage_source": "provider",
+    "duration_seconds": 41.536245,
+    "cost_cny": "0.048694"
+  },
+  "cache_request": {
+    "key": "ab54f377551e7df5ea5e646a9315e04c76938418400a945834482fafb35a8eff",
+    "purpose": "text_review.detect",
+    "messages_sha256": "58e3a4ea76399a4d0aee07931701f898f036dfa9e2f61aa1119f5d91d734098d"
+  }
+}

@@ -1,0 +1,500 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000440",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一营收金额及增速表述连续重复，无新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 97,
+          "end": 175,
+          "text": "2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 97,
+          "end": 175,
+          "text": "2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "36970ddecab4bbcc3f4c25a9",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "6月没有0日，该日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 777,
+          "end": 833,
+          "text": "2025年6月0日，中信银行AIC正式获批筹建，成为第二家获批AIC的股份行，显示了相关监管对其综合实力的认可。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年6月0日，中信银行AIC正式获批筹建，成为第二家获批AIC的股份行，显示了相关监管对其综合实力的认可。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 777,
+          "end": 833,
+          "text": "2025年6月0日，中信银行AIC正式获批筹建，成为第二家获批AIC的股份行，显示了相关监管对其综合实力的认可。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "97769783982c9643a4a52d6d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "设立全资子公司出资100元不合理，单位应为亿元而非元。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 727,
+          "end": 777,
+          "text": "2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 727,
+          "end": 777,
+          "text": "2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1037c5505176050351590e6e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后括号内容为空，缺失应填写的非数值属性。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 727,
+          "end": 777,
+          "text": "2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 727,
+          "end": 777,
+          "text": "2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ecb41d2d8802097710aba7e1",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "2025-2027三年归母净利润对应四个YoY数值，期间与数值个数不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 286,
+          "end": 410,
+          "text": "我们维持其盈利预测，预计2025-2027年归母净利润分别为688/711/718亿元，YoY分别为+0.36%/+3.30%/+1.01%/+2.01%；当前股价对应2025-2027年PB分别为0.62/0.59/0.54倍，维持“买入”评级。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们维持其盈利预测，预计2025-2027年归母净利润分别为688/711/718亿元，YoY分别为+0.36%/+3.30%/+1.01%/+2.01%；当前股价对应2025-2027年PB分别为0.62/0.59/0.54倍，维持“买入”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 286,
+          "end": 410,
+          "text": "我们维持其盈利预测，预计2025-2027年归母净利润分别为688/711/718亿元，YoY分别为+0.36%/+3.30%/+1.01%/+2.01%；当前股价对应2025-2027年PB分别为0.62/0.59/0.54倍，维持“买入”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e9cce537aa79ea2961533344",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1029
+        ]
+      ],
+      "estimated_input_tokens": 5486,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:01:49.097489+00:00",
+        "request_sha256": "eb42be89331da16a5b1bd7c570d3b7bf43174f78275337f77ccdab3491c0e15a",
+        "input_token_estimate": 15302,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277446",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "283a9eea11934d8dbd64ab2238fd563c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3665,
+        "output_tokens": 7513,
+        "usage_source": "provider",
+        "duration_seconds": 29.527241,
+        "cost_cny": "0.033717"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。"
+          }
+        ],
+        "reason": "同一营收金额及增速表述连续重复，无新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "2025年6月0日，中信银行AIC正式获批筹建，成为第二家获批AIC的股份行，显示了相关监管对其综合实力的认可。"
+          }
+        ],
+        "reason": "6月没有0日，该日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。"
+          }
+        ],
+        "reason": "设立全资子公司出资100元不合理，单位应为亿元而非元。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2025年5月8日，中信银行也发布公告称，拟出资100元设立全资子公司信银金融资产投资有限公司（）。"
+          }
+        ],
+        "reason": "公司名称后括号内容为空，缺失应填写的非数值属性。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "我们维持其盈利预测，预计2025-2027年归母净利润分别为688/711/718亿元，YoY分别为+0.36%/+3.30%/+1.01%/+2.01%；当前股价对应2025-2027年PB分别为0.62/0.59/0.54倍，维持“买入”评级。"
+          }
+        ],
+        "reason": "2025-2027三年归母净利润对应四个YoY数值，期间与数值个数不匹配。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 68,
+      "end": 136,
+      "text": "中信银行背靠大型央企中信集团，金融牌照齐全、客户基础深厚，2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。",
+      "quantities": [
+        {
+          "value": "517.70",
+          "unit": "亿元",
+          "start": 107,
+          "end": 115
+        },
+        {
+          "value": "-3.72",
+          "unit": "%",
+          "start": 119,
+          "end": 125
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "中信银行背靠大型央企中信集团"
+      ]
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 136,
+      "end": 175,
+      "text": "2025Q1实现营收517.70亿元（YoY-3.72%），增速边际略有下降。",
+      "quantities": [
+        {
+          "value": "517.70",
+          "unit": "亿元",
+          "start": 146,
+          "end": 154
+        },
+        {
+          "value": "-3.72",
+          "unit": "%",
+          "start": 158,
+          "end": 164
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 245,
+      "end": 286,
+      "text": "2025Q1实现归母净利润195.09亿元，同比增长1.66%，盈利能力韧性较强。",
+      "quantities": [
+        {
+          "value": "195.09",
+          "unit": "亿元",
+          "start": 258,
+          "end": 266
+        },
+        {
+          "value": "1.66",
+          "unit": "%",
+          "start": 271,
+          "end": 276
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 286,
+      "end": 364,
+      "text": "我们维持其盈利预测，预计2025-2027年归母净利润分别为688/711/718亿元，YoY分别为+0.36%/+3.30%/+1.01%/+2.01%；",
+      "quantities": [
+        {
+          "value": "718",
+          "unit": "亿元",
+          "start": 324,
+          "end": 329
+        },
+        {
+          "value": "+0.36",
+          "unit": "%",
+          "start": 336,
+          "end": 342
+        },
+        {
+          "value": "+3.30",
+          "unit": "%",
+          "start": 343,
+          "end": 349
+        },
+        {
+          "value": "+1.01",
+          "unit": "%",
+          "start": 350,
+          "end": 356
+        },
+        {
+          "value": "+2.01",
+          "unit": "%",
+          "start": 357,
+          "end": 363
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "assets",
+      "metric_text": "总资产",
+      "start": 432,
+      "end": 510,
+      "text": "2025Q1末总资产为9.86万亿元，同比增长8.65%，其中贷款同比增长5.08%，增速同比有所上升，主要受益于对公贷款投放靠前（YoY+10.58%）。",
+      "quantities": [
+        {
+          "value": "8.65",
+          "unit": "%",
+          "start": 455,
+          "end": 460
+        },
+        {
+          "value": "5.08",
+          "unit": "%",
+          "start": 469,
+          "end": 474
+        },
+        {
+          "value": "+10.58",
+          "unit": "%",
+          "start": 501,
+          "end": 508
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 600,
+      "end": 664,
+      "text": "2024年中信银行普通股现金分红占归属于普通股股东净利润的比例升至30.50%，同比上升超2pct（2023年为28.01%）；",
+      "quantities": [
+        {
+          "value": "30.50",
+          "unit": "%",
+          "start": 633,
+          "end": 639
+        },
+        {
+          "value": "28.01",
+          "unit": "%",
+          "start": 656,
+          "end": 662
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2023年"
+      ],
+      "entity_mentions": [
+        "年中信银行"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1029,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1029,
+    "processed_ranges": [
+      [
+        0,
+        1029
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 29.555602,
+  "source_content_sha256": "6622c83db34f487c3fb770d440fa0eb56dc5b634200ec270b5dbd9cebbac8d4f"
+}

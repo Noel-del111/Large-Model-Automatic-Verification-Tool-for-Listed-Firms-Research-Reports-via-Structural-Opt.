@@ -1,0 +1,676 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000699",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 2142,
+          "end": 2317,
+          "text": "麦格米特：发布限制性股票激励计划，拟授予数量为308.9万股，占股本总额的0.57%，计划激励对象共计253人，授予价格22.97元/股，考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%，或以2022-2024年三年平均值为基数扣除非经常性损益的净利润增长率不低于15%/30%/60%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2142,
+          "end": 2317,
+          "text": "麦格米特：发布限制性股票激励计划，拟授予数量为308.9万股，占股本总额的0.57%，计划激励对象共计253人，授予价格22.97元/股，考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%，或以2022-2024年三年平均值为基数扣除非经常性损益的净利润增长率不低于15%/30%/60%。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "ad937ca5509f5648da2dd72f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间写作5月30日至5月26日，终点早于起点。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 69,
+          "end": 155,
+          "text": "本周（5月30日-5月26日）核电涨3.8%，发电设备涨1.89%，风电涨1.15%，锂电池跌0.89%，新能源汽车跌1.73%，光伏跌2.01微米，电气设备跌2.44%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周（5月30日-5月26日）核电涨3.8%，发电设备涨1.89%，风电涨1.15%，锂电池跌0.89%，新能源汽车跌1.73%，光伏跌2.01微米，电气设备跌2.44%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 69,
+          "end": 155,
+          "text": "本周（5月30日-5月26日）核电涨3.8%，发电设备涨1.89%，风电涨1.15%，锂电池跌0.89%，新能源汽车跌1.73%，光伏跌2.01微米，电气设备跌2.44%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "da1b06d0108ba21d653a3349",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "跌幅单位应为百分比，写成“微米”属于单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 134,
+          "end": 143,
+          "text": "光伏跌2.01微米"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "光伏跌2.01微米"
+        }
+      ],
+      "spans": [
+        {
+          "start": 134,
+          "end": 143,
+          "text": "光伏跌2.01微米"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "37cb70809cd6586a36edf421",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "光伏工程并网容量用“吨”作单位，单位错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1139,
+          "end": 1175,
+          "text": "新能源：中国电建承建的赞比亚最大光伏工程并网0.54万/吨，-5.3%;"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "新能源：中国电建承建的赞比亚最大光伏工程并网0.54万/吨，-5.3%;"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1139,
+          "end": 1175,
+          "text": "新能源：中国电建承建的赞比亚最大光伏工程并网0.54万/吨，-5.3%;"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "6b6252454f4c64b3d646fa02",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "电网投资增长值用“GW”作单位，与投资额单位矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1687,
+          "end": 1734,
+          "text": "电网：2025年1-4月电网累计投资1408亿元，同比增长45.33GW，同比+11.23%："
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "电网：2025年1-4月电网累计投资1408亿元，同比增长45.33GW，同比+11.23%："
+        }
+      ],
+      "spans": [
+        {
+          "start": 1687,
+          "end": 1734,
+          "text": "电网：2025年1-4月电网累计投资1408亿元，同比增长45.33GW，同比+11.23%："
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "ec674ed3ffb18e48b3db139d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "14.11亿股减576万股约为14.05亿股，与14.02亿股不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1976,
+          "end": 2027,
+          "text": "公司将已回购尚未使用的576万股（总股本0.41%）注销，总股本由14.11亿股变更为14.02亿股。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "公司将已回购尚未使用的576万股（总股本0.41%）注销，总股本由14.11亿股变更为14.02亿股。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1976,
+          "end": 2027,
+          "text": "公司将已回购尚未使用的576万股（总股本0.41%）注销，总股本由14.11亿股变更为14.02亿股。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5a72d4b613a27275006c27dd",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "考核年份区间写作2027-2025年，起止顺序颠倒。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2211,
+          "end": 2266,
+          "text": "考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2211,
+          "end": 2266,
+          "text": "考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9414a06092a294af5f3d89a0",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "涨幅前五仅列出四个股票名称，第五个名称缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 155,
+          "end": 181,
+          "text": "涨幅前五为长城电工、台海核电、明星电缆、百利电气、；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "涨幅前五为长城电工、台海核电、明星电缆、百利电气、；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 155,
+          "end": 181,
+          "text": "涨幅前五为长城电工、台海核电、明星电缆、百利电气、；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "f96c2b45bf03e403482beb51",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "电解钴价格写成2339万/吨，量级与同段其他金属价格明显不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 879,
+          "end": 901,
+          "text": "钴：SMM电解钴2339万/吨，-0.8%；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "钴：SMM电解钴2339万/吨，-0.8%；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 879,
+          "end": 901,
+          "text": "钴：SMM电解钴2339万/吨，-0.8%；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8b0e315d4c4940b293c52220",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“六氟磷发电”不是有效术语，六氟磷酸锂与发电无关。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1196,
+          "end": 1202,
+          "text": "六氟磷发电；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "六氟磷发电；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1196,
+          "end": 1202,
+          "text": "六氟磷发电；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e7b31869d8b7d5b0cc6fa480",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          5023
+        ]
+      ],
+      "estimated_input_tokens": 9298,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:44:46.312625+00:00",
+        "request_sha256": "e12f1f8029aee968fd8cb6fbac4f181d53fca7480ec151f761620c40e4e81ca8",
+        "input_token_estimate": 25878,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.288022",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "95f3b82040b54075a0e85db48540ff49",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 6381,
+        "output_tokens": 11341,
+        "usage_source": "provider",
+        "duration_seconds": 45.431734,
+        "cost_cny": "0.051745",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "本周（5月30日-5月26日）核电涨3.8%，发电设备涨1.89%，风电涨1.15%，锂电池跌0.89%，新能源汽车跌1.73%，光伏跌2.01微米，电气设备跌2.44%。"
+          }
+        ],
+        "reason": "时间区间写作5月30日至5月26日，终点早于起点。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "光伏跌2.01微米"
+          }
+        ],
+        "reason": "跌幅单位应为百分比，写成“微米”属于单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "新能源：中国电建承建的赞比亚最大光伏工程并网0.54万/吨，-5.3%;"
+          }
+        ],
+        "reason": "光伏工程并网容量用“吨”作单位，单位错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "电网：2025年1-4月电网累计投资1408亿元，同比增长45.33GW，同比+11.23%："
+          }
+        ],
+        "reason": "电网投资增长值用“GW”作单位，与投资额单位矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "公司将已回购尚未使用的576万股（总股本0.41%）注销，总股本由14.11亿股变更为14.02亿股。"
+          }
+        ],
+        "reason": "14.11亿股减576万股约为14.05亿股，与14.02亿股不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%"
+          }
+        ],
+        "reason": "考核年份区间写作2027-2025年，起止顺序颠倒。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "涨幅前五为长城电工、台海核电、明星电缆、百利电气、；"
+          }
+        ],
+        "reason": "涨幅前五仅列出四个股票名称，第五个名称缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "钴：SMM电解钴2339万/吨，-0.8%；"
+          }
+        ],
+        "reason": "电解钴价格写成2339万/吨，量级与同段其他金属价格明显不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "六氟磷发电；"
+          }
+        ],
+        "reason": "“六氟磷发电”不是有效术语，六氟磷酸锂与发电无关。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 2142,
+      "end": 2317,
+      "text": "麦格米特：发布限制性股票激励计划，拟授予数量为308.9万股，占股本总额的0.57%，计划激励对象共计253人，授予价格22.97元/股，考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%，或以2022-2024年三年平均值为基数扣除非经常性损益的净利润增长率不低于15%/30%/60%。",
+      "quantities": [
+        {
+          "value": "0.57",
+          "unit": "%",
+          "start": 2179,
+          "end": 2184
+        },
+        {
+          "value": "22.97",
+          "unit": "元/股",
+          "start": 2202,
+          "end": 2210
+        },
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 2255,
+          "end": 2258
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 2259,
+          "end": 2262
+        },
+        {
+          "value": "70",
+          "unit": "%",
+          "start": 2263,
+          "end": 2266
+        },
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 2305,
+          "end": 2308
+        },
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 2309,
+          "end": 2312
+        },
+        {
+          "value": "60",
+          "unit": "%",
+          "start": 2313,
+          "end": 2316
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 2142,
+      "end": 2317,
+      "text": "麦格米特：发布限制性股票激励计划，拟授予数量为308.9万股，占股本总额的0.57%，计划激励对象共计253人，授予价格22.97元/股，考核目标为2027-2025年以2022-2024年三年平均值为基数营业收入增长率不低于30%/50%/70%，或以2022-2024年三年平均值为基数扣除非经常性损益的净利润增长率不低于15%/30%/60%。",
+      "quantities": [
+        {
+          "value": "0.57",
+          "unit": "%",
+          "start": 2179,
+          "end": 2184
+        },
+        {
+          "value": "22.97",
+          "unit": "元/股",
+          "start": 2202,
+          "end": 2210
+        },
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 2255,
+          "end": 2258
+        },
+        {
+          "value": "50",
+          "unit": "%",
+          "start": 2259,
+          "end": 2262
+        },
+        {
+          "value": "70",
+          "unit": "%",
+          "start": 2263,
+          "end": 2266
+        },
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 2305,
+          "end": 2308
+        },
+        {
+          "value": "30",
+          "unit": "%",
+          "start": 2309,
+          "end": 2312
+        },
+        {
+          "value": "60",
+          "unit": "%",
+          "start": 2313,
+          "end": 2316
+        }
+      ],
+      "periods": [
+        "2025年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 3184,
+      "end": 4942,
+      "text": "投资建议：宁德时代（动力&储能电池全球龙头、盈利和增长确定估值低）、三花智控（热管理全球龙头、特斯拉机器人总成空间大）、汇川技术（通用自动化弱复苏龙头Alpha明显、联合动力持续超预期）、比亚迪（电动车销量持续向好且结构升级、全民智驾超预期）、阳光电源（逆变器全球龙头、海外大储优势显著、估值极低）、科达利（结构件全球龙头稳健增长、大力布局机器人优势显著打造第二增长曲线）、亿纬锂能（动力&储能锂电上量盈利向好并走出特色之路、消费类电池稳健）、雷赛智能（伺服控制器龙头企业、机器人关节批量优势明显）、浙江荣泰（云母龙头增长确定、微型丝杠优势明显）、北特科技（汽零稳步增长、丝杠具备领先优势）、大金重工（海风出口布局厚积薄发、量利双升超预期）、德业股份（新兴市场开拓先锋、户储爆发工商储蓄势）、璞泰来（负极龙头盈利拐点确立、隔膜涂覆持续增长）、斯菱股份（车后轴承市场稳定增长、打造谐波第二增长曲线）、富临精工（高压实铁锂领先、机器人布局深厚）、宏发股份（继电器恢复稳增长、高压直流持续稳增长）、锦浪科技（欧洲去库完成逆变器迎来拐点、新兴市场销售提升提供支撑）、祥鑫科技（汽零和结构件稳健、积极布局人形）、禾迈股份（微逆去库尾声重回高增长、储能产品开始导入）、华友钴业（锂电资源材料一体化布局、镍钴盈利能力超预期）、阿特斯（一体化组件头部企业、深耕海外大储进入收获期）、天奈科技（碳纳米管龙头、快充&硅碳&固态持续受益）、东方电缆（海缆壁垒高格局好，海风项目开始启动）、伟创电气（变频伺服持续增长、大力布局人形机器人）、湖南裕能（铁锂正极龙头强阿尔法、新品放量和价格见底盈利反转）、尚太科技（负极龙头份额提升超预期、成本优势大盈利能力强）、固德威（组串逆变器持续增长，储能电池和集成逐步恢复）、思源电气（电力设备国内出海双龙头、订单和盈利超预期）、三星医疗（海外配网和电表需求强劲、国内增长稳健）、国电南瑞（二次设备龙头、稳健增长可期）、麦格米特（多产品稳健增长、AI电源未来潜力大）、鸣志电器（步进电机全球龙头、机器人空心杯电机潜力大）、天赐材料（电解液&六氟龙头、新型锂盐领先）、帝科股份（银浆龙头、银包铜银浆率先量产在即）、曼恩斯特（磨头龙头持续高增、多品类扩张布局固态和人形）、容百科技（高镍正极龙头、海外进展超预期）、日月股份（大铸件紧缺提价可期，盈利弹性大）、上能电气（逆变器地面地位稳固、大储PCS放量在即）、科华数据（全面受益国内AI资本开支新周期、数据和数能双星驱动）、科士达（受益国内AI资本开支新周期、UPS龙头）、盛弘股份（受益海外和国内AI资本开支、海外储能新客户拓展）、平高电气（特高压交直流龙头、估值低业绩持续超预期）、许继电气（一二次电力设备龙头、柔直弹性可期）、金风科技（风机毛利率恢复、风电运营稳健）、金盘科技（干变全球龙头、海外全面布局）、欣旺达（消费锂电盈利向好、动储锂电逐步上量）、中伟股份（三元前聚体龙头、镍锂金属布局可观）、明阳智能（海上风机龙头、风机毛利率修复弹性大）、隆基绿能（单晶硅片和组件全球龙头、BC技术值期待）、爱旭股份（ABC电池组件龙头、25年大幅放量）、晶澳科技（一体化组件龙头、盈利率先恢复）、通威股份（硅料龙头受益供给侧改革、电池和组件有望改善）、福莱特（光伏玻璃龙头成本优势显著、价格底部有望企稳反弹）、钧达股份（Topcon电池龙头、扩产上量）、禾望电气（大传动优势明显、内部变革激发活力）、中国西电（一次设备综合龙头、受益特高压和管理改善）、晶科能源（一体化组件龙头、Topcon明显领先）、天合光能（210一体化组件龙头、户用分布式和渠道占比高）、聚和材料（银浆龙头、铜浆率先布局）、三一重能（成本优势明显、双海战略见成效）、福斯特（EVA和POE胶膜龙头、感光干膜上量）、新宙邦（电解液&氟化工齐头并进）、星源材质（干法和湿法隔膜龙头、LG等海外客户进展顺利）、当升科技（三元正极龙头、布局固态电池技术）、艾罗能源、恩捷股份、天顺风能、德方纳米、昱能科技、永兴材料、中矿资源、赣锋锂业、威迈斯、儒竞科技、派能科技、元力股份、大金重工、科士达、安科瑞、海兴电力、中熔电气、天齐锂业、日月股份、TCL中环、振华新材、三一重能、弘元绿能、金风科技。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 3184,
+      "end": 4942,
+      "text": "投资建议：宁德时代（动力&储能电池全球龙头、盈利和增长确定估值低）、三花智控（热管理全球龙头、特斯拉机器人总成空间大）、汇川技术（通用自动化弱复苏龙头Alpha明显、联合动力持续超预期）、比亚迪（电动车销量持续向好且结构升级、全民智驾超预期）、阳光电源（逆变器全球龙头、海外大储优势显著、估值极低）、科达利（结构件全球龙头稳健增长、大力布局机器人优势显著打造第二增长曲线）、亿纬锂能（动力&储能锂电上量盈利向好并走出特色之路、消费类电池稳健）、雷赛智能（伺服控制器龙头企业、机器人关节批量优势明显）、浙江荣泰（云母龙头增长确定、微型丝杠优势明显）、北特科技（汽零稳步增长、丝杠具备领先优势）、大金重工（海风出口布局厚积薄发、量利双升超预期）、德业股份（新兴市场开拓先锋、户储爆发工商储蓄势）、璞泰来（负极龙头盈利拐点确立、隔膜涂覆持续增长）、斯菱股份（车后轴承市场稳定增长、打造谐波第二增长曲线）、富临精工（高压实铁锂领先、机器人布局深厚）、宏发股份（继电器恢复稳增长、高压直流持续稳增长）、锦浪科技（欧洲去库完成逆变器迎来拐点、新兴市场销售提升提供支撑）、祥鑫科技（汽零和结构件稳健、积极布局人形）、禾迈股份（微逆去库尾声重回高增长、储能产品开始导入）、华友钴业（锂电资源材料一体化布局、镍钴盈利能力超预期）、阿特斯（一体化组件头部企业、深耕海外大储进入收获期）、天奈科技（碳纳米管龙头、快充&硅碳&固态持续受益）、东方电缆（海缆壁垒高格局好，海风项目开始启动）、伟创电气（变频伺服持续增长、大力布局人形机器人）、湖南裕能（铁锂正极龙头强阿尔法、新品放量和价格见底盈利反转）、尚太科技（负极龙头份额提升超预期、成本优势大盈利能力强）、固德威（组串逆变器持续增长，储能电池和集成逐步恢复）、思源电气（电力设备国内出海双龙头、订单和盈利超预期）、三星医疗（海外配网和电表需求强劲、国内增长稳健）、国电南瑞（二次设备龙头、稳健增长可期）、麦格米特（多产品稳健增长、AI电源未来潜力大）、鸣志电器（步进电机全球龙头、机器人空心杯电机潜力大）、天赐材料（电解液&六氟龙头、新型锂盐领先）、帝科股份（银浆龙头、银包铜银浆率先量产在即）、曼恩斯特（磨头龙头持续高增、多品类扩张布局固态和人形）、容百科技（高镍正极龙头、海外进展超预期）、日月股份（大铸件紧缺提价可期，盈利弹性大）、上能电气（逆变器地面地位稳固、大储PCS放量在即）、科华数据（全面受益国内AI资本开支新周期、数据和数能双星驱动）、科士达（受益国内AI资本开支新周期、UPS龙头）、盛弘股份（受益海外和国内AI资本开支、海外储能新客户拓展）、平高电气（特高压交直流龙头、估值低业绩持续超预期）、许继电气（一二次电力设备龙头、柔直弹性可期）、金风科技（风机毛利率恢复、风电运营稳健）、金盘科技（干变全球龙头、海外全面布局）、欣旺达（消费锂电盈利向好、动储锂电逐步上量）、中伟股份（三元前聚体龙头、镍锂金属布局可观）、明阳智能（海上风机龙头、风机毛利率修复弹性大）、隆基绿能（单晶硅片和组件全球龙头、BC技术值期待）、爱旭股份（ABC电池组件龙头、25年大幅放量）、晶澳科技（一体化组件龙头、盈利率先恢复）、通威股份（硅料龙头受益供给侧改革、电池和组件有望改善）、福莱特（光伏玻璃龙头成本优势显著、价格底部有望企稳反弹）、钧达股份（Topcon电池龙头、扩产上量）、禾望电气（大传动优势明显、内部变革激发活力）、中国西电（一次设备综合龙头、受益特高压和管理改善）、晶科能源（一体化组件龙头、Topcon明显领先）、天合光能（210一体化组件龙头、户用分布式和渠道占比高）、聚和材料（银浆龙头、铜浆率先布局）、三一重能（成本优势明显、双海战略见成效）、福斯特（EVA和POE胶膜龙头、感光干膜上量）、新宙邦（电解液&氟化工齐头并进）、星源材质（干法和湿法隔膜龙头、LG等海外客户进展顺利）、当升科技（三元正极龙头、布局固态电池技术）、艾罗能源、恩捷股份、天顺风能、德方纳米、昱能科技、永兴材料、中矿资源、赣锋锂业、威迈斯、儒竞科技、派能科技、元力股份、大金重工、科士达、安科瑞、海兴电力、中熔电气、天齐锂业、日月股份、TCL中环、振华新材、三一重能、弘元绿能、金风科技。",
+      "quantities": [],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 5023,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 5023,
+    "processed_ranges": [
+      [
+        0,
+        5023
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 5023,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 4,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.00353,
+  "source_content_sha256": "827582914183bda4ea035ef92aa427ef471e59f310eb09fc122c7d1a5a49a933"
+}

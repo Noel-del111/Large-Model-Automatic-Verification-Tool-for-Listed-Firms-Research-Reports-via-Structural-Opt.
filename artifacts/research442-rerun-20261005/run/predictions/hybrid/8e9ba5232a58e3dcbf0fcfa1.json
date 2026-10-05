@@ -1,0 +1,1132 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000504",
+  "scene": "个股研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 838,
+          "end": 927,
+          "text": "根据2024年年报与2025年一季报，我们预计2027-2025年EPS分别为3.23/3.52/3.78元，当前股价对应PE分别为9/9/8倍，首次覆盖，给予“买入”投资评级。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 838,
+          "end": 927,
+          "text": "根据2024年年报与2025年一季报，我们预计2027-2025年EPS分别为3.23/3.52/3.78元，当前股价对应PE分别为9/9/8倍，首次覆盖，给予“买入”投资评级。"
+        }
+      ],
+      "detector_id": "legacy.C.INTRINSIC.002",
+      "validation": "rule_candidate",
+      "id": "9bbce5f0ddbc70d1f5a853bd",
+      "detector_ids": [
+        "hybrid.model",
+        "legacy.C.INTRINSIC.002"
+      ],
+      "original_spans": [
+        {
+          "text": "根据2024年年报与2025年一季报，我们预计2027-2025年EPS分别为3.23/3.52/3.78元，当前股价对应PE分别为9/9/8倍，首次覆盖，给予“买入”投资评级。"
+        }
+      ],
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "净利率同比增幅单位写作“oct”，不是百分比单位，应为“pct”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 465,
+          "end": 506,
+          "text": "2024年/2025Q1净利率分别同增1pct/2oct至7.79%/11.22%"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年/2025Q1净利率分别同增1pct/2oct至7.79%/11.22%"
+        }
+      ],
+      "spans": [
+        {
+          "start": 465,
+          "end": 506,
+          "text": "2024年/2025Q1净利率分别同增1pct/2oct至7.79%/11.22%"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2a896d7801084a31d4e89141",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          970
+        ]
+      ],
+      "estimated_input_tokens": 5397,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:57:40.397416+00:00",
+        "request_sha256": "1c96d7790219a37390a24ce5ba79d8499eb329e70acf8aa49616e3a22d9b5e6e",
+        "input_token_estimate": 15068,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277212",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4d519d814ebc401ba1b8316d54416802",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3662,
+        "output_tokens": 9563,
+        "usage_source": "provider",
+        "duration_seconds": 35.987077,
+        "cost_cny": "0.041914",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "根据2024年年报与2025年一季报，我们预计2027-2025年EPS分别为3.23/3.52/3.78元，当前股价对应PE分别为9/9/8倍，首次覆盖，给予“买入”投资评级。"
+          }
+        ],
+        "reason": "年份区间写作“2027-2025年”，起点2027晚于终点2025，时间顺序倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年/2025Q1净利率分别同增1pct/2oct至7.79%/11.22%"
+          }
+        ],
+        "reason": "净利率同比增幅单位写作“oct”，不是百分比单位，应为“pct”。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 77,
+      "end": 211,
+      "text": "公司2024年营收171.39亿元（同减10%），归母净利润13.15亿元（同减0.01%），扣非归母净利润12.28亿元（同增9%），其中2024Q4营收41.35亿元（同减2%），归母净利润3.92亿元（同增110%），扣非归母净利润3.26亿元（同增200%）。",
+      "quantities": [
+        {
+          "value": "171.39",
+          "unit": "亿元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "value": "13.15",
+          "unit": "亿元",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.01",
+          "unit": "%",
+          "start": 117,
+          "end": 122
+        },
+        {
+          "value": "12.28",
+          "unit": "亿元",
+          "start": 131,
+          "end": 138
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 141,
+          "end": 143
+        },
+        {
+          "value": "41.35",
+          "unit": "亿元",
+          "start": 155,
+          "end": 162
+        },
+        {
+          "value": "2",
+          "unit": "%",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "value": "3.92",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "110",
+          "unit": "%",
+          "start": 183,
+          "end": 187
+        },
+        {
+          "value": "3.26",
+          "unit": "亿元",
+          "start": 196,
+          "end": 202
+        },
+        {
+          "value": "200",
+          "unit": "%",
+          "start": 205,
+          "end": 209
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 77,
+      "end": 211,
+      "text": "公司2024年营收171.39亿元（同减10%），归母净利润13.15亿元（同减0.01%），扣非归母净利润12.28亿元（同增9%），其中2024Q4营收41.35亿元（同减2%），归母净利润3.92亿元（同增110%），扣非归母净利润3.26亿元（同增200%）。",
+      "quantities": [
+        {
+          "value": "171.39",
+          "unit": "亿元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "value": "13.15",
+          "unit": "亿元",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.01",
+          "unit": "%",
+          "start": 117,
+          "end": 122
+        },
+        {
+          "value": "12.28",
+          "unit": "亿元",
+          "start": 131,
+          "end": 138
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 141,
+          "end": 143
+        },
+        {
+          "value": "41.35",
+          "unit": "亿元",
+          "start": 155,
+          "end": 162
+        },
+        {
+          "value": "2",
+          "unit": "%",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "value": "3.92",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "110",
+          "unit": "%",
+          "start": 183,
+          "end": 187
+        },
+        {
+          "value": "3.26",
+          "unit": "亿元",
+          "start": 196,
+          "end": 202
+        },
+        {
+          "value": "200",
+          "unit": "%",
+          "start": 205,
+          "end": 209
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 77,
+      "end": 211,
+      "text": "公司2024年营收171.39亿元（同减10%），归母净利润13.15亿元（同减0.01%），扣非归母净利润12.28亿元（同增9%），其中2024Q4营收41.35亿元（同减2%），归母净利润3.92亿元（同增110%），扣非归母净利润3.26亿元（同增200%）。",
+      "quantities": [
+        {
+          "value": "171.39",
+          "unit": "亿元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "value": "13.15",
+          "unit": "亿元",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.01",
+          "unit": "%",
+          "start": 117,
+          "end": 122
+        },
+        {
+          "value": "12.28",
+          "unit": "亿元",
+          "start": 131,
+          "end": 138
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 141,
+          "end": 143
+        },
+        {
+          "value": "41.35",
+          "unit": "亿元",
+          "start": 155,
+          "end": 162
+        },
+        {
+          "value": "2",
+          "unit": "%",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "value": "3.92",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "110",
+          "unit": "%",
+          "start": 183,
+          "end": 187
+        },
+        {
+          "value": "3.26",
+          "unit": "亿元",
+          "start": 196,
+          "end": 202
+        },
+        {
+          "value": "200",
+          "unit": "%",
+          "start": 205,
+          "end": 209
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 77,
+      "end": 211,
+      "text": "公司2024年营收171.39亿元（同减10%），归母净利润13.15亿元（同减0.01%），扣非归母净利润12.28亿元（同增9%），其中2024Q4营收41.35亿元（同减2%），归母净利润3.92亿元（同增110%），扣非归母净利润3.26亿元（同增200%）。",
+      "quantities": [
+        {
+          "value": "171.39",
+          "unit": "亿元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "value": "13.15",
+          "unit": "亿元",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.01",
+          "unit": "%",
+          "start": 117,
+          "end": 122
+        },
+        {
+          "value": "12.28",
+          "unit": "亿元",
+          "start": 131,
+          "end": 138
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 141,
+          "end": 143
+        },
+        {
+          "value": "41.35",
+          "unit": "亿元",
+          "start": 155,
+          "end": 162
+        },
+        {
+          "value": "2",
+          "unit": "%",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "value": "3.92",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "110",
+          "unit": "%",
+          "start": 183,
+          "end": 187
+        },
+        {
+          "value": "3.26",
+          "unit": "亿元",
+          "start": 196,
+          "end": 202
+        },
+        {
+          "value": "200",
+          "unit": "%",
+          "start": 205,
+          "end": 209
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 77,
+      "end": 211,
+      "text": "公司2024年营收171.39亿元（同减10%），归母净利润13.15亿元（同减0.01%），扣非归母净利润12.28亿元（同增9%），其中2024Q4营收41.35亿元（同减2%），归母净利润3.92亿元（同增110%），扣非归母净利润3.26亿元（同增200%）。",
+      "quantities": [
+        {
+          "value": "171.39",
+          "unit": "亿元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "value": "13.15",
+          "unit": "亿元",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.01",
+          "unit": "%",
+          "start": 117,
+          "end": 122
+        },
+        {
+          "value": "12.28",
+          "unit": "亿元",
+          "start": 131,
+          "end": 138
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 141,
+          "end": 143
+        },
+        {
+          "value": "41.35",
+          "unit": "亿元",
+          "start": 155,
+          "end": 162
+        },
+        {
+          "value": "2",
+          "unit": "%",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "value": "3.92",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "110",
+          "unit": "%",
+          "start": 183,
+          "end": 187
+        },
+        {
+          "value": "3.26",
+          "unit": "亿元",
+          "start": 196,
+          "end": 202
+        },
+        {
+          "value": "200",
+          "unit": "%",
+          "start": 205,
+          "end": 209
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 77,
+      "end": 211,
+      "text": "公司2024年营收171.39亿元（同减10%），归母净利润13.15亿元（同减0.01%），扣非归母净利润12.28亿元（同增9%），其中2024Q4营收41.35亿元（同减2%），归母净利润3.92亿元（同增110%），扣非归母净利润3.26亿元（同增200%）。",
+      "quantities": [
+        {
+          "value": "171.39",
+          "unit": "亿元",
+          "start": 86,
+          "end": 94
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 97,
+          "end": 100
+        },
+        {
+          "value": "13.15",
+          "unit": "亿元",
+          "start": 107,
+          "end": 114
+        },
+        {
+          "value": "0.01",
+          "unit": "%",
+          "start": 117,
+          "end": 122
+        },
+        {
+          "value": "12.28",
+          "unit": "亿元",
+          "start": 131,
+          "end": 138
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 141,
+          "end": 143
+        },
+        {
+          "value": "41.35",
+          "unit": "亿元",
+          "start": 155,
+          "end": 162
+        },
+        {
+          "value": "2",
+          "unit": "%",
+          "start": 165,
+          "end": 167
+        },
+        {
+          "value": "3.92",
+          "unit": "亿元",
+          "start": 174,
+          "end": 180
+        },
+        {
+          "value": "110",
+          "unit": "%",
+          "start": 183,
+          "end": 187
+        },
+        {
+          "value": "3.26",
+          "unit": "亿元",
+          "start": 196,
+          "end": 202
+        },
+        {
+          "value": "200",
+          "unit": "%",
+          "start": 205,
+          "end": 209
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 211,
+      "end": 276,
+      "text": "2025Q1公司营收42.76亿元（同减12%），归母净利润4.75亿元（同增9%），扣非归母净利润4.45亿元（同减0.2%）。",
+      "quantities": [
+        {
+          "value": "42.76",
+          "unit": "亿元",
+          "start": 221,
+          "end": 228
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 231,
+          "end": 234
+        },
+        {
+          "value": "4.75",
+          "unit": "亿元",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 250,
+          "end": 252
+        },
+        {
+          "value": "4.45",
+          "unit": "亿元",
+          "start": 261,
+          "end": 267
+        },
+        {
+          "value": "0.2",
+          "unit": "%",
+          "start": 270,
+          "end": 274
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 211,
+      "end": 276,
+      "text": "2025Q1公司营收42.76亿元（同减12%），归母净利润4.75亿元（同增9%），扣非归母净利润4.45亿元（同减0.2%）。",
+      "quantities": [
+        {
+          "value": "42.76",
+          "unit": "亿元",
+          "start": 221,
+          "end": 228
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 231,
+          "end": 234
+        },
+        {
+          "value": "4.75",
+          "unit": "亿元",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 250,
+          "end": 252
+        },
+        {
+          "value": "4.45",
+          "unit": "亿元",
+          "start": 261,
+          "end": 267
+        },
+        {
+          "value": "0.2",
+          "unit": "%",
+          "start": 270,
+          "end": 274
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 211,
+      "end": 276,
+      "text": "2025Q1公司营收42.76亿元（同减12%），归母净利润4.75亿元（同增9%），扣非归母净利润4.45亿元（同减0.2%）。",
+      "quantities": [
+        {
+          "value": "42.76",
+          "unit": "亿元",
+          "start": 221,
+          "end": 228
+        },
+        {
+          "value": "12",
+          "unit": "%",
+          "start": 231,
+          "end": 234
+        },
+        {
+          "value": "4.75",
+          "unit": "亿元",
+          "start": 241,
+          "end": 247
+        },
+        {
+          "value": "9",
+          "unit": "%",
+          "start": 250,
+          "end": 252
+        },
+        {
+          "value": "4.45",
+          "unit": "亿元",
+          "start": 261,
+          "end": 267
+        },
+        {
+          "value": "0.2",
+          "unit": "%",
+          "start": 270,
+          "end": 274
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 301,
+      "end": 507,
+      "text": "2024年/2025Q1公司毛利率分别同增1pct/1pct至26.52%/29.64%，主因低毛利率的汽贸业态占比下降，2024年/2025Q1销售费用率分别同增1pct/1pct至14.74%/14.19%，管理费用率分别同比-1pct/+0.5pct至4.46%/4.73%，费用率相对稳定，在马上消费贡献融资并购带动下，2024年/2025Q1净利率分别同增1pct/2oct至7.79%/11.22%。",
+      "quantities": [
+        {
+          "value": "26.52",
+          "unit": "%",
+          "start": 332,
+          "end": 338
+        },
+        {
+          "value": "29.64",
+          "unit": "%",
+          "start": 339,
+          "end": 345
+        },
+        {
+          "value": "14.74",
+          "unit": "%",
+          "start": 393,
+          "end": 399
+        },
+        {
+          "value": "14.19",
+          "unit": "%",
+          "start": 400,
+          "end": 406
+        },
+        {
+          "value": "4.46",
+          "unit": "%",
+          "start": 430,
+          "end": 435
+        },
+        {
+          "value": "4.73",
+          "unit": "%",
+          "start": 436,
+          "end": 441
+        },
+        {
+          "value": "7.79",
+          "unit": "%",
+          "start": 494,
+          "end": 499
+        },
+        {
+          "value": "11.22",
+          "unit": "%",
+          "start": 500,
+          "end": 506
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 301,
+      "end": 507,
+      "text": "2024年/2025Q1公司毛利率分别同增1pct/1pct至26.52%/29.64%，主因低毛利率的汽贸业态占比下降，2024年/2025Q1销售费用率分别同增1pct/1pct至14.74%/14.19%，管理费用率分别同比-1pct/+0.5pct至4.46%/4.73%，费用率相对稳定，在马上消费贡献融资并购带动下，2024年/2025Q1净利率分别同增1pct/2oct至7.79%/11.22%。",
+      "quantities": [
+        {
+          "value": "26.52",
+          "unit": "%",
+          "start": 332,
+          "end": 338
+        },
+        {
+          "value": "29.64",
+          "unit": "%",
+          "start": 339,
+          "end": 345
+        },
+        {
+          "value": "14.74",
+          "unit": "%",
+          "start": 393,
+          "end": 399
+        },
+        {
+          "value": "14.19",
+          "unit": "%",
+          "start": 400,
+          "end": 406
+        },
+        {
+          "value": "4.46",
+          "unit": "%",
+          "start": 430,
+          "end": 435
+        },
+        {
+          "value": "4.73",
+          "unit": "%",
+          "start": 436,
+          "end": 441
+        },
+        {
+          "value": "7.79",
+          "unit": "%",
+          "start": 494,
+          "end": 499
+        },
+        {
+          "value": "11.22",
+          "unit": "%",
+          "start": 500,
+          "end": 506
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 301,
+      "end": 507,
+      "text": "2024年/2025Q1公司毛利率分别同增1pct/1pct至26.52%/29.64%，主因低毛利率的汽贸业态占比下降，2024年/2025Q1销售费用率分别同增1pct/1pct至14.74%/14.19%，管理费用率分别同比-1pct/+0.5pct至4.46%/4.73%，费用率相对稳定，在马上消费贡献融资并购带动下，2024年/2025Q1净利率分别同增1pct/2oct至7.79%/11.22%。",
+      "quantities": [
+        {
+          "value": "26.52",
+          "unit": "%",
+          "start": 332,
+          "end": 338
+        },
+        {
+          "value": "29.64",
+          "unit": "%",
+          "start": 339,
+          "end": 345
+        },
+        {
+          "value": "14.74",
+          "unit": "%",
+          "start": 393,
+          "end": 399
+        },
+        {
+          "value": "14.19",
+          "unit": "%",
+          "start": 400,
+          "end": 406
+        },
+        {
+          "value": "4.46",
+          "unit": "%",
+          "start": 430,
+          "end": 435
+        },
+        {
+          "value": "4.73",
+          "unit": "%",
+          "start": 436,
+          "end": 441
+        },
+        {
+          "value": "7.79",
+          "unit": "%",
+          "start": 494,
+          "end": 499
+        },
+        {
+          "value": "11.22",
+          "unit": "%",
+          "start": 500,
+          "end": 506
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2024年",
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 528,
+      "end": 591,
+      "text": "分行业看，公司2024年百货业态/超市业态/电器业态/汽贸业态营收分别为17.70/61.64/33.03/42.88亿元，。",
+      "quantities": [
+        {
+          "value": "42.88",
+          "unit": "亿元",
+          "start": 582,
+          "end": 589
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 662,
+      "end": 749,
+      "text": "分区域来看，2024年重庆/四川/湖北地区营收分别为154.69/2.50/0.03亿元，分别同减10%/14%/92%，受消费疲软影响，整体业务营收承压，重心重回川渝地区。",
+      "quantities": [
+        {
+          "value": "0.03",
+          "unit": "亿元",
+          "start": 700,
+          "end": 706
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 711,
+          "end": 714
+        },
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 715,
+          "end": 718
+        },
+        {
+          "value": "92",
+          "unit": "%",
+          "start": 719,
+          "end": 722
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 662,
+      "end": 749,
+      "text": "分区域来看，2024年重庆/四川/湖北地区营收分别为154.69/2.50/0.03亿元，分别同减10%/14%/92%，受消费疲软影响，整体业务营收承压，重心重回川渝地区。",
+      "quantities": [
+        {
+          "value": "0.03",
+          "unit": "亿元",
+          "start": 700,
+          "end": 706
+        },
+        {
+          "value": "10",
+          "unit": "%",
+          "start": 711,
+          "end": 714
+        },
+        {
+          "value": "14",
+          "unit": "%",
+          "start": 715,
+          "end": 718
+        },
+        {
+          "value": "92",
+          "unit": "%",
+          "start": 719,
+          "end": 722
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 970,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 970,
+    "processed_ranges": [
+      [
+        0,
+        970
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 970,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 15,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.003135,
+  "source_content_sha256": "4dca2a2779d91ef8af02bc6d850f8e7c79c9391338a403a44962b96c20211b60"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"根据国家邮政局数据，截至2024年快递物流无人车规模化应用已累计超过6000立方厘米。\",\"reason\":\"无人车规模化应用数量用体积单位“立方厘米”计量，单位与数量对象不符。\"}]},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"订单量有望大幅增长，截至2025年Q13，九识智能、新石器等厂商在手订单均超万台。\",\"reason\":\"“Q13”不是合法季度表示，一年通常只有四个季度。\"}]},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"4）专注L4技术泛场景应用的公司，如文远知行、小马智行等。\",\"reason\":\"与前面已列出的第3）条内容完全相同，属不必要重复。\"}]},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"根据36氪，公路物流年运费规模高达7万亿元，覆盖三轮车、面包车、卡车等海量车型，营运车辆多达2000万辆，假设仅考虑自动驾驶服务订阅费部分收入2000元/月，即2.4万/年，则每年仅自动驾驶服务市场空间就可达到接近7000亿元。\",\"reason\":\"按2000万辆×2.4万元/年计算为4800亿元，与“接近7000亿元”不符。\"}]}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:01:30.336482+00:00",
+    "request_sha256": "1f7d66bcadd550983ac9663ff8322eeec0f5d1e4a8318824d5d661aff5dbb5ba",
+    "input_token_estimate": 16309,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278453",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "ab26b49ee7174b6b8a52163373eb284b",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3793,
+    "output_tokens": 5012,
+    "usage_source": "provider",
+    "duration_seconds": 18.712112,
+    "cost_cny": "0.023841"
+  },
+  "cache_request": {
+    "key": "0623e03c75426a8979baa42a35ba5d9911891aaa10f3fc20dd79a5fa07d59bc0",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1f7d66bcadd550983ac9663ff8322eeec0f5d1e4a8318824d5d661aff5dbb5ba"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"海天味业()\"}], \"reason\": \"公司名称后的股票代码括号为空，缺少股票代码这一非数值属性值。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2024年公司线上渠道实现营收12.4亿分，同比增长39.8%，表现显著优于公司整体表现。\"}], \"reason\": \"线上渠道营收单位写成“亿分”，应为“亿元”，单位量纲错误。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"成本方面1Q25大豆期货/白糖期货/玻璃期货/PET切片现货分别同比-12.6%/-7.2%/-24%/-13.4%/-15.6%，考虑到酱油产品酿造周期为1-2个季度，预计公司成本红利有望延续。\"}], \"reason\": \"列举4个期货/现货品类，却给出5个同比百分比，数值个数与项目个数不匹配。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"根据公司在生产规模优势、渠道掌控优势，以及股东结构，给予公司40XPE，对应目标价50.40元（原为42.8元，2024年35X PE，+20%），维持“优于大市”评级。\"}], \"reason\": \"目标价由42.8元升至50.40元，涨幅约17.8%，与文中括号内+20%不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:40:09.535574+00:00",
+    "request_sha256": "de215c595aec45316e5c3b5d1bce988ff33871c04c06054bbfc7f24fc87c35c2",
+    "input_token_estimate": 15615,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277759",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "3f4781f78d33429f8ed1fcb3314ea41e",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3680,
+    "output_tokens": 4195,
+    "usage_source": "provider",
+    "duration_seconds": 17.060848,
+    "cost_cny": "0.02046"
+  },
+  "cache_request": {
+    "key": "526db5937d65ab770bf13cca879f43114d8fd4bb8632519f45cd557dc0f49cac",
+    "purpose": "text_review.detect",
+    "messages_sha256": "de215c595aec45316e5c3b5d1bce988ff33871c04c06054bbfc7f24fc87c35c2"
+  }
+}

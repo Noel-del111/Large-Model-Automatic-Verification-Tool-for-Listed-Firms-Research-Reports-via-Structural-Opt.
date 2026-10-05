@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"期间费用率%，环比+0.97pct；\"}],\"reason\":\"期间费用率后仅有百分号而无具体数值，无法核验该指标。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"预计公司2025-2027年归母净利润分别为12.72、18.82和22.57亿元，同比+26.41%、+47.88%和+19.96%，EPS分别为0.54、0.80和0.96元，以2025年5月32日收盘价14.64元计算，对应PE为27.11、18.30和15.25倍，给予公司“推荐”的投资评级。\"}],\"reason\":\"2025年5月没有32日，日期本身不成立。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"产能方面，公司总产能为19,400平方分米/天，安徽项目和南通项目将根据市场情况陆续点火运营，同时，在已有越南2,000吨/日产能的基础上，计划在印度尼西亚投资建设光伏玻璃窑炉。\"}],\"reason\":\"公司总产能用“平方分米/天”而越南产能用“吨/日”，同一产能指标量纲不一致且单位明显异常。\"},{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"目前，公司千吨级及以上的大型窑炉占比超90%，成本优势显著。成本优势显著。\"}],\"reason\":\"同一句内“成本优势显著”连续重复，属于不必要重复。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:47:50.065923+00:00",
+    "request_sha256": "31b35f6139784363f774cde9dff8dff137db1d34f40ef73474b1714180a7092a",
+    "input_token_estimate": 14855,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.276999",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "1324df0c5f0f4d1c8f4d2a0807228003",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3549,
+    "output_tokens": 4391,
+    "usage_source": "provider",
+    "duration_seconds": 17.026912,
+    "cost_cny": "0.021113"
+  },
+  "cache_request": {
+    "key": "e1a52eded4eae6d8d0ef1c1d3fbcf2f2ec78a19a353a3a6349422fe985c05c8a",
+    "purpose": "text_review.detect",
+    "messages_sha256": "31b35f6139784363f774cde9dff8dff137db1d34f40ef73474b1714180a7092a"
+  }
+}

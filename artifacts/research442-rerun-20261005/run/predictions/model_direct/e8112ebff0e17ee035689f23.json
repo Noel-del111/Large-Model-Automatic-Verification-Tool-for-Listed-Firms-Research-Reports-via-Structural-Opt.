@@ -1,0 +1,429 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000327",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "股票授予价格通常以元计价，20.6分/股即0.206元/股，货币单位使用错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 62,
+          "end": 133,
+          "text": "爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 62,
+          "end": 133,
+          "text": "爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "46553e2aaeb5afb6d2f55fbb",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "归母净利润后连续两个逗号，三个年度的归母净利润数值均缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 932,
+          "end": 1006,
+          "text": "盈利预测：考虑公司2025年限制性股票激励计划的可能影响，我们预计2025-2027年公司归母净利润，，PE分别为13.0X/11.2X/9.9X。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "盈利预测：考虑公司2025年限制性股票激励计划的可能影响，我们预计2025-2027年公司归母净利润，，PE分别为13.0X/11.2X/9.9X。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 932,
+          "end": 1006,
+          "text": "盈利预测：考虑公司2025年限制性股票激励计划的可能影响，我们预计2025-2027年公司归母净利润，，PE分别为13.0X/11.2X/9.9X。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3d0e2a66ab38a09f2f40369e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "摊销年度区间写作“2028-2025年”，起点晚于终点，该时间区间不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 370,
+          "end": 465,
+          "text": "会计成本方面，预计将摊销的总费用约2.35亿元，假设2025年6月中旬执行授予，则激励计划预计摊销费用在2028-2025年分别为7157.8/9995.4/4882.0/1497.5万元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "会计成本方面，预计将摊销的总费用约2.35亿元，假设2025年6月中旬执行授予，则激励计划预计摊销费用在2028-2025年分别为7157.8/9995.4/4882.0/1497.5万元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 370,
+          "end": 465,
+          "text": "会计成本方面，预计将摊销的总费用约2.35亿元，假设2025年6月中旬执行授予，则激励计划预计摊销费用在2028-2025年分别为7157.8/9995.4/4882.0/1497.5万元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7a5dbd684b993414a582d026",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“限制性股票激励计划”后的括号内为空，缺少应填写的文件类型或状态等非数值属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 62,
+          "end": 133,
+          "text": "爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 62,
+          "end": 133,
+          "text": "爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "475488d002a9772085cf5593",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1034
+        ]
+      ],
+      "estimated_input_tokens": 5586,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:02:58.302727+00:00",
+        "request_sha256": "5ccf010ccdfb22e0d6c4d58f58f85ced07e5f326a41230b95bfffc2db02aa4b3",
+        "input_token_estimate": 15545,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277689",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "c116bfb7ad4642818665c6d84b3fc2dc",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3664,
+        "output_tokens": 6660,
+        "usage_source": "provider",
+        "duration_seconds": 27.688219,
+        "cost_cny": "0.030304"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。"
+          }
+        ],
+        "reason": "股票授予价格通常以元计价，20.6分/股即0.206元/股，货币单位使用错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "盈利预测：考虑公司2025年限制性股票激励计划的可能影响，我们预计2025-2027年公司归母净利润，，PE分别为13.0X/11.2X/9.9X。"
+          }
+        ],
+        "reason": "归母净利润后连续两个逗号，三个年度的归母净利润数值均缺失。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "会计成本方面，预计将摊销的总费用约2.35亿元，假设2025年6月中旬执行授予，则激励计划预计摊销费用在2028-2025年分别为7157.8/9995.4/4882.0/1497.5万元。"
+          }
+        ],
+        "reason": "摊销年度区间写作“2028-2025年”，起点晚于终点，该时间区间不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "爱玛科技发布25年限制性股票激励计划（），拟向共计421名激励对象授予约1418万股，约占公司股本总额的1.65%，授予价格为20.6分/股。"
+          }
+        ],
+        "reason": "“限制性股票激励计划”后的括号内为空，缺少应填写的文件类型或状态等非数值属性值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 285,
+      "end": 370,
+      "text": "公司本次激励业绩考核目标为以2024年营业收入或净利润为基数，2025-2027年营收或净利润增长率分别不低于15%/32.25%/52.09%，对未来持续增长提出要求。",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 340,
+          "end": 343
+        },
+        {
+          "value": "32.25",
+          "unit": "%",
+          "start": 344,
+          "end": 350
+        },
+        {
+          "value": "52.09",
+          "unit": "%",
+          "start": 351,
+          "end": 357
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 285,
+      "end": 370,
+      "text": "公司本次激励业绩考核目标为以2024年营业收入或净利润为基数，2025-2027年营收或净利润增长率分别不低于15%/32.25%/52.09%，对未来持续增长提出要求。",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 340,
+          "end": 343
+        },
+        {
+          "value": "32.25",
+          "unit": "%",
+          "start": 344,
+          "end": 350
+        },
+        {
+          "value": "52.09",
+          "unit": "%",
+          "start": 351,
+          "end": 357
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 285,
+      "end": 370,
+      "text": "公司本次激励业绩考核目标为以2024年营业收入或净利润为基数，2025-2027年营收或净利润增长率分别不低于15%/32.25%/52.09%，对未来持续增长提出要求。",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 340,
+          "end": 343
+        },
+        {
+          "value": "32.25",
+          "unit": "%",
+          "start": 344,
+          "end": 350
+        },
+        {
+          "value": "52.09",
+          "unit": "%",
+          "start": 351,
+          "end": 357
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 285,
+      "end": 370,
+      "text": "公司本次激励业绩考核目标为以2024年营业收入或净利润为基数，2025-2027年营收或净利润增长率分别不低于15%/32.25%/52.09%，对未来持续增长提出要求。",
+      "quantities": [
+        {
+          "value": "15",
+          "unit": "%",
+          "start": 340,
+          "end": 343
+        },
+        {
+          "value": "32.25",
+          "unit": "%",
+          "start": 344,
+          "end": 350
+        },
+        {
+          "value": "52.09",
+          "unit": "%",
+          "start": 351,
+          "end": 357
+        }
+      ],
+      "periods": [
+        "2024年",
+        "2027年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 932,
+      "end": 1006,
+      "text": "盈利预测：考虑公司2025年限制性股票激励计划的可能影响，我们预计2025-2027年公司归母净利润，，PE分别为13.0X/11.2X/9.9X。",
+      "quantities": [],
+      "periods": [
+        "2025年",
+        "2027年"
+      ],
+      "entity_mentions": [
+        "考虑公司",
+        "年公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1034,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1034,
+    "processed_ranges": [
+      [
+        0,
+        1034
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 5,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 27.711351,
+  "source_content_sha256": "60af2e20da2aefbaa2437a5e8b07f7d2d9f66430b7d660d0a7e054a2750eac47"
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\n  \"errors\": [\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"香港特别行政区政府于5月32日在宪报刊登《稳定币条例》，意味香港在虚拟资产监管迈出了里程碑的一步。\"\n        }\n      ],\n      \"reason\": \"日期“5月32日”不存在，5月没有32日，时间信息不成立。\"\n    },\n    {\n      \"error_type\": \"时间信息非法\",\n      \"spans\": [\n        {\n          \"text\": \"美东时间5年28日盘后，英伟达发布FY26Q1业绩\"\n        }\n      ],\n      \"reason\": \"“5年28日”缺少月份且年份写法不完整，无法构成合法日期。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"计算机行业行业月报：EDA管控升级，RWA+稳定币构建新金融范式\"\n        }\n      ],\n      \"reason\": \"标题中“行业”一词连续出现，属于不必要的重复表述。\"\n    },\n    {\n      \"error_type\": \"冗余语句\",\n      \"spans\": [\n        {\n          \"text\": \"5月板块横盘整理，短期面临方向选择。\"\n        },\n        {\n          \"text\": \"板块在5月迎来横盘整理。\"\n        }\n      ],\n      \"reason\": \"同一段落内两次表述5月板块横盘整理，信息重复。\"\n    },\n    {\n      \"error_type\": \"属性值缺失错误\",\n      \"spans\": [\n        {\n          \"text\": \"人工智能板块指数（）5月涨跌幅为-0.78%\"\n        }\n      ],\n      \"reason\": \"指数名称前的括号内为空，缺失应有的指数名称或代码属性值。\"\n    },\n    {\n      \"error_type\": \"语义逻辑矛盾\",\n      \"spans\": [\n        {\n          \"text\": \"美国对华半导体产业制裁进一步加码，倒逼国产EDA厂商加速突围，降低国产化率\"\n        }\n      ],\n      \"reason\": \"制裁加码倒逼突围应提高国产化率，此处却称降低国产化率，前后逻辑矛盾。\"\n    },\n    {\n      \"error_type\": \"数值缺失\",\n      \"spans\": [\n        {\n          \"text\": \"目前全球EDA厂商新思、楷登与西门子占据超过中国市场份额\"\n        }\n      ],\n      \"reason\": \"“超过”后缺失具体市场份额数值或比例，无法判断占据份额。\"\n    }\n  ]\n}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:54:17.760765+00:00",
+    "request_sha256": "8c394815017c436dd7bec4f54a4517197fc98dc40c23375416fb08181e9e7004",
+    "input_token_estimate": 17329,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279473",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "71f886d3f44147b9824eb612cb48f848",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4071,
+    "output_tokens": 7928,
+    "usage_source": "provider",
+    "duration_seconds": 32.564616,
+    "cost_cny": "0.035783"
+  },
+  "cache_request": {
+    "key": "86f5a72dd19b86b0f59134b8cf03035f4c1d7543fb70cf5827bb57936d294647",
+    "purpose": "text_review.detect",
+    "messages_sha256": "8c394815017c436dd7bec4f54a4517197fc98dc40c23375416fb08181e9e7004"
+  }
+}

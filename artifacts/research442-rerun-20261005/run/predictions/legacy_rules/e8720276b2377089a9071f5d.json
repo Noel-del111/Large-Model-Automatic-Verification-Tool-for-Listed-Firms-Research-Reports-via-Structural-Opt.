@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000677",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "c2c54899a55b7df45808a974",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 903,
+          "end": 978,
+          "text": "根据海关总署数据，2023-2019年我国初级形状的硝酸纤维素出口量维持在2-2.5万吨之间波动，2024年出口量下降至1.56万吨，同比下降36%。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1407,
+    "total_chars": 1407,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001077,
+  "source_content_sha256": "c322fc2fc68567952c66a30fa2fdfacd2ca404093ec431a52d07f7d5e13adca3"
+}

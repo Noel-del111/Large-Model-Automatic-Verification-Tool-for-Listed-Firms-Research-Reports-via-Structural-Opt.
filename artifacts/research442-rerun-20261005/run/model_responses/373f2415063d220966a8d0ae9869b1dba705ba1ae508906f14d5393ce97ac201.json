@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"新恒汇（301678）：智能卡业务是公司的传统核心业务，主要包括智能卡芯片关键封装材料柔性引线框架产品的研发、生产和销售。智能卡业务是公司的传统核心业务。\"}], \"reason\": \"同一核心业务定位连续重复，后一句未增加新信息。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"公司2022-2024年分别实现营业收入6.84亿元/7.67亿元/8.42/2.36亿元，YOY依次为24.77%/12.13%/9.83%；实现归母净利润1.10亿元/1.52亿元/1.86亿元，YOY依次为9.38%/38.58%/22.07%。\"}], \"reason\": \"2024年营业收入被写成8.42/2.36亿元，同一指标出现两个数值，表述冲突。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"2024年上述两项新业务合计贡献营收2.42亿元、收入占比由2022年的14.70%增至29.84%\"}], \"reason\": \"按文中2024年总营收8.42亿元计算，2.42亿元占比约28.74%，与29.84%不符。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"该业务主要采用一体化的经营模式，自产关键封装材料柔性引线框架用于智能卡模块封装，一方面保证低成本高质量的专用封装材料供应、进而降低产品的交付能力，另一方面也利好智能卡模块封装利润率的提升。\"}], \"reason\": \"保证封装材料供应应提升而非降低产品交付能力，与后文“利好”的判断矛盾。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"同行业上市公司对比：公司专注于智能控制领域；根据业务的相似性，选取康强电子为新恒汇的可比上市公司。\"}], \"reason\": \"新恒汇主营智能卡业务，前文未涉智能控制领域，“智能控制”与公司实际业务不符。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2、公司基于原有业务基础，积极向蚀刻引线框架、物联网eSIM芯片封装等业务领域延伸拓展，拟打造公司业绩新的增长点。公司基于原有业务基础，2019年开拓了蚀刻引线框架业务和物联网eSIM芯片封测业务；\"}], \"reason\": \"“公司基于原有业务基础”在同一句内不必要地重复出现。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:46:36.328592+00:00",
+    "request_sha256": "82804db93d719ce70e9cdf955b3e654c5b0d4491cfd878f7c51e71516250a2b7",
+    "input_token_estimate": 17269,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279413",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f04c51559fa649f491953dd7628d6976",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4042,
+    "output_tokens": 10516,
+    "usage_source": "provider",
+    "duration_seconds": 41.414417,
+    "cost_cny": "0.046106"
+  },
+  "cache_request": {
+    "key": "373f2415063d220966a8d0ae9869b1dba705ba1ae508906f14d5393ce97ac201",
+    "purpose": "text_review.detect",
+    "messages_sha256": "82804db93d719ce70e9cdf955b3e654c5b0d4491cfd878f7c51e71516250a2b7"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"据ifind数据，2025年4月31日-2025年5月30日，WTI原油期货收盘价(连续)下跌2.02%，布伦特油期货价下跌1.74%。\"}],\"reason\":\"2025年4月只有30天，不存在4月31日，该日期非法。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"5月31日，OPEC+达成协议，同意连续第三个月将石油产量提高41.1万升/日，虽然最终就7月份增产达成了共识，但一些成员国持保留意见，其中俄罗斯是建议暂停增产的成员国之一，整体来说，OPEC+持续增产加大了全球原油供应过剩的压力。\"}],\"reason\":\"石油产量通常以桶/日计量，“万升/日”量纲错误，应为“万桶/日”等。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"据百川盈孚，截至5月30日，制冷剂R32和R134a价格较上周五均上跌500元/吨。\"}],\"reason\":\"“上跌”非标准涨跌表述，无法准确表示价格上涨或下跌，行业术语使用错误。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"5月28日，美联储公布联邦公开市场委员会（）5月6日至7日的会议纪要，会议纪要显示，美联储同意将联邦基金利率目标区间维持在4.25%-4.5%之间，与会者一致认为，鉴于经济增长和劳动力市场依然稳健，委员会完全有能力等待通胀和经济活动前景更加明朗。\"}],\"reason\":\"“联邦公开市场委员会”后的括号内为空，缺少机构缩写或名称等必要属性值。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:03:58.152934+00:00",
+    "request_sha256": "6e45a96f61406ad0ff1dea4923253af4dc6762d5c925ddbe940edec9447387af",
+    "input_token_estimate": 17210,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279354",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "2714f5bad348414dbb588f698995c017",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4019,
+    "output_tokens": 8247,
+    "usage_source": "provider",
+    "duration_seconds": 31.050067,
+    "cost_cny": "0.037007"
+  },
+  "cache_request": {
+    "key": "eb606cec8f91199037c0aed61d62aebd0c9bbcf23bd816c8050ee72b60a38978",
+    "purpose": "text_review.detect",
+    "messages_sha256": "6e45a96f61406ad0ff1dea4923253af4dc6762d5c925ddbe940edec9447387af"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"我们预计2027-2025年水星家纺记忆枕销售额有望从1.14亿元大幅提升至6.44亿元。\"}], \"reason\": \"时间区间写成2027-2025年，起点晚于终点，区间不成立。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2）研发+营销同步发力，积极拥抱行业新机遇。\"}, {\"text\": \"4）研发+营销同步发力，积极拥抱行业新机遇。\"}], \"reason\": \"同一表述“研发+营销同步发力，积极拥抱行业新机遇”在相邻段落中完全重复。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"2024年国内家纺市场规模亿元，据我们估算前三大品牌水星家纺/罗莱生活/富安娜市占率分别约为1.3%/1.1%/0.9%，行业集中度较低，但龙头市占率呈小幅提升趋势。\"}], \"reason\": \"“市场规模亿元”前缺少具体数值，无法得知2024年国内家纺市场规模。\"}, {\"error_type\": \"语义逻辑矛盾\", \"spans\": [{\"text\": \"我们将2025/2026年公司归母净利润预测值从3.86/4.26亿元分别下调至3.99/4.48亿元，增加2027年预测值4.97亿元，对应2025-2027年PE分别为12/11/10X，维持“买入”评级。\"}], \"reason\": \"预测值从3.86/4.26亿元变为3.99/4.48亿元是上调，却表述为“下调”，前后矛盾。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:48:22.677400+00:00",
+    "request_sha256": "c720bd0fce99b23f5273b39675c06a340dbb4cc339b9214031083477a35ee954",
+    "input_token_estimate": 16802,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278946",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "a7ed59695ade4f2b9905a42caf927bfc",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3905,
+    "output_tokens": 5900,
+    "usage_source": "provider",
+    "duration_seconds": 23.605264,
+    "cost_cny": "0.027505"
+  },
+  "cache_request": {
+    "key": "cc868ddc86b6aa855a3e048fc04347f37e3a61a855467bdc344cb96c4784618d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c720bd0fce99b23f5273b39675c06a340dbb4cc339b9214031083477a35ee954"
+  }
+}

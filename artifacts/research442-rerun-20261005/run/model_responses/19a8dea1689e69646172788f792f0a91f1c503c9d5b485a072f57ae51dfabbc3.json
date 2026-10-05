@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。\",\"start\":71,\"end\":149},{\"text\":\"公司主要为锂电电动工具、消费电子领域提供有效的电源管理和动力驱动方面的系统解决方案，主要产品包括智能开关、智能控制器、无刷电机、精密结构件等关键功能零部件。\",\"start\":149,\"end\":227}],\"reason\":\"同一公司业务与产品描述连续出现两次，内容完全重复，无新增信息。\"},{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"根据公司管理层初步预测，公司2025年6-1月营业收入较上年同期增长22.27%至29.68%，归母净利润较上年同期增长13.92%至19.28%。\"}],\"reason\":\"“2025年6-1月”起点6月晚于终点1月，月份区间不成立。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。\"}],\"reason\":\"归母净利润三年对应四个YOY；且1.01→1.21约19.80%、1.21→1.54约27.27%，与20.61%、26.38%不符。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:37:02.639347+00:00",
+    "request_sha256": "1c317e39e8fd743d1ed791b664e7fa681d66153542591d818829fe6206fb85ca",
+    "input_token_estimate": 17641,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279785",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9ab0a63627cd41cf9dfd32effef6e01f",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4073,
+    "output_tokens": 12849,
+    "usage_source": "provider",
+    "duration_seconds": 51.591463,
+    "cost_cny": "0.055469"
+  },
+  "cache_request": {
+    "key": "19a8dea1689e69646172788f792f0a91f1c503c9d5b485a072f57ae51dfabbc3",
+    "purpose": "text_review.detect",
+    "messages_sha256": "1c317e39e8fd743d1ed791b664e7fa681d66153542591d818829fe6206fb85ca"
+  }
+}

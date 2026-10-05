@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"大消费板块重仓持股市值占比有所下降，重仓持股市值占重仓持股总市值的比例为18.81亿分（环比-0.33pcts），超配比例回落，为5.83%（环比-0.13pcts）。\"}],\"reason\":\"重仓持股市值占比应以百分比表示，“18.81亿分”不是合理单位，疑为“%”误写。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"其中，食品饮料行业重仓比例环比，在全部一级行业中上升至第二名；\"}],\"reason\":\"“食品饮料行业重仓比例环比”后缺少具体的环比变化数值，无法核验其升降幅度。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"全市场个股持仓TOP20中大消费板块占据4个席位，增加1个席位，大消费板块中食品饮料个股重仓比例分化明显。\"},{\"text\":\"2025Q1全市场基金重仓比例TOP20个股中大消费板块占据5个席位，其中食品饮料占据3席（贵州茅台、五粮液、山西汾酒），家用电器占据1席（美的集团）。\"}],\"reason\":\"同一报告对全市场TOP20中大消费板块席位数量，前文称4个，后文称5个，存在冲突。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:07:18.125127+00:00",
+    "request_sha256": "aaa74da9a4f911cf61c700bc151fecea209d116a62e97e23b587a0a52e387ea3",
+    "input_token_estimate": 17994,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.280138",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9674408bd4a1481eabcc9959e4493923",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4162,
+    "output_tokens": 6973,
+    "usage_source": "provider",
+    "duration_seconds": 25.23366,
+    "cost_cny": "0.032054"
+  },
+  "cache_request": {
+    "key": "379da95056c0861ce409d2aa0c1dc6b4e2023e8814c331c14a287a153a2caf3c",
+    "purpose": "text_review.detect",
+    "messages_sha256": "aaa74da9a4f911cf61c700bc151fecea209d116a62e97e23b587a0a52e387ea3"
+  }
+}

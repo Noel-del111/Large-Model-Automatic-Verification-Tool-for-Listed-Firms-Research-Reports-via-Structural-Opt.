@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000596",
+  "scene": "行业研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "02b84488bea3c29d6b23bd61",
+      "error_type": "数值不一致错误",
+      "spans": [
+        {
+          "start": 447,
+          "end": 553,
+          "text": "博彩板块本周表现较好，金沙中国和银河娱乐分别上涨4.2%和6.4%，主要因为5月博彩毛收入为212亿分，同比增长5%，环比增长12.3%，是今年以来最高的堵收，也创下疫情以来的新高，恢复至19年同期的81.7%。"
+        }
+      ],
+      "reason": "研报中列举对象数与数值个数不一致：对象 2 个、数值 5 个，需人工核对。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.001"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1351,
+    "total_chars": 1351,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.001086,
+  "source_content_sha256": "cdfe816a350520a49eae07ff10d96135d08e2e16c87d2b4e98371c058762f83e"
+}

@@ -1,0 +1,459 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000479",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "2025年5月没有32日，日期本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 45,
+          "end": 115,
+          "text": "事件：2025年5月32日，公司公告全资子公司诺和晟泰自主研发的STC007注射液治疗腹部手术后的中、重度疼痛的II期临床试验达成预期目标。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "事件：2025年5月32日，公司公告全资子公司诺和晟泰自主研发的STC007注射液治疗腹部手术后的中、重度疼痛的II期临床试验达成预期目标。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 45,
+          "end": 115,
+          "text": "事件：2025年5月32日，公司公告全资子公司诺和晟泰自主研发的STC007注射液治疗腹部手术后的中、重度疼痛的II期临床试验达成预期目标。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5e9f50a86e4b4cd918c9ac1b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "最小二乘均值差值列出两个数值后，第三个数值位置为空，直接接右括号。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 363,
+          "end": 447,
+          "text": "与安慰剂组相比，STC007注射液能够有效改善腹部术后疼痛中度至重度受试者的术后0-24小时的静息和运动状态下的疼痛评分（最小二乘均值差值分别为5.16、5.64、），"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "与安慰剂组相比，STC007注射液能够有效改善腹部术后疼痛中度至重度受试者的术后0-24小时的静息和运动状态下的疼痛评分（最小二乘均值差值分别为5.16、5.64、），"
+        }
+      ],
+      "spans": [
+        {
+          "start": 363,
+          "end": 447,
+          "text": "与安慰剂组相比，STC007注射液能够有效改善腹部术后疼痛中度至重度受试者的术后0-24小时的静息和运动状态下的疼痛评分（最小二乘均值差值分别为5.16、5.64、），"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3872d6f086fa78ec9bf08062",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“抗镇痛潜力”含义与镇痛作用相反，应为“镇痛潜力”或“抗痛潜力”。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 926,
+          "end": 1018,
+          "text": "κ阿片受体（简称KOR）不同于传统的μ阿片受体（简称MOR），是极具抗镇痛潜力的靶点，可以在不进入中枢的情况下，在外周神经系统发挥镇痛作用，不会导致呼吸抑制和便秘，且无明显成瘾性风险。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "κ阿片受体（简称KOR）不同于传统的μ阿片受体（简称MOR），是极具抗镇痛潜力的靶点，可以在不进入中枢的情况下，在外周神经系统发挥镇痛作用，不会导致呼吸抑制和便秘，且无明显成瘾性风险。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 926,
+          "end": 1018,
+          "text": "κ阿片受体（简称KOR）不同于传统的μ阿片受体（简称MOR），是极具抗镇痛潜力的靶点，可以在不进入中枢的情况下，在外周神经系统发挥镇痛作用，不会导致呼吸抑制和便秘，且无明显成瘾性风险。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d355b29977394bd62cc619be",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "STC007各发生率均低于20.5%和25.6%，却表述为“高于”盐酸曲马多组，数值与比较方向矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 701,
+          "end": 826,
+          "text": "呕吐和恶心是研究期间最常见的不良反应，STC007低剂量组发生率为10.0%和7.5%，高剂量组发生率为10.3%和5.1%，高于盐酸曲马多注射液50mg组的20.5%和25.6%，低于安慰剂组的15.0%和12.5%，在同靶点药物中也处于较低水平。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "呕吐和恶心是研究期间最常见的不良反应，STC007低剂量组发生率为10.0%和7.5%，高剂量组发生率为10.3%和5.1%，高于盐酸曲马多注射液50mg组的20.5%和25.6%，低于安慰剂组的15.0%和12.5%，在同靶点药物中也处于较低水平。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 701,
+          "end": 826,
+          "text": "呕吐和恶心是研究期间最常见的不良反应，STC007低剂量组发生率为10.0%和7.5%，高剂量组发生率为10.3%和5.1%，高于盐酸曲马多注射液50mg组的20.5%和25.6%，低于安慰剂组的15.0%和12.5%，在同靶点药物中也处于较低水平。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "2a7b3f858ce11db8bcb94b41",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          2038
+        ]
+      ],
+      "estimated_input_tokens": 6552,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:15:05.438850+00:00",
+        "request_sha256": "4f92556206d4c94a3cb19124ad8af0459a6c725f895e17afac4a20df16f5111b",
+        "input_token_estimate": 18239,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.280383",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "5de160d0bcac4d2f820aee5634765398",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4278,
+        "output_tokens": 6272,
+        "usage_source": "provider",
+        "duration_seconds": 25.440705,
+        "cost_cny": "0.029366"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "事件：2025年5月32日，公司公告全资子公司诺和晟泰自主研发的STC007注射液治疗腹部手术后的中、重度疼痛的II期临床试验达成预期目标。"
+          }
+        ],
+        "reason": "2025年5月没有32日，日期本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "与安慰剂组相比，STC007注射液能够有效改善腹部术后疼痛中度至重度受试者的术后0-24小时的静息和运动状态下的疼痛评分（最小二乘均值差值分别为5.16、5.64、），"
+          }
+        ],
+        "reason": "最小二乘均值差值列出两个数值后，第三个数值位置为空，直接接右括号。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "κ阿片受体（简称KOR）不同于传统的μ阿片受体（简称MOR），是极具抗镇痛潜力的靶点，可以在不进入中枢的情况下，在外周神经系统发挥镇痛作用，不会导致呼吸抑制和便秘，且无明显成瘾性风险。"
+          }
+        ],
+        "reason": "“抗镇痛潜力”含义与镇痛作用相反，应为“镇痛潜力”或“抗痛潜力”。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "呕吐和恶心是研究期间最常见的不良反应，STC007低剂量组发生率为10.0%和7.5%，高剂量组发生率为10.3%和5.1%，高于盐酸曲马多注射液50mg组的20.5%和25.6%，低于安慰剂组的15.0%和12.5%，在同靶点药物中也处于较低水平。"
+          }
+        ],
+        "reason": "STC007各发生率均低于20.5%和25.6%，却表述为“高于”盐酸曲马多组，数值与比较方向矛盾。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营业收入",
+      "start": 1858,
+      "end": 1997,
+      "text": "盈利预测：我们预计公司2025-2027年营业收入分别为12.89亿元、15.12亿元、17.79亿元，归母净利润分别为2.04亿元、2.46亿元、3.00亿元，EPS（摊薄）分别为1.82元、2.20元、2.68元，对应PE估值分别为31.88倍、26.36倍、21.63倍。",
+      "quantities": [
+        {
+          "value": "12.89",
+          "unit": "亿元",
+          "start": 1886,
+          "end": 1893
+        },
+        {
+          "value": "15.12",
+          "unit": "亿元",
+          "start": 1894,
+          "end": 1901
+        },
+        {
+          "value": "17.79",
+          "unit": "亿元",
+          "start": 1902,
+          "end": 1909
+        },
+        {
+          "value": "2.04",
+          "unit": "亿元",
+          "start": 1918,
+          "end": 1924
+        },
+        {
+          "value": "2.46",
+          "unit": "亿元",
+          "start": 1925,
+          "end": 1931
+        },
+        {
+          "value": "3.00",
+          "unit": "亿元",
+          "start": 1932,
+          "end": 1938
+        },
+        {
+          "value": "1.82",
+          "unit": "元",
+          "start": 1949,
+          "end": 1954
+        },
+        {
+          "value": "2.20",
+          "unit": "元",
+          "start": 1955,
+          "end": 1960
+        },
+        {
+          "value": "2.68",
+          "unit": "元",
+          "start": 1961,
+          "end": 1966
+        },
+        {
+          "value": "31.88",
+          "unit": "倍",
+          "start": 1976,
+          "end": 1982
+        },
+        {
+          "value": "26.36",
+          "unit": "倍",
+          "start": 1983,
+          "end": 1989
+        },
+        {
+          "value": "21.63",
+          "unit": "倍",
+          "start": 1990,
+          "end": 1996
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 1858,
+      "end": 1997,
+      "text": "盈利预测：我们预计公司2025-2027年营业收入分别为12.89亿元、15.12亿元、17.79亿元，归母净利润分别为2.04亿元、2.46亿元、3.00亿元，EPS（摊薄）分别为1.82元、2.20元、2.68元，对应PE估值分别为31.88倍、26.36倍、21.63倍。",
+      "quantities": [
+        {
+          "value": "12.89",
+          "unit": "亿元",
+          "start": 1886,
+          "end": 1893
+        },
+        {
+          "value": "15.12",
+          "unit": "亿元",
+          "start": 1894,
+          "end": 1901
+        },
+        {
+          "value": "17.79",
+          "unit": "亿元",
+          "start": 1902,
+          "end": 1909
+        },
+        {
+          "value": "2.04",
+          "unit": "亿元",
+          "start": 1918,
+          "end": 1924
+        },
+        {
+          "value": "2.46",
+          "unit": "亿元",
+          "start": 1925,
+          "end": 1931
+        },
+        {
+          "value": "3.00",
+          "unit": "亿元",
+          "start": 1932,
+          "end": 1938
+        },
+        {
+          "value": "1.82",
+          "unit": "元",
+          "start": 1949,
+          "end": 1954
+        },
+        {
+          "value": "2.20",
+          "unit": "元",
+          "start": 1955,
+          "end": 1960
+        },
+        {
+          "value": "2.68",
+          "unit": "元",
+          "start": 1961,
+          "end": 1966
+        },
+        {
+          "value": "31.88",
+          "unit": "倍",
+          "start": 1976,
+          "end": 1982
+        },
+        {
+          "value": "26.36",
+          "unit": "倍",
+          "start": 1983,
+          "end": 1989
+        },
+        {
+          "value": "21.63",
+          "unit": "倍",
+          "start": 1990,
+          "end": 1996
+        }
+      ],
+      "periods": [
+        "2027年"
+      ],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 2038,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 2038,
+    "processed_ranges": [
+      [
+        0,
+        2038
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 2,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 25.46575,
+  "source_content_sha256": "0b31138b9b269a108f0d5ccb957dd136e24b14bd412df7c91ad38ad94c7f5e5a"
+}

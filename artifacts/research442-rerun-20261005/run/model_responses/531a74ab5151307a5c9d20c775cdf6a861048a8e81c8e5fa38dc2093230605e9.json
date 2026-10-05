@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"金融要素缺失\", \"spans\": [{\"text\": \"2025年一季度公司实现营收15.56亿元，同比增长14.44%，，同比增长33.52%。\"}], \"reason\": \"2025年一季报只列出营收及增速，未指明后续增长33.52%对应归母净利润指标，缺少必需组成信息。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"期间费用管控良好，2024年销售/管理/研发/财务费用率分别为%/3.9%/2.7%/-0.6%，分别同比-0.3/+0.5/0.7/+0.1pcts。\"}], \"reason\": \"销售费用率处仅写“%”，数值空缺。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"内销收入23.8亿元，同比-2.7%，占营收比重约38%；外销收入38.1亿元，同比+26.0%，占营收比重约80%。\"}], \"reason\": \"内销占比约38%与外销占比约80%合计超100%，且与总营收62.38亿元及内外销金额不符。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"实现了大口径盘阀、偏心C型球、金底阀、镇基合金、大口径水下球阀等21个典型项目的研发与制造，市场竞争力持续增强\"}], \"reason\": \"工业阀门材料术语应为“镍基合金”，“镇基合金”系行业术语误用。\"}, {\"error_type\": \"术语误用\", \"spans\": [{\"text\": \"2024年主营业务毛利率38.3%，同比+6.9cpts，其中内销毛利率32.8%，同比+2.0pcts，外销毛利率41.7%，同比+10.0pcts。\"}], \"reason\": \"同比增幅单位应为“pcts”，“cpts”不是标准金融术语单位。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:48:41.070147+00:00",
+    "request_sha256": "ed5015fbadb21bf69cbf4a774372cf847c7c70512d642a0b4e007324d22d4c47",
+    "input_token_estimate": 15516,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.27766",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "89de099375e14e2199de154eee7b94ef",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3703,
+    "output_tokens": 7944,
+    "usage_source": "provider",
+    "duration_seconds": 31.882631,
+    "cost_cny": "0.035479"
+  },
+  "cache_request": {
+    "key": "531a74ab5151307a5c9d20c775cdf6a861048a8e81c8e5fa38dc2093230605e9",
+    "purpose": "text_review.detect",
+    "messages_sha256": "ed5015fbadb21bf69cbf4a774372cf847c7c70512d642a0b4e007324d22d4c47"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间信息非法\",\"spans\":[{\"text\":\"中共中央政治局4月31日召开会议，分析研究当前经济形势和经济工作。\"}],\"reason\":\"4月没有31日，该日期不成立。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2025年一季度，中国GDP现价当季值为318758亿人民币元，按不变价格计算，当季同比增长%，我国经济保持稳健增长态势。\"}],\"reason\":\"“同比增长%”中百分号前缺少具体增速数值。\"},{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"双方签署《》，同意在2025年5月14日前互相暂停24%的加征关税90天，保留10%关税，并取消部分此前加征的关税及非关税反制措施，同时建立后续协商机制。\"}],\"reason\":\"书名号内协议名称空缺，签署文件名称缺失。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"其中，2025年4月份，制造业生产指数为49.8%，较上月下降2.8个百分点，制造业景气水平显著回升。\"}],\"reason\":\"生产指数低于50%且较上月下降，不能同时称景气水平显著回升。\"},{\"error_type\":\"术语误用\",\"spans\":[{\"text\":\"2025年2月，欧盟发布对中国生柴反倾销的肯定性仲裁，决定征收10%-35.6%的反倾销税。\"}],\"reason\":\"反倾销程序应称“终裁”或“裁定”，不宜称为“仲裁”。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:23:54.841076+00:00",
+    "request_sha256": "58e886544e85b9631d5a0f613768bdf754206abd9f6ec25f7599ae7cbae70879",
+    "input_token_estimate": 18918,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.281062",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "9da3ababaaf84ac5ae6b338d87b21143",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4361,
+    "output_tokens": 13923,
+    "usage_source": "provider",
+    "duration_seconds": 52.724199,
+    "cost_cny": "0.060053"
+  },
+  "cache_request": {
+    "key": "21f94f3102a7158ccba0975eedaa553360f93824c98071fd6cef440cb2345016",
+    "purpose": "text_review.detect",
+    "messages_sha256": "58e886544e85b9631d5a0f613768bdf754206abd9f6ec25f7599ae7cbae70879"
+  }
+}

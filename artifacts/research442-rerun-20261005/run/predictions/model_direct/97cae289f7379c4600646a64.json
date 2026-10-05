@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000671",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "月份“13月”不存在，属于日期时间本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 430,
+          "end": 461,
+          "text": "5月30日，中国人民银行发布2025年13月金融市场运行数据。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月30日，中国人民银行发布2025年13月金融市场运行数据。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 430,
+          "end": 461,
+          "text": "5月30日，中国人民银行发布2025年13月金融市场运行数据。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0c19c2d3053b6bcb10f7af0c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“共个部分”前缺少具体数字，文件部分数量未给出。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 757,
+          "end": 944,
+          "text": "文件共个部分、19条具体举措，从坚持和加强党的领导、完善公司治理结构、提升企业科学管理水平、健全企业激励创新制度、建立健全企业社会责任与企业文化体系、优化企业综合监管和服务体系等方面作出全面系统部署特别强调立足发展新质生产力，提升创新链产业链水平，打造开放协同高效的创新生态，专设“健全企业激励创新制度”一章，从创新组织形式、要素配置效率、激励机制设计等三方面提出具体举措。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "文件共个部分、19条具体举措，从坚持和加强党的领导、完善公司治理结构、提升企业科学管理水平、健全企业激励创新制度、建立健全企业社会责任与企业文化体系、优化企业综合监管和服务体系等方面作出全面系统部署特别强调立足发展新质生产力，提升创新链产业链水平，打造开放协同高效的创新生态，专设“健全企业激励创新制度”一章，从创新组织形式、要素配置效率、激励机制设计等三方面提出具体举措。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 757,
+          "end": 944,
+          "text": "文件共个部分、19条具体举措，从坚持和加强党的领导、完善公司治理结构、提升企业科学管理水平、健全企业激励创新制度、建立健全企业社会责任与企业文化体系、优化企业综合监管和服务体系等方面作出全面系统部署特别强调立足发展新质生产力，提升创新链产业链水平，打造开放协同高效的创新生态，专设“健全企业激励创新制度”一章，从创新组织形式、要素配置效率、激励机制设计等三方面提出具体举措。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cc175601b8d2c7c0100da0f2",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "前文已说明该章从创新组织形式、要素配置效率、激励机制设计三方面提出举措，此处再次重复同一组三方面。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 944,
+          "end": 989,
+          "text": "此外，该章节同样围绕创新组织形式、要素配置效率以及激励机制设计三个核心维度制定了实施路径。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "此外，该章节同样围绕创新组织形式、要素配置效率以及激励机制设计三个核心维度制定了实施路径。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 944,
+          "end": 989,
+          "text": "此外，该章节同样围绕创新组织形式、要素配置效率以及激励机制设计三个核心维度制定了实施路径。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c8883aa85caf567a9258d397",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1071
+        ]
+      ],
+      "estimated_input_tokens": 5689,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:55:15.932003+00:00",
+        "request_sha256": "c6047484dade31edc88de3c2dae18b4b6993ecd3fb7ad7670c07a569de4268d6",
+        "input_token_estimate": 15802,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277946",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "1f32c6809bdd4c5b88c94433d3e10c7a",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3625,
+        "output_tokens": 8050,
+        "usage_source": "provider",
+        "duration_seconds": 33.409596,
+        "cost_cny": "0.035825"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "5月30日，中国人民银行发布2025年13月金融市场运行数据。"
+          }
+        ],
+        "reason": "月份“13月”不存在，属于日期时间本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "文件共个部分、19条具体举措，从坚持和加强党的领导、完善公司治理结构、提升企业科学管理水平、健全企业激励创新制度、建立健全企业社会责任与企业文化体系、优化企业综合监管和服务体系等方面作出全面系统部署特别强调立足发展新质生产力，提升创新链产业链水平，打造开放协同高效的创新生态，专设“健全企业激励创新制度”一章，从创新组织形式、要素配置效率、激励机制设计等三方面提出具体举措。"
+          }
+        ],
+        "reason": "“共个部分”前缺少具体数字，文件部分数量未给出。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "此外，该章节同样围绕创新组织形式、要素配置效率以及激励机制设计三个核心维度制定了实施路径。"
+          }
+        ],
+        "reason": "前文已说明该章从创新组织形式、要素配置效率、激励机制设计三方面提出举措，此处再次重复同一组三方面。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1071,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1071,
+    "processed_ranges": [
+      [
+        0,
+        1071
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 33.448429,
+  "source_content_sha256": "1ce72c1691677c510f780d295f093130be3fbc6416d61adfcb97c0ba7b0f68a0"
+}

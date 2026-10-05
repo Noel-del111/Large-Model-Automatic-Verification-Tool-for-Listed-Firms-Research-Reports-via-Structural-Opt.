@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000593",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "“2024－2022年末”起始年份晚于终止年份，该期间本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 308,
+          "end": 422,
+          "text": "根据国家统计局数据，近年来我国工业企业应收账款总额保持较快速度增长，2024－2022年末分别为21.65万亿元、23.72万亿元26.06万亿元，年复合增长率为9.71%，应收票据及应收账款的增长与保理业务的快速发展呈同向性；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据国家统计局数据，近年来我国工业企业应收账款总额保持较快速度增长，2024－2022年末分别为21.65万亿元、23.72万亿元26.06万亿元，年复合增长率为9.71%，应收票据及应收账款的增长与保理业务的快速发展呈同向性；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 308,
+          "end": 422,
+          "text": "根据国家统计局数据，近年来我国工业企业应收账款总额保持较快速度增长，2024－2022年末分别为21.65万亿元、23.72万亿元26.06万亿元，年复合增长率为9.71%，应收票据及应收账款的增长与保理业务的快速发展呈同向性；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b583bb0326c0245e0130b81f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "商业保理年业务量通常以万亿元或亿元计量，3万美元单位明显错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 736,
+          "end": 757,
+          "text": "2024年，商业保理年业务量已超3万美元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，商业保理年业务量已超3万美元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 736,
+          "end": 757,
+          "text": "2024年，商业保理年业务量已超3万美元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4740e24453f15d5cae5867e6",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "法人企业5420家加分公司151家合计5571家，与总数5467家不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 757,
+          "end": 825,
+          "text": "截至2023年末，存续的商业保理企业达到5467家（其中法人企业5420家、分公司151家），较去年同期的6716家减少了18.60%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至2023年末，存续的商业保理企业达到5467家（其中法人企业5420家、分公司151家），较去年同期的6716家减少了18.60%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 757,
+          "end": 825,
+          "text": "截至2023年末，存续的商业保理企业达到5467家（其中法人企业5420家、分公司151家），较去年同期的6716家减少了18.60%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "78bf3a801fbba0d8b1d6104e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "574817笔较425583笔实际增长约35.07%，并非55.07%。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 896,
+          "end": 981,
+          "text": "应收账款登记笔数为574817笔，较上年同期（425583笔）增长55.07%，占银行、商业保理公司、融资租赁公司三类机构全年登记总量（2234950笔）的25.72%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "应收账款登记笔数为574817笔，较上年同期（425583笔）增长55.07%，占银行、商业保理公司、融资租赁公司三类机构全年登记总量（2234950笔）的25.72%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 896,
+          "end": 981,
+          "text": "应收账款登记笔数为574817笔，较上年同期（425583笔）增长55.07%，占银行、商业保理公司、融资租赁公司三类机构全年登记总量（2234950笔）的25.72%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a8a5569655c9755984bf68e5",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          981
+        ]
+      ],
+      "estimated_input_tokens": 5550,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:47:25.033612+00:00",
+        "request_sha256": "252dfa5cba625442773abcc5aef0caf7018165f95bf7356dc347f00adf125a23",
+        "input_token_estimate": 15443,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277587",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "d9d2da7eb7124fc8ba8dd6f6ed8f13f8",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3606,
+        "output_tokens": 5913,
+        "usage_source": "provider",
+        "duration_seconds": 23.505934,
+        "cost_cny": "0.027258"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据国家统计局数据，近年来我国工业企业应收账款总额保持较快速度增长，2024－2022年末分别为21.65万亿元、23.72万亿元26.06万亿元，年复合增长率为9.71%，应收票据及应收账款的增长与保理业务的快速发展呈同向性；"
+          }
+        ],
+        "reason": "“2024－2022年末”起始年份晚于终止年份，该期间本身不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2024年，商业保理年业务量已超3万美元。"
+          }
+        ],
+        "reason": "商业保理年业务量通常以万亿元或亿元计量，3万美元单位明显错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "截至2023年末，存续的商业保理企业达到5467家（其中法人企业5420家、分公司151家），较去年同期的6716家减少了18.60%。"
+          }
+        ],
+        "reason": "法人企业5420家加分公司151家合计5571家，与总数5467家不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "应收账款登记笔数为574817笔，较上年同期（425583笔）增长55.07%，占银行、商业保理公司、融资租赁公司三类机构全年登记总量（2234950笔）的25.72%。"
+          }
+        ],
+        "reason": "574817笔较425583笔实际增长约35.07%，并非55.07%。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 981,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 981,
+    "processed_ranges": [
+      [
+        0,
+        981
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 23.527776,
+  "source_content_sha256": "9e44f2c4e4b81c9bbdeeb4e4d7a814f146a2f267da2b78ae133418559e61fad4"
+}

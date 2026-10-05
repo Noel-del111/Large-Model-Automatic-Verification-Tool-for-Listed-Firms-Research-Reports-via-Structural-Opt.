@@ -1,0 +1,240 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000591",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间矛盾",
+      "reason": "周行情区间起点5月30日晚于终点5月26日，起止时间倒置。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 54,
+          "end": 101,
+          "text": "回顾本周行情（5月30日-5月26日），有色板块本周下跌2.40%，在全部一级行业中排名靠后。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "回顾本周行情（5月30日-5月26日），有色板块本周下跌2.40%，在全部一级行业中排名靠后。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 54,
+          "end": 101,
+          "text": "回顾本周行情（5月30日-5月26日），有色板块本周下跌2.40%，在全部一级行业中排名靠后。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "717e133035d599788b24b022",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "伦铜、沪铜价格及周环比数据连续重复出现，其中第一次沪铜数据后直接句号。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 338,
+          "end": 444,
+          "text": "截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，。截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，周环比下跌0.24%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，。截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，周环比下跌0.24%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 338,
+          "end": 444,
+          "text": "截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，。截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，周环比下跌0.24%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "88f508695989b17d41b3fb4a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "LME铝为伦敦金属交易所报价，通常以美元/吨计价，此处单位误作元/吨。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 752,
+          "end": 813,
+          "text": "截至5月30日，本周LME铝报收2,449元/吨，较上周下跌0.71%；沪铝报收20,070元/吨，较上周下跌0.42%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "截至5月30日，本周LME铝报收2,449元/吨，较上周下跌0.71%；沪铝报收20,070元/吨，较上周下跌0.42%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 752,
+          "end": 813,
+          "text": "截至5月30日，本周LME铝报收2,449元/吨，较上周下跌0.71%；沪铝报收20,070元/吨，较上周下跌0.42%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e13d4fee0894d371e69e73ac",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1518
+        ]
+      ],
+      "estimated_input_tokens": 6071,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:45:41.710639+00:00",
+        "request_sha256": "de41be9fd33ed4b8051ff5e7e78412f78c9d91884867d33fd968958ac3524735",
+        "input_token_estimate": 16881,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279025",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "8f79e8ed182f4103a9c64f9ad1129d03",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4006,
+        "output_tokens": 6141,
+        "usage_source": "provider",
+        "duration_seconds": 24.103809,
+        "cost_cny": "0.02857"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "回顾本周行情（5月30日-5月26日），有色板块本周下跌2.40%，在全部一级行业中排名靠后。"
+          }
+        ],
+        "reason": "周行情区间起点5月30日晚于终点5月26日，起止时间倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，。截至5月30日，伦铜报收9,497美元/吨，周环比下跌1.22%；沪铜报收77,600元/吨，周环比下跌0.24%。"
+          }
+        ],
+        "reason": "伦铜、沪铜价格及周环比数据连续重复出现，其中第一次沪铜数据后直接句号。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "截至5月30日，本周LME铝报收2,449元/吨，较上周下跌0.71%；沪铝报收20,070元/吨，较上周下跌0.42%。"
+          }
+        ],
+        "reason": "LME铝为伦敦金属交易所报价，通常以美元/吨计价，此处单位误作元/吨。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1518,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1518,
+    "processed_ranges": [
+      [
+        0,
+        1518
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 24.127858,
+  "source_content_sha256": "9d45a119bdf7aa1d8b7d1b0793173d907543d08aacaf54e56b28675234bc49b7"
+}

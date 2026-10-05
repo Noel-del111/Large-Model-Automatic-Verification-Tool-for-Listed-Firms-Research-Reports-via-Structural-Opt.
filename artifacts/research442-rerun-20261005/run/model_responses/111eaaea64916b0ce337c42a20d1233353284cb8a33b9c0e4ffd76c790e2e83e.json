@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年，公司的泰胜昌吉基地落成并投产，该基地为中高端塔筒产品而规划建设，以“”大直径塔筒为主，兼顾中亚海外市场，设计产能为万吨。\"}],\"reason\":\"设计产能数值空缺，仅有单位“万吨”，无法核验产能。\"},{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"同时，公司积极推进泰胜蓝岛基地技术改造项目、泰胜哈密基地技术改造项目、泰胜上海基地技术改造项目，预计2023年完成。\"}],\"reason\":\"报告期为2024年报及2025年一季报，却预计2023年完成技改，完成时间早于报告期。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"截至2024年末，公司在执行及待执行订单共计49.17亿公顷，同比增长27.97%。\"}],\"reason\":\"订单金额以“公顷”计量，公顷为面积单位，不应作为金额单位。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:29:47.656518+00:00",
+    "request_sha256": "7f7eff85ce758d57fd8dea5396d9a7e6278a9e4cb7edd33e1dda45360d00dbed",
+    "input_token_estimate": 16247,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278391",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "dec97525ecc34c2ca8c033a2ae9f9281",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3840,
+    "output_tokens": 5859,
+    "usage_source": "provider",
+    "duration_seconds": 23.700488,
+    "cost_cny": "0.027276"
+  },
+  "cache_request": {
+    "key": "111eaaea64916b0ce337c42a20d1233353284cb8a33b9c0e4ffd76c790e2e83e",
+    "purpose": "text_review.detect",
+    "messages_sha256": "7f7eff85ce758d57fd8dea5396d9a7e6278a9e4cb7edd33e1dda45360d00dbed"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000450",
+  "scene": "个股研报",
+  "detector": "legacy_rules",
+  "errors": [
+    {
+      "id": "f6b3316c5527984f79843dd8",
+      "error_type": "时间矛盾",
+      "spans": [
+        {
+          "start": 1002,
+          "end": 1112,
+          "text": "\n\n盈利预测与评级： 我们预计公司 2027-2025 年归母净利润分别为 8.12/8.56/8.88 亿元， 同比增速分别为-15.0%/5.4%/3.8%， 当前股价对应的 PE 分别为 13.1/12.4//倍。"
+        }
+      ],
+      "reason": "句中年份顺序倒置（晚于起始年份的表述早于起始年份），需人工核对期间。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "C.INTRINSIC.002"
+    }
+  ],
+  "traces": [],
+  "baseline_archive_sha256": "63b14d19139732a42898a6b479bc4e878c331528149e73b29f687da1a13ac49c",
+  "coverage": {
+    "complete": true,
+    "processed_chars": 1275,
+    "total_chars": 1275,
+    "model_ran": false,
+    "scope": "archived_intrinsic_rules_only"
+  },
+  "wall_seconds": 0.00125,
+  "source_content_sha256": "2fa65598f81a1ddb2a7c7b2cb0dd55675a46e0c5dfec76a17b18c96a03985acb"
+}

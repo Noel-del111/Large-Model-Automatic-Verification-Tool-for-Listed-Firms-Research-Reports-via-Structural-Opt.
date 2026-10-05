@@ -1,0 +1,347 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000684",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "水泥价格通常以元/吨计价，此处“元/千克”与后文元/吨及行业常理不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 160,
+          "end": 221,
+          "text": "本周全国高标水泥市场价格为367.8元/千克，较上周-3.0元/吨，较上周-3.0元/吨，较2024年同期-6.3元/吨。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周全国高标水泥市场价格为367.8元/千克，较上周-3.0元/吨，较上周-3.0元/吨，较2024年同期-6.3元/吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 160,
+          "end": 221,
+          "text": "本周全国高标水泥市场价格为367.8元/千克，较上周-3.0元/吨，较上周-3.0元/吨，较2024年同期-6.3元/吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a3f29c2a1daee312f3087d2d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "同一降幅“较上周-3.0元/吨”连续重复出现，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 160,
+          "end": 221,
+          "text": "本周全国高标水泥市场价格为367.8元/千克，较上周-3.0元/吨，较上周-3.0元/吨，较2024年同期-6.3元/吨。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周全国高标水泥市场价格为367.8元/千克，较上周-3.0元/吨，较上周-3.0元/吨，较2024年同期-6.3元/吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 160,
+          "end": 221,
+          "text": "本周全国高标水泥市场价格为367.8元/千克，较上周-3.0元/吨，较上周-3.0元/吨，较2024年同期-6.3元/吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "b768f99bb7d86c215450729a",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“较上周”后直接接单位“元/吨”，缺少具体变动数值，无法判断价格变化。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 478,
+          "end": 533,
+          "text": "卓创资讯统计的全国浮法白玻原片平均价格为1271.0元/吨，较上周元/吨，较2024年同期-406.3元/吨。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "卓创资讯统计的全国浮法白玻原片平均价格为1271.0元/吨，较上周元/吨，较2024年同期-406.3元/吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 478,
+          "end": 533,
+          "text": "卓创资讯统计的全国浮法白玻原片平均价格为1271.0元/吨，较上周元/吨，较2024年同期-406.3元/吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "fdc6d5144a65ca0ae7fe1588",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "3696.50元/吨较3712元/吨的跌幅约为0.42%，与原文2.62%不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 692,
+          "end": 765,
+          "text": "全国企业报价均价3696.50元/吨，主流含税送到，较上一周均价（3712）下跌2.62%，同比下跌4.30%，较上周同比降幅扩大0.4个百分点；"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "全国企业报价均价3696.50元/吨，主流含税送到，较上一周均价（3712）下跌2.62%，同比下跌4.30%，较上周同比降幅扩大0.4个百分点；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 692,
+          "end": 765,
+          "text": "全国企业报价均价3696.50元/吨，主流含税送到，较上一周均价（3712）下跌2.62%，同比下跌4.30%，较上周同比降幅扩大0.4个百分点；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "5189b93e2055ea6937b6c891",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "前文称以旧换新/两新政策对家居建材消费拉动效果明显，后文称国补对装修消费几乎没有效果，同一政策效果判断相反。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 2955,
+          "end": 3010,
+          "text": "24年两新政策对家居建材消费拉动效果明显，25年以旧换新政策有望进一步扩大加码，家居建材消费需求有望持续释放。"
+        },
+        {
+          "kind": "source_text",
+          "start": 3148,
+          "end": 3192,
+          "text": "国补对装修消费几乎没有效果，25年各地的政策继续扩大品类范围，龙头企业也有更充分的准备。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "24年两新政策对家居建材消费拉动效果明显，25年以旧换新政策有望进一步扩大加码，家居建材消费需求有望持续释放。"
+        },
+        {
+          "text": "国补对装修消费几乎没有效果，25年各地的政策继续扩大品类范围，龙头企业也有更充分的准备。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 2955,
+          "end": 3010,
+          "text": "24年两新政策对家居建材消费拉动效果明显，25年以旧换新政策有望进一步扩大加码，家居建材消费需求有望持续释放。"
+        },
+        {
+          "start": 3148,
+          "end": 3192,
+          "text": "国补对装修消费几乎没有效果，25年各地的政策继续扩大品类范围，龙头企业也有更充分的准备。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "735e3f37bcb17fb677257414",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          3395
+        ]
+      ],
+      "estimated_input_tokens": 8050,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:43:11.895654+00:00",
+        "request_sha256": "5dca3cf50fa7af0b2a5743443da8d41915d22ec544d48a7e5b82b77674498725",
+        "input_token_estimate": 22310,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.284454",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "6f1f34b9e9ce47a78ce77cd84d63d93c",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 5155,
+        "output_tokens": 7781,
+        "usage_source": "provider",
+        "duration_seconds": 29.133612,
+        "cost_cny": "0.036279",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "本周全国高标水泥市场价格为367.8元/千克，较上周-3.0元/吨，较上周-3.0元/吨，较2024年同期-6.3元/吨。"
+          }
+        ],
+        "reason": "水泥价格通常以元/吨计价，此处“元/千克”与后文元/吨及行业常理不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "本周全国高标水泥市场价格为367.8元/千克，较上周-3.0元/吨，较上周-3.0元/吨，较2024年同期-6.3元/吨。"
+          }
+        ],
+        "reason": "同一降幅“较上周-3.0元/吨”连续重复出现，未增加新信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "卓创资讯统计的全国浮法白玻原片平均价格为1271.0元/吨，较上周元/吨，较2024年同期-406.3元/吨。"
+          }
+        ],
+        "reason": "“较上周”后直接接单位“元/吨”，缺少具体变动数值，无法判断价格变化。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "全国企业报价均价3696.50元/吨，主流含税送到，较上一周均价（3712）下跌2.62%，同比下跌4.30%，较上周同比降幅扩大0.4个百分点；"
+          }
+        ],
+        "reason": "3696.50元/吨较3712元/吨的跌幅约为0.42%，与原文2.62%不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "24年两新政策对家居建材消费拉动效果明显，25年以旧换新政策有望进一步扩大加码，家居建材消费需求有望持续释放。"
+          },
+          {
+            "text": "国补对装修消费几乎没有效果，25年各地的政策继续扩大品类范围，龙头企业也有更充分的准备。"
+          }
+        ],
+        "reason": "前文称以旧换新/两新政策对家居建材消费拉动效果明显，后文称国补对装修消费几乎没有效果，同一政策效果判断相反。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 3395,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 3395,
+    "processed_ranges": [
+      [
+        0,
+        3395
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 3395,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002297,
+  "source_content_sha256": "65cc67731c4122892ff5e745b3a0c95d7df2dddad5f8f74753e4b35ab717ec47"
+}

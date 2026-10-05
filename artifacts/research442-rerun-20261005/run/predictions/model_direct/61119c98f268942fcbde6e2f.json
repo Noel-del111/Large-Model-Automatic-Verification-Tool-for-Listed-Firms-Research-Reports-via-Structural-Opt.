@@ -1,0 +1,284 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000612",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "reason": "2025年4月只有30天，不存在4月31日，该日期非法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 68,
+          "end": 136,
+          "text": "据ifind数据，2025年4月31日-2025年5月30日，WTI原油期货收盘价(连续)下跌2.02%，布伦特油期货价下跌1.74%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据ifind数据，2025年4月31日-2025年5月30日，WTI原油期货收盘价(连续)下跌2.02%，布伦特油期货价下跌1.74%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 68,
+          "end": 136,
+          "text": "据ifind数据，2025年4月31日-2025年5月30日，WTI原油期货收盘价(连续)下跌2.02%，布伦特油期货价下跌1.74%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cf8a3671e9e34353d975df4d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "石油产量通常以桶/日计量，“万升/日”量纲错误，应为“万桶/日”等。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 348,
+          "end": 464,
+          "text": "5月31日，OPEC+达成协议，同意连续第三个月将石油产量提高41.1万升/日，虽然最终就7月份增产达成了共识，但一些成员国持保留意见，其中俄罗斯是建议暂停增产的成员国之一，整体来说，OPEC+持续增产加大了全球原油供应过剩的压力。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月31日，OPEC+达成协议，同意连续第三个月将石油产量提高41.1万升/日，虽然最终就7月份增产达成了共识，但一些成员国持保留意见，其中俄罗斯是建议暂停增产的成员国之一，整体来说，OPEC+持续增产加大了全球原油供应过剩的压力。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 348,
+          "end": 464,
+          "text": "5月31日，OPEC+达成协议，同意连续第三个月将石油产量提高41.1万升/日，虽然最终就7月份增产达成了共识，但一些成员国持保留意见，其中俄罗斯是建议暂停增产的成员国之一，整体来说，OPEC+持续增产加大了全球原油供应过剩的压力。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "d4fc9871b0eca7464169488e",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "“上跌”非标准涨跌表述，无法准确表示价格上涨或下跌，行业术语使用错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 626,
+          "end": 668,
+          "text": "据百川盈孚，截至5月30日，制冷剂R32和R134a价格较上周五均上跌500元/吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据百川盈孚，截至5月30日，制冷剂R32和R134a价格较上周五均上跌500元/吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 626,
+          "end": 668,
+          "text": "据百川盈孚，截至5月30日，制冷剂R32和R134a价格较上周五均上跌500元/吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "149151562c6f004d12c7e7b3",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "“联邦公开市场委员会”后的括号内为空，缺少机构缩写或名称等必要属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 471,
+          "end": 594,
+          "text": "5月28日，美联储公布联邦公开市场委员会（）5月6日至7日的会议纪要，会议纪要显示，美联储同意将联邦基金利率目标区间维持在4.25%-4.5%之间，与会者一致认为，鉴于经济增长和劳动力市场依然稳健，委员会完全有能力等待通胀和经济活动前景更加明朗。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月28日，美联储公布联邦公开市场委员会（）5月6日至7日的会议纪要，会议纪要显示，美联储同意将联邦基金利率目标区间维持在4.25%-4.5%之间，与会者一致认为，鉴于经济增长和劳动力市场依然稳健，委员会完全有能力等待通胀和经济活动前景更加明朗。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 471,
+          "end": 594,
+          "text": "5月28日，美联储公布联邦公开市场委员会（）5月6日至7日的会议纪要，会议纪要显示，美联储同意将联邦基金利率目标区间维持在4.25%-4.5%之间，与会者一致认为，鉴于经济增长和劳动力市场依然稳健，委员会完全有能力等待通胀和经济活动前景更加明朗。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "49312e5ba32d0337400f7616",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1569
+        ]
+      ],
+      "estimated_input_tokens": 6201,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:03:58.152934+00:00",
+        "request_sha256": "6e45a96f61406ad0ff1dea4923253af4dc6762d5c925ddbe940edec9447387af",
+        "input_token_estimate": 17210,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279354",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2714f5bad348414dbb588f698995c017",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4019,
+        "output_tokens": 8247,
+        "usage_source": "provider",
+        "duration_seconds": 31.050067,
+        "cost_cny": "0.037007"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "据ifind数据，2025年4月31日-2025年5月30日，WTI原油期货收盘价(连续)下跌2.02%，布伦特油期货价下跌1.74%。"
+          }
+        ],
+        "reason": "2025年4月只有30天，不存在4月31日，该日期非法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "5月31日，OPEC+达成协议，同意连续第三个月将石油产量提高41.1万升/日，虽然最终就7月份增产达成了共识，但一些成员国持保留意见，其中俄罗斯是建议暂停增产的成员国之一，整体来说，OPEC+持续增产加大了全球原油供应过剩的压力。"
+          }
+        ],
+        "reason": "石油产量通常以桶/日计量，“万升/日”量纲错误，应为“万桶/日”等。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "据百川盈孚，截至5月30日，制冷剂R32和R134a价格较上周五均上跌500元/吨。"
+          }
+        ],
+        "reason": "“上跌”非标准涨跌表述，无法准确表示价格上涨或下跌，行业术语使用错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "5月28日，美联储公布联邦公开市场委员会（）5月6日至7日的会议纪要，会议纪要显示，美联储同意将联邦基金利率目标区间维持在4.25%-4.5%之间，与会者一致认为，鉴于经济增长和劳动力市场依然稳健，委员会完全有能力等待通胀和经济活动前景更加明朗。"
+          }
+        ],
+        "reason": "“联邦公开市场委员会”后的括号内为空，缺少机构缩写或名称等必要属性值。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1569,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1569,
+    "processed_ranges": [
+      [
+        0,
+        1569
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 31.075542,
+  "source_content_sha256": "7652fb8809cb53f67e5454b69435aa7bf1b08e36bc8f9668b888ddbf9ec7ee96"
+}

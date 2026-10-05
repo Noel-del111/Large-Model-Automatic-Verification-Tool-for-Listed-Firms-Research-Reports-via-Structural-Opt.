@@ -1,0 +1,220 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000617",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一句在报告开头连续完整重复，后一句未提供新增信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 34,
+          "end": 64,
+          "text": "4月单月人身险公司保费同比+11.6%，较3月增速继续提升。"
+        },
+        {
+          "kind": "source_text",
+          "start": 65,
+          "end": 95,
+          "text": "4月单月人身险公司保费同比+11.6%，较3月增速继续提升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "4月单月人身险公司保费同比+11.6%，较3月增速继续提升。",
+          "start": 34,
+          "end": 64
+        },
+        {
+          "text": "4月单月人身险公司保费同比+11.6%，较3月增速继续提升。",
+          "start": 65,
+          "end": 95
+        }
+      ],
+      "spans": [
+        {
+          "start": 34,
+          "end": 64,
+          "text": "4月单月人身险公司保费同比+11.6%，较3月增速继续提升。"
+        },
+        {
+          "start": 65,
+          "end": 95,
+          "text": "4月单月人身险公司保费同比+11.6%，较3月增速继续提升。"
+        }
+      ],
+      "warnings": [],
+      "id": "b94c49f07233e0b1b53227d6",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“129年1-4月”年份不成立，无法作为报告期间；后文同类数据均为2025年。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 95,
+          "end": 147,
+          "text": "1）129年1-4月人身险原保费20966亿元，同比+1.8%，规模保费24090亿元，同比+0.9%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "1）129年1-4月人身险原保费20966亿元，同比+1.8%，规模保费24090亿元，同比+0.9%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 95,
+          "end": 147,
+          "text": "1）129年1-4月人身险原保费20966亿元，同比+1.8%，规模保费24090亿元，同比+0.9%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cf6876d64a4ec5f7d67a452b",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1438
+        ]
+      ],
+      "estimated_input_tokens": 5933,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:09:22.642833+00:00",
+        "request_sha256": "2ed14742d3c55196b1b948bb3fe3db22c29b8a9d387810141622f22ac039de3b",
+        "input_token_estimate": 16521,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278665",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "98e9b452ebb042d1bcbc61f5807dee06",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4009,
+        "output_tokens": 9568,
+        "usage_source": "provider",
+        "duration_seconds": 35.512073,
+        "cost_cny": "0.042281",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "4月单月人身险公司保费同比+11.6%，较3月增速继续提升。",
+            "start": 34,
+            "end": 64
+          },
+          {
+            "text": "4月单月人身险公司保费同比+11.6%，较3月增速继续提升。",
+            "start": 65,
+            "end": 95
+          }
+        ],
+        "reason": "同一句在报告开头连续完整重复，后一句未提供新增信息。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "1）129年1-4月人身险原保费20966亿元，同比+1.8%，规模保费24090亿元，同比+0.9%。"
+          }
+        ],
+        "reason": "“129年1-4月”年份不成立，无法作为报告期间；后文同类数据均为2025年。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1438,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1438,
+    "processed_ranges": [
+      [
+        0,
+        1438
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1438,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001624,
+  "source_content_sha256": "6ce4e3276280bc693abf37c3227a5dc7d254b03e5c812484d058e088570072f5"
+}

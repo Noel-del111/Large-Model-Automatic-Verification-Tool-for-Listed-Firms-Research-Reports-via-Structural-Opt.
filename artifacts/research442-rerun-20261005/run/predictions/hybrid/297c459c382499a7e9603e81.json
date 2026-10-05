@@ -1,0 +1,334 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000563",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "时间信息非法",
+      "spans": [
+        {
+          "start": 121,
+          "end": 176,
+          "text": "此前，香港立法会已经在2025年13月21日正式通过该条例草案，用以在香港设立“法币稳定币”发行人的发牌制度。"
+        }
+      ],
+      "reason": "该年月日不是有效公历日期。",
+      "status": "confirmed_error",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 132,
+          "end": 143,
+          "text": "2025年13月21日"
+        },
+        {
+          "kind": "deterministic",
+          "check": "calendar_date",
+          "year": 2025,
+          "month": 13,
+          "day": 21
+        }
+      ],
+      "detector_id": "verified.calendar",
+      "validation": "deterministic",
+      "verification_spans": [
+        {
+          "start": 132,
+          "end": 143,
+          "text": "2025年13月21日"
+        }
+      ],
+      "id": "10e3c41659e65c3c9db1b2e5",
+      "detector_ids": [
+        "hybrid.model",
+        "verified.calendar"
+      ],
+      "original_spans": [
+        {
+          "text": "此前，香港立法会已经在2025年13月21日正式通过该条例草案，用以在香港设立“法币稳定币”发行人的发牌制度。"
+        }
+      ],
+      "review_priority": "confirmed"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“仅约为Visa交易量的”后缺少具体数值或比例，关键数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 760,
+          "end": 796,
+          "text": "2024年，样本的稳定币支付总额虽然快速增长，但仅约为Visa交易量的。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年，样本的稳定币支付总额虽然快速增长，但仅约为Visa交易量的。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 760,
+          "end": 796,
+          "text": "2024年，样本的稳定币支付总额虽然快速增长，但仅约为Visa交易量的。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "40c915c5a56221919871f15f",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "术语误用",
+      "reason": "稳定币通过锚定法币旨在维持价格稳定，而非“实现价格波动”，术语使用与稳定币定义矛盾。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1032,
+          "end": 1133,
+          "text": "投资建议：稳定币通过锚定机制实现价格波动，其意义不仅在于提升支付效率和增强加密货币市场的稳定性，更在于全球货币话语权和数字资产流动性的竞争，建议关注产业链相关环节的投资机会，维持计算机行业“回避”评级。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "投资建议：稳定币通过锚定机制实现价格波动，其意义不仅在于提升支付效率和增强加密货币市场的稳定性，更在于全球货币话语权和数字资产流动性的竞争，建议关注产业链相关环节的投资机会，维持计算机行业“回避”评级。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1032,
+          "end": 1133,
+          "text": "投资建议：稳定币通过锚定机制实现价格波动，其意义不仅在于提升支付效率和增强加密货币市场的稳定性，更在于全球货币话语权和数字资产流动性的竞争，建议关注产业链相关环节的投资机会，维持计算机行业“回避”评级。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "766f7211b4c959525c169538",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码“300.SZ”不符合A股代码常见六位数字格式，缺少后三位数字。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1133,
+          "end": 1281,
+          "text": "建议关注：（1）基础IT服务：天阳科技（300.SZ）、京北方（002987.SZ）、中科金财（002657.SZ）、长亮科技（300348.SZ）、恒生电子（600570.SH）；（2）跨境支付硬件设备：新大陆（000997.SZ）、新国都（300130.SZ）、拉卡拉（300773.SZ）。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "建议关注：（1）基础IT服务：天阳科技（300.SZ）、京北方（002987.SZ）、中科金财（002657.SZ）、长亮科技（300348.SZ）、恒生电子（600570.SH）；（2）跨境支付硬件设备：新大陆（000997.SZ）、新国都（300130.SZ）、拉卡拉（300773.SZ）。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1133,
+          "end": 1281,
+          "text": "建议关注：（1）基础IT服务：天阳科技（300.SZ）、京北方（002987.SZ）、中科金财（002657.SZ）、长亮科技（300348.SZ）、恒生电子（600570.SH）；（2）跨境支付硬件设备：新大陆（000997.SZ）、新国都（300130.SZ）、拉卡拉（300773.SZ）。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "46354643c5925c0c6a40dd22",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1329
+        ]
+      ],
+      "estimated_input_tokens": 5942,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T20:25:31.756928+00:00",
+        "request_sha256": "5aacb5c40891c82f5486ae441a014a69d527aaf7c98d903d5ec56b2252517200",
+        "input_token_estimate": 16522,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278666",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "3a7d14a7dc6148e8a4da72eaa5394e60",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3834,
+        "output_tokens": 7795,
+        "usage_source": "provider",
+        "duration_seconds": 30.768003,
+        "cost_cny": "0.035014",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "此前，香港立法会已经在2025年13月21日正式通过该条例草案，用以在香港设立“法币稳定币”发行人的发牌制度。"
+          }
+        ],
+        "reason": "2025年13月21日中的月份13不存在，日期不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "2024年，样本的稳定币支付总额虽然快速增长，但仅约为Visa交易量的。"
+          }
+        ],
+        "reason": "“仅约为Visa交易量的”后缺少具体数值或比例，关键数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "术语误用",
+        "spans": [
+          {
+            "text": "投资建议：稳定币通过锚定机制实现价格波动，其意义不仅在于提升支付效率和增强加密货币市场的稳定性，更在于全球货币话语权和数字资产流动性的竞争，建议关注产业链相关环节的投资机会，维持计算机行业“回避”评级。"
+          }
+        ],
+        "reason": "稳定币通过锚定法币旨在维持价格稳定，而非“实现价格波动”，术语使用与稳定币定义矛盾。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025年5月30日，香港特别行政区政府在宪报刊登《稳定币条例》，《稳定币条例》正式成为法例。"
+          },
+          {
+            "text": "5月30日，香港特别行政区政府在宪报刊登《稳定币条例》，《稳定币条例》正式成为法例。"
+          }
+        ],
+        "reason": "同一事件信息在事件部分和观点部分不必要地重复出现。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "建议关注：（1）基础IT服务：天阳科技（300.SZ）、京北方（002987.SZ）、中科金财（002657.SZ）、长亮科技（300348.SZ）、恒生电子（600570.SH）；（2）跨境支付硬件设备：新大陆（000997.SZ）、新国都（300130.SZ）、拉卡拉（300773.SZ）。"
+          }
+        ],
+        "reason": "股票代码“300.SZ”不符合A股代码常见六位数字格式，缺少后三位数字。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "2025年5月30日，香港特别行政区政府在宪报刊登《稳定币条例》，《稳定币条例》正式成为法例。"
+          },
+          {
+            "text": "5月30日，香港特别行政区政府在宪报刊登《稳定币条例》，《稳定币条例》正式成为法例。"
+          }
+        ],
+        "reason": "同一事件信息在事件部分和观点部分不必要地重复出现。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1329,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1329,
+    "processed_ranges": [
+      [
+        0,
+        1329
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 1329,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001724,
+  "source_content_sha256": "bb85b2104771800cee62d1f65b76fda960e269757827bcdbcf47d58875e80484"
+}

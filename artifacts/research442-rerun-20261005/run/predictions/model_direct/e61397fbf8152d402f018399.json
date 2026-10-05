@@ -1,0 +1,313 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000618",
+  "scene": "行业研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同一周铝价先述下跌，后述现货铝价上涨，走势表述互斥。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 445,
+          "end": 465,
+          "text": "本周铝价下跌，沪铝收于20070元/吨。"
+        },
+        {
+          "kind": "source_text",
+          "start": 510,
+          "end": 521,
+          "text": "本周现货铝价小幅上涨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "本周铝价下跌，沪铝收于20070元/吨。"
+        },
+        {
+          "text": "本周现货铝价小幅上涨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 445,
+          "end": 465,
+          "text": "本周铝价下跌，沪铝收于20070元/吨。"
+        },
+        {
+          "start": 510,
+          "end": 521,
+          "text": "本周现货铝价小幅上涨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "9348a27b9ad97c8fc110a381",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "37.73万吨与38.89万吨相差1.16万吨，却写成减少1.16吨，量纲错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 680,
+          "end": 712,
+          "text": "目前LME铝库37.73万吨，较上38.89万吨减少1.16吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "目前LME铝库37.73万吨，较上38.89万吨减少1.16吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 680,
+          "end": 712,
+          "text": "目前LME铝库37.73万吨，较上38.89万吨减少1.16吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3d97d1593cb23036b78a99b4",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "计算错误",
+      "reason": "58.76万吨减54.9万吨应为3.86万吨，原文称减少5.8万吨，合计不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 712,
+          "end": 759,
+          "text": "中国方面，本周铝锭社会库存持续减少，目前库存54.9万吨，较上周58.76万吨减少5.8万吨。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "中国方面，本周铝锭社会库存持续减少，目前库存54.9万吨，较上周58.76万吨减少5.8万吨。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 712,
+          "end": 759,
+          "text": "中国方面，本周铝锭社会库存持续减少，目前库存54.9万吨，较上周58.76万吨减少5.8万吨。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "aef68899c2191f05a287699c",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一截止时点，碳化钨粉价格先称359元/千克，后称361元/千克，数值冲突。",
+      "status": "needs_review",
+      "evidence": [],
+      "detector_id": "model_direct",
+      "validation": "anchor_rejected",
+      "original_spans": [
+        {
+          "text": "碳化钨粉在359元/千克，"
+        },
+        {
+          "text": "碳化钨粉价格361元/千克。"
+        }
+      ],
+      "spans": [],
+      "invalid_anchor": true,
+      "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+      "id": "157eee384ac7b061fc0f94ab",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1636
+        ]
+      ],
+      "estimated_input_tokens": 6268,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:10:43.160060+00:00",
+        "request_sha256": "11b09f5d25b47a8c1a1c8325603fe10bc22fbcf246468d37c86a0902d01e8375",
+        "input_token_estimate": 17389,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.279533",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "2f451358513147608d41ebd9f5a53e56",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 4106,
+        "output_tokens": 4005,
+        "usage_source": "provider",
+        "duration_seconds": 15.681941,
+        "cost_cny": "0.020126"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "本周铝价下跌，沪铝收于20070元/吨。"
+          },
+          {
+            "text": "本周现货铝价小幅上涨。"
+          }
+        ],
+        "reason": "同一周铝价先述下跌，后述现货铝价上涨，走势表述互斥。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "目前LME铝库37.73万吨，较上38.89万吨减少1.16吨。"
+          }
+        ],
+        "reason": "37.73万吨与38.89万吨相差1.16万吨，却写成减少1.16吨，量纲错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "计算错误",
+        "spans": [
+          {
+            "text": "中国方面，本周铝锭社会库存持续减少，目前库存54.9万吨，较上周58.76万吨减少5.8万吨。"
+          }
+        ],
+        "reason": "58.76万吨减54.9万吨应为3.86万吨，原文称减少5.8万吨，合计不成立。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "碳化钨粉在359元/千克，"
+          },
+          {
+            "text": "碳化钨粉价格361元/千克。"
+          }
+        ],
+        "reason": "同一截止时点，碳化钨粉价格先称359元/千克，后称361元/千克，数值冲突。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "碳化钨粉在359元/千克，"
+          },
+          {
+            "text": "碳化钨粉价格361元/千克。"
+          }
+        ],
+        "reason": "同一截止时点，碳化钨粉价格先称359元/千克，后称361元/千克，数值冲突。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [],
+  "coverage": {
+    "complete": false,
+    "total_chars": 1636,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 1636,
+    "processed_ranges": [
+      [
+        0,
+        1636
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 15.708153,
+  "source_content_sha256": "441df8c566519b038b21e3217f4b9f30d433ed1c3ef9249b1e2986c1078dd24f"
+}

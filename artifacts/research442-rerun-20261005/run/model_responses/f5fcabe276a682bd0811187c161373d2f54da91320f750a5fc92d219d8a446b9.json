@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"2025 年公司将继续推进产能布局，国内计划完成前湾新区 9 期、10 期工厂建设，海外墨西哥二期项目已开始筹划。\"},{\"text\":\"国内计划完成前湾新区 9 期、10 期工厂建设；\"}],\"reason\":\"同一份文本中“国内计划完成前湾新区9期、10期工厂建设”重复出现，未增添新信息。\"},{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2025 年中国汽车总销量预测将超万辆，新能源汽车销量将突破 1,600 万辆（含出口），继续维持高增长。\"}],\"reason\":\"“超万辆”缺少具体数量，中国汽车总销量不可能仅超一万辆，应补充具体数值。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"公司 2024 年研发费用达到 12.24 亿分\"}],\"reason\":\"研发费用单位写成“亿分”，应为“亿元”，量纲错误。\"},{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"新能源汽车高速增长带动公司业绩下降，其中汽车电子呈爆发式增长\"}],\"reason\":\"标题称新能源汽车高速增长带动公司业绩下降，但后文列示2024年内饰、底盘、热管理、汽车电子收入均同比增长，未下降。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T19:08:41.123218+00:00",
+    "request_sha256": "c8536272f2aa1d9977813e2ae76c24cd43ef3054a49db20c230737f67f11e4a6",
+    "input_token_estimate": 17830,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279974",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "796d79a60fef48cd890b53a64c15bb98",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 4306,
+    "output_tokens": 12225,
+    "usage_source": "provider",
+    "duration_seconds": 45.038868,
+    "cost_cny": "0.053206"
+  },
+  "cache_request": {
+    "key": "f5fcabe276a682bd0811187c161373d2f54da91320f750a5fc92d219d8a446b9",
+    "purpose": "text_review.detect",
+    "messages_sha256": "c8536272f2aa1d9977813e2ae76c24cd43ef3054a49db20c230737f67f11e4a6"
+  }
+}

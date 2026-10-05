@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\":[{\"error_type\":\"时间矛盾\",\"spans\":[{\"text\":\"2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。\"}],\"reason\":\"Q4区间写成2025.3.31至2025.1.1，终点早于起点，且与第四季度通常时间范围不符。\"},{\"error_type\":\"数值单位错误\",\"spans\":[{\"text\":\"美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。\"}],\"reason\":\"美国制剂销售收入单位写成美分，结合占比31.4%和总营收，应为美元量级，单位错误。\"},{\"error_type\":\"计算错误\",\"spans\":[{\"text\":\"2024-2025财年Q4（2025.3.31-2025.1.1），公司实现营业收入1281.56亿卢比，同比增长8.5%，EBITDA为371.61亿卢比，，EBITDA利润率为28.7%，同比提升3.4pct，净利润为214.99亿卢比，同比下滑19.0%，净利率为16.6%，同比下滑5.6pct，调整后的净利润为288.91亿卢比，同比增长4.8%。\"}],\"reason\":\"按营业收入1281.56亿卢比计算，EBITDA利润率为371.61/1281.56≈29.0%而非28.7%；净利率为214.99/1281.56≈16.8%而非16.6%。\"},{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"印度制剂业务实现销售收入421.30亿卢比，同比增长13.6%，占比32.9%，公司印度市场份额由8.0%提升至8.3%。\"},{\"text\":\"美国制剂业务实现销售收入4.64美分，同比下降2.5%，占比为31.4%，美国市场竞争激烈，价格面临压力。\"},{\"text\":\"全球专科制剂业务实现销售收入2.95亿美元，同比增长8.6%，占比19.9%，增长放缓主要原因是美国一二月份通常为淡季，但Ilumya和Cequa等新药仍实现增长。\"},{\"text\":\"新兴市场制剂业务实现销售收入2.61亿美元，同比增长6.3%，占比17.6%。\"},{\"text\":\"其他制剂业务实现销售收入2亿美元，同比增长2%，占比13.5%。\"}],\"reason\":\"分业务占比32.9%、31.4%、19.9%、17.6%、13.5%合计115.3%，超过总收入100%。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T22:19:04.208169+00:00",
+    "request_sha256": "207c9af699337ea867d73c79140124de55172c93c0d51926da2683e16cf675a1",
+    "input_token_estimate": 14910,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277054",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "b985509a58f44016a57276bacd43e206",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3561,
+    "output_tokens": 9711,
+    "usage_source": "provider",
+    "duration_seconds": 38.146557,
+    "cost_cny": "0.042405"
+  },
+  "cache_request": {
+    "key": "589327495574186f91e08eaad876902439df9e26ef01ab653a53ec212bc43f3a",
+    "purpose": "text_review.detect",
+    "messages_sha256": "207c9af699337ea867d73c79140124de55172c93c0d51926da2683e16cf675a1"
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000697",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "售价19800亿元数量级明显错误，应为元或万元等合理单位。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 83,
+          "end": 122,
+          "text": "5月27日，九识智能发布A系列无人物流车平台，首款车型E6售价19800亿元。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "5月27日，九识智能发布A系列无人物流车平台，首款车型E6售价19800亿元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 83,
+          "end": 122,
+          "text": "5月27日，九识智能发布A系列无人物流车平台，首款车型E6售价19800亿元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e81915655460c849369b8773",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "年份“224年”不完整，结合上下文应为2024年，时间信息非法。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 267,
+          "end": 341,
+          "text": "224年我国快递业务量达到1745亿件、快递业务收入1.4万亿元，同比分别增长21%、13%，而快递人员的成本较高，配送安全性低，人员管理规范度低。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "224年我国快递业务量达到1745亿件、快递业务收入1.4万亿元，同比分别增长21%、13%，而快递人员的成本较高，配送安全性低，人员管理规范度低。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 267,
+          "end": 341,
+          "text": "224年我国快递业务量达到1745亿件、快递业务收入1.4万亿元，同比分别增长21%、13%，而快递人员的成本较高，配送安全性低，人员管理规范度低。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "89c2a85ddf6e7edb50626d3b",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "交通运输部《》中法规名称缺失，书名号内为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 463,
+          "end": 518,
+          "text": "2024年6月，十三部委联合发文支持新能源无人配送车规模化应用；交通运输部《》已完成征求意见工作，将加快出台。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2024年6月，十三部委联合发文支持新能源无人配送车规模化应用；交通运输部《》已完成征求意见工作，将加快出台。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 463,
+          "end": 518,
+          "text": "2024年6月，十三部委联合发文支持新能源无人配送车规模化应用；交通运输部《》已完成征求意见工作，将加快出台。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0854070a4ef9d47b608c2e0f",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "受益标的冒号后直接写“等”，缺少具体标的名称。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1085,
+          "end": 1156,
+          "text": "推荐小鹏汽车-W、长安汽车、比亚迪、长城汽车、德赛西威、经纬恒润-W、均胜电子、华阳集团、沪光股份、美格智能、华测导航、阿尔特；受益标的：等。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "推荐小鹏汽车-W、长安汽车、比亚迪、长城汽车、德赛西威、经纬恒润-W、均胜电子、华阳集团、沪光股份、美格智能、华测导航、阿尔特；受益标的：等。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1085,
+          "end": 1156,
+          "text": "推荐小鹏汽车-W、长安汽车、比亚迪、长城汽车、德赛西威、经纬恒润-W、均胜电子、华阳集团、沪光股份、美格智能、华测导航、阿尔特；受益标的：等。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "c639320a473037fe72f49a0b",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1187
+        ]
+      ],
+      "estimated_input_tokens": 5816,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T22:14:09.624675+00:00",
+        "request_sha256": "3dad94ba3a8dd7c2999efb4acf7051104e68d71723384350f6b4f7df2db5b77c",
+        "input_token_estimate": 16148,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.278292",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "42e66ddd88234cd9b66bc439a1475555",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3756,
+        "output_tokens": 7225,
+        "usage_source": "provider",
+        "duration_seconds": 30.213357,
+        "cost_cny": "0.032656",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "5月27日，九识智能发布A系列无人物流车平台，首款车型E6售价19800亿元。"
+          }
+        ],
+        "reason": "售价19800亿元数量级明显错误，应为元或万元等合理单位。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "224年我国快递业务量达到1745亿件、快递业务收入1.4万亿元，同比分别增长21%、13%，而快递人员的成本较高，配送安全性低，人员管理规范度低。"
+          }
+        ],
+        "reason": "年份“224年”不完整，结合上下文应为2024年，时间信息非法。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "2024年6月，十三部委联合发文支持新能源无人配送车规模化应用；交通运输部《》已完成征求意见工作，将加快出台。"
+          }
+        ],
+        "reason": "交通运输部《》中法规名称缺失，书名号内为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "推荐小鹏汽车-W、长安汽车、比亚迪、长城汽车、德赛西威、经纬恒润-W、均胜电子、华阳集团、沪光股份、美格智能、华测导航、阿尔特；受益标的：等。"
+          }
+        ],
+        "reason": "受益标的冒号后直接写“等”，缺少具体标的名称。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1187,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1187,
+    "processed_ranges": [
+      [
+        0,
+        1187
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1187,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001441,
+  "source_content_sha256": "f78e3638b11ce4dd04ea5884dadf204634073462f75e579c04d8cf09664c3921"
+}

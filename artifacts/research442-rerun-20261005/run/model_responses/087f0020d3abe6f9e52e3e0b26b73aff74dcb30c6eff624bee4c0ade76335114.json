@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"2024年以来，下游部分应用市场需求回暖，半导体市场逐步复苏，行业景气度缓慢回升，部分市场需求回暖。\"}], \"reason\": \"“部分应用市场需求回暖”与“部分市场需求回暖”在同一句内重复，语义冗余。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"公司积极根据客户需求对相关产品进行研发更新。公司积极根据客户需求对相关产品进行研发更新。\"}], \"reason\": \"同一句子连续重复出现，没有新增信息。\"}, {\"error_type\": \"数值缺失\", \"spans\": [{\"text\": \"我们预计公司2025/2026/2027年分别实现收入亿元，实现归母净利润分别为1.4/1.9/2.4兆元，首次覆盖，给予“买入”评级。\"}], \"reason\": \"“实现收入亿元”前缺少具体收入数值，仅剩单位。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"我们预计公司2025/2026/2027年分别实现收入亿元，实现归母净利润分别为1.4/1.9/2.4兆元，首次覆盖，给予“买入”评级。\"}], \"reason\": \"归母净利润单位“兆元”对应万亿级别，与公司规模明显不符，应为“亿元”。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T21:41:20.116745+00:00",
+    "request_sha256": "0ac0727fa705c6b8a61780bdae73d7ac654555c2e60b22ca792fc38b8bc14755",
+    "input_token_estimate": 16214,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.278358",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "7c341bdb1c17429fb59c394fe21d3cfe",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3723,
+    "output_tokens": 5717,
+    "usage_source": "provider",
+    "duration_seconds": 22.983763,
+    "cost_cny": "0.026591"
+  },
+  "cache_request": {
+    "key": "087f0020d3abe6f9e52e3e0b26b73aff74dcb30c6eff624bee4c0ade76335114",
+    "purpose": "text_review.detect",
+    "messages_sha256": "0ac0727fa705c6b8a61780bdae73d7ac654555c2e60b22ca792fc38b8bc14755"
+  }
+}

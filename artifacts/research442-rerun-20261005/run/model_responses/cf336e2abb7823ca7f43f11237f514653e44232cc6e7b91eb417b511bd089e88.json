@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"14月末社融存量为424.00万亿元，同比+8.70%；\"}], \"reason\": \"“14月末”不是合法的月份时点，结合上下文应为“4月末”，日期表述不成立。\"}, {\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"3)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。\"}, {\"text\": \"4)利率及信用利差，截至2025年05月30日，7天OMO为1.40%，1年期、5年期LPR分别为3.00%、3.50%；10年期国债YTM为1.67%，周环比-4.96pct；5年期AAA级企业债、城投债信用利差分别为32.85bp、33.52bp，周环比分别-0.16bp、1.04bp。\"}], \"reason\": \"同一“利率及信用利差”段落连续重复出现，内容完全相同，属于不必要重复。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"10年期国债YTM为1.67%，周环比-4.96pct；\"}], \"reason\": \"国债收益率周环比变动通常以bp计，1.67%的收益率不可能一周下降4.96个百分点，单位“pct”疑为“bp”。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"4月末中资银行贷款、存款余额分别为258.36、293.94万亿秒，同比分别+7.73%、+7.99%。\"}], \"reason\": \"贷款、存款余额的单位应为“万亿元”，原文写成“万亿秒”，量纲错误。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:14:08.002446+00:00",
+    "request_sha256": "e7114da08bfc1988088641cecb9ee0827be759b433a92408471a6cbf5a6fb4c5",
+    "input_token_estimate": 15634,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277778",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "75c7e2ea48684d67b966218bc29bb5e4",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3877,
+    "output_tokens": 7343,
+    "usage_source": "provider",
+    "duration_seconds": 28.843024,
+    "cost_cny": "0.033249"
+  },
+  "cache_request": {
+    "key": "cf336e2abb7823ca7f43f11237f514653e44232cc6e7b91eb417b511bd089e88",
+    "purpose": "text_review.detect",
+    "messages_sha256": "e7114da08bfc1988088641cecb9ee0827be759b433a92408471a6cbf5a6fb4c5"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"宁德时代港股IPO募集353亿港元，主要投向匈牙利产能建设，先导有望充分受益：约90%募集资金(276亿港元)将用于匈牙利德布勒森工厂建设，该超级工厂规划总产能72GWh，分两期建设。\"}], \"reason\": \"353亿港元的90%应约为317.7亿港元，而非276亿港元，百分比与金额不匹配。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"我们预计公司2025-2027年归母净利润分别为10.57/17.02/22.28/21.28亿元，当前股价对应动态PE分别为31/19/15倍，维持“买入”评级。\"}], \"reason\": \"2025-2027年为三年，归母净利润列出四个数值，与后文PE仅三个数值不一致。\"}, {\"error_type\": \"属性值缺失错误\", \"spans\": [{\"text\": \"（2）北美地区：24年3月公布了ABF20GWH的订单，随着美国关税加剧，本土宁德授权（）产能有望加速落地。\"}], \"reason\": \"“本土宁德授权（）产能”中括号内应填被授权方或主体等属性值，但为空。\"}, {\"error_type\": \"格式错误\", \"spans\": [{\"text\": \"先导智能(305)\"}], \"reason\": \"A股股票代码通常为6位数字，此处仅3位，不符合代码格式。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:22:08.372295+00:00",
+    "request_sha256": "3a8cf8505022433714fca8fd834c7ed5785ffdd7f34dcd95ed58d768221f47d6",
+    "input_token_estimate": 15473,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277617",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "28e4995dda8342c3b37e858cc90c9d03",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3668,
+    "output_tokens": 9106,
+    "usage_source": "provider",
+    "duration_seconds": 36.623334,
+    "cost_cny": "0.040092"
+  },
+  "cache_request": {
+    "key": "f0c5935afc68489e262f8ac12296630fad16556875476dbbc599ab0c603fc80d",
+    "purpose": "text_review.detect",
+    "messages_sha256": "3a8cf8505022433714fca8fd834c7ed5785ffdd7f34dcd95ed58d768221f47d6"
+  }
+}

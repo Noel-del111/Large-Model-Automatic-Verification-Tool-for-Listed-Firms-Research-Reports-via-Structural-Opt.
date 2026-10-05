@@ -1,0 +1,197 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000520",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "数值单位错误",
+      "reason": "商品房销售面积单位应为万平方米，写成万平方公里量级严重错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 300,
+          "end": 353,
+          "text": "据Wind，0524-5.31一周，30个大中城市商品房销售面积216.79万平方公里，同比-2.46%。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据Wind，0524-5.31一周，30个大中城市商品房销售面积216.79万平方公里，同比-2.46%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 300,
+          "end": 353,
+          "text": "据Wind，0524-5.31一周，30个大中城市商品房销售面积216.79万平方公里，同比-2.46%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "7c04b50a8ea0d7ba5b429939",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "冗余语句",
+      "reason": "风险提示中同一风险表述“基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响”重复出现两次，未增加新信息。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 998,
+          "end": 1099,
+          "text": "风险提示：基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；新材料品种下游景气度及自身成长性不及预期；地产产业链坏账减值损失超预期。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "风险提示：基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；新材料品种下游景气度及自身成长性不及预期；地产产业链坏账减值损失超预期。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 998,
+          "end": 1099,
+          "text": "风险提示：基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；新材料品种下游景气度及自身成长性不及预期；地产产业链坏账减值损失超预期。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "3aeacf05ff3a77781c4c75dc",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1099
+        ]
+      ],
+      "estimated_input_tokens": 5664,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:51:31.811897+00:00",
+        "request_sha256": "80072af84289aff6a26c369c1d9066579c0aefa6d256e0078e1385dcaaddfade",
+        "input_token_estimate": 15758,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277902",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "ddedd4ee1cbc45329713745ceab6cc6f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3739,
+        "output_tokens": 5378,
+        "usage_source": "provider",
+        "duration_seconds": 22.787789,
+        "cost_cny": "0.025251",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "据Wind，0524-5.31一周，30个大中城市商品房销售面积216.79万平方公里，同比-2.46%。"
+          }
+        ],
+        "reason": "商品房销售面积单位应为万平方米，写成万平方公里量级严重错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "风险提示：基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响；新材料品种下游景气度及自身成长性不及预期；地产产业链坏账减值损失超预期。"
+          }
+        ],
+        "reason": "风险提示中同一风险表述“基建、地产需求回落超预期，对水泥、玻璃价格涨价趋势造成影响”重复出现两次，未增加新信息。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1099,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1099,
+    "processed_ranges": [
+      [
+        0,
+        1099
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": true,
+    "rules_processed_chars": 1099,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 0,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.001599,
+  "source_content_sha256": "36493ebc5767b4e4bb46476cbafeea39512e85237aee6a15abbdca0c7a3bbb79"
+}

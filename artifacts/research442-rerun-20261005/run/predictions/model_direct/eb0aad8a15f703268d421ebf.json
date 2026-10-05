@@ -1,0 +1,302 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000361",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "格式错误",
+      "reason": "股票代码应为连续6位数字，此处写成“3-011-60”并含连字符，不符合证券代码格式。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 22,
+          "end": 36,
+          "text": "翔楼新材(3-011-60)"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "翔楼新材(3-011-60)"
+        }
+      ],
+      "spans": [
+        {
+          "start": 22,
+          "end": 36,
+          "text": "翔楼新材(3-011-60)"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "48607c661ad17b42027cff97",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值缺失",
+      "reason": "“扩张万吨新产能”中“万吨”前缺少具体扩张数量，明确数值位置为空。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 430,
+          "end": 486,
+          "text": "同时，安徽新厂的建设预计能在公司原有18万吨产能的基础上扩张万吨新产能，并且开拓高端轴承、机器人等高附加值市场。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "同时，安徽新厂的建设预计能在公司原有18万吨产能的基础上扩张万吨新产能，并且开拓高端轴承、机器人等高附加值市场。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 430,
+          "end": 486,
+          "text": "同时，安徽新厂的建设预计能在公司原有18万吨产能的基础上扩张万吨新产能，并且开拓高端轴承、机器人等高附加值市场。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "0b3b3ef137c441b285da44a7",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“27-25年”作为年份区间起点晚于终点，时间区间本身不成立。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 634,
+          "end": 722,
+          "text": "我们预计公司27-25年分别实现收入17.8、20.9、24.6亿元，YOY+20%、17%、18%，实现归母净利润2.5、3.0、3.7亿元，YOY+18%、22%、23%。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "我们预计公司27-25年分别实现收入17.8、20.9、24.6亿元，YOY+20%、17%、18%，实现归母净利润2.5、3.0、3.7亿元，YOY+18%、22%、23%。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 634,
+          "end": 722,
+          "text": "我们预计公司27-25年分别实现收入17.8、20.9、24.6亿元，YOY+20%、17%、18%，实现归母净利润2.5、3.0、3.7亿元，YOY+18%、22%、23%。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "00e3ab656046b4ac86472391",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          893
+        ]
+      ],
+      "estimated_input_tokens": 5501,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:54:16.575782+00:00",
+        "request_sha256": "1136062bd27db48f35697245ffbbdee7b7b0801ad39c7ec844442f52daec55c3",
+        "input_token_estimate": 15295,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.277439",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "4d303a64b32e4715b312838a9cab9892",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3579,
+        "output_tokens": 2216,
+        "usage_source": "provider",
+        "duration_seconds": 9.564859,
+        "cost_cny": "0.012443"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "格式错误",
+        "spans": [
+          {
+            "text": "翔楼新材(3-011-60)"
+          }
+        ],
+        "reason": "股票代码应为连续6位数字，此处写成“3-011-60”并含连字符，不符合证券代码格式。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值缺失",
+        "spans": [
+          {
+            "text": "同时，安徽新厂的建设预计能在公司原有18万吨产能的基础上扩张万吨新产能，并且开拓高端轴承、机器人等高附加值市场。"
+          }
+        ],
+        "reason": "“扩张万吨新产能”中“万吨”前缺少具体扩张数量，明确数值位置为空。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "我们预计公司27-25年分别实现收入17.8、20.9、24.6亿元，YOY+20%、17%、18%，实现归母净利润2.5、3.0、3.7亿元，YOY+18%、22%、23%。"
+          }
+        ],
+        "reason": "“27-25年”作为年份区间起点晚于终点，时间区间本身不成立。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 634,
+      "end": 722,
+      "text": "我们预计公司27-25年分别实现收入17.8、20.9、24.6亿元，YOY+20%、17%、18%，实现归母净利润2.5、3.0、3.7亿元，YOY+18%、22%、23%。",
+      "quantities": [
+        {
+          "value": "24.6",
+          "unit": "亿元",
+          "start": 662,
+          "end": 668
+        },
+        {
+          "value": "+20",
+          "unit": "%",
+          "start": 672,
+          "end": 676
+        },
+        {
+          "value": "17",
+          "unit": "%",
+          "start": 677,
+          "end": 680
+        },
+        {
+          "value": "18",
+          "unit": "%",
+          "start": 681,
+          "end": 684
+        },
+        {
+          "value": "3.7",
+          "unit": "亿元",
+          "start": 700,
+          "end": 705
+        },
+        {
+          "value": "+18",
+          "unit": "%",
+          "start": 709,
+          "end": 713
+        },
+        {
+          "value": "22",
+          "unit": "%",
+          "start": 714,
+          "end": 717
+        },
+        {
+          "value": "23",
+          "unit": "%",
+          "start": 718,
+          "end": 721
+        }
+      ],
+      "periods": [],
+      "entity_mentions": [
+        "我们预计公司"
+      ]
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 893,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 893,
+    "processed_ranges": [
+      [
+        0,
+        893
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 1,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 9.58997,
+  "source_content_sha256": "11ad7c75249fc0067a8b001d590e74ce54efe8b6a8dfaa5c23c21d72aa4a59d5"
+}

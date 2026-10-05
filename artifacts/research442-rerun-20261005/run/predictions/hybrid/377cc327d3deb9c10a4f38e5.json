@@ -1,0 +1,482 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000543",
+  "scene": "行业研报",
+  "detector": "hybrid",
+  "errors": [
+    {
+      "error_type": "冗余语句",
+      "reason": "同一信息在相邻条目中几乎原样重复，属于不必要的冗余表述。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 474,
+          "end": 507,
+          "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+        },
+        {
+          "kind": "source_text",
+          "start": 509,
+          "end": 542,
+          "text": "4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+        },
+        {
+          "text": "4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 474,
+          "end": 507,
+          "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+        },
+        {
+          "start": 509,
+          "end": 542,
+          "text": "4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "a8d35a55b31823defb23afc8",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "AI眼镜年内销量目标写成10台，数量级明显偏小，单位表述与商业目标不匹配。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 631,
+          "end": 707,
+          "text": "面对小米等大厂入局，李未可科技选择聚焦商旅细分赛道，以「技术+数据+场景」优势构建壁垒，目标年内销量突破10台，推动AI眼镜成为用户日常佩戴的第一选择。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "面对小米等大厂入局，李未可科技选择聚焦商旅细分赛道，以「技术+数据+场景」优势构建壁垒，目标年内销量突破10台，推动AI眼镜成为用户日常佩戴的第一选择。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 631,
+          "end": 707,
+          "text": "面对小米等大厂入局，李未可科技选择聚焦商旅细分赛道，以「技术+数据+场景」优势构建壁垒，目标年内销量突破10台，推动AI眼镜成为用户日常佩戴的第一选择。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "e481800519d2ddd2a1bedd46",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "语义逻辑矛盾",
+      "reason": "同一更新先称思考更深、推理更强，后称实现降级退步，对升级效果的评价互相冲突。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1357,
+          "end": 1390,
+          "text": "DeepSeek：DeepSeek-R1更新，思考更深，推理更强。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1522,
+          "end": 1551,
+          "text": "2）DeepSeek-R1更新后，在多个方面实现降级退步。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "DeepSeek：DeepSeek-R1更新，思考更深，推理更强。"
+        },
+        {
+          "text": "2）DeepSeek-R1更新后，在多个方面实现降级退步。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1357,
+          "end": 1390,
+          "text": "DeepSeek：DeepSeek-R1更新，思考更深，推理更强。"
+        },
+        {
+          "start": 1522,
+          "end": 1551,
+          "text": "2）DeepSeek-R1更新后，在多个方面实现降级退步。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "4f797cdbe5068565319dd6ca",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值不一致错误",
+      "reason": "同一DeepSeek R1升级版本前文写0528，后文写0529，版本号前后不一致。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 1432,
+          "end": 1494,
+          "text": "DeepSeek R1模型已完成小版本升级，当前版本为DeepSeek-R1-0528，显著提升了模型的思维深度与推理能力。"
+        },
+        {
+          "kind": "source_text",
+          "start": 1612,
+          "end": 1651,
+          "text": "3）DeepSeek-R1-0529模型继续开源，展现真正可落地的顶级大模型。"
+        }
+      ],
+      "detector_id": "hybrid.model",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "DeepSeek R1模型已完成小版本升级，当前版本为DeepSeek-R1-0528，显著提升了模型的思维深度与推理能力。"
+        },
+        {
+          "text": "3）DeepSeek-R1-0529模型继续开源，展现真正可落地的顶级大模型。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 1432,
+          "end": 1494,
+          "text": "DeepSeek R1模型已完成小版本升级，当前版本为DeepSeek-R1-0528，显著提升了模型的思维深度与推理能力。"
+        },
+        {
+          "start": 1612,
+          "end": 1651,
+          "text": "3）DeepSeek-R1-0529模型继续开源，展现真正可落地的顶级大模型。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text",
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "403c3fcada69dcea8ea173bc",
+      "review_priority": "high"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          3409
+        ]
+      ],
+      "estimated_input_tokens": 7941,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T19:09:26.218971+00:00",
+        "request_sha256": "6fa84b0c67da4be255ba1dcdb12332f101ce866d18c6fc9ceeb1a13c3612cd32",
+        "input_token_estimate": 22060,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.284204",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "f580d7e552d848819cee63ec9b23d14f",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 5197,
+        "output_tokens": 7213,
+        "usage_source": "provider",
+        "duration_seconds": 28.152548,
+        "cost_cny": "0.034049",
+        "reused_response": true
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          },
+          {
+            "text": "4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          }
+        ],
+        "reason": "同一信息在相邻条目中几乎原样重复，属于不必要的冗余表述。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "4）TCL与阿里云宣布达成全栈AI战略合作。"
+          },
+          {
+            "text": "TCL与阿里云宣布达成全栈AI战略合作。"
+          }
+        ],
+        "reason": "同一战略合作信息在同一段落中重复出现，未增加新内容。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "面对小米等大厂入局，李未可科技选择聚焦商旅细分赛道，以「技术+数据+场景」优势构建壁垒，目标年内销量突破10台，推动AI眼镜成为用户日常佩戴的第一选择。"
+          }
+        ],
+        "reason": "AI眼镜年内销量目标写成10台，数量级明显偏小，单位表述与商业目标不匹配。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "spans": [
+          {
+            "text": "DeepSeek：DeepSeek-R1更新，思考更深，推理更强。"
+          },
+          {
+            "text": "2）DeepSeek-R1更新后，在多个方面实现降级退步。"
+          }
+        ],
+        "reason": "同一更新先称思考更深、推理更强，后称实现降级退步，对升级效果的评价互相冲突。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "spans": [
+          {
+            "text": "DeepSeek R1模型已完成小版本升级，当前版本为DeepSeek-R1-0528，显著提升了模型的思维深度与推理能力。"
+          },
+          {
+            "text": "3）DeepSeek-R1-0529模型继续开源，展现真正可落地的顶级大模型。"
+          }
+        ],
+        "reason": "同一DeepSeek R1升级版本前文写0528，后文写0529，版本号前后不一致。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [
+          {
+            "text": "4）TCL与阿里云宣布达成全栈AI战略合作。"
+          },
+          {
+            "text": "TCL与阿里云宣布达成全栈AI战略合作。"
+          }
+        ],
+        "reason": "同一战略合作信息在同一段落中重复出现，未增加新内容。"
+      },
+      "reason": "source text is absent or ambiguous in the model-visible context",
+      "job_index": 0
+    }
+  ],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 736,
+      "end": 796,
+      "text": "1）英伟达5月29日公布了2026财年第一财季财报，英伟达2026财年Q1营收440.62亿美元，净利润同比增长26%。",
+      "quantities": [
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 792,
+          "end": 795
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 736,
+      "end": 796,
+      "text": "1）英伟达5月29日公布了2026财年第一财季财报，英伟达2026财年Q1营收440.62亿美元，净利润同比增长26%。",
+      "quantities": [
+        {
+          "value": "26",
+          "unit": "%",
+          "start": 792,
+          "end": 795
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 949,
+      "end": 985,
+      "text": "2）微软发布2025财年第3财季财报：营收701亿美元，同比增长13%。",
+      "quantities": [
+        {
+          "value": "13",
+          "unit": "%",
+          "start": 981,
+          "end": 984
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 985,
+      "end": 1014,
+      "text": "运营收入为320亿美元，增长16%（固定汇率增长19%）。",
+      "quantities": [
+        {
+          "value": "16",
+          "unit": "%",
+          "start": 999,
+          "end": 1002
+        },
+        {
+          "value": "19",
+          "unit": "%",
+          "start": 1009,
+          "end": 1012
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 1182,
+      "end": 1223,
+      "text": "3）Meta公布2025财年第1财季财报：营收423.14亿美元，同比增长16%。",
+      "quantities": [
+        {
+          "value": "16",
+          "unit": "%",
+          "start": 1219,
+          "end": 1222
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "profit",
+      "metric_text": "净利润",
+      "start": 1223,
+      "end": 1244,
+      "text": "净利润166.44亿美元，同比增长35%。",
+      "quantities": [
+        {
+          "value": "35",
+          "unit": "%",
+          "start": 1240,
+          "end": 1243
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": false,
+    "total_chars": 3409,
+    "execution_complete": true,
+    "candidate_quality_complete": false,
+    "processed_chars": 3409,
+    "processed_ranges": [
+      [
+        0,
+        3409
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": false,
+    "rules_complete": true,
+    "rules_processed_chars": 3409,
+    "global_linking_complete": true,
+    "truncation_reasons": [
+      "unanchored_or_invalid_model_candidates"
+    ],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 6,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 0.002857,
+  "source_content_sha256": "4ffb571f1931d63db09fb95fb67995d492434225b08cb02f13f960cbc74d1d5a"
+}

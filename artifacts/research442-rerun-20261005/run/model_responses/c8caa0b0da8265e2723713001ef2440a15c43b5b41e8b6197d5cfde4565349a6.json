@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"冗余语句\", \"spans\": [{\"text\": \"但是还未能改变2025年出口外部环境的巨大不确定性。但是还未能改变2025年出口外部环境的巨大不确定性。\"}], \"reason\": \"同一句子连续重复出现一次，未提供新增信息。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"4月跌至2609万元/台，同比-3.2%、环比-7.5%\"}], \"reason\": \"空调线上零售均价写为2609万元/台，单位应为元/台，万元/台量级明显错误。\"}, {\"error_type\": \"时间矛盾\", \"spans\": [{\"text\": \"2025年618活动延后自5月13日开始（去年同期自5月20日开始）\"}], \"reason\": \"5月13日早于去年同期5月20日，称“延后”与时间先后矛盾。\"}, {\"error_type\": \"数值不一致错误\", \"spans\": [{\"text\": \"5-8月内销排产量较去年同期实绩分别+15.4%、+29.3%、+22.8%、-9.2%、+5.2%\"}], \"reason\": \"5-8月共4个月，却列出5个同比数值，期间与数值个数不一致。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:07:08.991097+00:00",
+    "request_sha256": "6f50b415defcee03b60bfd7f983459789717f994c181d8f2ec38a1ad70f6ddce",
+    "input_token_estimate": 16950,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.279094",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "f70909a556a041cb97f5274d52799562",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3945,
+    "output_tokens": 4912,
+    "usage_source": "provider",
+    "duration_seconds": 19.612877,
+    "cost_cny": "0.023593"
+  },
+  "cache_request": {
+    "key": "c8caa0b0da8265e2723713001ef2440a15c43b5b41e8b6197d5cfde4565349a6",
+    "purpose": "text_review.detect",
+    "messages_sha256": "6f50b415defcee03b60bfd7f983459789717f994c181d8f2ec38a1ad70f6ddce"
+  }
+}

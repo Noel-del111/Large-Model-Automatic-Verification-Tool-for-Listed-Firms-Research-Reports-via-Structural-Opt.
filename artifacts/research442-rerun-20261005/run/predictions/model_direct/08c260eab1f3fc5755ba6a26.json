@@ -1,0 +1,552 @@
+{
+  "schema_version": "text-review/1.0",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000456",
+  "scene": "个股研报",
+  "detector": "model_direct",
+  "errors": [
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "公司名称后括号内股票代码为空，缺少本应披露的证券代码属性值。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 36,
+          "end": 42,
+          "text": "曙光数创()"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "曙光数创()"
+        }
+      ],
+      "spans": [
+        {
+          "start": 36,
+          "end": 42,
+          "text": "曙光数创()"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "8d40be5b2dba268077dd77aa",
+      "review_priority": "low"
+    },
+    {
+      "error_type": "数值单位错误",
+      "reason": "归母净利润金额单位写成“分”，而同报告下文同一数据用“万元”，单位明显错误。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 44,
+          "end": 96,
+          "text": "2025Q1实现营收1166.97万元（-1.37%），归母净利润-3137.25分（-329.66%）"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2025Q1实现营收1166.97万元（-1.37%），归母净利润-3137.25分（-329.66%）"
+        }
+      ],
+      "spans": [
+        {
+          "start": 44,
+          "end": 96,
+          "text": "2025Q1实现营收1166.97万元（-1.37%），归母净利润-3137.25分（-329.66%）"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "37d686ba6be98ae70522260d",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间信息非法",
+      "reason": "“225年”作为数据发布年份不成立，明显缺失“20”，与全文2025年时间线不符。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 634,
+          "end": 674,
+          "text": "根据曙光数创公众号数据，225年发布我国液冷数据中心市场规模预计突破140亿元；"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "根据曙光数创公众号数据，225年发布我国液冷数据中心市场规模预计突破140亿元；"
+        }
+      ],
+      "spans": [
+        {
+          "start": 634,
+          "end": 674,
+          "text": "根据曙光数创公众号数据，225年发布我国液冷数据中心市场规模预计突破140亿元；"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "1a4d2f30caf725937b690798",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "时间矛盾",
+      "reason": "时间区间写成2028-2023年，终点早于起点，区间方向倒置。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 674,
+          "end": 725,
+          "text": "2028-2023年中国液冷服务器市场年复合增长率将达45.8%，2028年市场规模将达102亿美元。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "2028-2023年中国液冷服务器市场年复合增长率将达45.8%，2028年市场规模将达102亿美元。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 674,
+          "end": 725,
+          "text": "2028-2023年中国液冷服务器市场年复合增长率将达45.8%，2028年市场规模将达102亿美元。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "cc706a94c4374c87bbceb79a",
+      "review_priority": "high"
+    },
+    {
+      "error_type": "属性值缺失错误",
+      "reason": "书名号内为空，引用的白皮书或报告名称缺失。",
+      "status": "needs_review",
+      "evidence": [
+        {
+          "kind": "source_text",
+          "start": 829,
+          "end": 883,
+          "text": "据《》，2017-2020年，东南亚国家数据中心行业市场规模年均复合增长率达15%，预计未来将保持稳定增长。"
+        }
+      ],
+      "detector_id": "model_direct",
+      "validation": "anchored_needs_review",
+      "original_spans": [
+        {
+          "text": "据《》，2017-2020年，东南亚国家数据中心行业市场规模年均复合增长率达15%，预计未来将保持稳定增长。"
+        }
+      ],
+      "spans": [
+        {
+          "start": 829,
+          "end": 883,
+          "text": "据《》，2017-2020年，东南亚国家数据中心行业市场规模年均复合增长率达15%，预计未来将保持稳定增长。"
+        }
+      ],
+      "warnings": [
+        "offset_reanchored_by_unique_exact_text"
+      ],
+      "id": "53727373863eceb76e66c941",
+      "review_priority": "low"
+    }
+  ],
+  "traces": [
+    {
+      "purpose": "text_review.detect",
+      "job_index": 0,
+      "ranges": [
+        [
+          0,
+          1101
+        ]
+      ],
+      "estimated_input_tokens": 5535,
+      "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+      "status": "ok",
+      "runtime_trace": {
+        "model": "deepseek-flash",
+        "purpose": "text_review.detect",
+        "attempt": 0,
+        "previous_attempts": [],
+        "created_at": "2026-10-04T21:13:39.618555+00:00",
+        "request_sha256": "66a0f45247af22842ff85083e436a3afce753462fbc34233ed4035f13c247123",
+        "input_token_estimate": 15446,
+        "estimate_method": "utf8_bytes_upper_bound",
+        "max_output_tokens": 65536,
+        "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+        "price_date": "2026-10-05",
+        "price_valid_until": "2026-10-05T16:00:00Z",
+        "input_cny_per_mtok": "1",
+        "output_cny_per_mtok": "4",
+        "cost_basis": "configured_rate_upper_bound",
+        "thinking": "enabled",
+        "reasoning_effort": "low",
+        "maximum_cny": "0.27759",
+        "status": "ok",
+        "local_endpoint": false,
+        "call_id": "82320b512d7f4c9aa22f4db7e313ce6d",
+        "response_format": "json_object",
+        "response_model": "deepseek-flash",
+        "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+        "finish_reason": "stop",
+        "input_tokens": 3707,
+        "output_tokens": 7034,
+        "usage_source": "provider",
+        "duration_seconds": 28.157858,
+        "cost_cny": "0.031843"
+      }
+    }
+  ],
+  "raw_candidates": [
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "曙光数创()"
+          }
+        ],
+        "reason": "公司名称后括号内股票代码为空，缺少本应披露的证券代码属性值。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [
+          {
+            "text": "2025Q1实现营收1166.97万元（-1.37%），归母净利润-3137.25分（-329.66%）"
+          }
+        ],
+        "reason": "归母净利润金额单位写成“分”，而同报告下文同一数据用“万元”，单位明显错误。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "text": "根据曙光数创公众号数据，225年发布我国液冷数据中心市场规模预计突破140亿元；"
+          }
+        ],
+        "reason": "“225年”作为数据发布年份不成立，明显缺失“20”，与全文2025年时间线不符。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [
+          {
+            "text": "2028-2023年中国液冷服务器市场年复合增长率将达45.8%，2028年市场规模将达102亿美元。"
+          }
+        ],
+        "reason": "时间区间写成2028-2023年，终点早于起点，区间方向倒置。"
+      },
+      "job_index": 0
+    },
+    {
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "spans": [
+          {
+            "text": "据《》，2017-2020年，东南亚国家数据中心行业市场规模年均复合增长率达15%，预计未来将保持稳定增长。"
+          }
+        ],
+        "reason": "书名号内为空，引用的白皮书或报告名称缺失。"
+      },
+      "job_index": 0
+    }
+  ],
+  "rejected_candidates": [],
+  "numeric_index": [
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 44,
+      "end": 97,
+      "text": "2025Q1实现营收1166.97万元（-1.37%），归母净利润-3137.25分（-329.66%）\n",
+      "quantities": [
+        {
+          "value": "1166.97",
+          "unit": "万元",
+          "start": 54,
+          "end": 63
+        },
+        {
+          "value": "-1.37",
+          "unit": "%",
+          "start": 64,
+          "end": 70
+        },
+        {
+          "value": "-329.66",
+          "unit": "%",
+          "start": 87,
+          "end": 95
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 44,
+      "end": 97,
+      "text": "2025Q1实现营收1166.97万元（-1.37%），归母净利润-3137.25分（-329.66%）\n",
+      "quantities": [
+        {
+          "value": "1166.97",
+          "unit": "万元",
+          "start": 54,
+          "end": 63
+        },
+        {
+          "value": "-1.37",
+          "unit": "%",
+          "start": 64,
+          "end": 70
+        },
+        {
+          "value": "-329.66",
+          "unit": "%",
+          "start": 87,
+          "end": 95
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 98,
+      "end": 155,
+      "text": "曙光数创2025Q1实现营收1166.97万元（-1.37%），归母净利-3137.25万元（-329.66%）。",
+      "quantities": [
+        {
+          "value": "1166.97",
+          "unit": "万元",
+          "start": 112,
+          "end": 121
+        },
+        {
+          "value": "-1.37",
+          "unit": "%",
+          "start": 122,
+          "end": 128
+        },
+        {
+          "value": "-3137.25",
+          "unit": "万元",
+          "start": 134,
+          "end": 144
+        },
+        {
+          "value": "-329.66",
+          "unit": "%",
+          "start": 145,
+          "end": 153
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "revenue",
+      "metric_text": "营收",
+      "start": 155,
+      "end": 180,
+      "text": "2024年实现营收5.06亿元（-22.15%）；",
+      "quantities": [
+        {
+          "value": "5.06",
+          "unit": "亿元",
+          "start": 164,
+          "end": 170
+        },
+        {
+          "value": "-22.15",
+          "unit": "%",
+          "start": 171,
+          "end": 178
+        }
+      ],
+      "periods": [
+        "2024年"
+      ],
+      "entity_mentions": []
+    },
+    {
+      "metric": "parent_profit",
+      "metric_text": "归母净利润",
+      "start": 180,
+      "end": 246,
+      "text": "归母净利润6142.44万元（-41.21%），毛利率为30.10%（-1.27pct），净利率为12.13%（-3.94pct）。",
+      "quantities": [
+        {
+          "value": "6142.44",
+          "unit": "万元",
+          "start": 185,
+          "end": 194
+        },
+        {
+          "value": "-41.21",
+          "unit": "%",
+          "start": 195,
+          "end": 202
+        },
+        {
+          "value": "30.10",
+          "unit": "%",
+          "start": 208,
+          "end": 214
+        },
+        {
+          "value": "12.13",
+          "unit": "%",
+          "start": 229,
+          "end": 235
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "gross_margin",
+      "metric_text": "毛利率",
+      "start": 180,
+      "end": 246,
+      "text": "归母净利润6142.44万元（-41.21%），毛利率为30.10%（-1.27pct），净利率为12.13%（-3.94pct）。",
+      "quantities": [
+        {
+          "value": "6142.44",
+          "unit": "万元",
+          "start": 185,
+          "end": 194
+        },
+        {
+          "value": "-41.21",
+          "unit": "%",
+          "start": 195,
+          "end": 202
+        },
+        {
+          "value": "30.10",
+          "unit": "%",
+          "start": 208,
+          "end": 214
+        },
+        {
+          "value": "12.13",
+          "unit": "%",
+          "start": 229,
+          "end": 235
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    },
+    {
+      "metric": "net_margin",
+      "metric_text": "净利率",
+      "start": 180,
+      "end": 246,
+      "text": "归母净利润6142.44万元（-41.21%），毛利率为30.10%（-1.27pct），净利率为12.13%（-3.94pct）。",
+      "quantities": [
+        {
+          "value": "6142.44",
+          "unit": "万元",
+          "start": 185,
+          "end": 194
+        },
+        {
+          "value": "-41.21",
+          "unit": "%",
+          "start": 195,
+          "end": 202
+        },
+        {
+          "value": "30.10",
+          "unit": "%",
+          "start": 208,
+          "end": 214
+        },
+        {
+          "value": "12.13",
+          "unit": "%",
+          "start": 229,
+          "end": 235
+        }
+      ],
+      "periods": [],
+      "entity_mentions": []
+    }
+  ],
+  "coverage": {
+    "complete": true,
+    "total_chars": 1101,
+    "execution_complete": true,
+    "candidate_quality_complete": true,
+    "processed_chars": 1101,
+    "processed_ranges": [
+      [
+        0,
+        1101
+      ]
+    ],
+    "unprocessed_ranges": [],
+    "context_mode": "whole",
+    "model_ran": true,
+    "requested_model": true,
+    "model_complete": true,
+    "rules_complete": false,
+    "rules_processed_chars": 0,
+    "global_linking_complete": true,
+    "truncation_reasons": [],
+    "global_link_strategy": "repeated_known_metric_with_original_sentences",
+    "indexed_metric_mentions": 7,
+    "planned_model_calls": 1,
+    "finished_model_calls": 1,
+    "supported_error_types": [
+      "时间信息非法",
+      "冗余语句",
+      "格式错误",
+      "数值缺失",
+      "属性值缺失错误",
+      "术语误用",
+      "法规引用错误",
+      "模糊语言",
+      "数值单位错误",
+      "金融要素缺失",
+      "语义逻辑矛盾",
+      "时间矛盾",
+      "数值不一致错误",
+      "计算错误",
+      "不一致条款"
+    ],
+    "coverage_note": "处理覆盖描述已运行路径，不代表十五类错误的召回率；规则仅覆盖有限类型。",
+    "external_source_documents_used": false,
+    "token_estimate_method": "cjk_char_plus_ascii_quarter_with_margin",
+    "review_priority_basis": "confirmed=不需要复核; high=确定性规则触发或可数值核对的候选; low=其余待复核提示"
+  },
+  "wall_seconds": 28.183783,
+  "source_content_sha256": "08369ba6bf98d0c1552cc48db2338b1edc909748bb797f8ac74870f394a7742a"
+}

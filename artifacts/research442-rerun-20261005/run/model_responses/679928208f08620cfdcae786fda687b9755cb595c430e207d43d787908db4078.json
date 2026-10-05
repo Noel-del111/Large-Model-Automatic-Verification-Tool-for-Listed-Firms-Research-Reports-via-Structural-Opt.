@@ -1,0 +1,40 @@
+{
+  "content": "{\"errors\": [{\"error_type\": \"时间信息非法\", \"spans\": [{\"text\": \"根据国家统计局数据，近年来我国工业企业应收账款总额保持较快速度增长，2024－2022年末分别为21.65万亿元、23.72万亿元26.06万亿元，年复合增长率为9.71%，应收票据及应收账款的增长与保理业务的快速发展呈同向性；\"}], \"reason\": \"“2024－2022年末”起始年份晚于终止年份，该期间本身不成立。\"}, {\"error_type\": \"数值单位错误\", \"spans\": [{\"text\": \"2024年，商业保理年业务量已超3万美元。\"}], \"reason\": \"商业保理年业务量通常以万亿元或亿元计量，3万美元单位明显错误。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"截至2023年末，存续的商业保理企业达到5467家（其中法人企业5420家、分公司151家），较去年同期的6716家减少了18.60%。\"}], \"reason\": \"法人企业5420家加分公司151家合计5571家，与总数5467家不符。\"}, {\"error_type\": \"计算错误\", \"spans\": [{\"text\": \"应收账款登记笔数为574817笔，较上年同期（425583笔）增长55.07%，占银行、商业保理公司、融资租赁公司三类机构全年登记总量（2234950笔）的25.72%。\"}], \"reason\": \"574817笔较425583笔实际增长约35.07%，并非55.07%。\"}]}",
+  "trace": {
+    "model": "deepseek-flash",
+    "purpose": "text_review.detect",
+    "attempt": 0,
+    "previous_attempts": [],
+    "created_at": "2026-10-04T20:47:25.033612+00:00",
+    "request_sha256": "252dfa5cba625442773abcc5aef0caf7018165f95bf7356dc347f00adf125a23",
+    "input_token_estimate": 15443,
+    "estimate_method": "utf8_bytes_upper_bound",
+    "max_output_tokens": 65536,
+    "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "price_date": "2026-10-05",
+    "price_valid_until": "2026-10-05T16:00:00Z",
+    "input_cny_per_mtok": "1",
+    "output_cny_per_mtok": "4",
+    "cost_basis": "configured_rate_upper_bound",
+    "thinking": "enabled",
+    "reasoning_effort": "low",
+    "maximum_cny": "0.277587",
+    "status": "ok",
+    "local_endpoint": false,
+    "call_id": "d9d2da7eb7124fc8ba8dd6f6ed8f13f8",
+    "response_format": "json_object",
+    "response_model": "deepseek-flash",
+    "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669",
+    "finish_reason": "stop",
+    "input_tokens": 3606,
+    "output_tokens": 5913,
+    "usage_source": "provider",
+    "duration_seconds": 23.505934,
+    "cost_cny": "0.027258"
+  },
+  "cache_request": {
+    "key": "679928208f08620cfdcae786fda687b9755cb595c430e207d43d787908db4078",
+    "purpose": "text_review.detect",
+    "messages_sha256": "252dfa5cba625442773abcc5aef0caf7018165f95bf7356dc347f00adf125a23"
+  }
+}
