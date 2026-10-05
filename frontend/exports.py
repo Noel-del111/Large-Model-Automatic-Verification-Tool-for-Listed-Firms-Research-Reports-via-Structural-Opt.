@@ -65,16 +65,26 @@ def evidence_request_contract(result: dict) -> dict:
     version = result.get("schema_version")
     findings = result.get("findings", [])
     summary = result.get("summary", {})
+    if not isinstance(findings, list) or not isinstance(summary, dict):
+        return {"status": "invalid", "label": "补证字段不符合契约：发现或汇总结构错误",
+                "finding_count": None, "item_count": None, "item_count_source": "invalid"}
+    if any(not isinstance(finding, dict) for finding in findings):
+        return {"status": "invalid", "label": "补证字段不符合契约：finding 必须为对象",
+                "finding_count": None, "item_count": None, "item_count_source": "invalid"}
     present = [("decision" in finding, "evidence_request" in finding) for finding in findings]
     if version == "text-review/1.0":
         return {"status": "not_applicable", "label": "独立文本检测不适用配对补证契约",
                 "finding_count": None, "item_count": None, "item_count_source": "not_applicable"}
-    if version == "1.0.0" and not any(a or b for a, b in present):
+    has_summary_fields = "evidence_requests" in summary or "evidence_request_items" in summary
+    if version == "1.0.0" and not any(a or b for a, b in present) and not has_summary_fields:
         return {"status": "legacy_missing", "label": "旧版结果未提供补证信息",
                 "finding_count": None, "item_count": None, "item_count_source": "not_provided"}
     problems = []
     if version == "1.1.0" and ("evidence_requests" not in summary or "evidence_request_items" not in summary):
         problems.append("1.1.0 汇总缺少补证计数")
+    for key in ("evidence_requests", "evidence_request_items"):
+        if key in summary and (type(summary[key]) is not int or summary[key] < 0):
+            problems.append(f"{key} 必须为非负整数")
     ask_count = item_count = 0
     for index, finding in enumerate(findings, 1):
         has_decision, has_requests = present[index - 1]
@@ -82,7 +92,7 @@ def evidence_request_contract(result: dict) -> dict:
             problems.append(f"第 {index} 条 finding 补证字段不完整")
             continue
         decision, requests = finding.get("decision"), finding.get("evidence_request")
-        if decision not in {"ask", "proceed"} or not isinstance(requests, list):
+        if not isinstance(decision, str) or decision not in {"ask", "proceed"} or not isinstance(requests, list):
             problems.append(f"第 {index} 条 finding 补证字段类型错误")
             continue
         for request_index, request in enumerate(requests, 1):
@@ -90,11 +100,14 @@ def evidence_request_contract(result: dict) -> dict:
             if not isinstance(request, dict) or not _REQUEST_FIELDS.issubset(request):
                 problems.append(prefix + "缺少必需字段")
                 continue
-            if (request.get("doc_role") not in ROLE_LABELS
-                    or request.get("request_type") not in REQUEST_TYPE_LABELS
+            if (not isinstance(request.get("doc_role"), str) or request["doc_role"] not in ROLE_LABELS
+                    or not isinstance(request.get("request_type"), str)
+                    or request["request_type"] not in REQUEST_TYPE_LABELS
                     or not isinstance(request.get("field"), str) or not request["field"]
                     or not isinstance(request.get("reason"), str) or not request["reason"]
+                    or not isinstance(request.get("basis"), (str, type(None)))
                     or request.get("basis") not in {"before", "after", "change", "reported", "unknown", None}
+                    or not isinstance(request.get("scope"), (str, type(None)))
                     or request.get("scope") not in {"consolidated", "parent", "unknown", None}
                     or any(value is not None and not isinstance(value, str)
                            for value in (request.get("period"), request.get("company"), request.get("file")))):
@@ -123,7 +136,9 @@ def evidence_request_contract(result: dict) -> dict:
 def finding_request_view(result: dict, finding: dict) -> dict:
     contract = evidence_request_contract(result)
     if contract["status"] != "available":
-        return {"status": contract["status"], "label": contract["label"], "items": []}
+        raw_items = finding.get("evidence_request") if isinstance(finding, dict) else None
+        items = [item for item in raw_items if isinstance(item, dict)] if isinstance(raw_items, list) else []
+        return {"status": contract["status"], "label": contract["label"], "items": items}
     decision = finding.get("decision")
     items = finding.get("evidence_request", [])
     return {"status": "ask" if decision == "ask" else "proceed",
@@ -138,11 +153,14 @@ def _display(value) -> str:
 def format_evidence_requests(items: list[dict]) -> str:
     lines = []
     for index, item in enumerate(items, 1):
-        fields = [("材料", ROLE_LABELS.get(item.get("doc_role"), _display(item.get("doc_role")))),
+        role = item.get("doc_role")
+        request_type = item.get("request_type")
+        fields = [("材料", ROLE_LABELS.get(role, _display(role)) if isinstance(role, str) else _display(role)),
                   ("字段", _display(item.get("field"))), ("期间", _display(item.get("period"))),
                   ("公司", _display(item.get("company"))), ("调整口径", _display(item.get("basis"))),
                   ("合并范围", _display(item.get("scope"))), ("文件线索", _display(item.get("file"))),
-                  ("请求类型", REQUEST_TYPE_LABELS.get(item.get("request_type"), _display(item.get("request_type")))),
+                  ("请求类型", REQUEST_TYPE_LABELS.get(request_type, _display(request_type))
+                   if isinstance(request_type, str) else _display(request_type)),
                   ("原因", _display(item.get("reason")))]
         lines.append(f"{index}. " + "；".join(f"{key}={value}" for key, value in fields))
     return "\n".join(lines)
@@ -167,7 +185,7 @@ def findings_rows(result: dict, reviews: dict[str, dict]) -> list[list[str]]:
             _location_text(finding.get("evidence", [])),
             finding.get("rule_id", ""),
             request_view["label"],
-            len(request_view["items"]) if request_view["status"] in {"ask", "proceed"} else "未提供",
+            len(request_view["items"]) if request_view["status"] in {"ask", "proceed"} else "未确认",
             format_evidence_requests(request_view["items"]),
             REVIEW_LABELS.get(review.get("status", "unreviewed"), "未复核"),
             review.get("reviewer", ""),
@@ -248,7 +266,7 @@ def _pdf_lines(result: dict, reviews: dict[str, dict]) -> list[str]:
             lines.append(f"  建议值：{row[7]}　规则：{row[10]}")
         lines.append(f"  依据：{row[9]}　复核：{row[14]}")
         request_view = finding_request_view(result, finding)
-        lines.append(f"  补证状态：{request_view['label']}；条目数：{len(request_view['items']) if request_view['status'] in {'ask', 'proceed'} else '未提供'}")
+        lines.append(f"  补证状态：{request_view['label']}；条目数：{len(request_view['items']) if request_view['status'] in {'ask', 'proceed'} else '未确认'}")
         lines.extend("  " + line for line in format_evidence_requests(request_view["items"]).splitlines())
         lines.append("")
     lines.append(f"复核进度：{sum(1 for e in reviews.values() if e.get('status') != 'unreviewed')}/{len(reviews)}")

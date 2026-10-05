@@ -9,7 +9,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "frontend"))
 
-from exports import (evidence_request_contract, finding_request_view, findings_csv_bytes,
+from exports import (evidence_request_contract, finding_request_view, format_evidence_requests, findings_csv_bytes,
                      full_json_bytes, report_md, report_pdf_bytes)
 
 FIXTURES = ROOT / "factcheck" / "examples" / "r09"
@@ -66,13 +66,31 @@ class R09ExportTests(unittest.TestCase):
         item = deepcopy(base); item["summary"]["evidence_request_items"] = 99; mutations.append(item)
         item = deepcopy(base); item["findings"][0]["evidence_request"][0]["request_type"] = "download_now"; mutations.append(item)
         item = deepcopy(base); item["findings"][0]["evidence_request"][0].pop("reason"); mutations.append(item)
+        item = deepcopy(base); item["summary"]["evidence_requests"] = True; mutations.append(item)
+        item = deepcopy(base); item["findings"][0]["decision"] = []; mutations.append(item)
+        item = deepcopy(base); item["findings"][0]["evidence_request"][0]["request_type"] = []; mutations.append(item)
+        item = deepcopy(base); item["findings"][0]["evidence_request"][0]["doc_role"] = []; mutations.append(item)
+        item = deepcopy(base); item["findings"][0]["evidence_request"][0]["basis"] = []; mutations.append(item)
         for result in mutations:
             original = deepcopy(result)
             with self.subTest(result=result):
                 self.assertEqual(evidence_request_contract(result)["status"], "invalid")
                 self.assertIn("不符合契约", report_md(result, {}))
+                view = finding_request_view(result, result["findings"][0])
+                if result["findings"][0].get("evidence_request"):
+                    self.assertTrue(view["items"], "契约异常时仍须保留原始请求供核查")
                 full_json_bytes(result, {})
                 self.assertEqual(result, original)
+
+    def test_review_detail_retains_all_nine_request_fields(self):
+        result = fixture("04_ask_two_periods.json")
+        view = finding_request_view(result, result["findings"][0])
+        text = format_evidence_requests(view["items"])
+        for label in ("材料=", "字段=", "期间=", "公司=", "调整口径=", "合并范围=",
+                      "文件线索=", "请求类型=", "原因="):
+            self.assertIn(label, text)
+        self.assertIn("2024FY", text)
+        self.assertIn("2023FY", text)
 
     def test_special_text_is_safe_and_pdf_is_complete(self):
         result = fixture("03_needs_review.json")

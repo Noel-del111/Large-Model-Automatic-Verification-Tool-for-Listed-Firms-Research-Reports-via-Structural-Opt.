@@ -31,8 +31,8 @@ from yjcheck.pipeline import run_check, verify_artifacts  # noqa: E402
 from assistant import (TraceLog, ask_finding_question,  # noqa: E402
                        ask_report_question, rule_explanation)
 from exports import (ERROR_TYPE_LABELS, REVIEW_LABELS, STATUS_LABELS,  # noqa: E402
-                     REQUEST_TYPE_LABELS, ROLE_LABELS, evidence_request_contract,
-                     finding_request_view, findings_csv_bytes, full_json_bytes,
+                     evidence_request_contract,
+                     finding_request_view, format_evidence_requests, findings_csv_bytes, full_json_bytes,
                      report_md, report_pdf_bytes)
 from highlight import CLAIM_COLOR, SOURCE_COLOR, render_location_image  # noqa: E402
 from review_store import REVIEW_STATUSES, ReviewStore  # noqa: E402
@@ -335,15 +335,10 @@ def evidence_view(result: dict) -> None:
         st.info(request_view["label"])
     else:
         st.caption(request_view["label"] + "。处理提示不是判错状态，也不代表人工已通过。")
-        for index, request in enumerate(request_view["items"], 1):
-            st.markdown(f"**请求 {index} · {REQUEST_TYPE_LABELS.get(request.get('request_type'), request.get('request_type', ''))}**")
-            st.caption(
-                f"材料 {ROLE_LABELS.get(request.get('doc_role'), request.get('doc_role') or '待确认/未指定')}　"
-                f"字段 {request.get('field') or '待确认/未指定'}　公司 {request.get('company') or '待确认/未指定'}　"
-                f"期间 {request.get('period') or '待确认/未指定'}　调整口径 {request.get('basis') or '待确认/未指定'}　"
-                f"合并范围 {request.get('scope') or '待确认/未指定'}")
-            st.markdown(f"原因：{request.get('reason') or '待确认/未指定'}")
-            st.caption(f"文件线索（仅作文字展示，不自动访问）：{request.get('file') or '未指定'}")
+    if request_view["items"]:
+        st.caption("以下为原结果中的请求记录；文件字段只是文字线索，不会自动访问。")
+        for line in format_evidence_requests(request_view["items"]).splitlines():
+            st.text(line)
 
     left, right = st.columns(2)
     with left:
@@ -397,9 +392,10 @@ def review_view(result: dict, check_dir: Path) -> None:
         with st.expander(finding_label(finding), expanded=False):
             request_view = finding_request_view(result, finding)
             st.caption("补证提示：" + request_view["label"])
-            for index, request in enumerate(request_view["items"], 1):
-                st.caption(f"{index}. {REQUEST_TYPE_LABELS.get(request.get('request_type'), request.get('request_type', ''))}；"
-                           f"{request.get('period') or '期间待确认'}；{request.get('reason') or '原因未提供'}")
+            if request_view["items"]:
+                st.caption("原结果请求详情（材料、字段、期间、公司、口径、范围、文件线索、类型和原因）：")
+                for line in format_evidence_requests(request_view["items"]).splitlines():
+                    st.text(line)
             col1, col2 = st.columns([1, 2])
             status = col1.selectbox(
                 "复核结论", REVIEW_STATUSES,
