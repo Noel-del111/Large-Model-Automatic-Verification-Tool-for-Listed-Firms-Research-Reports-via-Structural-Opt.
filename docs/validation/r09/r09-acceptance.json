@@ -1,0 +1,16 @@
+{
+  "fixture": "04_ask_two_periods.json with extended display-only reason",
+  "contract": {
+    "status": "available",
+    "label": "本次核查补证信息可用",
+    "finding_count": 1,
+    "item_count": 2,
+    "item_count_source": "provided"
+  },
+  "pdf_sha256": "f6f11df98d32367d0cb2b0b54dd8b6a7c1b50930ddd017bec2823a00f1575189",
+  "pdf_bytes": 74006,
+  "csv_contains_both_periods": true,
+  "markdown_contains_both_periods": true,
+  "request_file_accessed": false,
+  "note": "Synthetic contract acceptance artifact; not a model-effect result or human sign-off."
+}

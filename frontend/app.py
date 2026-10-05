@@ -31,7 +31,9 @@ from yjcheck.pipeline import run_check, verify_artifacts  # noqa: E402
 from assistant import (TraceLog, ask_finding_question,  # noqa: E402
                        ask_report_question, rule_explanation)
 from exports import (ERROR_TYPE_LABELS, REVIEW_LABELS, STATUS_LABELS,  # noqa: E402
-                     findings_csv_bytes, full_json_bytes, report_md, report_pdf_bytes)
+                     REQUEST_TYPE_LABELS, ROLE_LABELS, evidence_request_contract,
+                     finding_request_view, findings_csv_bytes, full_json_bytes,
+                     report_md, report_pdf_bytes)
 from highlight import CLAIM_COLOR, SOURCE_COLOR, render_location_image  # noqa: E402
 from review_store import REVIEW_STATUSES, ReviewStore  # noqa: E402
 from text_review_view import text_review_page, show_text_report  # noqa: E402
@@ -125,6 +127,17 @@ def overview_view(result: dict, check_dir: Path) -> None:
     cols[3].metric("提取声明", summary.get("claims", 0))
     cols[4].metric("来源事实", summary.get("source_facts", 0))
     cols[5].metric("输入问题", summary.get("input_issues", 0))
+    request_contract = evidence_request_contract(result)
+    if request_contract["status"] == "available":
+        cols = st.columns(2)
+        cols[0].metric("待补证/待澄清发现", request_contract["finding_count"])
+        cols[1].metric("补证/澄清请求条数", request_contract["item_count"])
+        if request_contract["item_count_source"] == "derived_from_complete_lists":
+            st.caption("补证请求条数由旧版结果中已提供的完整请求列表计算；原 JSON 未被倒填。")
+        else:
+            st.caption("以上补证统计来自本次核查原结果，不随人工复核状态改写。")
+    elif request_contract["status"] != "not_applicable":
+        st.warning(request_contract["label"])
     automatic = summary.get("automatic_claims", summary.get("confirmed_error", 0) + summary.get("no_issue", 0))
     st.caption(f"自动判断声明 {automatic} 项；待复核声明 {summary.get('review_claims', summary.get('needs_review', 0))} 项。"
                "全文应核查项尚需独立标注，不能由提取数量推算全文覆盖率。")
@@ -314,6 +327,24 @@ def evidence_view(result: dict) -> None:
     with st.expander("计算过程与规则（calculation）", expanded=False):
         st.json(finding.get("calculation", {}))
 
+    request_view = finding_request_view(result, finding)
+    st.markdown("### 补充证据 / 人工澄清")
+    if request_view["status"] == "invalid":
+        st.error(request_view["label"])
+    elif request_view["status"] == "legacy_missing":
+        st.info(request_view["label"])
+    else:
+        st.caption(request_view["label"] + "。处理提示不是判错状态，也不代表人工已通过。")
+        for index, request in enumerate(request_view["items"], 1):
+            st.markdown(f"**请求 {index} · {REQUEST_TYPE_LABELS.get(request.get('request_type'), request.get('request_type', ''))}**")
+            st.caption(
+                f"材料 {ROLE_LABELS.get(request.get('doc_role'), request.get('doc_role') or '待确认/未指定')}　"
+                f"字段 {request.get('field') or '待确认/未指定'}　公司 {request.get('company') or '待确认/未指定'}　"
+                f"期间 {request.get('period') or '待确认/未指定'}　调整口径 {request.get('basis') or '待确认/未指定'}　"
+                f"合并范围 {request.get('scope') or '待确认/未指定'}")
+            st.markdown(f"原因：{request.get('reason') or '待确认/未指定'}")
+            st.caption(f"文件线索（仅作文字展示，不自动访问）：{request.get('file') or '未指定'}")
+
     left, right = st.columns(2)
     with left:
         st.markdown("**研报侧（声明位置）**")
@@ -364,6 +395,11 @@ def review_view(result: dict, check_dir: Path) -> None:
     for finding in findings:
         current = store.get(finding.get("id", ""))
         with st.expander(finding_label(finding), expanded=False):
+            request_view = finding_request_view(result, finding)
+            st.caption("补证提示：" + request_view["label"])
+            for index, request in enumerate(request_view["items"], 1):
+                st.caption(f"{index}. {REQUEST_TYPE_LABELS.get(request.get('request_type'), request.get('request_type', ''))}；"
+                           f"{request.get('period') or '期间待确认'}；{request.get('reason') or '原因未提供'}")
             col1, col2 = st.columns([1, 2])
             status = col1.selectbox(
                 "复核结论", REVIEW_STATUSES,
