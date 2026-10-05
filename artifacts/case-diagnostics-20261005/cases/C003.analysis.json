@@ -1,0 +1,78 @@
+{
+  "case_id": "C003",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "gold把3）与4）两条AR眼镜重复及中间两个换行标为一个[474,542)实例。",
+  "observed": "原始返回已同时引用两条AR句，定位为[474,507)与[509,542)，并说明相邻重复；候选被完整保留。两个span各自有效，但没有任一个单独包含整个[474,542)，故仍计FN。",
+  "evidence": [
+    {
+      "source": "documents/000543.json#/input/content",
+      "fact": "本例文档输入共3409字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=4ffb571f1931d63db09fb95fb67995d492434225b08cb02f13f960cbc74d1d5a。"
+    },
+    {
+      "source": "requests/000543.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=6fa84b0c67da4be255ba1dcdb12332f101ce866d18c6fc9ceeb1a13c3612cd32，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000543.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=3409，total_chars=3409，execution_complete=true，candidate_quality_complete=false。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000543.json#/gold/errors/1",
+      "fact": "gold[1]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000543:error:0002\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":542,\"original_start\":474,\"original_text\":\"3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\\n\\n4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\",\"start\":474,\"text\":\"3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\\n\\n4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"}],\"type\":\"冗余语句\"}"
+    },
+    {
+      "source": "documents/000543.json#/report/raw_candidates/0",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"冗余语句\",\"spans\":[{\"text\":\"3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"},{\"text\":\"4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"}],\"reason\":\"同一信息在相邻条目中几乎原样重复，属于不必要的冗余表述。\"}"
+    },
+    {
+      "source": "documents/000543.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000543.json#/all_hints/0",
+      "fact": "最终评分提示[0]：{\"error_type\":\"冗余语句\",\"reason\":\"同一信息在相邻条目中几乎原样重复，属于不必要的冗余表述。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":474,\"end\":507,\"text\":\"3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"},{\"kind\":\"source_text\",\"start\":509,\"end\":542,\"text\":\"4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"},{\"text\":\"4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"}],\"spans\":[{\"start\":474,\"end\":507,\"text\":\"3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"},{\"start\":509,\"end\":542,\"text\":\"4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\",\"offset_reanchored_by_unique_exact_text\"],\"id\":\"a8d35a55b31823defb23afc8\",\"review_priority\":\"low\"}"
+    },
+    {
+      "source": "documents/000543.json#/input/content",
+      "fact": "两个原句间仅有[507,509)两个换行；类别与重复关系都已出现在原始候选。"
+    },
+    {
+      "source": "documents/000543.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FN；全篇已分配对=[[3,0],[1,2]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":0,\"gold_index\":1,\"prediction_type\":\"冗余语句\",\"gold_type\":\"冗余语句\",\"same_type\":true,\"gold_scorable\":true,\"contains_all_gold_spans\":false,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "不能归因模型没识别重复，也不是后处理删掉候选。",
+    "不是多位置锚定失败：本条两个带序号的引文均已唯一定位。"
+  ],
+  "conclusion": "此条是可复现的单个gold大span与预测双span覆盖协议不匹配。真人仍需确认双span表达是否完整涵盖同一业务错误，再决定是否作为评分表示差异记录。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "改变评分器允许span并集属于新评测协议，不能回写当前分数。"
+  ],
+  "minimal_validation": {
+    "change": "仅在诊断副本把两条相邻引文及原始换行组成[474,542)连续原文，比较冻结评分器前后结果。",
+    "control": "原双span输出保持不动；另保留两段之间存在有意义正文的样本。",
+    "success_criterion": "内容与类型不变时严格FN可因表示方式变化得到解释；人工确认没有跨入无关事实。",
+    "regression_check": "不得对任意远距离span取包络导致额外gold被错误覆盖。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "已发现重复关系的跨度兼容率",
+    "definition": "已定位并由人工判为同一重复关系的候选中满足冻结gold全跨度包含的数量/该类已审候选总数。",
+    "why_this_case": "分开识别成功与当前评分要求的表示覆盖。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

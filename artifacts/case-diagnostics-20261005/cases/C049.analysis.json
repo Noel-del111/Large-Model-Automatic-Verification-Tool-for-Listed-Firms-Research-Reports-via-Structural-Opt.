@@ -1,0 +1,56 @@
+{
+  "case_id": "C049",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审模糊语言FP为“2024年公司在新能源、电子家电、汽车及交通运输领域产品占比提高约5%。”[913,949)。该批次模糊语言没有正例；该文同段金标类型为语义逻辑矛盾，针对后续“低端化、高附加值”。",
+  "observed": "raw_candidates[4]认为提高约5%可指相对增幅或5个百分点；有效定位后保留needs_review。全文未给此前/之后占比或基数，确实不能从提供文本唯一计算两种解释；这仍不自动等同需修改的实质歧义。",
+  "evidence": [
+    {
+      "source": "documents/000360.json#/input/content",
+      "fact": "原文只有“占比提高约5%”，没有给出变化前后占比以排除其中一种解释。"
+    },
+    {
+      "source": "documents/000360.json#/responses/0/content",
+      "fact": "raw_candidates[4]给出相对提高与百分点提高两种解释。"
+    },
+    {
+      "source": "documents/000360.json#/all_hints/4",
+      "fact": "模糊语言[913,949)，有效保留。"
+    },
+    {
+      "source": "documents/000360.json#/gold/errors/2",
+      "fact": "金标语义矛盾跨度[913,981)覆盖此句及下一句，但类型不同，且关键缺陷可能为下一句低端化。"
+    },
+    {
+      "source": "requests/000360.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1587字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不存在锚定丢失或处理失败。",
+    "不能把空间重叠当同一个业务问题：该候选说变化口径，金标涉及后续语义。",
+    "不能因为该类无正例就说全部FP都是真误报。"
+  ],
+  "conclusion": "这是有可解释口径差异的额外候选，人工应决定该语境是否已有行业约定或是否对判断造成实质影响。优先建立业务歧义裁定标准，不用本例直接下“语言模型不专业”结论。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "占比提高5%的报告惯例是否足以表明百分点；需要具体标注规范。",
+    "两种解释对下游财务判断有多大影响，当前没有给原始占比。"
+  ],
+  "minimal_validation": {
+    "change": "人工在保留上下文的条件下分别写出两种数学解释并判断是否需纠正；必要时核对原数据，不先补基数。",
+    "control": "对照明确“提高5个百分点”和“较原占比提高5%”的两句。",
+    "success_criterion": "明确两种解释是否都合理及是否影响结论，产出可重复的实质歧义标准。",
+    "regression_check": "合理约数和预测不确定措辞不应被等同于业务歧义。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "模糊候选的实质歧义确认率",
+    "definition": "人工认为存在至少两种受原文支持且会改变业务结论的解释的候选比例；单列一般措辞偏好。",
+    "why_this_case": "该类零正例时更需人工辨析，不能只依FP计数调整阈值。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

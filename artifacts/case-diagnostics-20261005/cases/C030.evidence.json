@@ -1,0 +1,154 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000224",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/e803c4beafb18352c8a09a20.json",
+  "all_hints_index": 3,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "术语误用",
+    "reason": "用“收入分别为”接百分数，实指收入同比增速，漏“增速”致指标含义错误。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 553,
+        "end": 626,
+        "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 553,
+        "end": 626,
+        "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "ad180a23a000b6f96e387eda",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C030",
+  "error_type": "术语误用",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000224.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 3,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "术语误用",
+        "reason": "用“收入分别为”接百分数，实指收入同比增速，漏“增速”致指标含义错误。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 553,
+            "end": 626,
+            "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 553,
+            "end": 626,
+            "text": "分季度看，24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%，子板块自上而下差异收窄，酒企分化更多呈现自下而上变化。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "ad180a23a000b6f96e387eda",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 3,
+      "same_type": true,
+      "overlap": false,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000224:error:0004",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1086,
+            "original_start": 1023,
+            "original_text": "2023年/24Q1白酒企业销售费用率分别提升0.17pct/0.15pct，存货周转率分别下滑0.49pct/0.53pct",
+            "start": 1023,
+            "text": "2023年/24Q1白酒企业销售费用率分别提升0.17pct/0.15pct，存货周转率分别下滑0.49pct/0.53pct"
+          }
+        ],
+        "type": "术语误用"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 3,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

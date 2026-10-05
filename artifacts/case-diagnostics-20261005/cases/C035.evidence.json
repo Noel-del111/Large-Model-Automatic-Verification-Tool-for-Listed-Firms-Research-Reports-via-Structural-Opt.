@@ -1,0 +1,119 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000659",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/d8ad40030aaaee899e03609e.json",
+  "all_hints_index": null,
+  "gold_index": 0,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000659:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 667,
+        "original_start": 651,
+        "original_text": "(二)全球本土化生产：从几十年前",
+        "start": 651,
+        "text": "(二)全球本土化生产：从几十年前"
+      }
+    ],
+    "type": "格式错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C035",
+  "error_type": "格式错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000659.json",
+  "related_predictions": [],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000659:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 667,
+            "original_start": 651,
+            "original_text": "(二)全球本土化生产：从几十年前",
+            "start": 651,
+            "text": "(二)全球本土化生产：从几十年前"
+          }
+        ],
+        "type": "格式错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

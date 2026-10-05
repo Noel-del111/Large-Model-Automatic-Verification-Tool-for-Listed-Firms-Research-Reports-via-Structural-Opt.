@@ -1,0 +1,50 @@
+{
+  "case_id": "C058",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "2024年12月32日不是有效公历日期；该日期用于经审计资产的截止日。",
+  "observed": "模型也指出没有32日；最终预测范围[435,509)包含金标[435,467)，detector_ids同时含hybrid.model与verified.calendar，状态confirmed_error，附calendar_date证据。",
+  "evidence": [
+    {
+      "source": "documents/000322.json#/input/content",
+      "fact": "2024年12月32日不是有效公历日期；该日期用于经审计资产的截止日。"
+    },
+    {
+      "source": "documents/000322.json#/all_hints/0",
+      "fact": "模型也指出没有32日；最终预测范围[435,509)包含金标[435,467)，detector_ids同时含hybrid.model与verified.calendar，状态confirmed_error，附calendar_date证据。"
+    },
+    {
+      "source": "cases/C058.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000322.json#/report/raw_candidates/0",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "这是程序确定性验证产生自动确认的正对照，证明宿主可以升级状态。自动确认并非模型输出了“我有信心”，且不能将该日期验证扩展为同句所有金额都已核实。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "原文正确截止日究竟是哪天仍未验证；判日期非法与自动修日期是两项能力。"
+  ],
+  "minimal_validation": {
+    "change": "冻结日历验证路径，作为后续确认策略变更必须保留的回归用例。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；增加闰年2月29日、普通年2月29日、月末边界；同句4.69元的真实性应独立处理。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "增加闰年2月29日、普通年2月29日、月末边界；同句4.69元的真实性应独立处理。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "确定性日期确认准确率",
+    "definition": "人工验证正确的非法日期确认数 / 所有该规则确认数；另统计合法边界日期误确认数。",
+    "why_this_case": "这是程序确定性验证产生自动确认的正对照，证明宿主可以升级状态。自动确认并非模型输出了“我有信心”，且不能将该日期验证扩展为同句所有金额都已核实。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000600",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/fc39b27614f6cda7f1eed1d1.json",
+  "all_hints_index": 0,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "数值不一致错误",
+    "reason": "同一报告对5月建筑业PMI及土木工程建筑业PMI升降方向描述前后矛盾，前文为下降0.9、上升1.4，后文却为回升、下降1.4，数值相反。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 166,
+        "end": 217,
+        "text": "国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。"
+      },
+      {
+        "kind": "source_text",
+        "start": 217,
+        "end": 276,
+        "text": "其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。"
+      },
+      {
+        "kind": "source_text",
+        "start": 357,
+        "end": 484,
+        "text": "周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。"
+      },
+      {
+        "text": "其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。"
+      },
+      {
+        "text": "周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 166,
+        "end": 217,
+        "text": "国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。"
+      },
+      {
+        "start": 217,
+        "end": 276,
+        "text": "其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。"
+      },
+      {
+        "start": 357,
+        "end": 484,
+        "text": "周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text",
+      "offset_reanchored_by_unique_exact_text",
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "07a5581ed5be085dbd0ec492",
+    "review_priority": "high"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C010",
+  "error_type": "数值不一致错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000600.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值不一致错误",
+        "reason": "同一报告对5月建筑业PMI及土木工程建筑业PMI升降方向描述前后矛盾，前文为下降0.9、上升1.4，后文却为回升、下降1.4，数值相反。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 166,
+            "end": 217,
+            "text": "国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。"
+          },
+          {
+            "kind": "source_text",
+            "start": 217,
+            "end": 276,
+            "text": "其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。"
+          },
+          {
+            "kind": "source_text",
+            "start": 357,
+            "end": 484,
+            "text": "周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。"
+          },
+          {
+            "text": "其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。"
+          },
+          {
+            "text": "周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 166,
+            "end": 217,
+            "text": "国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。"
+          },
+          {
+            "start": 217,
+            "end": 276,
+            "text": "其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。"
+          },
+          {
+            "start": 357,
+            "end": 484,
+            "text": "周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text",
+          "offset_reanchored_by_unique_exact_text",
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "07a5581ed5be085dbd0ec492",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000600:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 414,
+            "original_start": 364,
+            "original_text": "5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落",
+            "start": 364,
+            "text": "5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落"
+          }
+        ],
+        "type": "语义逻辑矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000705",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/c5c91ff72a708322ec12dd78.json",
+  "all_hints_index": null,
+  "gold_index": 2,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000705:error:0003",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 282,
+        "original_start": 183,
+        "original_text": "产品采用专利型重组胶原蛋白，搭配透明质酸钠形成“水护盾”，特研双维促愈配方可加速修护表皮屏障、缩短不适周期，同时采用专研医用亲肤膜布，兼具纯净透气与高储液量，能高效导入修愈力，助力肌肤快速恢复稳态。",
+        "start": 183,
+        "text": "产品采用专利型重组胶原蛋白，搭配透明质酸钠形成“水护盾”，特研双维促愈配方可加速修护表皮屏障、缩短不适周期，同时采用专研医用亲肤膜布，兼具纯净透气与高储液量，能高效导入修愈力，助力肌肤快速恢复稳态。"
+      }
+    ],
+    "type": "属性值缺失错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C007",
+  "error_type": "属性值缺失错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000705.json",
+  "related_predictions": [],
+  "related_golds": [
+    {
+      "gold_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000705:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 282,
+            "original_start": 183,
+            "original_text": "产品采用专利型重组胶原蛋白，搭配透明质酸钠形成“水护盾”，特研双维促愈配方可加速修护表皮屏障、缩短不适周期，同时采用专研医用亲肤膜布，兼具纯净透气与高储液量，能高效导入修愈力，助力肌肤快速恢复稳态。",
+            "start": 183,
+            "text": "产品采用专利型重组胶原蛋白，搭配透明质酸钠形成“水护盾”，特研双维促愈配方可加速修护表皮屏障、缩短不适周期，同时采用专研医用亲肤膜布，兼具纯净透气与高储液量，能高效导入修愈力，助力肌肤快速恢复稳态。"
+          }
+        ],
+        "type": "属性值缺失错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "C069",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "金标时间矛盾[861,921)含“统计时间为5月26日0点-16日24点”及后续两个品牌排名句。当前全文4184字符，是补充较长文本对照。",
+  "observed": "raw第0项已注意日期区间，但称末尾16日缺月份、归时间信息非法；最终[842,881)只引用统计时间所在句，类型与金标不同且未覆盖后续排名至921。候选有效保留，无拒绝；不能由全文较长直接解释为没看到此处。",
+  "evidence": [
+    {
+      "source": "documents/000646.json#/gold/errors/2",
+      "fact": "金标时间矛盾[861,921)，跨入日期之后的品牌榜单句。"
+    },
+    {
+      "source": "documents/000646.json#/responses/0/content",
+      "fact": "raw第0项引用“天猫宠物发布…统计时间为5月26日0点-16日24点”，理由是终点缺月份导致区间不成立。"
+    },
+    {
+      "source": "documents/000646.json#/all_hints/0",
+      "fact": "时间信息非法[842,881)，同目标重叠但type/contains两项均不满足。"
+    },
+    {
+      "source": "documents/000646.json#/report/coverage",
+      "fact": "4184/4184字符whole、一次成功调用、无截断或未处理范围。"
+    },
+    {
+      "source": "documents/000646.json#/matched_pairs",
+      "fact": "当前只有法规空名称金标匹配；日期目标未匹配。"
+    },
+    {
+      "source": "requests/000646.json#/requests/0",
+      "fact": "冻结重建请求与历史cache和trace哈希一致；全文4184字符进入whole上下文，执行成功、无未处理范围。属于可验证的请求构造，未留存完整HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不能说模型没注意到该日期区间，raw直接引用且解释了它。",
+    "不是后处理丢弃或定位失败。",
+    "全文长度与本条失分相关性不能证明长度致因，本条已有更直接的类型和范围证据。"
+  ],
+  "conclusion": "目标严格FN由类别与跨度共同阻断。业务上末尾省略月份通常可以继承前月，但若继承5月则终点早于起点；是否意指跨月、起点/终点是否写反需人工裁定。模型“缺月份所以非法”的理由不宜未经审查自动确认。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "正确终点究竟是5月16日、6月16日还是起止倒置，当前无法确定。",
+    "金标为何还包括品牌排名句，它是否是必要证据而非过宽边界。"
+  ],
+  "minimal_validation": {
+    "change": "人工先判日期表达及必要引用边界；离线分别只改类型、只扩span、同时修改两项形成四格对照。",
+    "control": "固定原raw理由、原输入与金标；额外保留合法同月省略月份及明确跨月的正常例。",
+    "success_criterion": "清楚证明哪两个形式条件阻断匹配，同时记录业务解释是否成立；不把扩span算作长文理解提升。",
+    "regression_check": "回归同月日期省略、24点表示日终、跨月期间和无关排名句，避免合法表达误报。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "较长文本FN的已识别与形式失配分解",
+    "definition": "较长文本中的FN按raw是否明确讨论目标问题、类别是否一致、必要证据是否完整分别统计；不以引用出现作为全面理解证据。",
+    "why_this_case": "该例补长度维度但实际直接失分仍是类型与跨度，防止把长度当根因。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

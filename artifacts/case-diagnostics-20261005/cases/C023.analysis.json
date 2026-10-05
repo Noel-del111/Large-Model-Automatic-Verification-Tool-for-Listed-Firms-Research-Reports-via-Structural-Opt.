@@ -1,0 +1,80 @@
+{
+  "case_id": "C023",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应审查现代通信行业估值基期“216年至今”的年份表达，并在时间非法与格式错误之间采用统一规则。",
+  "observed": "raw[2]定位862:913整句，明确说216年年份格式异常并推测应为2016年，标签格式错误；gold893:913时间信息非法。有效候选覆盖gold但类型不同，严格FN。",
+  "evidence": [
+    {
+      "source": "documents/000242.json#/input/content",
+      "fact": "本例文档输入共1144字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=26ec3d4542072a7250a6804d2ac9c1ad220d4b6bf0b41e6e6c7ffa71b598c038。"
+    },
+    {
+      "source": "requests/000242.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=ef7e833344d109cc82f9024a5b15951e2d956aa45d968eca5691cac2c9984f5f，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000242.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1144，total_chars=1144，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000242.json#/gold/errors/3",
+      "fact": "gold[3]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000242:error:0004\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":913,\"original_start\":893,\"original_text\":\"低于216年至今的历史均值35.67倍。\",\"start\":893,\"text\":\"低于216年至今的历史均值35.67倍。\"}],\"type\":\"时间信息非法\"}"
+    },
+    {
+      "source": "documents/000242.json#/report/raw_candidates/2",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"从估值情况来看，SW通信行业PE（TTM）当前为18.26倍，低于216年至今的历史均值35.67倍。\"}],\"reason\":\"年份“216年”不符合四位年份格式，应为2016年。\"}"
+    },
+    {
+      "source": "documents/000242.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000242.json#/all_hints/2",
+      "fact": "最终评分提示[2]：{\"error_type\":\"格式错误\",\"reason\":\"年份“216年”不符合四位年份格式，应为2016年。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":862,\"end\":913,\"text\":\"从估值情况来看，SW通信行业PE（TTM）当前为18.26倍，低于216年至今的历史均值35.67倍。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"从估值情况来看，SW通信行业PE（TTM）当前为18.26倍，低于216年至今的历史均值35.67倍。\"}],\"spans\":[{\"start\":862,\"end\":913,\"text\":\"从估值情况来看，SW通信行业PE（TTM）当前为18.26倍，低于216年至今的历史均值35.67倍。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"a6276c6af19f19f3cc8cae82\",\"review_priority\":\"low\"}"
+    },
+    {
+      "source": "documents/000242.json#/input/content",
+      "fact": "原文是SW通信行业PE（TTM）当前18.26倍，低于216年至今历史均值35.67倍。当前语境使年份可疑，但原文不含可证明应为2016年的校验值。"
+    },
+    {
+      "source": "documents/000242.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FN；全篇已分配对=[[3,0],[1,1],[0,2]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":2,\"gold_index\":3,\"prediction_type\":\"格式错误\",\"gold_type\":\"时间信息非法\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "年份216已被raw明确讨论，不能计作完全没有检查时间。",
+    "“所有年份必须四位”不是可靠通用规则；公历216年本身并非不存在。",
+    "把216改成2016是候选修复假设，不是已核实的原始数据。"
+  ],
+  "conclusion": "可确认该年份疑点已识别，严格失分来自格式/时间非法分类差异；模型还给了未经证实的2016年修正。人工需要同时签核类别和可接受的修复确定性。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "原始历史估值序列起始年份待查，不能自动填2016。",
+    "时间非法是否包含明显不合报告语境但历法合法的年份，需要人工类别规范。"
+  ],
+  "minimal_validation": {
+    "change": "人审先只判断年份是否与现代行业统计语境不相容及适用类别；将具体修复值单列为未确认，离线重分类验证。",
+    "control": "比较合法古代年份、现代财务基期漏位和非时间数字排版错误三个对照。",
+    "success_criterion": "分类有明确边界；系统指出可疑年份但不把2016当作确定事实。",
+    "regression_check": "保持历史年份和合法短年份不被“四位数字”规则误杀。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "年份疑点修复证据率",
+    "definition": "分母为模型建议具体替换年份的候选；分子为替换年份有原文或经人工核验来源支持者；另外在已识别疑点集上统计时间/格式类型一致率。",
+    "why_this_case": "本例检测存在，但标签和未经证明的替代年份要分开审计。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

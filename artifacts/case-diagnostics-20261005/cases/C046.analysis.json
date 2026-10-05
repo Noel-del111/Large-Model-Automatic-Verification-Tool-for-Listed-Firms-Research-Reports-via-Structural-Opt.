@@ -1,0 +1,56 @@
+{
+  "case_id": "C046",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审金融要素缺失FP为“投资评级\n\n公司借助科技化手段，引领综合实力持续提升。”[397,424)。该文金标金融缺失位于开头财务段[60,130)，并未标该标题。",
+  "observed": "raw_candidates[11]认为明确投资评级标题下缺评级结果；全文526字符从此标题至风险提示确无买入/增持等具体评级，同时大量句子在“加权”“扣非归母净利”“毛”“综述，公司以精细”处截断。最终引用有效保留needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000368.json#/input/content",
+      "fact": "投资评级标题后为业务描述，随后“综述，公司以精细”结束，再到风险提示，没有具体评级。文本多处已经残缺。"
+    },
+    {
+      "source": "documents/000368.json#/responses/0/content",
+      "fact": "raw_candidates[11]针对标题承诺的评级结果缺失。"
+    },
+    {
+      "source": "documents/000368.json#/all_hints/11",
+      "fact": "[397,424)有效锚定的金融要素缺失。"
+    },
+    {
+      "source": "documents/000368.json#/gold/errors/2",
+      "fact": "唯一同类金标在[60,130)，与本候选不相交；不得靠同类型硬配。"
+    },
+    {
+      "source": "requests/000368.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；526字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是本候选没定位到原文。",
+    "请求完整覆盖526字符不等于源研报完整；该输入自身可能截断。",
+    "不能将这个独立FP和C047同文FN视作同一个错误实例。"
+  ],
+  "conclusion": "当前片段确实没有标题所承诺的评级，AI初判值得人工核实；但原始全文是否缺失、基准是否漏标、以及是否应报告输入不完整而非文档错误，均不能从该片段确认。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "本短文本是否是上游摘录损坏，标题与正文是否错接。",
+    "比赛检查对象是完整研报还是提供的片段，这决定“缺失”的可判定性。"
+  ],
+  "minimal_validation": {
+    "change": "人工取得该份原始文本/研报对照评级段，确认缺失来自原文还是输入制作；当前阶段只登记事实，不自动补评级。",
+    "control": "同一已残缺片段与完整原文作为成对证据，保留原模型回放。",
+    "success_criterion": "把源文缺失、输入丢失、金标未标和误报明确区分。",
+    "regression_check": "测试只摘录正文而无评级义务的样本，避免每段没评级都报错。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "标题承诺字段的可判定缺失率",
+    "definition": "有明确字段/标题必要性且确认输入完整的实例中，真正缺失的字段比例；输入完整性未知者单列。",
+    "why_this_case": "本例需要先判断材料完整性，追加财务RAG不能代替原文核实。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

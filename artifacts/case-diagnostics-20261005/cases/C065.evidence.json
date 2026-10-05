@@ -1,0 +1,64 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000160",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/81d3c21103427ff44d59b425.json",
+  "all_hints_index": null,
+  "gold_index": 2,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000160:error:0003",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 402,
+        "original_start": 360,
+        "original_text": "第三阵营（30-50亿）企业30家，销售额均值38.4亿元。第四阵营企业为13家，。",
+        "start": 360,
+        "text": "第三阵营（30-50亿）企业30家，销售额均值38.4亿元。第四阵营企业为13家，。"
+      }
+    ],
+    "type": "金融要素缺失"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C065",
+  "error_type": "金融要素缺失",
+  "cohort": "supplemental",
+  "document_ref": "documents/000160.json",
+  "related_predictions": [],
+  "related_golds": [
+    {
+      "gold_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000160:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 402,
+            "original_start": 360,
+            "original_text": "第三阵营（30-50亿）企业30家，销售额均值38.4亿元。第四阵营企业为13家，。",
+            "start": 360,
+            "text": "第三阵营（30-50亿）企业30家，销售额均值38.4亿元。第四阵营企业为13家，。"
+          }
+        ],
+        "type": "金融要素缺失"
+      }
+    }
+  ],
+  "scoring_checks": [],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

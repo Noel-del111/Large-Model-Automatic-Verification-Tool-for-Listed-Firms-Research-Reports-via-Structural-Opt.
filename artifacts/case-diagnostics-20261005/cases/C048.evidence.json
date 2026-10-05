@@ -1,0 +1,101 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000516",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/089c6cf045804043be7308ba.json",
+  "all_hints_index": null,
+  "gold_index": 4,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000516:error:0005",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 1286,
+        "original_start": 1264,
+        "original_text": "风险提示：药物临床研发失败、药物安全性风险、",
+        "start": 1264,
+        "text": "风险提示：药物临床研发失败、药物安全性风险、"
+      }
+    ],
+    "type": "金融要素缺失"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C048",
+  "error_type": "金融要素缺失",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000516.json",
+  "related_predictions": [],
+  "related_golds": [
+    {
+      "gold_index": 4,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000516:error:0005",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1286,
+            "original_start": 1264,
+            "original_text": "风险提示：药物临床研发失败、药物安全性风险、",
+            "start": 1264,
+            "text": "风险提示：药物临床研发失败、药物安全性风险、"
+          }
+        ],
+        "type": "金融要素缺失"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

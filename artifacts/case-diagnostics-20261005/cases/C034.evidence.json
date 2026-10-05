@@ -1,0 +1,122 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000439",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/96a3497e2e843ddd4bbf06a4.json",
+  "all_hints_index": 0,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "格式错误",
+    "reason": "“34.18%%”使用了两个百分号，不符合百分比数值的规范格式，应为“34.18%”。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 829,
+        "end": 905,
+        "text": "公司变频白色家电营收2.72亿元（YoY+34.18%%），公司与美的集团就美垦半导体股权转让达成协议，收购美垦后公司IPM在家电领域份额有望持续提升。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "公司变频白色家电营收2.72亿元（YoY+34.18%%），公司与美的集团就美垦半导体股权转让达成协议，收购美垦后公司IPM在家电领域份额有望持续提升。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 829,
+        "end": 905,
+        "text": "公司变频白色家电营收2.72亿元（YoY+34.18%%），公司与美的集团就美垦半导体股权转让达成协议，收购美垦后公司IPM在家电领域份额有望持续提升。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "0a62149c68007266e5e40f00",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C034",
+  "error_type": "格式错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000439.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "格式错误",
+        "reason": "“34.18%%”使用了两个百分号，不符合百分比数值的规范格式，应为“34.18%”。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 829,
+            "end": 905,
+            "text": "公司变频白色家电营收2.72亿元（YoY+34.18%%），公司与美的集团就美垦半导体股权转让达成协议，收购美垦后公司IPM在家电领域份额有望持续提升。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "公司变频白色家电营收2.72亿元（YoY+34.18%%），公司与美的集团就美垦半导体股权转让达成协议，收购美垦后公司IPM在家电领域份额有望持续提升。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 829,
+            "end": 905,
+            "text": "公司变频白色家电营收2.72亿元（YoY+34.18%%），公司与美的集团就美垦半导体股权转让达成协议，收购美垦后公司IPM在家电领域份额有望持续提升。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "0a62149c68007266e5e40f00",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

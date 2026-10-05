@@ -1,0 +1,79 @@
+{
+  "case_id": "C010",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应识别前文建筑PMI下降0.9、土木PMI上升1.4与周观点“建筑PMI回升、土木下降1.4”的方向冲突，并按约定分类。",
+  "observed": "raw[0]明确比较这两组同一指标方向，三段均完整锚定并保留needs_review；周观点段覆盖gold[1]，但预测“数值不一致错误”、gold“语义逻辑矛盾”，故严格FP伴对应FN。",
+  "evidence": [
+    {
+      "source": "documents/000600.json#/input/content",
+      "fact": "本例文档输入共1238字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=bbff71dc0723d00d23d6c9869fd596a2f34dd9b4bf245a58d1894c69731ba7ba。"
+    },
+    {
+      "source": "requests/000600.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=63ff27e71eee53d104ca31cf2209944ffd8e18ea59f5842242766107618374f7，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000600.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1238，total_chars=1238，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000600.json#/gold/errors/1",
+      "fact": "gold[1]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000600:error:0002\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":414,\"original_start\":364,\"original_text\":\"5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落\",\"start\":364,\"text\":\"5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落\"}],\"type\":\"语义逻辑矛盾\"}"
+    },
+    {
+      "source": "documents/000600.json#/report/raw_candidates/0",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。\"},{\"text\":\"其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。\"},{\"text\":\"周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。\"}],\"reason\":\"同一报告对5月建筑业PMI及土木工程建筑业PMI升降方向描述前后矛盾，前文为下降0.9、上升1.4，后文却为回升、下降1.4，数值相反。\"}"
+    },
+    {
+      "source": "documents/000600.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000600.json#/all_hints/0",
+      "fact": "最终评分提示[0]：{\"error_type\":\"数值不一致错误\",\"reason\":\"同一报告对5月建筑业PMI及土木工程建筑业PMI升降方向描述前后矛盾，前文为下降0.9、上升1.4，后文却为回升、下降1.4，数值相反。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":166,\"end\":217,\"text\":\"国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。\"},{\"kind\":\"source_text\",\"start\":217,\"end\":276,\"text\":\"其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。\"},{\"kind\":\"source_text\",\"start\":357,\"end\":484,\"text\":\"周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。\"},{\"text\":\"其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。\"},{\"text\":\"周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。\"}],\"spans\":[{\"start\":166,\"end\":217,\"text\":\"国家统计局发布5月PMI数据：建筑业商务活动指数为51.0%，比上月下降0.9个百分点，扩张有所放缓。\"},{\"start\":217,\"end\":276,\"text\":\"其中，土木工程建筑业商务活动指数为62.3%，比上月上升1.4个百分点，连续两个月回升，反映基建相关工程项目施工加快。\"},{\"start\":357,\"end\":484,\"text\":\"周观点：（1）5月建筑PMI环比继续回升，其中土木工程建筑业商务活动指数比上月下降1.4个百分点，已连续两个月回落，反映基建相关工程项目施工加快，同时看到新订单指数环比有所回升，反应项目预期有所改善，后续稳增长政策发力的效果推动的实物量落地仍需重点关注。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\",\"offset_reanchored_by_unique_exact_text\",\"offset_reanchored_by_unique_exact_text\"],\"id\":\"07a5581ed5be085dbd0ec492\",\"review_priority\":\"high\"}"
+    },
+    {
+      "source": "documents/000600.json#/input/content",
+      "fact": "建筑业商务活动指数51.0%，比上月下降0.9个百分点；土木工程指数62.3%，比上月上升1.4个百分点。后文却写建筑PMI回升、土木下降1.4并连续回落。两种PMI须各自配对。"
+    },
+    {
+      "source": "documents/000600.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[2,0],[1,2]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":0,\"gold_index\":1,\"prediction_type\":\"数值不一致错误\",\"gold_type\":\"语义逻辑矛盾\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "方向冲突已在raw reason中写明，不能归因为模型未阅读后半段。",
+    "所有引用可定位且包含gold，锚点修复无法解决本例类型门槛。",
+    "两指标数值不能相互相减来制造计算错误；本例比较的是各指标前后方向。"
+  ],
+  "conclusion": "本条主要是类型边界失配：异常关系已被识别，严格匹配因数值不一致/语义逻辑标签不同而失败。需人工定清方向变化文字和有符号变化量归属哪个主类。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "尚无人工签核的类别优先级规则；不能仅因为gold标签存在就宣称模型业务判断错。"
+  ],
+  "minimal_validation": {
+    "change": "请两名人审独立给同一异常分类并解释主类边界，形成一条方向冲突判例；在离线副本单独检验重分类影响。",
+    "control": "保持候选原文、理由和跨度不变，只比较原标签与人工裁定标签。",
+    "success_criterion": "人工对类别达成明确裁定；重分类后是否严格匹配可机械复现，识别与分类得分分别报告。",
+    "regression_check": "检查正负数值矛盾、方向措辞矛盾和不同指标并列三个对照，防止一律划为语义逻辑。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "已识别异常的类型一致率",
+    "definition": "分母为人工确认已识别同一异常且证据覆盖有效的预测-gold对；分子为主类一致对，另输出数值不一致→语义逻辑的混淆计数。",
+    "why_this_case": "本例候选召回存在但严格分类不通过，需要与真正没发现异常分开。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

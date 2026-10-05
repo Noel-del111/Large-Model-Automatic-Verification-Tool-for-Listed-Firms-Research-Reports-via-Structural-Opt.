@@ -1,0 +1,200 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000527",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/eadbc21dba5195b65d4c3ac5.json",
+  "all_hints_index": 3,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "属性值缺失错误",
+    "reason": "列举两个指数却给出三个跌幅数值，缺少第三个指数名称，非数值属性缺失。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 214,
+        "end": 270,
+        "text": "国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 214,
+        "end": 270,
+        "text": "国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "f6dd66fc91de2e8d36bb686a",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C005",
+  "error_type": "属性值缺失错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000527.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 3,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "reason": "列举两个指数却给出三个跌幅数值，缺少第三个指数名称，非数值属性缺失。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 214,
+            "end": 270,
+            "text": "国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 214,
+            "end": 270,
+            "text": "国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "f6dd66fc91de2e8d36bb686a",
+        "review_priority": "low"
+      }
+    },
+    {
+      "all_hints_index": 4,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "属性值缺失错误",
+        "reason": "净利润前五列举中双顿号处缺少一家券商名称，非数值属性为空。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 653,
+            "end": 722,
+            "text": "净利润前五的券商分别是国泰海通（125.09亿元）、、华泰证券（36.43亿元）、中国银河（30.16亿元）、广发证券（29.70亿元）。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "净利润前五的券商分别是国泰海通（125.09亿元）、、华泰证券（36.43亿元）、中国银河（30.16亿元）、广发证券（29.70亿元）。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 653,
+            "end": 722,
+            "text": "净利润前五的券商分别是国泰海通（125.09亿元）、、华泰证券（36.43亿元）、中国银河（30.16亿元）、广发证券（29.70亿元）。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "691592d6918983e73ac214ec",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000527:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 270,
+            "original_start": 214,
+            "original_text": "国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。",
+            "start": 214,
+            "text": "国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。"
+          }
+        ],
+        "type": "数值不一致错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

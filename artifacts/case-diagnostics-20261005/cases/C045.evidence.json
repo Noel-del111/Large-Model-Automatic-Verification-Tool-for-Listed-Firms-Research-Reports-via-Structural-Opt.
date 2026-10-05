@@ -1,0 +1,154 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000360",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/6b1553121a4808c9485b4ae4.json",
+  "all_hints_index": 5,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "金融要素缺失",
+    "reason": "标题明确称周转率水平提升，但正文未给出任何周转率数据或变化依据。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 763,
+        "end": 780,
+        "text": "产品结构不断改善，周转率水平提升。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "产品结构不断改善，周转率水平提升。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 763,
+        "end": 780,
+        "text": "产品结构不断改善，周转率水平提升。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "5f973d0c85ff05539b8aed05",
+    "review_priority": "high"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C045",
+  "error_type": "金融要素缺失",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000360.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 5,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "金融要素缺失",
+        "reason": "标题明确称周转率水平提升，但正文未给出任何周转率数据或变化依据。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 763,
+            "end": 780,
+            "text": "产品结构不断改善，周转率水平提升。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "产品结构不断改善，周转率水平提升。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 763,
+            "end": 780,
+            "text": "产品结构不断改善，周转率水平提升。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "5f973d0c85ff05539b8aed05",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 3,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000360:error:0004",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 799,
+            "original_start": 763,
+            "original_text": "产品结构不断改善，周转率水平提升。公司不断优化产品结构，扩大产品市占率。",
+            "start": 763,
+            "text": "产品结构不断改善，周转率水平提升。公司不断优化产品结构，扩大产品市占率。"
+          }
+        ],
+        "type": "术语误用"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 5,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

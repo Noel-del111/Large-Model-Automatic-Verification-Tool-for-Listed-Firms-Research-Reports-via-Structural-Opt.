@@ -1,0 +1,172 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000654",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/6ffa24b3b1c69c151cb751f7.json",
+  "all_hints_index": 1,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "法规引用错误",
+    "reason": "香港立法会三读通过《》，书名号内法规名称空缺，法律文件引用不完整。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 891,
+        "end": 989,
+        "text": "国内层面，5月21日香港立法会正式三读通过《》，预计今年底前，机构可向香港金融管理局申请成为合规的稳定币发行商，预计稳定币发展有望提速，众安银行布局领先有望深度受益，众安持股众安银行43.43%。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "国内层面，5月21日香港立法会正式三读通过《》，预计今年底前，机构可向香港金融管理局申请成为合规的稳定币发行商，预计稳定币发展有望提速，众安银行布局领先有望深度受益，众安持股众安银行43.43%。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 891,
+        "end": 989,
+        "text": "国内层面，5月21日香港立法会正式三读通过《》，预计今年底前，机构可向香港金融管理局申请成为合规的稳定币发行商，预计稳定币发展有望提速，众安银行布局领先有望深度受益，众安持股众安银行43.43%。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "4253c08a48efd57d67fa8f67",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C052",
+  "error_type": "法规引用错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000654.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "法规引用错误",
+        "reason": "香港立法会三读通过《》，书名号内法规名称空缺，法律文件引用不完整。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 891,
+            "end": 989,
+            "text": "国内层面，5月21日香港立法会正式三读通过《》，预计今年底前，机构可向香港金融管理局申请成为合规的稳定币发行商，预计稳定币发展有望提速，众安银行布局领先有望深度受益，众安持股众安银行43.43%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "国内层面，5月21日香港立法会正式三读通过《》，预计今年底前，机构可向香港金融管理局申请成为合规的稳定币发行商，预计稳定币发展有望提速，众安银行布局领先有望深度受益，众安持股众安银行43.43%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 891,
+            "end": 989,
+            "text": "国内层面，5月21日香港立法会正式三读通过《》，预计今年底前，机构可向香港金融管理局申请成为合规的稳定币发行商，预计稳定币发展有望提速，众安银行布局领先有望深度受益，众安持股众安银行43.43%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "4253c08a48efd57d67fa8f67",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": false,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000654:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 914,
+            "original_start": 896,
+            "original_text": "5月21日香港立法会正式三读通过《》",
+            "start": 896,
+            "text": "5月21日香港立法会正式三读通过《》"
+          }
+        ],
+        "type": "属性值缺失错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 5,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000543",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/377cc327d3deb9c10a4f38e5.json",
+  "all_hints_index": null,
+  "gold_index": 1,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000543:error:0002",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 542,
+        "original_start": 474,
+        "original_text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\n\n4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。",
+        "start": 474,
+        "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\n\n4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+      }
+    ],
+    "type": "冗余语句"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C003",
+  "error_type": "冗余语句",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000543.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "冗余语句",
+        "reason": "同一信息在相邻条目中几乎原样重复，属于不必要的冗余表述。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 474,
+            "end": 507,
+            "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          },
+          {
+            "kind": "source_text",
+            "start": 509,
+            "end": 542,
+            "text": "4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          },
+          {
+            "text": "4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 474,
+            "end": 507,
+            "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          },
+          {
+            "start": 509,
+            "end": 542,
+            "text": "4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text",
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "a8d35a55b31823defb23afc8",
+        "review_priority": "low"
+      }
+    },
+    {
+      "all_hints_index": 4,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [],
+        "original_spans": [
+          {
+            "text": "4）TCL与阿里云宣布达成全栈AI战略合作。"
+          },
+          {
+            "text": "TCL与阿里云宣布达成全栈AI战略合作。"
+          }
+        ],
+        "reason": "同一战略合作信息在同一段落中重复出现，未增加新内容。",
+        "status": "needs_review",
+        "invalid_anchor": true,
+        "validation": "anchor_rejected",
+        "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+        "review_hint_only": true
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000543:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 542,
+            "original_start": 474,
+            "original_text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\n\n4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。",
+            "start": 474,
+            "text": "3）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。\n\n4）AR眼镜市场热度持续回升，带动上游近眼显示项目的投资热度上升。"
+          }
+        ],
+        "type": "冗余语句"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 1,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

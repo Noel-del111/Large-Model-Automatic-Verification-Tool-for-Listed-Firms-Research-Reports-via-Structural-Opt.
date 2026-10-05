@@ -1,0 +1,130 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000250",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/3d0fd3373fc032677a21bb09.json",
+  "all_hints_index": null,
+  "gold_index": 1,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000250:error:0002",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 727,
+        "original_start": 673,
+        "original_text": "2024年五一档（5.1-5.5）总票房为15.19亿。档期内总观影人次3757.9万，总场次240.5亿场",
+        "start": 673,
+        "text": "2024年五一档（5.1-5.5）总票房为15.19亿。档期内总观影人次3757.9万，总场次240.5亿场"
+      }
+    ],
+    "type": "数值单位错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C016",
+  "error_type": "数值单位错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000250.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "数值单位错误",
+        "reason": "总场次用“亿场”作单位，单位量纲明显错误，应为万场等级。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 701,
+            "end": 745,
+            "text": "档期内总观影人次3757.9万，总场次240.5亿场，刷新了中国影史五一档总场次数纪录。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "档期内总观影人次3757.9万，总场次240.5亿场，刷新了中国影史五一档总场次数纪录。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 701,
+            "end": 745,
+            "text": "档期内总观影人次3757.9万，总场次240.5亿场，刷新了中国影史五一档总场次数纪录。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "e9b08a94fb6e52220ef14a9c",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000250:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 727,
+            "original_start": 673,
+            "original_text": "2024年五一档（5.1-5.5）总票房为15.19亿。档期内总观影人次3757.9万，总场次240.5亿场",
+            "start": 673,
+            "text": "2024年五一档（5.1-5.5）总票房为15.19亿。档期内总观影人次3757.9万，总场次240.5亿场"
+          }
+        ],
+        "type": "数值单位错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

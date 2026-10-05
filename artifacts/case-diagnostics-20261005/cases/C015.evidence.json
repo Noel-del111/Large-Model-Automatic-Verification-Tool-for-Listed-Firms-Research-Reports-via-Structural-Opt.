@@ -1,0 +1,104 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000218",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/7b4ac7481d164a758da91945.json",
+  "all_hints_index": null,
+  "gold_index": 0,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000218:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 280,
+        "original_start": 239,
+        "original_text": "广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。",
+        "start": 239,
+        "text": "广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。"
+      }
+    ],
+    "type": "数值单位错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C015",
+  "error_type": "数值单位错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000218.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "数值单位错误",
+        "spans": [],
+        "original_spans": [
+          {
+            "text": "截至5月10日，广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。"
+          }
+        ],
+        "reason": "澳洲煤库提价单位写成“万元/吨”，与同段印尼煤的“元/吨”及周环比涨幅量级矛盾，应为“元/吨”。",
+        "status": "needs_review",
+        "invalid_anchor": true,
+        "validation": "anchor_rejected",
+        "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+        "review_hint_only": true
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000218:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 280,
+            "original_start": 239,
+            "original_text": "广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。",
+            "start": 239,
+            "text": "广州港澳洲煤(Q5500)库提价971.30万元/吨，周环比上涨14.00元/吨。"
+          }
+        ],
+        "type": "数值单位错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000368",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/dead84e9f34fede796b202d1.json",
+  "all_hints_index": 8,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "模糊语言",
+    "reason": "“亮25%”缺字，无法明确业务数据增长的具体内容和口径。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 424,
+        "end": 444,
+        "text": "24年业务数据亮25%，超行业平均增速；"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "24年业务数据亮25%，超行业平均增速；"
+      }
+    ],
+    "spans": [
+      {
+        "start": 424,
+        "end": 444,
+        "text": "24年业务数据亮25%，超行业平均增速；"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "49e516315c9694d8d5d89a1e",
+    "review_priority": "low"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C050",
+  "error_type": "模糊语言",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000368.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 8,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "模糊语言",
+        "reason": "“亮25%”缺字，无法明确业务数据增长的具体内容和口径。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 424,
+            "end": 444,
+            "text": "24年业务数据亮25%，超行业平均增速；"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "24年业务数据亮25%，超行业平均增速；"
+          }
+        ],
+        "spans": [
+          {
+            "start": 424,
+            "end": 444,
+            "text": "24年业务数据亮25%，超行业平均增速；"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "49e516315c9694d8d5d89a1e",
+        "review_priority": "low"
+      }
+    },
+    {
+      "all_hints_index": 9,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "模糊语言",
+        "reason": "“小4.9%”缺字，无法确定是下降、减少还是其他变化。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 444,
+            "end": 457,
+            "text": "单票收入较去年小4.9%；"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "单票收入较去年小4.9%；"
+          }
+        ],
+        "spans": [
+          {
+            "start": 444,
+            "end": 457,
+            "text": "单票收入较去年小4.9%；"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "44d70eadf4431fb87e8f804d",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [],
+  "scoring_checks": [
+    {
+      "all_hints_index": 8,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 8,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 8,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

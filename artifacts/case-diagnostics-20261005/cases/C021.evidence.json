@@ -1,0 +1,203 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000562",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/04d3e9c76a548e8265a778f9.json",
+  "all_hints_index": 0,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "时间信息非法",
+    "spans": [
+      {
+        "start": 676,
+        "end": 727,
+        "text": "倾销调查期为2024年1月1日至2024年13月1日，损害调查期为2021年1月1日至倾销调查期结束。"
+      }
+    ],
+    "reason": "该年月日不是有效公历日期。",
+    "status": "confirmed_error",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 692,
+        "end": 702,
+        "text": "2024年13月1日"
+      },
+      {
+        "kind": "deterministic",
+        "check": "calendar_date",
+        "year": 2024,
+        "month": 13,
+        "day": 1
+      }
+    ],
+    "detector_id": "verified.calendar",
+    "validation": "deterministic",
+    "verification_spans": [
+      {
+        "start": 692,
+        "end": 702,
+        "text": "2024年13月1日"
+      }
+    ],
+    "id": "c743d25c6d066d4b51876f0e",
+    "review_priority": "confirmed"
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C021",
+  "error_type": "时间信息非法",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000562.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "时间信息非法",
+        "spans": [
+          {
+            "start": 676,
+            "end": 727,
+            "text": "倾销调查期为2024年1月1日至2024年13月1日，损害调查期为2021年1月1日至倾销调查期结束。"
+          }
+        ],
+        "reason": "该年月日不是有效公历日期。",
+        "status": "confirmed_error",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 692,
+            "end": 702,
+            "text": "2024年13月1日"
+          },
+          {
+            "kind": "deterministic",
+            "check": "calendar_date",
+            "year": 2024,
+            "month": 13,
+            "day": 1
+          }
+        ],
+        "detector_id": "verified.calendar",
+        "validation": "deterministic",
+        "verification_spans": [
+          {
+            "start": 692,
+            "end": 702,
+            "text": "2024年13月1日"
+          }
+        ],
+        "id": "c743d25c6d066d4b51876f0e",
+        "review_priority": "confirmed"
+      }
+    },
+    {
+      "all_hints_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "时间信息非法",
+        "reason": "日期中出现“2024年13月1日”，一年只有12个月，13月不成立。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 676,
+            "end": 727,
+            "text": "倾销调查期为2024年1月1日至2024年13月1日，损害调查期为2021年1月1日至倾销调查期结束。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "倾销调查期为2024年1月1日至2024年13月1日，损害调查期为2021年1月1日至倾销调查期结束。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 676,
+            "end": 727,
+            "text": "倾销调查期为2024年1月1日至2024年13月1日，损害调查期为2021年1月1日至倾销调查期结束。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "418d7a10566b69d4998dec6f",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 3,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000562:error:0004",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 727,
+            "original_start": 676,
+            "original_text": "倾销调查期为2024年1月1日至2024年13月1日，损害调查期为2021年1月1日至倾销调查期结束。",
+            "start": 676,
+            "text": "倾销调查期为2024年1月1日至2024年13月1日，损害调查期为2021年1月1日至倾销调查期结束。"
+          }
+        ],
+        "type": "时间信息非法"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 0,
+      "gold_index": 3,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

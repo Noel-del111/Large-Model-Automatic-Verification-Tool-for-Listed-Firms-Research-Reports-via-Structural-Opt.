@@ -1,0 +1,79 @@
+{
+  "case_id": "C012",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应识别“共计6个验证项目，其中8个为API项目”的部分超过整体关系，并按统一类型输出。",
+  "observed": "raw[1]明确说“总数为6个，API项目却为8个，部分超过整体”。预测与gold均1187:1223，锚定成功；模型标签语义逻辑矛盾，gold数值不一致错误，严格FN。",
+  "evidence": [
+    {
+      "source": "documents/000510.json#/input/content",
+      "fact": "本例文档输入共1890字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=5fa2bfe7f4f97404ec982dd4063cf0d8f64c7022c20274740e846f13cc66babc。"
+    },
+    {
+      "source": "requests/000510.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=2c9db2e52e259fd2b6e532d4658f5a128f1c47aef45cdc964a80f7354f91cea4，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000510.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1890，total_chars=1890，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000510.json#/gold/errors/0",
+      "fact": "gold[0]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000510:error:0001\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":1223,\"original_start\":1187,\"original_text\":\"2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。\",\"start\":1187,\"text\":\"2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。\"}],\"type\":\"数值不一致错误\"}"
+    },
+    {
+      "source": "documents/000510.json#/report/raw_candidates/1",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"语义逻辑矛盾\",\"spans\":[{\"text\":\"2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。\"}],\"reason\":\"验证项目总数为6个，API项目却为8个，部分超过整体。\"}"
+    },
+    {
+      "source": "documents/000510.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000510.json#/all_hints/1",
+      "fact": "最终评分提示[1]：{\"error_type\":\"语义逻辑矛盾\",\"reason\":\"验证项目总数为6个，API项目却为8个，部分超过整体。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":1187,\"end\":1223,\"text\":\"2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。\"}],\"spans\":[{\"start\":1187,\"end\":1223,\"text\":\"2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"2af922eed7f1147fa28917b8\",\"review_priority\":\"low\"}"
+    },
+    {
+      "source": "documents/000510.json#/input/content",
+      "fact": "原文共计6个、其中8个，8−6=2；若“其中”确指同一集合，该关系不成立，不需要知道API项目专业背景即可发现。"
+    },
+    {
+      "source": "documents/000510.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FN；全篇已分配对=[[2,1]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":1,\"gold_index\":0,\"prediction_type\":\"语义逻辑矛盾\",\"gold_type\":\"数值不一致错误\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "并非专业知识缺失导致未识别项目数关系。",
+    "范围完全相同，单纯改锚定或放宽字符范围无效。",
+    "同文其他关于同比增幅和扭亏为盈的候选是另一问题，不应代替本条进行归因。"
+  ],
+  "conclusion": "本例可确认异常已识别而主类不一致；应与金融知识缺陷分开统计。人工需要统一整体/部分计数异常的主类，不能把严格FN直接解读为推理没发生。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "gold未给类型优先级理由；需要人工判断计数矛盾归属数值类的规则是否普遍适用。"
+  ],
+  "minimal_validation": {
+    "change": "人工为“整体数量<其中数量”制定并签核类别判例，离线重分类原候选验证评分差异。",
+    "control": "保持原文、理由、span和候选总数固定。",
+    "success_criterion": "人工裁定后类别一致且严格命中；语义识别状态始终记为已识别，避免把重分类称新增召回。",
+    "regression_check": "用不同口径项目数、分阶段累计数与明确“其中”同集合三个对照检查边界。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "整体/部分异常类型准确率",
+    "definition": "分母为人工确认模型理由已识别同集合整体/部分冲突的候选；分子为与签核类别一致的候选，同时保留严格召回。",
+    "why_this_case": "同一事实和同一span仍会因分类失败丢失全部匹配。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000594",
+  "result": "TP",
+  "prediction_file": "run/predictions/hybrid/e7f8ee6318e79cfa6e73839b.json",
+  "all_hints_index": 4,
+  "gold_index": 0,
+  "prediction": {
+    "error_type": "冗余语句",
+    "reason": "同一签订协议获得授权事项连续重复，未提供新增信息。",
+    "status": "needs_review",
+    "evidence": [
+      {
+        "kind": "source_text",
+        "start": 3103,
+        "end": 3172,
+        "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+      }
+    ],
+    "detector_id": "hybrid.model",
+    "validation": "anchored_needs_review",
+    "original_spans": [
+      {
+        "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+      }
+    ],
+    "spans": [
+      {
+        "start": 3103,
+        "end": 3172,
+        "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+      }
+    ],
+    "warnings": [
+      "offset_reanchored_by_unique_exact_text"
+    ],
+    "id": "4c00b3cffd92788a100aeb32",
+    "review_priority": "low"
+  },
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000594:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 3172,
+        "original_start": 3103,
+        "original_text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。",
+        "start": 3103,
+        "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+      }
+    ],
+    "type": "冗余语句"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C053",
+  "error_type": "冗余语句",
+  "cohort": "control",
+  "document_ref": "documents/000594.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 4,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "冗余语句",
+        "reason": "同一签订协议获得授权事项连续重复，未提供新增信息。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 3103,
+            "end": 3172,
+            "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 3103,
+            "end": 3172,
+            "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "4c00b3cffd92788a100aeb32",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000594:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 3172,
+            "original_start": 3103,
+            "original_text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。",
+            "start": 3103,
+            "text": "2025年3月24日，诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。诺和诺德与联邦制药，签订协议，获得三靶点GLP-1的授权。"
+          }
+        ],
+        "type": "冗余语句"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 0,
+      "same_type": true,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": true
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 4,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

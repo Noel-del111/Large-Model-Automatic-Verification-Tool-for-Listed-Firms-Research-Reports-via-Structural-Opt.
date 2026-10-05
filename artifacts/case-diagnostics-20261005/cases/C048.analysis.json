@@ -1,0 +1,57 @@
+{
+  "case_id": "C048",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "金标金融要素缺失[1264,1286)为文末“风险提示：药物临床研发失败、药物安全性风险、”，以顿号结尾。",
+  "observed": "raw输出数值缺失、单位错误、空括号、ADC单抗术语4项，均保留，没有风险提示候选。请求完整覆盖1286字符，但输入本身在顿号终止，无法知道后面本应有什么。",
+  "evidence": [
+    {
+      "source": "documents/000516.json#/input/content",
+      "fact": "文本最后22字符就是风险提示，末尾为顿号；已列研发失败和安全性两项风险。"
+    },
+    {
+      "source": "documents/000516.json#/gold/errors/4",
+      "fact": "金标归为金融要素缺失，但未给缺失风险名称或必要性理由。"
+    },
+    {
+      "source": "documents/000516.json#/responses/0/content",
+      "fact": "4项raw没有目标文末风险段。"
+    },
+    {
+      "source": "documents/000516.json#/report/rejected_candidates",
+      "fact": "没有拒绝项，不是后处理删除风险候选。"
+    },
+    {
+      "source": "requests/000516.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1286字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "输入构造阶段没有截去末尾这段；已有1286字符全部被覆盖。",
+    "不能由尾顿号推断具体必须补哪一种药物或财务风险。",
+    "末标点损坏、基准文本截断与实质必要要素缺失是不同解释，当前无法合并。"
+  ],
+  "conclusion": "确认raw未报告该金标；但当前金标的实质缺失对象不明，不能据此断定模型金融知识不足。应先核查原始风险段完整性和标注必要性，再决定是输入质量告警、格式提示还是业务缺失。",
+  "conclusion_status": "unresolved",
+  "uncertainties": [
+    "尾顿号是否由文本截断造成，还是原报告标点错误。",
+    "仅已有两项风险是否不足，缺失哪个必需风险须人工说明。",
+    "若只按末尾顿号判缺失，可能违反prompt不报告一般标点的边界。"
+  ],
+  "minimal_validation": {
+    "change": "人工比对完整原文末段与该输入，记录具体丢失内容；若源文也如此，先裁定应归格式还是实质风险缺失。",
+    "control": "配对正常两项风险且以句号结尾、真实截断段；保持业务内容一致。",
+    "success_criterion": "确定丢失位置/必需要素或记录金标无法判定，不猜一个风险补进去。",
+    "regression_check": "确保没有固定风险项数量门槛，正常简短风险提示不受误报。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "输入末尾完整性与业务缺失可判定率",
+    "definition": "尾部残缺样本中可追溯到原文并确定缺失实质内容的比例；仅标点异常单列。",
+    "why_this_case": "本例需要源文与金标证据，单纯增加金融数据库不会给出可靠结论。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "case_id": "C007",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "gold把[183,282)完整产品描述标为属性值缺失错误，但该记录只给类型和span，没有说明缺哪个属性。",
+  "observed": "原文完整列出重组胶原蛋白、透明质酸钠、双维促愈配方、膜布及功能；原始回复仅报风险提示编号“二）”格式问题，既无该span候选也无相近缺失理由；最终同样无对应候选。",
+  "evidence": [
+    {
+      "source": "documents/000705.json#/input/content",
+      "fact": "本例文档输入共811字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=ef2ff52f18b7b729b228c82239318e45f1c404061b0bba270f3ca18983d27fd3。"
+    },
+    {
+      "source": "requests/000705.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=f98117e9867ff2380cbe1646ef19e01d35a69d14fb3f48607e0207a4fb08f2fc，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000705.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=811，total_chars=811，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000705.json#/gold/errors/2",
+      "fact": "gold[2]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000705:error:0003\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":282,\"original_start\":183,\"original_text\":\"产品采用专利型重组胶原蛋白，搭配透明质酸钠形成“水护盾”，特研双维促愈配方可加速修护表皮屏障、缩短不适周期，同时采用专研医用亲肤膜布，兼具纯净透气与高储液量，能高效导入修愈力，助力肌肤快速恢复稳态。\",\"start\":183,\"text\":\"产品采用专利型重组胶原蛋白，搭配透明质酸钠形成“水护盾”，特研双维促愈配方可加速修护表皮屏障、缩短不适周期，同时采用专研医用亲肤膜布，兼具纯净透气与高储液量，能高效导入修愈力，助力肌肤快速恢复稳态。\"}],\"type\":\"属性值缺失错误\"}"
+    },
+    {
+      "source": "documents/000705.json#/report/raw_candidates/0",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"格式错误\",\"spans\":[{\"text\":\"二）行业竞争加剧。\"}],\"reason\":\"风险提示编号1、3、4、5均用阿拉伯数字，此处用中文“二）”，编号格式不统一。\"}"
+    },
+    {
+      "source": "documents/000705.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000705.json#/input/content",
+      "fact": "目标段未出现空书名号、空括号、冒号后空白或显式占位符；这只是本例文本观察，不证明必需属性不存在。"
+    },
+    {
+      "source": "documents/000705.json#/gold/errors/2",
+      "fact": "gold未给预期属性名、正确值、缺失位置解释或来源证据。"
+    },
+    {
+      "source": "documents/000705.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FN；全篇已分配对=[]；围绕本例相关候选/gold的独立机械核对=[]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "运行覆盖811/811且原文目标段存在，暂无输入构造截断证据。",
+    "不能因为仅输出格式问题就推定缺外部知识、缺RAG或必需字段确实完备。"
+  ],
+  "conclusion": "unresolved：可确认目标gold在候选阶段未被报告；现有证据不足以判断是模型漏检还是gold需要解释。先请人工指出具体缺失属性和原文必要性依据，再定位处理问题。",
+  "conclusion_status": "unresolved",
+  "uncertainties": [
+    "缺失属性究竟是什么，现有gold无法直接回答。",
+    "如要依赖外部产品规范，需提供独立证据后才能评价知识覆盖。"
+  ],
+  "minimal_validation": {
+    "change": "先由真人给目标段补充问题说明：必需属性名、为何必需、缺失所在；不修改原gold。",
+    "control": "同类明确空槽如“科学试剂：。”作为已知可判定对照。",
+    "success_criterion": "有可复核的缺失定义才能进一步测试；若无法说明，维持待裁定而非自动认定FN根因。",
+    "regression_check": "不把所有产品说明未列注册证号/配方浓度等常见字段都自动判错。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "缺失类gold可解释率",
+    "definition": "人工能明确指出缺失字段及必要性依据的已审缺失gold数/已审缺失gold总数。",
+    "why_this_case": "本例的首要障碍是缺失目标未被定义清楚。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

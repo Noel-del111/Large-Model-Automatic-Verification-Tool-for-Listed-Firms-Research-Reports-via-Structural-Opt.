@@ -1,0 +1,59 @@
+{
+  "case_id": "C033",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审FP为“此外…对应目标价147.19元（原为124.82元，，维持‘优于大市’评级。”的格式错误。金标没有格式类；原冗余语句金标含当前原文不存在的完整括号内容且不可评分。",
+  "observed": "raw_candidates[4]指出左括号不闭合、连续逗号；当前原文[385,452)确有“元，，维持”且该句无右括号，后续段落也未闭合此括号。最终候选完整保留needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000335.json#/input/content",
+      "fact": "目标句的“（原为124.82元，，维持”存在左括号及双逗号，原文随后进入新段。"
+    },
+    {
+      "source": "documents/000335.json#/responses/0/content",
+      "fact": "raw_candidates[4]直接引用该句并报告标点损坏。"
+    },
+    {
+      "source": "documents/000335.json#/all_hints/4",
+      "fact": "[385,452)有效锚定；不是因为定位拒绝才产生FP。"
+    },
+    {
+      "source": "documents/000335.json#/gold/errors/1",
+      "fact": "冗余语句金标原文含2024年50x PS等当前片段不存在的内容，跨度为空、不可评分；不能拿它充当格式金标。"
+    },
+    {
+      "source": "documents/000335.json#/matched_pairs",
+      "fact": "只匹配评级缺失与年份非法，本格式候选未匹配。"
+    },
+    {
+      "source": "requests/000335.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1165字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "已排除该提示由quote不存在或偏移错误引起。",
+    "没有同类格式金标；未匹配不能直接证明该标点问题不存在。"
+  ],
+  "conclusion": "当前材料支持存在可见的结构性标点损坏，但是否达到任务“格式错误”的业务门槛、是否属于未标注问题仍需人工裁定。先核对标注与任务规范，不能为降低FP率直接屏蔽此候选。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "prompt禁止一般标点偏好，未闭合括号是否属于内容结构损坏需人工约定。",
+    "不可评分的冗余金标提示文本与标注可能不同步，但不能据此擅自改金标。"
+  ],
+  "minimal_validation": {
+    "change": "人工明确括号不闭合的适用规则，并核对该文原始金标版本；离线建立补充裁定记录。",
+    "control": "对照仅含中英标点混排但成对完整的正常句；保留原基准评分。",
+    "success_criterion": "区分真实结构损坏、风格问题、失配金标三类并给出可定位证据。",
+    "regression_check": "检查正常省略和跨句括号，不把所有逗号异常一律升级。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "结构性格式候选的人工有效率",
+    "definition": "有效锚定但未匹配的格式候选中，经人工认定破坏语义结构而需要修正的比例。",
+    "why_this_case": "此case要区分未闭合结构与普通排版，不能只看FP标签。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

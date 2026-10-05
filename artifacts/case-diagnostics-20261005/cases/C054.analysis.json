@@ -1,0 +1,50 @@
+{
+  "case_id": "C054",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "原文“其《》APP已在2024年10月正式上线”留下空书名号，应该指出名称字段为空。",
+  "observed": "模型引用[504,582)完整句，包含金标[529,548)，理由准确指向APP名称；最终needs_review而非丢弃。",
+  "evidence": [
+    {
+      "source": "documents/000427.json#/input/content",
+      "fact": "原文“其《》APP已在2024年10月正式上线”留下空书名号，应该指出名称字段为空。"
+    },
+    {
+      "source": "documents/000427.json#/all_hints/2",
+      "fact": "模型引用[504,582)完整句，包含金标[529,548)，理由准确指向APP名称；最终needs_review而非丢弃。"
+    },
+    {
+      "source": "cases/C054.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000427.json#/report/raw_candidates/2",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "字段占位符的空值已识别，额外金融知识不是完成该次检测的必要条件；是否可以自动确认应验证空占位符的适用边界。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "空书名号是否为匿名化要求或引用示例；输入没有给出APP真实名称，不应生成具体修正名称。"
+  ],
+  "minimal_validation": {
+    "change": "只增加显式空占位符检查的离线候选确认试验。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；用教学示例、模板文本、允许匿名的材料及正文真实缺字段分别对照，检查误确认。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "用教学示例、模板文本、允许匿名的材料及正文真实缺字段分别对照，检查误确认。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "显式空字段确认准确率",
+    "definition": "人工认可的显式空字段自动确认数 / 该规则全部确认数，同时统计人工免审数量。",
+    "why_this_case": "字段占位符的空值已识别，额外金融知识不是完成该次检测的必要条件；是否可以自动确认应验证空占位符的适用边界。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

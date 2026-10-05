@@ -1,0 +1,130 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000411",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/4a59065b4b2958d4acbdc2af.json",
+  "all_hints_index": null,
+  "gold_index": 0,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000411:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 359,
+        "original_start": 298,
+        "original_text": "实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%",
+        "start": 298,
+        "text": "实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%"
+      }
+    ],
+    "type": "数值不一致错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C066",
+  "error_type": "数值不一致错误",
+  "cohort": "supplemental",
+  "document_ref": "documents/000411.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 2,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "计算错误",
+        "reason": "归母净利润三年对应四个YOY；且1.01→1.21约19.80%、1.21→1.54约27.27%，与20.61%、26.38%不符。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 227,
+            "end": 360,
+            "text": "公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 227,
+            "end": 360,
+            "text": "公司2022-2024年分别实现营业收入10.19亿元/9.37亿元/12.30亿元，YOY依次为-18.43%/-8.02%/31.26%；实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "d21ce833d5ad5ad40f57e6aa",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000411:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 359,
+            "original_start": 298,
+            "original_text": "实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%",
+            "start": 298,
+            "text": "实现归母净利润1.01亿元/1.21亿元/1.54亿元，YOY依次为-4.60%/20.61%/26.38%/21.38%"
+          }
+        ],
+        "type": "数值不一致错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

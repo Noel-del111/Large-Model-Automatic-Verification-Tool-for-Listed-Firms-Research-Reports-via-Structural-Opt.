@@ -1,0 +1,182 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000589",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/1d500c66fcce07996f085480.json",
+  "all_hints_index": null,
+  "gold_index": 0,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000589:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 588,
+        "original_start": 519,
+        "original_text": "铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主\n铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主",
+        "start": 519,
+        "text": "铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主\n铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主"
+      }
+    ],
+    "type": "冗余语句"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C071",
+  "error_type": "冗余语句",
+  "cohort": "supplemental",
+  "document_ref": "documents/000589.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 4,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [],
+        "original_spans": [
+          {
+            "text": "铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主"
+          }
+        ],
+        "reason": "该小标题紧接着完全重复一次，无新增信息。",
+        "status": "needs_review",
+        "invalid_anchor": true,
+        "validation": "anchor_rejected",
+        "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+        "review_hint_only": true
+      }
+    },
+    {
+      "all_hints_index": 5,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "冗余语句",
+        "spans": [],
+        "original_spans": [
+          {
+            "text": "新疆地区电解铝即时冶炼利润为3416元/吨，环比5月23日-295元/吨。"
+          }
+        ],
+        "reason": "同一利润数据句紧接着完全重复一次，造成冗余。",
+        "status": "needs_review",
+        "invalid_anchor": true,
+        "validation": "anchor_rejected",
+        "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+        "review_hint_only": true
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000589:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 588,
+            "original_start": 519,
+            "original_text": "铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主\n铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主",
+            "start": 519,
+            "text": "铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主\n铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主"
+          }
+        ],
+        "type": "冗余语句"
+      }
+    },
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": false,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000589:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1475,
+            "original_start": 1401,
+            "original_text": "新疆地区电解铝即时冶炼利润为3416元/吨，环比5月23日-295元/吨。新疆地区电解铝即时冶炼利润为3416元/吨，环比5月23日-295元/吨。",
+            "start": 1401,
+            "text": "新疆地区电解铝即时冶炼利润为3416元/吨，环比5月23日-295元/吨。新疆地区电解铝即时冶炼利润为3416元/吨，环比5月23日-295元/吨。"
+          }
+        ],
+        "type": "冗余语句"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 0,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 0,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

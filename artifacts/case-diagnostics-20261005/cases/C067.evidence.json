@@ -1,0 +1,83 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000595",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/59cc41aaaba5857bac0d24c3.json",
+  "all_hints_index": null,
+  "gold_index": 0,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000595:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 1075,
+        "original_start": 1020,
+        "original_text": "2025年CES大会上16款搭载GR00T模型的机器人亮相，涉及中国企业6家、美国企业4家，其他国家企业4家。",
+        "start": 1020,
+        "text": "2025年CES大会上16款搭载GR00T模型的机器人亮相，涉及中国企业6家、美国企业4家，其他国家企业4家。"
+      }
+    ],
+    "type": "计算错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C067",
+  "error_type": "计算错误",
+  "cohort": "supplemental",
+  "document_ref": "documents/000595.json",
+  "related_predictions": [],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000595:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1075,
+            "original_start": 1020,
+            "original_text": "2025年CES大会上16款搭载GR00T模型的机器人亮相，涉及中国企业6家、美国企业4家，其他国家企业4家。",
+            "start": 1020,
+            "text": "2025年CES大会上16款搭载GR00T模型的机器人亮相，涉及中国企业6家、美国企业4家，其他国家企业4家。"
+          }
+        ],
+        "type": "计算错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "reason": "全量机械特征审计补齐空候选、全部零分文档、>=4000字失败与raw引文在原文中有精确出现位置并触及金标、但最终提示无有效重叠的FN。保留原52分层样本及12对照，追加7个边界实例；不是按频率加权抽样。",
+  "cases": [
+    {
+      "arm": "hybrid",
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000160",
+      "result": "FN",
+      "all_hints_index": null,
+      "gold_index": 2,
+      "selection_reason": "整篇raw候选为空，零分文档；与C024已引用但未解释局部问题区分"
+    },
+    {
+      "arm": "hybrid",
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000411",
+      "result": "FN",
+      "all_hints_index": null,
+      "gold_index": 0,
+      "selection_reason": "补齐零分文档，观察数值不一致如何失分"
+    },
+    {
+      "arm": "hybrid",
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000595",
+      "result": "FN",
+      "all_hints_index": null,
+      "gold_index": 0,
+      "selection_reason": "补齐零分文档，核查计算错误的业务预期与候选"
+    },
+    {
+      "arm": "hybrid",
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000696",
+      "result": "FN",
+      "all_hints_index": null,
+      "gold_index": 1,
+      "selection_reason": "补齐零分文档，核查单位错误与同文其他候选"
+    },
+    {
+      "arm": "hybrid",
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000646",
+      "result": "FN",
+      "all_hints_index": null,
+      "gold_index": 2,
+      "selection_reason": ">=4000字且低分的行业研报，核查时间关系跨段处理"
+    },
+    {
+      "arm": "hybrid",
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000381",
+      "result": "FN",
+      "all_hints_index": null,
+      "gold_index": 1,
+      "selection_reason": ">=4000字个股研报，检查术语候选与完整上下文；不称模型长上下文压力测试"
+    },
+    {
+      "arm": "hybrid",
+      "document_id": "fined:eval_data:5ffe80ef7c529d19:000589",
+      "result": "FN",
+      "all_hints_index": null,
+      "gold_index": 0,
+      "selection_reason": "原始候选精确引文触及金标而最终提示无重叠的子机制；逐案核实拒绝原因，不将几何重叠直接当业务命中"
+    }
+  ]
+}

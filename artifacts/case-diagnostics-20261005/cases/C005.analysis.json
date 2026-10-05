@@ -1,0 +1,78 @@
+{
+  "case_id": "C005",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "gold把两只下跌指数对应三个跌幅的完整句[214,270)标为数值不一致错误。",
+  "observed": "模型逐字引用同一范围并指出“两个指数却给出三个跌幅”，但类型为属性值缺失错误，推断缺第三个指数名称。候选通过锚定、待审保留；contains=true而same_type=false，计FP及对应gold FN。",
+  "evidence": [
+    {
+      "source": "documents/000527.json#/input/content",
+      "fact": "本例文档输入共722字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=1a95ee320a0df2a7fb42e026556818789fff5b5519567ffc1a1c6152e1220c2b。"
+    },
+    {
+      "source": "requests/000527.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=94caa40636d840a37f9d667edf550ea26be5c336223e69f68176dfc85f4b7a53，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000527.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=722，total_chars=722，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000527.json#/gold/errors/0",
+      "fact": "gold[0]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000527:error:0001\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":270,\"original_start\":214,\"original_text\":\"国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。\",\"start\":214,\"text\":\"国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。\"}],\"type\":\"数值不一致错误\"}"
+    },
+    {
+      "source": "documents/000527.json#/report/raw_candidates/3",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。\"}],\"reason\":\"列举两个指数却给出三个跌幅数值，缺少第三个指数名称，非数值属性缺失。\"}"
+    },
+    {
+      "source": "documents/000527.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000527.json#/all_hints/3",
+      "fact": "最终评分提示[3]：{\"error_type\":\"属性值缺失错误\",\"reason\":\"列举两个指数却给出三个跌幅数值，缺少第三个指数名称，非数值属性缺失。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":214,\"end\":270,\"text\":\"国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。\"}],\"spans\":[{\"start\":214,\"end\":270,\"text\":\"国内权益指数相对黯淡，万得全A上涨1.90%，上证指数、沪深300则小幅下跌1.21%、0.48%、0.68%。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"f6dd66fc91de2e8d36bb686a\",\"review_priority\":\"low\"}"
+    },
+    {
+      "source": "documents/000527.json#/input/content",
+      "fact": "万得全A有单独上涨1.90%；后面的上证指数、沪深300只有两项，却列1.21%、0.48%、0.68%三个跌幅。"
+    },
+    {
+      "source": "documents/000527.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[1,1],[0,2],[2,3]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":3,\"gold_index\":0,\"prediction_type\":\"属性值缺失错误\",\"gold_type\":\"数值不一致错误\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是未发现计数不一致，也不是引用跨度不足。",
+    "原文不能决定究竟缺第三个名称还是多写了一个数值。"
+  ],
+  "conclusion": "可确认模型已发现同一计数异常，失分发生在分类；其“缺名称”是对修复方向的假设。需真人裁定该类应按数值对应异常还是属性缺失，并保留修复不确定性。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "没有原始指数数据，不能选择具体删哪个值或补哪个名称。"
+  ],
+  "minimal_validation": {
+    "change": "让真人只判异常类别与可确定事实，不要求补写缺失内容；在诊断副本仅替换类型测评分变化。",
+    "control": "同文“前五券商双顿号”空槽作为另一种缺名称结构，不能与本条自动视为同类。",
+    "success_criterion": "内容、span不动，仅类型改变即可说明严格匹配差异；人工形成两种结构的分类依据。",
+    "regression_check": "不得把所有列举数量不等都机械改成同类，需保留明确空槽与多余数值差别。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "列举数量异常的类型混淆率",
+    "definition": "在人审确认已定位的列举数量异常中，预测类型与裁定类型不一致数/已审此类异常数；同时列出属性缺失到数值不一致方向。",
+    "why_this_case": "该例已具备充分局部信息，分类失配不等于知识不足。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

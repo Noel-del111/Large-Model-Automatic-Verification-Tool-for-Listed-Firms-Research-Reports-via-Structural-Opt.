@@ -1,0 +1,119 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000550",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/692d825b176fd08a44b1fad0.json",
+  "all_hints_index": null,
+  "gold_index": 2,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000550:error:0003",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 1105,
+        "original_start": 1086,
+        "original_text": "白鸡行业产能水平和鸡肉供给有望趋势上行",
+        "start": 1086,
+        "text": "白鸡行业产能水平和鸡肉供给有望趋势上行"
+      }
+    ],
+    "type": "语义逻辑矛盾"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C043",
+  "error_type": "语义逻辑矛盾",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000550.json",
+  "related_predictions": [],
+  "related_golds": [
+    {
+      "gold_index": 2,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000550:error:0003",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1105,
+            "original_start": 1086,
+            "original_text": "白鸡行业产能水平和鸡肉供给有望趋势上行",
+            "start": 1086,
+            "text": "白鸡行业产能水平和鸡肉供给有望趋势上行"
+          }
+        ],
+        "type": "语义逻辑矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

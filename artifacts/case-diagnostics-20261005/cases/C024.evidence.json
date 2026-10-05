@@ -1,0 +1,148 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000619",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/9162fbde16e9cd3e06abc9d1.json",
+  "all_hints_index": null,
+  "gold_index": 5,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000619:error:0006",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 382,
+        "original_start": 364,
+        "original_text": "我们对129年光模块行业贝塔表示乐观",
+        "start": 364,
+        "text": "我们对129年光模块行业贝塔表示乐观"
+      }
+    ],
+    "type": "时间信息非法"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C024",
+  "error_type": "时间信息非法",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000619.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 3,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "术语误用",
+        "reason": "“超套利线性增长”不是规范行业术语，应为“超线性增长”，术语误用导致含义错误。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 314,
+            "end": 383,
+            "text": "GB300通过升级网卡实现了Scaleout带宽倍增，这反映在光模块行业体现出超套利线性增长的趋势，我们对129年光模块行业贝塔表示乐观。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "GB300通过升级网卡实现了Scaleout带宽倍增，这反映在光模块行业体现出超套利线性增长的趋势，我们对129年光模块行业贝塔表示乐观。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 314,
+            "end": 383,
+            "text": "GB300通过升级网卡实现了Scaleout带宽倍增，这反映在光模块行业体现出超套利线性增长的趋势，我们对129年光模块行业贝塔表示乐观。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "135055eb9286c33a775d84cb",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 5,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000619:error:0006",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 382,
+            "original_start": 364,
+            "original_text": "我们对129年光模块行业贝塔表示乐观",
+            "start": 364,
+            "text": "我们对129年光模块行业贝塔表示乐观"
+          }
+        ],
+        "type": "时间信息非法"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 5,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 5,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 5,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 5,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 4,
+      "gold_index": 5,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

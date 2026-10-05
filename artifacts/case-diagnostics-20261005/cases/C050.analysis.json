@@ -1,0 +1,56 @@
+{
+  "case_id": "C050",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审模糊语言FP为“24年业务数据亮25%，超行业平均增速；”[424,444)。现有三条金标未覆盖此句。",
+  "observed": "raw_candidates[8]指出“亮25%”缺字，无法明确业务指标与口径，最终候选完整保留。标题有“件量增速超均值”，能给出件量增长线索，但正文未明确25%对应哪个业务量；整篇输入另有多处截断。",
+  "evidence": [
+    {
+      "source": "documents/000368.json#/input/content",
+      "fact": "标题为件量增速超均值，正文却写“业务数据亮25%”；也有“单票收入较去年小4.9%”“综述，公司以精细”等明显不完整句。"
+    },
+    {
+      "source": "documents/000368.json#/responses/0/content",
+      "fact": "raw_candidates[8]说明无法明确具体内容和口径。"
+    },
+    {
+      "source": "documents/000368.json#/all_hints/8",
+      "fact": "模糊语言[424,444)，定位正常并保留needs_review。"
+    },
+    {
+      "source": "documents/000368.json#/gold/errors",
+      "fact": "仅风险重复、股息术语和开头金融要素三项，没有这处25%描述。"
+    },
+    {
+      "source": "requests/000368.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；526字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是候选quote虚构，原文确有“亮25%”。",
+    "标题为件量提供一定上下文，不能说全文完全没有指标线索。",
+    "请求覆盖完整不代表上游文本本来完整；也不能把这些残缺归因于本批次OCR，因为输入为文本。"
+  ],
+  "conclusion": "当前有依据判为残缺表达的检查线索，但应裁定为输入损坏、缺失要素还是实质歧义，以及标题能否补足。该FP需要人工核对完整原文；不能直接按未匹配认定无用告警。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "“亮”缺的是哪个词，是否原应为件量增长25%，不能由AI自行恢复为事实。",
+    "检查目标是当前片段还是原始研报全文；是否应转人工修复输入。"
+  ],
+  "minimal_validation": {
+    "change": "人工比较源文对应业务量句与输入文本，明确缺失字符及指标；用校正输入作为未来配对试验的准备材料，本轮不调用模型。",
+    "control": "原片段和标题均保留，对照只修复已证实缺字、不额外补知识。",
+    "success_criterion": "能指出具体输入损坏并让指标/口径唯一化；若没有源文则保持未决。",
+    "regression_check": "测试可由标题正常继承指标的简短正文，避免过度报缺失。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "残缺表达的指标可恢复率",
+    "definition": "抽样残缺表述中，能由当前上下文或可追溯源文唯一确定指标、方向、数值口径的比例；两种来源分列。",
+    "why_this_case": "先辨输入残缺与语义理解，才能决定是否修输入节点。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

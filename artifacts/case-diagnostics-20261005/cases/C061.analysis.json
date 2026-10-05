@@ -1,0 +1,50 @@
+{
+  "case_id": "C061",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "原文“平均价格为1963-35元/头”的连字符与平均价格单值表达不协调，需要标记格式异常。",
+  "observed": "模型完整引用[463,519)，覆盖金标[469,490)，使用“疑似应为小数点”的措辞，未声称查得正确价格；保留needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000341.json#/input/content",
+      "fact": "原文“平均价格为1963-35元/头”的连字符与平均价格单值表达不协调，需要标记格式异常。"
+    },
+    {
+      "source": "documents/000341.json#/all_hints/1",
+      "fact": "模型完整引用[463,519)，覆盖金标[469,490)，使用“疑似应为小数点”的措辞，未声称查得正确价格；保留needs_review。"
+    },
+    {
+      "source": "cases/C061.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000341.json#/report/raw_candidates/1",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "异常识别与跨度均成功，尚未自动确认；当前证据支持格式疑点，但不能把1963.35作为已核实修正值。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "是否原意为范围、减法或小数分隔，须结合排版或原始来源裁定；本批只有文本。"
+  ],
+  "minimal_validation": {
+    "change": "先建立单值价格格式的人工判定规则，回放固定候选；不要用无依据的替换提高自动化率。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；正常价格区间、负数、算式及日期等应保持不误报。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "正常价格区间、负数、算式及日期等应保持不误报。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "格式异常与修正值分离准确率",
+    "definition": "分别记录异常判断人工认可率、具体替换值证据支持率；两项不能合并。",
+    "why_this_case": "异常识别与跨度均成功，尚未自动确认；当前证据支持格式疑点，但不能把1963.35作为已核实修正值。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

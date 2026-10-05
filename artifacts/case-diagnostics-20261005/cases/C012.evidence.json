@@ -1,0 +1,130 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000510",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/fe60da722e0e46983f457246.json",
+  "all_hints_index": null,
+  "gold_index": 0,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000510:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 1223,
+        "original_start": 1187,
+        "original_text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。",
+        "start": 1187,
+        "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+      }
+    ],
+    "type": "数值不一致错误"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C012",
+  "error_type": "数值不一致错误",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000510.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 1,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "语义逻辑矛盾",
+        "reason": "验证项目总数为6个，API项目却为8个，部分超过整体。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 1187,
+            "end": 1223,
+            "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 1187,
+            "end": 1223,
+            "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "2af922eed7f1147fa28917b8",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000510:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 1223,
+            "original_start": 1187,
+            "original_text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。",
+            "start": 1187,
+            "text": "2024年公司已经完成或正在执行共计6个验证项目，其中8个为API项目。"
+          }
+        ],
+        "type": "数值不一致错误"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

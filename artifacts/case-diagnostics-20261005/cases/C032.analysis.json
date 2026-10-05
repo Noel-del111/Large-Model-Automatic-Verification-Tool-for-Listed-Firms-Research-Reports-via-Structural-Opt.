@@ -1,0 +1,60 @@
+{
+  "case_id": "C032",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "金标术语误用[719,760)为“但由于成本端铁水缓慢上升叠加焦煤持续提价，对钢价仍有一定支撑，短期或维持稳定运行。”",
+  "observed": "raw只检查了5月0日与50万元/吨两项，均有效保留；未指出成本端“铁水”一词。全文之前写铁矿价格基本持平，焦煤及废钢上涨，给出需要核对的上下文，但未明确正确替换词。",
+  "evidence": [
+    {
+      "source": "documents/000247.json#/gold/errors/1",
+      "fact": "目标术语金标覆盖投资建议中的成本端铁水表述。"
+    },
+    {
+      "source": "documents/000247.json#/input/content",
+      "fact": "前文原材料包括铁矿、焦煤、废钢；“铁水缓慢上升”未写是产量、价格还是成本。"
+    },
+    {
+      "source": "documents/000247.json#/responses/0/content",
+      "fact": "2个raw候选均针对其他问题，未涉及铁水表述。"
+    },
+    {
+      "source": "documents/000247.json#/report/rejected_candidates",
+      "fact": "没有拒绝候选。"
+    },
+    {
+      "source": "documents/000247.json#/matched_pairs",
+      "fact": "仅单位和非法日期匹配，术语没有匹配。"
+    },
+    {
+      "source": "requests/000247.json#/requests/0",
+      "fact": "冻结请求重建与历史cache/trace哈希均一致；当前文档811字符在whole上下文中覆盖，1次调用成功。只能证明留存指纹对应的请求构造，未留存原始HTTP报文，不能扩展为网络报文逐字取证。"
+    }
+  ],
+  "excluded_explanations": [
+    "本例不是把正确候选改类或锚定失败。",
+    "请求重建不支持目标句漏传。",
+    "不得未经源文确认直接把铁水自动替换为铁矿石。"
+  ],
+  "conclusion": "可证实为目标术语未生成候选；其成因可能涉及指标语义不明或行业用语理解，但没有证据区分这些机制。需先人工裁定“铁水”在此处为何错及正确的检查边界。",
+  "conclusion_status": "unresolved",
+  "uncertainties": [
+    "铁水指产量的业内省略、铁矿原料误写，还是另一个指标；原文没有给定。",
+    "前文价格基本持平与建议段缓慢上升是否同周期，也需人工确认。"
+  ],
+  "minimal_validation": {
+    "change": "人工核对原研报或明确行业字段定义，标出“成本端铁水”对应的错误语义；如确认后，再在固定输入下比较加入小段字段定义前后。",
+    "control": "保留原prompt与真实用法“铁水产量上升”“铁矿石价格上涨”的正常对照。",
+    "success_criterion": "明确业务预期后命中这个实例，且不把正常铁水生产术语统一判错。",
+    "regression_check": "加入产量/价格/成本混用和正常行业缩略样例。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "行业指标语义绑定完整率",
+    "definition": "人工裁定的行业用语实例中，系统正确绑定对象、量纲及变化含义的比例；未明确对象的另列未决。",
+    "why_this_case": "此处需要先辨明“上升”的指标，单纯匹配术语词典可能扩大误报。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

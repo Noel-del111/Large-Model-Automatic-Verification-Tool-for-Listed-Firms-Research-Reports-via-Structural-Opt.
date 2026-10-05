@@ -1,0 +1,82 @@
+{
+  "case_id": "C006",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "gold将“5）高等院校，如。”[845,854)标为金融要素缺失。",
+  "observed": "模型在原始回复中说“如”后未列具体院校，类型却是属性值缺失错误；最终引用与gold完全相同，状态needs_review且未拒绝。严格分类不同产生当前FP。",
+  "evidence": [
+    {
+      "source": "documents/000346.json#/input/content",
+      "fact": "本例文档输入共1076字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=7c045248d9cee8b3ed957a3e25a377a26e2edaf5a6545a57b0ed2692c4387bc9。"
+    },
+    {
+      "source": "requests/000346.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=aee4e1f3748d2bb33bca91071bfbb7e13e5a629d008b98ad026b58d3e3bda4da，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000346.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1076，total_chars=1076，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000346.json#/gold/errors/4",
+      "fact": "gold[4]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000346:error:0005\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":854,\"original_start\":845,\"original_text\":\"5）高等院校，如。\",\"start\":845,\"text\":\"5）高等院校，如。\"}],\"type\":\"金融要素缺失\"}"
+    },
+    {
+      "source": "documents/000346.json#/report/raw_candidates/1",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"属性值缺失错误\",\"spans\":[{\"text\":\"5）高等院校，如。\"}],\"reason\":\"高等院校类别“如”后未列示任何具体院校，属性值为空。\"}"
+    },
+    {
+      "source": "documents/000346.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000346.json#/all_hints/2",
+      "fact": "最终评分提示[2]：{\"error_type\":\"属性值缺失错误\",\"reason\":\"高等院校类别“如”后未列示任何具体院校，属性值为空。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":845,\"end\":854,\"text\":\"5）高等院校，如。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"5）高等院校，如。\"}],\"spans\":[{\"start\":845,\"end\":854,\"text\":\"5）高等院校，如。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"e99bdbd12f4499e07fc5c61b\",\"review_priority\":\"low\"}"
+    },
+    {
+      "source": "documents/000346.json#/gold/errors/0",
+      "fact": "同一文档把“2）科学试剂：”空槽标成属性值缺失错误；两个相似空槽的gold类型不同。"
+    },
+    {
+      "source": "documents/000346.json#/input/content",
+      "fact": "客户列表前四项都有组织示例，末项高等院校只有“如。”；上下文支持识别空槽，但不独立决定类别名称。"
+    },
+    {
+      "source": "documents/000346.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FP；全篇已分配对=[[1,0],[5,2],[4,3]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":2,\"gold_index\":4,\"prediction_type\":\"属性值缺失错误\",\"gold_type\":\"金融要素缺失\",\"same_type\":false,\"gold_scorable\":true,\"contains_all_gold_spans\":true,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是模型没看见缺失，也不是span不完整。",
+    "不能用题材属于金融研报就证明一切空槽都属金融要素缺失。"
+  ],
+  "conclusion": "本条已识别缺失位置，当前失分为属性值缺失与金融要素缺失的标签边界。需要真人解释为什么院校示例属于必要金融要素；在此之前不将其认定为知识或检索缺陷。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "基准分类准则与当前taxonomy是否一致待人工核对。"
+  ],
+  "minimal_validation": {
+    "change": "并排审阅本句与同文科学试剂空槽，要求给出两者分类差异的可操作标准；仅在诊断副本做类型对照。",
+    "control": "保留同文已命中科学试剂空槽作为近邻对照。",
+    "success_criterion": "人工能说明同构空槽为何同类或不同类，并确认变化不需要改写原文。",
+    "regression_check": "不能全局把属性值缺失改成金融要素缺失，避免破坏科学试剂等已匹配项。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "金融要素与属性空槽分类一致率",
+    "definition": "已定位且经人工签核的空槽中与裁定类型一致数/已审空槽数，按必要组成信息和单属性空槽分层。",
+    "why_this_case": "两条同文空槽构成明确的分类边界对照。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

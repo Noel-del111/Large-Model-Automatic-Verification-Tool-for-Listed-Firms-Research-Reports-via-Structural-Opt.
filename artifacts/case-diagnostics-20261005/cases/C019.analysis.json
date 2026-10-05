@@ -1,0 +1,79 @@
+{
+  "case_id": "C019",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应识别“2025年前5月仅新增家”的数量缺失，并按约定保留其数据来源归因句。",
+  "observed": "raw[1]准确说明新增家数为空，预测650:692，gold636:692；两者同为数值缺失，预测缺少前14字“据校外培训监管平台数据统计，”，未完整包含gold而被记FN。",
+  "evidence": [
+    {
+      "source": "documents/000536.json#/input/content",
+      "fact": "本例文档输入共1428字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=297897c83d1ac7e72aeee3409721f070cfd233834ec329b8e09902695e2bb425。"
+    },
+    {
+      "source": "requests/000536.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=f0f744a5e5f08fd12566485e00d3c303ef64017bc95273514afe366536ea1bc4，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000536.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1428，total_chars=1428，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000536.json#/gold/errors/2",
+      "fact": "gold[2]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000536:error:0003\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":692,\"original_start\":636,\"original_text\":\"据校外培训监管平台数据统计，2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。\",\"start\":636,\"text\":\"据校外培训监管平台数据统计，2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。\"}],\"type\":\"数值缺失\"}"
+    },
+    {
+      "source": "documents/000536.json#/report/raw_candidates/1",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"数值缺失\",\"spans\":[{\"text\":\"2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。\"}],\"reason\":\"“仅新增家”缺少具体数值，未说明2025年前5月新增机构数量。\"}"
+    },
+    {
+      "source": "documents/000536.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000536.json#/all_hints/1",
+      "fact": "最终评分提示[1]：{\"error_type\":\"数值缺失\",\"reason\":\"“仅新增家”缺少具体数值，未说明2025年前5月新增机构数量。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":650,\"end\":692,\"text\":\"2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。\"}],\"spans\":[{\"start\":650,\"end\":692,\"text\":\"2024年下半年新增2557家K9营利性非学科培训机构，而2025年前5月仅新增家。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"20313127aa82e60c75f8b6d5\",\"review_priority\":\"high\"}"
+    },
+    {
+      "source": "documents/000536.json#/input/content",
+      "fact": "数据来源归因636:650与数字陈述650:692连续成句。缺失数量“仅新增家”在预测内；来源归因不是新异常，但严格包含协议要求一并覆盖。"
+    },
+    {
+      "source": "documents/000536.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FN；全篇已分配对=[[2,1],[3,3]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":1,\"gold_index\":2,\"prediction_type\":\"数值缺失\",\"gold_type\":\"数值缺失\",\"same_type\":true,\"gold_scorable\":true,\"contains_all_gold_spans\":false,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "模型已经明确指出缺少2025年前5月新增机构数，不是漏读数字缺口。",
+    "有效span可定位，没有锚定拒绝或类型错误。",
+    "不能因为数字部分足够让人理解，就自动改掉冻结评分标准。"
+  ],
+  "conclusion": "该FN由省略来源归因前缀导致，属于表示范围差异。人工需确认可核验错误的证据是否必须含数据来源，随后以诊断分数单列规范化收益。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "当前标注规范是否明确要求保留“据…统计”这一归因前缀尚未确认。"
+  ],
+  "minimal_validation": {
+    "change": "离线仅把左边界从650扩至636复算，并在人审中分别标注最小异常范围和来源上下文。",
+    "control": "不改变数值缺失标签或理由；原始分数保留。",
+    "success_criterion": "仅14字边界差异即可由FN转严格命中；人审说明归因上下文应如何在产品与评测中保存。",
+    "regression_check": "保留带不同来源、不同统计期的相邻句，防止丢归因后错误合并指标。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "来源归因保留率",
+    "definition": "分母为人工确认必须保留数据来源归因且raw已识别缺口的实例；分子为预测证据保留完整归因并严格可定位者，同时记录纯评测边界失分。",
+    "why_this_case": "本例原文来源已输入，损失发生在输出证据范围。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

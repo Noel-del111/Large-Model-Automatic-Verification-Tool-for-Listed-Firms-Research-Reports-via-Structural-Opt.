@@ -1,0 +1,56 @@
+{
+  "case_id": "C038",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审计算FP为研发投入4.62亿元占营收33.38亿元的比例13.86%；模型认为应为13.84%，该文没有此计算金标。",
+  "observed": "raw_candidates[2]引用研发句，all_hints第2项[489,540)保留needs_review。独立除法为13.8406231%；金额均仅展示2位小数，实际舍入区间可产生13.8235735%至13.8576779%，与显示13.86%的真实区间[13.855%,13.865%)有交集。",
+  "evidence": [
+    {
+      "source": "documents/000455.json#/input/content",
+      "fact": "全文营收33.38亿元、研发4.62亿元和比例13.86%均为展示值，未给未舍入金额。"
+    },
+    {
+      "source": "documents/000455.json#/responses/0/content",
+      "fact": "raw理由将4.62/33.38点值约13.84与13.86不符直接判为错误。"
+    },
+    {
+      "source": "documents/000455.json#/all_hints/2",
+      "fact": "有效定位[489,540)，未匹配任何计算金标。"
+    },
+    {
+      "source": "documents/000455.json#/matched_pairs",
+      "fact": "四条其他类别金标均匹配，唯一额外计算提示不等于已证实误算。"
+    },
+    {
+      "source": "requests/000455.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；2648字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "除法点值确实约13.84，不是分析者算错。",
+    "但不能排除显示精度：例如4.6249/33.3751×100可显示13.86%，两金额仍可显示4.62、33.38。",
+    "后处理没有删除此项；问题在候选证据充分性。"
+  ],
+  "conclusion": "这个差异不足以直接宣称原文计算错误；在通常四舍五入假设下有可行解释。需要确认原始精确金额/舍入约定，不能仅用该FP证明金标漏标，也不能推广为所有小差异都应忽略。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "报表金额是否按四舍五入而非截断展示、研发投入占比的精确口径。",
+    "所给可行精确值不是取自公司资料，只用于数学反例。"
+  ],
+  "minimal_validation": {
+    "change": "离线增加输入展示精度区间复算，再由人工核对原始金额和占比口径。",
+    "control": "原点值13.8406231%及原候选留存，对照明显超出舍入上界的比例。",
+    "success_criterion": "区分可由舍入解释与不可解释告警，人工不必为可解释微差逐条外查。",
+    "regression_check": "检验研发费用与研发投入口径差、单位换算及实际超界错算，避免误放真正差异。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "计算证据通过率（含精度与口径）",
+    "definition": "计算候选中同时满足关系成立、同口径且报告值超出合理显示精度范围的比例。",
+    "why_this_case": "本例显示只加计算节点不够，节点还必须处理显示精度。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

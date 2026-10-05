@@ -1,0 +1,64 @@
+{
+  "case_id": "C042",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审FP是+4.17%与+2.17%之间误用“＜”的语义逻辑矛盾；金标gold1[249,293)正是该错误。",
+  "observed": "raw_candidates[3]明确指出排序比较号错，最终[249,369)覆盖金标且类别相同；确定性最大一对一匹配却将gold1分配给raw_candidates[2]的大跨度[216,369)。第2项理由针对“整体上涨但有两个负值”，与金标比较符号的事实问题不同；分配与原始列表顺序无关。",
+  "evidence": [
+    {
+      "source": "documents/000691.json#/gold/errors/1",
+      "fact": "金标具体为+4.17%＜+2.17%，[249,293)。"
+    },
+    {
+      "source": "documents/000691.json#/all_hints/2",
+      "fact": "跨度[216,369)含金标，但理由是“整体上涨”与-0.55%、-1.06%矛盾。"
+    },
+    {
+      "source": "documents/000691.json#/all_hints/3",
+      "fact": "目标候选[249,369)理由为高到低排序却使用＜，直接对应金标。"
+    },
+    {
+      "source": "documents/000691.json#/matched_pairs",
+      "fact": "[2,1]占用该金标，目标预测3无分配。"
+    },
+    {
+      "source": "documents/000691.json#/responses/0/content",
+      "fact": "两个不同理由在raw已分别存在，后处理没有把它们新造为两项。"
+    },
+    {
+      "source": "requests/000691.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；903字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:140",
+      "fact": "_maximum_matching明确独立于输入顺序；142行按canonical JSON排序后构造兼容边，146-157行执行增广路径最大匹配。"
+    }
+  ],
+  "excluded_explanations": [
+    "目标预测不是没抓到比较错误，也不是span或类别不足。",
+    "不能简单把两个候选都视为相同业务错误的重复：它们给出不同理由。",
+    "“整体上涨”可指整体指数，不能直接当作“所有子板块上涨”。"
+  ],
+  "conclusion": "本FP有明确的一对一匹配分配原因：匹配算法按规范化JSON排序构造最大匹配，将该金标分配给宽跨度同类候选，更贴合金标的比较号候选因而未匹配。两个候选对应理由不同，总体计数应否改变取决于人工对额外告警的裁定；不能把单例归属改变当成整体分数改善。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "第2项把整体等同全体是否属于误读；它可能应为无效候选。",
+    "匹配策略是否应使用具体错误语义，需要独立标注验证而非按此个案偏置。"
+  ],
+  "minimal_validation": {
+    "change": "在固定预测集上枚举两条与gold1兼容的边，离线展示两种同样满足最大基数的一对一分配，交由人工分别裁定两条理由；不靠重排输入列表测试，因为当前实现先做canonical排序。",
+    "control": "候选集合、全部数值、兼容关系及原基准分均保持固定；原匹配[2,1]为对照。",
+    "success_criterion": "展示匹配归属可不反映最贴近金标的理由，而同样最大基数分配的总TP/FP不变；给两条候选分别形成业务结论。",
+    "regression_check": "测试相同跨度不同事实错误和真正重复告警，避免把语义区别抹平，也不改主评分以迎合单例。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "匹配归属歧义率",
+    "definition": "一条金标被多个同类且包含跨度的候选满足，且候选理由不同的实例比例。",
+    "why_this_case": "这条FP不能直接作为模型误报训练信号，需先检查哪个候选实际解释金标。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

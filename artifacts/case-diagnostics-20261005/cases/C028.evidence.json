@@ -1,0 +1,139 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000664",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/b8e778a885698cf71bf57d2a.json",
+  "all_hints_index": null,
+  "gold_index": 1,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000664:error:0002",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 267,
+        "original_start": 234,
+        "original_text": "2025年4-1月，中国工程机械进出口贸易出口金额180.7亿美元",
+        "start": 234,
+        "text": "2025年4-1月，中国工程机械进出口贸易出口金额180.7亿美元"
+      }
+    ],
+    "type": "时间矛盾"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C028",
+  "error_type": "时间矛盾",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000664.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": false,
+      "overlap": true,
+      "candidate": {
+        "error_type": "时间信息非法",
+        "reason": "期间写成“4-1月”，月份顺序倒置，应为“1-4月”或“4月”。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 234,
+            "end": 278,
+            "text": "2025年4-1月，中国工程机械进出口贸易出口金额180.7亿美元，同比增长9.01%。"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "2025年4-1月，中国工程机械进出口贸易出口金额180.7亿美元，同比增长9.01%。"
+          }
+        ],
+        "spans": [
+          {
+            "start": 234,
+            "end": 278,
+            "text": "2025年4-1月，中国工程机械进出口贸易出口金额180.7亿美元，同比增长9.01%。"
+          }
+        ],
+        "warnings": [
+          "offset_reanchored_by_unique_exact_text"
+        ],
+        "id": "cd0f056fc3ce9fda7b59d3dc",
+        "review_priority": "high"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 1,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000664:error:0002",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 267,
+            "original_start": 234,
+            "original_text": "2025年4-1月，中国工程机械进出口贸易出口金额180.7亿美元",
+            "start": 234,
+            "text": "2025年4-1月，中国工程机械进出口贸易出口金额180.7亿美元"
+          }
+        ],
+        "type": "时间矛盾"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": true,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 2,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 3,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

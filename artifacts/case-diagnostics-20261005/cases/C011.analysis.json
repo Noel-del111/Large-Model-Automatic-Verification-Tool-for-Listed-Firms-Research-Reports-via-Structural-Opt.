@@ -1,0 +1,79 @@
+{
+  "case_id": "C011",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "应指出共11款创新药中15款自主研发的整体/部分数量冲突，并返回符合评测约定的完整范围。",
+  "observed": "raw[1]指出“11款”与“15款”冲突，预测232:290与gold227:290类型相同。预测省去仅5字“创新药品：”，导致单个预测span不包含整个gold，gold被记FN。",
+  "evidence": [
+    {
+      "source": "documents/000585.json#/input/content",
+      "fact": "本例文档输入共1335字符；目标原文及具体范围见下列gold、候选和字符比对证据。输入内容SHA-256=d47a4a55a0b6e78cfdbf9bccb247dd4de4f7c7991ad918b7409b9ceeff598fda。"
+    },
+    {
+      "source": "requests/000585.json#/requests/0",
+      "fact": "重建请求的最后一条contexts完整等于本例input.content；messages_sha256=c9de084ac9eb1b693a60ce67b422f45a35633b6464f8e704a8ed796f82c6b9e3，cache_match=true、trace_match=true。可排除本轮请求构造遗漏目标文字；这是重建消息的指纹核验，不是原始HTTP留存，也不证明模型注意到每个问题。"
+    },
+    {
+      "source": "documents/000585.json#/report/coverage",
+      "fact": "context_mode=whole；processed_chars=1335，total_chars=1335，execution_complete=true，candidate_quality_complete=true。这里的执行覆盖不代表错误类型检查覆盖或召回完成。"
+    },
+    {
+      "source": "documents/000585.json#/gold/errors/0",
+      "fact": "gold[0]：{\"exclusion_reasons\":[],\"id\":\"fined:eval_data:5ffe80ef7c529d19:000585:error:0001\",\"scorable\":true,\"spans\":[{\"anchor_method\":\"original_offset\",\"candidates\":[],\"end\":290,\"original_start\":227,\"original_text\":\"创新药品：2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。\",\"start\":227,\"text\":\"创新药品：2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。\"}],\"type\":\"数值不一致错误\"}"
+    },
+    {
+      "source": "documents/000585.json#/report/raw_candidates/1",
+      "fact": "原始候选（job_index=0）：{\"error_type\":\"数值不一致错误\",\"spans\":[{\"text\":\"2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。\",\"reason\":\"同一获批上市申报中，前称“11款创新药”，括号内又写“15款国内自主研发创新药”，数量互相冲突。\"}],\"reason\":\"同一获批上市申报中，前称“11款创新药”，括号内又写“15款国内自主研发创新药”，数量互相冲突。\"}"
+    },
+    {
+      "source": "documents/000585.json#/responses/0/content",
+      "fact": "已解析这条缓存原始回复，errors数组与该job的raw_candidates逐项完全一致；此候选不是后处理新编理由或改写标签。"
+    },
+    {
+      "source": "documents/000585.json#/all_hints/1",
+      "fact": "最终评分提示[1]：{\"error_type\":\"数值不一致错误\",\"reason\":\"同一获批上市申报中，前称“11款创新药”，括号内又写“15款国内自主研发创新药”，数量互相冲突。\",\"status\":\"needs_review\",\"evidence\":[{\"kind\":\"source_text\",\"start\":232,\"end\":290,\"text\":\"2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。\"}],\"detector_id\":\"hybrid.model\",\"validation\":\"anchored_needs_review\",\"original_spans\":[{\"text\":\"2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。\",\"reason\":\"同一获批上市申报中，前称“11款创新药”，括号内又写“15款国内自主研发创新药”，数量互相冲突。\"}],\"spans\":[{\"start\":232,\"end\":290,\"text\":\"2025年5月29日，合计有8家中国创新药公司申报的11款创新药（15款国内自主研发创新药）在国内实现首次获批上市。\"}],\"warnings\":[\"offset_reanchored_by_unique_exact_text\"],\"id\":\"ff027a708c9e02f0ea750c55\",\"review_priority\":\"high\"}"
+    },
+    {
+      "source": "documents/000585.json#/input/content",
+      "fact": "gold从“创新药品：”开始，实际冲突中的11与15均出现在预测覆盖区间内。15>11的关系无需外部资料即可比较，但真实正确数量仍未知。"
+    },
+    {
+      "source": "documents/000585.json#/matched_pairs",
+      "fact": "本例冻结选择标记=FN；全篇已分配对=[[0,1],[2,2]]；围绕本例相关候选/gold的独立机械核对=[{\"prediction_index\":1,\"gold_index\":0,\"prediction_type\":\"数值不一致错误\",\"gold_type\":\"数值不一致错误\",\"same_type\":true,\"gold_scorable\":true,\"contains_all_gold_spans\":false,\"assigned_pair\":false}]。相关gold不自动等于本候选所描述的同一业务问题，须结合reason判断。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "冻结评分要求同类型，且每个gold span须完整包含于某一个有效预测原文span中；不同预测span的并集不自动替代单个span包含。随后做确定性最大一对一匹配。原始冻结成绩不因本诊断改写。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:613",
+      "fact": "模型候选默认needs_review；有效锚定后仍为anchored_needs_review，只有hybrid经有限确定性规则验证才可升级。日志没有给本候选一个可阈值调节的模型置信度，不应把needs_review直接解释为模型主观不自信。"
+    }
+  ],
+  "excluded_explanations": [
+    "冲突已被raw说明并保留有效锚点，不是数值理解或候选生成完全遗漏。",
+    "本条不涉及全篇截断或日期信息非法gold的可评状态；后者不能拿来解释本条FN。"
+  ],
+  "conclusion": "此条可重建为标题前缀导致的严格范围失配：模型识别异常，预测少覆盖5字类目标题。需人工明确类目标题是否属于必须返回的错误范围。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "人工是否认可“创新药品：”必须包含在证据span中尚未裁定。",
+    "11或15哪个应更正未由原文确定。"
+  ],
+  "minimal_validation": {
+    "change": "离线诊断副本把预测左边界扩至相同原句标题前，记录原规则分数与范围规范化分数，不改冻结成绩。",
+    "control": "相同类型、理由、输入和匹配实现；只变更标题边界。",
+    "success_criterion": "单独扩大5字后严格命中该gold；人工认可这是同一异常而非新增检测能力。",
+    "regression_check": "抽查无标题、含多条并列类目和跨句标题，避免统一扩张到整段获得不当匹配。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "同异常严格边界保留率",
+    "definition": "分母为人工确认同类型同异常且已有有效候选的gold；分子为无需边界修正即可严格覆盖的gold。按标题前缀、归因前缀、完整句范围分桶。",
+    "why_this_case": "此例的5字差异可把已识别异常计为漏检。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "case_id": "C045",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审金融要素缺失FP是标题“产品结构不断改善，周转率水平提升。”[763,780)；同处金标实际是术语误用[763,799)。",
+  "observed": "raw_candidates[5]认为标题说周转率提升而正文无周转数据。段内实际写产品占比、销售净利率5.41%/5.42%及变化，没有周转率。最终候选有效保留，但类型与金标不同，且只引用标题未覆盖金标后一句。",
+  "evidence": [
+    {
+      "source": "documents/000360.json#/gold/errors/3",
+      "fact": "金标类型术语误用，范围还含“公司不断优化产品结构，扩大产品市占率。”。"
+    },
+    {
+      "source": "documents/000360.json#/input/content",
+      "fact": "对应段正文讨论产品与利润率，给销售净利率，未给周转率具体数值；不等于可以证明整个原报告缺此数据。"
+    },
+    {
+      "source": "documents/000360.json#/responses/0/content",
+      "fact": "raw_candidates[5]把问题解释为周转率依据缺失。"
+    },
+    {
+      "source": "documents/000360.json#/all_hints/5",
+      "fact": "金融要素缺失[763,780)；类别与跨度两项均不满足目标金标。"
+    },
+    {
+      "source": "requests/000360.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1587字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不能仅说金标没有对应问题：相同标题已有术语金标。",
+    "也不能仅说改类型就能得分：预测还少覆盖[780,799)。",
+    "标题有“周转率”不自动证明必须在本段列具体数值。"
+  ],
+  "conclusion": "同一文本异常存在两种竞争解释：标题把利润率误写为周转率，或确实缺少周转依据。人工需要确定预期改法；本例的FP/FN可由分类和边界共同产生，不能先通过RAG补一个周转数字。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "标题正确指标应为净利率还是周转率尚未有外部源证据。",
+    "必要证据缺失是否等同“金融要素缺失”，需业务标准确认。"
+  ],
+  "minimal_validation": {
+    "change": "人工查看本段以及原始研报标题，明确应改词还是补依据；离线分别只改类型、只扩跨度、两者一起变更来拆解形式失分。",
+    "control": "原输出为基准，三组诊断重放不改变主评测金标。",
+    "success_criterion": "明确这两个形式条件各自的影响，同时得到可信业务裁定。",
+    "regression_check": "以有充分周转证据的标题和概括性标题作对照，避免缺数字即误报。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "同位置竞争原因的人工裁定率",
+    "definition": "同一原文被模型与金标赋予不同错误机制时，经人工指出正确机制、改法及依据的比例。",
+    "why_this_case": "这条不能按类别名直接导向加知识或补数值节点。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

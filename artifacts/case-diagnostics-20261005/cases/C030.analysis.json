@@ -1,0 +1,60 @@
+{
+  "case_id": "C030",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审FP是[553,626)“24Q1高端、次高端、区域酒企收入分别为15.84%、14.22%、15.15%”的术语提示；金标没有标这处，而该文术语金标在存货周转率句[1023,1086)。",
+  "observed": "raw_candidates[3]认为收入后接百分数应为收入同比增速，最终同类型同跨度保留。相邻上一句确实在讨论收入同比增速，因此可能是上下文省略，也可能是需要改写的指标表达；不能由FP直接定为误报。",
+  "evidence": [
+    {
+      "source": "documents/000224.json#/input/content",
+      "fact": "前文先给“收入同比增速分别16.5%、14.15%、”，下句“分季度看…收入分别为…%”；上下文可提供增速口径。"
+    },
+    {
+      "source": "documents/000224.json#/responses/0/content",
+      "fact": "raw_candidates[3]指出漏“增速”导致指标含义错误。"
+    },
+    {
+      "source": "documents/000224.json#/all_hints/3",
+      "fact": "预测术语误用[553,626)，anchored_needs_review。"
+    },
+    {
+      "source": "documents/000224.json#/gold/errors/3",
+      "fact": "唯一术语金标在另一句销售费用率/存货周转率，不能和本预测仅按类型配对。"
+    },
+    {
+      "source": "documents/000224.json#/matched_pairs",
+      "fact": "本预测未匹配；另一个单位候选指向金标术语问题但属不同实例。"
+    },
+    {
+      "source": "requests/000224.json#/requests/0",
+      "fact": "冻结请求重建与历史cache/trace哈希均一致；当前文档1569字符在whole上下文中覆盖，1次调用成功。只能证明留存指纹对应的请求构造，未留存原始HTTP报文，不能扩展为网络报文逐字取证。"
+    }
+  ],
+  "excluded_explanations": [
+    "本预测不是锚定失败或后处理丢失。",
+    "不能借另一处同类型金标把本预测算对。",
+    "未匹配不能排除金标漏标，也不能证明模型指控成立。"
+  ],
+  "conclusion": "目前只能确认这是额外的、能定位的指标名称提示。是否属于需要纠正的术语错误还是可由上下文补足的简称，须人工按比赛业务标准裁定；本例不能支持强化RAG。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "标注是否只覆盖人工注入的错误而非全文所有问题。",
+    "比赛是否把上下文可恢复的指标省略作为错误。"
+  ],
+  "minimal_validation": {
+    "change": "两位人工在不看模型类别和金标结论时评估该句，明确“收入/收入增速”的容忍规范；只在诊断补充标注中记录裁定。",
+    "control": "原基准金标和主评分保持不变，配一条明确写“收入同比增速”的正常句对照。",
+    "success_criterion": "得到可复核的一致判断，并分开报告额外真问题与额外误报。",
+    "regression_check": "对同段省略主语/单位但可明确继承的正常表达检查误报。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "额外候选的人工有效率",
+    "definition": "未匹配且有效锚定的候选中，经双人审阅认定应修改的比例；单独统计口径可继承的省略表达。",
+    "why_this_case": "本FP可能反映标注覆盖或业务容忍规范，不宜混入纯模型误报。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

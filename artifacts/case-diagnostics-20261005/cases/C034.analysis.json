@@ -1,0 +1,56 @@
+{
+  "case_id": "C034",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "待审FP是白色家电营收后的“YoY+34.18%%”，金标3项分别是四个净利润对应三年、费用逻辑及CPU术语，没有格式项。",
+  "observed": "raw_candidates[0]指出双百分号，应为34.18%；最终[829,905)逐字锚定并保留needs_review。该处百分号确实重复，完全不同于该文其他金标。",
+  "evidence": [
+    {
+      "source": "documents/000439.json#/input/content",
+      "fact": "原文“公司变频白色家电营收2.72亿元（YoY+34.18%%）”可直接看到连续两个%。"
+    },
+    {
+      "source": "documents/000439.json#/responses/0/content",
+      "fact": "raw_candidates[0]针对双百分号，不依赖外部数据。"
+    },
+    {
+      "source": "documents/000439.json#/all_hints/0",
+      "fact": "类型格式错误、范围[829,905)、anchored_needs_review。"
+    },
+    {
+      "source": "documents/000439.json#/gold/errors",
+      "fact": "该文金标没有覆盖双百分号。"
+    },
+    {
+      "source": "requests/000439.json#/requests/0",
+      "fact": "冻结请求重建与cache/trace哈希均一致；1265字符在whole上下文中覆盖，1次调用成功。该证据是经指纹验证的请求构造，不是未留存的原始HTTP报文。"
+    }
+  ],
+  "excluded_explanations": [
+    "不是外部知识不足导致的不可定位提示。",
+    "不能把此FP与费用率逻辑FN视作同一问题。",
+    "金标缺少该项只能说明未标注，尚不能作业务真伪裁决。"
+  ],
+  "conclusion": "可确认模型产生了原文有依据的额外格式候选。需要人工确认比赛是否接受修正重复百分号，以及金标是否完整；本case暂不支持“模型乱报格式”结论。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "错误类型定义强调属性格式，是否将双百分号列入评分范围。",
+    "原标注是否遗漏或有意不收这类轻微错误。"
+  ],
+  "minimal_validation": {
+    "change": "人工对比34.18%%和34.18%两版，记录严重程度及是否需修改；不更改历史金标。",
+    "control": "其他内容完全一致，正常单百分号为控制。",
+    "success_criterion": "两位人工对需要修改及类型达成一致，并标注为基准外发现或无效告警。",
+    "regression_check": "验证正常百分数、转义显示、表格中重复符号是否有区别。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "基准外格式发现占比",
+    "definition": "格式FP中原文可复核且经人工认定有效的问题数量/该类FP抽样量。",
+    "why_this_case": "这类case能区分基准覆盖不足与模型过度敏感。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

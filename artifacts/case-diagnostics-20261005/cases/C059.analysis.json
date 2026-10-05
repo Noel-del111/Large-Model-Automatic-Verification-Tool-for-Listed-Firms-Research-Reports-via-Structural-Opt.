@@ -1,0 +1,50 @@
+{
+  "case_id": "C059",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "事故发生在6月1日，后一句5月27日通报该事故已经发生；同年同一事故解释下先后顺序冲突。",
+  "observed": "原始回复完整引用两句，最终[362,448)覆盖两处时序关系并命中金标，needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000669.json#/input/content",
+      "fact": "事故发生在6月1日，后一句5月27日通报该事故已经发生；同年同一事故解释下先后顺序冲突。"
+    },
+    {
+      "source": "documents/000669.json#/all_hints/1",
+      "fact": "原始回复完整引用两句，最终[362,448)覆盖两处时序关系并命中金标，needs_review。"
+    },
+    {
+      "source": "cases/C059.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000669.json#/report/raw_candidates/1",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "模型能够联合相邻句判断时间关系，本例没有关系输入丢失证据。它同时说明“合法日期间的关系冲突”没有被非法日期校验器自动确认。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "年份省略是否存在跨年或两个不同事故的解释需要人工确认，不能仅比较月日自动定错。"
+  ],
+  "minimal_validation": {
+    "change": "补充事件同一性与年份绑定检查，在绑定明确后再回放先后顺序验证。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；加入跨年回顾、预告、不同事故的正常段落；固定文本与候选，仅比较关系验证结果。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "加入跨年回顾、预告、不同事故的正常段落；固定文本与候选，仅比较关系验证结果。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "时序关系绑定正确率",
+    "definition": "人工认可的事件、年份、先后方向绑定数 / 已分析的时序候选数。",
+    "why_this_case": "模型能够联合相邻句判断时间关系，本例没有关系输入丢失证据。它同时说明“合法日期间的关系冲突”没有被非法日期校验器自动确认。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

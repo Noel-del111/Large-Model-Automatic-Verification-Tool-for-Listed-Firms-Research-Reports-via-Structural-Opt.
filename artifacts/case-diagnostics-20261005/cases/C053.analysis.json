@@ -1,0 +1,50 @@
+{
+  "case_id": "C053",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "相邻两句重复诺和诺德与联邦制药签协议、取得三靶点GLP-1授权，同一主体、事件与结果均相同；应保留重复的两处证据。",
+  "observed": "原始回复完整引用两句，最终范围[3103,3172)与金标相同，类型一致；成功定位后仍为needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000594.json#/input/content",
+      "fact": "相邻两句重复诺和诺德与联邦制药签协议、取得三靶点GLP-1授权，同一主体、事件与结果均相同；应保留重复的两处证据。"
+    },
+    {
+      "source": "documents/000594.json#/all_hints/4",
+      "fact": "原始回复完整引用两句，最终范围[3103,3172)与金标相同，类型一致；成功定位后仍为needs_review。"
+    },
+    {
+      "source": "cases/C053.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000594.json#/report/raw_candidates/4",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "该例识别与定位均成功，人工负担产生在确认环节。不能据此放开全文所有重复提示：本例是相邻事件重复，摘要与结论复述的业务语境不同。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "重复信息是否有编辑保留理由；当前没有重复语义的确定性确认规则，单例TP不能证明一般重复检测足以免审。"
+  ],
+  "minimal_validation": {
+    "change": "仅对主体、事件和结果完全相同的相邻重复设计可解释确认条件，原候选与金标保持冻结。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；保留首尾摘要复述、数字相同但主体不同的正常对照；记录节省的真实复核时间。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "保留首尾摘要复述、数字相同但主体不同的正常对照；记录节省的真实复核时间。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "相邻重复候选的人工认可率",
+    "definition": "人工认可的相邻同事件重复候选数 / 全部人工审查的该类候选数；不能用基准TP代替人工认可。",
+    "why_this_case": "该例识别与定位均成功，人工负担产生在确认环节。不能据此放开全文所有重复提示：本例是相邻事件重复，摘要与结论复述的业务语境不同。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

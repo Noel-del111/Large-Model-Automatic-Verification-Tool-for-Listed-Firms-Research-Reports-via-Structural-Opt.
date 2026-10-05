@@ -1,0 +1,50 @@
+{
+  "case_id": "C056",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "聚乙烯价格使用“7867元/立方毫米”，后接同价格的环比“-78元/吨”，应核查前后计价口径。",
+  "observed": "模型引用[230,320)整句包含金标[233,249)，指出单位疑似错误，最终保留为needs_review。",
+  "evidence": [
+    {
+      "source": "documents/000561.json#/input/content",
+      "fact": "聚乙烯价格使用“7867元/立方毫米”，后接同价格的环比“-78元/吨”，应核查前后计价口径。"
+    },
+    {
+      "source": "documents/000561.json#/all_hints/1",
+      "fact": "模型引用[230,320)整句包含金标[233,249)，指出单位疑似错误，最终保留为needs_review。"
+    },
+    {
+      "source": "cases/C056.evidence.json#/scoring_checks",
+      "fact": "冻结评分器复算为TP；所有金标span被同类型预测覆盖并获得一对一配对。"
+    },
+    {
+      "source": "documents/000561.json#/report/raw_candidates/1",
+      "fact": "与最终original_spans相同的原始候选，可与响应缓存content交叉核对。"
+    }
+  ],
+  "excluded_explanations": [
+    "该实例并非候选未生成：缓存原始候选中已有对应问题。",
+    "该实例并非最终定位或类型导致失分：冻结评分复算为TP。"
+  ],
+  "conclusion": "单位异常识别成功。相比“模型缺金融知识”，此例更适合作为知识已足以产生候选但缺确认机制的对照；需要区分可见单位冲突与自动认定正确单位。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "仅凭行业惯例不能声称所有聚乙烯报价都只能按吨；具体数值与修正单位仍需来源。"
+  ],
+  "minimal_validation": {
+    "change": "离线核对同一指标现值与变化量的量纲一致性；人工裁定后再决定是否增加确认规则。",
+    "control": "使用同一冻结输入、原始候选及原策略作为对照；加入允许体积报价、换算密度已给出、不同指标混排的案例；不以改成元/吨即视为修正正确。",
+    "success_criterion": "保持本例业务判断和完整证据正确；仅在人工认可可免审后计算节省的复核工作。",
+    "regression_check": "加入允许体积报价、换算密度已给出、不同指标混排的案例；不以改成元/吨即视为修正正确。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "同指标单位口径核对正确率",
+    "definition": "人工认可的量纲冲突判断数 / 已核对的同指标现值与变动量候选数。",
+    "why_this_case": "单位异常识别成功。相比“模型缺金融知识”，此例更适合作为知识已足以产生候选但缺确认机制的对照；需要区分可见单位冲突与自动认定正确单位。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

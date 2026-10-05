@@ -1,0 +1,95 @@
+{
+  "case_id": "C071",
+  "analyst": "AI 初步分析（待人工签核）",
+  "expected": "按冻结gold，应将相邻两行完全相同的“铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主”作为一个冗余实例，证据覆盖519:588的两次出现及中间换行。",
+  "observed": "raw[0]已明确说“该小标题紧接着完全重复一次，无新增信息”，但只给一个34字引文且未给偏移。该引文在519:553和554:588精确出现两次，因此锚定歧义拒绝；all_hints[4]保留needs_review、invalid_anchor=true但spans为空。最终没有有效提示与gold[0]重叠，故该gold为FN；相关提示同时作为FP。仅补单次偏移仍不能覆盖69字gold。",
+  "evidence": [
+    {
+      "source": "documents/000589.json#/input/content",
+      "fact": "完整输入2636字。目标两行分别为519:553和554:588，553:554是一个换行；两行逐字相同，原始34字引文有且仅有这两次精确命中。"
+    },
+    {
+      "source": "requests/000589.json#/requests/0",
+      "fact": "重建请求最后一条contexts逐字等于完整input.content；messages_sha256=0bdf1f07d483a4a3d9d09cb4cac1154fd054948b848e113a815fc1f202344ca9，cache_match=true、trace_match=true。证明本轮输入构造包含目标文字，不是原始HTTP留存，也不证明模型检查了每一类异常。"
+    },
+    {
+      "source": "documents/000589.json#/report/coverage",
+      "fact": "context_mode=whole，processed_chars=total_chars=2636，execution_complete=true；candidate_quality_complete=false、truncation_reasons含unanchored_or_invalid_model_candidates。此处complete=false不能误读成文本被截断。"
+    },
+    {
+      "source": "documents/000589.json#/gold/errors/0",
+      "fact": "可评gold为冗余语句，单span519:588，文字是两行及中间换行，总长69字。不是两个分立gold。"
+    },
+    {
+      "source": "documents/000589.json#/responses/0/content",
+      "fact": "原始回复errors数组与report.raw_candidates中job0的六个candidate逐项相等；第一个候选即该冗余小标题，理由明确识别相邻重复，不只是引文机械触及gold。"
+    },
+    {
+      "source": "documents/000589.json#/report/raw_candidates/0",
+      "fact": "候选类型冗余语句；span仅为“铜、铝：预计下游需求走弱，但是国内库存低位，预计铜铝价格高位震荡为主”，无start/end；reason为“该小标题紧接着完全重复一次，无新增信息。”。"
+    },
+    {
+      "source": "documents/000589.json#/report/rejected_candidates/0",
+      "fact": "该原始候选被以source text is absent or ambiguous in the model-visible context拒绝。字符探查确定本例是多位置歧义，不是原文缺失、改写标点或空白变形。"
+    },
+    {
+      "source": "documents/000589.json#/all_hints/4",
+      "fact": "最终评分提示仍有原始引文和同一理由，status=needs_review，invalid_anchor=true，validation=anchor_rejected，spans=[]。最终无重叠不能反推raw没有生成目标候选。"
+    },
+    {
+      "source": "documents/000589.json#/matched_pairs",
+      "fact": "冻结全篇仅有匹配[0,2]。当前gold[0]未匹配，相关hint[4]为FP。全篇1TP、5FP、3FN，F1=2/(2+5+3)=0.2；这篇低分同时含其他失败，不能都归于该冗余实例。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/factcheck/src/yjcheck/text_review.py:375",
+      "fact": "冻结_anchor要求显式偏移正确或引文唯一出现。本次无模型调用的离线三组验证：原始引文锚定失败；仅加519:553偏移后锚定成功；改为逐字包含两次相邻出现及换行的连续原文后锚定为519:588。仅在内存副本操作，冻结文件未改。"
+    },
+    {
+      "source": "artifacts/research442-rerun-20261005/source/evals/fined_bench_eval.py:217",
+      "fact": "同一离线验证调用冻结_contains_error：单次519:553不包含gold519:588，结果false；两次连续519:588结果true。因此锚定消歧与完整错误证据范围是两道独立门槛，不能把给一个偏移称作已修好FN。"
+    },
+    {
+      "source": "documents/000589.json#/report/raw_candidates/3",
+      "fact": "同文其他计算提示另作算术核查，不归入本冗余FN：锡价格251040、下跌14030，同口径前值应为265070，14030/265070×100=5.29294%，可四舍五入为原文5.29%；模型5.59%对应误用当期251040作分母。"
+    },
+    {
+      "source": "documents/000589.json#/report/raw_candidates/4",
+      "fact": "锑价格210500、下跌10000，在同口径假设下前值220500，跌幅10000/220500×100=4.53515%，不是模型4.75%（后者使用当期分母）。与原文4.49%仍有差异，报价来源/时点是否同口径需人工核验，不能称原文必然正确。"
+    },
+    {
+      "source": "documents/000589.json#/report/raw_candidates/5",
+      "fact": "铝价格20240、下跌160，同口径前值20400，跌幅160/20400×100=0.784314%，绝对值可舍入0.78%；模型0.79%对应当期分母。“跌幅-0.78%”的符号表达是否业务错误须独立人审。"
+    }
+  ],
+  "excluded_explanations": [
+    "目标重复内容完整进入构造消息并在原始理由中被明确识别，不能把本FN归为输入未传、raw候选为空或完全没发现重复。",
+    "该引文有两个精确位置；无需引入OCR丢字、标点改写或外部检索缺失来解释这次锚定拒绝。",
+    "最终空间无重叠本身不说明模型没有检查问题；本例必须结合raw理由才能确认已识别重复。",
+    "单个准确偏移只解决歧义，不解决gold跨两行的完整范围；候选定位率提升不等于严格召回一定提升。",
+    "同文三条计算候选有独立分母与口径问题，文档F1=0.2不能全部归因于重复文本锚定。"
+  ],
+  "conclusion": "本例可重建为已识别相邻重复→单次引文多位置→锚定拒绝→有效证据为空→FN，同时产生相关FP。离线验证进一步显示仅补单次偏移仍无法满足两次出现组成的gold范围；应把消歧和证据完整性分别验证。它补齐焦点FN实例的raw/最终对照，不应被宣传为此前FP分析完全没有涉及的新根因。",
+  "conclusion_status": "evidence_based_pending_human",
+  "uncertainties": [
+    "人工尚未签核相邻重复小标题应否报告及一个冗余实例所需的证据范围。",
+    "离线从已知原文构造完整重复片段证明机械可行性，不证明线上模型或通用后处理已经能稳定恢复该范围。",
+    "同文其他计算异常的来源口径及业务真伪不在本FN结论中裁定。"
+  ],
+  "minimal_validation": {
+    "change": "已完成离线三组机械验证：原始单引文、仅加首个偏移、完整相邻重复片段。下一步在人审确认的重复实例上验证通用的出现位置及完整证据生成策略。",
+    "control": "三组使用同一输入、类型、理由及冻结_anchor/_contains_error；只改变证据表示，不改冻结原分数、不执行模型调用。",
+    "success_criterion": "重复出现位置均可核验，完整证据满足签核范围；在本例仅补偏移不应被报告为召回修复，完整连续两行才满足冻结匹配。",
+    "regression_check": "同时检查正常总览/分节复述、同文远距离重复、同句多个独立错误；不能通过盲目扩大到整段获得匹配，也不能将所有多次出现合为同一错误。"
+  },
+  "proposed_intermediate_metric": {
+    "name": "已识别重复实例的证据保留率",
+    "definition": "分母为人工核验raw理由明确识别重复关系的实例；分别报告最终可定位保留数/该分母，以及最终证据满足签核完整范围且严格匹配数/该分母。不能仅以任一raw引文触及gold计为语义识别。",
+    "why_this_case": "本例raw理由已说明重复，但最终无有效证据；定位和完整范围又是两个不同失败点，可将候选识别能力与后处理损耗分开。"
+  },
+  "human_review": {
+    "analyst": null,
+    "reviewer": null,
+    "status": "pending",
+    "conclusion": null
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000497",
+  "result": "FN",
+  "prediction_file": "run/predictions/hybrid/b11ec5da2c27e90f14c68b8b.json",
+  "all_hints_index": null,
+  "gold_index": 0,
+  "prediction": null,
+  "gold": {
+    "exclusion_reasons": [],
+    "id": "fined:eval_data:5ffe80ef7c529d19:000497:error:0001",
+    "scorable": true,
+    "spans": [
+      {
+        "anchor_method": "original_offset",
+        "candidates": [],
+        "end": 189,
+        "original_start": 97,
+        "original_text": "GAAP经营利润为1110万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；GAAP净利润为127万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；",
+        "start": 97,
+        "text": "GAAP经营利润为1110万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；GAAP净利润为127万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；"
+      }
+    ],
+    "type": "冗余语句"
+  },
+  "root_cause": "pending_human_review",
+  "case_id": "C004",
+  "error_type": "冗余语句",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000497.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "candidate": {
+        "error_type": "冗余语句",
+        "reason": "同一经调整经营利润数据在事件段中重复出现，属不必要重复。",
+        "status": "needs_review",
+        "evidence": [
+          {
+            "kind": "source_text",
+            "start": 119,
+            "end": 144,
+            "text": "经调整经营利润为1.39亿美元，同比增长195%；"
+          },
+          {
+            "kind": "source_text",
+            "start": 164,
+            "end": 189,
+            "text": "经调整经营利润为1.39亿美元，同比增长195%；"
+          }
+        ],
+        "detector_id": "hybrid.model",
+        "validation": "anchored_needs_review",
+        "original_spans": [
+          {
+            "text": "经调整经营利润为1.39亿美元，同比增长195%；",
+            "start": 119,
+            "end": 144
+          },
+          {
+            "text": "经调整经营利润为1.39亿美元，同比增长195%；",
+            "start": 164,
+            "end": 189
+          }
+        ],
+        "spans": [
+          {
+            "start": 119,
+            "end": 144,
+            "text": "经调整经营利润为1.39亿美元，同比增长195%；"
+          },
+          {
+            "start": 164,
+            "end": 189,
+            "text": "经调整经营利润为1.39亿美元，同比增长195%；"
+          }
+        ],
+        "warnings": [],
+        "id": "eb42246a6909a294d4e8a88c",
+        "review_priority": "low"
+      }
+    }
+  ],
+  "related_golds": [
+    {
+      "gold_index": 0,
+      "same_type": true,
+      "overlap": true,
+      "gold": {
+        "exclusion_reasons": [],
+        "id": "fined:eval_data:5ffe80ef7c529d19:000497:error:0001",
+        "scorable": true,
+        "spans": [
+          {
+            "anchor_method": "original_offset",
+            "candidates": [],
+            "end": 189,
+            "original_start": 97,
+            "original_text": "GAAP经营利润为1110万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；GAAP净利润为127万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；",
+            "start": 97,
+            "text": "GAAP经营利润为1110万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；GAAP净利润为127万美元，首次转正；经调整经营利润为1.39亿美元，同比增长195%；"
+          }
+        ],
+        "type": "冗余语句"
+      }
+    }
+  ],
+  "scoring_checks": [
+    {
+      "all_hints_index": 0,
+      "gold_index": 0,
+      "same_type": true,
+      "contains_all_gold_spans": false,
+      "overlap": true,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 1,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}

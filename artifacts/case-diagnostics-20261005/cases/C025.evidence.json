@@ -1,0 +1,103 @@
+{
+  "arm": "hybrid",
+  "document_id": "fined:eval_data:5ffe80ef7c529d19:000524",
+  "result": "FP",
+  "prediction_file": "run/predictions/hybrid/2a74d83d6afa97c66f68f336.json",
+  "all_hints_index": 5,
+  "gold_index": null,
+  "prediction": {
+    "error_type": "时间矛盾",
+    "spans": [],
+    "original_spans": [
+      {
+        "text": "供需端担忧已基本改善，GB300本季末量产可期。"
+      },
+      {
+        "text": "GB300开始对云厂商送样，有望于下半年量产。"
+      }
+    ],
+    "reason": "前文称GB300本季末量产可期，后文又称有望下半年量产，时间冲突。",
+    "status": "needs_review",
+    "invalid_anchor": true,
+    "validation": "anchor_rejected",
+    "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+    "review_hint_only": true
+  },
+  "gold": null,
+  "root_cause": "pending_human_review",
+  "case_id": "C025",
+  "error_type": "时间矛盾",
+  "cohort": "diagnostic",
+  "document_ref": "documents/000524.json",
+  "related_predictions": [
+    {
+      "all_hints_index": 5,
+      "same_type": true,
+      "overlap": false,
+      "candidate": {
+        "error_type": "时间矛盾",
+        "spans": [],
+        "original_spans": [
+          {
+            "text": "供需端担忧已基本改善，GB300本季末量产可期。"
+          },
+          {
+            "text": "GB300开始对云厂商送样，有望于下半年量产。"
+          }
+        ],
+        "reason": "前文称GB300本季末量产可期，后文又称有望下半年量产，时间冲突。",
+        "status": "needs_review",
+        "invalid_anchor": true,
+        "validation": "anchor_rejected",
+        "rejection_reason": "source text is absent or ambiguous in the model-visible context",
+        "review_hint_only": true
+      }
+    }
+  ],
+  "related_golds": [],
+  "scoring_checks": [
+    {
+      "all_hints_index": 5,
+      "gold_index": 0,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 1,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 2,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    },
+    {
+      "all_hints_index": 5,
+      "gold_index": 3,
+      "same_type": false,
+      "contains_all_gold_spans": false,
+      "overlap": false,
+      "gold_scorable": true,
+      "assigned_pair": false
+    }
+  ],
+  "review": {
+    "status": "pending_human_review",
+    "analyst": null,
+    "reviewer": null,
+    "human_conclusion": null,
+    "reviewed_at": null
+  }
+}
