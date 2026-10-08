@@ -1,0 +1,287 @@
+{
+  "schema_version": 2,
+  "label_convention": "1=has_error(有错) / 0=no_error(无错)",
+  "upstream_pins": {
+    "FinVerBench": {
+      "kind": "github",
+      "repo": "SiluPanda/finverification-bench",
+      "revision": "8aef2f48befdab5c57cc383a521711fe11c2df98",
+      "revision_date": "2026-03-17",
+      "url": "https://github.com/SiluPanda/finverification-bench"
+    },
+    "FinanceBench": {
+      "kind": "github",
+      "repo": "patronus-ai/financebench",
+      "revision": "cc39aeb4afdf33909ee1412188bf89035950c2eb",
+      "revision_date": "2024-12-03",
+      "url": "https://github.com/patronus-ai/financebench"
+    },
+    "FinBen": {
+      "kind": "huggingface",
+      "org": "TheFinAI",
+      "url": "https://huggingface.co/TheFinAI",
+      "revisions": {
+        "finben-finer-ord": "1a235081039192371efe56c4bfd340edd25144ea",
+        "flare-convfinqa": "a24fb040ac27d8045e4afcdbf3e126299cc731bb",
+        "flare-fomc": "e1f823e0e71556d0a2c1206b71310e564cae8dd4",
+        "finben-fomc": "e1f823e0e71556d0a2c1206b71310e564cae8dd4",
+        "flare-finred": "af34b2c8c3cc4bae61eee23cfaf0f0783eb800b2",
+        "flare-fnxl": "8bea408feb61295e0a31499e31d0291896d0d6ba",
+        "flare-tatqa": "1cf60f0c2c2c7ef6153b1842a5aa79509da568ba"
+      }
+    }
+  },
+  "upstream_file_hashes": "audit/source_hashes.json",
+  "artifacts": [
+    {
+      "path": "data/financebench_claim_verification/gold.dev.jsonl",
+      "rows": 40,
+      "bytes": 14328,
+      "sha256": "762f70a4ae2ae3927b8d67be30485fa217d6387cc10883acef9b0d3e97f6a380"
+    },
+    {
+      "path": "data/financebench_claim_verification/gold.test.jsonl",
+      "rows": 164,
+      "bytes": 58964,
+      "sha256": "4693ba508112089dfbfb927175df8f7bc91739c3e0b30218c35bcf97ef89385e"
+    },
+    {
+      "path": "data/financebench_claim_verification/inputs.dev.jsonl",
+      "rows": 40,
+      "bytes": 90344,
+      "sha256": "e925a2073b198407f1cc3490404a65a596098e2ad2a001a930117d44338864f0"
+    },
+    {
+      "path": "data/financebench_claim_verification/inputs.test.jsonl",
+      "rows": 164,
+      "bytes": 427881,
+      "sha256": "0d3e38e714f62bcc6b58cb705ffcf26095d880eab10623d0c36ec2bc71052a87"
+    },
+    {
+      "path": "data/financebench_correction/gold.dev.jsonl",
+      "rows": 20,
+      "bytes": 9338,
+      "sha256": "c3ff68c1b4d05330a3b9263aa0b0ef5ef1bfeb822004abdb0211d563ab287e2c"
+    },
+    {
+      "path": "data/financebench_correction/gold.test.jsonl",
+      "rows": 82,
+      "bytes": 38282,
+      "sha256": "f6f668811ce91c559d417d333203d015943c303dbe11ec11d322e6040b2fdf98"
+    },
+    {
+      "path": "data/financebench_correction/inputs.dev.jsonl",
+      "rows": 20,
+      "bytes": 7507,
+      "sha256": "aa47b8f8c4be242ddb00a8278fb53427a97cee5c26a78c39398ebd99401d4440"
+    },
+    {
+      "path": "data/financebench_correction/inputs.test.jsonl",
+      "rows": 82,
+      "bytes": 33767,
+      "sha256": "20e56500c9f00614b4e890839f560c6504499ef15caf9627f688f09b38435fe0"
+    },
+    {
+      "path": "data/financebench_qa/gold.dev.jsonl",
+      "rows": 38,
+      "bytes": 21822,
+      "sha256": "29968e82b6414420b0297dc8fd29607e79511bfdff20a08a814deaf1c66dbd51"
+    },
+    {
+      "path": "data/financebench_qa/gold.test.jsonl",
+      "rows": 112,
+      "bytes": 68534,
+      "sha256": "c85a47a508c72e9935ac14c376281d68c89f72868f11da679eb78b5c3a27bc6f"
+    },
+    {
+      "path": "data/financebench_qa/inputs.dev.jsonl",
+      "rows": 38,
+      "bytes": 199415,
+      "sha256": "37a60878ee98ebd7ea93b5749da3be846e84f3b11b2a3a2126a705a10741d9fb"
+    },
+    {
+      "path": "data/financebench_qa/inputs.test.jsonl",
+      "rows": 112,
+      "bytes": 661914,
+      "sha256": "af4efd15b75cba54f9ca03bef6be6de8f68c215954c16a6d6f167ac7040a374f"
+    },
+    {
+      "path": "data/finben/flare-fomc.jsonl",
+      "rows": 496,
+      "bytes": 558336,
+      "sha256": "4f4790fff334071dd6c12d1332d5f043fae8eeb515f64a129e2cac2fa30f1019"
+    },
+    {
+      "path": "data/finverbench_correction/inputs.dev.jsonl",
+      "rows": 429,
+      "bytes": 1498702,
+      "sha256": "1fa9ce3bda50f442a0adf5ca1aac72a61c6737072b7e66f0e6d12e9c227cf8cd"
+    },
+    {
+      "path": "data/finverbench_detection/gold.dev.jsonl",
+      "rows": 464,
+      "bytes": 332064,
+      "sha256": "e74eaa67efa0e3fbe37a51382164d79fc6d30308ba9d96419b396edb19aaefbb"
+    },
+    {
+      "path": "data/finverbench_detection/gold.test.jsonl",
+      "rows": 1521,
+      "bytes": 1083577,
+      "sha256": "234295033df8fc5bb082f820d0785235d3632a00fce9b21a421a961ad802ca90"
+    },
+    {
+      "path": "data/finben/finben-finer-ord.jsonl.gz",
+      "rows": 1075,
+      "bytes": 232140,
+      "sha256": "4ea3a01086d018355c0d8c89ee8232c5da4fe1d1beaefaa61b0bb968741b8cbd"
+    },
+    {
+      "path": "data/finben/flare-convfinqa.test.jsonl.gz",
+      "rows": 1490,
+      "bytes": 851278,
+      "sha256": "ab17b4ba0d7e31d5aed4d58cad6edbb8781983dca0ffaa3cf80586e7b1a329fb"
+    },
+    {
+      "path": "data/finben/flare-convfinqa.train.jsonl.gz",
+      "rows": 8891,
+      "bytes": 5105610,
+      "sha256": "b0c2c875ef63a49372d611e314d15967c6b284cb586ac40475a9fc985893b5a7"
+    },
+    {
+      "path": "data/finben/flare-convfinqa.valid.jsonl.gz",
+      "rows": 2213,
+      "bytes": 1277707,
+      "sha256": "a59abba65763f0f5bc2a2432b729cfb0efa2919644440b7c6305413be6d3893c"
+    },
+    {
+      "path": "data/finben/flare-finred.jsonl.gz",
+      "rows": 1068,
+      "bytes": 168237,
+      "sha256": "62b16f539a3942095f43c3805ac29320b4a9942634857b07043dab6b5963dab3"
+    },
+    {
+      "path": "data/finben/flare-fnxl.jsonl.gz",
+      "rows": 318,
+      "bytes": 104799,
+      "sha256": "00506af4d97cf9271ce67d68afd52e1b82a009aa788c58ca56f23218f490e2ab"
+    },
+    {
+      "path": "data/finben/flare-tatqa.jsonl.gz",
+      "rows": 1668,
+      "bytes": 296039,
+      "sha256": "fada4b74095d22a58de6c7c3c349324301ecb74e433fe3c883b8e8e4dd2804c6"
+    },
+    {
+      "path": "data/finverbench_correction/gold.dev.jsonl.gz",
+      "rows": 429,
+      "bytes": 33320,
+      "sha256": "9074e6e83f8536e9de91f59d145ddac25bb769e1115cff0b5e5fb8e3c91d3cfb"
+    },
+    {
+      "path": "data/finverbench_correction/gold.test.jsonl.gz",
+      "rows": 1393,
+      "bytes": 107982,
+      "sha256": "fe7e5378b21a7a6fb9c0d19c0feec5c0701a5798895555b0866637697c1b0ae9"
+    },
+    {
+      "path": "data/finverbench_correction/inputs.test.jsonl.gz",
+      "rows": 1393,
+      "bytes": 53529,
+      "sha256": "20a075ffc5f478fdf546b5ea818213b1927b72d932fe68835181b891e445c538"
+    },
+    {
+      "path": "data/finverbench_detection/inputs.dev.jsonl.gz",
+      "rows": 464,
+      "bytes": 18133,
+      "sha256": "57f6be053c68dde4e4d5a1a26a2e3ea5ef3101ea885c6b8c0978eba199fcdf0e"
+    },
+    {
+      "path": "data/finverbench_detection/inputs.test.jsonl.gz",
+      "rows": 1521,
+      "bytes": 56830,
+      "sha256": "2724a7b7c11372c6ba8c2e2c5471aa4d762801885d309142eba71129193efcfb"
+    },
+    {
+      "path": "data/index.jsonl.gz",
+      "rows": 21482,
+      "bytes": 95213,
+      "sha256": "2c59b78f95fe13d06f6d621cccf07742a0844b819c79682298b4a72d6020b93e"
+    },
+    {
+      "path": "splits/dev.jsonl",
+      "rows": 3242,
+      "bytes": 982412,
+      "sha256": "47f25e82ec8c4408c293bacb347eedc1fb155a2ce2225a640686fe1485301226"
+    },
+    {
+      "path": "splits/groups.jsonl",
+      "rows": 3590,
+      "bytes": 315932,
+      "sha256": "514cf9e4d661e66b3b4c604a3baa11f96134aad7dbbe0e61ab639128f4d7a6db"
+    },
+    {
+      "path": "audit/quarantine_candidates.jsonl",
+      "rows": 625,
+      "bytes": 181704,
+      "sha256": "9d0be8abc688ecb7132607f29fea7c547a568dd1a078448301f33e98cb709d5d"
+    }
+  ],
+  "stats": {
+    "finverbench": {
+      "detection_total": 1985,
+      "detection_has_error": 1942,
+      "detection_clean": 43,
+      "detection_ambiguous_flagged": 162,
+      "correction_pairs_valid": 1822,
+      "correction_pairs_quarantined_identical": 120,
+      "companies": 43,
+      "groups": 43
+    },
+    "financebench": {
+      "qa_total": 150,
+      "correction_pairs_valid": 102,
+      "correction_pairs_v1_would_produce": 111,
+      "correction_pairs_v1_nonmonetary_bad": 9,
+      "claim_verification_samples": 204,
+      "docs": 84
+    },
+    "finben": {
+      "flare-convfinqa.test": 1490,
+      "flare-convfinqa.train": 8891,
+      "flare-convfinqa.valid": 2213,
+      "flare-finred": 1068,
+      "flare-fnxl": 318,
+      "flare-fomc": 496,
+      "flare-tatqa": 1668,
+      "finben-finer-ord": 1075
+    },
+    "finben_duplicates_dropped": {
+      "finben-fomc/test": "flare-fomc/test"
+    },
+    "task_split_counts": {
+      "finverbench_detection:dev": 464,
+      "finverbench_detection:test": 1521,
+      "finverbench_correction:dev": 429,
+      "finverbench_correction:test": 1393,
+      "financebench_qa:dev": 38,
+      "financebench_qa:test": 112,
+      "financebench_claim_verification:dev": 40,
+      "financebench_claim_verification:test": 164,
+      "financebench_correction:dev": 20,
+      "financebench_correction:test": 82
+    }
+  },
+  "split_dev": 3242,
+  "split_test": 18240,
+  "quarantine_by_reason": {
+    "finverbench_correction_identical_text": 120,
+    "financebench_nonmonetary_edit_v1": 9,
+    "finben_duplicate_subset": 496
+  },
+  "notes": [
+    "所有样本以 has_error 为权威标签；label 固定 1=有错 / 0=无错。",
+    "data/<task>/inputs.<split>.jsonl 仅供模型可见；gold.<split>.jsonl 含标签与答案，禁止进入提示词。",
+    "划分按原始文档分组，同组不跨 dev/test；官方 test 划分只作评测，不做 dev 抽样。",
+    "audit/quarantine_candidates.jsonl 记录每条被排除样本及原因。"
+  ]
+}

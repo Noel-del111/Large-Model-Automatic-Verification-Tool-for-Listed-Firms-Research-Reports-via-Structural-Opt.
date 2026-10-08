@@ -1,0 +1,877 @@
+[
+  {
+    "path": "sources/FinBen/_finben_manifest.json",
+    "sha256": "dde01c576e67deb32e089a4653b1bd3f0fed6865860ebca1eef8859980bfe0ab",
+    "bytes": 1184
+  },
+  {
+    "path": "sources/FinBen/finben-finer-ord/data/test-00000-of-00001-8dad8d2627093235.parquet",
+    "sha256": "2579148a0a5fcaebf61562b32e266c13c7a92b8736e0fbba39af013f1986bbe5",
+    "bytes": 357272
+  },
+  {
+    "path": "sources/FinBen/finben-fomc/data/test-00000-of-00001-1a50d91ca86f96cd.parquet",
+    "sha256": "11cd19e77b4a125dbb25c96c2ffea4311e9733db2cfd495ce5a09d72ed5882cd",
+    "bytes": 140144
+  },
+  {
+    "path": "sources/FinBen/flare-convfinqa/data/test-00000-of-00001-57f4515ba08ff7cc.parquet",
+    "sha256": "cd863f31f4d596a0e2e6ffea260f142ad3f2a424eff8e046cc861c4769e6ce94",
+    "bytes": 1350504
+  },
+  {
+    "path": "sources/FinBen/flare-convfinqa/data/train-00000-of-00001-c5888ec30dc14752.parquet",
+    "sha256": "10ea29dbaf9a2725cabda62b055fa46a3030cf54d06dffe755fa4d5d5e43f730",
+    "bytes": 8351393
+  },
+  {
+    "path": "sources/FinBen/flare-convfinqa/data/valid-00000-of-00001-b2706780a3194e1c.parquet",
+    "sha256": "6426d2f2a84b04200281872b3de0a4c7911dcf441fb118a35cfa2e52fb5b2339",
+    "bytes": 2102011
+  },
+  {
+    "path": "sources/FinBen/flare-finred/data/test-00000-of-00001-136bfc312f5271da.parquet",
+    "sha256": "efe2c9b18f4cd576e8bad1b7b49073e65e7d9fde03d64ec5edba8d53ce972f57",
+    "bytes": 478837
+  },
+  {
+    "path": "sources/FinBen/flare-fnxl/data/test-00000-of-00001-35c7f3863a79cbce.parquet",
+    "sha256": "997bcb6b3ea1408683e4607d1c4213a03cc71f03234a3e71579319e121fec3db",
+    "bytes": 315090
+  },
+  {
+    "path": "sources/FinBen/flare-fomc/data/test-00000-of-00001-1a50d91ca86f96cd.parquet",
+    "sha256": "11cd19e77b4a125dbb25c96c2ffea4311e9733db2cfd495ce5a09d72ed5882cd",
+    "bytes": 140144
+  },
+  {
+    "path": "sources/FinBen/flare-tatqa/data/test-00000-of-00001-aba4ef149be97d17.parquet",
+    "sha256": "c61c85b974be98c7297614e844500881139345e817fb76c479643c35db32750d",
+    "bytes": 634670
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/benchmark.json",
+    "sha256": "f6fa3ed75ecf260bbc1e57f1105d9eb8c7e3af22606e25c13473fd696d20d64f",
+    "bytes": 12298108
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/benchmark_rounded.json",
+    "sha256": "237a38b9bb702f0d7867644931d51ca133953c5cf36d27e675795a8541649af6",
+    "bytes": 387436
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/benchmark_stats.json",
+    "sha256": "b286466e8d7f8be3a461af8df6b5b05ce1aed39cfcc437df759f4133564400ff",
+    "bytes": 2069
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__AE_COLUMN_SUM_10.0pct_3.json",
+    "sha256": "65347af82b81fb82a1bb77d90a29c89b658805f5213320ad951785e65de0634c",
+    "bytes": 6048
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__AE_COLUMN_SUM_5.0pct_2.json",
+    "sha256": "b90f94993bd80a8e89b905f253d44abb3251f3f32ba02cbaaab8e0bf42469f75",
+    "bytes": 6046
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__AE_ROW_SUM_10.0pct_1.json",
+    "sha256": "391b98dcb30af997f12ba09ba13f7c776993e8ea2b056266b672652835e20dc5",
+    "bytes": 6060
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__AE_ROW_SUM_5.0pct_0.json",
+    "sha256": "90c95e3abcc5c14e721cf6adfdb6bf9a3d63ec574518b9d75bd99cafd7c24373",
+    "bytes": 6037
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__CL_ENDING_CASH_5.0pct_6.json",
+    "sha256": "8d96c8ac65ff2882367149fb8cfc8d66b9835663fe1076e01706db6f3cc117be",
+    "bytes": 5992
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__CL_NET_INCOME_TO_CFS_5.0pct_5.json",
+    "sha256": "73c09e377361b4ca975da3a92aeaed2751190ec75c26a161582e03059a4ff786",
+    "bytes": 6002
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__CL_NET_INCOME_TO_RE_5.0pct_4.json",
+    "sha256": "2177114d85520c0e82d60cddd87d5b4ec5c0d28cb9e42ec76584e5f6444e2456",
+    "bytes": 6032
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__MR_EXTREME_25.0pct_13.json",
+    "sha256": "896007dc63b81f601db44e2f294dfa306fdbfffc09bf37b0f6c83155a700a1c8",
+    "bytes": 5999
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__MR_MINOR_0.5pct_10.json",
+    "sha256": "9731d26ebba6cba3d2cd717f0d99b51555492a3c47d48094f96e2b2f96629869",
+    "bytes": 5984
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__MR_MODERATE_2.0pct_11.json",
+    "sha256": "52a1f30a6178229c67070e3f7409dc1fd2b4a037683b4588f6f4e69bd553e009",
+    "bytes": 5997
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__MR_SIGNIFICANT_10.0pct_12.json",
+    "sha256": "6f6a84988134815651980a87573bfd879fbf05d17740cc9c19afd0c73b811c68",
+    "bytes": 6015
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__YOY_COMPUTED_CHANGE_5.0pct_9.json",
+    "sha256": "f40569f52ce1fbf643aadef865284c7027faaa1cfa530f4407f2f5ff0521e403",
+    "bytes": 6069
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__YOY_OPENING_BALANCE_5.0pct_8.json",
+    "sha256": "70db780b8247c508aae61813fbf17d742ae4fc3c342e10ac8b22893527c5a817",
+    "bytes": 6064
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__clean.json",
+    "sha256": "f123779738af599f4e2748933081a0ac9a568bdb2837a93a11c18720ecc3fd18",
+    "bytes": 5870
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__multi_AE_ROW_SUM_CL_NET_INCOME_TO_CFS_0.json",
+    "sha256": "0e3e8cb1ad40e8df69a95d3786f0d9ee2caf8e34ebb2198d0bf61d9988464d96",
+    "bytes": 6537
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/alphabet_inc__multi_CL_ENDING_CASH_YOY_OPENING_BALANCE_MR_MINOR_1.json",
+    "sha256": "55200a7236ff63fce628aeffc12feade8c76218c9c83bbb414b8fc3ab049b275",
+    "bytes": 6949
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__AE_COLUMN_SUM_10.0pct_3.json",
+    "sha256": "ce7961f00b19d8ee5e66d1bf767200ad7040a9e52c45c2569d4690b07f24eb00",
+    "bytes": 6183
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__AE_COLUMN_SUM_5.0pct_2.json",
+    "sha256": "9a5ba7b759e5ced3bd8444a98ac11ae65c306d6f243db6b011d9709e24c8304f",
+    "bytes": 6190
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__AE_ROW_SUM_10.0pct_1.json",
+    "sha256": "6af815d250a5506106fc454812bccb942c5438caf1367612afb4165947d93e4b",
+    "bytes": 6180
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__AE_ROW_SUM_5.0pct_0.json",
+    "sha256": "99899b11b11f7c0df72091d1cfc4f6808830ef184991a8aba8a78ff0c8ef4d39",
+    "bytes": 6194
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__CL_ENDING_CASH_5.0pct_6.json",
+    "sha256": "7740294f106df757f6b2673535583330cc28f761f4ac07b2a54c08dfcc190fd0",
+    "bytes": 6134
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__CL_NET_INCOME_TO_CFS_5.0pct_5.json",
+    "sha256": "82eef77eb41965af702054993be58cf48f54def1c07b0581bec8dce52edbbd05",
+    "bytes": 6142
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__CL_NET_INCOME_TO_RE_5.0pct_4.json",
+    "sha256": "be7217c4ce2707048db8c7120a2c3b6ee6e7eec42111f0669c7493a529171c53",
+    "bytes": 6172
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__MR_EXTREME_25.0pct_13.json",
+    "sha256": "0fdcc8c23dbfa1916b5e32f55592e95f7ccc8a7265c375c5dc5d4c46b4aed299",
+    "bytes": 6115
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__MR_MINOR_0.5pct_10.json",
+    "sha256": "bcc08f7654946e14673ac8a9775079953343b4a669d1ec5fabc71706597527b1",
+    "bytes": 6134
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__MR_MODERATE_2.0pct_11.json",
+    "sha256": "3ba12ae38f44e1a51af9679a0bf7c7c01672009a2f9d3acea603ec8e45ff8986",
+    "bytes": 6170
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__MR_SIGNIFICANT_10.0pct_12.json",
+    "sha256": "43e0c53135a0e4eb09bf816fc9220b29a4584111c0f6fc68cc6cfc9e83a223e9",
+    "bytes": 6152
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__YOY_COMPUTED_CHANGE_5.0pct_9.json",
+    "sha256": "d8bb59d80bc31adb9a6a2443e890460a70e1fd41842e10cc87afb29a0f6bbf12",
+    "bytes": 6176
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__YOY_OPENING_BALANCE_5.0pct_8.json",
+    "sha256": "496ca60003b9bac34d7565776f0471741f3cdf07eb02911c9fd509852f151320",
+    "bytes": 6196
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__clean.json",
+    "sha256": "e889f0b1fc13ae3df7c9c0e4d9b0c565ed27c79a6d40bcbf75f2cacd0cef5158",
+    "bytes": 6012
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__multi_AE_ROW_SUM_CL_NET_INCOME_TO_CFS_0.json",
+    "sha256": "ec2516e0e0e7d7245aaa47011307c8634e4c5ad467a6b251d700ea334fcb1193",
+    "bytes": 6658
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/amazon_com_inc__multi_CL_ENDING_CASH_YOY_OPENING_BALANCE_MR_MINOR_1.json",
+    "sha256": "e50ad167c074e52c31ddd75487ac943cabc94abed97b5121843e6a0b4ce7ec96",
+    "bytes": 7116
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__AE_COLUMN_SUM_10.0pct_3.json",
+    "sha256": "d8c78d60f14bbe4bf504869922241b0fc211f6d06425bdc770f3380cb985964e",
+    "bytes": 6516
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__AE_COLUMN_SUM_5.0pct_2.json",
+    "sha256": "062e9a31127edafb083558ef5e59a98d5ffb9adf1274b831c396e88e3f91bf50",
+    "bytes": 6515
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__AE_ROW_SUM_10.0pct_1.json",
+    "sha256": "e87728ad4a0794729d9f26b56ec3ca4c85b13bdd893f371796fadc663303c87c",
+    "bytes": 6485
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__AE_ROW_SUM_5.0pct_0.json",
+    "sha256": "27309922da615db8ae0a75ac37e30efd14f574dff61ac645f71ae92c5834048b",
+    "bytes": 6493
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__CL_ENDING_CASH_5.0pct_6.json",
+    "sha256": "e1a218dd4449d392183b4f07f9ee5e02ce86decd1e46f1c9e6f71d1d53712f84",
+    "bytes": 6450
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__CL_NET_INCOME_TO_CFS_5.0pct_5.json",
+    "sha256": "0ffad37d1c3e9702afb3846097036cbea4cc917587c1e6a7f522d86744398ec1",
+    "bytes": 6461
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__CL_NET_INCOME_TO_RE_5.0pct_4.json",
+    "sha256": "ee4b31d2c21736c74b417aab6489686d467611d37e8f0cd427115f684e511ac7",
+    "bytes": 6489
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__MR_EXTREME_25.0pct_13.json",
+    "sha256": "01aead629e3b50b978d836d5e425a056f20c5b31a85065231a014253edb34c65",
+    "bytes": 6436
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__MR_MINOR_0.5pct_10.json",
+    "sha256": "3f06ad4b45dbabc6ab7b29faf984638e06fb5e564297a2692aeeb99367801842",
+    "bytes": 6469
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__MR_MODERATE_2.0pct_11.json",
+    "sha256": "68aedc260d4d3fb7251815abddb0c1c64b4b1da7b5126c27742e3c27c6ab4d43",
+    "bytes": 6459
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__MR_SIGNIFICANT_10.0pct_12.json",
+    "sha256": "d407205480feb55ec3bda7ae277adc005be236a18087287887820cce54384245",
+    "bytes": 6451
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__YOY_COMPUTED_CHANGE_5.0pct_9.json",
+    "sha256": "24617ef167927e3b5d8c1f0ace74a50f65d9e004568fcbd0e26e9fdda0d6d2ef",
+    "bytes": 6526
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__YOY_OPENING_BALANCE_5.0pct_8.json",
+    "sha256": "832c8aa451a3092c00632a67127a05b2a27b31dffbdedab65b75b4129d9610a9",
+    "bytes": 6536
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__clean.json",
+    "sha256": "109e6c56baa6eed0065bf95a1e9277f6b62b683476c95d70d19c284cb4d78a90",
+    "bytes": 6328
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__multi_AE_ROW_SUM_CL_NET_INCOME_TO_CFS_0.json",
+    "sha256": "98ef54a0f7f60876171cd8dbdf468a1451286bc2fd42a56bf1c92c48778ea983",
+    "bytes": 6997
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/apple_inc__multi_CL_ENDING_CASH_YOY_OPENING_BALANCE_MR_MINOR_1.json",
+    "sha256": "7580a8f53d452fcb6157abeb16e0579efac033c3b9f25f01894cdd52d1e6b224",
+    "bytes": 7429
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__AE_COLUMN_SUM_10.0pct_3.json",
+    "sha256": "788b1efea1f46d320110fc6f3e7317a7d817ddfa8a1419070d1cf3f35045c37e",
+    "bytes": 6145
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__AE_COLUMN_SUM_5.0pct_2.json",
+    "sha256": "80c1380cc38638654bbd139738d7924a80d9a06900bd8c98799eb2e69b8c9a4f",
+    "bytes": 6143
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__AE_ROW_SUM_10.0pct_1.json",
+    "sha256": "37c8137f9070cefb684f6a9298af7d48091ad1e60a9ae7aad48db79ab64b6725",
+    "bytes": 6125
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__AE_ROW_SUM_5.0pct_0.json",
+    "sha256": "7b78d28975cfcf5e088f4947fdd15c42ed552b63ac1561ddb9245f3a97595f80",
+    "bytes": 6126
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__CL_ENDING_CASH_5.0pct_6.json",
+    "sha256": "e3e577418728ab629bfc3f3459f1d59727ea074d1992b55fde5fac3b892748bb",
+    "bytes": 6083
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__CL_NET_INCOME_TO_CFS_5.0pct_5.json",
+    "sha256": "6103c2a7c5c98ad7fe5c2518b34fa6b01477a513ee3ad3f7cfa70fc5d44c004d",
+    "bytes": 6091
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__CL_NET_INCOME_TO_RE_5.0pct_4.json",
+    "sha256": "346fa8a813760c0076a7bec4df306168da96c715aef1088769b1bfd254214b0f",
+    "bytes": 6119
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__MR_EXTREME_25.0pct_13.json",
+    "sha256": "48f7d9d21347f0e34372d3e438b8cde423630a1a9d3e315979821b6811b1d973",
+    "bytes": 6088
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__MR_MINOR_0.5pct_10.json",
+    "sha256": "4c65a53038d38252f24f41892e796c2d19dcda211cded750f1568fe583175b79",
+    "bytes": 6068
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__MR_MODERATE_2.0pct_11.json",
+    "sha256": "d4f0ad7bdedcb718754285db76b865e281925d638e3e5bef44cfbe63e6cfc7c6",
+    "bytes": 6097
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__MR_SIGNIFICANT_10.0pct_12.json",
+    "sha256": "0821310559b3c58a3c3ccf1495a4477ffc1e0addda97ffa329fe79d8a860374f",
+    "bytes": 6082
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__YOY_COMPUTED_CHANGE_5.0pct_9.json",
+    "sha256": "97307b6fb4aa4286bc1644db2ec038de5e7ba25e96c5062448957e9dc99b713d",
+    "bytes": 6130
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__YOY_OPENING_BALANCE_5.0pct_8.json",
+    "sha256": "781270422e482b29b27e42d93df29729f9aa2896ec5b12bb67837a8ab423912c",
+    "bytes": 6156
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__clean.json",
+    "sha256": "4b84b633c66f875ab3ef2e0792d7a4d0db5d2fd19dcb7591e32b51b6d38f33c7",
+    "bytes": 5960
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__multi_AE_ROW_SUM_CL_NET_INCOME_TO_CFS_0.json",
+    "sha256": "d9fb80efe0593a7b31edc94b35ab4dcb0403f2b2c014618fe1c9437d6a6a6689",
+    "bytes": 6643
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/meta_platforms,_inc__multi_CL_ENDING_CASH_YOY_OPENING_BALANCE_MR_MINOR_1.json",
+    "sha256": "ed682ba783baacce1263225052d32af727eaa061ddc0cf3590774cb7ff841f0c",
+    "bytes": 7037
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__AE_COLUMN_SUM_10.0pct_3.json",
+    "sha256": "f8d316d165db9b036f604bbd69a81e90f7eaaeb886f78af7154d039674b43d41",
+    "bytes": 6432
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__AE_COLUMN_SUM_5.0pct_2.json",
+    "sha256": "f3515afea77861070919394ea90c7eb6845a4bd1e2a2f7ab9abef0ab980f580f",
+    "bytes": 6431
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__AE_ROW_SUM_10.0pct_1.json",
+    "sha256": "500a77a7a273b35c7b33fabbb77beecd637a2dd55263154d29cc90337ed75310",
+    "bytes": 6427
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__AE_ROW_SUM_5.0pct_0.json",
+    "sha256": "cfb9a298b4e80108c52aabffc6e6fdd552d778d528ef83fb312bcff59b484bb6",
+    "bytes": 6394
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__CL_ENDING_CASH_5.0pct_6.json",
+    "sha256": "216a305250a0f3ba7b7accea4e40efb3352ec0a7c6720a9259a87bcee95bf340",
+    "bytes": 6383
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__CL_NET_INCOME_TO_CFS_5.0pct_5.json",
+    "sha256": "568d029d12d6d217551429a14face1ed3be66cbf71d381f1505e0265a798044e",
+    "bytes": 6392
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__CL_NET_INCOME_TO_RE_5.0pct_4.json",
+    "sha256": "75d376f78c1d3affd30fefd1ca3da8f811245ac96f96e9b1cfa9fd09071dc0fc",
+    "bytes": 6422
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__MR_EXTREME_25.0pct_13.json",
+    "sha256": "19f3a9e2506ee7bf19250fd1bd8904f54f3c80095501d87c417b5ca6494aea68",
+    "bytes": 6365
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__MR_MINOR_0.5pct_10.json",
+    "sha256": "1dce87de4fb99cc6b7b5a73c9b8f0f83b7ec8edbf9083f501e49617b2678dfdb",
+    "bytes": 6403
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__MR_MODERATE_2.0pct_11.json",
+    "sha256": "aeb75525c7f245ebf71080ed3be66b42fb876d69c0624269315b1a642365ca82",
+    "bytes": 6377
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__MR_SIGNIFICANT_10.0pct_12.json",
+    "sha256": "c0da0ee356e52d67481b8ae77eaca1db0eecaebb9a9e5d927a8b3586fcdd1f94",
+    "bytes": 6397
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__YOY_COMPUTED_CHANGE_5.0pct_9.json",
+    "sha256": "91982b0b28594335cc9588ba9a72d9b57ea99c03947929813846803863ccc0f1",
+    "bytes": 6443
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__YOY_OPENING_BALANCE_5.0pct_8.json",
+    "sha256": "5b56d161d3a2cd66f335f49e9d7c5a94f3f805a3977f3196cbddb1c922a0c5d7",
+    "bytes": 6443
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__clean.json",
+    "sha256": "37f6c3418a92489c096e07c5d6cdeaf4b5e5bfda8e0df183a7caaa78fe54f17f",
+    "bytes": 6261
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__multi_AE_ROW_SUM_CL_NET_INCOME_TO_CFS_0.json",
+    "sha256": "c78f94afa8f6e8850ffd08e921c35e25410ce29274859264a37514e2d3547493",
+    "bytes": 6962
+  },
+  {
+    "path": "sources/FinVerBench/data/benchmark/instances/microsoft_corporation__multi_CL_ENDING_CASH_YOY_OPENING_BALANCE_MR_MINOR_1.json",
+    "sha256": "d9370d7d0d24fa3fbd5d10b7914f99c381dd01b0b9251f30b12e9db39dd0d8cf",
+    "bytes": 7357
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/AAPL.json",
+    "sha256": "73f5ba3213e76994204027e7b79bb994a2b7fea0935675167f71d9ed1b4aa47e",
+    "bytes": 2174
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/ABT.json",
+    "sha256": "0f0a2c1ba80425ee08aa8c5305109b8fd40dd61b076cbccfd136e7547285cd94",
+    "bytes": 2092
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/ADBE.json",
+    "sha256": "d1a16980920dfa4382eb333909325f2b95a506a8d2041ea9b13be4704a29cf7d",
+    "bytes": 2098
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/AMGN.json",
+    "sha256": "9de742dfdbf3882dcb605cafa9f8080f32ab1326708338fe87e54fb9602577de",
+    "bytes": 2204
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/AMZN.json",
+    "sha256": "a1988b8966e59f2e9f2183ce58be761e061f34f673e775feb6c4688dfbbdb0dd",
+    "bytes": 2048
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/AVGO.json",
+    "sha256": "9b4bc2dac21194a8a7c388f46d2aea879ebfbdf15705656c351b3a194bcc3f84",
+    "bytes": 2178
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/BA.json",
+    "sha256": "391873cf916db9d9e2914f39314dab0e9c19783a2715d656ce3f325dbba1455d",
+    "bytes": 2146
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/BAC.json",
+    "sha256": "c9287736cd342956e989be058a264edf4a63630e5f44fb89605d509c2cfca43e",
+    "bytes": 1532
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/BRK.B.json",
+    "sha256": "817f284d506c75eb5a792a0de38eb0ad2ef198a7883e45854c60b6b42278f7c8",
+    "bytes": 1196
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/CMCSA.json",
+    "sha256": "f5b70148f1a19041e6a91759f052824157eb0ee0e8d539c6c16d7ca6e6878fe6",
+    "bytes": 1872
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/COST.json",
+    "sha256": "b31b3570b984dccfcee2702f3f5d1760e13112b7ecfebc7aa751380dd9ed5f53",
+    "bytes": 2191
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/CRM.json",
+    "sha256": "46ee1834af5fa91fd9f2f7dafe81e7fa31305ffdf607ed8f16dc4352aa4ac73f",
+    "bytes": 2013
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/CSCO.json",
+    "sha256": "65f0c99aed45ab1e4777b7dbafeda573f1893baf3c0f83b45cd136fa09981622",
+    "bytes": 2266
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/CVX.json",
+    "sha256": "d75825e77ecb4fbbd2979b4be85118961e3deb0444bb3f3582c9aff3e7f67229",
+    "bytes": 1803
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/DIS.json",
+    "sha256": "becac6aec603b4604efe0258a3ea87528021fd4a4b35b8c4e6e49eb856a79ebf",
+    "bytes": 2144
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/GE.json",
+    "sha256": "0d3562bbe4541729f95e4ec0c04455f5a8e6530aaad66a12c937740a56b1e659",
+    "bytes": 1592
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/GOOGL.json",
+    "sha256": "4d4366bd75c49021665a131e13c96f336cc878be6e58d96ea06f4f8df28881d8",
+    "bytes": 1991
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/HD.json",
+    "sha256": "bb8d154cc7ec6d037cdaefc558f8d84c09f401dec36ff33d93c9cb73bc196c8b",
+    "bytes": 2101
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/HON.json",
+    "sha256": "389c1333f7d19245f820225ee010762512ee4eca898d432b03fcd1ea26e422c2",
+    "bytes": 2180
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/INTC.json",
+    "sha256": "f264436f9f81541f442f0216e26a77ee9e8eeeec9a3057676e9d6bb668a66b5d",
+    "bytes": 2054
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/JNJ.json",
+    "sha256": "0b1329092e1b07bf3a46b2cc307c902bf3a62555d29df67eac6ecdc8d3c65d75",
+    "bytes": 2056
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/JPM.json",
+    "sha256": "5a3c0217d551cf1a491bc052454336cb3f2bd50a73a0e7256ea2f6c58cff9639",
+    "bytes": 1237
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/KO.json",
+    "sha256": "99ada47297be784c4cd9637096f9a262b2919e6c07005e10537d01f9eb50ef17",
+    "bytes": 1931
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/LLY.json",
+    "sha256": "5016a6947dd26361a3281a02ca3e6c4538510a3bb6bddbf242927283fa660552",
+    "bytes": 2017
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/LOW.json",
+    "sha256": "7644a1d92d41c9c044606fd5968b380a6e3583d702278d3d1b96d21dd1b8bceb",
+    "bytes": 1955
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/MCD.json",
+    "sha256": "fd58743c6532e890e810e360c374995c93f30014bb80a71c79f014b3634e2ec3",
+    "bytes": 1952
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/META.json",
+    "sha256": "b5748d68346f0b04dbad7abdd2409d252015b417838029946c750c8782ac21f3",
+    "bytes": 1998
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/MRK.json",
+    "sha256": "374ceb5d5b03f11a52d592fcb39da1dc1417eab4746d67b89ded12e3a7148b48",
+    "bytes": 2001
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/MSFT.json",
+    "sha256": "f5cbd05b417a74a5d8cd067866e63332688f858594643d04b21eba094cc9f917",
+    "bytes": 2193
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/NKE.json",
+    "sha256": "d1b55f45c4006209af37084cfc532768e4606d05fe925f6a990be78b76f9bc75",
+    "bytes": 2016
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/NVDA.json",
+    "sha256": "ee618656d21f8f4c75d0c045769f44e9a6bb50ffc9a377ffc8073ac042ab84e3",
+    "bytes": 2124
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/ORCL.json",
+    "sha256": "378e304163d5c9834cfb50bbdbedef5b511f1f3a345a6490458277356afc410a",
+    "bytes": 1958
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/PEP.json",
+    "sha256": "52a83ae8e97bff3dadb0d7f96bc07e349e8179e5689df96d175fb1935062a668",
+    "bytes": 2094
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/PFE.json",
+    "sha256": "32717d4f598e2c2eed10b8ea7f6ede076dda54513024ca37d2e53b7d3f408ee6",
+    "bytes": 2111
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/PG.json",
+    "sha256": "38b4eb14b7fe7fd5a9abf7a3c174a80fa8bdf502b7b0a9b9ba814378ed703496",
+    "bytes": 1943
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/PM.json",
+    "sha256": "0372acd6466399fafa0cfa72f29d19238875f655bebb131567c3a14a6006ec94",
+    "bytes": 1874
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/TMO.json",
+    "sha256": "64ce1f603ed422c54dac49beb3e8803510bf8db0336e7580eb4d9fb1331235c7",
+    "bytes": 2139
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/TXN.json",
+    "sha256": "d0644906a864233fc76e6fb1685abd477f41e696f2e491f2bf23328bd160959c",
+    "bytes": 2111
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/UNH.json",
+    "sha256": "9790049c7585b8056fddbb09b6d4c3a155a609e2896ce93313cb5226d32b5014",
+    "bytes": 2237
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/UPS.json",
+    "sha256": "8e166abff9e3103c631b61d4ad2ee91c82310bb243c3934e70a4d3e4bfe0b0e8",
+    "bytes": 1923
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/V.json",
+    "sha256": "c33afdd0b6a458d7a4395efee28c53654316ece8e77a9b7b81131c2c2eaffe8e",
+    "bytes": 1734
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/WMT.json",
+    "sha256": "94401e681d234f80e5d7c96670a9cfe4774ed47cd334ddb4f57dfa665a6ca921",
+    "bytes": 1992
+  },
+  {
+    "path": "sources/FinVerBench/data/converted/XOM.json",
+    "sha256": "2954a5f5564d7dec9a7ccb34c03673a0290c28eba2cfe6227b2c7fecdba984d4",
+    "bytes": 1899
+  },
+  {
+    "path": "sources/FinVerBench/paper/analysis_gpt41_fp.py",
+    "sha256": "8cb0e7649583882c99ccb89611d8de89bd2fadcbdd922618905650968a087874",
+    "bytes": 21641
+  },
+  {
+    "path": "sources/FinVerBench/paper/main.tex",
+    "sha256": "4e7f2e44f9fa9b9da03279d5c7980ec2799761ce4a74418af0a3fa50176226ad",
+    "bytes": 105892
+  },
+  {
+    "path": "sources/FinVerBench/paper/mcnemar_test.py",
+    "sha256": "6eff16887ef1d9d142e34e556f0f81e7a38d132bee8b6ec0d46db5ac1fbb2cf6",
+    "bytes": 10997
+  },
+  {
+    "path": "sources/FinVerBench/paper/pairwise_analysis.py",
+    "sha256": "5b325e33ed24f99f3e04181dd9c36e94b95c0f89c7f3dc9c0ee1a22e5cfe226d",
+    "bytes": 18561
+  },
+  {
+    "path": "sources/FinVerBench/paper/references.bib",
+    "sha256": "d8f6cf350f70de62a9641228ef388da70cfc10e063025f94e54a2817babd668d",
+    "bytes": 12901
+  },
+  {
+    "path": "sources/FinVerBench/requirements.txt",
+    "sha256": "b649165cbf6a7524a306315a3e4215b01c50a7f6cb29a162bc4083576edd435f",
+    "bytes": 24
+  },
+  {
+    "path": "sources/FinVerBench/run_pipeline.sh",
+    "sha256": "ec7e48b1c0d6b2cfd1e54a0147db10174a12ab17c73c09cc5a2f6b80e93f9fcd",
+    "bytes": 2205
+  },
+  {
+    "path": "sources/FinVerBench/src/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "sources/FinVerBench/src/analysis/__init__.py",
+    "sha256": "83dd755ad75715362f6aaeb09aefc90595c0f6d18a536b9e4270a58a45fc0c47",
+    "bytes": 58
+  },
+  {
+    "path": "sources/FinVerBench/src/analysis/analyze_results.py",
+    "sha256": "9131f1b9c69bfba859526ec123411f8e8110603222a02ea4287a260371a96204",
+    "bytes": 14927
+  },
+  {
+    "path": "sources/FinVerBench/src/analysis/dataset_analysis.py",
+    "sha256": "3bf79529d6f8293aeb6c41e0273042d78ea93b3cf3b45f48b829f45de6643786",
+    "bytes": 23809
+  },
+  {
+    "path": "sources/FinVerBench/src/analysis/plot_results.py",
+    "sha256": "3dedf4606ffe34c6b978580ca0d100a7613b97bef9155e8faf4eb07ac996bf6a",
+    "bytes": 18202
+  },
+  {
+    "path": "sources/FinVerBench/src/analysis/threshold_analysis.py",
+    "sha256": "82806587222378359b62b9f783d96774bafd539017a1e878b5003269b71b2f4d",
+    "bytes": 23514
+  },
+  {
+    "path": "sources/FinVerBench/src/benchmark/__init__.py",
+    "sha256": "a13444eb8ad80ef549cf60db9dc01c208c413da98f015c170a139e7330462f86",
+    "bytes": 748
+  },
+  {
+    "path": "sources/FinVerBench/src/benchmark/dataset_builder.py",
+    "sha256": "63bc1faa9bd4fa683ddd4e7c93fda8fd46405411b2165caff71c20df797fd363",
+    "bytes": 22669
+  },
+  {
+    "path": "sources/FinVerBench/src/benchmark/error_injection.py",
+    "sha256": "3bcc16e1a3161adcfe5cabbbc6a8c262490600a4d8877231d3b04415e652ad55",
+    "bytes": 26973
+  },
+  {
+    "path": "sources/FinVerBench/src/benchmark/error_taxonomy.py",
+    "sha256": "a7d5c87ec23dfb9db7712f7a36157f9756173e75b93a0fb32626ace085ed20f5",
+    "bytes": 9430
+  },
+  {
+    "path": "sources/FinVerBench/src/data/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "sources/FinVerBench/src/data/convert_to_benchmark_format.py",
+    "sha256": "82908e2067402d27bcab463d451aecedc7b4a50ad3e8c1e7bf6a0c185fd0c9d3",
+    "bytes": 15660
+  },
+  {
+    "path": "sources/FinVerBench/src/data/fetch_filings.py",
+    "sha256": "89bf0f86bdc7bc35194a697226e04ba9d6d0e52a0772c48eac43fb063bccc0fc",
+    "bytes": 11095
+  },
+  {
+    "path": "sources/FinVerBench/src/data/parse_financials.py",
+    "sha256": "13eb8c573d2dd3032f50bd379ed9851986708728c3eb506d72467179bd26b3dc",
+    "bytes": 16699
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/__init__.py",
+    "sha256": "d298c4cae5b7ccb3c4943527269f8d1f1ec26982f29baabe397069cfdd6d5dd7",
+    "bytes": 59
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/claude_direct_eval.py",
+    "sha256": "4fdbe5cc423cde0c33097af2f34fcd5b772084757f424dbe61fd2724953f3bb2",
+    "bytes": 7316
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/evaluate_llm.py",
+    "sha256": "7e37a09cb9ad5f78254db10c1275b208397b28f4fa3f7b390331574690a84a42",
+    "bytes": 20225
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/metrics.py",
+    "sha256": "9eef4888e86ecd4a4c9f8eb1da0950f7dea64bb6bc07a23754ad7d3bf0a38733",
+    "bytes": 13677
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/prompts.py",
+    "sha256": "880134b1a23a2ccbcc7c281c2e721e8afbb94a880cafd42d8af0c674c8918719",
+    "bytes": 14653
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/rule_based_verifier.py",
+    "sha256": "de1899dfcded186f769039cc6acbb942f6fed0c46aa6ae49e260eda2994104c7",
+    "bytes": 25321
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/run_claude_cli_experiments.py",
+    "sha256": "53d036827f346612566a6e9352e51e6d90bc1c5f9e3f680e3aa38526ba75f006",
+    "bytes": 21085
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/run_deepinfra_experiments.py",
+    "sha256": "af8b43d4ae4ca01706e194ba47eb5c3c4974c9e55f2ebe1b9baa287f4c88806b",
+    "bytes": 10755
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/run_deepinfra_rounded.py",
+    "sha256": "0b801eb284d288c3b197a82f6a6912d00da10478d18144f931d95ed4afab784e",
+    "bytes": 11303
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/run_experiments.py",
+    "sha256": "a005c34f2e5c293f3cfb1e951e873f8c74c4ccc49f0e07edffd085a38d008d4b",
+    "bytes": 27622
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/run_minimax_experiment.py",
+    "sha256": "24661fdd42a0f3b1911e0387354e05b924c446d4fa20fc3a2a1c37137d3719c6",
+    "bytes": 14856
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/run_new_evaluations.py",
+    "sha256": "4b78996d71a9458deee8c9d10523a7b4f3407232bd6400dc8ac286a739846ff0",
+    "bytes": 4813
+  },
+  {
+    "path": "sources/FinVerBench/src/evaluation/run_openrouter_experiments.py",
+    "sha256": "c6be481ca78dbf442b85c171eb112bf2f5d99af490a10614d5ffc51f0b752332",
+    "bytes": 20024
+  },
+  {
+    "path": "sources/FinVerBench/test_api.py",
+    "sha256": "d95a6cd0568bba019539ffeeb10f6b4c2126cdccfa853727218c64ca6fb82d1f",
+    "bytes": 884
+  },
+  {
+    "path": "sources/FinanceBench/README.md",
+    "sha256": "ab1b914821c5f6329836d0f2c503dbaaa6504721bd0b1d0f70f43fbb23987cec",
+    "bytes": 5094
+  },
+  {
+    "path": "sources/FinanceBench/data/financebench_document_information.jsonl",
+    "sha256": "1c69127783879de8cdadb159d2181f39bc3123b8e0ebf74031c3969d69189575",
+    "bytes": 88781
+  },
+  {
+    "path": "sources/FinanceBench/data/financebench_open_source.jsonl",
+    "sha256": "a5a2aa673e573e55675fc3c0f9aa38c1cf59d2abc91edb077534f71f10a71877",
+    "bytes": 929848
+  },
+  {
+    "path": "sources/FinanceBench/evaluation_playground.ipynb",
+    "sha256": "41e9b21052f0f188bf96dc0a42f5dfba96c8195ed490af03d066641e6a0feb27",
+    "bytes": 22715
+  }
+]

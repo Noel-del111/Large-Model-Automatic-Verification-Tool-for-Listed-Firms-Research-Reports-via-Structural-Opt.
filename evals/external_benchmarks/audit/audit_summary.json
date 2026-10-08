@@ -1,0 +1,60 @@
+{
+  "generated_by": "scripts/build_datasets.py (v2)",
+  "label_convention": "1=has_error(有错) / 0=no_error(无错)",
+  "stats": {
+    "finverbench": {
+      "detection_total": 1985,
+      "detection_has_error": 1942,
+      "detection_clean": 43,
+      "detection_ambiguous_flagged": 162,
+      "correction_pairs_valid": 1822,
+      "correction_pairs_quarantined_identical": 120,
+      "companies": 43,
+      "groups": 43
+    },
+    "financebench": {
+      "qa_total": 150,
+      "correction_pairs_valid": 102,
+      "correction_pairs_v1_would_produce": 111,
+      "correction_pairs_v1_nonmonetary_bad": 9,
+      "claim_verification_samples": 204,
+      "docs": 84
+    },
+    "finben": {
+      "flare-convfinqa.test": 1490,
+      "flare-convfinqa.train": 8891,
+      "flare-convfinqa.valid": 2213,
+      "flare-finred": 1068,
+      "flare-fnxl": 318,
+      "flare-fomc": 496,
+      "flare-tatqa": 1668,
+      "finben-finer-ord": 1075
+    },
+    "finben_duplicates_dropped": {
+      "finben-fomc/test": "flare-fomc/test"
+    },
+    "task_split_counts": {
+      "finverbench_detection:dev": 464,
+      "finverbench_detection:test": 1521,
+      "finverbench_correction:dev": 429,
+      "finverbench_correction:test": 1393,
+      "financebench_qa:dev": 38,
+      "financebench_qa:test": 112,
+      "financebench_claim_verification:dev": 40,
+      "financebench_claim_verification:test": 164,
+      "financebench_correction:dev": 20,
+      "financebench_correction:test": 82
+    }
+  },
+  "index_total": 21482,
+  "split_dev": 3242,
+  "split_test": 18240,
+  "groups_total": 3590,
+  "groups_crossing_splits": 0,
+  "quarantine_total": 625,
+  "quarantine_by_reason": {
+    "finverbench_correction_identical_text": 120,
+    "financebench_nonmonetary_edit_v1": 9,
+    "finben_duplicate_subset": 496
+  }
+}

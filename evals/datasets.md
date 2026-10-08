@@ -1,6 +1,7 @@
 # 第二版数据清单与使用边界
 
-更新日期：2026-10-03。主线为 FinED-Bench，先做零训练对照，不以微调作为第二版交付前提。
+更新日期：2026-10-07。主线为 FinED-Bench，先做零训练对照，不以微调作为第二版交付前提。
+外部补充基准（FinVerBench / FinanceBench / FinBen，用于一致性检测/数值纠错模板与混合子任务回归）见 [external_benchmarks/INTEGRATION.md](external_benchmarks/INTEGRATION.md)，不影响主 v2 划分。
 
 ## 已有本地材料
 

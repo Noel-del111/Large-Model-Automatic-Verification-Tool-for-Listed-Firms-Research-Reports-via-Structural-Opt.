@@ -33,3 +33,10 @@ Thumbs.db
 /artifacts/case-diagnostics-20261005/validation.json
 /artifacts/case-diagnostics-20261005/ui_validation.json
 /artifacts/case-diagnostics-20261005/review_validation.json
+
+evals/external_benchmarks/sources/
+evals/external_benchmarks/__pycache__/
+
+# evals/external_benchmarks 的成品数据需入库，显式豁免上面的 data/ 规则
+!evals/external_benchmarks/data/
+!evals/external_benchmarks/data/**

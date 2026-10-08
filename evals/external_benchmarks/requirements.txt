@@ -1,0 +1,5 @@
+# 运行 scripts/ 所需依赖
+# 说明：只有 FinBen 部分（parquet 解析）需要 pandas/pyarrow；
+#       FinanceBench / FinVerBench 的整理只依赖 Python 标准库。
+pandas>=2.0
+pyarrow>=14.0

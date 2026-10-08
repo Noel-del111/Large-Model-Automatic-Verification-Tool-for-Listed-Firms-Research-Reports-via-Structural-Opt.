@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# 说明：
+#   sources/ 与 data/ 是本次交付的核心内容，需要一并提交，故不忽略。
+#   若你们仓库对体积敏感，可改为“只提交 data/，sources/ 由脚本重新下载”。
